@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/mnt/nagy/django/bit-stat/bitstat/bitstat/collector'
+let g:netrw_dirhist_2='/home/dyuri/icesus'
+let g:netrw_dirhist_3='/home/dyuri/.ipython'
+let g:netrw_dirhist_4='/home/dyuri/Mail/inbox'
