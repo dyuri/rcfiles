@@ -1,13 +1,8 @@
 " Only do this when not done yet for this buffer
-hi clear ColorColumn
-hi link ColorColumn User1
 if exists("b:did_ftplugin")
 finish
 endif
 let b:did_ftplugin = 1
-
-" color column #79
-setlocal colorcolumn=79
 
 hi OverLength guibg=#BB4040 ctermbg=darkred ctermfg=white
 match OverLength /\%80v.\+/
