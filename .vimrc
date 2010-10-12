@@ -276,6 +276,12 @@ augroup END
 " python
 function! RePa_py()
   setlocal tw=0 sw=4 ts=4 sta et sts=4 ai
+  
+  " color column #79
+  hi clear ColorColumn
+  hi link ColorColumn User1
+  set colorcolumn=79
+
   hi OverLength guibg=#BB4040 ctermbg=darkred ctermfg=white
   match OverLength /\%80v.\+/
 endfunction
