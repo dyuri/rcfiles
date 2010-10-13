@@ -90,6 +90,7 @@ setopt interactive_comments     # Escape commands so I can use them later
 alias ls='ls --color'
 alias ll='ls -la'
 alias vi='/usr/bin/gvim'
+alias jsonpp='python -mjson.tool'
 
 # prompt
 . ~/.zshprompt
