@@ -4,9 +4,6 @@ finish
 endif
 let b:did_ftplugin = 1
 
-hi OverLength guibg=#BB4040 ctermbg=darkred ctermfg=white
-match OverLength /\%80v.\+/
-
 map <buffer> <S-e> :w<CR>:!/usr/bin/env python % <CR>
 map <buffer> gd /def <C-R><C-W><CR> 
 
