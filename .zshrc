@@ -87,10 +87,12 @@ setopt interactive_comments     # Escape commands so I can use them later
 
 # Sajat cuccok
 
-alias ls='ls --color'
+alias ls="ls ${LS_OPTIONS}"
 alias ll='ls -la'
 alias vi='/usr/bin/gvim'
+alias rvim='/usr/bin/gvim --remote-silent'
 alias jsonpp='python -mjson.tool'
+alias search='find . | xargs -- grep'
 
 # prompt
 . ~/.zshprompt
