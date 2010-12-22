@@ -87,8 +87,8 @@ set nocompatible
   hi DiffDelete           guifg=blue guibg=cyan
   hi DiffText             cterm=bold ctermbg=red
   hi DiffText             gui=bold guibg=red
-  hi Cursor               ctermfg=bg ctermbg=fg
-  hi Cursor               guifg=bg guibg=fg
+  hi Cursor               ctermfg=bg ctermbg=cyan
+  hi Cursor               guifg=bg guibg=cyan
   hi lCursor              ctermfg=bg ctermbg=darkgreen
   hi lCursor              guifg=bg guibg=darkgreen
   hi Comment              ctermfg=brown cterm=none term=none
@@ -124,7 +124,7 @@ if v:version >= 700
   hi CursorLine           guibg=#403820
   hi CursorColumn         guibg=#403820
 
-  hi MatchParen           ctermbg=White guibg=White guifg=DarkGreen ctermfg=DarkGreen
+  hi MatchParen           ctermbg=darkgreen guibg=darkgreen guifg=yellow ctermfg=yellow
 
   hi Pmenu                guifg=Black guibg=#C4C090 ctermfg=LightGreen ctermbg=DarkGreen
   hi PmenuSel             guifg=Black guibg=#FFBF00 ctermfg=LightGreen ctermbg=Black
@@ -196,6 +196,16 @@ if has("gui_running")
   " enable mouse
   set mouse=a
 endif
+
+" NERDTree
+let g:NERDTreeIgnore=['\.swp$','\.pyc$','\.pyo$']
+
+" omnicomplete
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")

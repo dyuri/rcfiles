@@ -1,6 +1,6 @@
 # .zshenv - zsh enviroment variables
 
-PATH=/opt/repa/bin:/opt/java/bin:/usr/local/bin:$HOME/bin:$PATH:/usr/sbin:/sbin:/mnt/nagy/eclipse:/usr/games:.
+PATH=/opt/repa/bin:/opt/java/bin:/opt/node/bin:/usr/local/bin:$HOME/bin:$PATH:/usr/sbin:/sbin:/mnt/nagy/eclipse:/usr/games:.
 CDPATH=$CDPATH:/mnt:/mnt/nagy
 LD_LIBRARY_PATH=/opt/repa/lib:$DBROOT/lib:$LD_LIBRARY_PATH
 USERNAME="dyuri"
