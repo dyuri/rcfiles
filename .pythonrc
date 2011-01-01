@@ -1,0 +1,52 @@
+# pythonrc
+# vim: ft=python
+
+import os,sys
+print("Helyzet?")
+
+# prompt
+if os.getenv('TERM') in ('xterm', 'vt100', 'rxvt', 'Eterm', 'putty', 'rxvt-unicode'):
+    try:
+        import readline
+    except ImportError:
+        sys.ps1 = '\033[0;32mpy> \033[0m'
+        sys.ps2 = '\033[0;32m... \033[0m'
+    else:
+        sys.ps1 = '\001\033[0;32m\002py> \001\033[0m\002'
+        sys.ps2 = '\001\033[0;32m\002... \001\033[0m\002'
+else:
+    sys.ps1 = "py> "
+
+# TAB completition, permament history
+try:
+    import readline
+except ImportError:
+    print("Module readline not available.")
+else:
+    histfile = os.path.expanduser('~/.pythonhist')
+    try:
+        readline.read_history_file(histfile)
+    except IOError:
+        pass
+    import atexit
+    atexit.register(readline.write_history_file, histfile)
+    del histfile, atexit
+    import rlcompleter
+    readline.parse_and_bind("tab: complete")
+    del rlcompleter
+
+# pprint
+import pprint
+def my_displayhook(value):
+    if value is not None:
+        try:
+            import __builtin__
+            __builtin__._ = value
+        except ImportError:
+            __builtins__._ = value
+
+        pprint.pprint(value)
+
+sys.displayhook = my_displayhook
+
+del os
