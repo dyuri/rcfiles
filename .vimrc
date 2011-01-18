@@ -23,7 +23,7 @@ set t_Co=256
 set nocompatible
 
 " Szinek beallitasa
-  hi Normal               guibg=#101020 guifg=#f0f0f0
+  hi Normal               guibg=black guifg=#90f0b0
   hi Normal               ctermfg=white ctermbg=black
   "hi Normal               guifg=white guibg=darkblue
   hi String               ctermfg=Green
@@ -121,8 +121,8 @@ set nocompatible
   hi User4                guibg=#080848 guifg=#202050
 
 if v:version >= 700
-  hi CursorLine           guibg=#403820
-  hi CursorColumn         guibg=#403820
+  hi CursorLine           guibg=#041008
+  hi CursorColumn         guibg=#041008
 
   hi MatchParen           ctermbg=darkgreen guibg=darkgreen guifg=yellow ctermfg=yellow
 
@@ -137,7 +137,9 @@ if v:version >= 700
 endif
 
 " colors via CSApprox
-colorscheme repa
+if !has("gui_running")
+  colorscheme repa
+endif
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -189,12 +191,15 @@ set bk
 if has("gui_running")
   set nu
   set lines=40
-  set columns=100
+  set columns=140
   set guioptions-=T
   set guioptions-=m
   set guioptions-=r
   " enable mouse
   set mouse=a
+  " cursor
+  set cursorline
+  set cursorcolumn
 endif
 
 " NERDTree
@@ -300,7 +305,10 @@ au FileType python setlocal tw=0 sw=4 ts=4 sta sts=4 ai et omnifunc=pythoncomple
 au FileType html,htmldjango setlocal tw=0 sw=2 ts=2 sta sts=2 ai et
 
 " #-os commentek ne menjenek a sor elejere
-:inoremap # X<C-H>#
+inoremap # X<C-H>#
+
+" Ctrl-Space kodkiegeszites
+inoremap <Nul> <C-X><C-O>
 
 " egergombok
 imap <RightMouse> <Esc>

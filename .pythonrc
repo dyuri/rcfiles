@@ -34,6 +34,13 @@ else:
     import rlcompleter
     readline.parse_and_bind("tab: complete")
     del rlcompleter
+    try:
+        import fancycompleter
+        fancycompleter.interact()
+    except:
+        pass
+    else:
+        del fancycompleter
 
 # pprint
 import pprint
