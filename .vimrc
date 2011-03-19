@@ -14,6 +14,7 @@
 " slime:      http://technotales.wordpress.com/2008/10/17/screencast-like-slime-for-vim/
 " pyflakes:   http://www.vim.org/scripts/script.php?script_id=2441
 " sparkup:    http://github.com/rstacruz/sparkup
+" surround:   http://www.vim.org/scripts/script.php?script_id=1697
 
 " 88/256 colors for urxvt
 set t_Co=256
@@ -161,7 +162,8 @@ set history=50    " keep 50 lines of command line history
 set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
-set ic            " ignore case
+set ignorecase    " ignore case
+set smartcase     " smart case
 
 set ls=2          " enable the status
 
@@ -304,11 +306,15 @@ endfunction
 au FileType python setlocal tw=0 sw=4 ts=4 sta sts=4 ai et omnifunc=pythoncomplete#Complete
 au FileType html,htmldjango setlocal tw=0 sw=2 ts=2 sta sts=2 ai et
 
+" frissen beillesztett resz kijelolese
+nnoremap <leader>v V`]
+
 " #-os commentek ne menjenek a sor elejere
 inoremap # X<C-H>#
 
 " Ctrl-Space kodkiegeszites
 inoremap <Nul> <C-X><C-O>
+inoremap <C-space> <C-X><C-O>
 
 " egergombok
 imap <RightMouse> <Esc>
@@ -462,6 +468,8 @@ function! RePa_statusline()
   let sl = sl . '%1*%t'
   " filestate
   let sl = sl . '%3*%{RePa_sl_filestate()}\ '
+  " working directory
+  let sl = sl . '%2*(%1*%{getcwd()}%2*)\ '
   " break
   let sl = sl . '%<'
   " fileformat

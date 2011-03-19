@@ -93,6 +93,7 @@ alias vi='/usr/bin/gvim'
 alias rvim='/usr/bin/gvim --remote-silent'
 alias jsonpp='python -mjson.tool'
 alias search='find . | xargs -- grep'
+alias vless='/usr/share/vim/vim??/macros/less.sh'
 
 # prompt
 . ~/.zshprompt
