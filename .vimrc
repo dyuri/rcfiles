@@ -465,13 +465,13 @@ function! RePa_statusline()
   " lines
   let sl = sl . '%2*%{RePa_sl_lines()}'
   " filename
-  let sl = sl . '%1*%t'
+  let sl = sl . '%1*%f'
   " filestate
   let sl = sl . '%3*%{RePa_sl_filestate()}\ '
-  " working directory
-  let sl = sl . '%2*(%1*%{getcwd()}%2*)\ '
   " break
   let sl = sl . '%<'
+  " working directory
+  let sl = sl . '%2*(%1*%{getcwd()}%2*)\ '
   " fileformat
   let sl = sl . '%2*[%{RePa_sl_fileformat()}:'
   " encoding
