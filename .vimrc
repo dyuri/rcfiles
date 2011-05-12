@@ -13,8 +13,9 @@
 " CSApprox:   http://www.vim.org/scripts/script.php?script_id=2390
 " slime:      http://technotales.wordpress.com/2008/10/17/screencast-like-slime-for-vim/
 " pyflakes:   http://www.vim.org/scripts/script.php?script_id=2441
-" sparkup:    http://github.com/rstacruz/sparkup
+" # sparkup:    http://github.com/rstacruz/sparkup
 " surround:   http://www.vim.org/scripts/script.php?script_id=1697
+" project:    http://www.vim.org/scripts/script.php?script_id=69
 
 " 88/256 colors for urxvt
 set t_Co=256
@@ -164,6 +165,9 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set ignorecase    " ignore case
 set smartcase     " smart case
+set gdefault      " default s///g
+" clear hilites with leader+space
+nnoremap <leader><space> :noh<cr>
 
 set ls=2          " enable the status
 
@@ -180,13 +184,16 @@ set lz            " lazy redraw
 set completeopt=menu " don't need python docstrings
 set clipboard=unnamed " use the system clipboard
 set title
+let mapleader = "," " map leader to ,
 
 " par formatting
 set formatprg=par
 
 " backup/swap to ~/backup first
-set directory=~/backup,.,~/tmp,/var/tmp,/tmp
-set backupdir=~/backup,.,~/tmp,/var/tmp,/tmp
+set backupdir=~/backup//,~/tmp//,/var/tmp//,/tmp//,.
+set directory=~/backup/swap//,~/tmp//,/var/tmp//,/tmp//,.
+set undofile
+set undodir=~/backup/undo//,~/tmp//,/var/tmp//,/tmp//,.
 " switch on backup
 set bk
 
@@ -306,6 +313,12 @@ endfunction
 au FileType python setlocal tw=0 sw=4 ts=4 sta sts=4 ai et omnifunc=pythoncomplete#Complete
 au FileType html,htmldjango setlocal tw=0 sw=2 ts=2 sta sts=2 ai et
 
+" shortcuts
+" HTML fold tag
+nnoremap <leader>ft Vatzf
+" short CSS attributes
+nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
+
 " frissen beillesztett resz kijelolese
 nnoremap <leader>v V`]
 
@@ -330,6 +343,9 @@ map <C-L> <C-W>l<rightarrow>
 nmap <F5> :call RePa_py()<CR>
 
 " funkciogombok
+inoremap <F1> <ESC>
+nnoremap <F1> <ESC>
+vnoremap <F1> <ESC>
 nmap <F2> :NERDTreeToggle<CR><C-W>l<C-W>j
 imap <F2> <ESC>:NERDTreeToggle<CR><C-W>l<C-W>ji
 nmap <F8> :set wrap!<CR>

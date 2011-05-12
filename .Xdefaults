@@ -11,7 +11,7 @@ URxvt.transparent:true
 URxvt.dynamicColors:on
 URxvt.highlightSelection:true
 URxvt.eightBitInput:true
-URxvt.tintColor:#204030
+URxvt.tintColor:#102018
 URxvt.background:#222328
 URxvt.foreground:#60e080
 URxvt.fading:25
