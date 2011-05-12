@@ -17,6 +17,11 @@
 " surround:   http://www.vim.org/scripts/script.php?script_id=1697
 " project:    http://www.vim.org/scripts/script.php?script_id=69
 
+" pathogen
+filetype off
+call pathogen#runtime_append_all_bundles()
+filetype plugin indent on
+
 " 88/256 colors for urxvt
 set t_Co=256
 
@@ -339,8 +344,7 @@ map <C-K> <C-W>k<uparrow>
 map <C-H> <C-W>h<leftarrow>
 map <C-L> <C-W>l<rightarrow>
 
-" 4 spaces fileok (python)
-nmap <F5> :call RePa_py()<CR>
+nnoremap <F5> :GundoToggle<CR>
 
 " funkciogombok
 inoremap <F1> <ESC>
