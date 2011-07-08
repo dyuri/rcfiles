@@ -92,7 +92,7 @@ alias ll='ls -la'
 alias vi='/usr/bin/gvim'
 alias rvim='/usr/bin/gvim --remote-silent'
 alias jsonpp='python -mjson.tool'
-alias search='find . | xargs -- grep'
+alias search='find . -print0 | xargs -0 -- grep'
 alias vless='/usr/share/vim/vim??/macros/less.sh'
 
 # prompt

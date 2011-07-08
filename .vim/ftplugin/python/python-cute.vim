@@ -3,6 +3,7 @@ if !has('conceal')
     finish
 endif
 
+hi link pythonOperator Operator
 " remove the keywords. we'll re-add them below
 syntax clear pythonOperator
 

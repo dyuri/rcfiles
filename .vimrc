@@ -16,6 +16,7 @@
 " # sparkup:    http://github.com/rstacruz/sparkup
 " surround:   http://www.vim.org/scripts/script.php?script_id=1697
 " project:    http://www.vim.org/scripts/script.php?script_id=69
+" gundo:      http://sjl.bitbucket.org/gundo.vim/
 
 " pathogen
 filetype off
@@ -170,7 +171,7 @@ set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set ignorecase    " ignore case
 set smartcase     " smart case
-set gdefault      " default s///g
+" set gdefault      " default s///g
 " clear hilites with leader+space
 nnoremap <leader><space> :noh<cr>
 
@@ -225,6 +226,9 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+
+" resize splits
+au VimResized * exe "normal \<c-w>="
 
 " filetypes
 au BufNewFile,BufRead *.jspf set filetype=jsp
@@ -336,6 +340,9 @@ inoremap # X<C-H>#
 " Ctrl-Space kodkiegeszites
 inoremap <Nul> <C-X><C-O>
 inoremap <C-space> <C-X><C-O>
+
+" <leader>cd -> pufferben levo file konyvtaraba lepes
+nmap <silent> <Leader>cd :cd %:p:h<CR>
 
 " egergombok
 imap <RightMouse> <Esc>
