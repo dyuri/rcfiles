@@ -497,7 +497,7 @@ function! RePa_statusline()
   " filename
   let sl = sl . '%1*%f'
   " filestate
-  let sl = sl . '%3*%{RePa_sl_filestate()}\ '
+  let sl = sl . '%3*%{RePa_sl_filestate()}%{SyntasticStatuslineFlag()}\ '
   " break
   let sl = sl . '%<'
   " working directory
