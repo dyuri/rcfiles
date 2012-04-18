@@ -23,6 +23,10 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 
+" NERDTree tweeks
+let NERDTreeMinimalUI=1
+let NERDTreeDirArrows=1
+
 " 88/256 colors for urxvt
 set t_Co=256
 
@@ -162,6 +166,7 @@ set foldmethod=marker " folding bekapcsolasa
 
 set autoindent    " always set autoindenting on
 set si            " smartindent
+set listchars=eol:¶,tab:->,trail:·
 
 set nobackup      " keep no backup file
 
@@ -190,6 +195,7 @@ set lz            " lazy redraw
 set completeopt=menu " don't need python docstrings
 set clipboard=unnamed " use the system clipboard
 set title
+set autoread " auto read file if changed
 let mapleader = "," " map leader to ,
 
 " par formatting
@@ -375,6 +381,9 @@ map <F4> :bn!<cr>
 imap <F3> <ESC>:bp!<cr>i
 imap <F4> <ESC>:bn!<cr>i
 
+" panic button
+nnoremap <F6> mzggg?G'z
+
 " tab navigation like firefox
 nmap <C-F3> :tabprevious<cr>
 nmap <C-F4> :tabnext<cr>
@@ -392,21 +401,22 @@ function! RePa_sl_lines()
     return ''
   else
     let b:lastline = line('$')
-    if b:lastline < 10
-      return '[     '.b:lastline.'] '
-    elseif b:lastline < 100
-      return '[    '.b:lastline.'] '
-    elseif b:lastline < 1000
-      return '[   '.b:lastline.'] '
-    elseif b:lastline < 10000
-      return '[  '.b:lastline.'] '
-    elseif b:lastline < 100000
-      return '[ '.b:lastline.'] '
-    elseif b:lastline < 1000000
-      return '['.b:lastline.'] '
-    else
-      return b:lastline.' '
-    endif
+    "if b:lastline < 10
+      "return '[     '.b:lastline.'] '
+    "elseif b:lastline < 100
+      "return '[    '.b:lastline.'] '
+    "elseif b:lastline < 1000
+      "return '[   '.b:lastline.'] '
+    "elseif b:lastline < 10000
+      "return '[  '.b:lastline.'] '
+    "elseif b:lastline < 100000
+      "return '[ '.b:lastline.'] '
+    "elseif b:lastline < 1000000
+      "return '['.b:lastline.'] '
+    "else
+      "return b:lastline.' '
+    "endif
+    return b:lastline.' '
   endif
 endfunction
 
@@ -494,8 +504,10 @@ function! RePa_statusline()
   
   " lines
   let sl = sl . '%2*%{RePa_sl_lines()}'
+  " mode
+  let sl = sl . '%2*[%3*%{RePa_sl_mode()}%2*]'
   " filename
-  let sl = sl . '%1*%f'
+  let sl = sl . '%1*\ %f'
   " filestate
   let sl = sl . '%3*%{RePa_sl_filestate()}%{SyntasticStatuslineFlag()}\ '
   " break
@@ -520,11 +532,8 @@ function! RePa_statusline()
   let sl = sl . '%3*\|%{RePa_sl_ignorecaseON()}'
   let sl = sl . '%4*%{RePa_sl_ignorecaseOFF()}'
   
-  " mode
-  let sl = sl . '%2*\ [%3*%{RePa_sl_mode()}%2*]\ '
-  
   " position, line and column, percentage
-  let sl = sl . '%05(%l%),%03(%v%)%2*\ %P'
+  let sl = sl . '%2*\ %05(%l%),%03(%v%)%2*\ %P'
   
   return sl
   
