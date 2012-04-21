@@ -17,6 +17,9 @@
 " surround:   http://www.vim.org/scripts/script.php?script_id=1697
 " project:    http://www.vim.org/scripts/script.php?script_id=69
 " gundo:      http://sjl.bitbucket.org/gundo.vim/
+" javascipt:  https://github.com/pangloss/vim-javascript
+" syntastic
+" command-t:  http://git.wincent.com/command-t.git
 
 " pathogen
 filetype off
@@ -233,6 +236,9 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 
+let xml_use_xhtml = 1
+let xml_tag_completion_map = "<C-l>"
+
 " resize splits
 au VimResized * exe "normal \<c-w>="
 
@@ -383,6 +389,10 @@ imap <F4> <ESC>:bn!<cr>i
 
 " panic button
 nnoremap <F6> mzggg?G'z
+
+" command-t
+nnoremap <F7> :CommandT<cr>
+nnoremap <S-F7> :CommandTBuffer<cr>
 
 " tab navigation like firefox
 nmap <C-F3> :tabprevious<cr>
