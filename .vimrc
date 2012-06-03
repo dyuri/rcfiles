@@ -134,6 +134,18 @@ set nocompatible
   hi User3                guibg=#080848 guifg=green
   hi User4                ctermbg=darkblue ctermfg=blue
   hi User4                guibg=#080848 guifg=#202050
+  hi StatusLine           ctermfg=white ctermbg=darkblue term=none cterm=none
+  hi StatusLine           guifg=white guibg=#080848 gui=none
+  hi StatusLineNC         ctermfg=gray ctermbg=darkblue term=none cterm=none
+  hi StatusLineNC         guifg=gray guibg=#080848 gui=none
+
+  " CtrlP
+  hi CtrlPMode1           ctermbg=darkblue ctermfg=yellow
+  hi CtrlPMode1           guibg=#080848 guifg=yellow
+  hi CtrlPMode2           ctermbg=darkblue ctermfg=green
+  hi CtrlPMode2           guibg=#080848 guifg=green
+  hi CtrlPStatus          ctermbg=darkblue ctermfg=cyan
+  hi CtrlPStatus          guibg=#080848 guifg=cyan
 
 if v:version >= 700
   hi CursorLine           guibg=#041008
@@ -156,6 +168,11 @@ if !has("gui_running")
   colorscheme repa
 endif
 
+if has("gui_running")
+  set guifont=Inconsolata-g\ 10
+  let g:Powerline_symbols = 'fancy'
+endif
+
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
@@ -169,7 +186,8 @@ set foldmethod=marker " folding bekapcsolasa
 
 set autoindent    " always set autoindenting on
 set si            " smartindent
-set listchars=eol:¶,tab:->,trail:·
+set listchars=tab:▸\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set showbreak=↪
 
 set nobackup      " keep no backup file
 
@@ -201,6 +219,9 @@ set title
 set autoread " auto read file if changed
 let mapleader = "," " map leader to ,
 
+" ctrlp ignore
+set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip
+
 " par formatting
 set formatprg=par
 
@@ -214,8 +235,8 @@ set bk
 
 if has("gui_running")
   set nu
-  set lines=40
-  set columns=140
+  " set lines=40
+  " set columns=140
   set guioptions-=T
   set guioptions-=m
   set guioptions-=r
@@ -349,6 +370,10 @@ nnoremap <leader>v V`]
 " #-os commentek ne menjenek a sor elejere
 inoremap # X<C-H>#
 
+" indentalt resz ujraselectalasa
+vnoremap < <gv
+vnoremap > >gv
+
 " Ctrl-Space kodkiegeszites
 inoremap <Nul> <C-X><C-O>
 inoremap <C-space> <C-X><C-O>
@@ -391,8 +416,11 @@ imap <F4> <ESC>:bn!<cr>i
 nnoremap <F6> mzggg?G'z
 
 " command-t
-nnoremap <F7> :CommandT<cr>
-nnoremap <S-F7> :CommandTBuffer<cr>
+" nnoremap <F7> :CommandT<cr>
+" nnoremap <S-F7> :CommandTBuffer<cr>
+nnoremap <F7> :CtrlPMixed<cr>
+nnoremap <S-F7> :CtrlP<cr>
+nnoremap <C-F7> :CtrlPMRUFiles<cr>
 
 " tab navigation like firefox
 nmap <C-F3> :tabprevious<cr>
@@ -550,7 +578,7 @@ function! RePa_statusline()
 endfunction
 
 " set the statusline
-execute "set statusline=" . RePa_statusline()
+" execute "set statusline=" . RePa_statusline()
 
 " taglist
 let Tlist_Inc_Winwidth=0
