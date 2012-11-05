@@ -80,6 +80,18 @@ setopt extended_glob            # Weird & wacky pattern matching - yay zsh!
 setopt always_to_end            # When complete from middle, move cursor
 setopt interactive_comments     # Escape commands so I can use them later
 
+## from grml's zshrc
+setopt histignorealldups
+setopt histignorespace
+setopt auto_cd
+setopt nonomatch
+setopt notify
+setopt completeinword
+setopt nohup
+setopt auto_pushd
+setopt nobeep
+setopt pushd_ignore_dups
+
 ### idaig
 
 # autoload -U colors
@@ -89,12 +101,29 @@ setopt interactive_comments     # Escape commands so I can use them later
 
 alias ls="ls ${LS_OPTIONS}"
 alias ll='ls -la'
-alias vi='/usr/bin/gvim'
 alias rvim='/usr/bin/gvim --remote-silent'
 alias jsonpp='python -mjson.tool'
 #alias search='find . -print0 | xargs -0 -- grep'
 alias search=ack
 alias vless='/usr/share/vim/vim??/macros/less.sh'
+alias urxvt="/usr/bin/urxvt -fn 'xft:inconsolata\-g:pixelsize=13:antialias=true:hinting=true' -fb 'xft:inconsolata\-g:pixelsize=13:antialias=true:hinting=true'"
+
+vi(){
+  EXECUTABLE='vi'
+  if [[ -n "$DISPLAY" ]]; then
+    EXECUTABLE=`which gvim`
+    
+  else
+    EXECUTABLE=`which vim`
+  fi
+  
+  # local vimrc, for gvim only (gvimrc)
+  if [[ -f ./.vimrc ]]; then
+    $EXECUTABLE -U `pwd`/.vimrc $*
+  else
+    $EXECUTABLE $*
+  fi
+}
 
 # prompt
 . ~/.zshprompt
