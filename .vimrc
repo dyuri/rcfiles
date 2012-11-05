@@ -6,6 +6,7 @@
 " snippets:   http://www.vim.org/scripts/script.php?script_id=1318
 " vcscommand: http://www.vim.org/scripts/script.php?script_id=90 
 " minbufexpl: http://www.vim.org/scripts/script.php?script_id=159
+"          -> https://github.com/fholgado/minibufexpl.vim
 " matchit:    http://www.vim.org/scripts/script.php?script_id=39
 " VE:         http://www.vim.org/scripts/script.php?script_id=1950
 " NERDtree:   http://www.vim.org/scripts/script.php?script_id=1658
@@ -221,6 +222,8 @@ let mapleader = "," " map leader to ,
 
 " ctrlp ignore
 set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip
+" let g:ctrlp_working_path_mode = 'rc'
+let g:ctrlp_working_path_mode = 2
 
 " par formatting
 set formatprg=par
@@ -394,8 +397,8 @@ map <C-L> <C-W>l<rightarrow>
 nnoremap <F5> :GundoToggle<CR>
 
 " funkciogombok
+map <F1> <Plug>TMiniBufExplorer
 inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 nmap <F2> :NERDTreeToggle<CR><C-W>l<C-W>j
 imap <F2> <ESC>:NERDTreeToggle<CR><C-W>l<C-W>ji

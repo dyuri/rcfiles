@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/mnt/nagy/django/bit-stat/bitstat/bitstat/collector'
 let g:netrw_dirhist_2='/home/dyuri/icesus'
 let g:netrw_dirhist_3='/home/dyuri/.ipython'
@@ -7,3 +7,5 @@ let g:netrw_dirhist_4='/home/dyuri/Mail/inbox'
 let g:netrw_dirhist_5='/mnt/nagy/www/html/prezi/python_advanced'
 let g:netrw_dirhist_6='/home/dyuri/.x'
 let g:netrw_dirhist_7='/home/dyuri/config/.vim/ftplugin/javascript'
+let g:netrw_dirhist_8='/mnt/nagy/shery/tomcat/conf.orig'
+let g:netrw_dirhist_9='/home/dyuri/.vim'
