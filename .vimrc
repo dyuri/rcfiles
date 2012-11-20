@@ -31,6 +31,17 @@ filetype plugin indent on
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
 
+" jsbeautifier
+let g:jsbeautify = {'indent_size': 2, 'indent_char': ' '}
+let g:htmlbeautify = {'indent_size': 2, 'indent_char': ' ', 'brace_style': 'expand', 'unformatted': ['a', 'sub', 'sup', 'b', 'i', 'u', 'em', 'cite', 'strong']}
+let g:cssbeautify = {'indent_size': 2, 'indent_char': ' '}
+let g:jsbeautify_engine = 'node'
+
+" html output
+let html_use_css = 1
+
+map <c-f> :call JsBeautify()<cr>
+
 " 88/256 colors for urxvt
 set t_Co=256
 
