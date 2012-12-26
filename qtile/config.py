@@ -208,7 +208,7 @@ keys = [
     ),
     Key(
         [mod], "c",
-        lazy.function(app_or_group('www', 'google-chrome'))
+        lazy.function(app_or_group('www', 'pasuspender -- google-chrome'))
     ),
     Key(
         [alt], "Escape",

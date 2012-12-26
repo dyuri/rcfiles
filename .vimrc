@@ -13,7 +13,7 @@
 " NERDcommenter: http://www.vim.org/scripts/script.php?script_id=1218
 " CSApprox:   http://www.vim.org/scripts/script.php?script_id=2390
 " slime:      http://technotales.wordpress.com/2008/10/17/screencast-like-slime-for-vim/
-" pyflakes:   http://www.vim.org/scripts/script.php?script_id=2441
+" removed in favor of python-mode pyflakes:   http://www.vim.org/scripts/script.php?script_id=2441
 " # sparkup:    http://github.com/rstacruz/sparkup
 " surround:   http://www.vim.org/scripts/script.php?script_id=1697
 " project:    http://www.vim.org/scripts/script.php?script_id=69
@@ -21,6 +21,8 @@
 " javascipt:  https://github.com/pangloss/vim-javascript
 " syntastic
 " command-t:  http://git.wincent.com/command-t.git
+" python-mode: https://github.com/klen/python-mode
+" jedi-vim: https://github.com/davidhalter/jedi-vim
 
 " pathogen
 filetype off
@@ -36,6 +38,16 @@ let g:jsbeautify = {'indent_size': 2, 'indent_char': ' '}
 let g:htmlbeautify = {'indent_size': 2, 'indent_char': ' ', 'brace_style': 'expand', 'unformatted': ['a', 'sub', 'sup', 'b', 'i', 'u', 'em', 'cite', 'strong']}
 let g:cssbeautify = {'indent_size': 2, 'indent_char': ' '}
 let g:jsbeautify_engine = 'node'
+
+" syntastic - disable python (python-mode)
+" let g:syntastic_mode_map = { 'mode': 'active',
+"         \ 'active_filetypes': [],
+"         \ 'passive_filetypes': ['python'] }
+
+" python-mode, jedi
+let g:jedi#show_function_definition = 1
+let g:jedi#use_tabs_not_buffers = 0
+let g:jedi#auto_vim_configuration = 0
 
 " html output
 let html_use_css = 1
@@ -54,13 +66,13 @@ set nocompatible
   hi Normal               ctermfg=white ctermbg=black
   "hi Normal               guifg=white guibg=darkblue
   hi String               ctermfg=Green
-  hi String               guifg=Green
+  hi String               guifg=#33cc33
   hi Number               ctermfg=LightGreen
-  hi Number               guifg=LightGreen
+  hi Number               guifg=#44ee44
   hi Boolean              ctermfg=LightGreen
-  hi Boolean              guifg=LightGreen
+  hi Boolean              guifg=#44ee44
   hi Float                ctermfg=LightGreen
-  hi Float                guifg=LightGreen
+  hi Float                guifg=#44ee44
   hi Operator             ctermfg=Yellow
   hi Operator             guifg=Yellow
   hi Repeat               ctermfg=Red
@@ -73,7 +85,7 @@ set nocompatible
   hi Todo                 ctermfg=red   ctermbg=darkblue gui=reverse,underline
   hi Todo                 guifg=red guibg=darkblue
   hi Search               ctermfg=yellow ctermbg=darkgreen
-  hi Search               guifg=lightgreen guibg=darkgreen
+  hi Search               guifg=#44ee44 guibg=darkgreen
   hi IncSearch            ctermfg=black ctermbg=darkyellow cterm=bold,reverse,underline term=underline
   hi IncSearch            guifg=black guibg=darkyellow gui=bold,reverse
   hi SpecialKey           ctermfg=darkcyan
@@ -91,7 +103,7 @@ set nocompatible
   hi MoreMsg              ctermfg=darkgreen
   hi MoreMsg              guifg=darkgreen
   hi Question             ctermfg=green cterm=none
-  hi Question             guifg=green gui=none
+  hi Question             guifg=#33cc33 gui=none
   hi NonText              ctermfg=lightMagenta
   hi NonText              guifg=lightMagenta
   hi StatusLine           ctermfg=blue ctermbg=gray term=none cterm=none
@@ -105,7 +117,9 @@ set nocompatible
   hi FoldColumn           ctermfg=darkgrey ctermbg=black cterm=bold term=bold
   hi FoldColumn           guifg=darkgrey guibg=black gui=bold
   hi LineNr               ctermbg=black ctermfg=green cterm=none
-  hi LineNr               guibg=#080840 guifg=green gui=none
+  hi LineNr               guibg=#080840 guifg=#33cc33 gui=none
+  hi SignColumn           ctermbg=black ctermfg=lightcyan cterm=none
+  hi SignColumn           guibg=#080840 guifg=#44ffff gui=none
   hi DiffAdd              ctermbg=darkblue term=none cterm=none
   hi DiffAdd              guibg=darkblue gui=none
   hi DiffChange           ctermbg=magenta cterm=none
@@ -121,7 +135,7 @@ set nocompatible
   hi Comment              ctermfg=brown cterm=none term=none
   hi Comment              guifg=blue gui=italic
   hi Constant             ctermfg=darkgreen
-  hi Constant             guifg=green
+  hi Constant             guifg=#33cc33
   hi Special              ctermfg=green
   hi Special              guifg=lightcyan
   hi Identifier           ctermfg=cyan cterm=none
@@ -143,7 +157,7 @@ set nocompatible
   hi User2                ctermbg=darkblue ctermfg=white
   hi User2                guibg=#080848 guifg=white
   hi User3                ctermbg=darkblue ctermfg=green
-  hi User3                guibg=#080848 guifg=green
+  hi User3                guibg=#080848 guifg=#33cc33
   hi User4                ctermbg=darkblue ctermfg=blue
   hi User4                guibg=#080848 guifg=#202050
   hi StatusLine           ctermfg=white ctermbg=darkblue term=none cterm=none
@@ -155,7 +169,7 @@ set nocompatible
   hi CtrlPMode1           ctermbg=darkblue ctermfg=yellow
   hi CtrlPMode1           guibg=#080848 guifg=yellow
   hi CtrlPMode2           ctermbg=darkblue ctermfg=green
-  hi CtrlPMode2           guibg=#080848 guifg=green
+  hi CtrlPMode2           guibg=#080848 guifg=#33cc33
   hi CtrlPStatus          ctermbg=darkblue ctermfg=cyan
   hi CtrlPStatus          guibg=#080848 guifg=cyan
 
