@@ -40,9 +40,9 @@ let g:cssbeautify = {'indent_size': 2, 'indent_char': ' '}
 let g:jsbeautify_engine = 'node'
 
 " syntastic - disable python (python-mode)
-" let g:syntastic_mode_map = { 'mode': 'active',
-"         \ 'active_filetypes': [],
-"         \ 'passive_filetypes': ['python'] }
+let g:syntastic_mode_map = { 'mode': 'active',
+        \ 'active_filetypes': [],
+        \ 'passive_filetypes': ['python'] }
 
 " python-mode, jedi
 let g:jedi#show_function_definition = 1
@@ -231,6 +231,7 @@ set ls=2          " enable the status
 
 set et            " expandt tab
 set mousemodel=extend
+set mouse=a
 set ch=2
 set tabstop=2
 set softtabstop=2
