@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
-from libqtile.manager import Key, Click, Drag, Screen, Group
+from libqtile.config import Key, Click, Drag, Screen, Group, Match
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
-from libqtile.dgroups import DGroups, Match, simple_key_binder
+
+from launcher import Launcher
 
 from libqtile import xcbq
 xcbq.keysyms["XF86AudioRaiseVolume"] = 0x1008ff13
@@ -10,9 +11,9 @@ xcbq.keysyms["XF86AudioLowerVolume"] = 0x1008ff11
 xcbq.keysyms["XF86AudioMute"] = 0x1008ff12
 
 widget_defaults = dict(
-    font = 'Inconsolata-g',
-    fontsize = 14,
-    padding = 3,
+    font='Inconsolata-g',
+    fontsize=14,
+    padding=3,
 )
 
 
@@ -28,20 +29,23 @@ def app_or_group(group, app):
             qtile.cmd_spawn(app)
     return f
 
+
 def getIndex(currentGroupName):
     for i in xrange(len(groups)):
         if groups[i].name == currentGroupName:
             return i
 
+
 def toPrevGroup(qtile):
     currentGroup = qtile.currentGroup.name
     i = getIndex(currentGroup)
-    qtile.currentWindow.togroup(groups[ (i - 1) % len(groups)].name)
+    qtile.currentWindow.togroup(groups[(i - 1) % len(groups)].name)
+
 
 def toNextGroup(qtile):
     currentGroup = qtile.currentGroup.name
     i = getIndex(currentGroup)
-    qtile.currentWindow.togroup(groups[ (i + 1) % len(groups)].name)
+    qtile.currentWindow.togroup(groups[(i + 1) % len(groups)].name)
 
 
 mod = "mod4"
@@ -108,7 +112,8 @@ keys = [
         [mod, "shift"], "x",
         lazy.group.setlayout('xmonad-tall')
     ),
-    Key([mod], "space",
+    Key(
+        [mod], "space",
         lazy.nextlayout()
     ),
     # Bindings to control the layouts
@@ -158,33 +163,33 @@ keys = [
     Key(
         [mod, "shift"], "k",
         lazy.layout.shuffle_up(),         # Stack, xmonad-tall
-       ),
+    ),
     Key(
         [mod, "shift"], "j",
         lazy.layout.shuffle_down(),       # Stack, xmonad-tall
-       ),
+    ),
     Key(
         [mod, "control"], "l",
         lazy.layout.add(),                # Stack
         lazy.layout.increase_ratio(),     # Tile
         lazy.layout.maximize(),           # xmonad-tall
-       ),
+    ),
     Key(
         [mod, "control"], "h",
         lazy.layout.delete(),             # Stack
         lazy.layout.decrease_ratio(),     # Tile
         lazy.layout.normalize(),          # xmonad-tall
-       ),
+    ),
     Key(
         [mod, "control"], "k",
         lazy.layout.shrink(),             # xmonad-tall
         lazy.layout.decrease_nmaster(),   # Tile
-       ),
+    ),
     Key(
         [mod, "control"], "j",
         lazy.layout.grow(),               # xmonad-tall
         lazy.layout.increase_nmaster(),   # Tile
-       ),
+    ),
     # applications
     Key(
         [mod], "Escape",
@@ -193,14 +198,14 @@ keys = [
     Key(
         [mod], "Return",
         lazy.spawn(
-        "/usr/bin/urxvt"
-        " -fn 'xft:inconsolata\\-g:pixelsize=13:antialias=true:hinting=true'"
-        " -fb 'xft:inconsolata\\-g:pixelsize=13:antialias=true:hinting=true'"
+            "/usr/bin/urxvt"
+            " -fn 'xft:inconsolata\\-g:pixelsize=13:antialias=true:hinting=true'"
+            " -fb 'xft:inconsolata\\-g:pixelsize=13:antialias=true:hinting=true'"
         )
     ),
     Key(
         [mod], "p",
-        lazy.function(app_or_group('io', 'pidgin'))
+        lazy.function(app_or_group('io', 'gajim'))
     ),
     Key(
         [mod], "g",
@@ -208,7 +213,11 @@ keys = [
     ),
     Key(
         [mod], "c",
-        lazy.function(app_or_group('www', 'pasuspender -- google-chrome'))
+        lazy.function(app_or_group('www', 'google-chrome'))
+    ),
+    Key(
+        [mod, "shift"], "c",
+        lazy.spawn('google-chrome')
     ),
     Key(
         [alt], "Escape",
@@ -272,8 +281,9 @@ keys_old = [
         " -fn 'xft:inconsolata\\-g:pixelsize=13:antialias=true:hinting=true'"
         " -fb 'xft:inconsolata\\-g:pixelsize=13:antialias=true:hinting=true'"
         )),
-    Key([mod], "p", lazy.function(app_or_group('io', 'pidgin'))),
+    Key([mod], "p", lazy.function(app_or_group('io', 'gajim'))),
     Key([mod], "c", lazy.function(app_or_group('www', 'google-chrome'))),
+    Key([mod], "f", lazy.function(app_or_group('www', 'firefox'))),
     Key([alt], "Escape",
         lazy.spawn("gmrun")),
     Key([mod], "q",
@@ -325,12 +335,16 @@ layouts = [
 
     # pidgin
     layout.Slice('left', 256, name='pidgin', role='buddy_list',
-        fallback=layout.Tile(**border)),
+                 fallback=layout.Tile(**border)),
+
+    # gajim
+    layout.Slice('left', 320, name='gajim', role='roster',
+                 fallback=layout.Tile(**border)),
 
     # gimp
     layout.Slice('left', 256, name='gimp', role='gimp-toolbox',
-        fallback=layout.Slice('right', 256, role='gimp-dock',
-        fallback=layout.Stack(1, **border))),
+                 fallback=layout.Slice('right', 256, role='gimp-dock',
+                 fallback=layout.Stack(1, **border))),
 ]
 floating_layout = layout.Floating(auto_float_types=[
     "notification",
@@ -348,7 +362,7 @@ for i in static_groups:
         Key([mod], i, lazy.group[i].toscreen())
     )
     keys.append(
-        Key([alt], 'F'+i, lazy.group[i].toscreen())
+        Key([alt], 'F' + i, lazy.group[i].toscreen())
     )
     keys.append(
         Key([mod, "shift"], i, lazy.window.togroup(i))
@@ -366,9 +380,11 @@ screens = [
         ], 24, ),
         bottom=bar.Bar([
             widget.GroupBox(urgent_alert_method='text', **widget_defaults),
+            Launcher('google-chrome', label="C", foreground='#CC4400', **widget_defaults),
+            Launcher('firefox', label="F", foreground='#0044FF', **widget_defaults),
             widget.Prompt(foreground='#20C020', **widget_defaults),
             widget.Spacer(),
-            # widget.Notify(**widget_defaults), # ???
+            widget.Notify(foreground="ffff44", **widget_defaults),
             widget.Systray(**widget_defaults),
             # widget.Volume(**widget_defaults),
             widget.Clock(
@@ -389,27 +405,11 @@ def dialogs(window):
         window.floating = True
 
 
-def main(qtile):
-
-    dynamic_groups = {
-        'io': {'exclusive': False, 'layout': 'pidgin'},
-        'gimp': {'exclusive': False, 'layout': 'gimp'},
-        'www': {'exclusive': False, 'layout': 'tile'},
-        'eclipse': {'exclusive': False, 'layout': 'tile'},
-    }
-
-    global static_groups
-    for group in static_groups:
-        dynamic_groups[group] = {'persist': True}
-
-    apps = [
-        {'match': Match(wm_class=['Pidgin'], role=['Buddy List']), 'group': 'io'},
-        {'match': Match(wm_class=['google-chrome', 'Google-chrome']), 'group': 'www'},
-        {'match': Match(wm_class=['eclipse', 'Eclipse']), 'group': 'eclipse'},
-        {'match': Match(wm_class=['gimp', 'Gimp']), 'group': 'gimp'},
-        {'match': Match(wm_class=['Titanium Studio']), 'group': 'eclipse'},
-    ]
-
-    DGroups(qtile, dynamic_groups, apps, simple_key_binder('mod3'))
-
-    lazy.spawn('feh --bg-scale ~/sajat/bg.jpg')
+groups.extend([
+    Group('www', layout='tile', persist=True,
+          matches=[Match(wm_class=['google-chrome', 'Google-chrome', 'Firefox'])]),
+    Group('io', layout='gajim', persist=False,
+          matches=[Match(wm_class=['Gajim'], role=['roster'])], init=False),
+    Group('gimp', layout='gimp', persist=False,
+          matches=[Match(wm_class=['gimp', 'Gimp'])], init=False),
+])
