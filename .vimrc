@@ -1,6 +1,5 @@
 " Repa's vimrc
 " Recommended plugins:
-" taglist:    http://www.vim.org/scripts/script.php?script_id=273
 " netrw:      http://www.vim.org/scripts/script.php?script_id=1075
 " vimblog:    http://www.vim.org/scripts/script.php?script_id=2030
 " snippets:   http://www.vim.org/scripts/script.php?script_id=1318
@@ -23,6 +22,8 @@
 " command-t:  http://git.wincent.com/command-t.git
 " python-mode: https://github.com/klen/python-mode
 " jedi-vim: https://github.com/davidhalter/jedi-vim
+" tagbar: https://github.com/majutsushi/tagbar
+" - doctorjs: https://github.com/mozilla/doctorjs
 
 " pathogen
 filetype off
@@ -429,7 +430,7 @@ vnoremap <F1> <ESC>
 nmap <F2> :NERDTreeToggle<CR><C-W>l<C-W>j
 imap <F2> <ESC>:NERDTreeToggle<CR><C-W>l<C-W>ji
 nmap <F8> :set wrap!<CR>
-nmap <F9> :Tlist<CR>
+nmap <F9> :TagbarToggle<CR>
 nmap <F11> :set nu!<CR>
 nmap <F12> :set list!<CR>
 
@@ -608,9 +609,6 @@ endfunction
 
 " set the statusline
 " execute "set statusline=" . RePa_statusline()
-
-" taglist
-let Tlist_Inc_Winwidth=0
 
 " screen hacks
 map <esc>[1;5A <c-up>
