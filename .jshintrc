@@ -18,7 +18,9 @@
     "dojo"          : false,
 
     "predef"        : [  // Extra globals.
-        //"Android",
+      "Y",
+      "$",
+      "window"
     ],
 
 

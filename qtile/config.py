@@ -227,6 +227,18 @@ keys = [
         [mod], "q",
         lazy.spawn('xlock')
     ),
+    Key(
+        [], "XF86AudioRaiseVolume",
+        lazy.spawn("amixer sset Master 5%+")
+    ),
+    Key(
+        [], "XF86AudioLowerVolume",
+        lazy.spawn("amixer sset Master 5%-")
+    ),
+    Key(
+        [], "XF86AudioMute",
+        lazy.spawn("amixer sset Master toggle")
+    ),
 ]
 
 keys_old = [
