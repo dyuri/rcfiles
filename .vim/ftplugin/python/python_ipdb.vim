@@ -17,7 +17,7 @@ def SetBreakpoint():
        "%(space)sfrom ipdb import set_trace;set_trace() %(mark)s Breakpoint %(mark)s" %
          {'space':strWhite, 'mark': '#' * 30}, nLine - 1)
 
-vim.command( 'map <f7> :py SetBreakpoint()<cr>')
+# vim.command( 'map <f7> :py SetBreakpoint()<cr>')
 
 def RemoveBreakpoints():
     import re

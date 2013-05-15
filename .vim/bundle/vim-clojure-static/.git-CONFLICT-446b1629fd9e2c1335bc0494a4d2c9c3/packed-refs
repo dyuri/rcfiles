@@ -1,0 +1,6 @@
+# pack-refs with: peeled 
+249328ee659190babe2b14cd119f972b21b80538 refs/remotes/origin/master
+a3429dbf7bc79c9f9053b24397696c1799cc12a8 refs/remotes/origin/noprompt-regexp
+2d0d267fa298f17033e0bd68e569278bc729b463 refs/tags/vim-release-001
+24c48f118d6d773ed9fb239632b0749ab4927847 refs/tags/vim-release-002
+8dff0b3bfa1c50f5ea8edab4866ff41cafcf39b2 refs/tags/vim-release-003

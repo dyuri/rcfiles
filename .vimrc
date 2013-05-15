@@ -12,6 +12,7 @@
 " NERDcommenter: http://www.vim.org/scripts/script.php?script_id=1218
 " CSApprox:   http://www.vim.org/scripts/script.php?script_id=2390
 " slime:      http://technotales.wordpress.com/2008/10/17/screencast-like-slime-for-vim/
+"             https://github.com/jpalardy/vim-slime
 " removed in favor of python-mode pyflakes:   http://www.vim.org/scripts/script.php?script_id=2441
 " # sparkup:    http://github.com/rstacruz/sparkup
 " surround:   http://www.vim.org/scripts/script.php?script_id=1697
@@ -24,6 +25,8 @@
 " jedi-vim: https://github.com/davidhalter/jedi-vim
 " tagbar: https://github.com/majutsushi/tagbar
 " - doctorjs: https://github.com/mozilla/doctorjs
+" unimpaierd: https://github.com/tpope/vim-unimpaired
+" vim-visual-star-search [github]
 
 " pathogen
 filetype off
@@ -249,8 +252,19 @@ let mapleader = "," " map leader to ,
 
 " ctrlp ignore
 set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip
-" let g:ctrlp_working_path_mode = 'rc'
-let g:ctrlp_working_path_mode = 2
+let g:ctrlp_working_path_mode = 'ra'
+" let g:ctrlp_working_path_mode = 2
+let g:ctrlp_map = '<F7>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+
+" slime tmux
+" let g:slime_target = "tmux"
+" slimux
+map <Leader>s :SlimuxREPLSendLine<CR>
+vmap <Leader>s :SlimuxREPLSendSelection<CR>
+map <Leader>a :SlimuxShellLast<CR>
+map <C-c><C-c> :SlimuxREPLSendLine<CR>
+vmap <C-c><C-c> :SlimuxREPLSendSelection<CR>
 
 " par formatting
 set formatprg=par
@@ -616,3 +630,6 @@ map <esc>[1;5B <c-down>
 map <esc>[1;5C <c-right>
 map <esc>[1;5D <c-left>
 
+" prezi w/ folds
+map <M-Down> zmzjzo
+map <M-Up> zmzkzo
