@@ -76,11 +76,19 @@ keys = [
     # group switch
     Key(
         [mod], "Left",
-        lazy.group.prevgroup()
+        lazy.screen.prevgroup()
     ),
     Key(
         [mod], "Right",
-        lazy.group.nextgroup()
+        lazy.screen.nextgroup()
+    ),
+    Key(
+        [mod], "Home",
+        lazy.screen.prevgroup()
+    ),
+    Key(
+        [mod], "End",
+        lazy.screen.nextgroup()
     ),
     Key(
         [mod, "shift"], "Left",
@@ -314,10 +322,18 @@ keys_old = [
     Key(["shift"], "XF86AudioMute",
         lazy.spawn("mpc toggle")),
 
+    Key([mod], "Home",
+        lazy.screen.prevgroup()),
+    Key([mod], "End",
+        lazy.screen.nextgroup()),
+    Key([mod, "shift"], "Home",
+        lazy.function(toPrevGroup)),
+    Key([mod, "shift"], "End",
+        lazy.function(toNextGroup)),
     Key([mod], "Left",
-        lazy.group.prevgroup()),
+        lazy.screen.prevgroup()),
     Key([mod], "Right",
-        lazy.group.nextgroup()),
+        lazy.screen.nextgroup()),
     Key([mod, "shift"], "Left",
         lazy.function(toPrevGroup)),
     Key([mod, "shift"], "Right",
@@ -347,7 +363,7 @@ layouts = [
 
     # pidgin
     layout.Slice('left', 256, name='pidgin', role='buddy_list',
-                 fallback=layout.Tile(**border)),
+                fallback=layout.Tile(**border)),
 
     # gajim
     layout.Slice('left', 320, name='gajim', role='roster',
@@ -419,7 +435,7 @@ def dialogs(window):
 
 groups.extend([
     Group('www', layout='tile', persist=True,
-          matches=[Match(wm_class=['google-chrome', 'Google-chrome', 'Firefox'])]),
+          matches=[Match(wm_class=['google-chrome', 'Google-chrome', 'Chromium', 'chromium', 'Firefox'])]),
     Group('io', layout='gajim', persist=False,
           matches=[Match(wm_class=['Gajim'], role=['roster'])], init=False),
     Group('gimp', layout='gimp', persist=False,

@@ -9,7 +9,7 @@ __all__ = [
 
 class Launcher(base._TextBox):
     ''' Widget to start an application '''
-    defaults = manager.Defaults(
+    defaults = [
         ("font", "Arial", "Text font"),
         ("fontsize", None, "Font pixel size. Calculated if None."),
         ("fontshadow", None,
@@ -18,7 +18,7 @@ class Launcher(base._TextBox):
         ("background", None, "Background colour."),
         ("foreground", "#ffffff", "Foreground colour."),
         ("label", None, "Label."),
-    )
+    ]
 
     def __init__(self, command, **config):
         base._TextBox.__init__(self, '0', width=bar.CALCULATED, **config)
