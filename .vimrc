@@ -199,8 +199,7 @@ if !has("gui_running")
 endif
 
 if has("gui_running")
-  set guifont=Inconsolata-g\ for\ Powerline\ 10
-  let g:Powerline_symbols = 'fancy'
+  set guifont=Meslo\ LG\ S\ for\ Powerline\ 10
 endif
 
 " allow backspacing over everything in insert mode
@@ -290,6 +289,12 @@ if has("gui_running")
   set cursorline
   set cursorcolumn
 endif
+
+" Powerline
+let g:Powerline_symbols = 'fancy'
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 " NERDTree
 let g:NERDTreeIgnore=['\.swp$','\.pyc$','\.pyo$']
