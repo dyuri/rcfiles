@@ -199,7 +199,7 @@ if !has("gui_running")
 endif
 
 if has("gui_running")
-  set guifont=Inconsolata-g\ 10
+  set guifont=Inconsolata-g\ for\ Powerline\ 10
   let g:Powerline_symbols = 'fancy'
 endif
 
