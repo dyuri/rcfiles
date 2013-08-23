@@ -207,8 +207,8 @@ keys = [
         [mod], "Return",
         lazy.spawn(
             "/usr/bin/urxvt"
-            " -fn 'xft:inconsolata\\-g:pixelsize=13:antialias=true:hinting=true'"
-            " -fb 'xft:inconsolata\\-g:pixelsize=13:antialias=true:hinting=true'"
+            " -fn 'xft:Meslo\ LG\ S\ for\ Powerline:pixelsize=13:antialias=true:hinting=true'"
+            " -fb 'xft:Meslo\ LG\ S\ for\ Powerline:bold:pixelsize=13:antialias=true:hinting=true'"
         )
     ),
     Key(
@@ -402,7 +402,7 @@ screens = [
             widget.WindowName(**widget_defaults),
             widget.CurrentLayout(**widget_defaults),
             widget.CPUGraph(graph_color='18EB18', fill_color='16EB16.3', line_width=1),
-            widget.NetGraph(graph_color='18BAEB', fill_color='1667EB.3', line_width=1),
+            widget.NetGraph(graph_color='18BAEB', fill_color='1667EB.3', line_width=1, interface='ppp0'),
             widget.MemoryGraph(graph_color='EBE618', fill_color='EBE616.3', line_width=1),
             widget.SwapGraph(graph_color='EB1818', fill_color='EB1616.3', line_width=1),
         ], 24, ),
