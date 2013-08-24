@@ -1,0 +1,23 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+#
+# Aliases
+#
+
+alias ls="ls ${LS_OPTIONS}"
+alias ll='ls -la'
+alias rvim='/usr/bin/gvim --remote-silent'
+alias jsonpp='python -mjson.tool'
+#alias search='find . -print0 | xargs -0 -- grep'
+alias search=ack
+alias vless='/usr/share/vim/vim??/macros/less.sh'
