@@ -106,7 +106,7 @@ alias jsonpp='python -mjson.tool'
 #alias search='find . -print0 | xargs -0 -- grep'
 alias search=ack
 alias vless='/usr/share/vim/vim??/macros/less.sh'
-alias urxvt="/usr/bin/urxvt -fn 'xft:inconsolata\-g:pixelsize=13:antialias=true:hinting=true' -fb 'xft:inconsolata\-g:pixelsize=13:antialias=true:hinting=true'"
+#alias urxvt="/usr/bin/urxvt -fn 'xft:inconsolata\-g:pixelsize=13:antialias=true:hinting=true' -fb 'xft:inconsolata\-g:pixelsize=13:antialias=true:hinting=true'"
 
 vi(){
   EXECUTABLE='vi'
