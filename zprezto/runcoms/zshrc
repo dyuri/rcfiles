@@ -21,3 +21,12 @@ alias jsonpp='python -mjson.tool'
 #alias search='find . -print0 | xargs -0 -- grep'
 alias search=ack
 alias vless='/usr/share/vim/vim??/macros/less.sh'
+
+#
+# Prompt
+#
+
+autoload -Uz promptinit
+promptinit
+prompt repa
+
