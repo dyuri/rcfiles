@@ -15,7 +15,8 @@ function prompt_repa_pwd {
     _prompt_repa_pwd="$MATCH"
     unset MATCH
   else
-    _prompt_repa_pwd="${${${(@j:/:M)${(@s:/:)pwd}##.#?}:h}%/}/${pwd:t}"
+    # _prompt_repa_pwd="${${${(@j:/:M)${(@s:/:)pwd}##.#?}:h}%/}/${pwd:t}"
+    _prompt_repa_pwd="${pwd}"
   fi
 }
 

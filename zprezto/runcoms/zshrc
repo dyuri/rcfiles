@@ -19,7 +19,8 @@ alias ll='ls -la'
 alias rvim='/usr/bin/gvim --remote-silent'
 alias jsonpp='python -mjson.tool'
 #alias search='find . -print0 | xargs -0 -- grep'
-alias search=ack
+#alias search=ack
+alias search=ag
 alias vless='/usr/share/vim/vim??/macros/less.sh'
 
 #

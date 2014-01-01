@@ -1,4 +1,9 @@
-8a2adf92d341005343ea52178da66d4c044deb8c		branch 'master' of https://github.com/scrooloose/syntastic
-45c77595c94954acc476ff4982421752a7e3d301	not-for-merge	tag '2.0.0' of https://github.com/scrooloose/syntastic
-a21072174479dd85f747f309b2af612ec1014184	not-for-merge	tag '2.1.0' of https://github.com/scrooloose/syntastic
-54896becd314872f854c202a0d49010121ab6d09	not-for-merge	tag '2.2.0' of https://github.com/scrooloose/syntastic
+68b2c651b3303bbc40723a54aad66b761b3a0d67		branch 'master' of https://github.com/scrooloose/syntastic
+4e59a844cedd5407f5edc14e2451dae1d70dcf44	not-for-merge	branch 'buffers' of https://github.com/scrooloose/syntastic
+929f92ddd6dadbef47ee025223d10bbe95d46500	not-for-merge	branch 'loclist_count' of https://github.com/scrooloose/syntastic
+4552884c6c60cb64e949a69361d644ca7efd800b	not-for-merge	branch 'refactor_checker_structure' of https://github.com/scrooloose/syntastic
+ecaa0b819980f62fbeafefa4f7e067714e51d824	not-for-merge	branch 'registry_debug' of https://github.com/scrooloose/syntastic
+29c562736dd57ceb1e6b67b4dba74ac19d9cde6d	not-for-merge	branch 'shellslash_fix' of https://github.com/scrooloose/syntastic
+3e80184d5f262e323d5b7a3406d7a5a36ce0075d	not-for-merge	tag '2.3.0' of https://github.com/scrooloose/syntastic
+e3f5958b7d7efdac9327f6b974c8be7c40e6d36d	not-for-merge	tag '3.0.0' of https://github.com/scrooloose/syntastic
+3a03fee48c24d0116c529769664750a43a206ee7	not-for-merge	tag '3.1.0' of https://github.com/scrooloose/syntastic
