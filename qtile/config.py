@@ -298,8 +298,8 @@ keys_old = [
     Key([mod], "r", lazy.spawncmd()),
     Key([mod], "g", lazy.spawn(
         "/usr/bin/urxvt"
-        " -fn 'xft:inconsolata\\-g:pixelsize=13:antialias=true:hinting=true'"
-        " -fb 'xft:inconsolata\\-g:pixelsize=13:antialias=true:hinting=true'"
+        " -fn 'xft:Meslo\ LG\ S\ for\ Powerline:pixelsize=13:antialias=true:hinting=true'"
+        " -fb 'xft:Meslo\ LG\ S\ for\ Powerline:bold:pixelsize=13:antialias=true:hinting=true'"
         )),
     Key([mod], "p", lazy.function(app_or_group('io', 'gajim'))),
     Key([mod], "c", lazy.function(app_or_group('www', 'google-chrome'))),

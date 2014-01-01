@@ -4,7 +4,7 @@
 " vimblog:    http://www.vim.org/scripts/script.php?script_id=2030
 " snippets:   http://www.vim.org/scripts/script.php?script_id=1318
 " vcscommand: http://www.vim.org/scripts/script.php?script_id=90 
-" minbufexpl: http://www.vim.org/scripts/script.php?script_id=159
+" - minbufexpl: http://www.vim.org/scripts/script.php?script_id=159 " removed in favor of airline#tabline
 "          -> https://github.com/fholgado/minibufexpl.vim
 " matchit:    http://www.vim.org/scripts/script.php?script_id=39
 " VE:         http://www.vim.org/scripts/script.php?script_id=1950
@@ -20,13 +20,18 @@
 " gundo:      http://sjl.bitbucket.org/gundo.vim/
 " javascipt:  https://github.com/pangloss/vim-javascript
 " syntastic
-" command-t:  http://git.wincent.com/command-t.git
+" - command-t:  http://git.wincent.com/command-t.git -> ctrlp
 " python-mode: https://github.com/klen/python-mode
 " jedi-vim: https://github.com/davidhalter/jedi-vim
 " tagbar: https://github.com/majutsushi/tagbar
 " - doctorjs: https://github.com/mozilla/doctorjs
 " unimpaierd: https://github.com/tpope/vim-unimpaired
 " vim-visual-star-search [github]
+" airline: https://github.com/bling/vim-airline
+" signify: https://github.com/mhinz/vim-signify
+" startify: https://github.com/mhinz/vim-startify
+" lawrencium: https://bitbucket.org/ludovicchabant/vim-lawrencium
+" fugitive: https://github.com/tpope/vim-fugitive
 
 " pathogen
 filetype off
@@ -52,6 +57,18 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:jedi#show_function_definition = 1
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#auto_vim_configuration = 0
+
+" neocopmlete
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#enable_auto_select = 1
+
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y> neocomplete#close_popup()
+inoremap <expr><C-e> neocomplete#cancel_popup()
 
 " html output
 let html_use_css = 1
@@ -290,11 +307,28 @@ if has("gui_running")
   set cursorcolumn
 endif
 
-" Powerline
-let g:Powerline_symbols = 'fancy'
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" Powerline - replaced by airline
+" let g:Powerline_symbols = 'fancy'
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
+
+" Airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'powerlineish'
+let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#use_vcscommand = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#hunks#enabled = 1
+let g:airline#extensions#eclim#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+
+" Signify
+let g:signify_vcs_list = [ 'git', 'hg' ]
+
 set noshowmode
 
 " NERDTree
@@ -459,11 +493,16 @@ nmap <F3> :bp!<cr>
 nmap <F4> :bn!<cr>
 map <F3> :bp!<cr>
 map <F4> :bn!<cr>
-imap <F3> <ESC>:bp!<cr>i
-imap <F4> <ESC>:bn!<cr>i
+imap <F3> <ESC>:bp!<cr>a
+imap <F4> <ESC>:bn!<cr>a
+
+" neocomplete
+nnoremap <F6> :NeoCompleteToggle<CR>
+inoremap <F6> <ESC>:NeoCompleteToggle<CR>a
 
 " panic button
-nnoremap <F6> mzggg?G'z
+nnoremap <C-F6> mzggg?G'z
+inoremap <C-F6> <ESC>mzggg?G'z
 
 " command-t
 " nnoremap <F7> :CommandT<cr>
