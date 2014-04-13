@@ -329,6 +329,9 @@ let g:airline#extensions#tabline#enabled = 1
 " Signify
 let g:signify_vcs_list = [ 'git', 'hg' ]
 
+" Ag
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 set noshowmode
 
 " NERDTree

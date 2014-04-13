@@ -5,20 +5,36 @@ endif
 
 py << endpy
 
-import vim, os, platform, subprocess, urllib2, webbrowser, json, re, string
-from functools import cmp_to_key
+import vim, os, platform, subprocess, urllib2, webbrowser, json, re, string, time
 from itertools import groupby
+
+opener = urllib2.build_opener(urllib2.ProxyHandler({}))
 
 def tern_displayError(err):
   vim.command("echo " + json.dumps(str(err)))
 
 def tern_makeRequest(port, doc):
   try:
-    req = urllib2.urlopen("http://localhost:" + str(port) + "/", json.dumps(doc), 1)
+    req = opener.open("http://localhost:" + str(port) + "/", json.dumps(doc),
+                          float(vim.eval("g:tern_request_timeout")));
     return json.loads(req.read())
   except urllib2.HTTPError, error:
     tern_displayError(error.read())
     return None
+
+# Prefixed with _ to influence destruction order. See
+# http://docs.python.org/2/reference/datamodel.html#object.__del__
+_tern_projects = {}
+
+class Project(object):
+  def __init__(self, dir):
+    self.dir = dir
+    self.port = None
+    self.proc = None
+    self.last_failed = 0
+
+  def __del__(self):
+    tern_killServer(self)
 
 def tern_projectDir():
   cur = vim.eval("b:ternProjectDir")
@@ -43,47 +59,60 @@ def tern_projectDir():
   return projectdir
 
 def tern_findServer(ignorePort=False):
-  cur = int(vim.eval("b:ternPort"))
-  if cur != 0 and cur != ignorePort: return (cur, True)
-
   dir = tern_projectDir()
   if not dir: return (None, False)
+  project = _tern_projects.get(dir, None)
+  if project is None:
+    project = Project(dir)
+    _tern_projects[dir] = project
+  if project.port is not None and project.port != ignorePort:
+    return (project.port, True)
+
   portFile = os.path.join(dir, ".tern-port")
   if os.path.isfile(portFile):
     port = int(open(portFile, "r").read())
     if port != ignorePort:
-      vim.command("let b:ternPort = " + str(port))
+      project.port = port
       return (port, True)
-  return (tern_startServer(), False)
+  return (tern_startServer(project), False)
 
-def tern_startServer():
+def tern_startServer(project):
+  if time.time() - project.last_failed < 30: return None
+
   win = platform.system() == "Windows"
   env = None
   if platform.system() == "Darwin":
     env = os.environ.copy()
     env["PATH"] += ":/usr/local/bin"
-  proc = subprocess.Popen(vim.eval("g:tern#command"), cwd=tern_projectDir(), env=env,
-                          stdout=subprocess.PIPE, stderr=subprocess.STDOUT, shell=win)
+  proc = subprocess.Popen(vim.eval("g:tern#command") + vim.eval("g:tern#arguments"),
+                          cwd=project.dir, env=env,
+                          stdin=subprocess.PIPE, stdout=subprocess.PIPE,
+                          stderr=subprocess.STDOUT, shell=win)
   output = ""
   while True:
     line = proc.stdout.readline()
     if not line:
       tern_displayError("Failed to start server" + (output and ":\n" + output))
+      project.last_failed = time.time()
       return None
     match = re.match("Listening on port (\\d+)", line)
     if match:
       port = int(match.group(1))
-      vim.command("let b:ternPort = " + str(port))
-      vim.command("let b:ternPID = "+str(proc.pid))
+      project.port = port
+      project.proc = proc
       return port
     else:
       output += line
 
-def tern_killServer(ternPID):
-  if platform.system() == "Windows":
-    subprocess.call("taskkill /t /f /pid " + ternPID,shell=True)
-  else:
-    os.kill(int(ternPID), 2)
+def tern_killServer(project):
+  if project.proc is None: return
+  project.proc.stdin.close()
+  project.proc.wait()
+  project.proc = None
+
+def tern_killServers():
+  for project in _tern_projects.values():
+    tern_killServer(project)
 
 def tern_relativeFile():
   filename = vim.eval("expand('%:p')")
@@ -272,7 +301,8 @@ def tern_lookupDefinition(cmd):
       vim.command("normal! m`")
       vim.command("call cursor(" + str(lnum) + "," + str(col) + ")")
     else:
-      vim.command(cmd + " +call\ cursor(" + str(lnum) + "," + str(col) + ") " + tern_projectFilePath(filename))
+      vim.command(cmd + " +call\ cursor(" + str(lnum) + "," + str(col) + ") " +
+        tern_projectFilePath(filename).replace(" ", "\\ "))
   elif "url" in data:
     vim.command("echo " + json.dumps("see " + data["url"]))
   else:
@@ -298,6 +328,27 @@ def tern_refs():
                  "text": name + " (file not loaded)" if len(text)==0 else text[0]})
   vim.command("call setloclist(0," + json.dumps(refs) + ") | lopen")
 
+# Copied here because Python 2.6 and lower don't have it built in, and
+# python 3.0 and higher don't support old-style cmp= args to the sort
+# method. There's probably a better way to do this...
+def tern_cmp_to_key(mycmp):
+  class K(object):
+    def __init__(self, obj, *args):
+      self.obj = obj
+    def __lt__(self, other):
+      return mycmp(self.obj, other.obj) < 0
+    def __gt__(self, other):
+      return mycmp(self.obj, other.obj) > 0
+    def __eq__(self, other):
+      return mycmp(self.obj, other.obj) == 0
+    def __le__(self, other):
+      return mycmp(self.obj, other.obj) <= 0
+    def __ge__(self, other):
+      return mycmp(self.obj, other.obj) >= 0
+    def __ne__(self, other):
+      return mycmp(self.obj, other.obj) != 0
+  return K
+
 def tern_rename(newName):
   data = tern_runCommand({"type": "rename", "newName": newName}, fragments=False)
   if data is None: return
@@ -306,16 +357,21 @@ def tern_rename(newName):
     return (cmp(a["file"], b["file"]) or
             cmp(a["start"]["line"], b["start"]["line"]) or
             cmp(a["start"]["ch"], b["start"]["ch"]))
-  data["changes"].sort(key=cmp_to_key(mycmp))
+  data["changes"].sort(key=tern_cmp_to_key(mycmp))
   changes_byfile = groupby(data["changes"]
                           ,key=lambda c: tern_projectFilePath(c["file"]))
 
   name = data["name"]
   changes, external = ([], [])
   for file, filechanges in changes_byfile:
-    bufnr = int(vim.eval("bufloaded('" + file + "') ? bufnr('" + file + "') : -1"))
-    if bufnr != -1:
-      lines = vim.buffers[bufnr - 1]
+
+    buffer = None
+    for buf in vim.buffers:
+      if buf.name == file:
+        buffer = buf
+
+    if buffer is not None:
+      lines = buffer
     else:
       with open(file, "r") as f:
         lines = f.readlines()
@@ -332,13 +388,13 @@ def tern_rename(newName):
                         "col": colStart + 1 + offset,
                         "filename": file})
       for change in changed:
-        if bufnr != -1:
+        if buffer is not None:
           lines[linenr] = change["text"] = text
         else:
           change["text"] = "[not loaded] " + text
           lines[linenr] = text
       changes.extend(changed)
-    if bufnr == -1:
+    if buffer is None:
       with open(file, "w") as f:
         f.writelines(lines)
       external.append({"name": file, "text": string.join(lines, ""), "type": "full"})
@@ -349,7 +405,11 @@ def tern_rename(newName):
 endpy
 
 if !exists('g:tern#command')
-  let g:tern#command = ["node", expand('<sfile>:h') . '/../node_modules/tern/bin/tern']
+  let g:tern#command = ["node", expand('<sfile>:h') . '/../node_modules/tern/bin/tern', '--no-port-file']
+endif
+
+if !exists('g:tern#arguments')
+  let g:tern#arguments = []
 endif
 
 function! tern#PreviewInfo(info)
@@ -415,32 +475,39 @@ if !exists('g:tern_map_keys')
 endif
 
 if !exists('g:tern_map_prefix')
-  let g:tern_map_prefix = '<leader>'
+  let g:tern_map_prefix = '<LocalLeader>'
 endif
 
-if g:tern_map_keys
-  execute 'autocmd FileType javascript' 'nnoremap <buffer>' g:tern_map_prefix.'td' ':TernDoc<CR>'
-  execute 'autocmd FileType javascript' 'nnoremap <buffer>' g:tern_map_prefix.'tb' ':TernDocBrowse<CR>'
-  execute 'autocmd FileType javascript' 'nnoremap <buffer>' g:tern_map_prefix.'tt' ':TernType<CR>'
-  execute 'autocmd FileType javascript' 'nnoremap <buffer>' g:tern_map_prefix.'td' ':TernDef<CR>'
-  execute 'autocmd FileType javascript' 'nnoremap <buffer>' g:tern_map_prefix.'tpd' ':TernDefPreview<CR>'
-  execute 'autocmd FileType javascript' 'nnoremap <buffer>' g:tern_map_prefix.'tsd' ':TernDefSplit<CR>'
-  execute 'autocmd FileType javascript' 'nnoremap <buffer>' g:tern_map_prefix.'ttd' ':TernDefTab<CR>'
-  execute 'autocmd FileType javascript' 'nnoremap <buffer>' g:tern_map_prefix.'tr' ':TernRefs<CR>'
-  execute 'autocmd FileType javascript' 'nnoremap <buffer>' g:tern_map_prefix.'tR' ':TernRename<CR>'
+if !exists('g:tern_request_timeout')
+  let g:tern_request_timeout = 1
 endif
+
+function! tern#DefaultKeyMap(...)
+  let prefix = len(a:000)==1 ? a:1 : "<LocalLeader>"
+  execute 'nnoremap <buffer> '.prefix.'td' ':TernDoc<CR>'
+  execute 'nnoremap <buffer> '.prefix.'tb' ':TernDocBrowse<CR>'
+  execute 'nnoremap <buffer> '.prefix.'tt' ':TernType<CR>'
+  execute 'nnoremap <buffer> '.prefix.'td' ':TernDef<CR>'
+  execute 'nnoremap <buffer> '.prefix.'tpd' ':TernDefPreview<CR>'
+  execute 'nnoremap <buffer> '.prefix.'tsd' ':TernDefSplit<CR>'
+  execute 'nnoremap <buffer> '.prefix.'ttd' ':TernDefTab<CR>'
+  execute 'nnoremap <buffer> '.prefix.'tr' ':TernRefs<CR>'
+  execute 'nnoremap <buffer> '.prefix.'tR' ':TernRename<CR>'
+endfunction
 
 function! tern#Enable()
   if stridx(&buftype, "nofile") > -1 || stridx(&buftype, "nowrite") > -1
     return
   endif
-  let b:ternPort = 0
   let b:ternProjectDir = ''
   let b:ternLastCompletion = []
   let b:ternLastCompletionPos = {'row': -1, 'start': 0, 'end': 0}
   let b:ternBufferSentAt = -1
   let b:ternInsertActive = 0
   setlocal omnifunc=tern#Complete
+  if g:tern_map_keys
+    call tern#DefaultKeyMap(g:tern_map_prefix)
+  endif
   augroup TernAutoCmd
     autocmd! * <buffer>
     autocmd BufLeave <buffer> :py tern_sendBufferIfDirty()
@@ -452,8 +519,11 @@ function! tern#Enable()
     autocmd InsertEnter <buffer> let b:ternInsertActive = 1
     autocmd InsertLeave <buffer> let b:ternInsertActive = 0
   augroup END
-  autocmd VimLeavePre * call tern#Shutdown()
 endfunction
+
+augroup TernShutDown
+  autocmd VimLeavePre * call tern#Shutdown()
+augroup END
 
 function! tern#Disable()
   augroup TernAutoCmd
@@ -462,7 +532,5 @@ function! tern#Disable()
 endfunction
 
 function! tern#Shutdown()
-  if exists('b:ternPID')
-    python tern_killServer(vim.eval("b:ternPID"))
-  endif
+  py tern_killServers()
 endfunction

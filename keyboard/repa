@@ -1,0 +1,504 @@
+// repa on ErgoDox(L0), QWERTY
+// ┏━━━━━━━━┱─────┬─────┬─────┬─────┬─────┬─────┐      ┌─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━┓
+// ┃        ┃ !   │ @   │ #   │ $   │ %   │     │      │     │ ^   │ &   │ *   │ (   │ )   ┃  +     ┃
+// ┃  Esc   ┃ 1   │ 2   │ 3   │ 4   │ 5   │ L2S │      │ L1S │ 6   │ 7   │ 8   │ 9   │ 0   ┃  =     ┃
+// ┣━━━━━━━━╉─────┼─────┼─────┼─────┼─────╆━━━━━┪      ┢━━━━━╅─────┼─────┼─────┼─────┼─────╊━━━━━━━━┫
+// ┃ ↹      ┃ "   │ <   │ >   │     │     ┃     ┃      ┃     ┃     │     │     │     │     ┃  ?     ┃
+// ┃  Tab   ┃ '   │ ,   │ .   │ p   │ g   ┃ L0S ┃      ┃ L0S ┃ f   │ g   │ c   │ r   │ l   ┃  /     ┃
+// ┣━━━━━━━━╉─────┼─────┼─────┼─────┼─────┨     ┃      ┃     ┠─────┼─────┼─────┼─────┼─────╄━━━━━━━━┩
+// ┃ ⇮      ┃     │     │     │     │     ┣━━━━━┫      ┣━━━━━┫     │     │     │     │     │  _     │
+// ┃  AltGr ┃ a   │ o   │ e   │ u   │ i   ┃     ┃      ┃     ┃ d   │ h   │ t   │ n   │ s   │  -     │
+// ┣━━━━━━━━╉─────┼─────┼─────┼─────┼─────┨     ┃      ┃     ┠─────┼─────┼─────┼─────┼─────╆━━━━━━━━┪
+// ┃ ⇧      ┃ :   │     │     │     │     ┃ L1T ┃      ┃ L1T ┃     │     │     │     │     ┃ ⇧      ┃
+// ┃  Shift ┃ ;   │ q   │ j   │ k   │ x   ┃     ┃      ┃     ┃ b   │ m   │ w   │ v   │ z   ┃  Shift ┃
+// ┗━━┳━━━━━╋━━━━━╈━━━━━╈━━━━━╈━━━━━╅─────┺━━━━━┛      ┗━━━━━┹─────╆━━━━━╈━━━━━╈━━━━━╈━━━━━╋━━━━━┳━━┛
+//    ┃     ┃ ~   ┃ |   ┃ {   ┃ }   ┃ ┏━━━━━┳━━━━━┓  ┏━━━━━┳━━━━━┓ ┃ ←   ┃ ↓   ┃ ↑   ┃ →   ┃     ┃
+//    ┃Ctrl ┃ `   ┃ \   ┃ [   ┃ ]   ┃ ┃     ┃     ┃  ┃     ┃     ┃ ┃Left ┃Down ┃ Up  ┃Right┃Ctrl ┃
+//    ┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┛ ┃ Win ┃ Alt ┃  ┃AltGr┃ Win ┃ ┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┛
+//                              ┏━━━━━╋━━━━━╋━━━━━┫  ┣━━━━━╋━━━━━╋━━━━━┓
+//                              ┃ ␣ ⍽ ┃     ┃     ┃  ┃Page ┃     ┃     ┃
+//                              ┃ ␣ ␣ ┃ ⌫   ┃ L4S ┃  ┃ Up  ┃ ⏎   ┃     ┃
+//                              ┃     ┃     ┣━━━━━┫  ┣━━━━━┫     ┃     ┃
+//                              ┃Space┃Back-┃     ┃  ┃Page ┃Enter┃ Esc ┃
+//                              ┃     ┃space┃ L3S ┃  ┃Down ┃     ┃     ┃
+//                              ┗━━━━━┻━━━━━┻━━━━━┛  ┗━━━━━┻━━━━━┻━━━━━┛
+
+// repa on ErgoDox(L0), repa_old XKB
+// ┏━━━━━━━━┱─────┬─────┬─────┬─────┬─────┬─────┐      ┌─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━┓
+// ┃        ┃ ! ~ │ @   │ #   │ $   │ %   │     │      │     │ ^   │ &   │ *   │ (   │ )   ┃  +     ┃
+// ┃  Esc   ┃ 1 ' │ 2 " │ 3 + │ 4 ! │ 5 % │ L2S │      │ L1S │ 6 / │ 7 = │ 8 ( │ 9 ) │ 0 ö ┃  =  ó  ┃
+// ┣━━━━━━━━╉─────┼─────┼─────┼─────┼─────╆━━━━━┪      ┢━━━━━╅─────┼─────┼─────┼─────┼─────╊━━━━━━━━┫
+// ┃ ↹      ┃ "   │ < ? │ > ÷ │   ÷ │   ¥ ┃     ┃      ┃     ┃   ª │   Ŋ │   © │   ® │   ł ┃  ?  _  ┃
+// ┃  Tab   ┃ ' á │ , ; │ . > │ p × │ y   ┃ L0S ┃      ┃ L0S ┃ f   │ g   │ c   │ r   │ l Ł ┃  /  -  ┃
+// ┣━━━━━━━━╉─────┼─────┼─────┼─────┼─────┨     ┃      ┃     ┠─────┼─────┼─────┼─────┼─────╄━━━━━━━━┩
+// ┃ ⇮      ┃   Æ │   ? │   ß │   ↑ │     ┣━━━━━┫      ┣━━━━━┫   ª │   Ħ │   Ŧ │     │   § │  _     │
+// ┃  AltGr ┃ a æ │ o ø │ e + │ u € │ i í ┃     ┃      ┃     ┃ d   │ h   │ t   │ n   │ s   │  -  ü  │
+// ┣━━━━━━━━╉─────┼─────┼─────┼─────┼─────┨     ┃      ┃     ┠─────┼─────┼─────┼─────┼─────╆━━━━━━━━┪
+// ┃ ⇧      ┃ :   │   Ω │     │   Ł │   > ┃ L1T ┃      ┃ L1T ┃   ’ │   º │   Ł │   ` │   < ┃ ⇧      ┃
+// ┃  Shift ┃ ; é │ q \ │ j í │ k ł │ x # ┃     ┃      ┃     ┃ b   │ m < │ w | │ v   │ z > ┃  Shift ┃
+// ┗━━┳━━━━━╋━━━━━╈━━━━━╈━━━━━╈━━━━━╅─────┺━━━━━┛      ┗━━━━━┹─────╆━━━━━╈━━━━━╈━━━━━╈━━━━━╋━━━━━┳━━┛
+//    ┃     ┃ ~ § ┃ |   ┃ {   ┃ }   ┃ ┏━━━━━┳━━━━━┓  ┏━━━━━┳━━━━━┓ ┃ ←   ┃ ↓   ┃ ↑   ┃ →   ┃     ┃
+//    ┃Ctrl ┃ ` 0 ┃ \ ű ┃ [ ő ┃ ] ú ┃ ┃     ┃     ┃  ┃     ┃     ┃ ┃Left ┃Down ┃ Up  ┃Right┃Ctrl ┃
+//    ┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┛ ┃ Win ┃ Alt ┃  ┃AltGr┃ Win ┃ ┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┛
+//                              ┏━━━━━╋━━━━━╋━━━━━┫  ┣━━━━━╋━━━━━╋━━━━━┓
+//                              ┃ ␣ ⍽ ┃     ┃     ┃  ┃Page ┃     ┃     ┃
+//                              ┃ ␣ ␣ ┃ ⌫   ┃ L4S ┃  ┃ Up  ┃ ⏎   ┃     ┃
+//                              ┃     ┃     ┣━━━━━┫  ┣━━━━━┫     ┃     ┃
+//                              ┃Space┃Back-┃     ┃  ┃Page ┃Enter┃ Esc ┃
+//                              ┃     ┃space┃ L3S ┃  ┃Down ┃     ┃     ┃
+//                              ┗━━━━━┻━━━━━┻━━━━━┛  ┗━━━━━┻━━━━━┻━━━━━┛
+
+// repa on ErgoDox(L0), dox XKB
+// ┏━━━━━━━━┱─────┬─────┬─────┬─────┬─────┬─────┐      ┌─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━┓
+// ┃        ┃ ! ~ │ @   │ #   │ $   │ %   │     │      │     │ ^   │ &   │ *   │ (   │ )   ┃  +     ┃
+// ┃  Esc   ┃ 1 ` │ 2   │ 3   │ 4   │ 5   │ L2S │      │ L1S │ 6   │ 7   │ 8   │ 9   │ 0   ┃  =     ┃
+// ┣━━━━━━━━╉─────┼─────┼─────┼─────┼─────╆━━━━━┪      ┢━━━━━╅─────┼─────┼─────┼─────┼─────╊━━━━━━━━┫
+// ┃ ↹      ┃ "   │ <   │ >   │     │     ┃     ┃      ┃     ┃     │     │     │     │     ┃  ?     ┃
+// ┃  Tab   ┃ ' ä │ , ö │ . € │ p ü │ y   ┃ L0S ┃      ┃ L0S ┃ f   │ g   │ c © │ r ® │ l   ┃  /     ┃
+// ┣━━━━━━━━╉─────┼─────┼─────┼─────┼─────┨     ┃      ┃     ┠─────┼─────┼─────┼─────┼─────╄━━━━━━━━┩
+// ┃ ⇮      ┃     │     │     │     │     ┣━━━━━┫      ┣━━━━━┫   | │   { │   } │   [ │   ] │  _  —  │
+// ┃  AltGr ┃ a á │ o ó │ e é │ u ú │ i í ┃     ┃      ┃     ┃ d \ │ h [ │ t ] │ n { │ s } │  -  −  │
+// ┣━━━━━━━━╉─────┼─────┼─────┼─────┼─────┨     ┃      ┃     ┠─────┼─────┼─────┼─────┼─────╆━━━━━━━━┪
+// ┃ ⇧      ┃ :   │     │     │     │     ┃ L1T ┃      ┃ L1T ┃     │     │     │     │     ┃ ⇧      ┃
+// ┃  Shift ┃ ; æ │ q ő │ j   │ k ű │ x   ┃     ┃      ┃     ┃ b   │ m   │ w   │ v   │ z   ┃  Shift ┃
+// ┗━━┳━━━━━╋━━━━━╈━━━━━╈━━━━━╈━━━━━╅─────┺━━━━━┛      ┗━━━━━┹─────╆━━━━━╈━━━━━╈━━━━━╈━━━━━╋━━━━━┳━━┛
+//    ┃     ┃ ~   ┃ |   ┃ {   ┃ }   ┃ ┏━━━━━┳━━━━━┓  ┏━━━━━┳━━━━━┓ ┃ ←   ┃ ↓   ┃ ↑   ┃ →   ┃     ┃
+//    ┃Ctrl ┃ `   ┃ \   ┃ [   ┃ ]   ┃ ┃     ┃     ┃  ┃     ┃     ┃ ┃Left ┃Down ┃ Up  ┃Right┃Ctrl ┃
+//    ┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┛ ┃ Win ┃ Alt ┃  ┃AltGr┃ Win ┃ ┗━━━━━┻━━━━━┻━━━━━┻━━━━━┻━━━━━┛
+//                              ┏━━━━━╋━━━━━╋━━━━━┫  ┣━━━━━╋━━━━━╋━━━━━┓
+//                              ┃ ␣ ⍽ ┃     ┃     ┃  ┃Page ┃     ┃     ┃
+//                              ┃ ␣ ␣ ┃ ⌫   ┃ L4S ┃  ┃ Up  ┃ ⏎   ┃     ┃
+//                              ┃     ┃     ┣━━━━━┫  ┣━━━━━┫     ┃     ┃
+//                              ┃Space┃Back-┃     ┃  ┃Page ┃Enter┃ Esc ┃
+//                              ┃     ┃space┃ L3S ┃  ┃Down ┃     ┃     ┃
+//                              ┗━━━━━┻━━━━━┻━━━━━┛  ┗━━━━━┻━━━━━┻━━━━━┛
+
+
+partial default alphanumeric_keys
+xkb_symbols "basic" {
+    include "us(basic)"
+    include "repa(repadox_hu)"
+    include "repa(repadox_syms)"
+    include "repa(level3)"
+    name[Group1]="US keyboard, RepaDox optimized, progsyms and Hungarian";
+};
+
+partial alphanumeric_keys
+xkb_symbols "dox" {
+    include "us(basic)"
+    include "repa(repadox_hu)"
+    include "repa(repadox_syms)"
+    include "repa(level3)"
+    name[Group1]="US keyboard, RepaDox optimized, progsyms and Hungarian";
+};
+
+partial alphanumeric_keys
+xkb_symbols "dox_hu" {
+    include "us(basic)"
+    include "repa(repadox_hu)"
+    include "repa(repadox_syms)"
+    include "repa(level3)"
+    include "hu(basic):2"
+    name[Group1]="US keyboard, RepaDox optimized, progsyms and Hungarian + Hungarian layout @ G2";
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "level3" {
+    virtual_modifiers AltGr;
+    key <SCLK> {
+      virtualMods= AltGr,
+      symbols[Group1] = [ ISO_Next_Group, ISO_Prev_Group ]
+    };
+
+    key <RALT> { type[Group1] = "ONE_LEVEL", [ ISO_Level3_Shift ] };
+    key <CAPS>  { type[Group1] = "THREE_LEVEL", [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Lock ] };
+    modifier_map Mod5   { ISO_Level3_Shift };    
+
+    include "level3(ralt_switch_multikey)"
+};
+
+partial hidden alphanumeric_keys
+xkb_symbols "repadox_hu" {
+    name[Group1]="3rd/4th-level Hungarian [RepaDox]";
+
+    key <AC11> { [ NoSymbol,	NoSymbol,	adiaeresis, Adiaeresis ] }; // '
+    key <AB08> { [ NoSymbol,	NoSymbol,	odiaeresis, Odiaeresis ] }; // <
+    key <AB09> { [ NoSymbol,	NoSymbol,	EuroSign, NoSymbol ] }; // >
+    key <AD10> { [ NoSymbol,	NoSymbol,	udiaeresis, Udiaeresis ] }; // p
+    key <AC01> { [ NoSymbol,	NoSymbol,	aacute, Aacute ] }; // a
+    key <AD09> { [ NoSymbol,	NoSymbol,	oacute, Oacute ] }; // o
+    key <AD03> { [ NoSymbol,	NoSymbol,	eacute, Eacute ] }; // e
+    key <AD07> { [ NoSymbol,	NoSymbol,	uacute, Uacute ] }; // u
+    key <AD08> { [ NoSymbol,	NoSymbol,	iacute, Iacute ] }; // i
+    key <AC10> { [ NoSymbol,	NoSymbol,	ae, AE ] }; // ;
+    key <AD01> { [ NoSymbol,	NoSymbol,	odoubleacute, Odoubleacute ] }; // q
+    key <AC08> { [ NoSymbol,	NoSymbol,	udoubleacute, Udoubleacute ] }; // k
+};
+    
+partial hidden alphanumeric_keys
+xkb_symbols "repadox_syms" {
+    name[Group1]="3rd/4th-level symbols for programmers [RepaDox]";
+    
+    key <AE01> { [ NoSymbol,	NoSymbol,	grave, asciitilde	] }; // 1
+    key <AB03> { [ NoSymbol,	NoSymbol,	copyright, NoSymbol	] }; // c
+    key <AD04> { [ NoSymbol,	NoSymbol,	registered, NoSymbol	] }; // r
+    key <AC03> { [ NoSymbol,	NoSymbol,	backslash, bar ] }; // d
+    key <AC06> { [ NoSymbol,	NoSymbol,	bracketleft, braceleft ] }; // h
+    key <AB06> { [ NoSymbol,	NoSymbol,	braceleft, bracketleft ] }; // n
+    key <AD05> { [ NoSymbol,	NoSymbol,	bracketright, braceright ] }; // t
+    key <AC02> { [ NoSymbol,	NoSymbol,	braceright, bracketright ] }; // s
+    key <AE11> { [ NoSymbol,	NoSymbol,	endash, emdash ] }; // -
+    key <SPCE> { [ NoSymbol,	NoSymbol,	space, nobreakspace	] };
+};
+
+// Old complete "repa" layout
+partial alphanumeric_keys
+xkb_symbols "repa_old" {
+  
+  include "pc+us(basic)+hu(basic):2+us(dvorak):3+inet(evdev)"
+    
+  virtual_modifiers AltGr;
+  key <SCLK> {
+    virtualMods= AltGr,
+    symbols[Group1] = [ ISO_Next_Group, ISO_Prev_Group ]
+  };
+
+  key <RALT> { type[Group1] = "ONE_LEVEL", [ ISO_Level3_Shift ] };
+  key <CAPS>  { type[Group1] = "THREE_LEVEL", [ ISO_Level3_Shift, ISO_Level3_Shift, ISO_Level3_Lock ] };
+  modifier_map Mod5   { ISO_Level3_Shift };
+
+  key  <ESC> {         [          Escape ] };
+  key <LSGT>  { 
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [       less,  greater,  iacute,       Iacute ] 
+  };
+  key <AE01> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [               1,          exclam,      apostrophe,      asciitilde ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [               1,          exclam,      apostrophe,      asciitilde ]
+  };
+  key <AE02> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [               2,              at,        quotedbl,      dead_caron ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [               2,              at,        quotedbl,      dead_caron ]
+  };
+  key <AE03> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [               3,      numbersign,            plus,     asciicircum ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [               3,      numbersign,            plus,     asciicircum ]
+  };
+  key <AE04> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [               4,          dollar,          exclam,      dead_breve ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [               4,          dollar,          exclam,      dead_breve ]
+  };
+  key <AE05> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [               5,         percent,         percent,          degree ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [               5,         percent,         percent,          degree ]
+  };
+  key <AE06> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [               6,     asciicircum,           slash,     dead_ogonek ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [               6,     asciicircum,           slash,     dead_ogonek ]
+  };
+  key <AE07> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [               7,       ampersand,           equal,      dead_grave ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [               7,       ampersand,           equal,      dead_grave ]
+  };
+  key <AE08> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [               8,        asterisk,       parenleft,   dead_abovedot ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [               8,        asterisk,       parenleft,   dead_abovedot ]
+  };
+  key <AE09> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [               9,       parenleft,      parenright,      dead_acute ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [               9,       parenleft,      parenright,      dead_acute ]
+  };
+  key <AE10> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               0,      parenright,      odiaeresis,      Odiaeresis ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [               0,      parenright,      parenleft,      parenright ]
+  };
+  key <AE11> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [           minus,      underscore,      udiaeresis,      Udiaeresis ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [           bracketleft,	braceleft,  minus, underscore ]
+  };
+  key <AE12> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [           equal,            plus,          oacute,          Oacute ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [           bracketright, braceright,        equal,            plus ]
+  };
+  key <BKSP> {
+      symbols[Group1]= [       BackSpace,       BackSpace ]
+  };
+  key  <TAB> {         [             Tab,    ISO_Left_Tab ] };
+  key <AD01> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               q,               Q,       backslash,     Greek_OMEGA ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ apostrophe, quotedbl, q, Q ]
+  };
+  key <AD02> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               w,               W,             bar,         Lstroke ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ comma, less, w, W ]
+  };
+  key <AD03> {
+      type[group1]= "FOUR_LEVEL_ALPHABETIC",
+      symbols[Group1]= [               e,               E,        KP_Add,          ssharp ],
+      type[group3]= "FOUR_LEVEL_ALPHABETIC",
+      symbols[Group3]= [ period, greater, e, E ]
+  };
+  key <AD04> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               r,               R,       KP_Home,      registered ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ p, P, r, R ]
+  };
+  key <AD05> {
+      type[group1]= "FOUR_LEVEL_ALPHABETIC",
+      symbols[Group1]= [               t,               T,          KP_Up,          Tslash ],
+      type[group3]= "FOUR_LEVEL_ALPHABETIC",
+      symbols[Group3]= [ y, Y, t, T ]
+  };
+  key <AD06> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               y,               Y,       KP_Prior,             yen ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ f, F, y, Y ]
+  };
+  key <AD07> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               u,               U,        EuroSign,         uparrow ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ g, G, u, U ]
+  };
+  key <AD08> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               i,               I,          iacute,          Iacute ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ c, C, i, I ]
+  };
+  key <AD09> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               o,               O,          oslash,          Oslash ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ r, R, o, O ]
+  };
+  key <AD10> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               p,               P,        multiply,        division ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ l, L, p, P ]
+  };
+  key <AD11> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [     bracketleft,       braceleft,    odoubleacute,    Odoubleacute ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ slash, question, bracketleft, braceleft ]
+  };
+  key <AD12> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [    bracketright,      braceright,          uacute,          Uacute ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ equal, plus, bracketright, braceright ]
+  };
+  key <RTRN> {         [          Return ] };
+  key <LCTL> {         [       Control_L ] };
+  key <AC01> {
+      type[group1]= "FOUR_LEVEL_ALPHABETIC",
+      symbols[Group1]= [               a,               A,              ae,              AE ],
+      type[group3]= "FOUR_LEVEL_ALPHABETIC",
+      symbols[Group3]= [ a, A, a, A ]
+  };
+  key <AC02> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               s,               S,         dstroke,         section ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ o, O, s, S ]
+  };
+  key <AC03> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               d,               D,         KP_Enter,             ETH ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ e, E, d, D ]
+  };
+  key <AC04> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               f,               F,     KP_Left,     ordfeminine ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ u, U, f, F ]
+  };
+  key <AC05> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               g,               G,    KP_Begin,             ENG ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ i, I, g, G ]
+  };
+  key <AC06> {
+      type[group1]= "FOUR_LEVEL_ALPHABETIC",
+      symbols[Group1]= [               h,               H,         KP_Right,         Hstroke ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ d, D, h, H ]
+  };
+  key <AC07> {
+      type[group1]= "FOUR_LEVEL_ALPHABETIC",
+      symbols[Group1]= [               j,               J,          iacute,          Iacute ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ h, H, j, J ]
+  };
+  key <AC08> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               k,               K,         lstroke,         Lstroke ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ t, T, k, K ]
+  };
+  key <AC09> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               l,               L,         Lstroke,         lstroke ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ n, N, l, L ]
+  };
+  key <AC10> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [       semicolon,           colon,          eacute,          Eacute ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ s, S, semicolon, colon ]
+  };
+  key <AC11> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [      apostrophe,        quotedbl,          aacute,          Aacute ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ minus, underscore, apostrophe, quotedbl ]
+  };
+  key <TLDE> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [           grave,      asciitilde,               0,         section ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [ grave, asciitilde, grave, asciitilde ]
+  };
+  key <BKSL> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [       backslash,             bar,    udoubleacute,    Udoubleacute ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ backslash, bar, backslash, bar ]
+  };
+  key <AB01> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               z,               Z,         greater,            less ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ semicolon, colon, z, Z ]
+  };
+  key <AB02> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               x,               X,      numbersign,         greater ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ q, Q, x, X ]
+  };
+  key <AB03> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               c,               C,       KP_Insert,       copyright ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ j, J, c, C ]
+  };
+  key <AB04> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               v,               V,              KP_End,           grave ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ k, K, v, V ]
+  };
+  key <AB05> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               b,               B,       KP_Down, rightsinglequotemark ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ x, X, b, B ]
+  };
+  key <AB06> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               n,               N,      KP_Next,        NoSymbol ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ b, B, n, N ]
+  };
+  key <AB07> {
+      type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group1]= [               m,               M,            less,       masculine ],
+      type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
+      symbols[Group3]= [ m, M, m, M ]
+  };
+  key <AB08> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [           comma,            less,       semicolon,        question ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [ w, W, comma, less ]
+  };
+  key <AB09> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [          period,         greater,         greater,        division ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [ v, V, period, greater ]
+  };
+  key <AB10> {
+      type[group1]= "FOUR_LEVEL",
+      symbols[Group1]= [           slash,        question,           minus,      underscore ],
+      type[group3]= "FOUR_LEVEL",
+      symbols[Group3]= [ z, Z, slash, question ]
+  };
+  key <FK01> {
+      type[group1]= "CTRL+ALT",
+      symbols[Group1]= [              F1,              F1,              F1,              F1, XF86Switch_VT_1 ]
+  };
+  key <FK02> {
+      type[group1]= "CTRL+ALT",
+      symbols[Group1]= [              F2,              F2,              F2,              F2, XF86Switch_VT_2 ]
+  };
+  key <FK03> {
+      type[group1]= "CTRL+ALT",
+      symbols[Group1]= [              F3,              F3,              F3,              F3, XF86Switch_VT_3 ]
+  };
+  key <FK04> {
+      type[group1]= "CTRL+ALT",
+      symbols[Group1]= [              F4,              F4,              F4,              F4, XF86Switch_VT_4 ]
+  };
+  key <FK05> {
+      type[group1]= "CTRL+ALT",
+      symbols[Group1]= [              F5,              F5,              F5,              F5, XF86Switch_VT_5 ]
+  };
+  key <FK06> {
+      type[group1]= "CTRL+ALT",
+      symbols[Group1]= [              F6,              F6,              F6,              F6, XF86Switch_VT_6 ]
+  };
+  key <FK07> {
+      type[group1]= "CTRL+ALT",
+      symbols[Group1]= [              F7,              F7,              F7,              F7, XF86Switch_VT_7 ]
+  };
+  key <FK08> {
+      type[group1]= "CTRL+ALT",
+      symbols[Group1]= [              F8,              F8,              F8,              F8, XF86Switch_VT_8 ]
+  };
+  key <FK09> {
+      type[group1]= "CTRL+ALT",
+      symbols[Group1]= [              F9,              F9,              F9,              F9, XF86Switch_VT_9 ]
+  };
+  key <FK10> {
+      type[group1]= "CTRL+ALT",
+      symbols[Group1]= [             F10,             F10,             F10,             F10, XF86Switch_VT_10 ]
+  };
+};
+
