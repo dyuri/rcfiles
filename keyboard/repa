@@ -275,7 +275,7 @@ xkb_symbols "repadox_syms" {
     key <AD05> { [ NoSymbol,	NoSymbol,	bracketright, braceright ] }; // t
     key <AC02> { [ NoSymbol,	NoSymbol,	braceright, bracketright ] }; // s
     key <AE11> { [ NoSymbol,	NoSymbol,	endash, emdash ] }; // -
-    key <SPCE> { [ NoSymbol,	NoSymbol,	space, nobreakspace	] };
+    key <SPCE> { [ space,	    space,  	space, nobreakspace	] };
 };
 
 // Old complete "repa" layout
