@@ -3,7 +3,6 @@
 scriptencoding utf-8
 
 " Init: values {{{1
-let s:sign_delete = get(g:, 'signify_sign_delete', '_')
 let s:delete_highlight = ['', 'SignifyLineDelete']
 
 " Function: #get_others {{{1
@@ -11,7 +10,7 @@ function! sy#sign#get_others() abort
   let s:other_signs_line_numbers = {}
 
   let lang = v:lang
-  silent! execute 'language C'
+  silent! execute 'language message C'
 
   redir => signlist
     silent! execute 'sign place buffer='. b:sy.buffer
@@ -28,7 +27,7 @@ function! sy#sign#get_others() abort
     let s:other_signs_line_numbers[lnum] = 1
   endfor
 
-  silent! execute 'language' lang
+  silent! execute 'language message' lang
 endfunction
 
 " Function: #set {{{1
@@ -42,10 +41,9 @@ function! sy#sign#set(signs)
     endif
 
     call add(hunk.ids, g:id_top)
-    if sign.type == 'SignifyDelete'
-      let sygn = (sign.count > 9) ? string(sign.count)[-2:] : (s:sign_delete . sign.count)
-      execute 'sign define SignifyDelete'. sign.count .' text='. sygn .' texthl=SignifySignDelete linehl='. s:delete_highlight[g:signify_line_highlight]
-      execute 'sign place' g:id_top 'line='. sign.lnum 'name='. sign.type . sign.count 'buffer='. b:sy.buffer
+    if sign.type =~# 'SignifyDelete'
+      execute 'sign define '. sign.type .' text='. sign.text .' texthl=SignifySignDelete linehl='. s:delete_highlight[g:signify_line_highlight]
+      execute 'sign place' g:id_top 'line='. sign.lnum 'name='. sign.type 'buffer='. b:sy.buffer
     else
       execute 'sign place' g:id_top 'line='. sign.lnum 'name='. sign.type 'buffer='. b:sy.buffer
     endif

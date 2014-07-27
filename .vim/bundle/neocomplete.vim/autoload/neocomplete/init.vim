@@ -1,7 +1,6 @@
 "=============================================================================
 " FILE: init.vim
 " AUTHOR: Shougo Matsushita <Shougo.Matsu@gmail.com>
-" Last Modified: 25 Oct 2013.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -36,19 +35,23 @@ function! neocomplete#init#enable() "{{{
     return
   endif
 
+  if !exists('b:neocomplete')
+    call neocomplete#init#_current_neocomplete()
+  endif
   call neocomplete#init#_autocmds()
   call neocomplete#init#_others()
 
   call neocomplete#init#_sources(get(g:neocomplete#sources,
         \ neocomplete#get_context_filetype(), ['_']))
+
+  doautocmd <nomodeline> neocomplete InsertEnter
+
   let s:is_enabled = 1
 endfunction"}}}
 
 function! neocomplete#init#disable() "{{{
   if !neocomplete#is_enabled()
-    call neocomplete#print_warning(
-          \ 'neocomplete is disabled! This command is ignored.')
-    return
+    call neocomplete#init#enable()
   endif
 
   let s:is_enabled = 0
@@ -79,6 +82,10 @@ function! neocomplete#init#_autocmds() "{{{
           \ call neocomplete#handler#_on_moved_i()
     autocmd BufWritePost *
           \ call neocomplete#handler#_on_write_post()
+    autocmd VimLeavePre *
+          \ call neocomplete#init#disable()
+    autocmd InsertCharPre *
+          \ call neocomplete#handler#_on_insert_char_pre()
   augroup END
 
   if g:neocomplete#enable_insert_char_pre
@@ -96,6 +103,8 @@ function! neocomplete#init#_autocmds() "{{{
   else
     autocmd neocomplete CursorMovedI *
           \ call neocomplete#handler#_do_auto_complete('CursorMovedI')
+    autocmd neocomplete InsertEnter *
+          \ call neocomplete#handler#_do_auto_complete('InsertEnter')
   endif
 
   autocmd neocomplete CompleteDone *
@@ -129,6 +138,9 @@ function! neocomplete#init#_others() "{{{
 
   command! -nargs=0 -bar NeoCompleteDisable
         \ call neocomplete#init#disable()
+
+  " Set for echodoc.
+  call neocomplete#echodoc#init()
 endfunction"}}}
 
 function! neocomplete#init#_variables() "{{{
@@ -136,7 +148,7 @@ function! neocomplete#init#_variables() "{{{
   call neocomplete#util#set_default_dictionary(
         \'g:neocomplete#keyword_patterns',
         \'_',
-        \'\k\+')
+        \'\h\w*')
   call neocomplete#util#set_default_dictionary(
         \ 'g:neocomplete#keyword_patterns',
         \'filename',
@@ -178,7 +190,7 @@ function! neocomplete#init#_variables() "{{{
         \'vim,help',
         \'-\h[[:alnum:]-]*=\?\|\c\[:\%(\h\w*:\]\)\?\|&\h[[:alnum:]_:]*\|'.
         \'<SID>\%(\h\w*\)\?\|<Plug>([^)]*)\?'.
-        \'\|<\h[[:alnum:]_-]*>\?\|\h[[:alnum:]_:#]*!\?\|$\h\w*')
+        \'\|<\h[[:alnum:]_-]*>\?\|\h[[:alnum:]_:#]*[!(]\?\|$\h\w*')
   call neocomplete#util#set_default_dictionary(
         \'g:neocomplete#keyword_patterns',
         \'tex',
@@ -203,7 +215,7 @@ function! neocomplete#init#_variables() "{{{
   call neocomplete#util#set_default_dictionary(
         \'g:neocomplete#keyword_patterns',
         \'cpp',
-        \'^\s*#\s*\h\w*\|\h\w*\%(::\w*\)*')
+        \'^\s*#\s*\h\w*\|\h\w*')
   call neocomplete#util#set_default_dictionary(
         \'g:neocomplete#keyword_patterns',
         \'objc',
@@ -211,7 +223,7 @@ function! neocomplete#init#_variables() "{{{
   call neocomplete#util#set_default_dictionary(
         \'g:neocomplete#keyword_patterns',
         \'objcpp',
-        \'^\s*#\s*\h\w*\|\h\w*\%(::\w*\)*\|@\h\w*')
+        \'^\s*#\s*\h\w*\|\h\w*\|@\h\w*')
   call neocomplete#util#set_default_dictionary(
         \'g:neocomplete#keyword_patterns',
         \'objj',
@@ -258,7 +270,7 @@ function! neocomplete#init#_variables() "{{{
         \'^\s*-\h\w*\|\%(\h\w*:\)*\h\w*\|\h[[:alnum:]_@]*')
   call neocomplete#util#set_default_dictionary(
         \'g:neocomplete#keyword_patterns',
-        \'html,xhtml,xml,markdown,eruby',
+        \'html,xhtml,xml,markdown,mkd,eruby',
         \'</\?\%([[:alnum:]_:-]\+\s*\)\?\%(/\?>\)\?\|&\h\%(\w*;\)\?'.
         \'\|\h[[:alnum:]_-]*="\%([^"]*"\?\)\?\|\h[[:alnum:]_:-]*')
   call neocomplete#util#set_default_dictionary(
@@ -353,27 +365,10 @@ function! neocomplete#init#_variables() "{{{
         \'g:neocomplete#keyword_patterns',
         \'nyaos,int-nyaos',
         \'\h\w*')
-  "}}}
-
-  " Initialize next keyword patterns. "{{{
   call neocomplete#util#set_default_dictionary(
-        \'g:neocomplete#next_keyword_patterns', 'perl',
-        \'\h\w*>')
-  call neocomplete#util#set_default_dictionary(
-        \'g:neocomplete#next_keyword_patterns', 'perl6',
-        \'\h\w*>')
-  call neocomplete#util#set_default_dictionary(
-        \'g:neocomplete#next_keyword_patterns', 'vim,help',
-        \'\w*()\?\|\w*:\]\|[[:alnum:]_-]*[)>=]')
-  call neocomplete#util#set_default_dictionary(
-        \'g:neocomplete#next_keyword_patterns', 'python',
-        \'\w*()\?')
-  call neocomplete#util#set_default_dictionary(
-        \'g:neocomplete#next_keyword_patterns', 'tex',
-        \'[[:alnum:]:_]\+[*[{}]')
-  call neocomplete#util#set_default_dictionary(
-        \'g:neocomplete#next_keyword_patterns', 'html,xhtml,xml,mkd',
-        \'[^"]*"\|[[:alnum:]_:-]*>')
+        \'g:neocomplete#keyword_patterns',
+        \'go',
+        \'\h\w*')
   "}}}
 
   " Initialize same file types. "{{{
@@ -533,7 +528,7 @@ function! neocomplete#init#_variables() "{{{
         \ '_', '')
   call neocomplete#util#set_default_dictionary(
         \ 'g:neocomplete#ctags_arguments', 'vim',
-        \ '--extra=fq --fields=afmiKlnsStz ' .
+        \ '--language-force=vim --extra=fq --fields=afmiKlnsStz ' .
         \ "--regex-vim='/function!? ([a-z#:_0-9A-Z]+)/\\1/function/'")
   if neocomplete#util#is_mac()
     call neocomplete#util#set_default_dictionary(
@@ -560,8 +555,8 @@ function! neocomplete#init#_variables() "{{{
   " Initialize text mode filetypes. "{{{
   call neocomplete#util#set_default_dictionary(
         \ 'g:neocomplete#text_mode_filetypes',
-        \ 'hybrid,text,help,tex,gitcommit,gitrebase,vcs-commit,markdown,'.
-        \   'textile,creole,org,rdoc,mediawiki,rst,asciidoc,pod', 1)
+        \ 'hybrid,text,help,tex,gitcommit,gitrebase,vcs-commit,markdown,mkd,'.
+        \ 'textile,creole,org,rdoc,mediawiki,rst,asciidoc,pod', 1)
   "}}}
 
   " Initialize tags filter patterns. "{{{
@@ -609,6 +604,8 @@ function! neocomplete#init#_current_neocomplete() "{{{
         \ 'cur_text' : '',
         \ 'old_cur_text' : '',
         \ 'old_linenr' : line('.'),
+        \ 'old_complete_pos' : -1,
+        \ 'old_char' : '',
         \ 'complete_str' : '',
         \ 'complete_pos' : -1,
         \ 'candidates' : [],
@@ -617,6 +614,11 @@ function! neocomplete#init#_current_neocomplete() "{{{
         \ 'start_time' : reltime(),
         \ 'linenr' : 0,
         \ 'completeopt' : &completeopt,
+        \ 'completed_item' : {},
+        \ 'overlapped_items' : {},
+        \ 'sources' : [],
+        \ 'sources_filetype' : '',
+        \ 'within_comment' : 0,
         \}
 endfunction"}}}
 
@@ -673,14 +675,17 @@ function! neocomplete#init#_source(source) "{{{
         \ 'is_volatile' : 0,
         \ 'max_candidates' : 0,
         \ 'filetypes' : {},
+        \ 'disabled' : 0,
         \ 'disabled_filetypes' : {},
         \ 'hooks' : {},
         \ 'mark' : '',
-        \ 'matchers' : g:neocomplete#enable_fuzzy_completion ?
-        \        ['matcher_fuzzy'] : ['matcher_head'],
+        \ 'matchers' :
+        \        (g:neocomplete#enable_fuzzy_completion ?
+        \          ['matcher_fuzzy'] : ['matcher_head'])
+        \      + ['matcher_length'],
         \ 'sorters' : ['sorter_rank'],
         \ 'converters' : [
-        \      'converter_remove_next_keyword',
+        \      'converter_remove_overlap',
         \      'converter_delimiter',
         \      'converter_case',
         \      'converter_abbr',
@@ -713,11 +718,24 @@ function! neocomplete#init#_source(source) "{{{
           \ empty(source.filetypes) ? 10 : 100
   endif
 
+  if !has_key(source.keyword_patterns, '_')
+    " Set default keyword pattern.
+    let source.keyword_patterns['_'] =
+          \ get(g:neocomplete#keyword_patterns, '_', '\h\w*')
+  endif
+
   if !has_key(source, 'min_pattern_length')
     " Set min_pattern_length.
     let source.min_pattern_length = (source.kind ==# 'keyword') ?
           \ g:neocomplete#auto_completion_start_length : 0
   endif
+
+  let source.neocomplete__matchers = neocomplete#init#_filters(
+        \ neocomplete#util#convert2list(source.matchers))
+  let source.neocomplete__sorters = neocomplete#init#_filters(
+        \ neocomplete#util#convert2list(source.sorters))
+  let source.neocomplete__converters = neocomplete#init#_filters(
+        \ neocomplete#util#convert2list(source.converters))
 
   let source.neocomplete__context.source_name = source.name
 

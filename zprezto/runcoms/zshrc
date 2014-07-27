@@ -25,6 +25,11 @@ alias search=ag
 alias vless='/usr/share/vim/vim??/macros/less.sh'
 
 #
+# tmuxifier
+#
+eval "$(tmuxifier init -)"
+
+#
 # Prompt
 #
 
