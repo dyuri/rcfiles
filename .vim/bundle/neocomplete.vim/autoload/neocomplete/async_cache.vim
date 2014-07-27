@@ -1,7 +1,6 @@
 "=============================================================================
 " FILE: async_cache.vim
 " AUTHOR: Shougo Matsushita <Shougo.Matsu@gmail.com>
-" Last Modified: 29 Jul 2013.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -58,25 +57,24 @@ function! s:load_from_file(filename, pattern_file_name, mark, minlen, fileencodi
     return []
   endif
 
-  let lines = map(readfile(a:filename),
-        \ 's:iconv(v:val, a:fileencoding, &encoding)')
+  let lines = readfile(a:filename)
+  if a:fileencoding !=# &encoding
+    let lines = map(lines, 's:iconv(v:val, a:fileencoding, &encoding)')
+  endif
 
   let pattern = get(readfile(a:pattern_file_name), 0, '\h\w*')
-
+  let pattern2 = '^\%('.pattern.'\m\)'
   let keyword_list = []
   let dup_check = {}
-  let keyword_pattern2 = '^\%('.pattern.'\m\)'
 
   for line in lines "{{{
     let match = match(line, pattern)
     while match >= 0 "{{{
-      let match_str = matchstr(line, keyword_pattern2, match)
+      let match_str = matchstr(line, pattern2, match)
 
       if !has_key(dup_check, match_str) && len(match_str) >= a:minlen
         " Append list.
-        call add(keyword_list, (a:is_string ?
-              \ match_str : { 'word' : match_str }))
-
+        call add(keyword_list, match_str)
         let dup_check[match_str] = 1
       endif
 
@@ -86,6 +84,10 @@ function! s:load_from_file(filename, pattern_file_name, mark, minlen, fileencodi
     endwhile"}}}
   endfor"}}}
 
+  if !a:is_string
+    call map(keyword_list, "{'word' : match_str}")
+  endif
+
   return keyword_list
 endfunction"}}}
 
@@ -93,8 +95,8 @@ function! s:load_from_tags(filename, pattern_file_name, mark, minlen, fileencodi
   let keyword_lists = []
   let dup_check = {}
 
-  let [pattern, tags_file_name, filter_pattern, filetype] =
-        \ readfile(a:pattern_file_name)[: 4]
+  let [tags_file_name, filter_pattern] =
+        \ readfile(a:pattern_file_name)[1 : 2]
   if tags_file_name !=# '$dummy$'
     " Check output.
     let tags_list = []
@@ -174,10 +176,15 @@ function! s:load_from_tags(filename, pattern_file_name, mark, minlen, fileencodi
     let abbr = substitute(abbr,
           \'^typedef\s\+\(.*\)\s\+\(\h\w*\%(::\w*\)*\);\?$',
           \'\2 <typedef \1>', 'g')
+    " Substitute extends and implements.
+    let abbr = substitute(abbr,
+          \'\<\%(extends\|implements\)\s\+\S\+\>', '', '')
+    " Substitute marker.
+    let abbr = substitute(abbr, '"\s*{{{', '', '')
 
     let keyword = {
           \ 'word' : tag[0], 'abbr' : abbr, 'menu' : a:mark,
-          \ 'kind' : option['kind'], 'dup' : 1,
+          \ 'kind' : option['kind'],
           \ }
     if has_key(option, 'struct')
       let keyword.menu = option.struct

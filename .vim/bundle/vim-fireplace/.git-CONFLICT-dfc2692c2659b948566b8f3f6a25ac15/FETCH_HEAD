@@ -1,0 +1,5 @@
+06f6bc5de6fe8923001c4a67f0eeffb49cecd7fe		branch 'master' of https://github.com/tpope/vim-fireplace
+37ace16eac57cfc7ed3094e678ff882753868ab0	not-for-merge	branch 'cqP' of https://github.com/tpope/vim-fireplace
+15450eff27be7d1f81f211aaa03d28908b5c4c1a	not-for-merge	branch 'dispatch_escape' of https://github.com/tpope/vim-fireplace
+f2b6a2101f72a3829adc2a0ddb3465414b35519b	not-for-merge	branch 'preload' of https://github.com/tpope/vim-fireplace
+2a7aa5bd5af571f67f361f599e054d56f435bce2	not-for-merge	tag 'v1.0' of https://github.com/tpope/vim-fireplace

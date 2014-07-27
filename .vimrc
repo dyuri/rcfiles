@@ -54,7 +54,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
         \ 'passive_filetypes': ['python'] }
 
 " python-mode, jedi
-let g:jedi#show_function_definition = 1
+let g:jedi#show_call_signatures = 1
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#auto_vim_configuration = 0
 

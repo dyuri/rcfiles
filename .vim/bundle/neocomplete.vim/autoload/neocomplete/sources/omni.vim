@@ -1,7 +1,6 @@
 "=============================================================================
 " FILE: omni.vim
 " AUTHOR:  Shougo Matsushita <Shougo.Matsu@gmail.com>
-" Last Modified: 29 Jul 2013.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -48,7 +47,7 @@ function! s:source.hooks.on_init(context) "{{{
   " Initialize omni completion pattern. "{{{
   call neocomplete#util#set_default_dictionary(
         \'g:neocomplete#sources#omni#input_patterns',
-        \'html,xhtml,xml,markdown',
+        \'html,xhtml,xml,markdown,mkd',
         \'<[^>]*')
   call neocomplete#util#set_default_dictionary(
         \'g:neocomplete#sources#omni#input_patterns',
@@ -94,6 +93,10 @@ function! s:source.hooks.on_init(context) "{{{
         \'g:neocomplete#sources#omni#input_patterns',
         \'go',
         \'[^.[:digit:] *\t]\.\w*')
+  call neocomplete#util#set_default_dictionary(
+        \'g:neocomplete#sources#omni#input_patterns',
+        \'clojure',
+        \'\%(([^)]\+\)\|\*[[:alnum:]_-]\+')
 
   " External language interface check.
   if has('ruby')
@@ -167,7 +170,6 @@ function! s:get_omni_list(list) "{{{
   for val in deepcopy(a:list)
     let dict = (type(val) == type('') ?
           \ { 'word' : val } : val)
-    let dict.menu = '[O] ' . get(dict, 'menu', '')
     call add(omni_list, dict)
 
     unlet val
@@ -181,7 +183,7 @@ function! s:set_complete_results_pos(funcs, cur_text) "{{{
   let complete_results = {}
   for [omnifunc, pattern] in a:funcs
     if neocomplete#is_auto_complete()
-          \ && a:cur_text !~ '\%(' . pattern . '\m\)$'
+          \ && a:cur_text !~# '\%(' . pattern . '\m\)$'
       continue
     endif
 
@@ -228,13 +230,10 @@ function! s:set_complete_results_words(complete_results) "{{{
 
     let pos = getpos('.')
 
-    " Note: For rubycomplete problem.
-    let complete_str =
-          \ (omnifunc == 'rubycomplete#Complete') ?
-          \ '' : result.complete_str
-
     try
-      let list = call(omnifunc, [0, complete_str])
+      call cursor(0, result.complete_pos)
+      let ret = call(omnifunc, [0, result.complete_str])
+      let list = type(ret) == type([]) ? ret : ret.words
     catch
       call neocomplete#print_error(
             \ 'Error occured calling omnifunction: ' . omnifunc)
@@ -242,15 +241,8 @@ function! s:set_complete_results_words(complete_results) "{{{
       call neocomplete#print_error(v:exception)
       let list = []
     finally
-      if getpos('.') != pos
-        call setpos('.', pos)
-      endif
+      call setpos('.', pos)
     endtry
-
-    if type(list) != type([])
-      " Error.
-      return a:complete_results
-    endif
 
     let list = s:get_omni_list(list)
 
@@ -276,7 +268,7 @@ endfunction"}}}
 function! s:get_candidates(complete_results, complete_pos, complete_str) "{{{
   " Append prefix.
   let candidates = []
-  for [source_name, result] in items(a:complete_results)
+  for result in values(a:complete_results)
     if result.complete_pos > a:complete_pos
       let prefix = a:complete_str[: result.complete_pos
             \                            - a:complete_pos - 1]
