@@ -1,7 +1,6 @@
 "=============================================================================
 " FILE: syntax.vim
 " AUTHOR:  Shougo Matsushita <Shougo.Matsu@gmail.com>
-" Last Modified: 23 Sep 2013.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -65,7 +64,7 @@ function! s:source.gather_candidates(context) "{{{
     call s:make_cache()
   endif
 
-  for syntax in neocomplete#get_sources_list(
+  for syntax in neocomplete#helper#ftdictionary2list(
         \ s:syntax_list, neocomplete#get_context_filetype())
     let list += syntax
   endfor
@@ -130,11 +129,10 @@ function! s:make_cache_from_syntax(filetype) "{{{
   endif
 
   let group_name = ''
-  let keyword_pattern = neocomplete#get_keyword_pattern(
-        \ a:filetype, s:source.name)
+  let keyword_pattern = neocomplete#get_keyword_pattern(a:filetype, s:source.name)
 
   let filetype_pattern = tolower(substitute(
-        \ a:filetype, '-', '_', 'g'))
+        \ matchstr(a:filetype, '[^_]*'), '-', '_', 'g'))
 
   let keyword_list = []
   for line in split(syntax_list, '\n')
@@ -236,7 +234,9 @@ function! s:split_pattern(keyword_pattern) "{{{
 
       let save_pattern = analyzing_patterns
       let analyzing_patterns = []
-      for keyword in split(original_pattern[matchend(original_pattern, '^\\%\?(', i) : end], '\\|')
+      for keyword in split(
+            \ original_pattern[matchend(original_pattern,
+            \                 '^\\%\?(', i) : end-1], '\\|')
         for prefix in save_pattern
           call add(analyzing_patterns, prefix . keyword)
         endfor
