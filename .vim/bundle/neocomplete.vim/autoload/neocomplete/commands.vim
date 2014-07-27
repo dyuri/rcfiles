@@ -1,7 +1,6 @@
 "=============================================================================
 " FILE: commands.vim
 " AUTHOR: Shougo Matsushita <Shougo.Matsu@gmail.com>
-" Last Modified: 03 Jun 2013.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -33,6 +32,11 @@ function! neocomplete#commands#_initialize() "{{{
 endfunction"}}}
 
 function! neocomplete#commands#_toggle_lock() "{{{
+  if !neocomplete#is_enabled()
+    call neocomplete#init#enable()
+    return
+  endif
+
   if neocomplete#get_current_neocomplete().lock
     echo 'neocomplete is unlocked!'
     call neocomplete#commands#_unlock()
@@ -54,20 +58,21 @@ endfunction"}}}
 
 function! neocomplete#commands#_clean() "{{{
   " Delete cache files.
+  let data_directory = neocomplete#get_data_directory()
   for directory in filter(neocomplete#util#glob(
-        \ g:neocomplete#data_directory.'/*'), 'isdirectory(v:val)')
+        \ data_directory.'/*'), 'isdirectory(v:val)')
     for filename in filter(neocomplete#util#glob(directory.'/*'),
           \ '!isdirectory(v:val)')
       call delete(filename)
     endfor
   endfor
 
-  echo 'Cleaned cache files in: ' . g:neocomplete#data_directory
+  echo 'Cleaned cache files in: ' . data_directory
 endfunction"}}}
 
 function! neocomplete#commands#_set_file_type(filetype) "{{{
   let neocomplete = neocomplete#get_current_neocomplete()
-  let neocomplete.filetype = a:filetype
+  let neocomplete.context_filetype = a:filetype
 endfunction"}}}
 
 function! s:rand(max) "{{{

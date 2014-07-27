@@ -1,7 +1,6 @@
 "=============================================================================
 " FILE: include.vim
 " AUTHOR:  Shougo Matsushita <Shougo.Matsu@gmail.com>
-" Last Modified: 23 Sep 2013.
 " License: MIT license  {{{
 "     Permission is hereby granted, free of charge, to any person obtaining
 "     a copy of this software and associated documentation files (the
@@ -65,18 +64,10 @@ function! s:source.hooks.on_init(context) "{{{
 
   " Create cache directory.
   call neocomplete#cache#make_directory('include_cache')
-
-  if neocomplete#exists_echodoc()
-    call echodoc#register('include', s:doc_dict)
-  endif
 endfunction"}}}
 
 function! s:source.hooks.on_final(context) "{{{
   silent! delcommand NeoCompleteIncludeMakeCache
-
-  if neocomplete#exists_echodoc()
-    call echodoc#unregister('include')
-  endif
 endfunction"}}}
 
 function! s:source.gather_candidates(context) "{{{
@@ -143,71 +134,14 @@ function! neocomplete#sources#include#get_include_files(bufnumber) "{{{
   endif
 endfunction"}}}
 
-function! neocomplete#sources#include#get_include_tags(bufnumber) "{{{
-  return filter(map(
-        \ neocomplete#sources#include#get_include_files(a:bufnumber),
-        \ "neocomplete#cache#encode_name('tags_output', v:val)"),
-        \ 'filereadable(v:val)')
-endfunction"}}}
-
 " For Debug.
 function! neocomplete#sources#include#get_current_include_files() "{{{
   return s:get_buffer_include_files(bufnr('%'))
 endfunction"}}}
 
-" For echodoc. "{{{
-let s:doc_dict = {
-      \ 'name' : 'include',
-      \ 'rank' : 5,
-      \ 'filetypes' : {},
-      \ }
-function! s:doc_dict.search(cur_text) "{{{
-  if &filetype ==# 'vim' || !has_key(s:include_info, bufnr('%'))
-    return []
-  endif
-
-  let completion_length = 2
-
-  " Collect words.
-  let words = []
-  let i = 0
-  while i >= 0
-    let word = matchstr(a:cur_text, '\k\+', i)
-    if len(word) >= completion_length
-      call add(words, word)
-    endif
-
-    let i = matchend(a:cur_text, '\k\+', i)
-  endwhile
-
-  for word in reverse(words)
-    for include in filter(copy(s:include_info[bufnr('%')].include_files),
-          \ 'has_key(s:include_cache, v:val)')
-      for matched in filter(s:include_cache[include],
-            \ 'v:val.word ==# word && has_key(v:val, "kind") && v:val.kind != ""')
-        let ret = []
-
-        let match = match(matched.abbr, neocomplete#escape_match(word))
-        if match > 0
-          call add(ret, { 'text' : matched.abbr[ : match-1] })
-        endif
-
-        call add(ret, { 'text' : word, 'highlight' : 'Identifier' })
-        call add(ret, { 'text' : matched.abbr[match+len(word) :] })
-
-        if match > 0 || len(ret[-1].text) > 0
-          return ret
-        endif
-      endfor
-    endfor
-  endfor
-
-  return []
-endfunction"}}}
-"}}}
-
 function! s:check_buffer(bufnumber, is_force) "{{{
-  if !neocomplete#is_enabled_source('include')
+  if !neocomplete#helper#is_enabled_source('include',
+        \ neocomplete#get_context_filetype())
     return
   endif
 
@@ -275,6 +209,39 @@ function! s:check_buffer(bufnumber, is_force) "{{{
     endif
   endfor
 endfunction"}}}
+
+function! s:set_python_include_files(python_bin) "{{{
+  let python_sys_path_cmd = a:python_bin .
+        \ ' -c "import sys;sys.stdout.write(\",\".join(sys.path))"'
+  let path = neocomplete#system(python_sys_path_cmd)
+  let path = join(neocomplete#util#uniq(filter(
+        \ split(path, ',', 1), "v:val != ''")), ',')
+  call neocomplete#util#set_default_dictionary(
+        \ 'g:neocomplete#sources#include#paths', a:python_bin, path)
+endfunction"}}}
+
+function! s:set_cpp_include_files(bufnumber) "{{{
+  if exists('*vimproc#readdir')
+    let files = vimproc#readdir('/usr/include/')
+          \ + vimproc#readdir('/usr/include/c++/')
+    for directory in filter(split(glob(
+          \ '/usr/include/*/c++'), '\n'), 'isdirectory(v:val)')
+      let files += vimproc#readdir(directory)
+    endfor
+  else
+    let files = split(glob('/usr/include/*'), '\n')
+          \ + split(glob('/usr/include/c++/*'), '\n')
+          \ + split(glob('/usr/include/*/c++/*'), '\n')
+  endif
+  call filter(files, 'isdirectory(v:val)')
+
+  " Add cpp path.
+  call neocomplete#util#set_default_dictionary(
+        \ 'g:neocomplete#sources#include#paths', 'cpp',
+        \ getbufvar(a:bufnumber, '&path') .
+        \ ','.join(files, ','))
+endfunction"}}}
+
 function! s:get_buffer_include_files(bufnumber) "{{{
   let filetype = getbufvar(a:bufnumber, '&filetype')
   if filetype == ''
@@ -284,28 +251,15 @@ function! s:get_buffer_include_files(bufnumber) "{{{
   if (filetype ==# 'python' || filetype ==# 'python3')
         \ && (executable('python') || executable('python3'))
     " Initialize python path pattern.
-
-    let path = ''
     if executable('python3')
-      let path .= ',' . neocomplete#system('python3 -',
-          \ 'import sys;sys.stdout.write(",".join(sys.path))')
-      call neocomplete#util#set_default_dictionary(
-            \ 'g:neocomplete#sources#include#paths', 'python3', path)
+      call s:set_python_include_files('python3')
     endif
     if executable('python')
-      let path .= ',' . neocomplete#system('python -',
-          \ 'import sys;sys.stdout.write(",".join(sys.path))')
+      call s:set_python_include_files('python')
     endif
-    let path = join(neocomplete#util#uniq(filter(
-          \ split(path, ',', 1), "v:val != ''")), ',')
-    call neocomplete#util#set_default_dictionary(
-          \ 'g:neocomplete#sources#include#paths', 'python', path)
   elseif filetype ==# 'cpp' && isdirectory('/usr/include/c++')
-    " Add cpp path.
-    call neocomplete#util#set_default_dictionary(
-          \ 'g:neocomplete#sources#include#paths', 'cpp',
-          \ getbufvar(a:bufnumber, '&path') .
-          \ ','.join(split(glob('/usr/include/c++/*'), '\n'), ','))
+        \ && !has_key(g:neocomplete#sources#include#paths, 'cpp')
+    call s:set_cpp_include_files(a:bufnumber)
   endif
 
   let pattern = get(g:neocomplete#sources#include#patterns, filetype,
@@ -317,9 +271,7 @@ function! s:get_buffer_include_files(bufnumber) "{{{
         \ getbufvar(a:bufnumber, '&path'))
   let expr = get(g:neocomplete#sources#include#exprs, filetype,
         \ getbufvar(a:bufnumber, '&includeexpr'))
-  if has_key(g:neocomplete#sources#include#suffixes, filetype)
-    let suffixes = &l:suffixesadd
-  endif
+  let suffixes = &l:suffixesadd
 
   " Change current directory.
   let cwd_save = getcwd()
@@ -359,7 +311,8 @@ function! s:get_include_files(nestlevel, lines, filetype, pattern, path, expr) "
       if filereadable(filename)
         call add(include_files, filename)
 
-        if (a:filetype == 'c' || a:filetype == 'cpp') && a:nestlevel < 1
+        if a:nestlevel < 1
+          " Nested include files.
           let include_files += s:get_include_files(
                 \ a:nestlevel + 1, readfile(filename)[:100],
                 \ a:filetype, a:pattern, a:path, a:expr)
@@ -377,7 +330,8 @@ function! s:get_include_files(nestlevel, lines, filetype, pattern, path, expr) "
 endfunction"}}}
 
 function! s:check_cache() "{{{
-  if !neocomplete#is_enabled_source('include')
+  if !neocomplete#helper#is_enabled_source('include',
+        \ neocomplete#get_context_filetype())
     return
   endif
 
@@ -402,6 +356,10 @@ function! s:initialize_include(filename, filetype) "{{{
         \ }
 endfunction"}}}
 function! neocomplete#sources#include#make_cache(bufname) "{{{
+  if !neocomplete#is_enabled()
+    call neocomplete#initialize()
+  endif
+
   let bufnumber = (a:bufname == '') ? bufnr('%') : bufnr(a:bufname)
   if has_key(s:async_include_cache, bufnumber)
         \ && filereadable(s:async_include_cache[bufnumber].cache_name)

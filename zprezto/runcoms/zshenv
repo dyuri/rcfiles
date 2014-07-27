@@ -46,10 +46,12 @@ cdpath=(
 path=(
   /opt/repa/bin
   /opt/java/bin
-  /opt/node/bin
+  /opt/node/bi
   $HOME/bin
+  $HOME/.gem/ruby/2.1.0/bin
   /usr/sbin
   /usr/local/{bin,sbin}
+  /home/dyuri/.tmuxifier/bin
   $path
 )
 
