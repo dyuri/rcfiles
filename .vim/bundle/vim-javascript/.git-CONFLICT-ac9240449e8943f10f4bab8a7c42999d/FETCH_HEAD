@@ -1,8 +1,0 @@
-f8122fd1caca68b2592553e43dad45b3dc445a06		branch 'master' of https://github.com/pangloss/vim-javascript
-c92fbd243f29beb085261e4a1da41f254d439078	not-for-merge	branch 'develop' of https://github.com/pangloss/vim-javascript
-de98992376dcd56bcb1e679fb4c9f474369f36a5	not-for-merge	branch 'experimental-indent' of https://github.com/pangloss/vim-javascript
-583f4bd6d2a2668f3cfe09d4f947846b348cc999	not-for-merge	branch 'feature/jsfuncvar' of https://github.com/pangloss/vim-javascript
-e55bec0449804451efccbe52f2b79bf0f28bd938	not-for-merge	branch 'hotfix/readme' of https://github.com/pangloss/vim-javascript
-e55bec0449804451efccbe52f2b79bf0f28bd938	not-for-merge	tag 'v0.8.1' of https://github.com/pangloss/vim-javascript
-24c0b8f2cea349f2f9278ec8e78037049420ccd8	not-for-merge	tag '0.8.0' of https://github.com/pangloss/vim-javascript
-2d732ba694154d98c545b87dabbc3aa4851f7ae1	not-for-merge	tag 'v0.9.0' of https://github.com/pangloss/vim-javascript

@@ -1,8 +1,0 @@
-90ee6fb5d255d14d9f12f2469f92ee50149f5b44		branch 'master' of https://github.com/tpope/vim-fugitive
-70eba584a80b689eec266c69a04d460e7dee3133	not-for-merge	branch 'blame_color' of https://github.com/tpope/vim-fugitive
-40acbdecdb060cef36ee06416dde3b66c1915cc7	not-for-merge	branch 'blame_message' of https://github.com/tpope/vim-fugitive
-2723a1116f352dc3690b653bdb534f9481e71850	not-for-merge	branch 'buffer_path' of https://github.com/tpope/vim-fugitive
-ea7b1ab602230ff9f167864f78a3785c52ae2bd8	not-for-merge	branch 'copied' of https://github.com/tpope/vim-fugitive
-ff32149a59f9ba6d1b8067e39cc823c99178cb29	not-for-merge	branch 'http_github_fi' of https://github.com/tpope/vim-fugitive
-99400ac3ded1af646f5e0143d5fac6ff9b2d27a7	not-for-merge	tag 'v2.0' of https://github.com/tpope/vim-fugitive
-544a268eb8ef3646c522991da9064e6d435763e8	not-for-merge	tag 'v2.1' of https://github.com/tpope/vim-fugitive

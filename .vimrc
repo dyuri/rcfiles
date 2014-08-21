@@ -1,42 +1,80 @@
 " Repa's vimrc
-" Recommended plugins:
-" netrw:      http://www.vim.org/scripts/script.php?script_id=1075
-" vimblog:    http://www.vim.org/scripts/script.php?script_id=2030
-" snippets:   http://www.vim.org/scripts/script.php?script_id=1318
-" vcscommand: http://www.vim.org/scripts/script.php?script_id=90 
-" - minbufexpl: http://www.vim.org/scripts/script.php?script_id=159 " removed in favor of airline#tabline
-"          -> https://github.com/fholgado/minibufexpl.vim
-" matchit:    http://www.vim.org/scripts/script.php?script_id=39
-" VE:         http://www.vim.org/scripts/script.php?script_id=1950
-" NERDtree:   http://www.vim.org/scripts/script.php?script_id=1658
-" NERDcommenter: http://www.vim.org/scripts/script.php?script_id=1218
-" CSApprox:   http://www.vim.org/scripts/script.php?script_id=2390
-" slime:      http://technotales.wordpress.com/2008/10/17/screencast-like-slime-for-vim/
-"             https://github.com/jpalardy/vim-slime
-" removed in favor of python-mode pyflakes:   http://www.vim.org/scripts/script.php?script_id=2441
-" # sparkup:    http://github.com/rstacruz/sparkup
-" surround:   http://www.vim.org/scripts/script.php?script_id=1697
-" project:    http://www.vim.org/scripts/script.php?script_id=69
-" gundo:      http://sjl.bitbucket.org/gundo.vim/
-" javascipt:  https://github.com/pangloss/vim-javascript
-" syntastic
-" - command-t:  http://git.wincent.com/command-t.git -> ctrlp
-" python-mode: https://github.com/klen/python-mode
-" jedi-vim: https://github.com/davidhalter/jedi-vim
-" tagbar: https://github.com/majutsushi/tagbar
-" - doctorjs: https://github.com/mozilla/doctorjs
-" unimpaierd: https://github.com/tpope/vim-unimpaired
-" vim-visual-star-search [github]
-" airline: https://github.com/bling/vim-airline
-" signify: https://github.com/mhinz/vim-signify
-" startify: https://github.com/mhinz/vim-startify
-" lawrencium: https://bitbucket.org/ludovicchabant/vim-lawrencium
-" fugitive: https://github.com/tpope/vim-fugitive
 
-" pathogen
 filetype off
-call pathogen#runtime_append_all_bundles()
+
+if has('vim_starting')
+  set nocompatible               " Be iMproved
+
+  " Required:
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
+
+if !filereadable(neobundle_readme)
+  echo "Installing NeoBundle..."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim/
+endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Bundles:
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/vimproc.vim', {
+      \ 'build' : {
+      \     'windows' : 'tools\\update-dll-mingw',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'sheerun/vim-polyglot' " Check
+" NeoBundle 'vim-scripts/CSApprox'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'bb:sjl/gundo.vim', {'type': 'hg'}
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'marijnh/tern_for_vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'vim-scripts/vcscommand.vim'
+NeoBundle 'tpope/vim-abolish'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'bb:ludovicchabant/vim-lawrencium', {'type': 'hg'}
+NeoBundle 'derekwyatt/vim-scala'
+NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'mhinz/vim-signify'
+NeoBundle 'tpope/vim-sleuth'
+NeoBundle 'duganchen/vim-soy'
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'nelstrom/vim-visual-star-search'
+NeoBundle 'othree/xml.vim'
+
+" Python
+NeoBundle "davidhalter/jedi-vim"
+NeoBundle 'klen/python-mode'
+NeoBundle "scrooloose/syntastic"
+NeoBundle "majutsushi/tagbar"
+
+" Color
+NeoBundle "tomasr/molokai"
+
+call neobundle#end()
+
 filetype plugin indent on
+
+NeoBundleCheck
 
 " NERDTree tweeks
 let NERDTreeMinimalUI=1
@@ -57,6 +95,10 @@ let g:syntastic_mode_map = { 'mode': 'active',
 let g:jedi#show_call_signatures = 1
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#auto_vim_configuration = 0
+let g:jedi#goto_assignments_command = "<leader>g"
+let g:jedi#goto_definitions_command = "<leader>d"
+let g:jedi#usages_command = "<leader>n"
+let g:jedi#rename_command = "<leader>r"
 
 " neocopmlete
 let g:acp_enableAtStartup = 0
@@ -265,6 +307,8 @@ set clipboard=unnamed " use the system clipboard
 set title
 set autoread " auto read file if changed
 let mapleader = "," " map leader to ,
+" map space to leader
+map <space> <leader>
 
 " ctrlp ignore
 set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip
@@ -325,6 +369,7 @@ let g:airline#extensions#hunks#enabled = 1
 let g:airline#extensions#eclim#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#virtualenv#enabled = 1
 
 " Signify
 let g:signify_vcs_list = [ 'git', 'hg' ]
@@ -402,9 +447,9 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
 " Source the vimrc file after saving it
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
+" if has("autocmd")
+"   autocmd bufwritepost .vimrc source $MYVIMRC
+" endif
 
 " gpg crypt/decrypt
 
@@ -513,16 +558,7 @@ inoremap <C-F6> <ESC>mzggg?G'z
 nnoremap <F7> :CtrlPMixed<cr>
 nnoremap <S-F7> :CtrlP<cr>
 nnoremap <C-F7> :CtrlPMRUFiles<cr>
-
-" tab navigation like firefox
-nmap <C-F3> :tabprevious<cr>
-nmap <C-F4> :tabnext<cr>
-map <C-F3> :tabprevious<cr>
-map <C-F4> :tabnext<cr>
-imap <C-F3> <ESC>:tabprevious<cr>i
-imap <C-F4> <ESC>:tabnext<cr>i
-nmap <C-t> :tabnew<cr>
-imap <C-t> <ESC>:tabnew<cr>
+nnoremap <leader>p :CtrlPMixed<cr>
 
 " setting the status line
 
@@ -678,6 +714,25 @@ map <esc>[1;5B <c-down>
 map <esc>[1;5C <c-right>
 map <esc>[1;5D <c-left>
 
+map <c-left> <c-w><left>
+map <c-right> <c-w><right>
+map <c-up> <c-w><up>
+map <c-down> <c-w><down>
+
 " prezi w/ folds
 map <M-Down> zmzjzo
 map <M-Up> zmzkzo
+
+" Dvorak Q => :
+nnoremap Q :
+
+" Capital commands
+cab W! w!
+cab Q! q!
+cab Wq wq
+cab Wa wa
+cab wQ wq
+cab WQ wq
+cab W w
+cab Q q
+
