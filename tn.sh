@@ -11,6 +11,9 @@ for i in *.jpg; do
     nice -n 10 jpegrotate $i
     nice -n 10 convert $i -resize 200 -quality 70 .thumb/tn_$i
     nice -n 10 convert $i -resize 1000 -quality 25 .thumb/qv_$i
+    if [ -e pub ]; then
+      nice -n 10 convert $i -resize 40% pub/$i
+    fi
     echo "{\"image\": \"$i\", \"thumbnail\": \".thumb/tn_$i\", \"quickview\": \".thumb/qv_$i\"}," >> images.json
     echo $i done...
 done
