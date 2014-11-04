@@ -54,7 +54,7 @@ NeoBundle 'bb:ludovicchabant/vim-lawrencium', {'type': 'hg'}
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'mhinz/vim-signify'
-NeoBundle 'tpope/vim-sleuth'
+" NeoBundle 'trrowpope/vim-sleuth'
 NeoBundle 'duganchen/vim-soy'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'tpope/vim-unimpaired'
@@ -90,6 +90,9 @@ let g:jsbeautify_engine = 'node'
 let g:syntastic_mode_map = { 'mode': 'active',
         \ 'active_filetypes': [],
         \ 'passive_filetypes': ['python'] }
+
+" syntastic checkers
+let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 
 " python-mode, jedi
 let g:jedi#show_call_signatures = 1

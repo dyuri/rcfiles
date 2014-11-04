@@ -23,6 +23,7 @@ alias jsonpp='python -mjson.tool'
 #alias search=ack
 alias search=ag
 alias vless='/usr/share/vim/vim??/macros/less.sh'
+alias bible='shuf -n 1 ~/txt/bible.txt'
 
 #
 # tmuxifier

@@ -6,9 +6,8 @@
 #
 
 # Print the message.
-cat <<-EOF
+echo Bye.
 
-Thank you. Come again!
-  -- Dr. Apu Nahasapeemapetilon
-EOF
-
+if [ -e ~/txt/bible.txt ]; then
+  shuf -n 1 ~/txt/bible.txt
+fi
