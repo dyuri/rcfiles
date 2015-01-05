@@ -70,12 +70,6 @@ if (( $+commands[lesspipe.sh] )); then
 fi
 
 #
-# Grep
-#
-
-export GREP_OPTIONS='--color=auto'
-
-#
 # Ls
 #
 
