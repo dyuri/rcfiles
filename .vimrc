@@ -54,12 +54,18 @@ NeoBundle 'bb:ludovicchabant/vim-lawrencium', {'type': 'hg'}
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'mhinz/vim-signify'
+NeoBundle 'tpope/vim-surround'
 " NeoBundle 'trrowpope/vim-sleuth'
 NeoBundle 'duganchen/vim-soy'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'nelstrom/vim-visual-star-search'
 NeoBundle 'othree/xml.vim'
+NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'haya14busa/vim-asterisk'
+NeoBundle 'bb:ZyX_I/frawor', {'type': 'hg'}
+NeoBundle 'bb:ZyX_I/ansi_esc_echo', {'type': 'hg'}
+NeoBundle 'bb:ZyX_I/aurum', {'type': 'hg'}
 
 " Python
 NeoBundle "davidhalter/jedi-vim"
@@ -114,6 +120,29 @@ inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y> neocomplete#close_popup()
 inoremap <expr><C-e> neocomplete#cancel_popup()
+
+" incsearch
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+
+" vim-asterisk
+map *   <Plug>(asterisk-*)
+map #   <Plug>(asterisk-#)
+map g*  <Plug>(asterisk-g*)
+map g#  <Plug>(asterisk-g#)
+map z*  <Plug>(asterisk-z*)
+map gz* <Plug>(asterisk-gz*)
+map z#  <Plug>(asterisk-z#)
+map gz# <Plug>(asterisk-gz#)
 
 " html output
 let html_use_css = 1
