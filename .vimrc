@@ -1,4 +1,4 @@
-" Repa's vimrc
+" Repa's vimrc + nvimrc
 
 filetype off
 
@@ -43,8 +43,14 @@ NeoBundle 'sheerun/vim-polyglot' " Check
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'mattn/emmet-vim'
-NeoBundle 'bb:sjl/gundo.vim', {'type': 'hg'}
-NeoBundle 'Shougo/neocomplete.vim'
+" NeoBundle 'bb:sjl/gundo.vim', {'type': 'hg'} " forked to mundo
+NeoBundle 'simnalamburt/vim-mundo'
+" NeoBundle 'Shougo/neocomplete.vim' " neovim has no if_lua
+NeoBundle 'Valloric/YouCompleteMe', {
+      \ 'build': {
+      \     'unix': './install.sh --system-boost'
+      \   }
+      \ }
 NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'vim-scripts/vcscommand.vim'
@@ -66,6 +72,9 @@ NeoBundle 'haya14busa/vim-asterisk'
 NeoBundle 'bb:ZyX_I/frawor', {'type': 'hg'}
 NeoBundle 'bb:ZyX_I/ansi_esc_echo', {'type': 'hg'}
 NeoBundle 'bb:ZyX_I/aurum', {'type': 'hg'}
+
+" HTTP
+NeoBundle 'aquach/vim-http-client'
 
 " Python
 NeoBundle "davidhalter/jedi-vim"
@@ -110,16 +119,16 @@ let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "<leader>r"
 
 " neocopmlete
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#enable_auto_select = 1
+" let g:acp_enableAtStartup = 0
+" let g:neocomplete#enable_at_startup = 1
+" let g:neocomplete#enable_smart_case = 1
+" let g:neocomplete#sources#syntax#min_keyword_length = 3
+" let g:neocomplete#enable_auto_select = 1
 
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y> neocomplete#close_popup()
-inoremap <expr><C-e> neocomplete#cancel_popup()
+" inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+" inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+" inoremap <expr><C-y> neocomplete#close_popup()
+" inoremap <expr><C-e> neocomplete#cancel_popup()
 
 " incsearch
 map /  <Plug>(incsearch-forward)
@@ -509,7 +518,7 @@ augroup END
 " python
 function! RePa_py()
   setlocal tw=0 sw=4 ts=4 sta et sts=4 ai
-  
+
   " color column #79
   hi clear ColorColumn
   hi link ColorColumn User1
@@ -577,8 +586,8 @@ imap <F3> <ESC>:bp!<cr>a
 imap <F4> <ESC>:bn!<cr>a
 
 " neocomplete
-nnoremap <F6> :NeoCompleteToggle<CR>
-inoremap <F6> <ESC>:NeoCompleteToggle<CR>a
+" nnoremap <F6> :NeoCompleteToggle<CR>
+" inoremap <F6> <ESC>:NeoCompleteToggle<CR>a
 
 " panic button
 nnoremap <C-F6> mzggg?G'z
@@ -620,7 +629,7 @@ endfunction
 
 function! RePa_sl_filestate()
   let state = ""
-  
+
   if &buftype == "help"
     return 'H'
   elseif &buftype == "nowrite"
@@ -699,7 +708,7 @@ endfunction
 function! RePa_statusline()
 
   let sl = ""
-  
+
   " lines
   let sl = sl . '%2*%{RePa_sl_lines()}'
   " mode
@@ -725,16 +734,16 @@ function! RePa_statusline()
   " expand tab
   let sl = sl . '%3*%{RePa_sl_expandtabON()}'
   let sl = sl . '%4*%{RePa_sl_expandtabOFF()}'
-  
+
   " ignorecase
   let sl = sl . '%3*\|%{RePa_sl_ignorecaseON()}'
   let sl = sl . '%4*%{RePa_sl_ignorecaseOFF()}'
-  
+
   " position, line and column, percentage
   let sl = sl . '%2*\ %05(%l%),%03(%v%)%2*\ %P'
-  
+
   return sl
-  
+
 endfunction
 
 " set the statusline
