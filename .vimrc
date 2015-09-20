@@ -55,7 +55,8 @@ NeoBundle 'marijnh/tern_for_vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'vim-scripts/vcscommand.vim'
 NeoBundle 'tpope/vim-abolish'
-NeoBundle 'pangloss/vim-javascript'
+" NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'othree/yajs.vim'
 NeoBundle 'bb:ludovicchabant/vim-lawrencium', {'type': 'hg'}
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'Shougo/vimshell.vim'
@@ -72,6 +73,8 @@ NeoBundle 'haya14busa/vim-asterisk'
 NeoBundle 'bb:ZyX_I/frawor', {'type': 'hg'}
 NeoBundle 'bb:ZyX_I/ansi_esc_echo', {'type': 'hg'}
 NeoBundle 'bb:ZyX_I/aurum', {'type': 'hg'}
+NeoBundle 'chrisbra/vim-diff-enhanced'
+NeoBundle 'manicmaniac/betterga'
 
 " HTTP
 NeoBundle 'aquach/vim-http-client'
@@ -84,6 +87,8 @@ NeoBundle "majutsushi/tagbar"
 
 " Color
 NeoBundle "tomasr/molokai"
+NeoBundle "freeo/vim-kalisi"
+NeoBundle "w0ng/vim-hybrid"
 
 call neobundle#end()
 
@@ -117,6 +122,8 @@ let g:jedi#goto_assignments_command = "<leader>g"
 let g:jedi#goto_definitions_command = "<leader>d"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "<leader>r"
+let g:jedi#popup_on_dot = 0
+let g:jedi#popup_select_first = 0
 
 " neocopmlete
 " let g:acp_enableAtStartup = 0
@@ -160,6 +167,9 @@ map <c-f> :call JsBeautify()<cr>
 
 " 88/256 colors for urxvt
 set t_Co=256
+
+" molokai 256 colors
+let g:rehash256 = 1
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
@@ -294,9 +304,10 @@ if v:version >= 700
 endif
 
 " colors via CSApprox
-if !has("gui_running")
-  colorscheme repa
-endif
+" if !has("gui_running")
+"   colorscheme repa
+" endif
+colorscheme molokai
 
 if has("gui_running")
   set guifont=Meslo\ LG\ S\ for\ Powerline\ 10
