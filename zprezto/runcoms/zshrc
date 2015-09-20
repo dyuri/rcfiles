@@ -39,3 +39,4 @@ autoload -Uz promptinit
 promptinit
 prompt repa
 
+setopt interactivecomments

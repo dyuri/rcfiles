@@ -1,0 +1,9 @@
+pane	0	0	:zsh	1	:*	0	:/home/dyuri	1	zsh	:
+pane	1	0	:zsh	0	:-	0	:/home/dyuri	1	zsh	:
+pane	1	1	:zsh	1	:*	0	:/home/dyuri/alma	0	zsh	:
+pane	1	1	:zsh	1	:*	1	:/home/dyuri	0	nvim	:nvim
+pane	1	1	:zsh	1	:*	2	:/home/dyuri	1	zsh	:
+window	0	0	1	:*	ae5d,80x23,0,0,0
+window	1	0	0	:-	ae5e,80x23,0,0,1
+window	1	1	1	:*	ebd5,107x34,0,0[107x14,0,0,2,107x19,0,15{67x19,0,15,3,39x19,68,15,4}]
+state	1	1

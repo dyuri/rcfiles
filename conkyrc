@@ -1,0 +1,93 @@
+background yes
+out_to_console no
+use_xft yes
+xftalpha 0.8
+xftfont Meslo LG S for Powerline:pixelsize=13:antialias=true:hinting=true
+
+update_interval 1.0
+
+total_run_times 0
+
+own_window yes
+
+own_window_transparent yes
+own_window_argb_visual true
+own_window_argb_value 0
+own_window_type desktop
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+double_buffer yes
+
+minimum_size 280 5
+
+draw_shades no
+draw_outline yes
+draw_borders no
+stippled_borders 8
+border_width 1
+
+color1 F9F966
+color2 FF7F50
+color3 87CEFF
+color4 7FFF00
+color5 87CEFA
+color6 7F8ED3
+color7 5B6DAD
+
+default_color white
+default_shade_color black
+default_outline_color black
+
+alignment top_right
+
+maximum_width 440
+
+gap_x 12
+gap_y 12
+
+no_buffers yes
+
+uppercase no
+
+cpu_avg_samples 2
+net_avg_samples 2
+
+override_utf8_locale no
+
+use_spacer none
+
+# stuff after 'TEXT' will be formatted on screen
+
+TEXT
+$color3$nodename ${alignr}$color3${time %F %T}
+
+${color6}System:
+$color7 Uptime:$color6 $uptime ${color7}- Load:${color6} $loadavg
+$color7 CPU1 @${freq_g 1}:$color6 ${cpu cpu1}% ${alignr}${cpubar cpu1 8,250}
+$color7 CPU2 @${freq_g 2}:$color6 ${cpu cpu2}% ${alignr}${cpubar cpu2 8,250}
+$color7 CPU3 @${freq_g 3}:$color6 ${cpu cpu3}% ${alignr}${cpubar cpu3 8,250}
+$color7 CPU4 @${freq_g 4}:$color6 ${cpu cpu4}% ${alignr}${cpubar cpu4 8,250}
+${color #000000}${cpugraph cpu0 32,400 000000 7f8ed3}
+$color7 Temp: ${color6}${hwmon 1 temp 1}C ${color7}C0: ${color6}${hwmon 1 temp 2}C ${color7}C1: ${color6}${hwmon 1 temp 3}C ${color7}C2: ${color6}${hwmon 1 temp 4}C ${color7}C3: ${color6}${hwmon 1 temp 5}C ${color7}V: ${color6}${nvidia temp}C
+${color #5b6dad} RAM Usage:${color #7f8ed3} $mem/$memmax - $memperc% ${membar}
+${color #5b6dad} Swap Usage:${color #7f8ed3} $swap/$swapmax - $swapperc% ${swapbar}
+${color #5b6dad} Processes:${color #7f8ed3} $processes  ${color #5b6dad}Running:${color #7f8ed3} $running_processes
+
+${color #5b6dad}Networking:
+ ${color #5b6dad}Down:${color #7f8ed3} ${downspeed eth0} k/s${color #5b6dad}${offset 80}Up:${color #7f8ed3} ${upspeed eth0} k/s
+${color #000000}${downspeedgraph eth0 32,200 000000 7f8ed3} ${color #000000}${upspeedgraph eth0 32,200 000000 7f8ed3}
+ ${color #5b6dad}Address: ${color #7f8ed3}${addr eth0}
+ ${color #5b6dad}TCP Connections: ${color #7f8ed3}${tcp_portmon 1 65535 count}
+
+${color #5b6dad}File Systems:
+ ${color #5b6dad}/ ${color #7f8ed3}${fs_used /}/${fs_size /} ${color #7f8ed3}${fs_bar /}
+${color #000000}${diskiograph /dev/sda 32,400 000000 7f8ed3}
+
+${color #5b6dad}Name              PID     CPU%   MEM%
+${color #7f8ed3} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+${color #7f8ed3} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color #7f8ed3} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color #5b6dad}Mem usage
+${color #7f8ed3} ${top_mem name 1} ${top_mem pid 1} ${top_mem cpu 1} ${top_mem mem 1}
+${color #7f8ed3} ${top_mem name 2} ${top_mem pid 2} ${top_mem cpu 2} ${top_mem mem 2}
+${color #7f8ed3} ${top_mem name 3} ${top_mem pid 3} ${top_mem cpu 3} ${top_mem mem 3}
