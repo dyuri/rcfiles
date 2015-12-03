@@ -8,8 +8,7 @@ xsetroot -cursor_name left_ptr
 
 blueshift --configurations config/blueshift.conf &
 
-# /usr/bin/pulseaudio --start
-/usr/bin/start-pulseaudio-x11
+/usr/bin/pulseaudio --start &
 
 wmname LG3D
 

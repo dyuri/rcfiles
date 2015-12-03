@@ -4,3 +4,4 @@ syntax: glob
 *.pyc
 *~
 .vim/bundle/*
+tmux/resurrect/tmux_resurrect_*
