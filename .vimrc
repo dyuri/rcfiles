@@ -75,6 +75,8 @@ NeoBundle 'bb:ZyX_I/ansi_esc_echo', {'type': 'hg'}
 NeoBundle 'bb:ZyX_I/aurum', {'type': 'hg'}
 NeoBundle 'chrisbra/vim-diff-enhanced'
 NeoBundle 'manicmaniac/betterga'
+NeoBundle 'blueyed/vim-diminactive'
+NeoBundle 'luochen1990/rainbow'
 
 " HTTP
 NeoBundle 'aquach/vim-http-client'
@@ -99,6 +101,9 @@ NeoBundleCheck
 " NERDTree tweeks
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
+
+" rainbow
+let g:rainbow_active = 0
 
 " jsbeautifier
 let g:jsbeautify = {'indent_size': 2, 'indent_char': ' '}
@@ -389,6 +394,10 @@ set undodir=~/backup/undo//,~/tmp//,/var/tmp//,/tmp//,.
 " switch on backup
 set bk
 
+" cursor
+set cursorline
+set cursorcolumn
+
 if has("gui_running")
   set nu
   " set lines=40
@@ -398,9 +407,6 @@ if has("gui_running")
   set guioptions-=r
   " enable mouse
   set mouse=a
-  " cursor
-  set cursorline
-  set cursorcolumn
 endif
 
 " Powerline - replaced by airline
@@ -586,7 +592,8 @@ imap <F2> <ESC>:NERDTreeToggle<CR><C-W>l<C-W>ji
 nmap <F8> :set wrap!<CR>
 nmap <F9> :TagbarToggle<CR>
 nmap <F11> :set nu!<CR>
-nmap <F12> :set list!<CR>
+nmap <F12> :set list!<CR>:RainbowToggle<CR>
+nmap <C-F12> :set cursorline!<CR>:set cursorcolumn!<CR>
 
 " buffer navigation
 nmap <F3> :bp!<cr>
