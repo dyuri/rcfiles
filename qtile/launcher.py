@@ -1,5 +1,5 @@
 from libqtile.widget import base
-from libqtile import manager, bar
+from libqtile import bar
 import subprocess
 
 __all__ = [
@@ -9,6 +9,7 @@ __all__ = [
 
 class Launcher(base._TextBox):
     ''' Widget to start an application '''
+    orientations = base.ORIENTATION_HORIZONTAL
     defaults = [
         ("font", "Arial", "Text font"),
         ("fontsize", None, "Font pixel size. Calculated if None."),
@@ -20,24 +21,18 @@ class Launcher(base._TextBox):
         ("label", None, "Label."),
     ]
 
-    def __init__(self, command, **config):
-        base._TextBox.__init__(self, '0', width=bar.CALCULATED, **config)
-        self.command = command
+    def __init__(self, command, text='', **config):
 
-    def _configure(self, qtile, bar):
-        base._TextBox._configure(self, qtile, bar)
+        if text is '':
+            text = command[:1].upper()
+
+        base._TextBox.__init__(self, text, width=bar.CALCULATED, **config)
+        self.command = command
 
     def button_press(self, x, y, button):
         if button == 1 and self.command:
             subprocess.Popen(self.command.split(), shell=True)
 
     def update(self):
+        self.bar.draw()
         return True
-
-    def draw(self):
-        if self.label:
-            self.text = self.label
-        elif self.command:
-            self.text = self.command[:1].upper()
-
-        base._TextBox.draw(self)

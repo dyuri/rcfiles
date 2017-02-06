@@ -1,21 +1,8 @@
-# -*- coding: utf-8 -*-
-from libqtile.config import Key, Click, Drag, Screen, Group, Match
+from libqtile.config import Key, Screen, Group, Drag, Click, Match
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 
 from launcher import Launcher
-
-from libqtile import xcbq
-xcbq.keysyms["XF86AudioRaiseVolume"] = 0x1008ff13
-xcbq.keysyms["XF86AudioLowerVolume"] = 0x1008ff11
-xcbq.keysyms["XF86AudioMute"] = 0x1008ff12
-
-widget_defaults = dict(
-    font='Inconsolata-g',
-    fontsize=14,
-    padding=3,
-)
-
 
 def app_or_group(group, app):
     """ Go to specified group if it exists. Otherwise, run the specified app.
@@ -31,7 +18,7 @@ def app_or_group(group, app):
 
 
 def getIndex(currentGroupName):
-    for i in xrange(len(groups)):
+    for i in range(len(groups)):
         if groups[i].name == currentGroupName:
             return i
 
@@ -57,6 +44,10 @@ keys = [
         lazy.restart()
     ),
     Key(
+        [mod, "control"], "q",
+        lazy.shutdown()
+    ),
+    Key(
         [mod], "w",
         lazy.window.kill()
     ),
@@ -65,64 +56,63 @@ keys = [
         lazy.group.next_window()
     ),
     Key(
+        [mod], "Tab",
+        lazy.group.next_window()
+    ),
+    Key(
         [alt, "shift"], "Tab",
+        lazy.group.prev_window()
+    ),
+    Key(
+        [mod, "shift"], "Tab",
         lazy.group.prev_window()
     ),
     # this is usefull when floating windows get buried
     Key(
-        [alt], "grave",
+        [mod], "grave",
         lazy.window.bring_to_front()
     ),
     # group switch
-    Key(
+    Key( #
         [mod], "Left",
-        lazy.screen.prevgroup()
+        lazy.screen.prev_group()
     ),
-    Key(
+    Key( #
         [mod], "Right",
-        lazy.screen.nextgroup()
-    ),
-    Key(
-        [mod], "Home",
-        lazy.screen.prevgroup()
-    ),
-    Key(
-        [mod], "End",
-        lazy.screen.nextgroup()
+        lazy.screen.next_group()
     ),
     Key(
         [mod, "shift"], "Left",
         lazy.function(toPrevGroup)
     ),
     Key(
-        [mod, "shift"],
-        "Right",
+        [mod, "shift"], "Right",
         lazy.function(toNextGroup)
+    ),
+    Key(
+        [mod, alt], "Left",
+        lazy.prev_screen()
+    ),
+    Key(
+        [mod, alt], "Right",
+        lazy.next_screen()
     ),
     # layouts
     Key(
-        [mod, "shift"], "m",
+        [mod, alt], "m",
         lazy.group.setlayout('max')
     ),
     Key(
-        [mod, "shift"], "s",
+        [mod, alt], "s",
         lazy.group.setlayout('stack')
     ),
     Key(
-        [mod, "shift"], "t",
+        [mod, alt], "t",
         lazy.group.setlayout('tile')
     ),
     Key(
-        [mod, "shift"], "r",
-        lazy.group.setlayout('ratiotile')
-    ),
-    Key(
-        [mod, "shift"], "x",
-        lazy.group.setlayout('xmonad-tall')
-    ),
-    Key(
         [mod], "space",
-        lazy.nextlayout()
+        lazy.next_layout()
     ),
     # Bindings to control the layouts
     Key(
@@ -134,11 +124,11 @@ keys = [
         lazy.layout.next()
     ),
     Key(
-        [mod], "j",
+        [mod], "k",
         lazy.layout.up()
     ),
     Key(
-        [mod], "k",
+        [mod], "j",
         lazy.layout.down()
     ),
     Key(
@@ -146,16 +136,16 @@ keys = [
         lazy.window.toggle_floating()
     ),
     Key(
-        [mod], "F12",
+        [mod, "shift"], "f",
         lazy.window.toggle_fullscreen()
     ),
     # These are unique to stack layout
     Key(
-        [mod, "shift"], "l",
+        [mod, "shift"], "k",
         lazy.layout.client_to_next()
     ),
     Key(
-        [mod, "shift"], "h",
+        [mod, "shift"], "j",
         lazy.layout.client_to_previous()
     ),
     Key(
@@ -164,9 +154,8 @@ keys = [
     ),
     # Multiple function keys
     Key(
-        [mod, "shift"], "space",
+        [mod], "BackSpace",
         lazy.layout.rotate(),
-        lazy.layout.flip(),              # xmonad-tall
     ),
     Key(
         [mod, "shift"], "k",
@@ -200,15 +189,19 @@ keys = [
     ),
     # applications
     Key(
+        [alt], "Escape",
+        lazy.spawn("rofi -show window")
+    ),
+    Key(
         [mod], "Escape",
-        lazy.spawncmd()
+        lazy.spawn("rofi -show run")
     ),
     Key(
         [mod], "Return",
         lazy.spawn(
             "/usr/bin/urxvt"
-            " -fn 'xft:Meslo\ LG\ S\ for\ Powerline:pixelsize=13:antialias=true:hinting=true'"
-            " -fb 'xft:Meslo\ LG\ S\ for\ Powerline:bold:pixelsize=13:antialias=true:hinting=true'"
+            " -fn 'xft:Meslo\ LG\ S\ DZ\ for\ Powerline:pixelsize=13:antialias=true:hinting=true'"
+            " -fb 'xft:Meslo\ LG\ S\ DZ\ for\ Powerline:bold:pixelsize=13:antialias=true:hinting=true'"
         )
     ),
     Key(
@@ -227,126 +220,50 @@ keys = [
         [mod, "shift"], "c",
         lazy.spawn('google-chrome')
     ),
+]
+
+keys_default = [
+    # Toggle between split and unsplit sides of stack.
+    # Split = all windows displayed
+    # Unsplit = 1 window displayed, like Max layout, but still with
+    # multiple stack panes
     Key(
-        [alt], "Escape",
-        lazy.spawn("gmrun")
-    ),
-    Key(
-        [mod], "q",
-        lazy.spawn('xlock')
-    ),
-    Key(
-        [], "XF86AudioRaiseVolume",
-        lazy.spawn("amixer sset Master 5%+")
-    ),
-    Key(
-        [], "XF86AudioLowerVolume",
-        lazy.spawn("amixer sset Master 5%-")
-    ),
-    Key(
-        [], "XF86AudioMute",
-        lazy.spawn("amixer sset Master toggle")
+        [mod, "shift"], "Return",
+        lazy.layout.toggle_split()
     ),
 ]
 
-keys_old = [
-    Key([mod], "j",
-        lazy.layout.down()),
-    Key([mod], "k",
-        lazy.layout.up()),
-    Key([mod, "shift"], "j",
-        lazy.layout.move_down()),
-    Key([mod, "shift"], "k",
-        lazy.layout.move_up()),
-    Key([mod, "control"], "j",
-        lazy.layout.section_down()),
-    Key([mod, "control"], "k",
-        lazy.layout.section_up()),
-    Key([mod], "h",
-        lazy.layout.collapse_branch()),  # for tree layout
-    Key([mod], "l",
-        lazy.layout.expand_branch()),  # for tree layout
-    Key([mod, "shift"], "h",
-        lazy.layout.move_left()),
-    Key([mod, "shift"], "l",
-        lazy.layout.move_right()),
-    Key([mod, "control"], "l",
-        lazy.layout.increase_ratio()),
-    Key([mod, "control"], "h",
-        lazy.layout.decrease_ratio()),
-    Key([mod], "comma",
-        lazy.layout.increase_nmaster()),
-    Key([mod], "period",
-        lazy.layout.decrease_nmaster()),
-    Key([mod], "Tab",
-        lazy.group.next_window()),
-    Key([mod, "shift"], "Tab",
-        lazy.group.prev_window()),
-    Key([mod, "shift"], "Return",
-        lazy.layout.rotate()),
-    Key([mod, "shift"], "space",
-        lazy.layout.toggle_split()),
+groups = [Group(str(i)) for i in range(10)]
 
-    Key([mod], "space",
-        lazy.nextlayout()),
-    Key([mod], "x",
-        lazy.window.kill()),
-    Key([mod], "t",
-        lazy.window.disable_floating()),
-    Key([mod, "shift"], "t",
-        lazy.window.enable_floating()),
-    Key([mod], "r", lazy.spawncmd()),
-    Key([mod], "g", lazy.spawn(
-        "/usr/bin/urxvt"
-        " -fn 'xft:Meslo\ LG\ S\ for\ Powerline:pixelsize=13:antialias=true:hinting=true'"
-        " -fb 'xft:Meslo\ LG\ S\ for\ Powerline:bold:pixelsize=13:antialias=true:hinting=true'"
-        )),
-    Key([mod], "p", lazy.function(app_or_group('io', 'gajim'))),
-    Key([mod], "c", lazy.function(app_or_group('www', 'google-chrome'))),
-    Key([mod], "f", lazy.function(app_or_group('www', 'firefox'))),
-    Key([alt], "Escape",
-        lazy.spawn("gmrun")),
-    Key([mod], "q",
-        lazy.spawn('xtrlock')),
+for i in groups:
+    # mod1 + letter of group = switch to group
+    keys.append(
+        Key([mod], i.name, lazy.group[i.name].toscreen())
+    )
 
-    Key([], "XF86AudioRaiseVolume",
-        lazy.spawn("amixer sset Master 5%+")),
-    Key([], "XF86AudioLowerVolume",
-        lazy.spawn("amixer sset Master 5%-")),
-    Key([], "XF86AudioMute",
-        lazy.spawn("amixer sset Master toggle")),
-    Key(["shift"], "XF86AudioRaiseVolume",
-        lazy.spawn("mpc volume +5")),
-    Key(["shift"], "XF86AudioLowerVolume",
-        lazy.spawn("mpc volume -5")),
-    Key(["shift"], "XF86AudioMute",
-        lazy.spawn("mpc toggle")),
+    # mod1 + shift + letter of group = switch to & move focused window to group
+    keys.append(
+        Key([mod, "shift"], i.name, lazy.window.togroup(i.name))
+    )
 
-    Key([mod], "Home",
-        lazy.screen.prevgroup()),
-    Key([mod], "End",
-        lazy.screen.nextgroup()),
-    Key([mod, "shift"], "Home",
-        lazy.function(toPrevGroup)),
-    Key([mod, "shift"], "End",
-        lazy.function(toNextGroup)),
-    Key([mod], "Left",
-        lazy.screen.prevgroup()),
-    Key([mod], "Right",
-        lazy.screen.nextgroup()),
-    Key([mod, "shift"], "Left",
-        lazy.function(toPrevGroup)),
-    Key([mod, "shift"], "Right",
-        lazy.function(toNextGroup)),
-]
-
-mouse = [
-    Drag([mod], "Button1", lazy.window.set_position_floating(),
-         start=lazy.window.get_position()),
-    Drag([mod], "Button2", lazy.window.set_size_floating(),
-         start=lazy.window.get_size()),
-    Click([mod], "Button3", lazy.window.bring_to_front())
-]
+groups.extend([
+    Group('www', layout='tile', persist=False, init=False, screen_affinity=0,
+          matches=[Match(wm_class=[
+              'google-chrome',
+              'google-chrome-unstable',
+              'Google-chrome'])]),
+    Group('ff', layout='tile', persist=False, init=False, screen_affinity=0,
+          matches=[Match(wm_class=[
+              'Firefox'])]),
+    Group('skype', layout='tile', persist=False, init=False,
+          matches=[Match(wm_class=['Skype', 'skype'])]),
+    Group('steam', layout='max', persist=False, init=False, screen_affinity=0,
+          matches=[Match(wm_class=['Steam', 'steam'])]),
+    Group('io', layout='max', persist=False,
+          matches=[Match(wm_class=['Gajim'], role=['roster'])], init=False, screen_affinity=0),
+    Group('gimp', layout='max', persist=False, screen_affinity=0,
+          matches=[Match(wm_class=['gimp', 'Gimp'])], init=False),
+])
 
 border = dict(
     border_focus='#008080',
@@ -356,70 +273,88 @@ border = dict(
 
 layouts = [
     layout.Tile(**border),
-    layout.RatioTile(**border),
-    layout.MonadTall(**border),
+    layout.VerticalTile(**border),
     layout.Max(),
-    layout.Stack(stacks=2, **border),
-
-    # pidgin
-    layout.Slice('left', 256, name='pidgin', role='buddy_list',
-                fallback=layout.Tile(**border)),
+    layout.Stack(num_stacks=2, **border),
 
     # gajim
-    layout.Slice('left', 320, name='gajim', role='roster',
-                 fallback=layout.Tile(**border)),
+    # layout.Slice(side='left', width=320, name='gajim', role='roster',
+    #             fallback=layout.RatioTile(**border)),
 
     # gimp
-    layout.Slice('left', 256, name='gimp', role='gimp-toolbox',
-                 fallback=layout.Slice('right', 256, role='gimp-dock',
-                 fallback=layout.Stack(1, **border))),
+    # layout.Slice(side='left', width=256, name='gimp', role='gimp-toolbox',
+    #             fallback=layout.Slice(
+    #                                   side='right',
+    #                                   width=256,
+    #                                   role='gimp-dock',
+    #             fallback=layout.Stack(num_stacks=1, **border))),
 ]
-floating_layout = layout.Floating(auto_float_types=[
-    "notification",
-    "toolbar",
-    "splash",
-    "dialog",
-], **border)
 
-static_groups = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-groups = []
-
-for i in static_groups:
-    groups.append(Group(i))
-    keys.append(
-        Key([mod], i, lazy.group[i].toscreen())
-    )
-    keys.append(
-        Key([alt], 'F' + i, lazy.group[i].toscreen())
-    )
-    keys.append(
-        Key([mod, "shift"], i, lazy.window.togroup(i))
-    )
+widget_defaults = dict(
+    font='Inconsolata-g',
+    fontsize=14,
+    padding=3,
+)
 
 screens = [
     Screen(
         top=bar.Bar([
-            widget.WindowName(**widget_defaults),
-            widget.CurrentLayout(**widget_defaults),
-            widget.CPUGraph(graph_color='18EB18', fill_color='16EB16.3', line_width=1),
-            widget.NetGraph(graph_color='18BAEB', fill_color='1667EB.3', line_width=1, interface='ppp0'),
-            widget.MemoryGraph(graph_color='EBE618', fill_color='EBE616.3', line_width=1),
-            widget.SwapGraph(graph_color='EB1818', fill_color='EB1616.3', line_width=1),
+            widget.WindowName(),
+            widget.CurrentLayout(),
+            widget.CPUGraph(
+                graph_color='18EB18',
+                fill_color='16EB16.3',
+                line_width=1),
+            widget.NetGraph(
+                graph_color='18BAEB',
+                fill_color='1667EB.3',
+                line_width=1),
+            widget.MemoryGraph(
+                graph_color='EBE618',
+                fill_color='EBE616.3',
+                line_width=1),
+            # widget.SwapGraph(
+            #    graph_color='EB1818',
+            #    fill_color='EB1616.3',
+            #    line_width=1),
         ], 24, ),
         bottom=bar.Bar([
-            widget.GroupBox(urgent_alert_method='text', **widget_defaults),
-            Launcher('google-chrome', label="C", foreground='#CC4400', **widget_defaults),
-            Launcher('firefox', label="F", foreground='#0044FF', **widget_defaults),
-            widget.Prompt(foreground='#20C020', **widget_defaults),
+            widget.GroupBox(urgent_alert_method='text'),
+            Launcher('google-chrome', 'C', foreground='#22FF00'),
+            Launcher('firefox', 'F', foreground='#2288FF'),
             widget.Spacer(),
-            widget.Notify(foreground="ffff44", **widget_defaults),
-            widget.Systray(**widget_defaults),
+            widget.Notify(foreground="ffff44"),
+            widget.Systray(),
             # widget.Volume(**widget_defaults),
             widget.Clock(
-                '%Y.%m.%d %H:%M:%S',
-                **widget_defaults),
+                format='%Y.%m.%d %H:%M:%S'),
         ], 30, ),
     ),
+    Screen(
+        top=bar.Bar(
+            [
+                widget.WindowName(),
+                widget.CurrentLayout(),
+            ],
+            24,
+        ),
+        bottom=bar.Bar([
+            widget.GroupBox(urgent_alert_method='text'),
+            widget.Spacer(),
+            widget.Clock(format='%Y.%m.%d %H:%M:%S'),
+            ],
+            30,
+        ),
+    ),
+]
+
+# Drag floating layouts.
+mouse = [
+    Drag([mod], "Button1", lazy.window.set_position_floating(),
+         start=lazy.window.get_position()),
+    Drag([mod], "Button2", lazy.window.set_size_floating(),
+         start=lazy.window.get_size()),
+    Click([mod], "Button3", lazy.window.bring_to_front())
 ]
 
 
@@ -432,12 +367,13 @@ def dialogs(window):
        or 'emulator64-arm' in window.window.get_wm_class()):
         window.floating = True
 
+dgroups_key_binder = None
+dgroups_app_rules = []
+main = None
+follow_mouse_focus = True
+bring_front_click = False
+cursor_warp = False
+floating_layout = layout.Floating(**border)
+auto_fullscreen = True
 
-groups.extend([
-    Group('www', layout='tile', persist=True,
-          matches=[Match(wm_class=['google-chrome', 'Google-chrome', 'Chromium', 'chromium', 'Firefox'])]),
-    Group('io', layout='gajim', persist=False,
-          matches=[Match(wm_class=['Gajim'], role=['roster'])], init=False),
-    Group('gimp', layout='gimp', persist=False,
-          matches=[Match(wm_class=['gimp', 'Gimp'])], init=False),
-])
+wmname = "LG3D"

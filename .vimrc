@@ -36,8 +36,11 @@ NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'tpope/vim-commentary'
 NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kien/ctrlp.vim'
+" NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+NeoBundle 'junegunn/fzf.vim'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'vim-airline/vim-airline-themes'
 NeoBundle 'sheerun/vim-polyglot' " Check
 " NeoBundle 'vim-scripts/CSApprox'
 NeoBundle 'mileszs/ack.vim'
@@ -46,29 +49,31 @@ NeoBundle 'mattn/emmet-vim'
 " NeoBundle 'bb:sjl/gundo.vim', {'type': 'hg'} " forked to mundo
 NeoBundle 'simnalamburt/vim-mundo'
 " NeoBundle 'Shougo/neocomplete.vim' " neovim has no if_lua
-NeoBundle 'Valloric/YouCompleteMe', {
-      \ 'build': {
-      \     'unix': './install.sh --system-boost'
-      \   }
-      \ }
-NeoBundle 'marijnh/tern_for_vim'
-NeoBundle 'Shougo/unite.vim'
+if has('nvim')
+  NeoBundle 'Shougo/deoplete.nvim'
+else
+  NeoBundle 'Valloric/YouCompleteMe', {
+        \ 'build': {
+        \     'unix': './install.sh --system-boost'
+        \   }
+        \ }
+endif
+NeoBundle 'ternjs/tern_for_vim'
+" NeoBundle 'Shougo/unite.vim' replaced by denite
+NeoBundle 'Shougo/denite.nvim'
 NeoBundle 'vim-scripts/vcscommand.vim'
 NeoBundle 'tpope/vim-abolish'
 " NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'othree/yajs.vim'
 NeoBundle 'bb:ludovicchabant/vim-lawrencium', {'type': 'hg'}
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'Shougo/vimshell.vim'
 NeoBundle 'mhinz/vim-signify'
 NeoBundle 'tpope/vim-surround'
 " NeoBundle 'trrowpope/vim-sleuth'
-NeoBundle 'duganchen/vim-soy'
 NeoBundle 'mhinz/vim-startify'
 NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'nelstrom/vim-visual-star-search'
-NeoBundle 'othree/xml.vim'
 NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'ddrscott/vim-side-search'
 NeoBundle 'haya14busa/vim-asterisk'
 NeoBundle 'bb:ZyX_I/frawor', {'type': 'hg'}
 NeoBundle 'bb:ZyX_I/ansi_esc_echo', {'type': 'hg'}
@@ -77,6 +82,8 @@ NeoBundle 'chrisbra/vim-diff-enhanced'
 NeoBundle 'manicmaniac/betterga'
 NeoBundle 'blueyed/vim-diminactive'
 NeoBundle 'luochen1990/rainbow'
+NeoBundle 'christoomey/vim-sort-motion'
+NeoBundle 'valloric/MatchTagAlways'
 
 " HTTP
 NeoBundle 'aquach/vim-http-client'
@@ -118,6 +125,7 @@ let g:syntastic_mode_map = { 'mode': 'active',
 
 " syntastic checkers
 let g:syntastic_javascript_checkers = ['eslint', 'jshint']
+let g:syntastic_html_checkers = ['eslint']
 
 " python-mode, jedi
 let g:jedi#show_call_signatures = 1
@@ -137,6 +145,9 @@ let g:jedi#popup_select_first = 0
 " let g:neocomplete#sources#syntax#min_keyword_length = 3
 " let g:neocomplete#enable_auto_select = 1
 
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
 " inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 " inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " inoremap <expr><C-y> neocomplete#close_popup()
@@ -154,6 +165,10 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+
+" sidesearch
+cabbrev SS SideSearch
+nnoremap <Leader>ss :SideSearch <C-r><C-w><CR> | wincmd p
 
 " vim-asterisk
 map *   <Plug>(asterisk-*)
@@ -327,7 +342,11 @@ set shiftwidth=2  " 2 space az autoindentnel
 set showmatch     " zaro zarojelhez megmutatja a parjat
 set nostartofline " ugrasoknal ne menjen a sor elejere
 
-set foldmethod=marker " folding bekapcsolasa
+set foldenable " folding bekapcsolasa
+set foldlevelstart=10
+set foldnestmax=10
+set foldmethod=indent
+nnoremap <Backspace> za
 
 set autoindent    " always set autoindenting on
 set si            " smartindent
@@ -359,6 +378,7 @@ set textwidth=0
 set so=5          " 5 lines of scope
 set vb            " visual bell
 set lz            " lazy redraw
+set hidden        " allow switching from unsaved changes
 set completeopt=menu " don't need python docstrings
 set clipboard=unnamed " use the system clipboard
 set title
@@ -397,6 +417,16 @@ set bk
 " cursor
 set cursorline
 set cursorcolumn
+
+" relative line numbering
+set number
+set relativenumber
+
+" cursor movement for broken lines
+noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
+noremap <silent> <expr> <DOWN> (v:count == 0 ? 'gj' : 'j')
+noremap <silent> <expr> <UP> (v:count == 0 ? 'gk' : 'k')
 
 if has("gui_running")
   set nu
@@ -532,6 +562,12 @@ augroup encrypted
   autocmd BufWritePost,FileWritePost  *.gpg,*.asc u
 augroup END
 
+" don't switch to unlisted buffers
+augroup qf
+  autocmd!
+  autocmd FileType qf set nobuflisted
+augroup END
+
 " python
 function! RePa_py()
   setlocal tw=0 sw=4 ts=4 sta et sts=4 ai
@@ -581,7 +617,7 @@ map <C-K> <C-W>k<uparrow>
 map <C-H> <C-W>h<leftarrow>
 map <C-L> <C-W>l<rightarrow>
 
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <F5> :MundoToggle<CR>
 
 " funkciogombok
 map <F1> <Plug>TMiniBufExplorer
@@ -611,13 +647,13 @@ imap <F4> <ESC>:bn!<cr>a
 nnoremap <C-F6> mzggg?G'z
 inoremap <C-F6> <ESC>mzggg?G'z
 
-" command-t
-" nnoremap <F7> :CommandT<cr>
-" nnoremap <S-F7> :CommandTBuffer<cr>
-nnoremap <F7> :CtrlPMixed<cr>
-nnoremap <S-F7> :CtrlP<cr>
-nnoremap <C-F7> :CtrlPMRUFiles<cr>
-nnoremap <leader>p :CtrlPMixed<cr>
+" command-t / ctrl-p / fzf
+" nnoremap <F7> :CtrlPMixed<cr>
+" nnoremap <S-F7> :CtrlP<cr>
+" nnoremap <C-F7> :CtrlPMRUFiles<cr>
+" nnoremap <leader>p :CtrlPMixed<cr>
+
+nnoremap <F7> :FZF<cr>
 
 " setting the status line
 
