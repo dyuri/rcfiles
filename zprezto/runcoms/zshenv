@@ -20,9 +20,9 @@ export BROWSER=google-chrome
 # Editors
 #
 
-export EDITOR='vim'
+export EDITOR='nvim'
 export WINEDITOR='gvim'
-export VISUAL='vim'
+export VISUAL='nvim'
 export PAGER='less'
 
 #
@@ -49,15 +49,11 @@ cdpath=(
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  /opt/repa/bin
-  /opt/java/bin
-  /opt/node/bi
+  $path
   $HOME/bin
-  $HOME/.gem/ruby/2.1.0/bin
   /usr/sbin
   /usr/local/{bin,sbin}
   /home/dyuri/.tmuxifier/bin
-  $path
 )
 
 #
@@ -109,7 +105,7 @@ export PYTHONPATH=/opt/django/lib/python/site-packages:/opt/python/lib/python:/o
 export PYTHONSTARTUP=~/.pythonrc
 
 export WORKON_HOME=/mnt/nagy/django/venv
-source /usr/bin/virtualenvwrapper.sh
+# source /usr/bin/virtualenvwrapper.sh
 
 #
 # Ssh Agent

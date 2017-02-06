@@ -4,9 +4,16 @@
 xkbcomp ~/config/repa.xkb $DISPLAY
 xsetroot -cursor_name left_ptr
 
+# X resources
+xrdb ~/.Xdefaults
+
 # parcellite &
 
-blueshift --configurations config/blueshift.conf &
+# blueshift --configurations config/blueshift.conf &
+redshift-gtk &
+
+# logitech egerekhez
+# solaar &
 
 /usr/bin/pulseaudio --start &
 
@@ -16,7 +23,7 @@ wmname LG3D
 /usr/bin/galileo --config ~/config/fitbit.conf daemon &
 
 # background
-# feh --bg-scale ~/backgrounds/hatter.jpg
+feh --bg-scale ~/backgrounds/hatter.jpg
 
-# exec /usr/bin/qtile
-exec /usr/bin/enlightenment_start
+exec /usr/bin/qtile
+# exec /usr/bin/enlightenment_start

@@ -3,6 +3,9 @@
     "browser": true,
     "node": true
   },
+  "plugins": [
+    "html"
+  ],
   "globals": {
     "$": true,
     "_": true

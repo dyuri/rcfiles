@@ -14,8 +14,6 @@ URxvt.dynamicColors:on
 URxvt.highlightSelection:true
 URxvt.eightBitInput:true
 URxvt.tintColor:#102018
-URxvt.background:#222328
-URxvt.foreground:#60e080
 URxvt.fading:25
 URxvt.scrollBar:false
 URxvt.internalBorder:0
@@ -31,32 +29,34 @@ URxvt.secondaryScroll: true
 URxvt.urlLauncher:firefox
 !URxvt.perl-ext:mark-urls
 
-!colors
-URxvt*colorBD:  #dddddd
-!black
-URxvt*color0:   #111111
-URxvt*color8:   #444444
-!red
-URxvt*color1:   #cc3333
-URxvt*color9:   #ee1111
-!green
-URxvt*color2:   #33cc33
-URxvt*color10:  #11ee11
-!yellow
-URxvt*color3:   #cccc33
-URxvt*color11:  #eeee11
-!blue
-URxvt*color4:   #3333cc
-URxvt*color12:  #1111ee
-!magenta
-URxvt*color5:   #cc33cc
-URxvt*color13:  #ee11ee
-!cyan
-URxvt*color6:   #33cccc
-URxvt*color14:  #11eeee
-!white
-URxvt*color7:   #cccccc
-URxvt*color15:  #eeeeee
+! Molokai theme
+URxvt*background: #101010
+URxvt*foreground: #d0d0d0
+URxvt*color0: #101010
+URxvt*color1: #960050
+URxvt*color2: #66aa11
+URxvt*color3: #c47f2c
+URxvt*color4: #30309b
+URxvt*color5: #7e40a5
+URxvt*color6: #3579a8
+URxvt*color7: #9999aa
+URxvt*color8: #303030
+URxvt*color9: #ff0090
+URxvt*color10: #80ff00
+URxvt*color11: #ffba68
+URxvt*color12: #5f5fee
+URxvt*color13: #bb88dd
+URxvt*color14: #4eb4fa
+URxvt*color15: #d0d0d0
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #002b37, #002b37, #003642
+rofi.color-normal: #002b37, #819396, #003643, #008ed4, #ffffff
+rofi.color-active: #002b37, #008ed4, #003643, #008ed4, #66c6ff
+rofi.color-urgent: #002b37, #da4281, #003643, #008ed4, #890661
 
 !keysyms
 URxvt.keysym.M-Down:        \033[1;3B
