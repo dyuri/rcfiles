@@ -200,8 +200,8 @@ keys = [
         [mod], "Return",
         lazy.spawn(
             "/usr/bin/urxvt"
-            " -fn 'xft:Meslo\ LG\ S\ DZ\ for\ Powerline:pixelsize=13:antialias=true:hinting=true'"
-            " -fb 'xft:Meslo\ LG\ S\ DZ\ for\ Powerline:bold:pixelsize=13:antialias=true:hinting=true'"
+            " -fn 'xft:MesloLGS\ Nerd\ Font:pixelsize=13:antialias=true:hinting=true'"
+            " -fb 'xft:MesloLGS\ Nerd\ Font:bold:pixelsize=13:antialias=true:hinting=true'"
         )
     ),
     Key(

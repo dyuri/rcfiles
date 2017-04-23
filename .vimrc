@@ -85,19 +85,22 @@ NeoBundle 'luochen1990/rainbow'
 NeoBundle 'christoomey/vim-sort-motion'
 NeoBundle 'valloric/MatchTagAlways'
 
-" HTTP
-NeoBundle 'aquach/vim-http-client'
+" Coding general
+" NeoBundle "scrooloose/syntastic"
+NeoBundle 'w0rp/ale'
 
 " Python
 NeoBundle "davidhalter/jedi-vim"
 NeoBundle 'klen/python-mode'
-NeoBundle "scrooloose/syntastic"
 NeoBundle "majutsushi/tagbar"
 
 " Color
 NeoBundle "tomasr/molokai"
 NeoBundle "freeo/vim-kalisi"
 NeoBundle "w0ng/vim-hybrid"
+
+" DevIcons
+NeoBundle 'ryanoasis/vim-devicons'
 
 call neobundle#end()
 
@@ -330,7 +333,7 @@ endif
 colorscheme molokai
 
 if has("gui_running")
-  set guifont=Meslo\ LG\ S\ for\ Powerline\ 10
+  set guifont=MesloLGS\ Nerd\ Font\ 10
 endif
 
 " allow backspacing over everything in insert mode
@@ -458,6 +461,10 @@ let g:airline#extensions#eclim#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#virtualenv#enabled = 1
+
+" airline + nerd font
+"let g:airline_left_sep = "\uE0C6"
+"let g:airline_right_sep = "\uE0C7"
 
 " Signify
 let g:signify_vcs_list = [ 'git', 'hg' ]
