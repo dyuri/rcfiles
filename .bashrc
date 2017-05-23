@@ -43,3 +43,5 @@ export WINEDITOR=/usr/bin/gvim
 alias vi='/usr/bin/gvim'
 alias gvim='/usr/bin/gvim'
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
