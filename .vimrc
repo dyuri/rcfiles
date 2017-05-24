@@ -660,7 +660,14 @@ inoremap <C-F6> <ESC>mzggg?G'z
 " nnoremap <C-F7> :CtrlPMRUFiles<cr>
 " nnoremap <leader>p :CtrlPMixed<cr>
 
+" fzf
+
+let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+let g:fzf_buffers_jump = 1
 nnoremap <F7> :FZF<cr>
+nnoremap <S-F7> :GFiles<cr>
+nnoremap <F19> :GFiles<cr>
 
 " setting the status line
 
