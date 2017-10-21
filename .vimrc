@@ -63,7 +63,7 @@ NeoBundle 'ternjs/tern_for_vim'
 NeoBundle 'Shougo/denite.nvim'
 NeoBundle 'vim-scripts/vcscommand.vim'
 NeoBundle 'tpope/vim-abolish'
-" NeoBundle 'pangloss/vim-javascript'
+" NeoBundle 'pangloss/vim-javascript' " replaced by polyglot
 NeoBundle 'othree/yajs.vim'
 NeoBundle 'bb:ludovicchabant/vim-lawrencium', {'type': 'hg'}
 NeoBundle 'mhinz/vim-signify'
@@ -88,6 +88,7 @@ NeoBundle 'valloric/MatchTagAlways'
 " Coding general
 " NeoBundle "scrooloose/syntastic"
 NeoBundle 'w0rp/ale'
+NeoBundle 'sbdchd/neoformat'
 
 " Python
 NeoBundle "davidhalter/jedi-vim"
@@ -96,6 +97,7 @@ NeoBundle "majutsushi/tagbar"
 
 " Color
 NeoBundle "tomasr/molokai"
+NeoBundle "rakr/vim-one"
 NeoBundle "freeo/vim-kalisi"
 NeoBundle "w0ng/vim-hybrid"
 
@@ -129,6 +131,9 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " syntastic checkers
 let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 let g:syntastic_html_checkers = ['eslint']
+
+" no jsx by default
+let g:jsx_ext_required=1
 
 " python-mode, jedi
 let g:jedi#show_call_signatures = 1
@@ -331,6 +336,7 @@ endif
 "   colorscheme repa
 " endif
 colorscheme molokai
+set background=dark
 
 if has("gui_running")
   set guifont=MesloLGS\ Nerd\ Font\ 10
@@ -666,6 +672,7 @@ let g:fzf_layout = { 'down': '~40%' }
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_buffers_jump = 1
 nnoremap <F7> :FZF<cr>
+nnoremap ; :Buffers<CR>
 nnoremap <S-F7> :GFiles<cr>
 nnoremap <F19> :GFiles<cr>
 
