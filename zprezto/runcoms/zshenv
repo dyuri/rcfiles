@@ -33,6 +33,28 @@ if [[ -z "$LANG" ]]; then
   export LANG='en_US.UTF-8'
 fi
 
+# 
+# Java
+#
+
+export JDK_HOME=/mnt/nagy/jdk
+
+#
+# Go
+#
+#
+export GOPATH=~/egyeb/prog/go
+
+#
+# Python
+#
+
+export PYTHONPATH=/opt/django/lib/python/site-packages:/opt/python/lib/python:/opt/python/lib/python/site-packages:/opt/python:$PYTHONPATH
+export PYTHONSTARTUP=~/.pythonrc
+
+export WORKON_HOME=/mnt/nagy/django/venv
+# source /usr/bin/virtualenvwrapper.sh
+
 #
 # Paths
 #
@@ -54,6 +76,7 @@ path=(
   /usr/sbin
   /usr/local/{bin,sbin}
   /home/dyuri/.tmuxifier/bin
+  $GOPATH/bin
 )
 
 #
@@ -90,22 +113,6 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
-
-# 
-# Java
-#
-
-export JDK_HOME=/mnt/nagy/jdk
-
-#
-# Python
-#
-
-export PYTHONPATH=/opt/django/lib/python/site-packages:/opt/python/lib/python:/opt/python/lib/python/site-packages:/opt/python:$PYTHONPATH
-export PYTHONSTARTUP=~/.pythonrc
-
-export WORKON_HOME=/mnt/nagy/django/venv
-# source /usr/bin/virtualenvwrapper.sh
 
 #
 # Ssh Agent

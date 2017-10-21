@@ -65,7 +65,6 @@ ssh() {
 alias ls="ls ${LS_OPTIONS}"
 alias ll='ls -la'
 alias rm="nocorrect rm"
-alias rvim='/usr/bin/gvim --remote-silent'
 alias jsonpp='python -mjson.tool'
 #alias search='find . -print0 | xargs -0 -- grep'
 #alias search=ack
@@ -73,6 +72,9 @@ alias search=ag
 alias vless='/usr/share/vim/vim??/macros/less.sh'
 alias bible='shuf -n 1 ~/txt/bible.txt'
 alias grep='grep --color'
+alias vim=nvim
+alias gtop=glances
+eval $(thefuck --alias)
 
 #
 # tmuxifier
@@ -92,3 +94,7 @@ setopt interactivecomments
 # fzf
 export FZF_DEFAULT_COMMAND='ag -g ""'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

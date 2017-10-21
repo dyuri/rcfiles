@@ -117,7 +117,7 @@
     "no-trailing-spaces": 1,
     "no-multiple-empty-lines": 0,
     "no-underscore-dangle": 0,
-    "no-extra-parens": 1,
+    "no-extra-parens": 0,
     "one-var": 0,
     "padded-blocks": 0,
     "quotes": 0,
