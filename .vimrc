@@ -91,8 +91,9 @@ NeoBundle 'w0rp/ale'
 NeoBundle 'sbdchd/neoformat'
 
 " Python
-NeoBundle "davidhalter/jedi-vim"
-NeoBundle 'klen/python-mode'
+" NeoBundle "davidhalter/jedi-vim"
+NeoBundle "zchee/deoplete-jedi"
+" NeoBundle 'klen/python-mode'
 NeoBundle "majutsushi/tagbar"
 
 " Color
@@ -145,6 +146,7 @@ let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "<leader>r"
 let g:jedi#popup_on_dot = 0
 let g:jedi#popup_select_first = 0
+" let g:pymode_rope = 0
 
 " neocopmlete
 " let g:acp_enableAtStartup = 0
@@ -424,8 +426,8 @@ set undodir=~/backup/undo//,~/tmp//,/var/tmp//,/tmp//,.
 set bk
 
 " cursor
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 
 " relative line numbering
 set number
@@ -484,7 +486,7 @@ set noshowmode
 let g:NERDTreeIgnore=['\.swp$','\.pyc$','\.pyo$']
 
 " omnicomplete
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+" autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS

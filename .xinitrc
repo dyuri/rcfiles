@@ -20,7 +20,7 @@ redshift-gtk &
 wmname LG3D
 
 # fitbit sync
-/usr/bin/galileo --config ~/config/fitbit.conf daemon &
+#/usr/bin/galileo --config ~/config/fitbit.conf daemon &
 
 # background
 feh --bg-scale ~/backgrounds/hatter.jpg
