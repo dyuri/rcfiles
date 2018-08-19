@@ -1,1 +1,3 @@
 https://github.com/ryanoasis/nerd-fonts
+
+ttf-ancient-fonts # emoji in console
