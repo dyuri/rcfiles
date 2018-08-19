@@ -105,6 +105,9 @@ NeoBundle "w0ng/vim-hybrid"
 " DevIcons
 NeoBundle 'ryanoasis/vim-devicons'
 
+" html``
+NeoBundle 'jonsmithers/vim-html-template-literals'
+
 call neobundle#end()
 
 filetype plugin indent on
@@ -352,6 +355,7 @@ set backspace=indent,eol,start
 set shiftwidth=2  " 2 space az autoindentnel
 set showmatch     " zaro zarojelhez megmutatja a parjat
 set nostartofline " ugrasoknal ne menjen a sor elejere
+set breakindent   " breaked lines use the same indent level as the original
 
 set foldenable " folding bekapcsolasa
 set foldlevelstart=10
