@@ -23,7 +23,8 @@ wmname LG3D
 #/usr/bin/galileo --config ~/config/fitbit.conf daemon &
 
 # background
-feh --bg-scale ~/backgrounds/hatter.jpg
+feh --bg-scale ~/backgrounds/hatter.png
 
-exec /usr/bin/qtile
+exec /usr/bin/i3
+# exec /usr/bin/qtile
 # exec /usr/bin/enlightenment_start
