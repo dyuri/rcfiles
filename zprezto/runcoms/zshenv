@@ -24,6 +24,7 @@ export EDITOR='nvim'
 export WINEDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
+export TERMINAL='termite'
 
 #
 # Language
@@ -71,8 +72,8 @@ cdpath=(
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  $path
   $HOME/bin
+  $path
   /usr/sbin
   /usr/local/{bin,sbin}
   /home/dyuri/.tmuxifier/bin
