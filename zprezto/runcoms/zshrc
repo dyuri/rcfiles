@@ -59,11 +59,20 @@ ssh() {
 }
 
 #
+# window title
+#
+
+precmd () {
+  TITLE=$history[$(($HISTCMD-1))]
+  print -Pn "\e]0;$TITLE\a"
+}
+
+#
 # Aliases
 #
 
 alias ls="ls ${LS_OPTIONS}"
-alias ll='ls -la'
+alias ll='exa -la --git --classify --group-directories-first'
 alias rm="nocorrect rm"
 alias jsonpp='python -mjson.tool'
 #alias search='find . -print0 | xargs -0 -- grep'
@@ -75,7 +84,10 @@ alias grep='grep --color'
 alias vim=nvim
 alias gtop=glances
 alias lg=lazygit
-eval $(thefuck --alias)
+alias cat=bat
+alias ping='prettyping --nolegend'
+alias fzvim='vim `fzf`'
+# eval $(thefuck --alias)
 
 #
 # tmuxifier
@@ -97,7 +109,9 @@ export TERM=xterm-256color
 
 # fzf
 # export FZF_DEFAULT_COMMAND='ag -g ""'
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*" --glob "!.hg/*"'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --no-ignore-vcs --hidden --follow --glob "!.git/*" --glob "!.hg/*"'
+export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :100 {}'"
+. /etc/profile.d/fzf-extras.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export NVM_DIR="$HOME/.nvm"

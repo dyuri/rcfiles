@@ -117,6 +117,7 @@ set $ws9 "9: "
 set $ws10 "10: "
 set $ws11 "11: "
 set $ws12 "12: "
+set $ws13 "13: Game"
 
 # switch to workspace
 bindsym $mod+0 workspace $ws0
@@ -192,6 +193,8 @@ assign [class="Google-chrome"] $ws9
 assign [class=".*(F|f)irefox.*"] $ws10
 assign [class="Steam"] $ws11
 assign [class="Gimp"] $ws12
+assign [class="Wine"] $ws13
+assign [class="Awesomenauts.bin.x86"] $ws13
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
