@@ -95,6 +95,10 @@ NeoBundle 'sbdchd/neoformat'
 NeoBundle "zchee/deoplete-jedi"
 " NeoBundle 'klen/python-mode'
 NeoBundle "majutsushi/tagbar"
+NeoBundle "ambv/black"
+
+" css colors
+NeoBundle "RRethy/vim-hexokinase"
 
 " Color
 NeoBundle "tomasr/molokai"
@@ -126,6 +130,11 @@ let g:jsbeautify = {'indent_size': 2, 'indent_char': ' '}
 let g:htmlbeautify = {'indent_size': 2, 'indent_char': ' ', 'brace_style': 'expand', 'unformatted': ['a', 'sub', 'sup', 'b', 'i', 'u', 'em', 'cite', 'strong']}
 let g:cssbeautify = {'indent_size': 2, 'indent_char': ' '}
 let g:jsbeautify_engine = 'node'
+
+" css colors
+let g:Hexokinase_highlighters = ['virtual']
+let g:Hexokinase_refreshEvents = ['BufWritePost']
+let g:Hexokinase_ftAutoload = ['css', 'html', 'js']
 
 " syntastic - disable python (python-mode)
 let g:syntastic_mode_map = { 'mode': 'active',
@@ -342,6 +351,7 @@ endif
 " endif
 colorscheme molokai
 set background=dark
+set tgc
 
 if has("gui_running")
   set guifont=MesloLGS\ Nerd\ Font\ 10
@@ -384,7 +394,7 @@ set ls=2          " enable the status
 
 set et            " expandt tab
 set mousemodel=extend
-set mouse=a
+set mouse=v
 set ch=2
 set tabstop=2
 set softtabstop=2

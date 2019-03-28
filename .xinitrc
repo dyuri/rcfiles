@@ -3,6 +3,7 @@
 # xmodmap ~/config/.xmodmap.capsoff 2> /dev/null
 xkbcomp ~/config/repa.xkb $DISPLAY
 xsetroot -cursor_name left_ptr
+xset +dpms
 
 # X resources
 xrdb ~/.Xdefaults
@@ -21,6 +22,12 @@ wmname LG3D
 
 # fitbit sync
 #/usr/bin/galileo --config ~/config/fitbit.conf daemon &
+
+# compositor
+compton -b
+
+# dunst - desktop nitifications
+dunst &
 
 # background
 feh --bg-scale ~/backgrounds/hatter.png

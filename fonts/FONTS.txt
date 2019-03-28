@@ -1,4 +1,5 @@
 https://github.com/ryanoasis/nerd-fonts
 
-ttf-ancient-fonts # emoji in console
+noto-font-emoji # noto emoji font by google
 ttf-twemoji-color # color emojis
+ttf-ancient-fonts # emoji in console
