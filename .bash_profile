@@ -10,3 +10,5 @@ fi
 /usr/bin/naptar
 
 . /home/dyuri/.profabevjava
+
+export PATH="$HOME/.poetry/bin:$PATH"

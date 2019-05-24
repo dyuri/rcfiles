@@ -84,6 +84,7 @@ NeoBundle 'blueyed/vim-diminactive'
 NeoBundle 'luochen1990/rainbow'
 NeoBundle 'christoomey/vim-sort-motion'
 NeoBundle 'valloric/MatchTagAlways'
+NeoBundle 'AndrewRadev/tagalong.vim'
 
 " Coding general
 " NeoBundle "scrooloose/syntastic"
@@ -96,6 +97,7 @@ NeoBundle "zchee/deoplete-jedi"
 " NeoBundle 'klen/python-mode'
 NeoBundle "majutsushi/tagbar"
 NeoBundle "ambv/black"
+NeoBundle "numirias/semshi", {'do': ':UpdateRemotePlugins'}
 
 " css colors
 NeoBundle "RRethy/vim-hexokinase"
