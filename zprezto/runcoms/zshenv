@@ -81,6 +81,9 @@ path=(
   $GOPATH/bin
 )
 
+# ZSH function path
+fpath+=~/config/zsh
+
 #
 # Less
 #
