@@ -74,4 +74,6 @@ alias fzvim='vim `fzf`'
 # theme settings
 set -g theme_nerd_fonts yes
 set -g theme_display_hg yes
+set -g theme_title_display_process yes
+
 

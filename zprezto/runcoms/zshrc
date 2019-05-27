@@ -95,6 +95,14 @@ alias fzvim='vim `fzf`'
 eval "$(tmuxifier init -)"
 
 #
+# Ssh Agent
+#
+
+# if [ -e ~/.sshagent ]; then
+#   . ~/.sshagent > /dev/null
+# fi
+
+#
 # Prompt
 #
 
@@ -117,3 +125,6 @@ export FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --co
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" > /dev/null # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# fish
+exec /usr/bin/fish

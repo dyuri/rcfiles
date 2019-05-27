@@ -119,14 +119,6 @@ if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
 
-#
-# Ssh Agent
-#
-
-if [ -e ~/.sshagent ]; then
-  . ~/.sshagent > /dev/null
-fi
-
 # 
 # Audio
 #
