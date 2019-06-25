@@ -21,3 +21,18 @@
 	url = https://github.com/davidjrice/prezto_powerline.git
 [submodule "modules/prompt/functions/pure"]
 	url = https://github.com/sindresorhus/pure.git
+[submodule "modules/autosuggestions/external"]
+	active = true
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "modules/fasd/external"]
+	active = true
+	url = https://github.com/clvv/fasd.git
+[submodule "modules/prompt/external/async"]
+	active = true
+	url = https://github.com/mafredri/zsh-async.git
+[submodule "modules/prompt/external/powerlevel10k"]
+	active = true
+	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "modules/prompt/external/powerlevel9k"]
+	active = true
+	url = https://github.com/bhilburn/powerlevel9k.git

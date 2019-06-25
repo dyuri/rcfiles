@@ -35,13 +35,10 @@ case $TERM in
     ;;
 esac
 
-export SDL_AUDIODRIVER="alsa"
-export AUDIODEV="default"
-export EDITOR=/usr/bin/vim
-export WINEDITOR=/usr/bin/gvim
-
-alias vi='/usr/bin/gvim'
-alias gvim='/usr/bin/gvim'
+# export SDL_AUDIODRIVER="alsa"
+# export AUDIODEV="default"
+export EDITOR=nvim
+export WINEDITOR=nvim
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -1,0 +1,40 @@
+# xontribs
+# - bashisms
+# - xontirb-readable-traceback
+# - https://github.com/laloch/xontrib-fzf-widgets
+# - xontrib-ssh-agent
+# - xontrib-pyenv
+# - xontrib-repa-prompt
+
+$PROMPT_TOOLKIT_COLOR_DEPTH='DEPTH_24_BIT'
+$XONSH_COLOR_STYLE='monokai'
+$XONSH_SHOW_TRACEBACK=False
+$VC_BRANCH_TIMEOUT=.2
+
+xontrib load bashisms
+xontrib load repa_prompt
+xontrib load readable-traceback
+xontrib load ssh_agent
+xontrib load pyenv
+
+xontrib load fzf-widgets
+$fzf_history_binding = Keys.ControlR
+$fzf_ssh_binding = Keys.ControlS
+$fzf_file_binding = Keys.ControlT
+
+# env
+$FZF_DEFAULT_COMMAND='rg --files --no-ignore --no-ignore-vcs --hidden --follow --glob "!.git/*" --glob "!.hg/*"'
+$FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :100 {}'"
+
+# aliases
+aliases['ls']="ls --color=auto -F -b -T 0"
+aliases['ll']='exa -la --git --classify --group-directories-first'
+aliases['jsonpp']='python -mjson.tool'
+aliases['bible']='shuf -n 1 ~/txt/bible.txt'
+aliases['vim']='nvim'
+aliases['gtop']='glances e>/dev/null'
+aliases['lg']='lazygit'
+aliases['cat']='bat'
+aliases['ping']='prettyping --nolegend'
+aliases['fzvim']='vim `fzf`'
+

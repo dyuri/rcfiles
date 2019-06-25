@@ -6,7 +6,7 @@
 #
 
 # Ensure that a non-login, non-interactive shell has a defined environment.
-if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
+if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
@@ -56,6 +56,9 @@ export PYTHONSTARTUP=~/.pythonrc
 export WORKON_HOME=/mnt/nagy/django/venv
 # source /usr/bin/virtualenvwrapper.sh
 
+export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+
 #
 # Paths
 #
@@ -79,6 +82,7 @@ path=(
   /usr/local/{bin,sbin}
   /home/dyuri/.tmuxifier/bin
   $GOPATH/bin
+  $PYENV_ROOT/bin
 )
 
 # ZSH function path
