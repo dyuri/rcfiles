@@ -1,9 +1,9 @@
-f2a826e963f06a204dc0e09c05fc3e5419799f52		branch 'master' of https://github.com/sorin-ionescu/prezto
+1d58546406bc8f13b910141265f67dbe2f08bd5f		branch 'master' of https://github.com/sorin-ionescu/prezto
+3524cc20f08a6b662c2a983743ec02adbcf877a2	not-for-merge	branch 'belak/zdebuglog' of https://github.com/sorin-ionescu/prezto
 d541eef923c24bf0983465c57c93504db3476985	not-for-merge	branch 'issue/231-installer' of https://github.com/sorin-ionescu/prezto
 5be4a78b55acba1fbfcb6a7767d7d0743623660d	not-for-merge	branch 'issue/276-readme-to-man-page' of https://github.com/sorin-ionescu/prezto
 113f6763c22c31dff15a7f776c991596e150e4a1	not-for-merge	branch 'issue/306-default-zstyle-function' of https://github.com/sorin-ionescu/prezto
 2d1881c4660d012a0cb0c2c98a4a4cdf07f5ba5c	not-for-merge	branch 'issue/656-readd-z' of https://github.com/sorin-ionescu/prezto
-98f194595ffad322a6095f68034254e8f8801102	not-for-merge	branch 'module/autosuggestions' of https://github.com/sorin-ionescu/prezto
 5f675b0c670b5d2c24c79378962b78c391ec10a9	not-for-merge	branch 'module/completion' of https://github.com/sorin-ionescu/prezto
 729fd07ab03b0b9d070c63d6f4972960103294ba	not-for-merge	branch 'module/git/hub' of https://github.com/sorin-ionescu/prezto
 5ecbb49630d8a9b74a66aa31d9f79d69bd355ec0	not-for-merge	branch 'module/update' of https://github.com/sorin-ionescu/prezto

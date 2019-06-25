@@ -5,9 +5,7 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# Print the message.
-echo Bye.
-
+# Execute code only if STDERR is bound to a TTY.
 if [ -e ~/txt/bible.txt ]; then
   shuf -n 1 ~/txt/bible.txt
 fi

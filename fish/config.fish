@@ -23,7 +23,7 @@ set PYTHONSTARTUP $HOME/.pythonrc
 set WORKON_HOME '/mnt/nagy/django/venv'
 
 # path
-# set CDPATH $CDPATH
+set CDPATH . $CDPATH
 set PATH $HOME/bin $HOME/.local/bin $PATH /usr/sbin /usr/local/bin /usr/local/sbin $HOME/.tmuxifier/bin $GOPATH/bin
 
 # less
@@ -42,7 +42,7 @@ set SDL_AUDIODRIVER pulse
 set AUDIODEV default
 
 # terminal
-set TERM xterm-256color
+# set TERM xterm-256color
 set FZF_DEFAULT_COMMAND 'rg --files --no-ignore --no-ignore-vcs --hidden --follow --glob "!.git/*" --glob "!.hg/*"'
 set FZF_DEFAULT_OPTS "--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :100 {}'"
 
@@ -51,6 +51,7 @@ set NVM_DIR $HOME/.nvm
 # TODO nvm
 
 # aliases
+# TODO => functions
 alias ls="ls $LS_OPTIONS"
 alias ll="exa -la --git --classify --group-directories-first"
 alias jsonpp="python -mjson.tool"
@@ -71,9 +72,15 @@ alias fzvim='vim `fzf`'
 # TODO tmux check
 #
 
+#
+# TODO check terminal -> linux?
+#
+
+# no path abbreviations
+set fish_prompt_pwd_dir_length 0
+
 # theme settings
 set -g theme_nerd_fonts yes
 set -g theme_display_hg yes
 set -g theme_title_display_process yes
-
 

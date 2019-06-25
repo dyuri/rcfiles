@@ -1,9 +1,9 @@
 [options]
 font = MesloLGS Nerd Font Mono 10
-allow_bold = on
-cursor_blink = off
-fullscreen = off
-mouse_autohide = on
+allow_bold = true
+cursor_blink = false
+fullscreen = false
+mouse_autohide = true
 
 [colors]
 background = #0d0f01

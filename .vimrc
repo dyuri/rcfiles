@@ -353,7 +353,10 @@ endif
 " endif
 colorscheme molokai
 set background=dark
-set tgc
+" 24 bit / truecolor support needed
+if has("termguicolors")
+  set tgc
+endif
 
 if has("gui_running")
   set guifont=MesloLGS\ Nerd\ Font\ 10
@@ -507,6 +510,12 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+
+" xsh
+augroup xsh
+  au!
+  autocmd BufNewFile,BufRead *.xsh   set filetype=python
+augroup END
 
 let xml_use_xhtml = 1
 let xml_tag_completion_map = "<C-l>"
