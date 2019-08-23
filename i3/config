@@ -202,3 +202,12 @@ assign [class="Awesomenauts.bin.x86"] $ws13
 #         status_command i3blocks
 # }
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
+# dropdown
+exec --no-startup-id kitty --name dropdown &
+bindsym $mod+Down [instance="dropdown"] scratchpad show, move position center
+bindsym $mod+Up [instance="dropdown"] move scratchpad
+for_window [instance="dropdown"] floating enable, resize set 800 600, move scratchpad
+
+# i3wins
+bindsym $mod+Tab exec "i3wins -kb-row-down 'Down,Control+n,Alt+Tab' -kb-accept-entry '!Alt+Tab,!Alt_L,!Alt+Alt_L,Return'"

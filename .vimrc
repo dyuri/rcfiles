@@ -78,13 +78,13 @@ NeoBundle 'haya14busa/vim-asterisk'
 NeoBundle 'bb:ZyX_I/frawor', {'type': 'hg'}
 NeoBundle 'bb:ZyX_I/ansi_esc_echo', {'type': 'hg'}
 NeoBundle 'bb:ZyX_I/aurum', {'type': 'hg'}
-NeoBundle 'chrisbra/vim-diff-enhanced'
 NeoBundle 'manicmaniac/betterga'
 NeoBundle 'blueyed/vim-diminactive'
 NeoBundle 'luochen1990/rainbow'
 NeoBundle 'christoomey/vim-sort-motion'
 NeoBundle 'valloric/MatchTagAlways'
 NeoBundle 'AndrewRadev/tagalong.vim'
+NeoBundle 'Konfekt/vim-unicode-homoglyphs'
 
 " Coding general
 " NeoBundle "scrooloose/syntastic"
@@ -149,6 +149,9 @@ let g:syntastic_html_checkers = ['eslint']
 
 " no jsx by default
 let g:jsx_ext_required=1
+
+" set diffopt+=filler,internal,algorithm:histogram,indent-heuristic
+set diffopt+=filler,internal,algorithm:patience,indent-heuristic
 
 " python-mode, jedi
 let g:jedi#show_call_signatures = 1
@@ -692,6 +695,9 @@ inoremap <C-F6> <ESC>mzggg?G'z
 " nnoremap <S-F7> :CtrlP<cr>
 " nnoremap <C-F7> :CtrlPMRUFiles<cr>
 " nnoremap <leader>p :CtrlPMixed<cr>
+
+" unicode homoglyphs
+nmap zu <plug>(HighlightHomoglyphs)
 
 " fzf
 
