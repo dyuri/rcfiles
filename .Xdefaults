@@ -29,26 +29,6 @@ URxvt.secondaryScroll: true
 URxvt.urlLauncher:firefox
 !URxvt.perl-ext:mark-urls
 
-! Molokai theme
-!URxvt*background: #101010
-!URxvt*foreground: #d0d0d0
-!URxvt*color0: #101010
-!URxvt*color1: #960050
-!URxvt*color2: #66aa11
-!URxvt*color3: #c47f2c
-!URxvt*color4: #30309b
-!URxvt*color5: #7e40a5
-!URxvt*color6: #3579a8
-!URxvt*color7: #9999aa
-!URxvt*color8: #303030
-!URxvt*color9: #ff0090
-!URxvt*color10: #80ff00
-!URxvt*color11: #ffba68
-!URxvt*color12: #5f5fee
-!URxvt*color13: #bb88dd
-!URxvt*color14: #4eb4fa
-!URxvt*color15: #d0d0d0
-
 ! terminal.sexy
 URxvt*background: #1d1f21
 URxvt*foreground: #c5c8c6
@@ -70,15 +50,6 @@ URxvt*color13: #b294bb
 URxvt*color14: #8abeb7
 URxvt*color15: #c5c8c6
 
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-rofi.color-enabled: true
-rofi.color-window: #002b37, #002b37, #003642
-rofi.color-normal: #002b37, #819396, #003643, #008ed4, #ffffff
-rofi.color-active: #002b37, #008ed4, #003643, #008ed4, #66c6ff
-rofi.color-urgent: #002b37, #da4281, #003643, #008ed4, #890661
-
 !keysyms
 URxvt.keysym.M-Down:        \033[1;3B
 URxvt.keysym.M-Up:          \033[1;3A
@@ -88,3 +59,32 @@ URxvt.keysym.Control-Up:    \033[1;5A
 URxvt.keysym.Control-Down:  \033[1;5B
 URxvt.keysym.Control-Left:  \033[1;5D
 URxvt.keysym.Control-Right: \033[1;5C
+
+! -----
+#define repa_bg       #383031
+#define repa_bg_alt   #272021
+#define repa_fg 		  #56cbf9
+#define repa_pri      #70f8ba
+#define repa_sec      #3c6557
+#define repa_warn     #ea526f
+
+*repa-bg: 	    repa_bg
+*repa-bg-alt: 	repa_bg_alt
+*repa-fg: 		  repa_fg
+*repa-pri:    	repa_pri
+*repa-sec:    	repa_sec
+*repa-warn: 	  repa_warn
+
+! ------------------------------------------------------------------------------
+! ROFI
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: repa_bg, repa_sec,  repa_pri
+rofi.color-normal: repa_bg, repa_fg,   repa_bg_alt,  repa_sec, repa_pri
+rofi.color-active: repa_bg, repa_sec,  repa_bg_alt,  repa_sec, repa_pri
+rofi.color-urgent: repa_bg, repa_warn, repa_bg_alt,  repa_sec, repa_pri
+
+rofi.width: 50
+rofi.location: 0
+rofi.hide-scrollbar: true
+

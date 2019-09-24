@@ -23,10 +23,13 @@ wmname LG3D
 # fitbit sync
 #/usr/bin/galileo --config ~/config/fitbit.conf daemon &
 
+# screenshot
+flameshot &
+
 # compositor
 compton -b
 
-# dunst - desktop nitifications
+# dunst - desktop notifications
 dunst &
 
 # background

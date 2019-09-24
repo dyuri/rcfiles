@@ -24,7 +24,7 @@ export EDITOR='nvim'
 export WINEDITOR='nvim'
 export VISUAL='nvim'
 export PAGER='less'
-export TERMINAL='termite'
+export TERMINAL='kitty'
 
 #
 # Language

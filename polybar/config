@@ -52,11 +52,12 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = "Meslo LG S for Powerline:size=10;1"
-font-1 = "MesloLGS Nerd Font Mono:pixelsize=16;2"
+#font-0 = "Meslo LG S for Powerline:size=10;1"
+font-0 = "MesloLGS Nerd Font:pixelsize=10;1"
+font-1 = "MesloLGS Nerd Font:pixelsize=16;2"
 font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-3 = "Wuncon Siji:pixelsize=10;1"
-font-4 = "MesloLGS Nerd Font Mono:pixelsize=14;1"
+font-4 = "MesloLGS Nerd Font:pixelsize=14;1"
 
 modules-left = i3 xwindow
 modules-center =

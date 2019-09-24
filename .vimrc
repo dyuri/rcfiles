@@ -85,11 +85,13 @@ NeoBundle 'christoomey/vim-sort-motion'
 NeoBundle 'valloric/MatchTagAlways'
 NeoBundle 'AndrewRadev/tagalong.vim'
 NeoBundle 'Konfekt/vim-unicode-homoglyphs'
+NeoBundle 'https://git.danielmoch.com/vim-smartsplit.git'
 
 " Coding general
 " NeoBundle "scrooloose/syntastic"
 NeoBundle 'w0rp/ale'
 NeoBundle 'sbdchd/neoformat'
+NeoBundle 'AndrewRadev/splitjoin.vim'
 
 " Python
 " NeoBundle "davidhalter/jedi-vim"
