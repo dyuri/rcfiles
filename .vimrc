@@ -6,121 +6,113 @@ if has('vim_starting')
   set nocompatible               " Be iMproved
 
   " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 endif
 
-let neobundle_readme=expand('~/.vim/bundle/neobundle.vim/README.md')
+" ale
+" !!! issue with deoplete
+let g:ale_completion_enabled = 0
 
-if !filereadable(neobundle_readme)
-  echo "Installing NeoBundle..."
-  echo ""
-  silent !mkdir -p ~/.vim/bundle
-  silent !git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim/
+if dein#load_state('/home/dyuri/.cache/dein')
+  call dein#begin('/home/dyuri/.cache/dein')
+
+  " Let dein manage dein
+  call dein#add('/home/dyuri/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  " my plugins
+  call dein#add('Shougo/vimproc.vim', {'build': 'make'})
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('scrooloose/nerdcommenter')
+	call dein#add('tpope/vim-commentary')
+	call dein#add('tpope/vim-fugitive')
+	call dein#add('junegunn/fzf', {'build': './install', 'merged': 0})
+	call dein#add('junegunn/fzf.vim')
+	call dein#add('bling/vim-airline')
+	call dein#add('vim-airline/vim-airline-themes')
+	call dein#add('sheerun/vim-polyglot') " Check
+	call dein#add('mileszs/ack.vim')
+	call dein#add('ddrscott/vim-side-search')
+	call dein#add('hail2u/vim-css3-syntax')
+	call dein#add('mattn/emmet-vim')
+	call dein#add('simnalamburt/vim-mundo')
+	call dein#add('Shougo/deoplete.nvim')
+	"" NeoBundle 'Valloric/YouCompleteMe', {
+	""      \ 'build': {
+	""      \     'unix': './install.sh --system-boost'
+	""      \   }
+	""      \ }
+	"call dein#add('neoclide/coc.nvim', {'rev': 'release'}) " don't like
+	" CocInstall coc-html, coc-css, coc-python
+	call dein#add('ternjs/tern_for_vim')
+	call dein#add('Shougo/denite.nvim')
+	call dein#add('vim-scripts/vcscommand.vim')
+	call dein#add('tpope/vim-abolish')
+	"call dein#add('pangloss/vim-javascript' " replaced by polyglot)call dein#add('othree/yajs.vim')
+	"call dein#add('bolasblack/csslint.vim')
+	call dein#add('ludovicchabant/vim-lawrencium')
+	call dein#add('mhinz/vim-signify')
+	call dein#add('mhinz/vim-startify')
+	call dein#add('tpope/vim-unimpaired')
+	call dein#add('tpope/vim-surround')
+  call dein#add('nelstrom/vim-visual-star-search')
+	call dein#add('ddrscott/vim-side-search')
+	call dein#add('haya14busa/incsearch.vim')
+	call dein#add('haya14busa/vim-asterisk')
+	"call dein#add('chrisbra/vim-diff-enhanced')
+	call dein#add('manicmaniac/betterga')
+	call dein#add('blueyed/vim-diminactive')
+	call dein#add('luochen1990/rainbow')
+	call dein#add('JamshedVesuna/vim-markdown-preview')
+	call dein#add('christoomey/vim-sort-motion')
+	call dein#add('valloric/MatchTagAlways')
+	call dein#add('AndrewRadev/tagalong.vim')
+	call dein#add('Konfekt/vim-unicode-homoglyphs')
+	call dein#add('https://git.danielmoch.com/vim-smartsplit.git')
+
+	" General development
+	"call dein#add("scrooloose/syntastic")
+	call dein#add('dense-analysis/ale')
+	call dein#add('sbdchd/neoformat')
+	call dein#add('AndrewRadev/splitjoin.vim')
+
+	" Python
+	call dein#add("davidhalter/jedi-vim")
+  call dein#add("zchee/deoplete-jedi")
+	"call dein#add('klen/python-mode')
+	call dein#add("majutsushi/tagbar")
+	call dein#add("ambv/black")
+	call dein#add("numirias/semshi", {'do': ':UpdateRemotePlugins'})
+
+	" vue.js
+	call dein#add("posva/vim-vue")
+	"call dein#add("sekel/vim-vue-syntastic")
+
+	" polymer / lit
+	call dein#add("jonsmithers/vim-html-template-literals")
+
+	" css colors
+	call dein#add("RRethy/vim-hexokinase", {'build': 'make hexokinase'})
+
+	" postcss
+	call dein#add("stephenway/postcss.vim")
+
+	" Color
+	call dein#add('tomasr/molokai')
+	call dein#add("w0ng/vim-hybrid")
+
+	" devicons
+	call dein#add('ryanoasis/vim-devicons')
+		" end of my plugins
+ 
+  call dein#end()
+  call dein#save_state()
 endif
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-" Bundles:
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-NeoBundle 'Shougo/vimproc.vim', {
-      \ 'build' : {
-      \     'windows' : 'tools\\update-dll-mingw',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'tpope/vim-commentary'
-NeoBundle 'tpope/vim-fugitive'
-" NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
-NeoBundle 'junegunn/fzf.vim'
-NeoBundle 'bling/vim-airline'
-NeoBundle 'vim-airline/vim-airline-themes'
-NeoBundle 'sheerun/vim-polyglot' " Check
-" NeoBundle 'vim-scripts/CSApprox'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'mattn/emmet-vim'
-" NeoBundle 'bb:sjl/gundo.vim', {'type': 'hg'} " forked to mundo
-NeoBundle 'simnalamburt/vim-mundo'
-" NeoBundle 'Shougo/neocomplete.vim' " neovim has no if_lua
-if has('nvim')
-  NeoBundle 'Shougo/deoplete.nvim'
-else
-  NeoBundle 'Valloric/YouCompleteMe', {
-        \ 'build': {
-        \     'unix': './install.sh --system-boost'
-        \   }
-        \ }
+if dein#check_install()
+  call dein#install()
 endif
-NeoBundle 'ternjs/tern_for_vim'
-" NeoBundle 'Shougo/unite.vim' replaced by denite
-NeoBundle 'Shougo/denite.nvim'
-NeoBundle 'vim-scripts/vcscommand.vim'
-NeoBundle 'tpope/vim-abolish'
-" NeoBundle 'pangloss/vim-javascript' " replaced by polyglot
-NeoBundle 'othree/yajs.vim'
-NeoBundle 'bb:ludovicchabant/vim-lawrencium', {'type': 'hg'}
-NeoBundle 'mhinz/vim-signify'
-NeoBundle 'tpope/vim-surround'
-" NeoBundle 'trrowpope/vim-sleuth'
-NeoBundle 'mhinz/vim-startify'
-NeoBundle 'tpope/vim-unimpaired'
-NeoBundle 'nelstrom/vim-visual-star-search'
-NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'ddrscott/vim-side-search'
-NeoBundle 'haya14busa/vim-asterisk'
-NeoBundle 'bb:ZyX_I/frawor', {'type': 'hg'}
-NeoBundle 'bb:ZyX_I/ansi_esc_echo', {'type': 'hg'}
-NeoBundle 'bb:ZyX_I/aurum', {'type': 'hg'}
-NeoBundle 'manicmaniac/betterga'
-NeoBundle 'blueyed/vim-diminactive'
-NeoBundle 'luochen1990/rainbow'
-NeoBundle 'christoomey/vim-sort-motion'
-NeoBundle 'valloric/MatchTagAlways'
-NeoBundle 'AndrewRadev/tagalong.vim'
-NeoBundle 'Konfekt/vim-unicode-homoglyphs'
-NeoBundle 'https://git.danielmoch.com/vim-smartsplit.git'
-
-" Coding general
-" NeoBundle "scrooloose/syntastic"
-NeoBundle 'w0rp/ale'
-NeoBundle 'sbdchd/neoformat'
-NeoBundle 'AndrewRadev/splitjoin.vim'
-
-" Python
-" NeoBundle "davidhalter/jedi-vim"
-NeoBundle "zchee/deoplete-jedi"
-" NeoBundle 'klen/python-mode'
-NeoBundle "majutsushi/tagbar"
-NeoBundle "ambv/black"
-NeoBundle "numirias/semshi", {'do': ':UpdateRemotePlugins'}
-
-" css colors
-NeoBundle "RRethy/vim-hexokinase"
-
-" Color
-NeoBundle "tomasr/molokai"
-NeoBundle "rakr/vim-one"
-NeoBundle "freeo/vim-kalisi"
-NeoBundle "w0ng/vim-hybrid"
-
-" DevIcons
-NeoBundle 'ryanoasis/vim-devicons'
-
-" html``
-NeoBundle 'jonsmithers/vim-html-template-literals'
-
-call neobundle#end()
 
 filetype plugin indent on
-
-NeoBundleCheck
 
 " NERDTree tweeks
 let NERDTreeMinimalUI=1
@@ -137,8 +129,9 @@ let g:jsbeautify_engine = 'node'
 
 " css colors
 let g:Hexokinase_highlighters = ['virtual']
-let g:Hexokinase_refreshEvents = ['BufWritePost']
-let g:Hexokinase_ftAutoload = ['css', 'html', 'js']
+" let g:Hexokinase_refreshEvents = ['BufWritePost']
+let g:Hexokinase_ftEnabled = ['css', 'html', 'js']
+let g:Hexokinase_optInPatterns = ['full_hex', 'rgb', 'rgba', 'colour_names']
 
 " syntastic - disable python (python-mode)
 let g:syntastic_mode_map = { 'mode': 'active',

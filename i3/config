@@ -13,7 +13,7 @@ set_from_resource $repa-sec     repa-sec
 set_from_resource $repa-warn    repa-warn
 
 # class | border | background | text | indicator
-client.focused          $repa-sec  $repa-sec  $repa-pri $repa-sec  $repa-sec
+client.focused          $repa-sec  $repa-sec  $repa-pri $repa-pri  $repa-sec
 client.focused_inactive $repa-bg   $repa-bg   $repa-fg  $repa-bg   $repa-bg
 client.unfocused        $repa-bg   $repa-bg   $repa-fg  $repa-bg   $repa-bg
 client.urgent           $repa-warn $repa-warn $repa-fg  $repa-warn $repa-warn 
@@ -140,7 +140,7 @@ gaps outer 10
 smart_gaps on
 smart_borders on
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 2, title_format " %title"
 
 workspace $ws9 gaps inner 0
 workspace $ws9 gaps outer 0
