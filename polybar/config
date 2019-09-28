@@ -17,70 +17,128 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #aa222222
-background-alt = #aa444444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #aaa
-primary = #ffb52a
-secondary = #e60053
-alert = #bd2c40
+;repa_bg = ${xrdb:repa-bg-t}
+;repa_bg_alt = ${xrdb:repa-bg-alt-t}
+repa_bg = ${xrdb:repa-bg}
+repa_bg_l = ${xrdb:repa-bg-l}
+repa_bg_alt = ${xrdb:repa-bg-alt}
+repa_fg = ${xrdb:repa-fg}
+repa_pri = ${xrdb:repa-pri}
+repa_sec = ${xrdb:repa-sec}
+repa_warn = ${xrdb:repa-warn}
+full_bg = #00000000
+
+[variables]
+bar-height = 24
+bar-border-size = 2
+
+label-padding = 1
+label-maxlen = 50
+
+[fonts]
+font-0 = "MesloLGS Nerd Font:pixelsize=10;2"
+font-1 = "MesloLGS Nerd Font:pixelsize=14;2"
+font-2 = "MesloLGS Nerd Font:pixelsize=14;3"
 
 [bar/bar1]
-;monitor = ${env:MONITOR:HDMI-1}
+height = ${variables.bar-height}
 width = 100%
-height = 27
-;offset-x = 1%
-;offset-y = 1%
-radius = 6.0
 fixed-center = false
 bottom = true
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+;background = ${colors.repa_bg_alt}
+background = ${colors.full_bg}
+foreground = ${colors.repa_fg}
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+
+modules-left = i3 ls1 xwindow ls2
+modules-center =
+modules-right = rs6 start-chrome start-firefox rs5 pulseaudio rs4 memory rs3 cpu rs3 eth rs2 temperature rs1 filesystem rs1 date
 
 line-size = 2
-line-color = #f00
+line-color = ${colors.repa_warn}
 
-border-size = 3
-border-color = #00000000
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-#font-0 = "Meslo LG S for Powerline:size=10;1"
-font-0 = "MesloLGS Nerd Font:pixelsize=10;1"
-font-1 = "MesloLGS Nerd Font:pixelsize=16;2"
-font-2 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-3 = "Wuncon Siji:pixelsize=10;1"
-font-4 = "MesloLGS Nerd Font:pixelsize=14;1"
-
-modules-left = i3 xwindow
-modules-center =
-modules-right = start-chrome start-firefox filesystem pulseaudio memory cpu eth temperature date
-
+tray-background = ${colors.repa_bg_l}
 tray-position = right
 tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
 
-;wm-restack = bspwm
-;wm-restack = i3
+[bar/bar2]
+monitor = ${env:MONITOR:DP-2}
 
-;override-redirect = true
+height = ${variables.bar-height}
+width = 100%
+fixed-center = false
+bottom = true
 
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
+background = ${colors.repa_bg_alt}
+foreground = ${colors.repa_fg}
 
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
 
-;cursor-click = pointer
-;cursor-scroll = ns-resize
+modules-left = i3 ls1 xwindow ls2
+modules-center =
+modules-right = filesystem pulseaudio memory cpu eth temperature date
+
+line-size = 2
+line-color = ${colors.repa_warn}
+
+;separators
+[module/ls1]
+type = custom/text
+;content = %{T3}%{T-}
+content = %{T3}%{T-}
+content-foreground = ${colors.repa_pri}
+content-background = ${colors.repa_bg}
+
+[module/ls2]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = ${colors.repa_bg}
+content-background = ${colors.full_bg}
+
+[module/rs1]
+type = custom/text
+content = %{T3}%{T-}
+;content = %{T3}%{T-}
+content-foreground = ${colors.repa_pri}
+content-background = ${colors.repa_bg_l}
+
+[module/rs2]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = ${colors.repa_bg_l}
+content-background = ${colors.repa_bg}
+
+[module/rs3]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = ${colors.repa_pri}
+content-background = ${colors.repa_bg}
+
+[module/rs4]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = ${colors.repa_bg}
+content-background = ${colors.repa_bg_alt}
+
+[module/rs5]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = ${colors.repa_pri}
+content-background = ${colors.repa_bg_alt}
+
+[module/rs6]
+type = custom/text
+content = %{T3}%{T-}
+content-foreground = ${colors.repa_bg_alt}
+content-background = ${colors.full_bg}
+
+;modules
 
 [module/filesystem]
 type = internal/fs
@@ -88,68 +146,14 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-mounted = %{T2}%mountpoint%%{T-}: %percentage_used%%
+label-mounted-background = ${colors.repa_bg_l}
+label-mounted-padding = 1
 
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 1
-
-label-occupied = %index%
-label-occupied-padding = 1
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 1
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 1
-
-; Separator in between workspaces
-; label-separator = |
-
-[module/i3]
-type = internal/i3
-format = <label-state> <label-mode>
-index-sort = true
-wrapping-scroll = false
-
-; Only show workspaces on the same output as the bar
-;pin-workspaces = true
-
-label-mode-padding = 1
-label-mode-foreground = #000
-label-mode-background = ${colors.primary}
-
-; focused = Active workspace on focused monitor
-label-focused = %name%
-label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${module/bspwm.label-focused-underline}
-label-focused-padding = ${module/bspwm.label-focused-padding}
-
-; unfocused = Inactive workspace on any monitor
-label-unfocused = %name%
-label-unfocused-padding = ${module/bspwm.label-occupied-padding}
-
-; visible = Active workspace on unfocused monitor
-label-visible = %name%
-label-visible-background = ${self.label-focused-background}
-label-visible-underline = ${self.label-focused-underline}
-label-visible-padding = ${self.label-focused-padding}
-
-; urgent = Workspace with urgency hint set
-label-urgent = %name%
-label-urgent-background = ${module/bspwm.label-urgent-background}
-label-urgent-padding = ${module/bspwm.label-urgent-padding}
-
-; Separator in between workspaces
-; label-separator = |
+label-unmounted = %mountpoint% N/A
+label-unmounted-foreground = ${colors.repa_bg_alt}
+label-unmounted-background = ${colors.repa_bg_l}
+label-unmounted-padding = 1
 
 [module/xwindow]
 type = internal/xwindow
@@ -157,18 +161,67 @@ type = internal/xwindow
 format-foreground = #0bb
 format-padding = 0
 
-label =  %title%
+label = %title%
 label-maxlen = 50
+label-background = ${colors.repa_bg}
+label-padding = 1
 
 label-empty =
+
+[module/i3]
+type = internal/i3
+format = <label-state><label-mode>
+format-padding = 0
+format-background = ${colors.repa_pri}
+format-foreground = ${colors.repa_sec}
+index-sort = true
+wrapping-scroll = false
+
+; Only show workspaces on the same output as the bar
+pin-workspaces = true
+
+label-mode = %mode%
+label-mode-padding = 1
+label-mode-foreground = ${colors.repa_bg}
+label-mode-background = ${colors.repa_pri}
+
+; focused = Active workspace on focused monitor
+label-focused = %name%
+label-focused-background = ${colors.repa_sec}
+label-focused-foreground = ${colors.repa_pri}
+label-focused-underline = ${colors.repa_warn}
+label-focused-padding = ${variables.label-padding}
+
+; unfocused = Inactive workspace on any monitor
+label-unfocused = %name%
+label-unfocused-background = ${colors.repa_pri}
+label-unfocused-foreground = ${colors.repa_bg}
+label-unfocused-padding = ${variables.label-padding}
+
+; visible = Active workspace on unfocused monitor
+label-visible = %name%
+label-visible-background = ${colors.repa_sec}
+label-visible-foreground = ${colors.repa_pri}
+label-visible-padding = ${variables.label-padding}
+
+; urgent = Workspace with urgency hint set
+label-urgent = %name%
+label-urgent-background = ${colors.repa_warn}
+label-urgent-padding = ${variables.label-padding}
+
+; Separator in between workspaces
+; label-separator = |
 
 [module/cpu]
 type = internal/cpu
 interval = 2
-format = <label> <ramp-coreload>
-format-prefix = " "
-format-prefix-foreground = #bb0
-label = %percentage:2%%
+;format = <label> <ramp-coreload>
+format = <ramp-coreload>
+format-prefix = "  "
+format-prefix-foreground = ${colors.repa_pri}
+format-background = ${colors.repa_bg}
+format-padding = 1
+;label = %percentage:2%%
 
 ramp-coreload-0 = ▁
 ramp-coreload-1 = ▂
@@ -178,149 +231,145 @@ ramp-coreload-4 = ▅
 ramp-coreload-5 = ▆
 ramp-coreload-6 = ▇
 ramp-coreload-7 = █
-ramp-coreload-0-foreground = #0f0
-ramp-coreload-1-foreground = #4f0
-ramp-coreload-2-foreground = #8f0
-ramp-coreload-3-foreground = #af0
-ramp-coreload-4-foreground = #ff0
-ramp-coreload-5-foreground = #fa0
-ramp-coreload-6-foreground = #f40
-ramp-coreload-7-foreground = #f00
+ramp-coreload-0-foreground = ${colors.repa_sec}
+ramp-coreload-1-foreground = ${colors.repa_sec}
+ramp-coreload-2-foreground = ${colors.repa_pri}
+ramp-coreload-3-foreground = ${colors.repa_pri}
+ramp-coreload-4-foreground = ${colors.repa_fg}
+ramp-coreload-5-foreground = ${colors.repa_fg}
+ramp-coreload-6-foreground = ${colors.repa_warn}
+ramp-coreload-7-foreground = ${colors.repa_warn}
 
 [module/memory]
 type = internal/memory
 interval = 2
-format = <label> <bar-used>
+;format = <label> <bar-used>
+format = <bar-used>
 format-prefix = " "
-format-prefix-font = 1
-format-prefix-foreground = #4bddac
-label = %percentage_used%%
+format-padding = 1
+format-background = ${colors.repa_bg}
+format-prefix-foreground = ${colors.repa_pri}
+;label = %percentage_used%%
 
 bar-used-indicator =
 bar-used-width = 10
-bar-used-foreground-0 = #55aa55
-bar-used-foreground-1 = #557755
-bar-used-foreground-2 = #f5a70a
-bar-used-foreground-3 = #ff5555
+bar-used-foreground-0 = ${colors.repa_sec}
+bar-used-foreground-1 = ${colors.repa_pri}
+bar-used-foreground-2 = ${colors.repa_fg}
+bar-used-foreground-3 = ${colors.repa_warn}
 bar-used-fill = ▐
 bar-used-empty = ▐
-bar-used-empty-foreground = #444444
-
-[module/wlan]
-type = internal/network
-interface = net1
-interval = 3.0
-
-format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #9f78e1
-label-connected = %essid%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
-
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
-ramp-signal-foreground = ${colors.foreground-alt}
+bar-used-empty-foreground = ${colors.repa_bg_l}
 
 [module/eth]
 type = internal/network
 interface = eth0
 interval = 3.0
 
+format-connected-padding = 1
+format-connected-background = ${colors.repa_bg}
 format-connected-prefix = " "
-format-connected-prefix-foreground = #55aa55
+format-connected-prefix-foreground = ${colors.repa_pri}
 label-connected = %upspeed:9%  %downspeed:9% 
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected-padding = 1
+format-disconnected-background = ${colors.repa_bg}
+format-disconnected = <label-disconnected>
+label-disconnected = %ifname%
+label-disconnected-foreground = ${colors.repa_warn}
 
 [module/date]
 type = internal/date
 interval = 5
 
 date =
-date-alt = " %Y-%m-%d"
+date-alt = %Y-%m-%d
 
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
-format-prefix-foreground = #0a6cf5
+format-background = ${colors.repa_bg_l}
+format-padding = 1
+
+format-prefix = " "
+format-prefix-foreground = ${colors.repa_pri}
 
 label = %date% %time%
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
-label-volume = 
-label-volume-foreground = ${root.foreground}
+format-volume-background = ${colors.repa_bg_alt}
+format-volume-padding = 1
+format-muted-background = ${colors.repa_bg_alt}
+format-muted-padding = 1
 
-label-muted =  muted
-label-muted-foreground = #666
+format-volume = <label-volume> <bar-volume>
+label-volume = %{T2} %{T-}
+label-volume-foreground = ${colors.repa_pri}
+
+label-muted = %{T2} %{T-} muted
+label-muted-foreground = ${colors.repa_bg_l}
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = ${colors.repa_fg}
+bar-volume-foreground-1 = ${colors.repa_fg}
+bar-volume-foreground-2 = ${colors.repa_fg}
+bar-volume-foreground-3 = ${colors.repa_fg}
+bar-volume-foreground-4 = ${colors.repa_pri}
+bar-volume-foreground-5 = ${colors.repa_pri}
+bar-volume-foreground-6 = ${colors.repa_pri}
+bar-volume-foreground-7 = ${colors.repa_warn}
+bar-volume-foreground-8 = ${colors.repa_warn}
+bar-volume-foreground-9 = ${colors.repa_warn}
 bar-volume-gradient = true
 bar-volume-indicator = |
-bar-volume-indicator-foreground = #ff0
-bar-volume-indicator-font = 5
+bar-volume-indicator-foreground = ${colors.repa_fg}
+bar-volume-indicator-font = 1
 bar-volume-fill = ─
-bar-volume-fill-font = 5
+bar-volume-fill-font = 1
 bar-volume-empty = ─
-bar-volume-empty-font = 5
-bar-volume-empty-foreground = #555
+bar-volume-empty-font = 1
+bar-volume-empty-foreground = ${colors.repa_bg_l}
 
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
 
+format-background = ${colors.repa_bg_l}
+format-padding = 1
+
 format = <ramp> <label>
 format-warn = <ramp> <label-warn>
-format-warn-underline = #f50a4d
+format-warn-underline = ${colors.repa_warn}
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.repa_sec}
 
 ramp-0 = 
 ramp-1 = 
 ramp-2 = 
-ramp-font = 5
-ramp-0-foreground = #0a0
-ramp-1-foreground = #4a0
-ramp-2-foreground = #f00
+ramp-font = 3
+ramp-0-foreground = ${colors.repa_sec}
+ramp-1-foreground = ${colors.repa_pri}
+ramp-2-foreground = ${colors.repa_warn}
 
 [module/start-chrome]
 type = custom/text
-content = 
-content-foreground = #ff4
-content-underline = #0fa
+content = " "
+content-background = ${colors.repa_bg_alt}
+content-foreground = ${colors.repa_pri}
 content-padding = 1
 content-font = 2
 click-left = "google-chrome &"
 
 [module/start-firefox]
 type = custom/text
-content = 
-content-foreground = #fa0
-content-underline = #08f
+content = " "
+content-background = ${colors.repa_bg_alt}
+content-foreground = ${colors.repa_pri}
 content-padding = 1
 content-font = 2
 click-left = "firefox &"
@@ -333,11 +382,11 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.secondary}
+label-open-foreground = ${colors.repa_sec}
 label-close =  cancel
-label-close-foreground = ${colors.secondary}
+label-close-foreground = ${colors.repa_sec}
 label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
+label-separator-foreground = ${colors.repa_pri}
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1

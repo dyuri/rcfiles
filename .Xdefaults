@@ -62,6 +62,7 @@ URxvt.keysym.Control-Right: \033[1;5C
 
 ! -----
 #define repa_bg       #383031
+#define repa_bg_l     #585051
 #define repa_bg_alt   #272021
 #define repa_fg 		  #56cbf9
 #define repa_pri      #70f8ba
@@ -69,6 +70,7 @@ URxvt.keysym.Control-Right: \033[1;5C
 #define repa_warn     #ea526f
 
 *repa-bg: 	    repa_bg
+*repa-bg-l: 	  repa_bg_l
 *repa-bg-alt: 	repa_bg_alt
 *repa-fg: 		  repa_fg
 *repa-pri:    	repa_pri
