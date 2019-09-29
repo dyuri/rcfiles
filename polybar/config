@@ -41,12 +41,13 @@ font-1 = "MesloLGS Nerd Font:pixelsize=14;2"
 font-2 = "MesloLGS Nerd Font:pixelsize=14;3"
 
 [bar/bar1]
+monitor = ${env:MONITOR:DVI-D-0}
+
 height = ${variables.bar-height}
 width = 100%
 fixed-center = false
 bottom = true
 
-;background = ${colors.repa_bg_alt}
 background = ${colors.full_bg}
 foreground = ${colors.repa_fg}
 
@@ -73,7 +74,7 @@ width = 100%
 fixed-center = false
 bottom = true
 
-background = ${colors.repa_bg_alt}
+background = ${colors.full_bg}
 foreground = ${colors.repa_fg}
 
 font-0 = ${fonts.font-0}
@@ -82,7 +83,7 @@ font-2 = ${fonts.font-2}
 
 modules-left = i3 ls1 xwindow ls2
 modules-center =
-modules-right = filesystem pulseaudio memory cpu eth temperature date
+modules-right = rs6 start-chrome start-firefox rs5 pulseaudio rs4 memory rs3 cpu rs3 eth rs2 temperature rs1 filesystem rs1 date
 
 line-size = 2
 line-color = ${colors.repa_warn}
@@ -206,7 +207,8 @@ label-visible-padding = ${variables.label-padding}
 
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
-label-urgent-background = ${colors.repa_warn}
+label-urgent-background = ${colors.repa_pri}
+label-urgent-foreground = ${colors.repa_warn}
 label-urgent-padding = ${variables.label-padding}
 
 ; Separator in between workspaces
