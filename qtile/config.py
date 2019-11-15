@@ -1,298 +1,181 @@
-from libqtile.config import Key, Screen, Group, Drag, Click, Match
+from libqtile.config import Key, Screen, Group, Drag, Click, Match, ScratchPad, DropDown
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
+from libqtile.config import EzKey
 
-from launcher import Launcher
+from plasma import Plasma
+import os
+
+
+TERMINAL = os.environ.get('TERMINAL', 'kitty')
+
+
+# TODO
+def window_to_prev_group():
+    @lazy.function
+    def __inner(qtile):
+        i = qtile.groups.index(qtile.currentGroup)
+        if qtile.currentWindow and i != 0:
+            group = qtile.groups[i - 1].name
+            qtile.currentWindow.togroup(group)
+    return __inner
+
+
+def window_to_next_group():
+    @lazy.function
+    def __inner(qtile):
+        i = qtile.groups.index(qtile.currentGroup)
+        if qtile.currentWindow and i != len(qtile.groups):
+            group = qtile.groups[i + 1].name
+            qtile.currentWindow.togroup(group)
+    return __inner
+
 
 def app_or_group(group, app):
-    """ Go to specified group if it exists. Otherwise, run the specified app.
-    When used in conjunction with dgroups to auto-assign apps to specific
-    groups, this can be used as a way to go to an app if it is already
-    running. """
     def f(qtile):
-        try:
+        if qtile.groupMap[group].windows:
             qtile.groupMap[group].cmd_toscreen()
-        except KeyError:
+        else:
+            qtile.groupMap[group].cmd_toscreen()
             qtile.cmd_spawn(app)
     return f
 
 
-def getIndex(currentGroupName):
-    for i in range(len(groups)):
-        if groups[i].name == currentGroupName:
-            return i
-
-
-def toPrevGroup(qtile):
-    currentGroup = qtile.currentGroup.name
-    i = getIndex(currentGroup)
-    qtile.currentWindow.togroup(groups[(i - 1) % len(groups)].name)
-
-
-def toNextGroup(qtile):
-    currentGroup = qtile.currentGroup.name
-    i = getIndex(currentGroup)
-    qtile.currentWindow.togroup(groups[(i + 1) % len(groups)].name)
-
-
 mod = "mod4"
-alt = "mod1"
 
-keys = [
-    Key(
-        [mod, "control"],  "r",
-        lazy.restart()
-    ),
-    Key(
-        [mod, "control"], "q",
-        lazy.shutdown()
-    ),
-    Key(
-        [mod], "w",
-        lazy.window.kill()
-    ),
-    Key(
-        [alt], "Tab",
-        lazy.group.next_window()
-    ),
-    Key(
-        [mod], "Tab",
-        lazy.group.next_window()
-    ),
-    Key(
-        [alt, "shift"], "Tab",
-        lazy.group.prev_window()
-    ),
-    Key(
-        [mod, "shift"], "Tab",
-        lazy.group.prev_window()
-    ),
-    # this is usefull when floating windows get buried
-    Key(
-        [mod], "grave",
-        lazy.window.bring_to_front()
-    ),
-    # group switch
-    Key( #
-        [mod], "Left",
-        lazy.screen.prev_group()
-    ),
-    Key( #
-        [mod], "Right",
-        lazy.screen.next_group()
-    ),
-    Key(
-        [mod, "shift"], "Left",
-        lazy.function(toPrevGroup)
-    ),
-    Key(
-        [mod, "shift"], "Right",
-        lazy.function(toNextGroup)
-    ),
-    Key(
-        [mod, alt], "Left",
-        lazy.prev_screen()
-    ),
-    Key(
-        [mod, alt], "Right",
-        lazy.next_screen()
-    ),
-    # layouts
-    Key(
-        [mod, alt], "m",
-        lazy.group.setlayout('max')
-    ),
-    Key(
-        [mod, alt], "s",
-        lazy.group.setlayout('stack')
-    ),
-    Key(
-        [mod, alt], "t",
-        lazy.group.setlayout('tile')
-    ),
-    Key(
-        [mod], "space",
-        lazy.next_layout()
-    ),
-    # Bindings to control the layouts
-    Key(
-        [mod], "h",
-        lazy.layout.previous()
-    ),
-    Key(
-        [mod], "l",
-        lazy.layout.next()
-    ),
-    Key(
-        [mod], "k",
-        lazy.layout.up()
-    ),
-    Key(
-        [mod], "j",
-        lazy.layout.down()
-    ),
-    Key(
-        [mod], "f",
-        lazy.window.toggle_floating()
-    ),
-    Key(
-        [mod, "shift"], "f",
-        lazy.window.toggle_fullscreen()
-    ),
-    # These are unique to stack layout
-    Key(
-        [mod, "shift"], "k",
-        lazy.layout.client_to_next()
-    ),
-    Key(
-        [mod, "shift"], "j",
-        lazy.layout.client_to_previous()
-    ),
-    Key(
-        [mod, "shift"], "Return",
-        lazy.layout.toggle_split()
-    ),
-    # Multiple function keys
-    Key(
-        [mod], "BackSpace",
-        lazy.layout.rotate(),
-    ),
-    Key(
-        [mod, "shift"], "k",
-        lazy.layout.shuffle_up(),         # Stack, xmonad-tall
-    ),
-    Key(
-        [mod, "shift"], "j",
-        lazy.layout.shuffle_down(),       # Stack, xmonad-tall
-    ),
-    Key(
-        [mod, "control"], "l",
-        lazy.layout.add(),                # Stack
-        lazy.layout.increase_ratio(),     # Tile
-        lazy.layout.maximize(),           # xmonad-tall
-    ),
-    Key(
-        [mod, "control"], "h",
-        lazy.layout.delete(),             # Stack
-        lazy.layout.decrease_ratio(),     # Tile
-        lazy.layout.normalize(),          # xmonad-tall
-    ),
-    Key(
-        [mod, "control"], "k",
-        lazy.layout.shrink(),             # xmonad-tall
-        lazy.layout.decrease_nmaster(),   # Tile
-    ),
-    Key(
-        [mod, "control"], "j",
-        lazy.layout.grow(),               # xmonad-tall
-        lazy.layout.increase_nmaster(),   # Tile
-    ),
-    # applications
-    Key(
-        [alt], "Escape",
-        lazy.spawn("rofi -show window")
-    ),
-    Key(
-        [mod], "Escape",
-        lazy.spawn("rofi -show run")
-    ),
-    Key(
-        [mod], "Return",
-        lazy.spawn(
-            "termite"
-            # "/usr/bin/urxvt"
-            # " -fn 'xft:MesloLGS\ Nerd\ Font:pixelsize=13:antialias=true:hinting=true'"
-            # " -fb 'xft:MesloLGS\ Nerd\ Font:bold:pixelsize=13:antialias=true:hinting=true'"
-        )
-    ),
-    Key(
-        [mod], "p",
-        lazy.function(app_or_group('io', 'gajim'))
-    ),
-    Key(
-        [mod], "g",
-        lazy.function(app_or_group('gimp', 'gimp'))
-    ),
-    Key(
-        [mod], "c",
-        lazy.function(app_or_group('www', 'google-chrome'))
-    ),
-    Key(
-        [mod, "shift"], "c",
-        lazy.spawn('google-chrome')
-    ),
+keymap = [
+    ('M-S-c', lazy.spawn('google-chrome')),
+    ('M-<Return>', lazy.spawn(TERMINAL)),
+    ('M-<Escape>', lazy.spawn("rofi -show run")),
+    ('M-<Tab>', lazy.spawn("rofi -show window")),
+    ('A-C-l', lazy.spawn('i3lock -i sajat/bg.png -c 000000')),
+
+    ('M-C-r', lazy.restart()),
+
+    ('M-<BackSpace>', lazy.layout.rotate()),
+    ('M-S-<space>', lazy.layout.toggle_split()),
+    ('M-A-<space>', lazy.next_layout()),
+
+    ('M-f', lazy.window.toggle_fullscreen()),
+    ('M-S-f', lazy.window.toggle_floating()),
+    ('M-<grave>', lazy.window.bring_to_front()),
+
+    ('M-<Left>', lazy.screen.prev_group()),
+    ('M-<Right>', lazy.screen.next_group()),
+    ('M-S-<Left>', window_to_prev_group()),  # TODO
+    ('M-S-<Right>', window_to_next_group()),  # TODO
+    ('M-A-<Left>', lazy.prev_screen()),
+    ('M-A-<Right>', lazy.next_screen()),
+    ('A-<Tab>', lazy.group.next_window()),
+    ('A-S-<Tab>', lazy.group.prev_window()),
+    ('M-w', lazy.window.kill()),
+
+    ('M-C-h', lazy.layout.grow_left(), lazy.layout.decrease_ratio(), lazy.layout.grow_width(-30)),  # dvorak h
+    ('M-C-j', lazy.layout.grow_down(), lazy.layout.decrease_nmaster(), lazy.layout.grow_height(-30)),  # dvorak j
+    ('M-C-k', lazy.layout.grow_up(), lazy.layout.increase_nmaster(), lazy.layout.grow_height(30)),  # dvorak k
+    ('M-C-l', lazy.layout.grow_right(), lazy.layout.increase_ratio(), lazy.layout.grow_width(30)),  # dvorak l
+
+    ('M-h', lazy.layout.left(), lazy.layout.previous()),  # h
+    ('M-j', lazy.layout.down()),  # j
+    ('M-k', lazy.layout.up()),  # k
+    ('M-l', lazy.layout.right(), lazy.layout.next()),  # l
+
+    ('M-S-h', lazy.layout.move_left(), lazy.layout.shuffle_left()),  # h
+    ('M-S-j', lazy.layout.move_down(), lazy.layout.shuffle_down()),  # j
+    ('M-S-k', lazy.layout.move_up(), lazy.layout.shuffle_up()),  # k
+    ('M-S-l', lazy.layout.move_right(), lazy.layout.shuffle_right()),  # l
+
+    ('M-A-h', lazy.layout.integrate_left(), lazy.layout.flip_left()),  # h
+    ('M-A-j', lazy.layout.integrate_down(), lazy.layout.flip_down()),  # j
+    ('M-A-k', lazy.layout.integrate_up(), lazy.layout.flip_up()),  # k
+    ('M-A-l', lazy.layout.integrate_right(), lazy.layout.flip_right()),  # l
+
+    ('M-u', lazy.layout.mode_horizontal()),
+    ('M-i', lazy.layout.mode_vertical()),
+    ('M-C-u', lazy.layout.mode_horizontal_split()),
+    ('M-C-i', lazy.layout.mode_vertical_split()),
+
+    ('M-C-5', lazy.layout.size(500)),
+    ('M-C-8', lazy.layout.size(800)),
+    ('M-C-0', lazy.layout.reset_size()),
+
+    ('M-<bracketleft>', lazy.spawn('playerctl play-pause')),
+    ('M-<bracketright>', lazy.spawn('playerctl next')),
 ]
+keys = [EzKey(*v) for v in keymap]
 
-keys_default = [
-    # Toggle between split and unsplit sides of stack.
-    # Split = all windows displayed
-    # Unsplit = 1 window displayed, like Max layout, but still with
-    # multiple stack panes
-    Key(
-        [mod, "shift"], "Return",
-        lazy.layout.toggle_split()
-    ),
-]
+groups = [Group(str(i+1)) for i in range(9)]
 
-groups = [Group(str(i)) for i in range(10)]
-
-for i in groups:
+for idx, g in enumerate(groups):
     # mod1 + letter of group = switch to group
     keys.append(
-        Key([mod], i.name, lazy.group[i.name].toscreen())
+        Key([mod], str(idx + 1), lazy.group[g.name].toscreen())
     )
 
     # mod1 + shift + letter of group = switch to & move focused window to group
     keys.append(
-        Key([mod, "shift"], i.name, lazy.window.togroup(i.name))
+        Key([mod, "shift"], str(idx + 1), lazy.window.togroup(g.name))
     )
 
 groups.extend([
-    Group('www', layout='tile', persist=False, init=False, screen_affinity=0,
+    Group('www', layout='plasma', persist=False, init=True, screen_affinity=1,
           matches=[Match(wm_class=[
               'google-chrome',
               'google-chrome-unstable',
               'Google-chrome'])]),
-    Group('ff', layout='tile', persist=False, init=False, screen_affinity=0,
-          matches=[Match(wm_class=[
-              'Firefox'])]),
-    Group('skype', layout='tile', persist=False, init=False,
-          matches=[Match(wm_class=['Skype', 'skype'])]),
-    Group('steam', layout='max', persist=False, init=False, screen_affinity=0,
+    Group('steam', layout='max', persist=False, init=False, screen_affinity=1,
           matches=[Match(wm_class=['Steam', 'steam'])]),
-    Group('io', layout='max', persist=False,
-          matches=[Match(wm_class=['Gajim'], role=['roster'])], init=False, screen_affinity=0),
-    Group('gimp', layout='max', persist=False, screen_affinity=0,
-          matches=[Match(wm_class=['gimp', 'Gimp'])], init=False),
+    Group('gimp', layout='max', persist=False, init=False, screen_affinity=1,
+          matches=[Match(wm_class=['gimp', 'Gimp'])]),
 ])
 
-border = dict(
+# keys for www group
+keys.append(EzKey('M-0', lazy.group['www'].toscreen()))
+keys.append(EzKey('M-S-0', lazy.window.togroup('www')))
+
+scratchpad_config = {
+    "height": 0.465,
+    "y_position": 0.1,
+    "warp_pointer": False,
+    "on_focus_lost_hide": True,
+    "opacity": .8,
+}
+
+# scratchpads
+groups.extend([
+    ScratchPad("SPD",
+            dropdowns=[
+                DropDown("term",
+                    TERMINAL + " --name dropdown",
+                    **scratchpad_config),
+                DropDown("music",
+                    TERMINAL + " --name music tuijam",
+                    **scratchpad_config),
+            ])
+])
+
+# keys for scratchpads
+keys.append(EzKey('M-<Down>', lazy.group['SPD'].dropdown_toggle("term")))
+keys.append(EzKey('M-m', lazy.group['SPD'].dropdown_toggle("music")))
+
+layout_cfg = dict(
     border_focus='#008080',
     border_normal='#808080',
     border_width=1,
+    border_width_single=0,
+    margin=10,
+    margin_single=0,
 )
 
 layouts = [
-    layout.Tile(**border),
-    layout.VerticalTile(**border),
+    Plasma(**layout_cfg),
+    # layout.Bsp(**layout_cfg),  # I prefer Plasma
+    layout.Tile(**layout_cfg),
     layout.Max(),
-    layout.Stack(num_stacks=2, **border),
-
-    # gajim
-    # layout.Slice(side='left', width=320, name='gajim', role='roster',
-    #             fallback=layout.RatioTile(**border)),
-
-    # gimp
-    # layout.Slice(side='left', width=256, name='gimp', role='gimp-toolbox',
-    #             fallback=layout.Slice(
-    #                                   side='right',
-    #                                   width=256,
-    #                                   role='gimp-dock',
-    #             fallback=layout.Stack(num_stacks=1, **border))),
 ]
 
 widget_defaults = dict(
-    font='Inconsolata-g',
+    font='MesloLGS Nerd Font',
     fontsize=14,
     padding=3,
 )
@@ -300,36 +183,30 @@ widget_defaults = dict(
 screens = [
     Screen(
         top=bar.Bar([
-            widget.WindowName(),
+            widget.WindowName(width=bar.CALCULATED, background="#880000"),
+            widget.Spacer(),
             widget.CurrentLayout(),
+        ], 24),
+        bottom=bar.Bar([
+            widget.GroupBox(urgent_alert_method='text'),
+            widget.Spacer(),
+            widget.Notify(foreground="ffff44"),
+            widget.Volume(**widget_defaults),
             widget.CPUGraph(
                 graph_color='18EB18',
                 fill_color='16EB16.3',
-                line_width=1),
-            widget.NetGraph(
-                graph_color='18BAEB',
-                fill_color='1667EB.3',
                 line_width=1),
             widget.MemoryGraph(
                 graph_color='EBE618',
                 fill_color='EBE616.3',
                 line_width=1),
-            # widget.SwapGraph(
-            #    graph_color='EB1818',
-            #    fill_color='EB1616.3',
-            #    line_width=1),
-        ], 24, ),
-        bottom=bar.Bar([
-            widget.GroupBox(urgent_alert_method='text'),
-            Launcher('google-chrome', 'C', foreground='#22FF00'),
-            Launcher('firefox', 'F', foreground='#2288FF'),
-            widget.Spacer(),
-            widget.Notify(foreground="ffff44"),
+            widget.NetGraph(
+                graph_color='18BAEB',
+                fill_color='1667EB.3',
+                line_width=1),
+            widget.Clock(format='%Y.%m.%d %H:%M:%S'),
             widget.Systray(),
-            # widget.Volume(**widget_defaults),
-            widget.Clock(
-                format='%Y.%m.%d %H:%M:%S'),
-        ], 30, ),
+        ], 30),
     ),
     Screen(
         top=bar.Bar(
@@ -343,9 +220,7 @@ screens = [
             widget.GroupBox(urgent_alert_method='text'),
             widget.Spacer(),
             widget.Clock(format='%Y.%m.%d %H:%M:%S'),
-            ],
-            30,
-        ),
+        ], 30),
     ),
 ]
 
@@ -374,7 +249,7 @@ main = None
 follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
-floating_layout = layout.Floating(**border)
+floating_layout = layout.Floating(**layout_cfg)
 auto_fullscreen = True
 
 wmname = "LG3D"

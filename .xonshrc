@@ -6,10 +6,16 @@
 # - xontrib-pyenv
 # - xontrib-repa-prompt
 
+$FOREIGN_ALIASES_SUPPRESS_SKIP_MESSAGE=True
+
 $PROMPT_TOOLKIT_COLOR_DEPTH='DEPTH_24_BIT'
 $XONSH_COLOR_STYLE='monokai'
 $XONSH_SHOW_TRACEBACK=False
 $VC_BRANCH_TIMEOUT=.2
+$NPM_PACKAGES=$HOME+'/.npm-packages'
+$PATH.append($NPM_PACKAGES+'/bin')
+$PATH.append($GOPATH[0]+'/bin')
+$GO111MODULE="on"
 
 xontrib load bashisms
 xontrib load repa_prompt
@@ -23,11 +29,19 @@ $fzf_ssh_binding = Keys.ControlS
 $fzf_file_binding = Keys.ControlT
 
 # env
-$FZF_DEFAULT_COMMAND='rg --files --no-ignore --no-ignore-vcs --hidden --follow --glob "!.git/*" --glob "!.hg/*"'
+# $FZF_DEFAULT_COMMAND='rg --files --no-ignore --no-ignore-vcs --hidden --follow --glob "!.git/*" --glob "!.hg/*"'
+$FZF_DEFAULT_COMMAND="fd --type file --color=always --follow --hidden --exclude .git --exclude .hg"
 $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :100 {}'"
 
+# dircolors
+source-bash $(dircolors ~/config/dircolors/dircolors.molokai)
+
+# kitty diff
+if $TERM == 'xterm-kitty':
+  aliases['d'] = ["kitty", "+kitten", "diff"]
+
 # aliases
-aliases['ls']="ls --color=auto -F -b -T 0"
+aliases['ls']=["ls", "--color=auto", "-F", "-b", "-T 0"]
 aliases['ll']='exa -la --git --classify --group-directories-first'
 aliases['jsonpp']='python -mjson.tool'
 aliases['bible']='shuf -n 1 ~/txt/bible.txt'

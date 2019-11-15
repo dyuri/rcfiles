@@ -5,3 +5,4 @@ syntax: glob
 *~
 .vim/bundle/*
 tmux/resurrect/tmux_resurrect_*
+.mypy_cache

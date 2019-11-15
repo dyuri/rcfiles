@@ -3,15 +3,11 @@
 filetype off
 
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+  set nocompatible " Be iMproved
 
   " Required:
   set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 endif
-
-" ale
-" !!! issue with deoplete
-let g:ale_completion_enabled = 0
 
 if dein#load_state('/home/dyuri/.cache/dein')
   call dein#begin('/home/dyuri/.cache/dein')
@@ -43,6 +39,10 @@ if dein#load_state('/home/dyuri/.cache/dein')
 	""      \ }
 	"call dein#add('neoclide/coc.nvim', {'rev': 'release'}) " don't like
 	" CocInstall coc-html, coc-css, coc-python
+  call dein#add('autozimu/LanguageClient-neovim', {
+    \ 'rev': 'next',
+    \ 'build': 'bash install.sh',
+    \ })
 	call dein#add('ternjs/tern_for_vim')
 	call dein#add('Shougo/denite.nvim')
 	call dein#add('vim-scripts/vcscommand.vim')
@@ -71,7 +71,8 @@ if dein#load_state('/home/dyuri/.cache/dein')
 
 	" General development
 	"call dein#add("scrooloose/syntastic")
-	call dein#add('dense-analysis/ale')
+	" call dein#add('dense-analysis/ale')
+  call dein#add('dense-analysis/ale', {'rev': '89db85121c001fc60787647f012978a2328816a5'}) " something wrong with deoplete - ale
 	call dein#add('sbdchd/neoformat')
 	call dein#add('AndrewRadev/splitjoin.vim')
 
@@ -82,6 +83,9 @@ if dein#load_state('/home/dyuri/.cache/dein')
 	call dein#add("majutsushi/tagbar")
 	call dein#add("ambv/black")
 	call dein#add("numirias/semshi", {'do': ':UpdateRemotePlugins'})
+
+  " go
+  call dein#add("fatih/vim-go")
 
 	" vue.js
 	call dein#add("posva/vim-vue")
@@ -98,6 +102,7 @@ if dein#load_state('/home/dyuri/.cache/dein')
 
 	" Color
 	call dein#add('tomasr/molokai')
+  call dein#add('sainnhe/edge')
 	call dein#add("w0ng/vim-hybrid")
 
 	" devicons
@@ -114,6 +119,11 @@ endif
 
 filetype plugin indent on
 
+" leader
+let mapleader = "," " map leader to ,
+" map space to leader
+map <space> <leader>
+
 " NERDTree tweeks
 let NERDTreeMinimalUI=1
 let NERDTreeDirArrows=1
@@ -127,11 +137,35 @@ let g:htmlbeautify = {'indent_size': 2, 'indent_char': ' ', 'brace_style': 'expa
 let g:cssbeautify = {'indent_size': 2, 'indent_char': ' '}
 let g:jsbeautify_engine = 'node'
 
+" tern
+let g:tern#command = ["tern"]
+
 " css colors
 let g:Hexokinase_highlighters = ['virtual']
 " let g:Hexokinase_refreshEvents = ['BufWritePost']
 let g:Hexokinase_ftEnabled = ['css', 'html', 'js']
 let g:Hexokinase_optInPatterns = ['full_hex', 'rgb', 'rgba', 'colour_names']
+
+" lsp support
+let g:LanguageClient_serverCommands = {
+  \   'go': ['gopls'],
+  \   'python': ['pyls'],
+  \ }
+
+let g:LanguageClient_useVirtualText = 0
+
+nnoremap <leader>ld :call LanguageClient#textDocument_definition()<CR>
+nnoremap <leader>lr :call LanguageClient#textDocument_rename()<CR>
+nnoremap <leader>lf :call LanguageClient#textDocument_formatting()<CR>
+nnoremap <leader>lt :call LanguageClient#textDocument_typeDefinition()<CR>
+nnoremap <leader>lx :call LanguageClient#textDocument_references()<CR>
+nnoremap <leader>la :call LanguageClient_workspace_applyEdit()<CR>
+nnoremap <leader>lc :call LanguageClient#textDocument_completion()<CR>
+nnoremap <leader>lh :call LanguageClient#textDocument_hover()<CR>
+nnoremap <leader>ls :call LanguageClient_textDocument_documentSymbol()<CR>
+nnoremap <leader>lm :call LanguageClient_contextMenu()<CR>
+
+set signcolumn=yes
 
 " syntastic - disable python (python-mode)
 let g:syntastic_mode_map = { 'mode': 'active',
@@ -141,6 +175,10 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " syntastic checkers
 let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 let g:syntastic_html_checkers = ['eslint']
+
+" golang
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " no jsx by default
 let g:jsx_ext_required=1
@@ -349,7 +387,8 @@ endif
 " if !has("gui_running")
 "   colorscheme repa
 " endif
-colorscheme molokai
+" colorscheme molokai
+colorscheme edge
 set background=dark
 " 24 bit / truecolor support needed
 if has("termguicolors")
@@ -411,9 +450,6 @@ set completeopt=menu " don't need python docstrings
 set clipboard=unnamed " use the system clipboard
 set title
 set autoread " auto read file if changed
-let mapleader = "," " map leader to ,
-" map space to leader
-map <space> <leader>
 
 " ctrlp ignore
 set wildignore+=*/tmp/*,*/build/*,*/target/*,*.so,*.swp,*.zip
@@ -447,8 +483,8 @@ set bk
 "set cursorcolumn
 
 " relative line numbering
-set number
-set relativenumber
+" set number
+" set relativenumber
 
 " cursor movement for broken lines
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -486,6 +522,9 @@ let g:airline#extensions#eclim#enabled = 1
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#virtualenv#enabled = 1
+
+let g:ale_linters = { 'vue': ['eslint'] }
+let g:ale_fixers = { 'javascript': ['eslint'] }
 
 " airline + nerd font
 "let g:airline_left_sep = "\uE0C6"
@@ -692,6 +731,7 @@ inoremap <C-F6> <ESC>mzggg?G'z
 " nnoremap <leader>p :CtrlPMixed<cr>
 
 " unicode homoglyphs
+let g:is_homoglyph_on = 0
 nmap zu <plug>(HighlightHomoglyphs)
 
 " fzf
@@ -703,154 +743,6 @@ nnoremap <F7> :FZF<cr>
 nnoremap ; :Buffers<CR>
 nnoremap <S-F7> :GFiles<cr>
 nnoremap <F19> :GFiles<cr>
-
-" setting the status line
-
-function! RePa_sl_lines()
-  if &nu == 0
-    return ''
-  else
-    let b:lastline = line('$')
-    "if b:lastline < 10
-      "return '[     '.b:lastline.'] '
-    "elseif b:lastline < 100
-      "return '[    '.b:lastline.'] '
-    "elseif b:lastline < 1000
-      "return '[   '.b:lastline.'] '
-    "elseif b:lastline < 10000
-      "return '[  '.b:lastline.'] '
-    "elseif b:lastline < 100000
-      "return '[ '.b:lastline.'] '
-    "elseif b:lastline < 1000000
-      "return '['.b:lastline.'] '
-    "else
-      "return b:lastline.' '
-    "endif
-    return b:lastline.' '
-  endif
-endfunction
-
-function! RePa_sl_filestate()
-  let state = ""
-
-  if &buftype == "help"
-    return 'H'
-  elseif &buftype == "nowrite"
-    return '-'
-  elseif &modified != 0
-    return '*'
-  else
-    return ' '
-  endif
-endfunction
-
-function! RePa_sl_fileformat()
-  if &fileformat == ""
-    return "--"
-  else
-    return &fileformat
-  endif
-endfunction
-
-function! RePa_sl_fileencoding()
-  if &fileencoding == ""
-    if &encoding != ""
-      return &encoding
-    else
-      return "--"
-    endif
-  else
-    return &fileencoding
-  endif
-endfunction
-
-function! RePa_sl_filetype()
-  if &filetype == ""
-    return "--"
-  else
-    return &filetype
-  endif
-endfunction
-
-function! RePa_sl_expandtabON()
-  if &expandtab == 0
-    return ""
-  else
-    return "notab"
-  endif
-endfunction
-
-function! RePa_sl_expandtabOFF()
-  if &expandtab == 0
-    return "notab"
-  else
-    return ""
-  endif
-endfunction
-
-function! RePa_sl_ignorecaseON()
-  if &ignorecase == 0
-    return ""
-  else
-    return "ic"
-  endif
-endfunction
-
-function! RePa_sl_ignorecaseOFF()
-  if &ignorecase == 0
-    return "ic"
-  else
-    return ""
-  endif
-endfunction
-
-function! RePa_sl_mode()
-  return mode()
-endfunction
-
-function! RePa_statusline()
-
-  let sl = ""
-
-  " lines
-  let sl = sl . '%2*%{RePa_sl_lines()}'
-  " mode
-  let sl = sl . '%2*[%3*%{RePa_sl_mode()}%2*]'
-  " filename
-  let sl = sl . '%1*\ %f'
-  " filestate
-  let sl = sl . '%3*%{RePa_sl_filestate()}%{SyntasticStatuslineFlag()}\ '
-  " break
-  let sl = sl . '%<'
-  " working directory
-  let sl = sl . '%2*(%1*%{getcwd()}%2*)\ '
-  " fileformat
-  let sl = sl . '%2*[%{RePa_sl_fileformat()}:'
-  " encoding
-  let sl = sl . '%{RePa_sl_fileencoding()}:'
-  " filetype
-  let sl = sl . '%{RePa_sl_filetype()}]'
-
-  " justify to right
-  let sl = sl . '\ %='
-
-  " expand tab
-  let sl = sl . '%3*%{RePa_sl_expandtabON()}'
-  let sl = sl . '%4*%{RePa_sl_expandtabOFF()}'
-
-  " ignorecase
-  let sl = sl . '%3*\|%{RePa_sl_ignorecaseON()}'
-  let sl = sl . '%4*%{RePa_sl_ignorecaseOFF()}'
-
-  " position, line and column, percentage
-  let sl = sl . '%2*\ %05(%l%),%03(%v%)%2*\ %P'
-
-  return sl
-
-endfunction
-
-" set the statusline
-" execute "set statusline=" . RePa_statusline()
 
 " screen hacks
 map <esc>[1;5A <c-up>

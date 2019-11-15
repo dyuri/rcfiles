@@ -88,6 +88,28 @@ modules-right = rs6 start-chrome start-firefox rs5 pulseaudio rs4 memory rs3 cpu
 line-size = 2
 line-color = ${colors.repa_warn}
 
+[bar/qtile]
+monitor = ${env:MONITOR:DVI-D-0}
+
+height = ${variables.bar-height}
+width = 100%
+fixed-center = false
+bottom = true
+
+background = ${colors.full_bg}
+foreground = ${colors.repa_fg}
+
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
+
+modules-left = ehwm ls1 xwindow ls2
+modules-center =
+modules-right = rs6 start-chrome start-firefox rs5 pulseaudio rs4 memory rs3 cpu rs3 eth rs2 temperature rs1 filesystem rs1 date
+
+line-size = 2
+line-color = ${colors.repa_warn}
+
 ;separators
 [module/ls1]
 type = custom/text
@@ -168,6 +190,87 @@ label-background = ${colors.repa_bg}
 label-padding = 1
 
 label-empty =
+
+[module/ehwm]
+type = internal/xworkspaces
+
+; Only show workspaces defined on the same output as the bar
+;
+; Useful if you want to show monitor specific workspaces
+; on different bars
+;
+; Default: false
+;pin-workspaces = true
+
+; Create click handler used to focus desktop
+; Default: true
+enable-click = true
+
+; Create scroll handlers used to cycle desktops
+; Default: true
+enable-scroll = false
+
+format-padding = 0
+format-background = ${colors.repa_pri}
+format-foreground = ${colors.repa_sec}
+
+; icon-[0-9]+ = <desktop-name>;<icon>
+; NOTE: The desktop name needs to match the name configured by the WM
+; You can get a list of the defined desktops using:
+; $ xprop -root _NET_DESKTOP_NAMES
+icon-0 = code;♚
+icon-1 = office;♛
+icon-2 = graphics;♜
+icon-3 = mail;♝
+icon-4 = web;♞
+icon-default = ♟
+
+; Available tags:
+;   <label-monitor>
+;   <label-state> - gets replaced with <label-(active|urgent|occupied|empty)>
+; Default: <label-state>
+format = <label-state>
+
+; Available tokens:
+;   %name%
+; Default: %name%
+label-monitor = %name%
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-active = %icon% %name%
+label-active-foreground = #ffffff
+label-active-background = #3f3f3f
+label-active-underline = #fba922
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-occupied = %icon% %name%
+label-occupied-underline = #555555
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-urgent = %icon% %name%
+label-urgent-foreground = #000000
+label-urgent-background = #bd2c40
+label-urgent-underline = #9b0a20
+
+; Available tokens:
+;   %name%
+;   %icon%
+;   %index%
+; Default: %icon%  %name%
+label-empty = %icon% %name%
+label-empty-foreground = #555555
 
 [module/i3]
 type = internal/i3

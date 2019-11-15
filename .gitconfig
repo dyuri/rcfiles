@@ -9,6 +9,7 @@
   co = checkout
   df = diff
   dc = diff --cached
+  dt = difftool --no-symlinks --dir-diff
   lg = log -p
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
@@ -45,3 +46,10 @@
 [mergetool]
   prompt = false
   path = nvim
+[diff]
+  tool = kitty
+[difftool]
+  prompt = false
+  trustExitCode = true
+[difftool "kitty"]
+  cmd = kitty +kitten diff $LOCAL $REMOTE

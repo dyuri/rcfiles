@@ -16,8 +16,6 @@ redshift-gtk &
 # logitech egerekhez
 # solaar &
 
-/usr/bin/pulseaudio --start &
-
 wmname LG3D
 
 # fitbit sync
@@ -35,6 +33,8 @@ dunst &
 # background
 feh --bg-scale ~/backgrounds/hatter.png
 
-exec /usr/bin/i3
-# exec /usr/bin/qtile
+/usr/bin/pulseaudio --start &
+
+# exec /usr/bin/i3
+exec /usr/bin/qtile
 # exec /usr/bin/enlightenment_start
