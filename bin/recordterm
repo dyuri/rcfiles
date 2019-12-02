@@ -1,0 +1,7 @@
+#!/bin/bash
+
+RECFILE='/tmp/record.cast'
+OUTFILE=${1:-term.svg}
+
+asciinema rec $RECFILE
+cat $RECFILE | svg-term --out $OUTFILE

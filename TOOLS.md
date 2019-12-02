@@ -20,3 +20,4 @@
 - msgcat --color=test
 - wuzz
 - hyperfine
+- asciinema + svg-term-cli
