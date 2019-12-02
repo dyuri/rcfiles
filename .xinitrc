@@ -36,5 +36,5 @@ feh --bg-scale ~/backgrounds/hatter.png
 /usr/bin/pulseaudio --start &
 
 # exec /usr/bin/i3
-exec /usr/bin/qtile
+exec /usr/bin/qtile > ~/.qtile.log
 # exec /usr/bin/enlightenment_start

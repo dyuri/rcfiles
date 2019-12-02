@@ -1,0 +1,22 @@
+# Tools of choice
+
+- xonsh
+- qtile (<= i3 + polybar)
+- kitty
+- neovim
+- exa (alias ll)
+- prettyping
+- bat
+- tmux
+- fzf
+- fd
+- rg (<= ag)
+- mpv (<= mplayer)
+- httpie
+- gotop/glances (<= htop)
+- neofetch
+- wpg (<= pywal)
+- chafa
+- msgcat --color=test
+- wuzz
+- hyperfine

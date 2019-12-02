@@ -1,6 +1,0 @@
-# 288-adik sor konyeke
-    @property
-    def state(self):
-        state = self.window.get_wm_state()
-        return state[0] if state else "normal"
-

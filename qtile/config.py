@@ -10,41 +10,77 @@ import os
 TERMINAL = os.environ.get('TERMINAL', 'kitty')
 
 
-# TODO
 def window_to_prev_group():
     @lazy.function
     def __inner(qtile):
-        i = qtile.groups.index(qtile.currentGroup)
-        if qtile.currentWindow and i != 0:
+        i = qtile.groups.index(qtile.current_group)
+
+        if qtile.current_window and i != 0:
             group = qtile.groups[i - 1].name
-            qtile.currentWindow.togroup(group)
+            qtile.current_window.togroup(group)
     return __inner
 
 
 def window_to_next_group():
     @lazy.function
     def __inner(qtile):
-        i = qtile.groups.index(qtile.currentGroup)
-        if qtile.currentWindow and i != len(qtile.groups):
+        i = qtile.groups.index(qtile.current_group)
+
+        if qtile.current_window and i != len(qtile.groups):
             group = qtile.groups[i + 1].name
-            qtile.currentWindow.togroup(group)
+            qtile.current_window.togroup(group)
+    return __inner
+
+
+def to_prev_used_group():
+    @lazy.function
+    def __inner(qtile):
+        i = qtile.groups.index(qtile.current_group)
+        gl = len(qtile.groups)
+        to = i - 1 % gl
+
+        while i != to and not qtile.groups[to].windows:
+            to -= 1
+
+        if i != to:
+            qtile.groups[to].cmd_toscreen()
+
+    return __inner
+
+
+def to_next_used_group():
+    @lazy.function
+    def __inner(qtile):
+        i = qtile.groups.index(qtile.current_group)
+        gl = len(qtile.groups)
+        to = i + 1 % gl
+
+        while i != to and not qtile.groups[to].windows:
+            to += 1
+
+        if i != to:
+            qtile.groups[to].cmd_toscreen()
+
     return __inner
 
 
 def app_or_group(group, app):
-    def f(qtile):
-        if qtile.groupMap[group].windows:
-            qtile.groupMap[group].cmd_toscreen()
+    @lazy.function
+    def __inner(qtile):
+        if qtile.groups_map[group].windows:
+            # TODO debug
+            qtile.groups_map[group].cmd_toscreen()
         else:
-            qtile.groupMap[group].cmd_toscreen()
+            qtile.groups_map[group].cmd_toscreen()
             qtile.cmd_spawn(app)
-    return f
+    return __inner
 
 
 mod = "mod4"
 
 keymap = [
-    ('M-S-c', lazy.spawn('google-chrome')),
+    ('M-S-c', app_or_group('www', 'google-chrome')),
+    ('M-c', lazy.spawn('google-chrome')),
     ('M-<Return>', lazy.spawn(TERMINAL)),
     ('M-<Escape>', lazy.spawn("rofi -show run")),
     ('M-<Tab>', lazy.spawn("rofi -show window")),
@@ -58,12 +94,15 @@ keymap = [
 
     ('M-f', lazy.window.toggle_fullscreen()),
     ('M-S-f', lazy.window.toggle_floating()),
+    ('M-C-f', lazy.window.bring_to_front()),
     ('M-<grave>', lazy.window.bring_to_front()),
 
-    ('M-<Left>', lazy.screen.prev_group()),
-    ('M-<Right>', lazy.screen.next_group()),
-    ('M-S-<Left>', window_to_prev_group()),  # TODO
-    ('M-S-<Right>', window_to_next_group()),  # TODO
+    ('M-<Left>', to_prev_used_group()),
+    ('M-<Right>', to_next_used_group()),
+    ('M-C-<Left>', lazy.screen.prev_group()),
+    ('M-C-<Right>', lazy.screen.next_group()),
+    ('M-S-<Left>', window_to_prev_group()),
+    ('M-S-<Right>', window_to_next_group()),
     ('M-A-<Left>', lazy.prev_screen()),
     ('M-A-<Right>', lazy.next_screen()),
     ('A-<Tab>', lazy.group.next_window()),
@@ -184,8 +223,10 @@ screens = [
     Screen(
         top=bar.Bar([
             widget.WindowName(width=bar.CALCULATED, background="#880000"),
+            widget.TextBox("", foreground="#880000", padding=0, fontsize=20),
             widget.Spacer(),
-            widget.CurrentLayout(),
+            widget.TextBox("", foreground="#880000", padding=0, fontsize=20),
+            widget.CurrentLayout(background="#880000"),
         ], 24),
         bottom=bar.Bar([
             widget.GroupBox(urgent_alert_method='text'),
@@ -204,6 +245,7 @@ screens = [
                 graph_color='18BAEB',
                 fill_color='1667EB.3',
                 line_width=1),
+            widget.Net(interface="eth0"),
             widget.Clock(format='%Y.%m.%d %H:%M:%S'),
             widget.Systray(),
         ], 30),

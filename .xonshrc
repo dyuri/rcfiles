@@ -19,9 +19,10 @@ $GO111MODULE="on"
 
 xontrib load bashisms
 xontrib load repa_prompt
-xontrib load readable-traceback
+# xontrib load readable-traceback
 xontrib load ssh_agent
 xontrib load pyenv
+xontrib load kitty
 
 xontrib load fzf-widgets
 $fzf_history_binding = Keys.ControlR

@@ -1,0 +1,30 @@
+# https://docs.python.org/3.8/library/colorsys.html
+
+class Colors():
+    def __init__(self):
+        self.background = "#0d0f01"
+        self.foreground = "#c5c8c6"
+        self.color0 = "#282828"
+        self.color1 = "#cc241d"
+        self.color2 = "#98971a"
+        self.color3 = "#d79921"
+        self.color4 = "#458588"
+        self.color5 = "#b16286"
+        self.color6 = "#689d6a"
+        self.color7 = "#a89984"
+        self.color8 = "#928374"
+        self.color9 = "#fb4934"
+        self.color10 = "#b8bb26"
+        self.color11 = "#fabd2f"
+        self.color12 = "#83a598"
+        self.color13 = "#d3869b"
+        self.color14 = "#8ec07c"
+        self.color15 = "#ebdbb2"
+
+        self.bg_primary = "#383031"
+        self.bg_light = "#585051"
+        self.bg_dark = "#272021"
+        self.fg = "#56cbf9"
+        self.primary = "#70f8ba"
+        self.secondary = "#3c6557"
+        self.warning = "#ea526f"
