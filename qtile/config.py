@@ -157,7 +157,7 @@ for idx, g in enumerate(groups):
     )
 
 groups.extend([
-    Group('www', layout='plasma', persist=False, init=True, screen_affinity=1,
+    Group('www', layout='plasma', persist=True, init=True, screen_affinity=1,
           matches=[Match(wm_class=[
               'google-chrome',
               'google-chrome-unstable',

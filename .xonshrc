@@ -13,16 +13,23 @@ $XONSH_COLOR_STYLE='monokai'
 $XONSH_SHOW_TRACEBACK=False
 $VC_BRANCH_TIMEOUT=.2
 $NPM_PACKAGES=$HOME+'/.npm-packages'
+$GOPATH="/home/dyuri/egyeb/prog/go"
+$PYENV_ROOT=$HOME+"/.pyenv"
+$PATH=[$HOME+'/bin'] + $PATH
+$PATH.append($HOME+'/.pyenv/shims')
+$PATH.append($HOME+'/.pyenv/plugins/pyenv-virtualenv/shims')
 $PATH.append($NPM_PACKAGES+'/bin')
 $PATH.append($GOPATH[0]+'/bin')
-$GO111MODULE="on"
+# $GO111MODULE="on"
 
 xontrib load bashisms
+xontrib load direnv
 xontrib load repa_prompt
 # xontrib load readable-traceback
 xontrib load ssh_agent
 xontrib load pyenv
 xontrib load kitty
+xontrib load gitinfo
 
 xontrib load fzf-widgets
 $fzf_history_binding = Keys.ControlR

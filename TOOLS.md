@@ -4,7 +4,7 @@
 - qtile (<= i3 + polybar)
 - kitty
 - neovim
-- exa (alias ll)
+- exa (alias ll), lsd
 - prettyping
 - bat
 - tmux
@@ -21,3 +21,6 @@
 - wuzz
 - hyperfine
 - asciinema + svg-term-cli
+- pastel (https://github.com/sharkdp/pastel)
+- direnv
+- vifm

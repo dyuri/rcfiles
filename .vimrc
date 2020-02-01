@@ -9,6 +9,10 @@ if has('vim_starting')
   set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 endif
 
+" use system python even in virtualenvs
+let g:python2_host_prog='/usr/bin/python2'
+let g:python3_host_prog='/usr/bin/python'
+
 if dein#load_state('/home/dyuri/.cache/dein')
   call dein#begin('/home/dyuri/.cache/dein')
 
@@ -21,8 +25,9 @@ if dein#load_state('/home/dyuri/.cache/dein')
   call dein#add('scrooloose/nerdcommenter')
 	call dein#add('tpope/vim-commentary')
 	call dein#add('tpope/vim-fugitive')
-	call dein#add('junegunn/fzf', {'build': './install', 'merged': 0})
-	call dein#add('junegunn/fzf.vim')
+	" call dein#add('junegunn/fzf', {'build': './install', 'merged': 0})
+	" call dein#add('junegunn/fzf.vim')
+  call dein#add('Yggdroot/LeaderF', {'build': './install.sh'})
 	call dein#add('bling/vim-airline')
 	call dein#add('vim-airline/vim-airline-themes')
 	call dein#add('sheerun/vim-polyglot') " Check
@@ -55,9 +60,9 @@ if dein#load_state('/home/dyuri/.cache/dein')
 	call dein#add('tpope/vim-unimpaired')
 	call dein#add('tpope/vim-surround')
   call dein#add('nelstrom/vim-visual-star-search')
-	call dein#add('ddrscott/vim-side-search')
 	call dein#add('haya14busa/incsearch.vim')
 	call dein#add('haya14busa/vim-asterisk')
+  call dein#add('machakann/vim-highlightedyank')
 	"call dein#add('chrisbra/vim-diff-enhanced')
 	call dein#add('manicmaniac/betterga')
 	call dein#add('blueyed/vim-diminactive')
@@ -71,8 +76,8 @@ if dein#load_state('/home/dyuri/.cache/dein')
 
 	" General development
 	"call dein#add("scrooloose/syntastic")
-	" call dein#add('dense-analysis/ale')
-  call dein#add('dense-analysis/ale', {'rev': '89db85121c001fc60787647f012978a2328816a5'}) " something wrong with deoplete - ale
+	call dein#add('dense-analysis/ale')
+  " call dein#add('dense-analysis/ale', {'rev': '89db85121c001fc60787647f012978a2328816a5'}) " something wrong with deoplete - ale
 	call dein#add('sbdchd/neoformat')
 	call dein#add('AndrewRadev/splitjoin.vim')
 
@@ -82,7 +87,7 @@ if dein#load_state('/home/dyuri/.cache/dein')
 	"call dein#add('klen/python-mode')
 	call dein#add("majutsushi/tagbar")
 	call dein#add("ambv/black")
-	call dein#add("numirias/semshi", {'do': ':UpdateRemotePlugins'})
+	call dein#add("numirias/semshi", {'build': ':UpdateRemotePlugins'})
 
   " go
   call dein#add("fatih/vim-go")
@@ -104,6 +109,7 @@ if dein#load_state('/home/dyuri/.cache/dein')
 	call dein#add('tomasr/molokai')
   call dein#add('sainnhe/edge')
 	call dein#add("w0ng/vim-hybrid")
+  call dein#add("dylanaraps/wal.vim")
 
 	" devicons
 	call dein#add('ryanoasis/vim-devicons')
@@ -187,7 +193,7 @@ let g:jsx_ext_required=1
 set diffopt+=filler,internal,algorithm:patience,indent-heuristic
 
 " python-mode, jedi
-let g:jedi#show_call_signatures = 1
+let g:jedi#show_call_signatures = 2
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#auto_vim_configuration = 0
 let g:jedi#goto_assignments_command = "<leader>g"
@@ -212,6 +218,9 @@ let g:deoplete#enable_at_startup = 1
 " inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 " inoremap <expr><C-y> neocomplete#close_popup()
 " inoremap <expr><C-e> neocomplete#cancel_popup()
+
+" highlightyank
+let g:highlightedyank_highlight_duration = 1000
 
 " incsearch
 map /  <Plug>(incsearch-forward)
@@ -383,17 +392,17 @@ if v:version >= 700
   hi TabLineSel           guifg=White guibg=Black
 endif
 
-" colors via CSApprox
-" if !has("gui_running")
-"   colorscheme repa
-" endif
-" colorscheme molokai
-colorscheme edge
+colorscheme molokai
+" colorscheme edge
+" colorscheme wal
 set background=dark
 " 24 bit / truecolor support needed
 if has("termguicolors")
   set tgc
 endif
+
+nnoremap <leader>sm :set tgc<cr>:colorscheme molokai<cr>
+nnoremap <leader>sw :set notgc<cr>:colorscheme wal<cr>
 
 if has("gui_running")
   set guifont=MesloLGS\ Nerd\ Font\ 10
@@ -704,9 +713,10 @@ nmap <F2> :NERDTreeToggle<CR><C-W>l<C-W>j
 imap <F2> <ESC>:NERDTreeToggle<CR><C-W>l<C-W>ji
 nmap <F8> :set wrap!<CR>
 nmap <F9> :TagbarToggle<CR>
-nmap <F11> :set nu!<CR>
+nmap <F11> :set nu!<CR>:set relativenumber!<CR>
 nmap <F12> :set list!<CR>:RainbowToggle<CR>
 nmap <C-F12> :set cursorline!<CR>:set cursorcolumn!<CR>
+nmap <F36> :set cursorline!<CR>:set cursorcolumn!<CR>
 
 " buffer navigation
 nmap <F3> :bp!<cr>
@@ -736,13 +746,34 @@ nmap zu <plug>(HighlightHomoglyphs)
 
 " fzf
 
-let g:fzf_layout = { 'down': '~40%' }
-let g:fzf_history_dir = '~/.local/share/fzf-history'
-let g:fzf_buffers_jump = 1
-nnoremap <F7> :FZF<cr>
-nnoremap ; :Buffers<CR>
-nnoremap <S-F7> :GFiles<cr>
-nnoremap <F19> :GFiles<cr>
+" let g:fzf_layout = { 'down': '~40%' }
+" let g:fzf_history_dir = '~/.local/share/fzf-history'
+" let g:fzf_buffers_jump = 1
+" nnoremap <F7> :FZF<cr>
+" nnoremap ; :Buffers<CR>
+" nnoremap <S-F7> :GFiles<cr>
+" nnoremap <F19> :GFiles<cr>
+
+" LeaderF
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
+let g:Lf_StlSeparator = {'left': "\ue0b0", 'right': "\ue0b2"}
+let g:Lf_HideHelp = 1
+let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
+
+let g:Lf_ShortcutF = "<leader>ff"
+noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+
+nnoremap <F7> :Leaderf file<cr>
+nnoremap <S-F7> :Leaderf rg<cr>
+nnoremap <C-F7> :Leaderf mru<cr>
+nnoremap <F19> :Leaderf rg<cr>
+nnoremap <F31> :Leaderf mru<cr>
+nnoremap ; :Leaderf buffer<cr>
 
 " screen hacks
 map <esc>[1;5A <c-up>
