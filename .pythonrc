@@ -5,17 +5,17 @@ import os,sys
 print("Helyzet?")
 
 # prompt
-if os.getenv('TERM') in ('xterm', 'vt100', 'rxvt', 'Eterm', 'putty', 'rxvt-unicode'):
+if os.getenv('TERM') in ('xterm', 'vt100', 'rxvt', 'Eterm', 'putty', 'rxvt-unicode', 'xterm-kitty'):
     try:
         import readline
     except ImportError:
-        sys.ps1 = '\033[0;32mpy> \033[0m'
-        sys.ps2 = '\033[0;32m... \033[0m'
+        sys.ps1 = '\033[0;33mpy\033[0;32m❯ \033[0m'
+        sys.ps2 = '\033[0;31m❯\033[0;33m❯\033[0;32m❯ \033[0m'
     else:
-        sys.ps1 = '\001\033[0;32m\002py> \001\033[0m\002'
-        sys.ps2 = '\001\033[0;32m\002... \001\033[0m\002'
+        sys.ps1 = '\033[0;33mpy\033[0;32m❯ \001\033[0m\002'
+        sys.ps2 = '\033[0;31m❯\033[0;33m❯\033[0;32m❯ \001\033[0m\002'
 else:
-    sys.ps1 = "py> "
+    sys.ps1 = "py❯ "
 
 # TAB completition, permament history
 try:

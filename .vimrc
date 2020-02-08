@@ -22,14 +22,13 @@ if dein#load_state('/home/dyuri/.cache/dein')
   " my plugins
   call dein#add('Shougo/vimproc.vim', {'build': 'make'})
   call dein#add('scrooloose/nerdtree')
+  call dein#add('Xuyuanp/nerdtree-git-plugin')
   call dein#add('scrooloose/nerdcommenter')
 	call dein#add('tpope/vim-commentary')
 	call dein#add('tpope/vim-fugitive')
-	" call dein#add('junegunn/fzf', {'build': './install', 'merged': 0})
-	" call dein#add('junegunn/fzf.vim')
   call dein#add('Yggdroot/LeaderF', {'build': './install.sh'})
-	call dein#add('bling/vim-airline')
-	call dein#add('vim-airline/vim-airline-themes')
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('mengelbrecht/lightline-bufferline')
 	call dein#add('sheerun/vim-polyglot') " Check
 	call dein#add('mileszs/ack.vim')
 	call dein#add('ddrscott/vim-side-search')
@@ -50,8 +49,9 @@ if dein#load_state('/home/dyuri/.cache/dein')
     \ })
 	call dein#add('ternjs/tern_for_vim')
 	call dein#add('Shougo/denite.nvim')
-	call dein#add('vim-scripts/vcscommand.vim')
+	" call dein#add('vim-scripts/vcscommand.vim')
 	call dein#add('tpope/vim-abolish')
+	call dein#add('tpope/vim-fugitive')
 	"call dein#add('pangloss/vim-javascript' " replaced by polyglot)call dein#add('othree/yajs.vim')
 	"call dein#add('bolasblack/csslint.vim')
 	call dein#add('ludovicchabant/vim-lawrencium')
@@ -129,6 +129,13 @@ filetype plugin indent on
 let mapleader = "," " map leader to ,
 " map space to leader
 map <space> <leader>
+
+" wildmenu arrow key navigation
+set wildcharm=<C-Z>
+cnoremap <expr> <up> wildmenumode() ? "\<left>" : "\<up>"
+cnoremap <expr> <down> wildmenumode() ? "\<right>" : "\<down>"
+cnoremap <expr> <left> wildmenumode() ? "\<up>" : "\<left>"
+cnoremap <expr> <right> wildmenumode() ? " \<bs>\<C-Z>" : "\<right>"
 
 " NERDTree tweeks
 let NERDTreeMinimalUI=1
@@ -512,35 +519,50 @@ if has("gui_running")
   set mouse=a
 endif
 
-" Powerline - replaced by airline
-" let g:Powerline_symbols = 'fancy'
-" python from powerline.vim import setup as powerline_setup
-" python powerline_setup()
-" python del powerline_setup
+" lightline
+" 'colorscheme': 'powerlineish'
+set showtabline=2
+let g:lightline = {
+  \   'active': {
+  \     'left':[ [ 'mode', 'paste' ],
+  \              [ 'gitbranch', 'readonly', 'filename', 'modified' ]
+  \     ]
+  \   },
+  \   'tabline': {
+  \     'left': [ [ 'buffers' ] ],
+  \     'right': [],
+  \   },
+  \   'component_expand': {
+  \     'buffers': 'lightline#bufferline#buffers',
+  \   },
+  \   'component_type': {
+  \     'buffers': 'tabsel',
+  \   },
+	\   'component': {
+	\     'lineinfo': ' %3l:%-2v',
+	\   },
+  \   'component_function': {
+  \     'gitbranch': 'fugitive#head',
+  \   },
+  \   'separator': {
+	\     'left': '', 'right': ''
+  \   },
+  \   'subseparator': {
+	\     'left': '', 'right': '' 
+  \   }
+  \ }
 
-" Airline
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'powerlineish'
-let g:airline#extensions#quickfix#quickfix_text = 'Quickfix'
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#branch#use_vcscommand = 1
-let g:airline#extensions#syntastic#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
-let g:airline#extensions#hunks#enabled = 1
-let g:airline#extensions#eclim#enabled = 1
-let g:airline#extensions#whitespace#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#virtualenv#enabled = 1
+let g:lightline#bufferline#enable_devicons = 1
+let g:lightline#bufferline#unicode_symbols = 1
 
 let g:ale_linters = { 'vue': ['eslint'] }
 let g:ale_fixers = { 'javascript': ['eslint'] }
 
-" airline + nerd font
-"let g:airline_left_sep = "\uE0C6"
-"let g:airline_right_sep = "\uE0C7"
-
 " Signify
 let g:signify_vcs_list = [ 'git', 'hg' ]
+
+" VCSCommand
+let g:VCSCommandVCSTypePreference = ['git', 'hg']
 
 " Ag
 let g:ackprg = 'ag --nogroup --nocolor --column'

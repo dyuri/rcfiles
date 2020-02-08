@@ -1,7 +1,7 @@
 # xontribs
 # - bashisms
 # - xontirb-readable-traceback
-# - https://github.com/laloch/xontrib-fzf-widgets
+# - https://github.com/dyuri/xontrib-fzf-widgets
 # - xontrib-ssh-agent
 # - xontrib-pyenv
 # - xontrib-repa-prompt
@@ -15,12 +15,14 @@ $VC_BRANCH_TIMEOUT=.2
 $NPM_PACKAGES=$HOME+'/.npm-packages'
 $GOPATH="/home/dyuri/egyeb/prog/go"
 $PYENV_ROOT=$HOME+"/.pyenv"
-$PATH=[$HOME+'/bin'] + $PATH
-$PATH.append($HOME+'/.pyenv/shims')
-$PATH.append($HOME+'/.pyenv/plugins/pyenv-virtualenv/shims')
+$PATH=[$HOME+'/bin', $HOME+'/.local/bin'] + $PATH
+$PATH=$PATH + [$PYENV_ROOT+'/bin', $PYENV_ROOT+'/shims', $PYENV_ROOT+'/plugins/pyenv-virtualenv/shims']
 $PATH.append($NPM_PACKAGES+'/bin')
 $PATH.append($GOPATH[0]+'/bin')
 # $GO111MODULE="on"
+$SDL_AUDIODRIVER="pulse"
+$AUDIODEV="default"
+$PYTHONSTARTUP=$HOME+"/.pythonrc"
 
 xontrib load bashisms
 xontrib load direnv
@@ -35,11 +37,13 @@ xontrib load fzf-widgets
 $fzf_history_binding = Keys.ControlR
 $fzf_ssh_binding = Keys.ControlS
 $fzf_file_binding = Keys.ControlT
+$fzf_history_size = 1000
 
 # env
 # $FZF_DEFAULT_COMMAND='rg --files --no-ignore --no-ignore-vcs --hidden --follow --glob "!.git/*" --glob "!.hg/*"'
 $FZF_DEFAULT_COMMAND="fd --type file --color=always --follow --hidden --exclude .git --exclude .hg"
-$FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :100 {}'"
+# $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --preview 'bat --color=always --style=header,grid --line-range :100 {}'"
+$FZF_DEFAULT_OPTS="--ansi --style=header,grid --line-range :100 {}'"
 
 # dircolors
 source-bash $(dircolors ~/config/dircolors/dircolors.molokai)
@@ -59,4 +63,5 @@ aliases['lg']='lazygit'
 aliases['cat']='bat'
 aliases['ping']='prettyping --nolegend'
 aliases['fzvim']='vim `fzf`'
+aliases['py']='ipython'
 
