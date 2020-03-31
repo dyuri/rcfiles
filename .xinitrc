@@ -8,7 +8,8 @@ xset +dpms
 # X resources
 xrdb ~/.Xdefaults
 
-# parcellite &
+# clipboard sync
+parcellite &
 
 # blueshift --configurations config/blueshift.conf &
 redshift-gtk &
@@ -34,6 +35,8 @@ dunst &
 feh --bg-scale ~/backgrounds/hatter.png
 
 # /usr/bin/pulseaudio --start &
+
+setxkbmap repa dox
 
 # exec /usr/bin/i3
 exec /usr/bin/qtile > ~/.qtile.log

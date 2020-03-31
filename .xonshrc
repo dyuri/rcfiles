@@ -12,7 +12,7 @@ $PROMPT_TOOLKIT_COLOR_DEPTH='DEPTH_24_BIT'
 $XONSH_COLOR_STYLE='monokai'
 $XONSH_SHOW_TRACEBACK=False
 $VC_BRANCH_TIMEOUT=.2
-$NPM_PACKAGES=$HOME+'/.npm-packages'
+$NPM_PACKAGES=$HOME+'/.npm'
 $GOPATH="/home/dyuri/egyeb/prog/go"
 $PYENV_ROOT=$HOME+"/.pyenv"
 $PATH=[$HOME+'/bin', $HOME+'/.local/bin'] + $PATH
@@ -23,6 +23,8 @@ $PATH.append($GOPATH[0]+'/bin')
 $SDL_AUDIODRIVER="pulse"
 $AUDIODEV="default"
 $PYTHONSTARTUP=$HOME+"/.pythonrc"
+$BROWSER="/home/dyuri/bin/ff"
+# $BINARY_SSH="/bin/ssh"
 
 xontrib load bashisms
 xontrib load direnv
@@ -37,7 +39,7 @@ xontrib load fzf-widgets
 $fzf_history_binding = Keys.ControlR
 $fzf_ssh_binding = Keys.ControlS
 $fzf_file_binding = Keys.ControlT
-$fzf_history_size = 1000
+# $fzf_history_size = 1000
 
 # env
 # $FZF_DEFAULT_COMMAND='rg --files --no-ignore --no-ignore-vcs --hidden --follow --glob "!.git/*" --glob "!.hg/*"'
@@ -64,4 +66,16 @@ aliases['cat']='bat'
 aliases['ping']='prettyping --nolegend'
 aliases['fzvim']='vim `fzf`'
 aliases['py']='ipython'
+aliases['mosh']=['mosh', '--ssh=repassh']
 
+# json
+try:
+    import __builtin__
+except ImportError:
+    import builtins as __builtin__
+__builtin__.true = True
+__builtin__.false = False
+__builtin__.null = None
+
+# MOTD
+~/bin/repamotd

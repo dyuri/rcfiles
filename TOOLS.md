@@ -16,11 +16,13 @@
 - gotop/glances (<= htop)
 - neofetch
 - wpg (<= pywal)
+- flameshot
 - chafa
 - msgcat --color=test
 - wuzz
 - hyperfine
 - asciinema + svg-term-cli
-- pastel (https://github.com/sharkdp/pastel)
+- pastel (https://github.com/sharkdp/pastel) -> repacolors
 - direnv
 - vifm
+- repassh

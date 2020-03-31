@@ -1,0 +1,472 @@
+#!/bin/bash
+#################################################################
+# Naptár, az elterjedt DOS-os program egyszerû shell változata  #
+#   az eredeti adatállományok felhasználásával --- 1.1v         #
+# Szerzo: Nemeth Laszlo <nemethl@sol.cc.u-szeged.hu>            #
+# Felhasznált ,,irodalom:''                                     #
+#   man bash/test/date/awk/cut/console-codes  (man-pages-1.21)  #
+#   Kernighan & Pike: A UNIX op. rendszer                       #
+#   Bagoly Zs.--Papp G.: UNIX alapismeretek                     #
+# Másoljuk az /usr/bin könyvtárba, és ha minden felhasználónak  # 
+# beállítjuk, az /etc/profile fajlt bõvítsük ki a naptar sorral.#
+#################################################################
+
+# Ha nincs, akkor letrehozza a felhasználoi definicios allomanyt
+test -e ~/.naptar/naptar.dat || (mkdir &> /dev/null ~/.naptar; grep "^;" /usr/bin/naptar > ~/.naptar/naptar.dat )
+
+# A $TOMB awk forras, amit ketszer hasznalunk fel ebben a szkriptben
+# Sztringgel indexelt tomboket es konzol vezerloszekvenciakat tartalmaz
+TOMB='
+  BEGIN {nap["0"]="vasárnap";
+  nap["1"]="hétfõ";
+  nap["2"]="kedd";
+  nap["3"]="szerda";
+  nap["4"]="csütörtök";
+  nap["5"]="péntek";
+  nap["6"]="szombat";
+  honap["01"]="január";
+  honap["02"]="február";
+  honap["03"]="március";
+  honap["04"]="április";
+  honap["05"]="május";
+  honap["06"]="június";
+  honap["07"]="július";
+  honap["08"]="augusztus";
+  honap["09"]="szeptember";
+  honap["10"]="október";
+  honap["11"]="november";
+  honap["12"]="december";  
+  ON="\033[1m";
+  OFF="\033[0m";
+  }'
+
+# Megadott névhez ($1) tartozó névnap dátumának kilistázása e szkriptbol ()
+test -z "$1" || { grep ^[0-1] /usr/bin/naptar | grep $1 | awk "$TOMB"'
+  {print ON honap[substr($1,1,2)] " " sprintf("%d",substr($1,3,2)) OFF " " substr(/usr/bin/naptar,6,80)}
+  '; exit } ;}
+  
+# Naptári információk megjelenítése
+VONAL="\033[36m\033[1m------------------------------------------------------------------------------\033[0m"
+HONAP=`date +%m`
+NAP=`date +%d`
+echo -e $VONAL
+echo `date +"%w %Y %m %d %W %j %k %M %S"` `date --date "31 dec" +%j`  | awk "
+  $TOMB"'
+  {print "Ma "ON nap[$1] OFF" van, "ON $2 ". "honap[$3]" "sprintf("%d",$4)"."OFF;
+  print "Ez az év "ON sprintf("%d",$5+1) ". " OFF "hete és " ON sprintf("%d",$6) ". " OFF "napja, még "ON sprintf("%d", $10 - $6) OFF " nap van hátra az évbõl.";
+  print "Az idõ: "ON $7 OFF" óra "ON sprintf("%d", $8) OFF " perc és "ON sprintf("%d", $9) OFF " másodperc.";
+  }'
+grep ^$HONAP$NAP /usr/bin/naptar | 
+  awk -F"\t" '{print "Boldog névnapot kedves \033[33m\033[1m"$2"\033[0m nevû felhasználóinknak!"}'
+HOLNAP=`date --date '1 day' +%m%d`
+echo -n "Elkövetkezendõ névnapok:"`grep ^$HOLNAP /usr/bin/naptar | cut -b 5-80`"; "
+HOLNAP=`date --date '2 days' +%m%d`
+echo -n `grep ^$HOLNAP /usr/bin/naptar | cut -b 5-80`"; "
+HOLNAP=`date --date '3 days' +%m%d`
+echo -e `grep ^$HOLNAP /usr/bin/naptar | cut -b 5-80`"\033[35m\033[1m"
+
+# Kiszurjuk a felhasznaloi def. allomanybol is a mai napra vonatkozo sorokat
+grep "^0000
+^"00"$NAP
+^$HONAP"00"
+^$HONAP$NAP" ~/.naptar/naptar.dat | cut -b 6-80 
+echo -e $VONAL
+exit
+;
+;                                  naptar.dat
+;
+;
+;
+;  A naptar.dat állomány a naptar prg. tartozéka. Ennek segítségével saját
+;  évfordulóinkat; barátaink, ismerõseink születésnapját, nevezetes esemé-
+;  nyeket is "megjegyeztethetünk" a programmal.  A felhasználó által beírt
+;  sorok lila színnel jelennek meg.
+;
+;
+;  A következõ forma használatos:  A felhasználó üzenete egy négy karakte-
+;  res azonosítóból, egy szóközbõl és az üzenetbõl áll.  A négy karakteres
+;  azonosító a hónapot illetve a napot jelöli. Például február 23-át 0223-
+;  mal kell jelölni. Ha szeretnénk, hogy minden hónap 23-án figyelmeztetne
+;  a program minket valamire, akkor 0023-at írjunk be. Ugyanez természete-
+;  sen fordítva is igaz,  ha egy meghatározott hónap minden napján szeret-
+;  nénk látni üzenetünket, akkor megadhatjuk a 0200 formátumot. Használha-
+;  tó ugyancsak a 0000 azonosító, ekkor az üzenet minden programindításkor
+;  meg  fog jelenni.  Egyszerre több üzenetet is  kiírathatunk, sorrendjük
+;  a naptar.dat állománytól függ.
+;
+;
+; Példák:
+;  Ne felejtsük, hogy az azonosítót az elsõ oszlopban kell kezdeni!
+;
+; 0308 Minden évben március 8-án megjelenik.
+; 0000 Ez egy olyan üzenet, amely egész évben, minden nap meg fog jelenni.
+; 0200 Ez a mondat februárban minden napján megjelenik.
+; 0031 Minden hónap 31. napján, ha van ilyen az adott hónapnak.
+; 0307 Holnap nõnap! (Érdemes elõre figyelmeztetni magunkat. :)
+;
+0101	Fruzsina
+0102	Ábel
+0103	Genovéva, Benjámin
+0104	Titusz, Leona
+0105	Simon
+0106	Boldizsár
+0107	Attila, Ramóna
+0108	Gyöngyvér
+0109	Marcell
+0110	Melánia
+0111	Ágota
+0112	Ernõ
+0113	Veronika
+0114	Bódog
+0115	Lóránt, Loránd
+0116	Gusztáv
+0117	Antal, Antónia
+0118	Piroska
+0119	Sára, Márió
+0120	Fábián, Sebestyén
+0121	Ágnes
+0122	Vince, Artúr
+0123	Zelma, Rajmund
+0124	Timót
+0125	Pál
+0126	Vanda, Paula
+0127	Angelika
+0128	Károly, Karola
+0129	Adél
+0130	Martina, Gerda
+0131	Marcella
+0201	Ignác
+0202	Karolina, Aida
+0203	Balázs
+0204	Ráhel, Csenge
+0205	Ágota, Ingrid
+0206	Dorottya, Dóra
+0207	Tódor, Rómeó
+0208	Aranka
+0209	Abigél, Alex
+0210	Elvira
+0211	Bertold, Marietta
+0212	Lívia, Lídia
+0213	Ella, Linda
+0214	Bálint, Valentin
+0215	Kolos, Georgina
+0216	Julianna, Lilla
+0217	Donát
+0218	Bernadett
+0219	Zsuzsanna
+0220	Aladár, Álmos
+0221	Eleonóra
+0222	Gerzson
+0223	Alfréd
+0224	Mátyás
+0225	Géza
+0226	Edina
+0227	Ákos, Bátor
+0228	Elemér
+0229	Anonymus
+0301	Albin
+0302	Lujza
+0303	Kornélia
+0304	Kázmér
+0305	Adorján, Adrián
+0306	Leonóra, Inez
+0307	Tamás
+0308	Zoltán
+0309	Franciska, Fanni
+0310	Ildikó
+0311	Szilárd
+0312	Gergely
+0313	Krisztián, Ajtony
+0314	Matild
+0315	Kristóf
+0316	Henrietta
+0317	Gertrúd, Patrik
+0318	Sándor, Ede
+0319	József, Bánk
+0320	Klaudia
+0321	Benedek
+0322	Beáta, Izolda
+0323	Emõke
+0324	Gábor, Karina
+0325	Irén, Irisz
+0326	Emánuel
+0327	Hajnalka
+0328	Gedeon, Johanna
+0329	Aguszta
+0330	Zalán
+0331	Árpád
+0401	Hugó
+0402	Áron
+0403	Buda, Richárd
+0404	Izidor
+0405	Vince
+0406	Vilmos, Bíborka
+0407	Herman
+0408	Dénes
+0409	Erhard
+0410	Zsolt
+0411	Leó, Szaniszló
+0412	Gyula
+0413	Ida
+0414	Tibor
+0415	Anasztázia, Tas
+0416	Csongor
+0417	Rudolf
+0418	Andrea, Ilma
+0419	Emma
+0420	Tivadar
+0421	Konrád
+0422	Csilla, Noémi
+0423	Béla
+0424	György
+0425	Márk
+0426	Ervin
+0427	Zita
+0428	Valéria
+0429	Péter
+0430	Katalin, Kitti
+0501	Fülöp, Jakab
+0502	Zsigmond
+0503	Tímea, Irma
+0504	Mónika, Flórián
+0505	Györgyi
+0506	Ivett, Frida
+0507	Gizella
+0508	Mihály
+0509	Gergely
+0510	Ármin, Pálma
+0511	Ferenc
+0512	Pongrác
+0513	Szervác, Imola
+0514	Bonifác
+0515	Zsófia, Szonja
+0516	Mózes, Botond
+0517	Paszkál
+0518	Erik, Alexandra
+0519	Ivó, Milán
+0520	Bernát, Felícia
+0521	Konstantin
+0522	Júlia, Rita
+0523	Dezsõ
+0524	Eszter, Eliza
+0525	Orbán
+0526	Fülöp, Evelin
+0527	Hella
+0528	Emil, Csanád
+0529	Magdolna
+0530	Janka, Zsanett
+0531	Angéla, Petronella
+0601	Tünde
+0602	Kármen, Anita
+0603	Klotild
+0604	Bulcsú
+0605	Fatime
+0606	Norbert, Cintia
+0607	Róbert
+0608	Medárd
+0609	Félix
+0610	Margit, Gréta
+0611	Barnabás
+0612	Villõ
+0613	Antal, Anett
+0614	Vazul
+0615	Jolán, Vid
+0616	Jusztin
+0617	Laura, Alida
+0618	Arnold, Levente
+0619	Gyárfás
+0620	Rafael
+0621	Alajos, Leila
+0622	Paulina
+0623	Zoltán
+0624	Iván
+0625	Vilmos
+0626	János, Pál
+0627	László
+0628	Levente, Irén
+0629	Péter, Pál
+0630	Pál
+0701	Tihamér, Annamária
+0702	Ottó
+0703	Kornél, Soma
+0704	Ulrik
+0705	Emese, Sarolta
+0706	Csaba
+0707	Apollónia
+0708	Ellák
+0709	Lukrécia
+0710	Amália
+0711	Nóra, Lili
+0712	Izabella, Dalma
+0713	Jenõ
+0714	Örs, Stella
+0715	Henrik, Roland
+0716	Valter
+0717	Endre, Elek
+0718	Frigyes
+0719	Emília
+0720	Illés
+0721	Dániel, Daniella
+0722	Magdolna
+0723	Lenke
+0724	Kinga, Kincsõ
+0725	Kristóf, Jakab
+0726	Anna, Anikó
+0727	Olga, Liliána
+0728	Szabolcs
+0729	Márta, Flóra
+0730	Judit, Xénia
+0731	Oszkár
+0801	Boglárka
+0802	Lehel
+0803	Hermina
+0804	Domonkos, Dominika
+0805	Krisztina
+0806	Berta, Bettina
+0807	Ibolya
+0808	László
+0809	Emõd
+0810	Lõrinc
+0811	Zsuzsanna, Tiborc
+0812	Klára
+0813	Ipoly
+0814	Marcell
+0815	Mária
+0816	Ábrahám
+0817	Jácint
+0818	Ilona
+0819	Huba
+0820	István
+0821	Sámuel, Hajna
+0822	Menyhért, Mirjam
+0823	Bence
+0824	Bertalan
+0825	Lajos, Patrícia
+0826	Izsó
+0827	Gáspár
+0828	Ágoston
+0829	Beatrix, Erna
+0830	Rózsa
+0831	Erika, Bella
+0901	Egyed, Egon
+0902	Rebeka, Dorina
+0903	Hilda
+0904	Rozália
+0905	Viktor, Lõrinc
+0906	Zakariás
+0907	Regina
+0908	Mária, Adrienn
+0909	Ádám
+0910	Nikolett, Hunor
+0911	Teodóra
+0912	Mária
+0913	Kornél
+0914	Szeréna, Roxána
+0915	Enikõ, Melitta
+0916	Edit
+0917	Zsófia
+0918	Diána
+0919	Vilhelmina
+0920	Friderika
+0921	Máté, Mirella
+0922	Móric
+0923	Tekla
+0924	Gellért, Mercédesz
+0925	Eufrozina, Kende
+0926	Jusztina
+0927	Adalbert
+0928	Vencel
+0929	Mihály
+0930	Jeromos
+1001	Malvin
+1002	Petra
+1003	Helga
+1004	Ferenc
+1005	Aurél
+1006	Brúnó, Renáta
+1007	Amália
+1008	Koppány
+1009	Dénes
+1010	Gedeon
+1011	Brigitta
+1012	Miksa
+1013	Kálmán, Ede
+1014	Helén
+1015	Teréz
+1016	Gál
+1017	Hedvig
+1018	Lukács
+1019	Nándor
+1020	Vendel
+1021	Orsolya
+1022	Elõd
+1023	Gyöngyi
+1024	Salamon
+1025	Blanka, Bianka
+1026	Dömötör
+1027	Szabina
+1028	Simon, Szimonetta
+1029	Nárcisz
+1030	Alfonz
+1031	Farkas
+1101	Marianna
+1102	Achilles
+1103	Gyõzõ
+1104	Károly
+1105	Imre
+1106	Lénárd
+1107	Rezsõ
+1108	Zsombor
+1109	Tivadar
+1110	Réka
+1111	Márton
+1112	Jónás, Renátó
+1113	Szilvia
+1114	Aliz
+1115	Albert, Lipót
+1116	Ödön
+1117	Hortenzia, Gergõ
+1118	Jenõ
+1119	Erzsébet
+1120	Jolán
+1121	Olivér
+1122	Cecília
+1123	Kelemen, Klementina
+1124	Emma
+1125	Katalin
+1126	Virág
+1127	Virgil
+1128	Stefánia
+1129	Taksony
+1130	András, Andor
+1201	Elza
+1202	Melinda, Vivien
+1203	Ferenc
+1204	Borbála, Barbara
+1205	Vilma
+1206	Miklós
+1207	Ambrus
+1208	Mária
+1209	Natália
+1210	Judit
+1211	Árpád
+1212	Gabriella
+1213	Luca, Otília
+1214	Szilárda
+1215	Valér
+1216	Etelka, Aletta
+1217	Lázár, Olimpia
+1218	Auguszta
+1219	Viola
+1220	Teofil
+1221	Tamás
+1222	Zénó
+1223	Viktória
+1224	Ádám, Éva
+1225	Eugénia
+1226	István
+1227	János
+1228	Kamilla
+1229	Tamás, Tamara
+1230	Dávid
+1231	Szilveszter

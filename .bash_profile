@@ -12,3 +12,5 @@ fi
 # . /home/dyuri/.profabevjava
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+source /home/dyuri/.config/broot/launcher/bash/br

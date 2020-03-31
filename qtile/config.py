@@ -78,12 +78,15 @@ def app_or_group(group, app):
 
 mod = "mod4"
 
-keymap = [
-    ('M-S-c', app_or_group('www', 'google-chrome')),
-    ('M-c', lazy.spawn('google-chrome')),
+keymap_ansi = [
+    # ('M-S-c', app_or_group('www', 'google-chrome')),
+    # ('M-c', lazy.spawn('google-chrome')),
+    ('M-S-c', app_or_group('www', 'ff')),
+    ('M-c', lazy.spawn('ff')),
     ('M-<Return>', lazy.spawn(TERMINAL)),
     ('M-<Escape>', lazy.spawn("rofi -show run")),
-    ('M-<Tab>', lazy.spawn("rofi -show window")),
+    ('M-S-<Escape>', lazy.spawn("rofi -show emoji")),
+    ('M-<Tab>', lazy.spawn("rofi -combi-modi window,run -show combi -modi combi,run,window,emoji")),
     ('A-C-l', lazy.spawn('i3lock -i sajat/bg.png -c 000000')),
 
     ('M-C-r', lazy.restart()),
@@ -141,6 +144,75 @@ keymap = [
     ('M-<bracketleft>', lazy.spawn('playerctl play-pause')),
     ('M-<bracketright>', lazy.spawn('playerctl next')),
 ]
+
+keymap_dox = [
+    # ('M-S-c', app_or_group('www', 'google-chrome')),
+    ('M-S-c', app_or_group('www', 'ff')),
+    # ('M-c', lazy.spawn('google-chrome')),
+    ('M-c', lazy.spawn('ff')),
+    ('M-<Return>', lazy.spawn(TERMINAL)),
+    ('M-<Escape>', lazy.spawn("rofi -show run")),
+    ('M-S-<Escape>', lazy.spawn("rofi -show emoji")),
+    ('M-<Tab>', lazy.spawn("rofi -combi-modi window,run -show combi -modi combi,run,window,emoji")),
+    ('A-C-l', lazy.spawn('i3lock -i sajat/bg.png -c 000000')),
+
+    ('M-C-r', lazy.restart()),
+
+    ('M-<BackSpace>', lazy.layout.rotate()),
+    ('M-S-<space>', lazy.layout.toggle_split()),
+    ('M-A-<space>', lazy.next_layout()),
+
+    ('M-f', lazy.window.toggle_fullscreen()),
+    ('M-S-f', lazy.window.toggle_floating()),
+    ('M-C-f', lazy.window.bring_to_front()),
+    ('M-<grave>', lazy.window.bring_to_front()),
+
+    ('M-<Left>', to_prev_used_group()),
+    ('M-<Right>', to_next_used_group()),
+    ('M-C-<Left>', lazy.screen.prev_group()),
+    ('M-C-<Right>', lazy.screen.next_group()),
+    ('M-S-<Left>', window_to_prev_group()),
+    ('M-S-<Right>', window_to_next_group()),
+    ('M-A-<Left>', lazy.prev_screen()),
+    ('M-A-<Right>', lazy.next_screen()),
+    ('A-<Tab>', lazy.group.next_window()),
+    ('A-S-<Tab>', lazy.group.prev_window()),
+    ('M-w', lazy.window.kill()),
+
+    ('M-C-h', lazy.layout.grow_left(), lazy.layout.decrease_ratio(), lazy.layout.grow_width(-30)),  # dvorak h
+    ('M-C-t', lazy.layout.grow_down(), lazy.layout.decrease_nmaster(), lazy.layout.grow_height(-30)),  # dvorak j
+    ('M-C-n', lazy.layout.grow_up(), lazy.layout.increase_nmaster(), lazy.layout.grow_height(30)),  # dvorak k
+    ('M-C-s', lazy.layout.grow_right(), lazy.layout.increase_ratio(), lazy.layout.grow_width(30)),  # dvorak l
+
+    ('M-h', lazy.layout.left(), lazy.layout.previous()),  # h
+    ('M-t', lazy.layout.down()),  # j
+    ('M-n', lazy.layout.up()),  # k
+    ('M-s', lazy.layout.right(), lazy.layout.next()),  # l
+
+    ('M-S-h', lazy.layout.move_left(), lazy.layout.shuffle_left()),  # h
+    ('M-S-t', lazy.layout.move_down(), lazy.layout.shuffle_down()),  # j
+    ('M-S-n', lazy.layout.move_up(), lazy.layout.shuffle_up()),  # k
+    ('M-S-s', lazy.layout.move_right(), lazy.layout.shuffle_right()),  # l
+
+    ('M-A-h', lazy.layout.integrate_left(), lazy.layout.flip_left()),  # h
+    ('M-A-t', lazy.layout.integrate_down(), lazy.layout.flip_down()),  # j
+    ('M-A-n', lazy.layout.integrate_up(), lazy.layout.flip_up()),  # k
+    ('M-A-s', lazy.layout.integrate_right(), lazy.layout.flip_right()),  # l
+
+    ('M-y', lazy.layout.mode_horizontal()),
+    ('M-p', lazy.layout.mode_vertical()),
+    ('M-C-y', lazy.layout.mode_horizontal_split()),
+    ('M-C-p', lazy.layout.mode_vertical_split()),
+
+    ('M-C-5', lazy.layout.size(500)),
+    ('M-C-8', lazy.layout.size(800)),
+    ('M-C-0', lazy.layout.reset_size()),
+
+    ('M-<bracketleft>', lazy.spawn('playerctl play-pause')),
+    ('M-<bracketright>', lazy.spawn('playerctl next')),
+]
+
+keymap = keymap_dox
 keys = [EzKey(*v) for v in keymap]
 
 groups = [Group(str(i+1)) for i in range(9)]
@@ -159,6 +231,8 @@ for idx, g in enumerate(groups):
 groups.extend([
     Group('www', layout='plasma', persist=True, init=True, screen_affinity=1,
           matches=[Match(wm_class=[
+              'Navigator',
+              'firefoxdeveloperedition',
               'google-chrome',
               'google-chrome-unstable',
               'Google-chrome'])]),

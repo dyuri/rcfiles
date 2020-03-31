@@ -2,7 +2,7 @@
 
 # User specific aliases and functions
 
-PATH=/mnt/nagy/jdk/bin:$PATH:$HOME/bin:/usr/sbin:/sbin:/mnt/nagy/eclipse:/usr/games:.
+PATH=/mnt/nagy/jdk/bin:$PATH:$HOME/bin:$HOME/.local/bin/:/usr/sbin:/sbin:/mnt/nagy/eclipse:/usr/games:.
 CDPATH=$CDPATH:/mnt:/mnt/nagy
 LD_LIBRARY_PATH=$DBROOT/lib:$LD_LIBRARY_PATH
 USERNAME="dyuri"
@@ -42,3 +42,5 @@ export WINEDITOR=nvim
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+source /home/dyuri/.config/broot/launcher/bash/br

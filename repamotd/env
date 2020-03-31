@@ -1,0 +1,10 @@
+export COLOR_N="\033[0;38;5;8m"
+export COLOR_B="\033[0;38;5;0m"
+export COLOR_H1="\033[0;38;5;2m"
+export COLOR_H2="\033[1;38;5;10m"
+export COLOR_T1="\033[0;38;5;15m"
+export COLOR_T2="\033[0;38;5;7m"
+export COLOR_E1="\033[0;38;5;1m"
+export COLOR_E2="\033[1;38;5;9m"
+
+export FIGLET_OPTS="-d /home/dyuri/config/figlet -f rebel -c -w 80"

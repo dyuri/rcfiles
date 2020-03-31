@@ -21,8 +21,10 @@ if dein#load_state('/home/dyuri/.cache/dein')
 
   " my plugins
   call dein#add('Shougo/vimproc.vim', {'build': 'make'})
-  call dein#add('scrooloose/nerdtree')
-  call dein#add('Xuyuanp/nerdtree-git-plugin')
+  " call dein#add('scrooloose/nerdtree')
+  " call dein#add('Xuyuanp/nerdtree-git-plugin')
+  call dein#add('Shougo/defx.nvim')
+  call dein#add('kristijanhusak/defx-icons')
   call dein#add('scrooloose/nerdcommenter')
 	call dein#add('tpope/vim-commentary')
 	call dein#add('tpope/vim-fugitive')
@@ -572,6 +574,59 @@ set noshowmode
 " NERDTree
 let g:NERDTreeIgnore=['\.swp$','\.pyc$','\.pyo$']
 
+" Defx
+autocmd FileType defx call s:defx_my_settings()
+function! s:defx_my_settings() abort
+  " Define mappings
+  nnoremap <silent><buffer><expr> <CR> defx#do_action('drop')
+  nnoremap <silent><buffer><expr> c defx#do_action('copy')
+  nnoremap <silent><buffer><expr> m defx#do_action('move')
+  nnoremap <silent><buffer><expr> p defx#do_action('paste')
+  nnoremap <silent><buffer><expr> l defx#do_action('open')
+  nnoremap <silent><buffer><expr> E defx#do_action('open', 'vsplit')
+  nnoremap <silent><buffer><expr> P defx#do_action('open', 'pedit')
+  nnoremap <silent><buffer><expr> o defx#do_action('open_or_close_tree')
+  nnoremap <silent><buffer><expr> K defx#do_action('new_directory')
+  nnoremap <silent><buffer><expr> N defx#do_action('new_file')
+  nnoremap <silent><buffer><expr> M defx#do_action('new_multiple_files')
+  nnoremap <silent><buffer><expr> C defx#do_action('toggle_columns', 'mark:indent:icon:filename:type:size:time')
+  nnoremap <silent><buffer><expr> S defx#do_action('toggle_sort', 'time')
+  nnoremap <silent><buffer><expr> d defx#do_action('remove')
+  nnoremap <silent><buffer><expr> r defx#do_action('rename')
+  nnoremap <silent><buffer><expr> ! defx#do_action('execute_command')
+  nnoremap <silent><buffer><expr> x defx#do_action('execute_system')
+  nnoremap <silent><buffer><expr> yy defx#do_action('yank_path')
+  nnoremap <silent><buffer><expr> . defx#do_action('toggle_ignored_files')
+  nnoremap <silent><buffer><expr> ; defx#do_action('repeat')
+  nnoremap <silent><buffer><expr> h defx#do_action('cd', ['..'])
+  nnoremap <silent><buffer><expr> ~ defx#do_action('cd')
+  nnoremap <silent><buffer><expr> q defx#do_action('quit')
+  nnoremap <silent><buffer><expr> <Space> defx#do_action('toggle_select') . 'j'
+  nnoremap <silent><buffer><expr> * defx#do_action('toggle_select_all')
+  nnoremap <silent><buffer><expr> j line('.') == line('$') ? 'gg' : 'j'
+  nnoremap <silent><buffer><expr> k line('.') == 1 ? 'G' : 'k'
+  nnoremap <silent><buffer><expr> <C-l> defx#do_action('redraw')
+  nnoremap <silent><buffer><expr> <C-g> defx#do_action('print')
+  nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
+endfunction
+
+" Defx - set appearance
+call defx#custom#option('_', {
+      \ 'winwidth': 30,
+      \ 'split': 'vertical',
+      \ 'direction': 'topleft',
+      \ 'show_ignored_files': 0,
+      \ 'buffer_name': 'defxplorer',
+      \ 'toggle': 1,
+      \ 'resume': 1,
+      \ 'columns': 'icon:indent:icons:filename',
+      \ })
+
+call defx#custom#column('icon', {
+      \ 'directory_icon': '▸',
+      \ 'opened_icon': '▾',
+      \ })
+
 " omnicomplete
 " autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
@@ -731,8 +786,10 @@ nnoremap <F5> :MundoToggle<CR>
 map <F1> <Plug>TMiniBufExplorer
 inoremap <F1> <ESC>
 vnoremap <F1> <ESC>
-nmap <F2> :NERDTreeToggle<CR><C-W>l<C-W>j
-imap <F2> <ESC>:NERDTreeToggle<CR><C-W>l<C-W>ji
+" nmap <F2> :NERDTreeToggle<CR><C-W>l<C-W>j
+" imap <F2> <ESC>:NERDTreeToggle<CR><C-W>l<C-W>ji
+nmap <F2> :Defx<CR>
+imap <F2> :Defx<CR>
 nmap <F8> :set wrap!<CR>
 nmap <F9> :TagbarToggle<CR>
 nmap <F11> :set nu!<CR>:set relativenumber!<CR>
