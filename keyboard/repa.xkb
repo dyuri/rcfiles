@@ -90,7 +90,11 @@ xkb_keymap {
         type[group1]= "FOUR_LEVEL_SEMIALPHABETIC",
         symbols[Group1]= [           equal,            plus,          oacute,          Oacute ],
         type[group3]= "FOUR_LEVEL_SEMIALPHABETIC",
-        symbols[Group3]= [           bracketright, braceright,        equal,            plus ]
+        symbols[Group3]= [    bracketright,      braceright,           equal,            plus ]
+    };
+    key <SPCE> {
+        type= "FOUR_LEVEL",
+        symbols[Group1]= [           space,           space,           space,    nobreakspace ]
     };
     key <BKSP> {
         symbols[Group1]= [       BackSpace,       BackSpace ]

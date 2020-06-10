@@ -305,7 +305,7 @@ screens = [
         bottom=bar.Bar([
             widget.GroupBox(urgent_alert_method='text'),
             widget.Spacer(),
-            widget.Notify(foreground="ffff44"),
+            # widget.Notify(foreground="ffff44"),
             widget.Volume(**widget_defaults),
             widget.CPUGraph(
                 graph_color='18EB18',

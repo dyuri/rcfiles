@@ -86,10 +86,11 @@ rofi.color-normal: repa_bg, repa_fg,   repa_bg_alt,  repa_sec, repa_pri
 rofi.color-active: repa_bg, repa_sec,  repa_bg_alt,  repa_sec, repa_pri
 rofi.color-urgent: repa_bg, repa_warn, repa_bg_alt,  repa_sec, repa_pri
 
-rofi.width: 50
+! rofi.width: 50
 rofi.location: 0
 rofi.hide-scrollbar: true
 rofi.modi: window,run,ssh,emoji
+rofi.theme: repa
 
 ! Cursor
 Xcursor.theme: bluecurve

@@ -29,6 +29,8 @@ if dein#load_state('/home/dyuri/.cache/dein')
 	call dein#add('tpope/vim-commentary')
 	call dein#add('tpope/vim-fugitive')
   call dein#add('Yggdroot/LeaderF', {'build': './install.sh'})
+  call dein#add('Yggdroot/indentLine')
+  call dein#add('lukas-reineke/indent-blankline.nvim')
   call dein#add('itchyny/lightline.vim')
   call dein#add('mengelbrecht/lightline-bufferline')
 	call dein#add('sheerun/vim-polyglot') " Check
@@ -159,7 +161,7 @@ let g:tern#command = ["tern"]
 let g:Hexokinase_highlighters = ['virtual']
 " let g:Hexokinase_refreshEvents = ['BufWritePost']
 let g:Hexokinase_ftEnabled = ['css', 'html', 'js']
-let g:Hexokinase_optInPatterns = ['full_hex', 'rgb', 'rgba', 'colour_names']
+let g:Hexokinase_optInPatterns = ['full_hex', 'rgb', 'rgba', 'hsl', 'hsla']
 
 " lsp support
 let g:LanguageClient_serverCommands = {
@@ -332,14 +334,6 @@ set nocompatible
   hi LineNr               guibg=#080840 guifg=#33cc33 gui=none
   hi SignColumn           ctermbg=black ctermfg=lightcyan cterm=none
   hi SignColumn           guibg=#080840 guifg=#44ffff gui=none
-  hi DiffAdd              ctermbg=darkblue term=none cterm=none
-  hi DiffAdd              guibg=darkblue gui=none
-  hi DiffChange           ctermbg=magenta cterm=none
-  hi DiffChange           guibg=magenta gui=none
-  hi DiffDelete           ctermfg=blue ctermbg=cyan
-  hi DiffDelete           guifg=blue guibg=cyan
-  hi DiffText             cterm=bold ctermbg=red
-  hi DiffText             gui=bold guibg=red
   hi Cursor               ctermfg=bg ctermbg=cyan
   hi Cursor               guifg=bg guibg=cyan
   hi lCursor              ctermfg=bg ctermbg=darkgreen
@@ -497,8 +491,10 @@ set undodir=~/backup/undo//,~/tmp//,/var/tmp//,/tmp//,.
 set bk
 
 " cursor
-"set cursorline
-"set cursorcolumn
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+au InsertEnter * set cul | set cuc
+au InsertLeave * set nocul | set nocuc
 
 " relative line numbering
 " set number
@@ -882,3 +878,23 @@ cab WQ wq
 cab W w
 cab Q q
 
+" Signify signs
+let g:signify_sign_add               = '▌'
+let g:signify_sign_delete            = '▌' " '▁'
+let g:signify_sign_delete_first_line = '▌'
+let g:signify_sign_change            = '▌'
+
+" Sign colors
+hi DiffAdd              guifg=#8ec02b guibg=#232526
+hi DiffDelete           guifg=#f92672 guibg=#232526
+hi DiffChange           guifg=#ffaf00 guibg=#232526
+
+" Ale signs
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+let g:ale_sign_info = ''
+
+" Ale colors
+hi ALEErrorSign         guifg=#fb4934 guibg=#232526
+hi ALEWarningSign       guifg=#fabd2f guibg=#232526
+hi ALEInfoSign          guifg=#83a598 guibg=#232526

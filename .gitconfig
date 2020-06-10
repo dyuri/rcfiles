@@ -1,6 +1,7 @@
 [user]
   name = Gyuri Horak
   email = dyuri@horak.hu
+	signingkey = 4993F07B3EAE8D38
 
 [alias]
   st = status
@@ -53,3 +54,5 @@
   trustExitCode = true
 [difftool "kitty"]
   cmd = kitty +kitten diff $LOCAL $REMOTE
+[commit]
+	gpgsign = true
