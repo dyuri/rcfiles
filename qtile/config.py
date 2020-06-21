@@ -9,7 +9,6 @@ import os
 
 TERMINAL = os.environ.get('TERMINAL', 'kitty')
 
-
 def window_to_prev_group():
     @lazy.function
     def __inner(qtile):
@@ -308,16 +307,16 @@ screens = [
             # widget.Notify(foreground="ffff44"),
             widget.Volume(**widget_defaults),
             widget.CPUGraph(
-                graph_color='18EB18',
-                fill_color='16EB16.3',
+                graph_color='b8bb26',
+                fill_color='98971a.3',
                 line_width=1),
             widget.MemoryGraph(
-                graph_color='EBE618',
-                fill_color='EBE616.3',
+                graph_color='fabd2f',
+                fill_color='d79921.3',
                 line_width=1),
             widget.NetGraph(
-                graph_color='18BAEB',
-                fill_color='1667EB.3',
+                graph_color='83a598',
+                fill_color='458588.3',
                 line_width=1),
             widget.Net(interface="eth0"),
             widget.Clock(format='%Y.%m.%d %H:%M:%S'),

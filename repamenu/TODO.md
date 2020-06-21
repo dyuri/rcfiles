@@ -1,0 +1,3 @@
+- dunst notifications
+
+- color scheme

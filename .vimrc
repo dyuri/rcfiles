@@ -19,105 +19,110 @@ if dein#load_state('/home/dyuri/.cache/dein')
   " Let dein manage dein
   call dein#add('/home/dyuri/.cache/dein/repos/github.com/Shougo/dein.vim')
 
+  " dein update
+  call dein#add('wsdjeg/dein-ui.vim')
+
   " my plugins
   call dein#add('Shougo/vimproc.vim', {'build': 'make'})
   " call dein#add('scrooloose/nerdtree')
   " call dein#add('Xuyuanp/nerdtree-git-plugin')
   call dein#add('Shougo/defx.nvim')
   call dein#add('kristijanhusak/defx-icons')
+  call dein#add('voldikss/vim-floaterm')
   call dein#add('scrooloose/nerdcommenter')
-	call dein#add('tpope/vim-commentary')
-	call dein#add('tpope/vim-fugitive')
+  call dein#add('tpope/vim-commentary')
+  call dein#add('tpope/vim-fugitive')
   call dein#add('Yggdroot/LeaderF', {'build': './install.sh'})
   call dein#add('Yggdroot/indentLine')
   call dein#add('lukas-reineke/indent-blankline.nvim')
   call dein#add('itchyny/lightline.vim')
   call dein#add('mengelbrecht/lightline-bufferline')
-	call dein#add('sheerun/vim-polyglot') " Check
-	call dein#add('mileszs/ack.vim')
-	call dein#add('ddrscott/vim-side-search')
-	call dein#add('hail2u/vim-css3-syntax')
-	call dein#add('mattn/emmet-vim')
-	call dein#add('simnalamburt/vim-mundo')
-	call dein#add('Shougo/deoplete.nvim')
-	"" NeoBundle 'Valloric/YouCompleteMe', {
-	""      \ 'build': {
-	""      \     'unix': './install.sh --system-boost'
-	""      \   }
-	""      \ }
-	"call dein#add('neoclide/coc.nvim', {'rev': 'release'}) " don't like
-	" CocInstall coc-html, coc-css, coc-python
+  call dein#add('sheerun/vim-polyglot') " Check
+  call dein#add('mileszs/ack.vim')
+  call dein#add('ddrscott/vim-side-search')
+  call dein#add('hail2u/vim-css3-syntax')
+  call dein#add('mattn/emmet-vim')
+  call dein#add('simnalamburt/vim-mundo')
+  call dein#add('Shougo/deoplete.nvim')
+  "" NeoBundle 'Valloric/YouCompleteMe', {
+  ""      \ 'build': {
+  ""      \     'unix': './install.sh --system-boost'
+  ""      \   }
+  ""      \ }
+  "call dein#add('neoclide/coc.nvim', {'rev': 'release'}) " don't like
+  " CocInstall coc-html, coc-css, coc-python
   call dein#add('autozimu/LanguageClient-neovim', {
     \ 'rev': 'next',
     \ 'build': 'bash install.sh',
     \ })
-	call dein#add('ternjs/tern_for_vim')
-	call dein#add('Shougo/denite.nvim')
-	" call dein#add('vim-scripts/vcscommand.vim')
-	call dein#add('tpope/vim-abolish')
-	call dein#add('tpope/vim-fugitive')
-	"call dein#add('pangloss/vim-javascript' " replaced by polyglot)call dein#add('othree/yajs.vim')
-	"call dein#add('bolasblack/csslint.vim')
-	call dein#add('ludovicchabant/vim-lawrencium')
-	call dein#add('mhinz/vim-signify')
-	call dein#add('mhinz/vim-startify')
-	call dein#add('tpope/vim-unimpaired')
-	call dein#add('tpope/vim-surround')
+  call dein#add('ternjs/tern_for_vim')
+  call dein#add('Shougo/denite.nvim')
+  " call dein#add('vim-scripts/vcscommand.vim')
+  call dein#add('tpope/vim-abolish')
+  "call dein#add('pangloss/vim-javascript' " replaced by polyglot)call dein#add('othree/yajs.vim')
+  "call dein#add('bolasblack/csslint.vim')
+  call dein#add('ludovicchabant/vim-lawrencium')
+  call dein#add('mhinz/vim-signify')
+  call dein#add('mhinz/vim-startify')
+  call dein#add('tpope/vim-unimpaired')
+  call dein#add('tpope/vim-surround')
   call dein#add('nelstrom/vim-visual-star-search')
-	call dein#add('haya14busa/incsearch.vim')
-	call dein#add('haya14busa/vim-asterisk')
+  call dein#add('haya14busa/incsearch.vim')
+  call dein#add('haya14busa/vim-asterisk')
   call dein#add('machakann/vim-highlightedyank')
-	"call dein#add('chrisbra/vim-diff-enhanced')
-	call dein#add('manicmaniac/betterga')
-	call dein#add('blueyed/vim-diminactive')
-	call dein#add('luochen1990/rainbow')
-	call dein#add('JamshedVesuna/vim-markdown-preview')
-	call dein#add('christoomey/vim-sort-motion')
-	call dein#add('valloric/MatchTagAlways')
-	call dein#add('AndrewRadev/tagalong.vim')
-	call dein#add('Konfekt/vim-unicode-homoglyphs')
-	call dein#add('https://git.danielmoch.com/vim-smartsplit.git')
+  "call dein#add('chrisbra/vim-diff-enhanced')
+  call dein#add('manicmaniac/betterga')
+  call dein#add('blueyed/vim-diminactive')
+  call dein#add('luochen1990/rainbow')
+  call dein#add('christoomey/vim-sort-motion')
+  call dein#add('valloric/MatchTagAlways')
+  call dein#add('AndrewRadev/tagalong.vim')
+  call dein#add('Konfekt/vim-unicode-homoglyphs')
+  call dein#add('https://git.danielmoch.com/vim-smartsplit.git')
 
-	" General development
-	"call dein#add("scrooloose/syntastic")
-	call dein#add('dense-analysis/ale')
+  " General development
+  "call dein#add("scrooloose/syntastic")
+  call dein#add('dense-analysis/ale')
   " call dein#add('dense-analysis/ale', {'rev': '89db85121c001fc60787647f012978a2328816a5'}) " something wrong with deoplete - ale
-	call dein#add('sbdchd/neoformat')
-	call dein#add('AndrewRadev/splitjoin.vim')
+  call dein#add('sbdchd/neoformat')
+  call dein#add('AndrewRadev/splitjoin.vim')
 
-	" Python
-	call dein#add("davidhalter/jedi-vim")
+  " Python
+  call dein#add("davidhalter/jedi-vim")
   call dein#add("zchee/deoplete-jedi")
-	"call dein#add('klen/python-mode')
-	call dein#add("majutsushi/tagbar")
-	call dein#add("ambv/black")
-	call dein#add("numirias/semshi", {'build': ':UpdateRemotePlugins'})
+  "call dein#add('klen/python-mode')
+  call dein#add("majutsushi/tagbar")
+  call dein#add("ambv/black")
+  call dein#add("numirias/semshi", {'build': ':UpdateRemotePlugins'})
+
+  " markdown
+  call dein#add("vim-pandoc/vim-pandoc-syntax")
 
   " go
   call dein#add("fatih/vim-go")
 
-	" vue.js
-	call dein#add("posva/vim-vue")
-	"call dein#add("sekel/vim-vue-syntastic")
+  " vue.js
+  call dein#add("posva/vim-vue")
+  "call dein#add("sekel/vim-vue-syntastic")
 
-	" polymer / lit
-	call dein#add("jonsmithers/vim-html-template-literals")
+  " polymer / lit
+  call dein#add("jonsmithers/vim-html-template-literals")
 
-	" css colors
-	call dein#add("RRethy/vim-hexokinase", {'build': 'make hexokinase'})
+  " css colors
+  call dein#add("RRethy/vim-hexokinase", {'build': 'make hexokinase'})
 
-	" postcss
-	call dein#add("stephenway/postcss.vim")
+  " postcss
+  call dein#add("stephenway/postcss.vim")
 
-	" Color
-	call dein#add('tomasr/molokai')
+  " Color
+  call dein#add('tomasr/molokai')
   call dein#add('sainnhe/edge')
-	call dein#add("w0ng/vim-hybrid")
+  call dein#add("w0ng/vim-hybrid")
   call dein#add("dylanaraps/wal.vim")
 
-	" devicons
-	call dein#add('ryanoasis/vim-devicons')
-		" end of my plugins
+  " devicons
+  call dein#add('ryanoasis/vim-devicons')
+    " end of my plugins
  
   call dein#end()
   call dein#save_state()
@@ -536,17 +541,17 @@ let g:lightline = {
   \   'component_type': {
   \     'buffers': 'tabsel',
   \   },
-	\   'component': {
-	\     'lineinfo': ' %3l:%-2v',
-	\   },
+  \   'component': {
+  \     'lineinfo': ' %3l:%-2v',
+  \   },
   \   'component_function': {
   \     'gitbranch': 'fugitive#head',
   \   },
   \   'separator': {
-	\     'left': '', 'right': ''
+  \     'left': '', 'right': ''
   \   },
   \   'subseparator': {
-	\     'left': '', 'right': '' 
+  \     'left': '', 'right': '' 
   \   }
   \ }
 
@@ -634,6 +639,11 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 augroup xsh
   au!
   autocmd BufNewFile,BufRead *.xsh   set filetype=python
+augroup END
+
+" md
+augroup pandoc_syntax
+  au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
 
 let xml_use_xhtml = 1
@@ -726,19 +736,6 @@ augroup qf
   autocmd!
   autocmd FileType qf set nobuflisted
 augroup END
-
-" python
-function! RePa_py()
-  setlocal tw=0 sw=4 ts=4 sta et sts=4 ai
-
-  " color column #79
-  hi clear ColorColumn
-  hi link ColorColumn User1
-  set colorcolumn=79
-
-  hi OverLength guibg=#BB4040 ctermbg=darkred ctermfg=white
-  match OverLength /\%80v.\+/
-endfunction
 
 au FileType python setlocal tw=0 sw=4 ts=4 sta sts=4 ai et omnifunc=pythoncomplete#Complete
 au FileType html,htmldjango setlocal tw=0 sw=2 ts=2 sta sts=2 ai et
@@ -898,3 +895,7 @@ let g:ale_sign_info = ''
 hi ALEErrorSign         guifg=#fb4934 guibg=#232526
 hi ALEWarningSign       guifg=#fabd2f guibg=#232526
 hi ALEInfoSign          guifg=#83a598 guibg=#232526
+
+" FloaTerm
+command! LG FloatermNew lazygit
+command! FM FloatermNew vifm
