@@ -1,0 +1,15 @@
+{
+  "common": {
+    "default_top_theme": "repa",
+    "term_truecolor": true
+  },
+  "ext": {
+    "ipython": {
+      "colorscheme": "repa"
+    },
+    "shell": {
+      "theme": "repa",
+      "colorscheme": "repa"
+    }
+  }
+}

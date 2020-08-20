@@ -358,6 +358,10 @@ def dialogs(window):
        or 'emulator64-arm' in window.window.get_wm_class()):
         window.floating = True
 
+@hook.subscribe.screen_change
+def restart_on_randr(qtile, ev):
+    qtile.cmd_restart()
+
 dgroups_key_binder = None
 dgroups_app_rules = []
 main = None
@@ -367,4 +371,4 @@ cursor_warp = False
 floating_layout = layout.Floating(**layout_cfg)
 auto_fullscreen = True
 
-wmname = "LG3D"
+# wmname = "LG3D"

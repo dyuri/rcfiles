@@ -1,0 +1,8 @@
+{
+  "groups": {
+    "prompt": {"fg": "gruvbox:dark0", "bg": "repa:gyellow", "attrs": []},
+    "prompt_out": {"fg": "gruvbox:dark0", "bg": "gruvbox:neutral_green", "attrs": []},
+    "virtualenv": {"fg": "repa:gyellow", "bg": "gruvbox:dark2", "attrs": []},
+    "prompt_count": {"fg": "gruvbox:light0", "bg": "gruvbox:dark1", "attrs": ["bold"]}
+  }
+}

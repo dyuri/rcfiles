@@ -1,0 +1,17 @@
+{
+	"segments": {
+		"left": [
+			{
+				"type": "string",
+				"contents": "…",
+				"highlight_groups": ["prompt"]
+			},
+			{
+				"type": "string",
+				"contents": "",
+				"width": "auto",
+				"highlight_groups": ["prompt_count"]
+			}
+		]
+	}
+}

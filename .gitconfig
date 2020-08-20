@@ -1,7 +1,7 @@
 [user]
   name = Gyuri Horak
   email = dyuri@horak.hu
-	signingkey = 4993F07B3EAE8D38
+  signingkey = 4993F07B3EAE8D38
 
 [alias]
   st = status
@@ -15,8 +15,9 @@
   lol = log --graph --decorate --pretty=oneline --abbrev-commit
   lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
   ls = ls-files
+  mt = mergetool
 [merge]
-  tool = vimdiff
+  tool = nvim
   stat = true
   conflictstyle = diff3
 [rebase]
@@ -47,6 +48,10 @@
 [mergetool]
   prompt = false
   path = nvim
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+[mergetool "nvim"]
+  cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
 [diff]
   tool = kitty
 [difftool]
@@ -55,4 +60,4 @@
 [difftool "kitty"]
   cmd = kitty +kitten diff $LOCAL $REMOTE
 [commit]
-	gpgsign = true
+  gpgsign = true

@@ -12,8 +12,10 @@ ICON_OFF="ﴹ"
 ICON_PICK=""
 ICON_SSHOT=""
 ICON_SSHOT3=""
+ICON_1=""
+ICON_2=""
 
-options="$ICON_OFF\n$ICON_NIGHT\n$ICON_GAMER\n$ICON_NORMAL\n$ICON_SSHOT\n$ICON_SSHOT3\n$ICON_PICK"
+options="$ICON_OFF\n$ICON_NIGHT\n$ICON_GAMER\n$ICON_NORMAL\n$ICON_SSHOT\n$ICON_SSHOT3\n$ICON_PICK\n$ICON_2\n$ICON_1"
 
 ## Main
 chosen="$(echo -e "$options" | $rofi_command -p "Screen tools" -dmenu -selected-row 4)"
@@ -42,6 +44,12 @@ case $chosen in
     ;;
   $ICON_SSHOT3)
     sleep 3; flameshot gui
+    ;;
+  $ICON_2)
+    xrandr --output VGA-0 --off --output DVI-D-0 --mode 1920x1200 --pos 0x0 --rotate left --output HDMI-0 --primary --mode 1920x1200 --pos 1200x515 --rotate normal
+    ;;
+  $ICON_1)
+    xrandr --output VGA-0 --off --output DVI-D-0 --off --output HDMI-0 --primary --mode 1920x1200 --pos 1200x515 --rotate normal
     ;;
 esac
 

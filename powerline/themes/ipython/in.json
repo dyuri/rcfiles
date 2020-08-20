@@ -1,0 +1,19 @@
+{
+	"segments": {
+		"left": [
+			{
+				"type": "string",
+				"contents": "",
+				"highlight_groups": ["prompt"],
+        "priority": 1
+			},
+			{
+				"function": "powerline.segments.common.env.virtualenv",
+				"priority": 10
+			},
+			{
+				"function": "powerline.segments.ipython.prompt_count"
+			}
+		]
+	}
+}

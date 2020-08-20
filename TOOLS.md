@@ -2,6 +2,7 @@
 
 - xonsh
 - qtile (<= i3 + polybar)
+- rofi w/ rofi-emoji
 - kitty
 - neovim
 - exa (alias ll), lsd
@@ -12,7 +13,7 @@
 - fd
 - rg (<= ag)
 - mpv (<= mplayer)
-- httpie
+- httpie => curlie?
 - gotop/glances (<= htop)
 - neofetch
 - wpg (<= pywal)
@@ -26,3 +27,11 @@
 - direnv
 - vifm
 - repassh
+
+## Arch / Manjaro
+
+- install [pikaur](https://github.com/actionless/pikaur)
+
+```
+pikaur -S neovim ripgrep fd bat tmux exa kitty rofi-emoji glances gotop figlet lolcat
+```

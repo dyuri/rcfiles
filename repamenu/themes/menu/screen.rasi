@@ -29,7 +29,7 @@
 /* ########### */
 
 #window {
-  width: 700px;
+  width: 790px;
   height: 190px;
   anchor: southeast;
   location: southeast;
@@ -95,7 +95,7 @@ textbox-prompt-colon {
 }
 #listview {
   spacing: @option-6-listview-spacing;
-  lines: 7;
+  lines: 9;
 }
 #element {
   font: @icon-font;

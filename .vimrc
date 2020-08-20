@@ -2,6 +2,9 @@
 
 filetype off
 
+" xonsh workaround
+set shell=bash
+
 if has('vim_starting')
   set nocompatible " Be iMproved
 
