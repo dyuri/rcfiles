@@ -15,6 +15,7 @@
 - mpv (<= mplayer)
 - httpie => curlie?
 - gotop/glances (<= htop)
+- powerline
 - neofetch
 - wpg (<= pywal)
 - flameshot

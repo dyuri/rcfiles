@@ -1,47 +1,60 @@
 {
 	"segments": {
-		"left": [
+    "above": [{
+      "left": [
+        {
+          "type": "string",
+          "contents": "",
+          "highlight_groups": ["hostname"],
+          "priority": 10
+        },
+        {
+          "function": "powerline.segments.common.net.hostname",
+          "priority": 10
+        },
+        {
+          "function": "powerline.segments.common.env.user",
+          "priority": 30
+        },
+        {
+          "function": "powerline.segments.common.env.virtualenv",
+          "priority": 50
+        },
+        {
+          "function": "powerline.segments.shell.cwd",
+          "priority": 10
+        },
+        {
+          "function": "powerline.segments.common.vcs.branch",
+          "draw_soft_divider": false,
+          "priority": 40
+        },
+        {
+          "function": "powerline.segments.common.vcs.stash",
+          "priority": 50
+        }
+      ],
+      "right": [
+      ]
+    }],
+    "left": [
       {
         "type": "string",
-        "contents": "",
-        "highlight_groups": ["hostname"],
-        "priority": 10
-      },
-			{
-				"function": "powerline.segments.common.net.hostname",
-				"priority": 10
-			},
-			{
-				"function": "powerline.segments.common.env.user",
-				"priority": 30
-			},
-			{
-				"function": "powerline.segments.common.env.virtualenv",
-				"priority": 50
-			},
-			{
-				"function": "powerline.segments.shell.cwd",
-				"priority": 10
-			},
-			{
-				"function": "powerline.segments.common.vcs.branch",
-				"draw_soft_divider": false,
-				"priority": 40
-			},
-			{
-				"function": "powerline.segments.common.vcs.stash",
-				"priority": 50
-			}
-		],
-		"right": [
-      {
-				"function": "powerline.segments.shell.last_pipe_status",
-				"priority": 10
-			},
-      {
-        "function": "powerline.segments.common.time.date",
-        "priority": 20
+        "contents": "❯❯❯ ",
+        "draw_soft_divider": false,
+        "draw_hard_divider": false,
+        "highlight_groups": ["static_prompt", "information:additional"]
       }
-		]
+    ],
+    "right": [
+        {
+          "function": "powerline_exitstatus.exit_status",
+          "priority": 10
+        },
+        {
+          "function": "powerline.segments.common.time.date",
+          "priority": 20
+        }
+    ]
 	}
 }

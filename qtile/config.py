@@ -271,8 +271,8 @@ keys.append(EzKey('M-<Down>', lazy.group['SPD'].dropdown_toggle("term")))
 keys.append(EzKey('M-m', lazy.group['SPD'].dropdown_toggle("music")))
 
 layout_cfg = dict(
-    border_focus='#008080',
-    border_normal='#808080',
+    border_focus='#79740e',
+    border_normal='#282828',
     border_width=1,
     border_width_single=0,
     margin=10,

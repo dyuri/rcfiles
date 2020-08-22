@@ -56,6 +56,8 @@
 		"cwd":                        "information:additional",
 		"cwd:current_folder":         "information:regular",
 		"cwd:divider":                { "fg": "gruvbox:dark3", "bg": "gruvbox:dark2", "attrs": [] },
+		"exit_status_fail":           { "fg": "gruvbox:bright_red", "bg": "gruvbox:light0", "attrs": [] },
+		"exit_status_success":        { "fg": "gruvbox:bright_green", "bg": "gruvbox:dark2", "attrs": [] },
 
 		"branch":                     { "fg": "gruvbox:bright_yellow", "bg": "gruvbox:dark1", "attrs": [] },
 		"branch_dirty":               { "fg": "gruvbox:bright_red", "bg": "gruvbox:dark1", "attrs": [] },
@@ -67,6 +69,7 @@
 		"virtualenv":                 { "fg": "gruvbox:bright_blue", "bg": "gruvbox:dark3", "attrs": [] },
 
 		"time":                       { "fg": "gruvbox:bright_yellow", "bg": "gruvbox:dark3", "attrs": [] },
-		"time:divider":               { "fg": "gray5", "bg": "gruvbox:dark3", "attrs": [] }
+		"time:divider":               { "fg": "gray5", "bg": "gruvbox:dark3", "attrs": [] },
+		"static_prompt":              { "fg": "repa:ygreen", "bg": "gruvbox:dark0", "attrs": [] }
 	}
 }
