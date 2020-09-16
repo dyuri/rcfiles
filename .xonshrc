@@ -1,7 +1,7 @@
 # xontribs
 # - bashisms
 # - xontirb-readable-traceback
-# - xontrib-z
+# - xontrib-z - https://github.com:dyuri/xontrib-z @ zoxide
 # - https://github.com/dyuri/xontrib-fzf-widgets
 # - xontrib-ssh-agent
 # - xontrib-pyenv

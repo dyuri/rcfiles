@@ -28,6 +28,7 @@
 - direnv
 - vifm
 - repassh
+* croc
 
 ## Arch / Manjaro
 
