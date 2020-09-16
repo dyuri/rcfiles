@@ -71,6 +71,8 @@
 
 		"time":                       { "fg": "gruvbox:bright_yellow", "bg": "gruvbox:dark3", "attrs": [] },
 		"time:divider":               { "fg": "gray5", "bg": "gruvbox:dark3", "attrs": [] },
-		"static_prompt":              { "fg": "repa:ygreen", "bg": "gruvbox:dark0", "attrs": [] }
+		"static_prompt1":             { "fg": "repa:ygreen", "bg": "gruvbox:dark0", "attrs": [] },
+		"static_prompt2":             { "fg": "gruvbox:bright_yellow", "bg": "gruvbox:dark0", "attrs": [] },
+		"static_prompt3":             { "fg": "gruvbox:bright_red", "bg": "gruvbox:dark0", "attrs": [] }
 	}
 }

@@ -42,11 +42,25 @@
     "left": [
       {
         "type": "string",
-        "contents": "❯❯❯ ",
+        "contents": "❯",
         "draw_soft_divider": false,
         "draw_hard_divider": false,
-        "highlight_groups": ["static_prompt", "information:additional"]
-      }
+        "highlight_groups": ["static_prompt3", "information:additional"]
+      },
+      {
+        "type": "string",
+        "contents": "❯",
+        "draw_soft_divider": false,
+        "draw_hard_divider": false,
+        "highlight_groups": ["static_prompt2", "information:additional"]
+      },
+      {
+        "type": "string",
+        "contents": "❯ ",
+        "draw_soft_divider": false,
+        "draw_hard_divider": false,
+        "highlight_groups": ["static_prompt1", "information:additional"]
+      } 
     ],
     "right": [
         {
