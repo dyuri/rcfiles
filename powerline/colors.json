@@ -124,8 +124,10 @@
     "gruvbox:faded_aqua"     : [66,  "427b58"],
     "gruvbox:faded_orange"   : [130, "af3a03"],
 
-    "repa:ygreen"            : [142, "afdf00"],
-    "repa:gyellow"           : [214, "cddc39"]
+    "repa:green"             : [113, "8bc34a"],
+    "repa:red"               : [161, "e91e63"],
+    "repa:ygreen"            : [148, "afdf00"],
+    "repa:gyellow"           : [185, "cddc39"]
   },
   "gradients": {
     "dark_GREEN_Orange_red": [
