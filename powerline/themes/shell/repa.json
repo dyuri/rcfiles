@@ -27,13 +27,8 @@
           "priority": 10
         },
         {
-          "function": "powerline.segments.common.vcs.branch",
-          "draw_soft_divider": false,
+          "function": "powerline_gitstatus.gitstatus",
           "priority": 40
-        },
-        {
-          "function": "powerline.segments.common.vcs.stash",
-          "priority": 50
         }
       ],
       "right": [

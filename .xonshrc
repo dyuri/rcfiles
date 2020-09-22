@@ -5,7 +5,7 @@
 # - https://github.com/dyuri/xontrib-fzf-widgets
 # - xontrib-ssh-agent
 # - xontrib-pyenv
-# - xontrib-repa-prompt
+# - xontrib-repa-prompt => xontrib-powerline-binding
 
 # start powerline daemon
 powerline-daemon -q
@@ -35,7 +35,8 @@ $BROWSER="/home/dyuri/bin/ff"
 
 # xontrib load bashisms
 xontrib load direnv
-xontrib load repa_prompt
+# xontrib load repa_prompt
+xontrib load powerline_binding
 xontrib load readable-traceback
 xontrib load ssh_agent
 xontrib load pyenv
