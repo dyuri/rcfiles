@@ -10,6 +10,14 @@
     "shell": {
       "theme": "repa",
       "colorscheme": "repa"
+    },
+    "xonsh": {
+      "theme": "repa",
+      "colorscheme": "repa"
+    },
+    "xonshtoolbar_": {
+      "theme": "repa",
+      "colorscheme": "repa"
     }
   }
 }
