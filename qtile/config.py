@@ -5,6 +5,7 @@ from libqtile.config import EzKey
 
 from plasma import Plasma
 from qtools.xresources import get as get_resources
+import qtools.focus
 import os
 
 COLORS = {
@@ -228,10 +229,14 @@ keymap_dox = [
     ('M-C-n', lazy.layout.grow_up(), lazy.layout.increase_nmaster(), lazy.layout.grow_height(30)),  # dvorak k
     ('M-C-s', lazy.layout.grow_right(), lazy.layout.increase_ratio(), lazy.layout.grow_width(30)),  # dvorak l
 
-    ('M-h', lazy.layout.left(), lazy.layout.previous()),  # h
-    ('M-t', lazy.layout.down()),  # j
-    ('M-n', lazy.layout.up()),  # k
-    ('M-s', lazy.layout.right(), lazy.layout.next()),  # l
+    # ('M-h', lazy.layout.left(), lazy.layout.previous()),  # h
+    # ('M-t', lazy.layout.down()),  # j
+    # ('M-n', lazy.layout.up()),  # k
+    # ('M-s', lazy.layout.right(), lazy.layout.next()),  # l
+    ('M-h', lazy.function(qtools.focus.left)),  # h
+    ('M-t', lazy.function(qtools.focus.down)),  # j
+    ('M-n', lazy.function(qtools.focus.up)),  # k
+    ('M-s', lazy.function(qtools.focus.right)),  # l
 
     ('M-S-h', lazy.layout.move_left(), lazy.layout.shuffle_left()),  # h
     ('M-S-t', lazy.layout.move_down(), lazy.layout.shuffle_down()),  # j
