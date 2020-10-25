@@ -64,7 +64,8 @@ if dein#load_state('/home/dyuri/.cache/dein')
   call dein#add('tpope/vim-abolish')
   "call dein#add('pangloss/vim-javascript' " replaced by polyglot)call dein#add('othree/yajs.vim')
   "call dein#add('bolasblack/csslint.vim')
-  call dein#add('ludovicchabant/vim-lawrencium')
+  "call dein#add('ludovicchabant/vim-lawrencium')
+  call dein#add('wfxr/minimap.vim')
   call dein#add('mhinz/vim-signify')
   call dein#add('mhinz/vim-startify')
   call dein#add('tpope/vim-unimpaired')
@@ -122,6 +123,7 @@ if dein#load_state('/home/dyuri/.cache/dein')
   call dein#add('sainnhe/edge')
   call dein#add("w0ng/vim-hybrid")
   call dein#add("dylanaraps/wal.vim")
+  call dein#add("morhetz/gruvbox")
 
   " devicons
   call dein#add('ryanoasis/vim-devicons')
@@ -403,7 +405,8 @@ if v:version >= 700
   hi TabLineSel           guifg=White guibg=Black
 endif
 
-colorscheme molokai
+colorscheme gruvbox
+" colorscheme molokai
 " colorscheme edge
 " colorscheme wal
 set background=dark

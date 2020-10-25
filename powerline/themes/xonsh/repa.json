@@ -5,7 +5,7 @@
       "left": [
         {
           "type": "string",
-          "contents": " xonsh",
+          "contents": "",
           "before": " ",
           "highlight_groups": ["hostname"],
           "priority": 10

@@ -1,7 +1,8 @@
 # xontribs
 # - bashisms
 # - xontirb-readable-traceback
-# - xontrib-z - https://github.com:dyuri/xontrib-z @ zoxide
+### - xontrib-z - https://github.com:dyuri/xontrib-z @ zoxide
+# - xontrib-zoxide
 # - https://github.com/dyuri/xontrib-fzf-widgets
 # - xontrib-ssh-agent
 # - xontrib-pyenv
@@ -13,7 +14,6 @@ powerline-daemon -q
 $FOREIGN_ALIASES_SUPPRESS_SKIP_MESSAGE=True
 
 $PROMPT_TOOLKIT_COLOR_DEPTH='DEPTH_24_BIT'
-$XONSH_COLOR_STYLE='monokai'
 $XONSH_SHOW_TRACEBACK=False
 $COMPLETIONS_DISPLAY='single'
 $HISTCONTROL='ignoredups,erasedups'
@@ -42,7 +42,8 @@ xontrib load ssh_agent
 xontrib load pyenv
 xontrib load kitty
 xontrib load gitinfo
-xontrib load z
+# xontrib load z
+xontrib load zoxide
 
 $XONSH_HISTORY_BACKEND = "sqlite"
 xontrib load fzf-widgets
@@ -95,3 +96,24 @@ __builtin__.null = None
 
 # MOTD
 ~/bin/repamotd
+
+#### custom styles
+from xonsh.tools import register_custom_style
+from xonsh.pyghooks import get_style_by_name, STYLES
+from itertools import chain
+import json
+
+def style_to_dict(name):
+    return {str(k):v for k, v in chain(STYLES[name].items(), get_style_by_name(name).styles.items())}
+
+def style_to_json(name):
+    return json.dumps(style_to_dict(name), indent=2)
+
+def style_from_json(name, jsonfile, base="default"):
+    with open(jsonfile) as f:
+        styledict = json.load(f)
+    register_custom_style(name, styledict, base)
+
+style_from_json("gruvbox", "config/xonsh/gruvbox.style.json", "monokai")
+$XONSH_COLOR_STYLE="gruvbox"
+$PTK_STYLE_OVERRIDES = {}

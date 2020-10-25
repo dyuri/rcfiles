@@ -1,12 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/dyuri/rcfiles/qtile/qtools/xresources'
+let g:netrw_dirhist_8='/home/dyuri/rcfiles/qtile/qtools/notification'
+let g:netrw_dirhist_7='/home/dyuri/rcfiles/qtile/qtools'
+let g:netrw_dirhist_6='/home/dyuri/egyeb/powerline/powerline/powerline/bindings/qtile'
 let g:netrw_dirhist_5='/home/dyuri/egyeb/powerline/powerline/powerline/bindings/zsh'
 let g:netrw_dirhist_4='/home/dyuri/egyeb/powerline/powerline/powerline/bindings'
 let g:netrw_dirhist_3='/home/dyuri/egyeb/powerline/powerline/powerline/bindings/zsh'
 let g:netrw_dirhist_2='/home/dyuri/egyeb/powerline/powerline-exitstatus/powerline_exitstatus'
 let g:netrw_dirhist_1='/home/dyuri/rcfiles/powerline/colorschemes'
 let g:netrw_dirhist_0='/home/dyuri/rcfiles/powerline/themes/ipython'
-let g:netrw_dirhist_9='/home/dyuri/rcfiles/powerline/themes'
-let g:netrw_dirhist_8='/home/dyuri/.ipython/profile_default'
-let g:netrw_dirhist_7='/home/dyuri/ssd/.config/vifm'
-let g:netrw_dirhist_6='/home'

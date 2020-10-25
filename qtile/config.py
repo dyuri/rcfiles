@@ -1,13 +1,58 @@
 from libqtile.config import Key, Screen, Group, Drag, Click, Match, ScratchPad, DropDown
 from libqtile.command import lazy
-from libqtile import layout, bar, widget, hook
+from libqtile import qtile, layout, bar, widget, hook
 from libqtile.config import EzKey
 
 from plasma import Plasma
+from qtools.xresources import get as get_resources
 import os
 
-
+COLORS = {
+    "color0": "#282828",
+    "color1": "#cc241d",
+    "color2": "#98971a",
+    "color3": "#d79921",
+    "color4": "#458588",
+    "color5": "#b16286",
+    "color6": "#689d6a",
+    "color7": "#a89984",
+    "color8": "#928374",
+    "color9": "#fb4934",
+    "color10": "#b8bb26",
+    "color11": "#fabd2f",
+    "color12": "#83a598",
+    "color13": "#d3869b",
+    "color14": "#8ec07c",
+    "color15": "#ebdbb2",
+    # gruvbox extra
+    "colord0h": "#1d2021",
+    "colord0": "#282828",
+    "colord0s": "#32302f",
+    "colord1": "#3c3836",
+    "colord2": "#504945",
+    "colord3": "#665c54",
+    "colord4": "#7c6f64",
+    "colorl0h": "#f9f5d7",
+    "colorl0": "#fbf1c7",
+    "colorl0s": "#f2e5bc",
+    "colorl1": "#ebdbb2",
+    "colorl2": "#d5c4a1",
+    "colorl3": "#bdae93",
+    "colorl4": "#a89984",
+    # repa extra
+    "colorrg": "#8bc34a",
+    "colorrr": "#e91e63",
+    "colorryg": "#afdf00",
+    "colorrgy": "#cddc39",
+}
+COLORS.update({key: value for key, value in get_resources().items() if key.startswith("color")})
 TERMINAL = os.environ.get('TERMINAL', 'kitty')
+
+
+def color(num, alpha=None, fallback="#888888"):
+    alphav = f".{alpha}" if alpha is not None else ""
+    col = COLORS.get(f"color{num}", fallback)
+    return f"{col}{alphav}"
 
 def window_to_prev_group():
     @lazy.function
@@ -292,50 +337,84 @@ widget_defaults = dict(
     padding=3,
 )
 
+groupbox_config = dict(
+    urgent_alert_method='text',
+    highlight_method="line",
+    highlight_color=[color(6), color(14)],
+    urgent_text=color(11),
+    active=color(15),
+    borderwidth=3,
+    rounded=False,
+    padding=5,
+    this_screen_border=color(14),
+    this_current_screen_border=color(14),
+    other_screen_border=color(0),
+    other_current_screen_border=color(0),
+    background=color(6),
+    foreground=color(0),
+)
+
 screens = [
     Screen(
         top=bar.Bar([
-            widget.WindowName(width=bar.CALCULATED, background="#880000"),
-            widget.TextBox("", foreground="#880000", padding=0, fontsize=20),
-            widget.Spacer(),
-            widget.TextBox("", foreground="#880000", padding=0, fontsize=20),
-            widget.CurrentLayout(background="#880000"),
-        ], 24),
+            widget.WindowName(width=bar.CALCULATED, background=color(2), foreground=color(0), **widget_defaults),
+            widget.TextBox("", foreground=color(2), background=color(0), padding=0, fontsize=21),
+            widget.Spacer(background=color(0)),
+            widget.TextBox("", background=color(0), foreground=color("d3"), padding=0, fontsize=21),
+            widget.CurrentLayout(background=color("d3"), foreground=color(0), **widget_defaults),
+        ], 25, margin=10),
         bottom=bar.Bar([
-            widget.GroupBox(urgent_alert_method='text'),
-            widget.Spacer(),
-            # widget.Notify(foreground="ffff44"),
-            widget.Volume(**widget_defaults),
+            widget.GroupBox(**groupbox_config),
+            widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=25),
+            widget.Spacer(background=color(0)),
+            widget.TextBox("", background=color(0), foreground=color("d1"), padding=0, fontsize=21),
+            widget.TextBox("墳", background=color("d1"), foreground=color(3)),
+            widget.Volume(**widget_defaults, background=color("d1"), foreground=color("d4")),
+            widget.TextBox("", background=color("d1"), foreground=color("d2"), padding=0, fontsize=21),
             widget.CPUGraph(
-                graph_color='b8bb26',
-                fill_color='98971a.3',
+                graph_color=color(10),
+                fill_color=color(10, 5),
+                background=color("d2"),
+                border_width=0,
+                margin_x=1,
+                margin_y=2,
                 line_width=1),
             widget.MemoryGraph(
-                graph_color='fabd2f',
-                fill_color='d79921.3',
+                graph_color=color(11),
+                fill_color=color(11, 5),
+                background=color("d2"),
+                border_width=0,
+                margin_x=1,
+                margin_y=2,
                 line_width=1),
             widget.NetGraph(
-                graph_color='83a598',
-                fill_color='458588.3',
+                graph_color=color(12),
+                fill_color=color(12, 3),
+                background=color("d2"),
+                border_width=0,
+                margin_x=1,
+                margin_y=2,
                 line_width=1),
-            widget.Net(interface="eth0"),
-            widget.Clock(format='%Y.%m.%d %H:%M:%S'),
-            widget.Systray(),
-        ], 30),
+            widget.TextBox("", background=color("d2"), foreground=color("d3"), padding=0, fontsize=21),
+            widget.Clock(format='%Y.%m.%d %H:%M:%S', **widget_defaults, background=color("d3"), foreground=color(3)),
+            widget.Systray(background=color("d3")),
+        ], 29, margin=10),
     ),
     Screen(
-        top=bar.Bar(
-            [
-                widget.WindowName(),
-                widget.CurrentLayout(),
-            ],
-            24,
-        ),
+        top=bar.Bar([
+            widget.WindowName(width=bar.CALCULATED, background=color(2), foreground=color(0), **widget_defaults),
+            widget.TextBox("", foreground=color(2), background=color(0), padding=0, fontsize=21),
+            widget.Spacer(background=color(0)),
+            widget.TextBox("", background=color(0), foreground=color("d3"), padding=0, fontsize=21),
+            widget.CurrentLayout(background=color("d3"), foreground=color(0), **widget_defaults),
+        ], 25, margin=10),
         bottom=bar.Bar([
-            widget.GroupBox(urgent_alert_method='text'),
-            widget.Spacer(),
-            widget.Clock(format='%Y.%m.%d %H:%M:%S'),
-        ], 30),
+            widget.GroupBox(**groupbox_config),
+            widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=25),
+            widget.Spacer(background=color(0)),
+            widget.TextBox("", background=color(0), foreground=color("d3"), padding=0, fontsize=21),
+            widget.Clock(format='%Y.%m.%d %H:%M:%S', **widget_defaults, background=color("d3"), foreground=color(3)),
+        ], 29, margin=10),
     ),
 ]
 
@@ -358,10 +437,17 @@ def dialogs(window):
        or 'emulator64-arm' in window.window.get_wm_class()):
         window.floating = True
 
-@hook.subscribe.screen_change
-def restart_on_randr(qtile, ev):
-    qtile.cmd_restart()
 
+@hook.subscribe.screen_change
+def restart_on_randr(ev):
+    global _first_screen_change
+    if _first_screen_change:
+        _first_screen_change = False
+    else:
+        qtile.cmd_restart()
+
+
+_first_screen_change = True
 dgroups_key_binder = None
 dgroups_app_rules = []
 main = None
