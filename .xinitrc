@@ -36,7 +36,7 @@ flameshot &
 dunst &
 
 # background
-feh --bg-scale ~/backgrounds/hatter.png
+feh --bg-scale ~/backgrounds/hatter.jpg
 
 # /usr/bin/pulseaudio --start &
 

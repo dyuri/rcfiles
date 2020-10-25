@@ -348,7 +348,7 @@ groupbox_config = dict(
     highlight_method="line",
     highlight_color=[color(6), color(14)],
     urgent_text=color(11),
-    active=color(15),
+    active=color("l0h"),
     borderwidth=3,
     rounded=False,
     padding=5,
@@ -363,8 +363,8 @@ groupbox_config = dict(
 screens = [
     Screen(
         top=bar.Bar([
-            widget.WindowName(width=bar.CALCULATED, background=color(2), foreground=color(0), **widget_defaults),
-            widget.TextBox("", foreground=color(2), background=color(0), padding=0, fontsize=21),
+            widget.WindowName(width=bar.CALCULATED, background=color(6), foreground=color("d0h"), **widget_defaults),
+            widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=21),
             widget.Spacer(background=color(0)),
             widget.TextBox("", background=color(0), foreground=color("d3"), padding=0, fontsize=21),
             widget.CurrentLayout(background=color("d3"), foreground=color(0), **widget_defaults),
@@ -408,8 +408,8 @@ screens = [
     ),
     Screen(
         top=bar.Bar([
-            widget.WindowName(width=bar.CALCULATED, background=color(2), foreground=color(0), **widget_defaults),
-            widget.TextBox("", foreground=color(2), background=color(0), padding=0, fontsize=21),
+            widget.WindowName(width=bar.CALCULATED, background=color(6), foreground=color("d0h"), **widget_defaults),
+            widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=21),
             widget.Spacer(background=color(0)),
             widget.TextBox("", background=color(0), foreground=color("d3"), padding=0, fontsize=21),
             widget.CurrentLayout(background=color("d3"), foreground=color(0), **widget_defaults),
