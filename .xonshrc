@@ -8,6 +8,8 @@
 # - xontrib-pyenv
 # - xontrib-repa-prompt => xontrib-powerline-binding
 
+$XONSH_COLOR_STYLE="monokai"
+
 # start powerline daemon
 powerline-daemon -q
 
@@ -17,6 +19,7 @@ $PROMPT_TOOLKIT_COLOR_DEPTH='DEPTH_24_BIT'
 $XONSH_SHOW_TRACEBACK=False
 $COMPLETIONS_DISPLAY='single'
 $HISTCONTROL='ignoredups,erasedups'
+$ENABLE_ASYNC_PROMPT=True
 
 $VC_BRANCH_TIMEOUT=.2
 $NPM_PACKAGES=$HOME+'/.npm'
@@ -30,7 +33,7 @@ $PATH.append($GOPATH[0]+'/bin')
 $SDL_AUDIODRIVER="pulse"
 $AUDIODEV="default"
 $PYTHONSTARTUP=$HOME+"/.pythonrc"
-$BROWSER="/home/dyuri/bin/ff"
+$BROWSER="/home/dyuri/bin/google-chrome"
 # $BINARY_SSH="/bin/ssh"
 
 # xontrib load bashisms
@@ -50,6 +53,7 @@ xontrib load fzf-widgets
 $fzf_history_binding = Keys.ControlR
 $fzf_ssh_binding = Keys.ControlS
 $fzf_file_binding = Keys.ControlT
+
 
 # env
 # $FZF_DEFAULT_COMMAND='rg --files --no-ignore --no-ignore-vcs --hidden --follow --glob "!.git/*" --glob "!.hg/*"'
@@ -94,26 +98,38 @@ __builtin__.true = True
 __builtin__.false = False
 __builtin__.null = None
 
+# f*
+def __fixit(f_bin, f_hist):
+    import subprocess
+    p = subprocess.Popen([f_bin, f_hist], stdout=subprocess.PIPE)
+    out, _ = p.communicate()
+    execx(out.decode("utf-8"))
+
+aliases["f"] = "__fixit($(which thefuck), $(history -1))"
+
+
 # MOTD
 ~/bin/repamotd
 
 #### custom styles
-from xonsh.tools import register_custom_style
-from xonsh.pyghooks import get_style_by_name, STYLES
-from itertools import chain
-import json
-
-def style_to_dict(name):
+def _style_to_dict(name):
+    from itertools import chain
+    from xonsh.pyghooks import get_style_by_name, STYLES
     return {str(k):v for k, v in chain(STYLES[name].items(), get_style_by_name(name).styles.items())}
 
-def style_to_json(name):
+def _style_to_json(name):
+    import json
     return json.dumps(style_to_dict(name), indent=2)
 
 def style_from_json(name, jsonfile, base="default"):
+    import json
+    from xonsh.tools import register_custom_style
     with open(jsonfile) as f:
         styledict = json.load(f)
-    register_custom_style(name, styledict, base)
+    return register_custom_style(name, styledict, base)
 
-style_from_json("gruvbox", "config/xonsh/gruvbox.style.json", "monokai")
+gb = style_from_json("gruvbox", "/home/dyuri/config/xonsh/gruvbox.style.json", "monokai")
 $XONSH_COLOR_STYLE="gruvbox"
 $PTK_STYLE_OVERRIDES = {}
+
+# vim: ft=python

@@ -2,6 +2,7 @@ from libqtile.config import Key, Screen, Group, Drag, Click, Match, ScratchPad, 
 from libqtile.command import lazy
 from libqtile import qtile, layout, bar, widget, hook
 from libqtile.config import EzKey
+from mpris2widget import Mpris2
 
 from plasma import Plasma
 from qtools.xresources import get as get_resources
@@ -125,10 +126,10 @@ def app_or_group(group, app):
 mod = "mod4"
 
 keymap_ansi = [
-    # ('M-S-c', app_or_group('www', 'google-chrome')),
-    # ('M-c', lazy.spawn('google-chrome')),
-    ('M-S-c', app_or_group('www', 'ff')),
-    ('M-c', lazy.spawn('ff')),
+    ('M-S-c', app_or_group('www', 'google-chrome')),
+    ('M-c', lazy.spawn('google-chrome')),
+    # ('M-S-c', app_or_group('www', 'ff')),
+    # ('M-c', lazy.spawn('ff')),
     ('M-<Return>', lazy.spawn(TERMINAL)),
     ('M-<Escape>', lazy.spawn("rofi -show run")),
     ('M-S-<Escape>', lazy.spawn("rofi -show emoji")),
@@ -192,10 +193,10 @@ keymap_ansi = [
 ]
 
 keymap_dox = [
-    # ('M-S-c', app_or_group('www', 'google-chrome')),
-    ('M-S-c', app_or_group('www', 'ff')),
-    # ('M-c', lazy.spawn('google-chrome')),
-    ('M-c', lazy.spawn('ff')),
+    ('M-S-c', app_or_group('www', 'google-chrome')),
+    # ('M-S-c', app_or_group('www', 'ff')),
+    ('M-c', lazy.spawn('google-chrome')),
+    # ('M-c', lazy.spawn('ff')),
     ('M-<Return>', lazy.spawn(TERMINAL)),
     ('M-<Escape>', lazy.spawn("rofi -show run")),
     ('M-S-<Escape>', lazy.spawn("rofi -show emoji")),
@@ -280,16 +281,16 @@ for idx, g in enumerate(groups):
 
 groups.extend([
     Group('www', layout='plasma', persist=True, init=True, screen_affinity=1,
-          matches=[Match(wm_class=[
-              'Navigator',
-              'firefoxdeveloperedition',
-              'google-chrome',
-              'google-chrome-unstable',
-              'Google-chrome'])]),
+          matches=[
+              Match(wm_class='Navigator'),
+              Match(wm_class='firefoxdeveloperedition'),
+              Match(wm_class='google-chrome'),
+              Match(wm_class='google-chrome-unstable'),
+              Match(wm_class='Google-chrome')]),
     Group('steam', layout='max', persist=False, init=False, screen_affinity=1,
-          matches=[Match(wm_class=['Steam', 'steam'])]),
+          matches=[Match(wm_class='Steam'), Match(wm_class='steam')]),
     Group('gimp', layout='max', persist=False, init=False, screen_affinity=1,
-          matches=[Match(wm_class=['gimp', 'Gimp'])]),
+          matches=[Match(wm_class='gimp'), Match(wm_class='Gimp')]),
 ])
 
 # keys for www group
@@ -362,13 +363,13 @@ groupbox_config = dict(
 
 screens = [
     Screen(
-        top=bar.Bar([
-            widget.WindowName(width=bar.CALCULATED, background=color(6), foreground=color("d0h"), **widget_defaults),
-            widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=21),
-            widget.Spacer(background=color(0)),
-            widget.TextBox("", background=color(0), foreground=color("d3"), padding=0, fontsize=21),
-            widget.CurrentLayout(background=color("d3"), foreground=color(0), **widget_defaults),
-        ], 25, margin=10),
+        # top=bar.Bar([
+        #     widget.WindowName(width=bar.CALCULATED, background=color(6), foreground=color("d0h"), **widget_defaults),
+        #     widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=21),
+        #     widget.Spacer(background=color(0)),
+        #     widget.TextBox("", background=color(0), foreground=color("d3"), padding=0, fontsize=21),
+        #     widget.CurrentLayout(background=color("d3"), foreground=color(0), **widget_defaults),
+        # ], 25, margin=10),
         bottom=bar.Bar([
             widget.GroupBox(**groupbox_config),
             widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=25),
@@ -402,24 +403,35 @@ screens = [
                 margin_y=2,
                 line_width=1),
             widget.TextBox("", background=color("d2"), foreground=color("d3"), padding=0, fontsize=21),
-            widget.Clock(format='%Y.%m.%d %H:%M:%S', **widget_defaults, background=color("d3"), foreground=color(3)),
+            widget.Clock(format='%Y.%m.%d %H:%M:%S', **widget_defaults, background=color("d3"), foreground=color(11)),
             widget.Systray(background=color("d3")),
         ], 29, margin=10),
     ),
     Screen(
-        top=bar.Bar([
-            widget.WindowName(width=bar.CALCULATED, background=color(6), foreground=color("d0h"), **widget_defaults),
-            widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=21),
-            widget.Spacer(background=color(0)),
-            widget.TextBox("", background=color(0), foreground=color("d3"), padding=0, fontsize=21),
-            widget.CurrentLayout(background=color("d3"), foreground=color(0), **widget_defaults),
-        ], 25, margin=10),
+        # top=bar.Bar([
+        #     widget.WindowName(width=bar.CALCULATED, background=color(6), foreground=color("d0h"), **widget_defaults),
+        #     widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=21),
+        #     widget.Spacer(background=color(0)),
+        #     widget.TextBox("", background=color(0), foreground=color("d3"), padding=0, fontsize=21),
+        #     widget.CurrentLayout(background=color("d3"), foreground=color(0), **widget_defaults),
+        # ], 25, margin=10),
         bottom=bar.Bar([
             widget.GroupBox(**groupbox_config),
             widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=25),
             widget.Spacer(background=color(0)),
-            widget.TextBox("", background=color(0), foreground=color("d3"), padding=0, fontsize=21),
-            widget.Clock(format='%Y.%m.%d %H:%M:%S', **widget_defaults, background=color("d3"), foreground=color(3)),
+            widget.TextBox("", background=color(0), foreground=color("d1"), padding=0, fontsize=21),
+            widget.TextBox("墳", background=color("d1"), foreground=color(3)),
+            widget.Volume(**widget_defaults, background=color("d1"), foreground=color("d4")),
+            # Mpris2(
+            #     name="chrome",
+            #     **widget_defaults,
+            #     objname="org.mpris.MediaPlayer2.chrome",
+            #     display_metadata=['xesam:title', 'xesam:artist'],
+            #     stop_pause_text='',
+            #     background=color("d1"),
+            #     foreground=color(2)),
+            widget.TextBox("", background=color("d1"), foreground=color("d3"), padding=0, fontsize=21),
+            widget.Clock(format='%Y.%m.%d %H:%M:%S', **widget_defaults, background=color("d3"), foreground=color(11)),
         ], 29, margin=10),
     ),
 ]
@@ -458,7 +470,7 @@ def _swallow(window):
     pid = window.window.get_net_wm_pid()
     ppid = psutil.Process(pid).ppid()
     cpids = {c.window.get_net_wm_pid(): wid for wid, c in window.qtile.windows_map.items()}
-    for i in range(5):
+    for _ in range(5):
         if not ppid:
             return
         if ppid in cpids:

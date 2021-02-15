@@ -664,8 +664,7 @@ autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
 
 " xsh
 augroup xsh
-  au!
-  autocmd BufNewFile,BufRead *.xsh   set filetype=python
+  au! BufNewFile,BufRead *.xsh   set filetype=python
 augroup END
 
 " md
@@ -681,6 +680,9 @@ au VimResized * exe "normal \<c-w>="
 
 " filetypes
 au BufNewFile,BufRead *.jspf set filetype=jsp
+
+" css - dash is inside words
+au! FileType css,scss,js setl iskeyword+=-
 
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
@@ -813,7 +815,7 @@ imap <F2> :Defx<CR>
 nmap <F8> :set wrap!<CR>
 nmap <F9> :TagbarToggle<CR>
 nmap <F11> :set nu!<CR>:set relativenumber!<CR>
-nmap <F12> :set list!<CR>:RainbowToggle<CR>
+nmap <F12> :set list!<CR>:RainbowToggle<CR>:IndentLinesToggle<CR>
 nmap <C-F12> :set cursorline!<CR>:set cursorcolumn!<CR>
 nmap <F36> :set cursorline!<CR>:set cursorcolumn!<CR>
 
@@ -902,6 +904,9 @@ cab WQ wq
 cab W w
 cab Q q
 
+" indentline disable by default
+let g:indentLine_enabled = 0
+
 " Signify signs
 let g:signify_sign_add               = '▌'
 let g:signify_sign_delete            = '▌' " '▁'
@@ -912,6 +917,10 @@ let g:signify_sign_change            = '▌'
 hi DiffAdd              guifg=#8ec02b guibg=#232526
 hi DiffDelete           guifg=#f92672 guibg=#232526
 hi DiffChange           guifg=#ffaf00 guibg=#232526
+
+" Ale keybindings
+nmap <silent> <leader>] :ALENext<cr>
+nmap <silent> <leader>[ :ALEPrevious<cr>
 
 " Ale signs
 let g:ale_sign_error = ''

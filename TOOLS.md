@@ -28,7 +28,14 @@
 - direnv
 - vifm
 - repassh
-* croc
+- croc
+- jq => fx - json query
+- jc - json convert
+- bitwise - bitwise calculator
+- theme.sh
+- uni - unicode query
+- typora - markdown editor
+- hexyl - colored hex viewer
 
 ## Arch / Manjaro
 
@@ -37,3 +44,7 @@
 ```
 pikaur -S neovim ripgrep fd bat tmux exa kitty rofi-emoji glances gotop figlet lolcat
 ```
+
+## Notes
+
+- use `pipx` for python tools

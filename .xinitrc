@@ -21,7 +21,7 @@ redshift-gtk &
 # logitech egerekhez
 # solaar &
 
-wmname LG3D
+# wmname LG3D
 
 # fitbit sync
 #/usr/bin/galileo --config ~/config/fitbit.conf daemon &
@@ -31,6 +31,7 @@ flameshot &
 
 # compositor
 #compton -b
+picom -b
 
 # dunst - desktop notifications
 dunst &
@@ -43,4 +44,4 @@ feh --bg-scale ~/backgrounds/hatter.jpg
 setxkbmap repa dox
 
 # exec /usr/bin/i3
-exec qtile > ~/.qtile.log
+exec qtile start > ~/.qtile.log
