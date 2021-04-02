@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-SCREENS="HDMI-0"
+SCREENS="DisplayPort-0"
 
 rofi_command="rofi -theme ~/config/repamenu/themes/menu/screen.rasi"
 
@@ -46,10 +46,10 @@ case $chosen in
     sleep 3; flameshot gui
     ;;
   $ICON_2)
-    xrandr --output VGA-0 --off --output DVI-D-0 --mode 1920x1200 --pos 0x0 --rotate left --output HDMI-0 --primary --mode 1920x1200 --pos 1200x515 --rotate normal
+    xrandr --output VGA-0 --off --output DVI-D-0 --mode 1920x1200 --pos 0x0 --rotate left --output DisplayPort-0 --primary --mode 1920x1200 --pos 1200x515 --rotate normal
     ;;
   $ICON_1)
-    xrandr --output VGA-0 --off --output DVI-D-0 --off --output HDMI-0 --primary --mode 1920x1200 --pos 1200x515 --rotate normal
+    xrandr --output VGA-0 --off --output DVI-D-0 --off --output DisplayPort-0 --primary --mode 1920x1200 --pos 1200x515 --rotate normal
     ;;
 esac
 

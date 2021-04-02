@@ -47,7 +47,9 @@ xontrib load kitty
 xontrib load gitinfo
 # xontrib load z
 xontrib load zoxide
+xontrib load termcolors
 
+$XONSH_HISTORY_FILE = $HOME+"/.local/share/xonsh/xonsh-history.sqlite"
 $XONSH_HISTORY_BACKEND = "sqlite"
 xontrib load fzf-widgets
 $fzf_history_binding = Keys.ControlR

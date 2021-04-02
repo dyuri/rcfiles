@@ -1,6 +1,6 @@
 # screen layout
 # xrandr --output DVI-D-0 --mode 1920x1200 --pos 0x0 --rotate left --output HDMI-0 --primary --mode 1920x1200 --pos 1200x515 --rotate normal
-xrandr --output DVI-D-0 --mode 1920x1200 --rotate normal --output HDMI-0 --primary --mode 1920x1200 --rotate normal --right-of DVI-D-0
+xrandr --output DVI-D-0 --mode 1920x1200 --rotate normal --output DisplayPort-0 --primary --mode 1920x1200 --rotate normal --right-of DVI-D-0
 
 # billkiosztas
 # setxkbmap hu; setxkbmap -option ctrl:nocaps; sleep 1;xmodmap ~/.xmodmaprc 2> /dev/null
@@ -39,7 +39,7 @@ dunst &
 # background
 feh --bg-scale ~/backgrounds/hatter.jpg
 
-# /usr/bin/pulseaudio --start &
+# /usr/bin/pulseaudio --start
 
 setxkbmap repa dox
 

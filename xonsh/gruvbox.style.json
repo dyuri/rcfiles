@@ -1,4 +1,8 @@
 {
+  "Token.Terminal.Foreground": "#f0f8d0",
+  "Token.Terminal.Background": "#282828",
+  "Token.Terminal.Cursor": "#8254ff",
+
   "Token.Color.BLACK": "#282828",
   "Token.Color.BLUE": "#458588",
   "Token.Color.CYAN": "#689d6a",

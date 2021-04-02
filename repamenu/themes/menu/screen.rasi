@@ -12,9 +12,9 @@
 
 * {
   /* General */
-  text-font:                            "Hurmit Nerd Font 14";
-  icon-font:                            "Hurmit Nerd Font Mono 48";
-  icon-font-small:                      "Hurmit Nerd Font Mono 24";
+  text-font:                            "Hasklug Nerd Font 14";
+  icon-font:                            "Hasklug Nerd Font 48";
+  icon-font-small:                      "Hasklug Nerd Font 24";
 
   option-6-listview-spacing:            10px;
 

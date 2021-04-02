@@ -225,6 +225,7 @@ keymap_dox = [
     ('A-<Tab>', lazy.group.next_window()),
     ('A-S-<Tab>', lazy.group.prev_window()),
     ('M-w', lazy.window.kill()),
+    ('M-C-q', lazy.shutdown()),
 
     ('M-C-h', lazy.layout.grow_left(), lazy.layout.decrease_ratio(), lazy.layout.grow_width(-30)),  # dvorak h
     ('M-C-t', lazy.layout.grow_down(), lazy.layout.decrease_nmaster(), lazy.layout.grow_height(-30)),  # dvorak j
@@ -376,7 +377,7 @@ screens = [
             widget.Spacer(background=color(0)),
             widget.TextBox("", background=color(0), foreground=color("d1"), padding=0, fontsize=21),
             widget.TextBox("墳", background=color("d1"), foreground=color(3)),
-            widget.Volume(**widget_defaults, background=color("d1"), foreground=color("d4")),
+            widget.Volume(**widget_defaults, background=color("d1"), foreground=color("d4"), cardid=2, channel="PCM"),
             widget.TextBox("", background=color("d1"), foreground=color("d2"), padding=0, fontsize=21),
             widget.CPUGraph(
                 graph_color=color(10),

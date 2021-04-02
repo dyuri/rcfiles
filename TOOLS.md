@@ -6,7 +6,7 @@
 - kitty
 - neovim
 - exa (alias ll), lsd
-- prettyping
+- prettyping + mtr
 - bat
 - tmux
 - fzf
@@ -17,13 +17,13 @@
 - gotop/glances (<= htop)
 - powerline
 - neofetch
-- wpg (<= pywal)
+- wpgtk (<= pywal)
 - flameshot
 - chafa
 - msgcat --color=test
 - wuzz
 - hyperfine
-- asciinema + svg-term-cli
+- asciinema + svg-term-cli OR terminalizer
 - pastel (https://github.com/sharkdp/pastel) -> repacolors
 - direnv
 - vifm
@@ -36,6 +36,9 @@
 - uni - unicode query
 - typora - markdown editor
 - hexyl - colored hex viewer
+- gitui
+
+Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 
 ## Arch / Manjaro
 
