@@ -70,6 +70,7 @@ if dein#load_state('/home/dyuri/.cache/dein')
   call dein#add('mhinz/vim-startify')
   call dein#add('tpope/vim-unimpaired')
   call dein#add('tpope/vim-surround')
+  call dein#add('phaazon/hop.nvim')
   call dein#add('nelstrom/vim-visual-star-search')
   call dein#add('haya14busa/incsearch.vim')
   call dein#add('haya14busa/vim-asterisk')
@@ -124,6 +125,7 @@ if dein#load_state('/home/dyuri/.cache/dein')
   call dein#add("w0ng/vim-hybrid")
   call dein#add("dylanaraps/wal.vim")
   call dein#add("morhetz/gruvbox")
+  call dein#add("sainnhe/gruvbox-material")
 
   " devicons
   call dein#add('ryanoasis/vim-devicons')
@@ -405,22 +407,25 @@ if v:version >= 700
   hi TabLineSel           guifg=White guibg=Black
 endif
 
-colorscheme gruvbox
-" colorscheme molokai
-" colorscheme edge
-" colorscheme wal
-set background=dark
 " 24 bit / truecolor support needed
 if has("termguicolors")
   set tgc
 endif
 
+let g:gruvbox_material_palette = 'original'
+let g:gruvbox_material_background = 'hard'
+
+colorscheme gruvbox-material
+" colorscheme gruvbox
+" colorscheme molokai
+" colorscheme edge
+" colorscheme wal
+set background=dark
+
 nnoremap <leader>sm :set tgc<cr>:colorscheme molokai<cr>
 nnoremap <leader>sw :set notgc<cr>:colorscheme wal<cr>
 
-if has("gui_running")
-  set guifont=MesloLGS\ Nerd\ Font\ 10
-endif
+set guifont=Hasklug\ Nerd\ Font:h16
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -432,10 +437,18 @@ set showmatch     " zaro zarojelhez megmutatja a parjat
 set nostartofline " ugrasoknal ne menjen a sor elejere
 set breakindent   " breaked lines use the same indent level as the original
 
+function! RepaFoldText()
+  let line = getline(v:foldstart)
+  let foldedlinecount = v:foldend - v:foldstart + 1
+  return '  '. foldedlinecount . line
+endfunction
+
 set foldenable " folding bekapcsolasa
 set foldlevelstart=10
 set foldnestmax=10
 set foldmethod=indent
+set foldtext=RepaFoldText()
+set fillchars=fold:\ 
 nnoremap <Backspace> za
 
 set autoindent    " always set autoindenting on
@@ -581,6 +594,7 @@ let g:lightline = {
   \     'left': '', 'right': '' 
   \   }
   \ }
+let g:lightline.colorscheme = 'gruvbox_material'
 
 let g:lightline#bufferline#enable_devicons = 1
 let g:lightline#bufferline#unicode_symbols = 1
@@ -830,6 +844,13 @@ imap <F4> <ESC>:bn!<cr>a
 " neocomplete
 " nnoremap <F6> :NeoCompleteToggle<CR>
 " inoremap <F6> <ESC>:NeoCompleteToggle<CR>a
+
+" hop
+nnoremap <leader>/ :HopWord<cr>
+hi HopNextKey         guifg=#ff007c
+hi HopNextKey1        guifg=#00dfff
+hi HopNextKey2        guifg=#2b9db3
+hi HopUnmatched       guifg=#666666
 
 " panic button
 nnoremap <C-F6> mzggg?G'z

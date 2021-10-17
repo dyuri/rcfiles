@@ -12,6 +12,11 @@ xset +dpms
 # X resources
 xrdb ~/.Xdefaults
 
+# trayer
+# trayer --edge top --align center --tint "#000000" --transparent true --monitor primary --widthtype request &
+# => tint2
+# tint2 &
+
 # clipboard sync
 parcellite &
 

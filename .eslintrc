@@ -1,23 +1,23 @@
 {
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
   "env": {
     "browser": true,
     "node": true,
     "es6": true
   },
   "plugins": [
-    "html",
-    "prettier"
   ],
   "globals": {
-    "Polymer": true,
-    "$": true,
     "_": true
   },
   "rules": {
-    "prettier/prettier": 1,
     "comma-dangle": 2,
+    "no-tabs": 2,
     "no-cond-assign": 2,
-    "no-console": 0,
+    "no-console": 1,
     "no-constant-condition": 1,
     "no-control-regex": 1,
     "no-debugger": 1,
@@ -73,7 +73,7 @@
     "no-script-url": 1,
     "no-self-compare": 2,
     "no-sequences": 1,
-    "no-unused-expressions": 1,
+    "no-unused-expressions": 0,
     "no-void": 1,
     "no-warning-comments": 0,
     "no-with": 2,
@@ -119,7 +119,7 @@
     "no-trailing-spaces": 1,
     "no-multiple-empty-lines": 0,
     "no-underscore-dangle": 0,
-    "no-extra-parens": 0,
+    // "no-extra-parens": 1,
     "one-var": 0,
     "padded-blocks": 0,
     "quotes": 0,

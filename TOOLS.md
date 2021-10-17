@@ -8,12 +8,14 @@
 - exa (alias ll), lsd
 - prettyping + mtr
 - bat
-- tmux
+- tmux => ? zellij
 - fzf
 - fd
 - rg (<= ag)
 - mpv (<= mplayer)
-- httpie => curlie?
+- httpie => xh, httpx[cli]
+- duf (<= df)
+- procs (<= ps)
 - gotop/glances (<= htop)
 - powerline
 - neofetch
@@ -26,7 +28,7 @@
 - asciinema + svg-term-cli OR terminalizer
 - pastel (https://github.com/sharkdp/pastel) -> repacolors
 - direnv
-- vifm
+- vifm => nnn
 - repassh
 - croc
 - jq => fx - json query
@@ -37,6 +39,7 @@
 - typora - markdown editor
 - hexyl - colored hex viewer
 - gitui
+- podman (<= docker)
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 
@@ -47,6 +50,10 @@ Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 ```
 pikaur -S neovim ripgrep fd bat tmux exa kitty rofi-emoji glances gotop figlet lolcat
 ```
+
+## Python
+
+- rich
 
 ## Notes
 

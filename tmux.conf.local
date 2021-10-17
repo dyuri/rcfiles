@@ -365,6 +365,7 @@ bind ^D detach
 # move status line to top
 #set -g status-position top
 
+set-option -g default-shell "/home/dyuri/.local/bin/xonsh"
 
 # -- custom variables ----------------------------------------------------------
 # to define a custom #{foo} variable, define a POSIX shell function between the

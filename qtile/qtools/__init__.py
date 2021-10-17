@@ -13,10 +13,9 @@ gi.require_version('Notify', '0.7')
 from gi.repository import Notify
 
 from xcffib.xproto import StackMode
-from libqtile.drawer import Drawer
 from libqtile.lazy import lazy
 from libqtile.log_utils import logger
-from libqtile import configurable, pangocffi, window
+from libqtile import configurable, pangocffi
 
 
 class Notifier(configurable.Configurable):

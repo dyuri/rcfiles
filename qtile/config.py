@@ -373,11 +373,11 @@ screens = [
         # ], 25, margin=10),
         bottom=bar.Bar([
             widget.GroupBox(**groupbox_config),
-            widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=25),
-            widget.Spacer(background=color(0)),
-            widget.TextBox("", background=color(0), foreground=color("d1"), padding=0, fontsize=21),
+            widget.TextBox("", foreground=color(6), background=color(0) + "00", padding=0, fontsize=25),
+            widget.Spacer(background=color(0) + "00"),
+            widget.TextBox("", background=color(0) + "00", foreground=color("d1"), padding=0, fontsize=21),
             widget.TextBox("墳", background=color("d1"), foreground=color(3)),
-            widget.Volume(**widget_defaults, background=color("d1"), foreground=color("d4"), cardid=2, channel="PCM"),
+            widget.Volume(**widget_defaults, background=color("d1"), foreground=color("d4"), cardid=2, channel="PCM", device="sysdefault:2"),
             widget.TextBox("", background=color("d1"), foreground=color("d2"), padding=0, fontsize=21),
             widget.CPUGraph(
                 graph_color=color(10),
@@ -406,7 +406,7 @@ screens = [
             widget.TextBox("", background=color("d2"), foreground=color("d3"), padding=0, fontsize=21),
             widget.Clock(format='%Y.%m.%d %H:%M:%S', **widget_defaults, background=color("d3"), foreground=color(11)),
             widget.Systray(background=color("d3")),
-        ], 29, margin=10),
+        ], 29, background="#28282800", margin=10),
     ),
     Screen(
         # top=bar.Bar([
@@ -418,11 +418,11 @@ screens = [
         # ], 25, margin=10),
         bottom=bar.Bar([
             widget.GroupBox(**groupbox_config),
-            widget.TextBox("", foreground=color(6), background=color(0), padding=0, fontsize=25),
-            widget.Spacer(background=color(0)),
-            widget.TextBox("", background=color(0), foreground=color("d1"), padding=0, fontsize=21),
+            widget.TextBox("", foreground=color(6), background=color(0) + "00", padding=0, fontsize=25),
+            widget.Spacer(background=color(0) + "00"),
+            widget.TextBox("", background=color(0) + "00", foreground=color("d1"), padding=0, fontsize=21),
             widget.TextBox("墳", background=color("d1"), foreground=color(3)),
-            widget.Volume(**widget_defaults, background=color("d1"), foreground=color("d4")),
+            widget.Volume(**widget_defaults, background=color("d1"), foreground=color("d4"), cardid=2, channel="PCM", device="sysdefault:2"),
             # Mpris2(
             #     name="chrome",
             #     **widget_defaults,
@@ -433,7 +433,7 @@ screens = [
             #     foreground=color(2)),
             widget.TextBox("", background=color("d1"), foreground=color("d3"), padding=0, fontsize=21),
             widget.Clock(format='%Y.%m.%d %H:%M:%S', **widget_defaults, background=color("d3"), foreground=color(11)),
-        ], 29, margin=10),
+        ], 29, background="#28282828", margin=10),
     ),
 ]
 
@@ -466,7 +466,7 @@ def restart_on_randr(ev):
         qtile.cmd_restart()
 
 
-@hook.subscribe.client_new
+# @hook.subscribe.client_new
 def _swallow(window):
     pid = window.window.get_net_wm_pid()
     ppid = psutil.Process(pid).ppid()
@@ -482,7 +482,7 @@ def _swallow(window):
         ppid = psutil.Process(ppid).ppid()
 
 
-@hook.subscribe.client_killed
+# @hook.subscribe.client_killed
 def _unswallow(window):
     if hasattr(window, 'parent'):
         window.parent.minimized = False
