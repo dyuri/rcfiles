@@ -1,0 +1,1692 @@
+2021-02-15 18:56:36	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 18:56:36	--	matrix: Doing SSL handshake...
+2021-02-15 18:56:36	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 18:56:36	--	matrix: received certificate
+2021-02-15 18:56:36		 - certificate info:
+2021-02-15 18:56:36		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 18:56:36		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 18:56:36		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 18:56:36		        commonName=R3
+2021-02-15 18:56:36		    - key info: RSA key 2048 bits, signed using
+2021-02-15 18:56:36		        sha256WithRSAEncryption
+2021-02-15 18:56:36		    - period of validity:
+2021-02-15 18:56:36		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 18:56:36		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 18:56:36		    - fingerprints:
+2021-02-15 18:56:36		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 18:56:36		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 18:56:36	--	matrix: Logging in...
+2021-02-15 18:56:36	=!=	matrix: Error: LoginError: 403 Invalid password
+2021-02-15 18:56:36	--	matrix: disconnected from server
+2021-02-15 18:56:36	--	matrix: reconnecting to server in 10 seconds
+2021-02-15 18:56:47	--	matrix: reconnecting to server...
+2021-02-15 18:56:47	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 18:56:47	--	matrix: Doing SSL handshake...
+2021-02-15 18:56:47	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 18:56:47	--	matrix: received certificate
+2021-02-15 18:56:47		 - certificate info:
+2021-02-15 18:56:47		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 18:56:47		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 18:56:47		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 18:56:47		        commonName=R3
+2021-02-15 18:56:47		    - key info: RSA key 2048 bits, signed using
+2021-02-15 18:56:47		        sha256WithRSAEncryption
+2021-02-15 18:56:47		    - period of validity:
+2021-02-15 18:56:47		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 18:56:47		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 18:56:47		    - fingerprints:
+2021-02-15 18:56:47		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 18:56:47		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 18:56:47	--	matrix: Logging in...
+2021-02-15 18:56:47	=!=	matrix: Error: LoginError: 403 Invalid password
+2021-02-15 18:56:47	--	matrix: disconnected from server
+2021-02-15 18:56:47	--	matrix: reconnecting to server in 10 seconds
+2021-02-15 18:56:58	--	matrix: reconnecting to server...
+2021-02-15 18:56:58	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 18:56:58	--	matrix: Doing SSL handshake...
+2021-02-15 18:56:58	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 18:56:58	--	matrix: received certificate
+2021-02-15 18:56:58		 - certificate info:
+2021-02-15 18:56:58		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 18:56:58		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 18:56:58		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 18:56:58		        commonName=R3
+2021-02-15 18:56:58		    - key info: RSA key 2048 bits, signed using
+2021-02-15 18:56:58		        sha256WithRSAEncryption
+2021-02-15 18:56:58		    - period of validity:
+2021-02-15 18:56:58		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 18:56:58		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 18:56:58		    - fingerprints:
+2021-02-15 18:56:58		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 18:56:58		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 18:56:58	--	matrix: Logging in...
+2021-02-15 18:56:58	=!=	matrix: Error: LoginError: 403 Invalid password
+2021-02-15 18:56:58	--	matrix: disconnected from server
+2021-02-15 18:56:58	--	matrix: reconnecting to server in 10 seconds
+2021-02-15 18:57:09	--	matrix: reconnecting to server...
+2021-02-15 18:57:09	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 18:57:09	--	matrix: Doing SSL handshake...
+2021-02-15 18:57:09	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 18:57:09	--	matrix: received certificate
+2021-02-15 18:57:09		 - certificate info:
+2021-02-15 18:57:09		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 18:57:09		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 18:57:09		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 18:57:09		        commonName=R3
+2021-02-15 18:57:09		    - key info: RSA key 2048 bits, signed using
+2021-02-15 18:57:09		        sha256WithRSAEncryption
+2021-02-15 18:57:09		    - period of validity:
+2021-02-15 18:57:09		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 18:57:09		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 18:57:09		    - fingerprints:
+2021-02-15 18:57:09		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 18:57:09		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 18:57:09	--	matrix: Logging in...
+2021-02-15 18:57:09	=!=	matrix: Error: LoginError: 403 Invalid password
+2021-02-15 18:57:09	--	matrix: disconnected from server
+2021-02-15 18:57:09	--	matrix: reconnecting to server in 10 seconds
+2021-02-15 18:57:20	--	matrix: reconnecting to server...
+2021-02-15 18:57:20	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 18:57:20	--	matrix: Doing SSL handshake...
+2021-02-15 18:57:20	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 18:57:20	--	matrix: received certificate
+2021-02-15 18:57:20		 - certificate info:
+2021-02-15 18:57:20		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 18:57:20		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 18:57:20		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 18:57:20		        commonName=R3
+2021-02-15 18:57:20		    - key info: RSA key 2048 bits, signed using
+2021-02-15 18:57:20		        sha256WithRSAEncryption
+2021-02-15 18:57:20		    - period of validity:
+2021-02-15 18:57:20		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 18:57:20		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 18:57:20		    - fingerprints:
+2021-02-15 18:57:20		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 18:57:20		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 18:57:20	--	matrix: Logging in...
+2021-02-15 18:57:20	=!=	matrix: Error: LoginError: 403 Invalid password
+2021-02-15 18:57:20	--	matrix: disconnected from server
+2021-02-15 18:57:20	--	matrix: reconnecting to server in 10 seconds
+2021-02-15 18:57:31	--	matrix: reconnecting to server...
+2021-02-15 18:57:31	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 18:57:31	--	matrix: Doing SSL handshake...
+2021-02-15 18:57:31	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 18:57:31	--	matrix: received certificate
+2021-02-15 18:57:31		 - certificate info:
+2021-02-15 18:57:31		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 18:57:31		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 18:57:31		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 18:57:31		        commonName=R3
+2021-02-15 18:57:31		    - key info: RSA key 2048 bits, signed using
+2021-02-15 18:57:31		        sha256WithRSAEncryption
+2021-02-15 18:57:31		    - period of validity:
+2021-02-15 18:57:31		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 18:57:31		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 18:57:31		    - fingerprints:
+2021-02-15 18:57:31		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 18:57:31		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 18:57:31	--	matrix: Logging in...
+2021-02-15 18:57:31	=!=	matrix: Error: LoginError: 403 Invalid password
+2021-02-15 18:57:31	--	matrix: disconnected from server
+2021-02-15 18:57:31	--	matrix: reconnecting to server in 10 seconds
+2021-02-15 18:57:42	--	matrix: reconnecting to server...
+2021-02-15 18:57:42	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 18:57:42	--	matrix: Doing SSL handshake...
+2021-02-15 18:57:42	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 18:57:42	--	matrix: received certificate
+2021-02-15 18:57:42		 - certificate info:
+2021-02-15 18:57:42		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 18:57:42		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 18:57:42		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 18:57:42		        commonName=R3
+2021-02-15 18:57:42		    - key info: RSA key 2048 bits, signed using
+2021-02-15 18:57:42		        sha256WithRSAEncryption
+2021-02-15 18:57:42		    - period of validity:
+2021-02-15 18:57:42		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 18:57:42		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 18:57:42		    - fingerprints:
+2021-02-15 18:57:42		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 18:57:42		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 18:57:42	--	matrix: Logging in...
+2021-02-15 18:57:42	=!=	matrix: Error: LoginError: 403 Invalid password
+2021-02-15 18:57:42	--	matrix: disconnected from server
+2021-02-15 18:57:42	--	matrix: reconnecting to server in 10 seconds
+2021-02-15 18:57:53	--	matrix: reconnecting to server...
+2021-02-15 18:57:53	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 18:57:53	--	matrix: Doing SSL handshake...
+2021-02-15 18:57:53	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 18:57:53	--	matrix: received certificate
+2021-02-15 18:57:53		 - certificate info:
+2021-02-15 18:57:53		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 18:57:53		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 18:57:53		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 18:57:53		        commonName=R3
+2021-02-15 18:57:53		    - key info: RSA key 2048 bits, signed using
+2021-02-15 18:57:53		        sha256WithRSAEncryption
+2021-02-15 18:57:53		    - period of validity:
+2021-02-15 18:57:53		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 18:57:53		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 18:57:53		    - fingerprints:
+2021-02-15 18:57:53		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 18:57:53		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 18:57:53	--	matrix: Logging in...
+2021-02-15 18:57:53	=!=	matrix: Error: LoginError: 403 Invalid password
+2021-02-15 18:57:53	--	matrix: disconnected from server
+2021-02-15 18:57:53	--	matrix: reconnecting to server in 10 seconds
+2021-02-15 18:58:04	--	matrix: reconnecting to server...
+2021-02-15 18:58:04	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 18:58:06	--	matrix: Doing SSL handshake...
+2021-02-15 18:58:06	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 18:58:06	--	matrix: received certificate
+2021-02-15 18:58:06		 - certificate info:
+2021-02-15 18:58:06		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 18:58:06		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 18:58:06		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 18:58:06		        commonName=R3
+2021-02-15 18:58:06		    - key info: RSA key 2048 bits, signed using
+2021-02-15 18:58:06		        sha256WithRSAEncryption
+2021-02-15 18:58:06		    - period of validity:
+2021-02-15 18:58:06		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 18:58:06		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 18:58:06		    - fingerprints:
+2021-02-15 18:58:06		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 18:58:06		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 18:58:06	--	matrix: Logging in...
+2021-02-15 18:58:06	=!=	matrix: Error: LoginError: 403 Invalid password
+2021-02-15 18:58:06	--	matrix: disconnected from server
+2021-02-15 18:58:06	--	matrix: reconnecting to server in 10 seconds
+2021-02-15 18:58:17	--	matrix: reconnecting to server...
+2021-02-15 18:58:17	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 18:58:17	--	matrix: Doing SSL handshake...
+2021-02-15 18:58:17	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 18:58:17	--	matrix: received certificate
+2021-02-15 18:58:17		 - certificate info:
+2021-02-15 18:58:17		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 18:58:17		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 18:58:17		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 18:58:17		        commonName=R3
+2021-02-15 18:58:17		    - key info: RSA key 2048 bits, signed using
+2021-02-15 18:58:17		        sha256WithRSAEncryption
+2021-02-15 18:58:17		    - period of validity:
+2021-02-15 18:58:17		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 18:58:17		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 18:58:17		    - fingerprints:
+2021-02-15 18:58:17		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 18:58:17		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 18:58:17	--	matrix: Logging in...
+2021-02-15 18:58:19	--	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-15 18:59:48		matrix: Verified key(s):
+2021-02-15 18:59:48		  - User: @bandi:codeandsoda.com
+2021-02-15 18:59:48		    - Device ID:      NAELRNTYEJ
+2021-02-15 18:59:48		      - Display name: Element Android
+2021-02-15 18:59:48		      - Device key:   2QH1 NOYo 8XiZ 90Pf rMbA GEM9 7KNZ uNo8 Wz0k r4Cc rXo 
+2021-02-15 19:01:22		matrix: Verified key(s):
+2021-02-15 19:01:22		  - User: @bandi:codeandsoda.com
+2021-02-15 19:01:22		    - Device ID:      NAELRNTYEJ
+2021-02-15 19:01:22		      - Display name: Element Android
+2021-02-15 19:01:22		      - Device key:   2QH1 NOYo 8XiZ 90Pf rMbA GEM9 7KNZ uNo8 Wz0k r4Cc rXo 
+2021-02-15 19:01:35		matrix: Verified key(s):
+2021-02-15 19:01:35		  - User: @dyuri:codeandsoda.com
+2021-02-15 19:01:35		    - Device ID:      XWKOTWVYSP
+2021-02-15 19:01:35		      - Display name: app.element.io (Chrome, Linux)
+2021-02-15 19:01:35		      - Device key:   16uY 5l4w w3tm oeTG xrw1 cGYo lysI duKj qKKw sywl PbI 
+2021-02-15 19:03:44		matrix: Verified key(s):
+2021-02-15 19:03:44		  - User: @dyuri:codeandsoda.com
+2021-02-15 19:03:44		    - Device ID:      XWKOTWVYSP
+2021-02-15 19:03:44		      - Display name: app.element.io (Chrome, Linux)
+2021-02-15 19:03:44		      - Device key:   16uY 5l4w w3tm oeTG xrw1 cGYo lysI duKj qKKw sywl PbI 
+2021-02-15 19:04:32	=!=	matrix: Device @dyuri:codeandsoda.com of user * not found
+2021-02-15 19:04:42	=!=	matrix: No active key verification found for device XWKOTWVYSP of user @dyuri:codeandsoda.com.
+2021-02-15 19:05:16	=!=	matrix: No active key verification found for device XWKOTWVYSP of user @dyuri:codeandsoda.com.
+2021-02-15 19:05:22	--	matrix: Starting an interactive device verification with @dyuri:codeandsoda.com XWKOTWVYSP
+2021-02-15 19:05:28	--	matrix: Short authentication string for @dyuri:codeandsoda.com via XWKOTWVYSP:
+2021-02-15 19:05:28		     🐢          ✏️           ☁️           🐙          👓          🐼          👓     
+2021-02-15 19:05:28		   Turtle      Pencil      Cloud      Octopus     Glasses      Panda      Glasses   
+2021-02-15 19:05:28		Confirm that the strings match with /olm verification confirm @dyuri:codeandsoda.com XWKOTWVYSP
+2021-02-15 19:05:50	--	matrix: Device XWKOTWVYSP of user @dyuri:codeandsoda.com succesfully verified
+2021-02-15 19:24:13	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 19:24:13	--	matrix: Doing SSL handshake...
+2021-02-15 19:24:13	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 19:24:13	--	matrix: received certificate
+2021-02-15 19:24:13		 - certificate info:
+2021-02-15 19:24:13		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 19:24:13		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 19:24:13		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 19:24:13		        commonName=R3
+2021-02-15 19:24:13		    - key info: RSA key 2048 bits, signed using
+2021-02-15 19:24:13		        sha256WithRSAEncryption
+2021-02-15 19:24:13		    - period of validity:
+2021-02-15 19:24:13		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 19:24:13		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 19:24:13		    - fingerprints:
+2021-02-15 19:24:13		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 19:24:13		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 19:24:13	--	matrix: Logging in...
+2021-02-15 19:24:13	--	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-15 19:49:36	--	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-15 19:49:36	--	matrix: Doing SSL handshake...
+2021-02-15 19:49:36	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-15 19:49:36	--	matrix: received certificate
+2021-02-15 19:49:36		 - certificate info:
+2021-02-15 19:49:36		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-15 19:49:36		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-15 19:49:36		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-15 19:49:36		        commonName=R3
+2021-02-15 19:49:36		    - key info: RSA key 2048 bits, signed using
+2021-02-15 19:49:36		        sha256WithRSAEncryption
+2021-02-15 19:49:36		    - period of validity:
+2021-02-15 19:49:36		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-15 19:49:36		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-15 19:49:36		    - fingerprints:
+2021-02-15 19:49:36		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-15 19:49:36		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-15 19:49:37	--	matrix: Logging in...
+2021-02-15 19:49:37	--	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-17 13:29:23	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-17 13:29:23	!	matrix: Doing SSL handshake...
+2021-02-17 13:29:23	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-17 13:29:23	!	matrix: received certificate
+2021-02-17 13:29:23		 - certificate info:
+2021-02-17 13:29:23		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-17 13:29:23		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-17 13:29:23		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-17 13:29:23		        commonName=R3
+2021-02-17 13:29:23		    - key info: RSA key 2048 bits, signed using
+2021-02-17 13:29:23		        sha256WithRSAEncryption
+2021-02-17 13:29:23		    - period of validity:
+2021-02-17 13:29:23		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-17 13:29:23		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-17 13:29:23		    - fingerprints:
+2021-02-17 13:29:23		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-17 13:29:23		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-17 13:29:23	!	matrix: Logging in...
+2021-02-17 13:29:23	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-17 19:01:13	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-17 19:01:13	!	matrix: disconnected from server
+2021-02-17 19:01:13	!	matrix: reconnecting to server in 10 seconds
+2021-02-17 19:01:24	!	matrix: reconnecting to server...
+2021-02-17 19:01:24	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-17 19:01:24	!	matrix: Doing SSL handshake...
+2021-02-17 19:01:24	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-17 19:01:24	!	matrix: received certificate
+2021-02-17 19:01:24		 - certificate info:
+2021-02-17 19:01:24		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-17 19:01:24		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-17 19:01:24		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-17 19:01:24		        commonName=R3
+2021-02-17 19:01:24		    - key info: RSA key 2048 bits, signed using
+2021-02-17 19:01:24		        sha256WithRSAEncryption
+2021-02-17 19:01:24		    - period of validity:
+2021-02-17 19:01:24		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-17 19:01:24		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-17 19:01:24		    - fingerprints:
+2021-02-17 19:01:24		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-17 19:01:24		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-17 19:01:24	!	matrix: Already logged in, syncing...
+2021-02-18 10:33:39	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-18 10:33:40	!	matrix: Doing SSL handshake...
+2021-02-18 10:33:40	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-18 10:33:40	!	matrix: received certificate
+2021-02-18 10:33:40		 - certificate info:
+2021-02-18 10:33:40		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-18 10:33:40		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-18 10:33:40		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-18 10:33:40		        commonName=R3
+2021-02-18 10:33:40		    - key info: RSA key 2048 bits, signed using
+2021-02-18 10:33:40		        sha256WithRSAEncryption
+2021-02-18 10:33:40		    - period of validity:
+2021-02-18 10:33:40		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-18 10:33:40		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-18 10:33:40		    - fingerprints:
+2021-02-18 10:33:40		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-18 10:33:40		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-18 10:33:40	!	matrix: Logging in...
+2021-02-18 10:33:40	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-18 16:34:17	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-18 16:34:17	!	matrix: Doing SSL handshake...
+2021-02-18 16:34:18	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-18 16:34:18	!	matrix: received certificate
+2021-02-18 16:34:18		 - certificate info:
+2021-02-18 16:34:18		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-18 16:34:18		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-18 16:34:18		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-18 16:34:18		        commonName=R3
+2021-02-18 16:34:18		    - key info: RSA key 2048 bits, signed using
+2021-02-18 16:34:18		        sha256WithRSAEncryption
+2021-02-18 16:34:18		    - period of validity:
+2021-02-18 16:34:18		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-18 16:34:18		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-18 16:34:18		    - fingerprints:
+2021-02-18 16:34:18		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-18 16:34:18		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-18 16:34:18	!	matrix: Logging in...
+2021-02-18 16:34:19	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-18 22:16:28	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-18 22:16:28	!	matrix: disconnected from server
+2021-02-18 22:16:28	!	matrix: reconnecting to server in 10 seconds
+2021-02-18 22:16:39	!	matrix: reconnecting to server...
+2021-02-18 22:16:39	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-18 22:16:40	!	matrix: Doing SSL handshake...
+2021-02-18 22:16:40	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-18 22:16:40	!	matrix: received certificate
+2021-02-18 22:16:40		 - certificate info:
+2021-02-18 22:16:40		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-18 22:16:40		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-18 22:16:40		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-18 22:16:40		        commonName=R3
+2021-02-18 22:16:40		    - key info: RSA key 2048 bits, signed using
+2021-02-18 22:16:40		        sha256WithRSAEncryption
+2021-02-18 22:16:40		    - period of validity:
+2021-02-18 22:16:40		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-18 22:16:40		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-18 22:16:40		    - fingerprints:
+2021-02-18 22:16:40		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-18 22:16:40		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-18 22:16:40	!	matrix: Already logged in, syncing...
+2021-02-19 09:33:24	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 09:33:24	!	matrix: Doing SSL handshake...
+2021-02-19 09:33:24	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 09:33:24	!	matrix: received certificate
+2021-02-19 09:33:24		 - certificate info:
+2021-02-19 09:33:24		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 09:33:24		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 09:33:24		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 09:33:24		        commonName=R3
+2021-02-19 09:33:24		    - key info: RSA key 2048 bits, signed using
+2021-02-19 09:33:24		        sha256WithRSAEncryption
+2021-02-19 09:33:24		    - period of validity:
+2021-02-19 09:33:24		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 09:33:24		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 09:33:24		    - fingerprints:
+2021-02-19 09:33:24		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 09:33:24		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 09:33:24	!	matrix: Logging in...
+2021-02-19 09:33:25	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-19 11:04:55	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:04:55	!	matrix: disconnected from server
+2021-02-19 11:04:55	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:05:06	!	matrix: reconnecting to server...
+2021-02-19 11:05:06	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:05:06	!	matrix: Doing SSL handshake...
+2021-02-19 11:05:06	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:05:06	!	matrix: received certificate
+2021-02-19 11:05:06		 - certificate info:
+2021-02-19 11:05:06		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:05:06		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:05:06		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:05:06		        commonName=R3
+2021-02-19 11:05:06		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:05:06		        sha256WithRSAEncryption
+2021-02-19 11:05:06		    - period of validity:
+2021-02-19 11:05:06		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:05:06		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:05:06		    - fingerprints:
+2021-02-19 11:05:06		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:05:06		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:05:06	!	matrix: Already logged in, syncing...
+2021-02-19 11:05:06	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:05:06	!	matrix: disconnected from server
+2021-02-19 11:05:06	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:05:17	!	matrix: reconnecting to server...
+2021-02-19 11:05:17	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:05:17	!	matrix: Doing SSL handshake...
+2021-02-19 11:05:17	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:05:17	!	matrix: received certificate
+2021-02-19 11:05:17		 - certificate info:
+2021-02-19 11:05:17		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:05:17		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:05:17		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:05:17		        commonName=R3
+2021-02-19 11:05:17		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:05:17		        sha256WithRSAEncryption
+2021-02-19 11:05:17		    - period of validity:
+2021-02-19 11:05:17		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:05:17		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:05:17		    - fingerprints:
+2021-02-19 11:05:17		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:05:17		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:05:17	!	matrix: Already logged in, syncing...
+2021-02-19 11:05:17	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:05:17	!	matrix: disconnected from server
+2021-02-19 11:05:17	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:05:28	!	matrix: reconnecting to server...
+2021-02-19 11:05:28	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:05:28	!	matrix: Doing SSL handshake...
+2021-02-19 11:05:28	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:05:28	!	matrix: received certificate
+2021-02-19 11:05:28		 - certificate info:
+2021-02-19 11:05:28		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:05:28		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:05:28		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:05:28		        commonName=R3
+2021-02-19 11:05:28		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:05:28		        sha256WithRSAEncryption
+2021-02-19 11:05:28		    - period of validity:
+2021-02-19 11:05:28		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:05:28		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:05:28		    - fingerprints:
+2021-02-19 11:05:28		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:05:28		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:05:28	!	matrix: Already logged in, syncing...
+2021-02-19 11:05:28	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:05:28	!	matrix: disconnected from server
+2021-02-19 11:05:28	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:05:39	!	matrix: reconnecting to server...
+2021-02-19 11:05:39	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:05:39	!	matrix: Doing SSL handshake...
+2021-02-19 11:05:39	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:05:39	!	matrix: received certificate
+2021-02-19 11:05:39		 - certificate info:
+2021-02-19 11:05:39		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:05:39		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:05:39		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:05:39		        commonName=R3
+2021-02-19 11:05:39		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:05:39		        sha256WithRSAEncryption
+2021-02-19 11:05:39		    - period of validity:
+2021-02-19 11:05:39		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:05:39		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:05:39		    - fingerprints:
+2021-02-19 11:05:39		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:05:39		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:05:39	!	matrix: Already logged in, syncing...
+2021-02-19 11:05:39	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:05:39	!	matrix: disconnected from server
+2021-02-19 11:05:39	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:05:50	!	matrix: reconnecting to server...
+2021-02-19 11:05:50	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:05:50	!	matrix: Doing SSL handshake...
+2021-02-19 11:05:50	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:05:50	!	matrix: received certificate
+2021-02-19 11:05:50		 - certificate info:
+2021-02-19 11:05:50		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:05:50		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:05:50		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:05:50		        commonName=R3
+2021-02-19 11:05:50		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:05:50		        sha256WithRSAEncryption
+2021-02-19 11:05:50		    - period of validity:
+2021-02-19 11:05:50		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:05:50		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:05:50		    - fingerprints:
+2021-02-19 11:05:50		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:05:50		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:05:50	!	matrix: Already logged in, syncing...
+2021-02-19 11:05:50	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:05:50	!	matrix: disconnected from server
+2021-02-19 11:05:50	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:06:01	!	matrix: reconnecting to server...
+2021-02-19 11:06:01	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:06:01	!	matrix: Doing SSL handshake...
+2021-02-19 11:06:01	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:06:01	!	matrix: received certificate
+2021-02-19 11:06:01		 - certificate info:
+2021-02-19 11:06:01		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:06:01		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:06:01		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:06:01		        commonName=R3
+2021-02-19 11:06:01		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:06:01		        sha256WithRSAEncryption
+2021-02-19 11:06:01		    - period of validity:
+2021-02-19 11:06:01		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:06:01		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:06:01		    - fingerprints:
+2021-02-19 11:06:01		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:06:01		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:06:01	!	matrix: Already logged in, syncing...
+2021-02-19 11:06:01	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:06:01	!	matrix: disconnected from server
+2021-02-19 11:06:01	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:06:12	!	matrix: reconnecting to server...
+2021-02-19 11:06:12	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:06:12	!	matrix: Doing SSL handshake...
+2021-02-19 11:06:12	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:06:12	!	matrix: received certificate
+2021-02-19 11:06:12		 - certificate info:
+2021-02-19 11:06:12		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:06:12		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:06:12		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:06:12		        commonName=R3
+2021-02-19 11:06:12		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:06:12		        sha256WithRSAEncryption
+2021-02-19 11:06:12		    - period of validity:
+2021-02-19 11:06:12		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:06:12		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:06:12		    - fingerprints:
+2021-02-19 11:06:12		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:06:12		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:06:12	!	matrix: Already logged in, syncing...
+2021-02-19 11:06:12	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:06:12	!	matrix: disconnected from server
+2021-02-19 11:06:12	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:06:23	!	matrix: reconnecting to server...
+2021-02-19 11:06:23	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:06:23	!	matrix: Doing SSL handshake...
+2021-02-19 11:06:23	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:06:23	!	matrix: received certificate
+2021-02-19 11:06:23		 - certificate info:
+2021-02-19 11:06:23		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:06:23		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:06:23		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:06:23		        commonName=R3
+2021-02-19 11:06:23		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:06:23		        sha256WithRSAEncryption
+2021-02-19 11:06:23		    - period of validity:
+2021-02-19 11:06:23		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:06:23		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:06:23		    - fingerprints:
+2021-02-19 11:06:23		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:06:23		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:06:23	!	matrix: Already logged in, syncing...
+2021-02-19 11:06:23	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:06:23	!	matrix: disconnected from server
+2021-02-19 11:06:23	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:06:34	!	matrix: reconnecting to server...
+2021-02-19 11:06:34	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:06:34	!	matrix: Doing SSL handshake...
+2021-02-19 11:06:34	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:06:34	!	matrix: received certificate
+2021-02-19 11:06:34		 - certificate info:
+2021-02-19 11:06:34		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:06:34		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:06:34		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:06:34		        commonName=R3
+2021-02-19 11:06:34		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:06:34		        sha256WithRSAEncryption
+2021-02-19 11:06:34		    - period of validity:
+2021-02-19 11:06:34		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:06:34		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:06:34		    - fingerprints:
+2021-02-19 11:06:34		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:06:34		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:06:34	!	matrix: Already logged in, syncing...
+2021-02-19 11:06:34	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:06:34	!	matrix: disconnected from server
+2021-02-19 11:06:34	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:06:45	!	matrix: reconnecting to server...
+2021-02-19 11:06:45	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:06:45	!	matrix: Doing SSL handshake...
+2021-02-19 11:06:45	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:06:45	!	matrix: received certificate
+2021-02-19 11:06:45		 - certificate info:
+2021-02-19 11:06:45		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:06:45		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:06:45		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:06:45		        commonName=R3
+2021-02-19 11:06:45		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:06:45		        sha256WithRSAEncryption
+2021-02-19 11:06:45		    - period of validity:
+2021-02-19 11:06:45		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:06:45		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:06:45		    - fingerprints:
+2021-02-19 11:06:45		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:06:45		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:06:45	!	matrix: Already logged in, syncing...
+2021-02-19 11:06:45	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:06:45	!	matrix: disconnected from server
+2021-02-19 11:06:45	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:06:56	!	matrix: reconnecting to server...
+2021-02-19 11:06:56	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:06:56	!	matrix: Doing SSL handshake...
+2021-02-19 11:06:56	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:06:56	!	matrix: received certificate
+2021-02-19 11:06:56		 - certificate info:
+2021-02-19 11:06:56		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:06:56		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:06:56		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:06:56		        commonName=R3
+2021-02-19 11:06:56		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:06:56		        sha256WithRSAEncryption
+2021-02-19 11:06:56		    - period of validity:
+2021-02-19 11:06:56		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:06:56		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:06:56		    - fingerprints:
+2021-02-19 11:06:56		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:06:56		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:06:56	!	matrix: Already logged in, syncing...
+2021-02-19 11:06:56	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:06:56	!	matrix: disconnected from server
+2021-02-19 11:06:56	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:07:07	!	matrix: reconnecting to server...
+2021-02-19 11:07:07	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:07:07	!	matrix: Doing SSL handshake...
+2021-02-19 11:07:07	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:07:07	!	matrix: received certificate
+2021-02-19 11:07:07		 - certificate info:
+2021-02-19 11:07:07		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:07:07		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:07:07		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:07:07		        commonName=R3
+2021-02-19 11:07:07		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:07:07		        sha256WithRSAEncryption
+2021-02-19 11:07:07		    - period of validity:
+2021-02-19 11:07:07		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:07:07		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:07:07		    - fingerprints:
+2021-02-19 11:07:07		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:07:07		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:07:07	!	matrix: Already logged in, syncing...
+2021-02-19 11:07:07	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:07:07	!	matrix: disconnected from server
+2021-02-19 11:07:07	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:07:18	!	matrix: reconnecting to server...
+2021-02-19 11:07:18	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:07:18	!	matrix: Doing SSL handshake...
+2021-02-19 11:07:18	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:07:18	!	matrix: received certificate
+2021-02-19 11:07:18		 - certificate info:
+2021-02-19 11:07:18		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:07:18		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:07:18		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:07:18		        commonName=R3
+2021-02-19 11:07:18		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:07:18		        sha256WithRSAEncryption
+2021-02-19 11:07:18		    - period of validity:
+2021-02-19 11:07:18		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:07:18		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:07:18		    - fingerprints:
+2021-02-19 11:07:18		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:07:18		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:07:18	!	matrix: Already logged in, syncing...
+2021-02-19 11:07:18	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:07:18	!	matrix: disconnected from server
+2021-02-19 11:07:18	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:07:29	!	matrix: reconnecting to server...
+2021-02-19 11:07:29	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:07:29	!	matrix: Doing SSL handshake...
+2021-02-19 11:07:29	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:07:29	!	matrix: received certificate
+2021-02-19 11:07:29		 - certificate info:
+2021-02-19 11:07:29		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:07:29		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:07:29		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:07:29		        commonName=R3
+2021-02-19 11:07:29		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:07:29		        sha256WithRSAEncryption
+2021-02-19 11:07:29		    - period of validity:
+2021-02-19 11:07:29		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:07:29		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:07:29		    - fingerprints:
+2021-02-19 11:07:29		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:07:29		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:07:29	!	matrix: Already logged in, syncing...
+2021-02-19 11:07:29	×	matrix: Error: SyncError: 502 unknown error
+2021-02-19 11:07:29	!	matrix: disconnected from server
+2021-02-19 11:07:29	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 11:07:40	!	matrix: reconnecting to server...
+2021-02-19 11:07:40	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:07:40	!	matrix: Doing SSL handshake...
+2021-02-19 11:07:40	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:07:40	!	matrix: received certificate
+2021-02-19 11:07:40		 - certificate info:
+2021-02-19 11:07:40		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:07:40		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:07:40		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:07:40		        commonName=R3
+2021-02-19 11:07:40		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:07:40		        sha256WithRSAEncryption
+2021-02-19 11:07:40		    - period of validity:
+2021-02-19 11:07:40		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:07:40		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:07:40		    - fingerprints:
+2021-02-19 11:07:40		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:07:40		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:07:40	!	matrix: Already logged in, syncing...
+2021-02-19 11:08:07	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 11:08:07	!	matrix: Doing SSL handshake...
+2021-02-19 11:08:07	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 11:08:07	!	matrix: received certificate
+2021-02-19 11:08:07		 - certificate info:
+2021-02-19 11:08:07		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 11:08:07		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 11:08:07		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 11:08:07		        commonName=R3
+2021-02-19 11:08:07		    - key info: RSA key 2048 bits, signed using
+2021-02-19 11:08:07		        sha256WithRSAEncryption
+2021-02-19 11:08:07		    - period of validity:
+2021-02-19 11:08:07		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 11:08:07		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 11:08:07		    - fingerprints:
+2021-02-19 11:08:07		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 11:08:07		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 11:08:07	!	matrix: Logging in...
+2021-02-19 11:08:08	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-19 11:20:47	×	matrix: Error: JoinError: 500 Internal server error
+2021-02-19 15:19:59	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 15:19:59	!	matrix: Doing SSL handshake...
+2021-02-19 15:19:59	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 15:19:59	!	matrix: received certificate
+2021-02-19 15:19:59		 - certificate info:
+2021-02-19 15:19:59		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 15:19:59		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 15:19:59		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 15:19:59		        commonName=R3
+2021-02-19 15:19:59		    - key info: RSA key 2048 bits, signed using
+2021-02-19 15:19:59		        sha256WithRSAEncryption
+2021-02-19 15:19:59		    - period of validity:
+2021-02-19 15:19:59		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 15:19:59		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 15:19:59		    - fingerprints:
+2021-02-19 15:19:59		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 15:19:59		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 15:19:59	!	matrix: Logging in...
+2021-02-19 15:20:00	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-19 18:22:43	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-19 18:22:43	!	matrix: disconnected from server
+2021-02-19 18:22:43	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 18:22:54	!	matrix: reconnecting to server...
+2021-02-19 18:22:54	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 18:22:54	!	matrix: Doing SSL handshake...
+2021-02-19 18:22:54	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 18:22:54	!	matrix: received certificate
+2021-02-19 18:22:54		 - certificate info:
+2021-02-19 18:22:54		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 18:22:54		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 18:22:54		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 18:22:54		        commonName=R3
+2021-02-19 18:22:54		    - key info: RSA key 2048 bits, signed using
+2021-02-19 18:22:54		        sha256WithRSAEncryption
+2021-02-19 18:22:54		    - period of validity:
+2021-02-19 18:22:54		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 18:22:54		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 18:22:54		    - fingerprints:
+2021-02-19 18:22:54		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 18:22:54		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 18:22:54	!	matrix: Already logged in, syncing...
+2021-02-19 21:01:51	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-19 21:01:51	!	matrix: disconnected from server
+2021-02-19 21:01:51	!	matrix: reconnecting to server in 10 seconds
+2021-02-19 21:02:02	!	matrix: reconnecting to server...
+2021-02-19 21:02:02	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-19 21:02:02	!	matrix: Doing SSL handshake...
+2021-02-19 21:02:02	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-19 21:02:02	!	matrix: received certificate
+2021-02-19 21:02:02		 - certificate info:
+2021-02-19 21:02:02		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-19 21:02:02		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-19 21:02:02		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-19 21:02:02		        commonName=R3
+2021-02-19 21:02:02		    - key info: RSA key 2048 bits, signed using
+2021-02-19 21:02:02		        sha256WithRSAEncryption
+2021-02-19 21:02:02		    - period of validity:
+2021-02-19 21:02:02		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-19 21:02:02		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-19 21:02:02		    - fingerprints:
+2021-02-19 21:02:02		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-19 21:02:02		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-19 21:02:02	!	matrix: Already logged in, syncing...
+2021-02-20 08:34:47	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-20 08:34:47	!	matrix: Doing SSL handshake...
+2021-02-20 08:34:47	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-20 08:34:47	!	matrix: received certificate
+2021-02-20 08:34:47		 - certificate info:
+2021-02-20 08:34:47		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-20 08:34:47		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-20 08:34:47		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-20 08:34:47		        commonName=R3
+2021-02-20 08:34:47		    - key info: RSA key 2048 bits, signed using
+2021-02-20 08:34:47		        sha256WithRSAEncryption
+2021-02-20 08:34:47		    - period of validity:
+2021-02-20 08:34:47		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-20 08:34:47		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-20 08:34:47		    - fingerprints:
+2021-02-20 08:34:47		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-20 08:34:47		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-20 08:34:47	!	matrix: Logging in...
+2021-02-20 08:34:47	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-20 10:08:14	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-20 10:08:14	!	matrix: disconnected from server
+2021-02-20 10:08:14	!	matrix: reconnecting to server in 10 seconds
+2021-02-20 10:08:25	!	matrix: reconnecting to server...
+2021-02-20 10:08:25	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-20 10:08:25	!	matrix: Doing SSL handshake...
+2021-02-20 10:08:25	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-20 10:08:25	!	matrix: received certificate
+2021-02-20 10:08:25		 - certificate info:
+2021-02-20 10:08:25		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-20 10:08:25		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-20 10:08:25		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-20 10:08:25		        commonName=R3
+2021-02-20 10:08:25		    - key info: RSA key 2048 bits, signed using
+2021-02-20 10:08:25		        sha256WithRSAEncryption
+2021-02-20 10:08:25		    - period of validity:
+2021-02-20 10:08:25		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-20 10:08:25		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-20 10:08:25		    - fingerprints:
+2021-02-20 10:08:25		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-20 10:08:25		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-20 10:08:25	!	matrix: Already logged in, syncing...
+2021-02-20 11:27:33	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-20 11:27:33	!	matrix: disconnected from server
+2021-02-20 11:27:33	!	matrix: reconnecting to server in 10 seconds
+2021-02-20 11:27:44	!	matrix: reconnecting to server...
+2021-02-20 11:27:44	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-20 11:27:44	!	matrix: Doing SSL handshake...
+2021-02-20 11:27:44	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-20 11:27:44	!	matrix: received certificate
+2021-02-20 11:27:44		 - certificate info:
+2021-02-20 11:27:44		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-20 11:27:44		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-20 11:27:44		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-20 11:27:44		        commonName=R3
+2021-02-20 11:27:44		    - key info: RSA key 2048 bits, signed using
+2021-02-20 11:27:44		        sha256WithRSAEncryption
+2021-02-20 11:27:44		    - period of validity:
+2021-02-20 11:27:44		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-20 11:27:44		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-20 11:27:44		    - fingerprints:
+2021-02-20 11:27:44		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-20 11:27:44		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-20 11:27:44	!	matrix: Already logged in, syncing...
+2021-02-20 13:14:42	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-20 13:14:42	!	matrix: disconnected from server
+2021-02-20 13:14:42	!	matrix: reconnecting to server in 10 seconds
+2021-02-20 13:14:53	!	matrix: reconnecting to server...
+2021-02-20 13:14:53	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-20 13:14:53	!	matrix: Doing SSL handshake...
+2021-02-20 13:14:53	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-20 13:14:53	!	matrix: received certificate
+2021-02-20 13:14:53		 - certificate info:
+2021-02-20 13:14:53		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-20 13:14:53		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-20 13:14:53		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-20 13:14:53		        commonName=R3
+2021-02-20 13:14:53		    - key info: RSA key 2048 bits, signed using
+2021-02-20 13:14:53		        sha256WithRSAEncryption
+2021-02-20 13:14:53		    - period of validity:
+2021-02-20 13:14:53		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-20 13:14:53		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-20 13:14:53		    - fingerprints:
+2021-02-20 13:14:53		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-20 13:14:53		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-20 13:14:53	!	matrix: Already logged in, syncing...
+2021-02-20 14:39:07	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-20 14:39:07	!	matrix: disconnected from server
+2021-02-20 14:39:07	!	matrix: reconnecting to server in 10 seconds
+2021-02-20 14:39:18	!	matrix: reconnecting to server...
+2021-02-20 14:39:18	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-20 14:39:18	!	matrix: Doing SSL handshake...
+2021-02-20 14:39:18	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-20 14:39:18	!	matrix: received certificate
+2021-02-20 14:39:18		 - certificate info:
+2021-02-20 14:39:18		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-20 14:39:18		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-20 14:39:18		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-20 14:39:18		        commonName=R3
+2021-02-20 14:39:18		    - key info: RSA key 2048 bits, signed using
+2021-02-20 14:39:18		        sha256WithRSAEncryption
+2021-02-20 14:39:18		    - period of validity:
+2021-02-20 14:39:18		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-20 14:39:18		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-20 14:39:18		    - fingerprints:
+2021-02-20 14:39:18		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-20 14:39:18		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-20 14:39:18	!	matrix: Already logged in, syncing...
+2021-02-20 17:44:05	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-20 17:44:05	!	matrix: disconnected from server
+2021-02-20 17:44:05	!	matrix: reconnecting to server in 10 seconds
+2021-02-20 17:44:16	!	matrix: reconnecting to server...
+2021-02-20 17:44:16	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-20 17:44:16	!	matrix: Doing SSL handshake...
+2021-02-20 17:44:16	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-20 17:44:16	!	matrix: received certificate
+2021-02-20 17:44:16		 - certificate info:
+2021-02-20 17:44:16		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-20 17:44:16		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-20 17:44:16		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-20 17:44:16		        commonName=R3
+2021-02-20 17:44:16		    - key info: RSA key 2048 bits, signed using
+2021-02-20 17:44:16		        sha256WithRSAEncryption
+2021-02-20 17:44:16		    - period of validity:
+2021-02-20 17:44:16		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-20 17:44:16		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-20 17:44:16		    - fingerprints:
+2021-02-20 17:44:16		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-20 17:44:16		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-20 17:44:16	!	matrix: Already logged in, syncing...
+2021-02-20 19:55:41	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-20 19:55:41	!	matrix: disconnected from server
+2021-02-20 19:55:41	!	matrix: reconnecting to server in 10 seconds
+2021-02-20 19:55:52	!	matrix: reconnecting to server...
+2021-02-20 19:55:52	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-20 19:55:52	!	matrix: Doing SSL handshake...
+2021-02-20 19:55:52	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-20 19:55:52	!	matrix: received certificate
+2021-02-20 19:55:52		 - certificate info:
+2021-02-20 19:55:52		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-20 19:55:52		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-20 19:55:52		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-20 19:55:52		        commonName=R3
+2021-02-20 19:55:52		    - key info: RSA key 2048 bits, signed using
+2021-02-20 19:55:52		        sha256WithRSAEncryption
+2021-02-20 19:55:52		    - period of validity:
+2021-02-20 19:55:52		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-20 19:55:52		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-20 19:55:52		    - fingerprints:
+2021-02-20 19:55:52		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-20 19:55:52		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-20 19:55:52	!	matrix: Already logged in, syncing...
+2021-02-20 22:15:29	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-20 22:15:29	!	matrix: disconnected from server
+2021-02-20 22:15:29	!	matrix: reconnecting to server in 10 seconds
+2021-02-20 22:15:40	!	matrix: reconnecting to server...
+2021-02-20 22:15:40	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-20 22:15:40	!	matrix: Doing SSL handshake...
+2021-02-20 22:15:40	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-20 22:15:40	!	matrix: received certificate
+2021-02-20 22:15:40		 - certificate info:
+2021-02-20 22:15:40		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-20 22:15:40		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-20 22:15:40		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-20 22:15:40		        commonName=R3
+2021-02-20 22:15:40		    - key info: RSA key 2048 bits, signed using
+2021-02-20 22:15:40		        sha256WithRSAEncryption
+2021-02-20 22:15:40		    - period of validity:
+2021-02-20 22:15:40		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-20 22:15:40		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-20 22:15:40		    - fingerprints:
+2021-02-20 22:15:40		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-20 22:15:40		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-20 22:15:40	!	matrix: Already logged in, syncing...
+2021-02-21 10:23:37	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-21 10:23:37	!	matrix: Doing SSL handshake...
+2021-02-21 10:23:37	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-21 10:23:37	!	matrix: received certificate
+2021-02-21 10:23:37		 - certificate info:
+2021-02-21 10:23:37		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-21 10:23:37		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-21 10:23:37		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-21 10:23:37		        commonName=R3
+2021-02-21 10:23:37		    - key info: RSA key 2048 bits, signed using
+2021-02-21 10:23:37		        sha256WithRSAEncryption
+2021-02-21 10:23:37		    - period of validity:
+2021-02-21 10:23:37		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-21 10:23:37		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-21 10:23:37		    - fingerprints:
+2021-02-21 10:23:37		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-21 10:23:37		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-21 10:23:37	!	matrix: Logging in...
+2021-02-21 10:23:38	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-21 14:19:37	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-21 14:19:37	!	matrix: disconnected from server
+2021-02-21 14:19:37	!	matrix: reconnecting to server in 10 seconds
+2021-02-21 14:19:48	!	matrix: reconnecting to server...
+2021-02-21 14:19:48	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-21 14:19:48	!	matrix: Doing SSL handshake...
+2021-02-21 14:19:48	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-21 14:19:48	!	matrix: received certificate
+2021-02-21 14:19:48		 - certificate info:
+2021-02-21 14:19:48		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-21 14:19:48		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-21 14:19:48		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-21 14:19:48		        commonName=R3
+2021-02-21 14:19:48		    - key info: RSA key 2048 bits, signed using
+2021-02-21 14:19:48		        sha256WithRSAEncryption
+2021-02-21 14:19:48		    - period of validity:
+2021-02-21 14:19:48		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-21 14:19:48		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-21 14:19:48		    - fingerprints:
+2021-02-21 14:19:48		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-21 14:19:48		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-21 14:19:48	!	matrix: Already logged in, syncing...
+2021-02-21 17:37:02	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-21 17:37:02	!	matrix: disconnected from server
+2021-02-21 17:37:02	!	matrix: reconnecting to server in 10 seconds
+2021-02-21 17:37:13	!	matrix: reconnecting to server...
+2021-02-21 17:37:13	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-21 17:37:13	!	matrix: Doing SSL handshake...
+2021-02-21 17:37:13	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-21 17:37:13	!	matrix: received certificate
+2021-02-21 17:37:13		 - certificate info:
+2021-02-21 17:37:13		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-21 17:37:13		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-21 17:37:13		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-21 17:37:13		        commonName=R3
+2021-02-21 17:37:13		    - key info: RSA key 2048 bits, signed using
+2021-02-21 17:37:13		        sha256WithRSAEncryption
+2021-02-21 17:37:13		    - period of validity:
+2021-02-21 17:37:13		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-21 17:37:13		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-21 17:37:13		    - fingerprints:
+2021-02-21 17:37:13		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-21 17:37:13		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-21 17:37:13	!	matrix: Already logged in, syncing...
+2021-02-21 19:08:50	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-21 19:08:50	!	matrix: disconnected from server
+2021-02-21 19:08:50	!	matrix: reconnecting to server in 10 seconds
+2021-02-21 19:09:01	!	matrix: reconnecting to server...
+2021-02-21 19:09:01	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-21 19:09:01	!	matrix: Doing SSL handshake...
+2021-02-21 19:09:01	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-21 19:09:01	!	matrix: received certificate
+2021-02-21 19:09:01		 - certificate info:
+2021-02-21 19:09:01		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-21 19:09:01		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-21 19:09:01		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-21 19:09:01		        commonName=R3
+2021-02-21 19:09:01		    - key info: RSA key 2048 bits, signed using
+2021-02-21 19:09:01		        sha256WithRSAEncryption
+2021-02-21 19:09:01		    - period of validity:
+2021-02-21 19:09:01		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-21 19:09:01		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-21 19:09:01		    - fingerprints:
+2021-02-21 19:09:01		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-21 19:09:01		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-21 19:09:01	!	matrix: Already logged in, syncing...
+2021-02-21 20:07:51	!	matrix: Error while reading from socket
+2021-02-21 20:07:51	!	matrix: disconnecting from server...
+2021-02-21 20:07:51	!	matrix: disconnected from server
+2021-02-21 20:07:51	!	matrix: reconnecting to server in 10 seconds
+2021-02-21 20:08:02	!	matrix: reconnecting to server...
+2021-02-21 20:08:02	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-21 20:08:02	!	matrix: Doing SSL handshake...
+2021-02-21 20:08:02	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-21 20:08:02	!	matrix: received certificate
+2021-02-21 20:08:02		 - certificate info:
+2021-02-21 20:08:02		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-21 20:08:02		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-21 20:08:02		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-21 20:08:02		        commonName=R3
+2021-02-21 20:08:02		    - key info: RSA key 2048 bits, signed using
+2021-02-21 20:08:02		        sha256WithRSAEncryption
+2021-02-21 20:08:02		    - period of validity:
+2021-02-21 20:08:02		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-21 20:08:02		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-21 20:08:02		    - fingerprints:
+2021-02-21 20:08:02		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-21 20:08:02		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-21 20:08:02	!	matrix: Already logged in, syncing...
+2021-02-21 20:12:24	×	matrix: Invalid input ConnectionInputs.RECV_HEADERS in state ConnectionState.CLOSED
+2021-02-21 20:12:24	!	matrix: disconnected from server
+2021-02-21 20:12:24	!	matrix: reconnecting to server in 10 seconds
+2021-02-21 20:12:35	!	matrix: reconnecting to server...
+2021-02-21 20:12:35	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-21 20:12:35	!	matrix: Doing SSL handshake...
+2021-02-21 20:12:35	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-21 20:12:35	!	matrix: received certificate
+2021-02-21 20:12:35		 - certificate info:
+2021-02-21 20:12:35		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-21 20:12:35		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-21 20:12:35		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-21 20:12:35		        commonName=R3
+2021-02-21 20:12:35		    - key info: RSA key 2048 bits, signed using
+2021-02-21 20:12:35		        sha256WithRSAEncryption
+2021-02-21 20:12:35		    - period of validity:
+2021-02-21 20:12:35		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-21 20:12:35		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-21 20:12:35		    - fingerprints:
+2021-02-21 20:12:35		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-21 20:12:35		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-21 20:12:35	!	matrix: Already logged in, syncing...
+2021-02-22 09:50:41	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-22 09:50:42	!	matrix: Doing SSL handshake...
+2021-02-22 09:50:42	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-22 09:50:42	!	matrix: received certificate
+2021-02-22 09:50:42		 - certificate info:
+2021-02-22 09:50:42		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-22 09:50:42		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-22 09:50:42		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-22 09:50:42		        commonName=R3
+2021-02-22 09:50:42		    - key info: RSA key 2048 bits, signed using
+2021-02-22 09:50:42		        sha256WithRSAEncryption
+2021-02-22 09:50:42		    - period of validity:
+2021-02-22 09:50:42		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-22 09:50:42		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-22 09:50:42		    - fingerprints:
+2021-02-22 09:50:42		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-22 09:50:42		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-22 09:50:42	!	matrix: Logging in...
+2021-02-22 09:50:42	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-22 12:55:08	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-22 12:55:08	!	matrix: disconnected from server
+2021-02-22 12:55:08	!	matrix: reconnecting to server in 10 seconds
+2021-02-22 12:55:19	!	matrix: reconnecting to server...
+2021-02-22 12:55:19	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-22 12:55:19	!	matrix: Doing SSL handshake...
+2021-02-22 12:55:19	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-22 12:55:19	!	matrix: received certificate
+2021-02-22 12:55:19		 - certificate info:
+2021-02-22 12:55:19		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-22 12:55:19		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-22 12:55:19		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-22 12:55:19		        commonName=R3
+2021-02-22 12:55:19		    - key info: RSA key 2048 bits, signed using
+2021-02-22 12:55:19		        sha256WithRSAEncryption
+2021-02-22 12:55:19		    - period of validity:
+2021-02-22 12:55:19		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-22 12:55:19		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-22 12:55:19		    - fingerprints:
+2021-02-22 12:55:19		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-22 12:55:19		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-22 12:55:19	!	matrix: Already logged in, syncing...
+2021-02-22 16:04:47	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-22 16:04:47	!	matrix: disconnected from server
+2021-02-22 16:04:47	!	matrix: reconnecting to server in 10 seconds
+2021-02-22 16:04:58	!	matrix: reconnecting to server...
+2021-02-22 16:04:58	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-22 16:04:58	!	matrix: Doing SSL handshake...
+2021-02-22 16:04:58	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-22 16:04:58	!	matrix: received certificate
+2021-02-22 16:04:58		 - certificate info:
+2021-02-22 16:04:58		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-22 16:04:58		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-22 16:04:58		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-22 16:04:58		        commonName=R3
+2021-02-22 16:04:58		    - key info: RSA key 2048 bits, signed using
+2021-02-22 16:04:58		        sha256WithRSAEncryption
+2021-02-22 16:04:58		    - period of validity:
+2021-02-22 16:04:58		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-22 16:04:58		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-22 16:04:58		    - fingerprints:
+2021-02-22 16:04:58		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-22 16:04:58		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-22 16:04:58	!	matrix: Already logged in, syncing...
+2021-02-22 18:51:11	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-22 18:51:11	!	matrix: disconnected from server
+2021-02-22 18:51:11	!	matrix: reconnecting to server in 10 seconds
+2021-02-22 18:51:22	!	matrix: reconnecting to server...
+2021-02-22 18:51:22	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-22 18:51:22	!	matrix: Doing SSL handshake...
+2021-02-22 18:51:22	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-22 18:51:22	!	matrix: received certificate
+2021-02-22 18:51:22		 - certificate info:
+2021-02-22 18:51:22		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-22 18:51:22		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-22 18:51:22		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-22 18:51:22		        commonName=R3
+2021-02-22 18:51:22		    - key info: RSA key 2048 bits, signed using
+2021-02-22 18:51:22		        sha256WithRSAEncryption
+2021-02-22 18:51:22		    - period of validity:
+2021-02-22 18:51:22		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-22 18:51:22		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-22 18:51:22		    - fingerprints:
+2021-02-22 18:51:22		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-22 18:51:22		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-22 18:51:22	!	matrix: Already logged in, syncing...
+2021-02-22 21:19:40	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-22 21:19:40	!	matrix: disconnected from server
+2021-02-22 21:19:40	!	matrix: reconnecting to server in 10 seconds
+2021-02-22 21:19:51	!	matrix: reconnecting to server...
+2021-02-22 21:19:51	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-22 21:19:51	!	matrix: Doing SSL handshake...
+2021-02-22 21:19:51	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-22 21:19:51	!	matrix: received certificate
+2021-02-22 21:19:51		 - certificate info:
+2021-02-22 21:19:51		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-22 21:19:51		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-22 21:19:51		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-22 21:19:51		        commonName=R3
+2021-02-22 21:19:51		    - key info: RSA key 2048 bits, signed using
+2021-02-22 21:19:51		        sha256WithRSAEncryption
+2021-02-22 21:19:51		    - period of validity:
+2021-02-22 21:19:51		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-22 21:19:51		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-22 21:19:51		    - fingerprints:
+2021-02-22 21:19:51		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-22 21:19:51		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-22 21:19:51	!	matrix: Already logged in, syncing...
+2021-02-23 10:05:46	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-23 10:05:46	!	matrix: Doing SSL handshake...
+2021-02-23 10:05:46	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-23 10:05:46	!	matrix: received certificate
+2021-02-23 10:05:46		 - certificate info:
+2021-02-23 10:05:46		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-23 10:05:46		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-23 10:05:46		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-23 10:05:46		        commonName=R3
+2021-02-23 10:05:46		    - key info: RSA key 2048 bits, signed using
+2021-02-23 10:05:46		        sha256WithRSAEncryption
+2021-02-23 10:05:46		    - period of validity:
+2021-02-23 10:05:46		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-23 10:05:46		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-23 10:05:46		    - fingerprints:
+2021-02-23 10:05:46		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-23 10:05:46		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-23 10:05:46	!	matrix: Logging in...
+2021-02-23 10:05:47	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-23 13:31:03	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-23 13:31:03	!	matrix: disconnected from server
+2021-02-23 13:31:03	!	matrix: reconnecting to server in 10 seconds
+2021-02-23 13:31:14	!	matrix: reconnecting to server...
+2021-02-23 13:31:14	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-23 13:31:14	!	matrix: Doing SSL handshake...
+2021-02-23 13:31:14	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-23 13:31:14	!	matrix: received certificate
+2021-02-23 13:31:14		 - certificate info:
+2021-02-23 13:31:14		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-23 13:31:14		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-23 13:31:14		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-23 13:31:14		        commonName=R3
+2021-02-23 13:31:14		    - key info: RSA key 2048 bits, signed using
+2021-02-23 13:31:14		        sha256WithRSAEncryption
+2021-02-23 13:31:14		    - period of validity:
+2021-02-23 13:31:14		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-23 13:31:14		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-23 13:31:14		    - fingerprints:
+2021-02-23 13:31:14		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-23 13:31:14		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-23 13:31:14	!	matrix: Already logged in, syncing...
+2021-02-23 15:50:10	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-23 15:50:10	!	matrix: disconnected from server
+2021-02-23 15:50:10	!	matrix: reconnecting to server in 10 seconds
+2021-02-23 15:50:21	!	matrix: reconnecting to server...
+2021-02-23 15:50:21	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-23 15:50:21	!	matrix: Doing SSL handshake...
+2021-02-23 15:50:21	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-23 15:50:21	!	matrix: received certificate
+2021-02-23 15:50:21		 - certificate info:
+2021-02-23 15:50:21		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-23 15:50:21		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-23 15:50:21		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-23 15:50:21		        commonName=R3
+2021-02-23 15:50:21		    - key info: RSA key 2048 bits, signed using
+2021-02-23 15:50:21		        sha256WithRSAEncryption
+2021-02-23 15:50:21		    - period of validity:
+2021-02-23 15:50:21		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-23 15:50:21		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-23 15:50:21		    - fingerprints:
+2021-02-23 15:50:21		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-23 15:50:21		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-23 15:50:21	!	matrix: Already logged in, syncing...
+2021-02-23 18:47:27	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-23 18:47:27	!	matrix: disconnected from server
+2021-02-23 18:47:27	!	matrix: reconnecting to server in 10 seconds
+2021-02-23 18:47:38	!	matrix: reconnecting to server...
+2021-02-23 18:47:38	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-23 18:47:38	!	matrix: Doing SSL handshake...
+2021-02-23 18:47:38	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-23 18:47:38	!	matrix: received certificate
+2021-02-23 18:47:38		 - certificate info:
+2021-02-23 18:47:38		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-23 18:47:38		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-23 18:47:38		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-23 18:47:38		        commonName=R3
+2021-02-23 18:47:38		    - key info: RSA key 2048 bits, signed using
+2021-02-23 18:47:38		        sha256WithRSAEncryption
+2021-02-23 18:47:38		    - period of validity:
+2021-02-23 18:47:38		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-23 18:47:38		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-23 18:47:38		    - fingerprints:
+2021-02-23 18:47:38		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-23 18:47:38		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-23 18:47:38	!	matrix: Already logged in, syncing...
+2021-02-23 19:30:44	!	matrix: disconnected from server
+2021-02-23 19:30:44	!	matrix: reconnecting to server in 10 seconds
+2021-02-23 19:30:55	!	matrix: reconnecting to server...
+2021-02-23 19:30:55	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-23 19:31:28	!	matrix: Doing SSL handshake...
+2021-02-23 19:31:28	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-23 19:31:28	!	matrix: received certificate
+2021-02-23 19:31:28		 - certificate info:
+2021-02-23 19:31:28		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-23 19:31:28		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-23 19:31:28		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-23 19:31:28		        commonName=R3
+2021-02-23 19:31:28		    - key info: RSA key 2048 bits, signed using
+2021-02-23 19:31:28		        sha256WithRSAEncryption
+2021-02-23 19:31:28		    - period of validity:
+2021-02-23 19:31:28		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-23 19:31:28		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-23 19:31:28		    - fingerprints:
+2021-02-23 19:31:28		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-23 19:31:28		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-23 19:31:28	!	matrix: Already logged in, syncing...
+2021-02-23 21:31:32	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-23 21:31:32	!	matrix: disconnected from server
+2021-02-23 21:31:32	!	matrix: reconnecting to server in 10 seconds
+2021-02-23 21:31:43	!	matrix: reconnecting to server...
+2021-02-23 21:31:43	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-23 21:31:43	!	matrix: Doing SSL handshake...
+2021-02-23 21:31:43	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-23 21:31:43	!	matrix: received certificate
+2021-02-23 21:31:43		 - certificate info:
+2021-02-23 21:31:43		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-23 21:31:43		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-23 21:31:43		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-23 21:31:43		        commonName=R3
+2021-02-23 21:31:43		    - key info: RSA key 2048 bits, signed using
+2021-02-23 21:31:43		        sha256WithRSAEncryption
+2021-02-23 21:31:43		    - period of validity:
+2021-02-23 21:31:43		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-23 21:31:43		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-23 21:31:43		    - fingerprints:
+2021-02-23 21:31:43		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-23 21:31:43		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-23 21:31:43	!	matrix: Already logged in, syncing...
+2021-02-24 09:46:46	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-24 09:46:46	!	matrix: Doing SSL handshake...
+2021-02-24 09:46:46	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-24 09:46:46	!	matrix: received certificate
+2021-02-24 09:46:46		 - certificate info:
+2021-02-24 09:46:46		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-24 09:46:46		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-24 09:46:46		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-24 09:46:46		        commonName=R3
+2021-02-24 09:46:46		    - key info: RSA key 2048 bits, signed using
+2021-02-24 09:46:46		        sha256WithRSAEncryption
+2021-02-24 09:46:46		    - period of validity:
+2021-02-24 09:46:46		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-24 09:46:46		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-24 09:46:46		    - fingerprints:
+2021-02-24 09:46:46		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-24 09:46:46		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-24 09:46:46	!	matrix: Logging in...
+2021-02-24 09:46:47	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-24 12:46:56	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-24 12:46:56	!	matrix: disconnected from server
+2021-02-24 12:46:56	!	matrix: reconnecting to server in 10 seconds
+2021-02-24 12:47:07	!	matrix: reconnecting to server...
+2021-02-24 12:47:07	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-24 12:47:07	!	matrix: Doing SSL handshake...
+2021-02-24 12:47:07	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-24 12:47:07	!	matrix: received certificate
+2021-02-24 12:47:07		 - certificate info:
+2021-02-24 12:47:07		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-24 12:47:07		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-24 12:47:07		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-24 12:47:07		        commonName=R3
+2021-02-24 12:47:07		    - key info: RSA key 2048 bits, signed using
+2021-02-24 12:47:07		        sha256WithRSAEncryption
+2021-02-24 12:47:07		    - period of validity:
+2021-02-24 12:47:07		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-24 12:47:07		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-24 12:47:07		    - fingerprints:
+2021-02-24 12:47:07		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-24 12:47:07		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-24 12:47:07	!	matrix: Already logged in, syncing...
+2021-02-24 15:43:00	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-24 15:43:00	!	matrix: disconnected from server
+2021-02-24 15:43:00	!	matrix: reconnecting to server in 10 seconds
+2021-02-24 15:43:11	!	matrix: reconnecting to server...
+2021-02-24 15:43:11	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-24 15:43:11	!	matrix: Doing SSL handshake...
+2021-02-24 15:43:11	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-24 15:43:11	!	matrix: received certificate
+2021-02-24 15:43:11		 - certificate info:
+2021-02-24 15:43:11		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-24 15:43:11		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-24 15:43:11		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-24 15:43:11		        commonName=R3
+2021-02-24 15:43:11		    - key info: RSA key 2048 bits, signed using
+2021-02-24 15:43:11		        sha256WithRSAEncryption
+2021-02-24 15:43:11		    - period of validity:
+2021-02-24 15:43:11		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-24 15:43:11		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-24 15:43:11		    - fingerprints:
+2021-02-24 15:43:11		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-24 15:43:11		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-24 15:43:11	!	matrix: Already logged in, syncing...
+2021-02-24 18:34:41	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-24 18:34:41	!	matrix: disconnected from server
+2021-02-24 18:34:41	!	matrix: reconnecting to server in 10 seconds
+2021-02-24 18:34:52	!	matrix: reconnecting to server...
+2021-02-24 18:34:52	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-24 18:34:52	!	matrix: Doing SSL handshake...
+2021-02-24 18:34:52	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-24 18:34:52	!	matrix: received certificate
+2021-02-24 18:34:52		 - certificate info:
+2021-02-24 18:34:52		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-24 18:34:52		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-24 18:34:52		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-24 18:34:52		        commonName=R3
+2021-02-24 18:34:52		    - key info: RSA key 2048 bits, signed using
+2021-02-24 18:34:52		        sha256WithRSAEncryption
+2021-02-24 18:34:52		    - period of validity:
+2021-02-24 18:34:52		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-24 18:34:52		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-24 18:34:52		    - fingerprints:
+2021-02-24 18:34:52		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-24 18:34:52		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-24 18:34:52	!	matrix: Already logged in, syncing...
+2021-02-24 21:05:05	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-24 21:05:05	!	matrix: disconnected from server
+2021-02-24 21:05:05	!	matrix: reconnecting to server in 10 seconds
+2021-02-24 21:05:16	!	matrix: reconnecting to server...
+2021-02-24 21:05:16	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-24 21:05:16	!	matrix: Doing SSL handshake...
+2021-02-24 21:05:16	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-24 21:05:16	!	matrix: received certificate
+2021-02-24 21:05:16		 - certificate info:
+2021-02-24 21:05:16		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-24 21:05:16		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-24 21:05:16		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-24 21:05:16		        commonName=R3
+2021-02-24 21:05:16		    - key info: RSA key 2048 bits, signed using
+2021-02-24 21:05:16		        sha256WithRSAEncryption
+2021-02-24 21:05:16		    - period of validity:
+2021-02-24 21:05:16		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-24 21:05:16		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-24 21:05:16		    - fingerprints:
+2021-02-24 21:05:16		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-24 21:05:16		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-24 21:05:16	!	matrix: Already logged in, syncing...
+2021-02-25 12:01:01	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-25 12:01:01	!	matrix: Doing SSL handshake...
+2021-02-25 12:01:01	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-25 12:01:01	!	matrix: received certificate
+2021-02-25 12:01:01		 - certificate info:
+2021-02-25 12:01:01		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-25 12:01:01		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-25 12:01:01		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-25 12:01:01		        commonName=R3
+2021-02-25 12:01:01		    - key info: RSA key 2048 bits, signed using
+2021-02-25 12:01:01		        sha256WithRSAEncryption
+2021-02-25 12:01:01		    - period of validity:
+2021-02-25 12:01:01		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-25 12:01:01		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-25 12:01:01		    - fingerprints:
+2021-02-25 12:01:01		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-25 12:01:01		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-25 12:01:01	!	matrix: Logging in...
+2021-02-25 12:01:02	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-25 15:28:05	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-25 15:28:05	!	matrix: disconnected from server
+2021-02-25 15:28:05	!	matrix: reconnecting to server in 10 seconds
+2021-02-25 15:28:16	!	matrix: reconnecting to server...
+2021-02-25 15:28:16	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-25 15:28:16	!	matrix: Doing SSL handshake...
+2021-02-25 15:28:16	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-25 15:28:16	!	matrix: received certificate
+2021-02-25 15:28:16		 - certificate info:
+2021-02-25 15:28:16		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-25 15:28:16		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-25 15:28:16		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-25 15:28:16		        commonName=R3
+2021-02-25 15:28:16		    - key info: RSA key 2048 bits, signed using
+2021-02-25 15:28:16		        sha256WithRSAEncryption
+2021-02-25 15:28:16		    - period of validity:
+2021-02-25 15:28:16		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-25 15:28:16		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-25 15:28:16		    - fingerprints:
+2021-02-25 15:28:16		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-25 15:28:16		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-25 15:28:16	!	matrix: Already logged in, syncing...
+2021-02-25 17:44:06	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-25 17:44:06	!	matrix: disconnected from server
+2021-02-25 17:44:06	!	matrix: reconnecting to server in 10 seconds
+2021-02-25 17:44:17	!	matrix: reconnecting to server...
+2021-02-25 17:44:17	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-25 17:44:17	!	matrix: Doing SSL handshake...
+2021-02-25 17:44:17	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-25 17:44:17	!	matrix: received certificate
+2021-02-25 17:44:17		 - certificate info:
+2021-02-25 17:44:17		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-25 17:44:17		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-25 17:44:17		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-25 17:44:17		        commonName=R3
+2021-02-25 17:44:17		    - key info: RSA key 2048 bits, signed using
+2021-02-25 17:44:17		        sha256WithRSAEncryption
+2021-02-25 17:44:17		    - period of validity:
+2021-02-25 17:44:17		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-25 17:44:17		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-25 17:44:17		    - fingerprints:
+2021-02-25 17:44:17		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-25 17:44:17		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-25 17:44:17	!	matrix: Already logged in, syncing...
+2021-02-25 20:03:43	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-25 20:03:43	!	matrix: disconnected from server
+2021-02-25 20:03:43	!	matrix: reconnecting to server in 10 seconds
+2021-02-25 20:03:54	!	matrix: reconnecting to server...
+2021-02-25 20:03:54	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-25 20:03:54	!	matrix: Doing SSL handshake...
+2021-02-25 20:03:54	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-25 20:03:54	!	matrix: received certificate
+2021-02-25 20:03:54		 - certificate info:
+2021-02-25 20:03:54		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-25 20:03:54		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-25 20:03:54		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-25 20:03:54		        commonName=R3
+2021-02-25 20:03:54		    - key info: RSA key 2048 bits, signed using
+2021-02-25 20:03:54		        sha256WithRSAEncryption
+2021-02-25 20:03:54		    - period of validity:
+2021-02-25 20:03:54		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-25 20:03:54		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-25 20:03:54		    - fingerprints:
+2021-02-25 20:03:54		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-25 20:03:54		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-25 20:03:54	!	matrix: Already logged in, syncing...
+2021-02-26 09:21:43	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-26 09:21:44	!	matrix: Doing SSL handshake...
+2021-02-26 09:21:44	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-26 09:21:44	!	matrix: received certificate
+2021-02-26 09:21:44		 - certificate info:
+2021-02-26 09:21:44		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-26 09:21:44		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-26 09:21:44		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-26 09:21:44		        commonName=R3
+2021-02-26 09:21:44		    - key info: RSA key 2048 bits, signed using
+2021-02-26 09:21:44		        sha256WithRSAEncryption
+2021-02-26 09:21:44		    - period of validity:
+2021-02-26 09:21:44		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-26 09:21:44		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-26 09:21:44		    - fingerprints:
+2021-02-26 09:21:44		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-26 09:21:44		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-26 09:21:44	!	matrix: Logging in...
+2021-02-26 09:21:44	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-02-26 11:47:25	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-26 11:47:25	!	matrix: disconnected from server
+2021-02-26 11:47:25	!	matrix: reconnecting to server in 10 seconds
+2021-02-26 11:47:36	!	matrix: reconnecting to server...
+2021-02-26 11:47:36	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-26 11:47:36	!	matrix: Doing SSL handshake...
+2021-02-26 11:47:36	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-26 11:47:36	!	matrix: received certificate
+2021-02-26 11:47:36		 - certificate info:
+2021-02-26 11:47:36		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-26 11:47:36		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-26 11:47:36		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-26 11:47:36		        commonName=R3
+2021-02-26 11:47:36		    - key info: RSA key 2048 bits, signed using
+2021-02-26 11:47:36		        sha256WithRSAEncryption
+2021-02-26 11:47:36		    - period of validity:
+2021-02-26 11:47:36		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-26 11:47:36		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-26 11:47:36		    - fingerprints:
+2021-02-26 11:47:36		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-26 11:47:36		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-26 11:47:36	!	matrix: Already logged in, syncing...
+2021-02-26 15:05:02	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-26 15:05:02	!	matrix: disconnected from server
+2021-02-26 15:05:02	!	matrix: reconnecting to server in 10 seconds
+2021-02-26 15:05:13	!	matrix: reconnecting to server...
+2021-02-26 15:05:13	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-26 15:05:13	!	matrix: Doing SSL handshake...
+2021-02-26 15:05:14	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-26 15:05:14	!	matrix: received certificate
+2021-02-26 15:05:14		 - certificate info:
+2021-02-26 15:05:14		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-26 15:05:14		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-26 15:05:14		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-26 15:05:14		        commonName=R3
+2021-02-26 15:05:14		    - key info: RSA key 2048 bits, signed using
+2021-02-26 15:05:14		        sha256WithRSAEncryption
+2021-02-26 15:05:14		    - period of validity:
+2021-02-26 15:05:14		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-26 15:05:14		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-26 15:05:14		    - fingerprints:
+2021-02-26 15:05:14		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-26 15:05:14		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-26 15:05:14	!	matrix: Already logged in, syncing...
+2021-02-26 18:20:18	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-26 18:20:18	!	matrix: disconnected from server
+2021-02-26 18:20:18	!	matrix: reconnecting to server in 10 seconds
+2021-02-26 18:20:29	!	matrix: reconnecting to server...
+2021-02-26 18:20:29	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-26 18:20:30	!	matrix: Doing SSL handshake...
+2021-02-26 18:20:30	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-26 18:20:30	!	matrix: received certificate
+2021-02-26 18:20:30		 - certificate info:
+2021-02-26 18:20:30		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-26 18:20:30		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-26 18:20:30		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-26 18:20:30		        commonName=R3
+2021-02-26 18:20:30		    - key info: RSA key 2048 bits, signed using
+2021-02-26 18:20:30		        sha256WithRSAEncryption
+2021-02-26 18:20:30		    - period of validity:
+2021-02-26 18:20:30		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-26 18:20:30		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-26 18:20:30		    - fingerprints:
+2021-02-26 18:20:30		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-26 18:20:30		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-26 18:20:30	!	matrix: Already logged in, syncing...
+2021-02-26 20:25:58	×	matrix: Invalid input ConnectionInputs.RECV_WINDOW_UPDATE in state ConnectionState.CLOSED
+2021-02-26 20:25:58	!	matrix: disconnected from server
+2021-02-26 20:25:58	!	matrix: reconnecting to server in 10 seconds
+2021-02-26 20:26:09	!	matrix: reconnecting to server...
+2021-02-26 20:26:09	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-02-26 20:26:09	!	matrix: Doing SSL handshake...
+2021-02-26 20:26:10	!	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-26 20:26:10	!	matrix: received certificate
+2021-02-26 20:26:10		 - certificate info:
+2021-02-26 20:26:10		    - subject: commonName=office.codeandsoda.hu, serial number
+2021-02-26 20:26:10		        04C71555822EE3CD41FFAF6464955206A671
+2021-02-26 20:26:10		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-26 20:26:10		        commonName=R3
+2021-02-26 20:26:10		    - key info: RSA key 2048 bits, signed using
+2021-02-26 20:26:10		        sha256WithRSAEncryption
+2021-02-26 20:26:10		    - period of validity:
+2021-02-26 20:26:10		        Begins on:  Feb 14 13:33:24 2021 GMT
+2021-02-26 20:26:10		        Expires on: May 15 13:33:24 2021 GMT
+2021-02-26 20:26:10		    - fingerprints:
+2021-02-26 20:26:10		        SHA1:   E5:2A:68:FD:C1:8A:F0:71:E9:85:A9:C2:98:45:74:88:C3:E5:70:EE
+2021-02-26 20:26:10		        SHA256: 4C:3D:FF:1E:FE:76:74:FB:22:10:C2:44:8F:23:2C:4F:04:48:80:52:6F:2B:2B:EC:18:D6:1D:32:28:2A:31:3A
+2021-02-26 20:26:10	!	matrix: Already logged in, syncing...
+2021-03-01 15:01:33	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-03-01 15:01:33	!	matrix: Doing SSL handshake...
+2021-03-01 15:01:33	!	matrix: Connected using TLSv1.2, and 128 bit ECDHE-RSA-AES128-GCM-SHA256 cipher suite.
+2021-03-01 15:01:33	!	matrix: received certificate
+2021-03-01 15:01:33		 - certificate info:
+2021-03-01 15:01:33		    - subject: commonName=nas.codeandsoda.hu, serial number
+2021-03-01 15:01:33		        042C955179E330F7B4BBFD8EE9E39390DBDF
+2021-03-01 15:01:33		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-03-01 15:01:33		        commonName=R3
+2021-03-01 15:01:33		    - key info: RSA key 2048 bits, signed using
+2021-03-01 15:01:33		        sha256WithRSAEncryption
+2021-03-01 15:01:33		    - period of validity:
+2021-03-01 15:01:33		        Begins on:  Mar  1 12:46:08 2021 GMT
+2021-03-01 15:01:33		        Expires on: May 30 12:46:08 2021 GMT
+2021-03-01 15:01:33		    - fingerprints:
+2021-03-01 15:01:33		        SHA1:   77:9B:13:A9:AC:C0:9C:90:7F:98:7D:14:F4:63:41:69:F3:65:29:53
+2021-03-01 15:01:33		        SHA256: 39:CD:82:D4:CA:18:E6:14:EF:29:30:C2:67:C2:52:4F:39:D0:74:EE:88:01:14:6F:56:45:69:F1:79:9B:59:90
+2021-03-01 15:01:33	!	matrix: Logging in...
+2021-03-01 15:01:33	!	matrix: Logged in as @dyuri:codeandsoda.com
+2021-03-26 12:47:51	!	matrix: Connecting to office.codeandsoda.hu:443 (SSL)...
+2021-03-26 12:47:51	!	matrix: Doing SSL handshake...
+2021-03-26 12:47:52	!	matrix: Connected using TLSv1.2, and 128 bit ECDHE-RSA-AES128-GCM-SHA256 cipher suite.
+2021-03-26 12:47:52	!	matrix: received certificate
+2021-03-26 12:47:52		 - certificate info:
+2021-03-26 12:47:52		    - subject: commonName=nas.codeandsoda.hu, serial number
+2021-03-26 12:47:52		        042C955179E330F7B4BBFD8EE9E39390DBDF
+2021-03-26 12:47:52		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-03-26 12:47:52		        commonName=R3
+2021-03-26 12:47:52		    - key info: RSA key 2048 bits, signed using
+2021-03-26 12:47:52		        sha256WithRSAEncryption
+2021-03-26 12:47:52		    - period of validity:
+2021-03-26 12:47:52		        Begins on:  Mar  1 12:46:08 2021 GMT
+2021-03-26 12:47:52		        Expires on: May 30 12:46:08 2021 GMT
+2021-03-26 12:47:52		    - fingerprints:
+2021-03-26 12:47:52		        SHA1:   77:9B:13:A9:AC:C0:9C:90:7F:98:7D:14:F4:63:41:69:F3:65:29:53
+2021-03-26 12:47:52		        SHA256: 39:CD:82:D4:CA:18:E6:14:EF:29:30:C2:67:C2:52:4F:39:D0:74:EE:88:01:14:6F:56:45:69:F1:79:9B:59:90
+2021-03-26 12:47:52	!	matrix: Logging in...
+2021-03-26 12:47:52	!	matrix: Logged in as @dyuri:codeandsoda.com

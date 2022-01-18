@@ -36,41 +36,12 @@
     }],
     "left": [
       {
-        "type": "string",
-        "contents": "❯",
-        "draw_soft_divider": false,
-        "draw_hard_divider": false,
-        "highlight_groups": ["static_prompt3", "information:additional"]
-      },
-      {
-        "type": "string",
-        "contents": "❯",
-        "draw_soft_divider": false,
-        "draw_hard_divider": false,
-        "highlight_groups": ["static_prompt2", "information:additional"]
-      },
-      {
-        "type": "string",
-        "contents": "❯ ",
-        "draw_soft_divider": false,
-        "draw_hard_divider": false,
-        "highlight_groups": ["static_prompt1", "information:additional"]
-      } 
+        "function": "powerline_exitstatus.exit_status",
+        "before": " ",
+        "priority": 10
+      }
     ],
     "right": [
-        {
-          "function": "powerline_xonsh.exec_time",
-          "priority": 10
-        },
-        {
-          "function": "powerline_exitstatus.exit_status",
-          "priority": 10
-        },
-        {
-          "function": "powerline.segments.common.time.date",
-          "after": "  ",
-          "priority": 20
-        }
     ]
 	}
 }

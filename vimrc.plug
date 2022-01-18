@@ -626,35 +626,8 @@ hi ALEInfoSign          guifg=#83a598 guibg=#232526
 
 " navigator
 lua << EOF
-local path = require 'nvim-lsp-installer.path'
-local install_root_dir = path.concat {vim.fn.stdpath 'data', 'lsp_servers'}
-
 require'navigator'.setup({
-  lsp_installer = false,
-
-  lsp = {
-    gopls = {
-      cmd = { install_root_dir .. '/go/gopls' }
-    },
-    pyright = {
-      cmd = { install_root_dir .. '/python/node_modules/.bin/pyright' }
-    },
-    jedi_language_server = {
-      cmd = { install_root_dir .. '/jedi_language_server/venv/bin/jedi-language-server' }
-    },
-    tsserver = {
-      cmd = { install_root_dir .. '/tsserver/node_modules/.bin/tsserver' }
-    },
-    eslint = {
-      cmd = { install_root_dir .. '/vscode-eslint/node_modules/.bin/vscode-eslint-language-server' }
-    },
-    html = {
-      cmd = { install_root_dir .. '/html/node_modules/.bin/vscode-html-language-server' }
-    },
-    cssls = {
-      cmd = { install_root_dir .. '/cssls/node_modules/.bin/vscode-css-language-server' }
-    },
-  }
+  lsp_installer = true
 })
 EOF
 

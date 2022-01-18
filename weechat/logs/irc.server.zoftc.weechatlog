@@ -1,0 +1,1226 @@
+2021-07-07 15:48:46	!	irc: connecting to server nas/16667...
+2021-07-07 15:48:46	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-07 15:48:46	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-07 15:48:46	!	Your host is kinetic.oftc.net[109.169.7.194/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-07 15:48:46	!	This server was created Mar 26 2021 at 20:36:49
+2021-07-07 15:48:46	!	kinetic.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-07 15:48:46	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-07 15:48:46	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2021-07-07 15:48:46	!	There are 31 users and 19724 invisible on 18 servers
+2021-07-07 15:48:46	!	23 :IRC Operators online
+2021-07-07 15:48:46	!	3902 :channels formed
+2021-07-07 15:48:46	!	I have 3681 clients and 1 servers
+2021-07-07 15:48:46	!	Current local users: 3681  Max: 4432
+2021-07-07 15:48:46	!	Current global users: 19755  Max: 20571
+2021-07-07 15:48:46	!	Highest connection count: 4433 (4432 clients) (88797 connections received)
+2021-07-07 15:48:46	!	You are now known as |RePa|
+2021-07-07 15:48:46	!	- kinetic.oftc.net Message of the Day -
+2021-07-07 15:48:46	!	-   O
+2021-07-07 15:48:46	!	-    \   The Open and Free
+2021-07-07 15:48:46	!	-     O  Technology Community
+2021-07-07 15:48:46	!	-    /|  https://www.oftc.net
+2021-07-07 15:48:46	!	- O-O O
+2021-07-07 15:48:46	!	-
+2021-07-07 15:48:46	!	- Welcome to the OFTC IRC Network.
+2021-07-07 15:48:46	!	-
+2021-07-07 15:48:46	!	- The Open and Free Technology Community was founded at the
+2021-07-07 15:48:46	!	- end of 2001 by a group of experienced members of the Open
+2021-07-07 15:48:46	!	- Source and Free Software communities; it is aimed at
+2021-07-07 15:48:46	!	- providing these communities with better communication,
+2021-07-07 15:48:46	!	- development, and support infrastructure. Our goal is to
+2021-07-07 15:48:46	!	- provide stable services to members of the community in any
+2021-07-07 15:48:46	!	- part of the world, while listening closely to their needs
+2021-07-07 15:48:46	!	- and desires.
+2021-07-07 15:48:46	!	-
+2021-07-07 15:48:46	!	- We are not a general purpose chat platform, but a topical
+2021-07-07 15:48:46	!	- network intent on providing the open source and free
+2021-07-07 15:48:46	!	- software communities a means to cooperate and communicate.
+2021-07-07 15:48:46	!	- As such, illegal and off-topic activity, such as warez
+2021-07-07 15:48:46	!	- trading, will result in being barred from access.
+2021-07-07 15:48:46	!	-
+2021-07-07 15:48:46	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-07 15:48:46	!	- and process information about IRC connections, nicknames,
+2021-07-07 15:48:46	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-07 15:48:46	!	- that data, and what your rights are. By connecting, you
+2021-07-07 15:48:46	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-07 15:48:46	!	-
+2021-07-07 15:48:46	!	- If you require assistance with using the OFTC IRC network,
+2021-07-07 15:48:46	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-07 15:48:46	!	- details. For help with non-IRC questions please refer to
+2021-07-07 15:48:46	!	- the respective channels and project homepages.
+2021-07-07 15:48:46	!	-
+2021-07-07 15:48:46	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-07 15:48:46	!	End of /MOTD command.
+2021-07-07 15:48:46	!	User mode [+i] by |RePa|
+2021-07-07 15:48:46	!	You have been marked as being away
+2021-07-07 15:48:46	!	kinetic.oftc.net: [13:45:05] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-07-07 15:48:46	!	NickServ (services@services.oftc.net): [13:45:05] This nickname is registered and protected.  If it is your nickname, you may
+2021-07-07 15:48:46	!	NickServ (services@services.oftc.net): [13:45:05] authenticate yourself to services with the IDENTIFY command.  You are
+2021-07-07 15:48:46	!	NickServ (services@services.oftc.net): [13:45:05] getting this message because you are not on the access list for the
+2021-07-07 15:48:46	!	NickServ (services@services.oftc.net): [13:45:05] |RePa| nickname.
+2021-07-07 15:48:46	!	You are no longer marked as being away
+2021-07-07 15:49:00	!	You are now known as dyuri
+2021-07-07 15:49:00	!	NickServ (services@services.oftc.net): This nickname is registered and protected.  If it is your nickname, you may
+2021-07-07 15:49:00	!	NickServ (services@services.oftc.net): authenticate yourself to services with the IDENTIFY command.  You are
+2021-07-07 15:49:00	!	NickServ (services@services.oftc.net): getting this message because you are not on the access list for the
+2021-07-07 15:49:00	!	NickServ (services@services.oftc.net): dyuri nickname.
+2021-07-07 15:49:00	!	kinetic.oftc.net: Activating Cloak: 0002c78d.user.oftc.net
+2021-07-07 15:49:00	!	User mode [+R] by dyuri
+2021-07-07 15:49:00	!	NickServ (services@services.oftc.net): You are successfully identified as dyuri.
+2021-07-07 15:57:21	!	irc: connecting to server nas/16667...
+2021-07-07 15:57:21	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-07 15:57:21	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-07 15:57:21	!	Your host is kinetic.oftc.net[109.169.7.194/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-07 15:57:21	!	This server was created Mar 26 2021 at 20:36:49
+2021-07-07 15:57:21	!	kinetic.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-07 15:57:21	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-07 15:57:21	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2021-07-07 15:57:21	!	There are 31 users and 19724 invisible on 18 servers
+2021-07-07 15:57:21	!	23 :IRC Operators online
+2021-07-07 15:57:21	!	3902 :channels formed
+2021-07-07 15:57:21	!	I have 3681 clients and 1 servers
+2021-07-07 15:57:21	!	Current local users: 3681  Max: 4432
+2021-07-07 15:57:21	!	Current global users: 19755  Max: 20571
+2021-07-07 15:57:21	!	Highest connection count: 4433 (4432 clients) (88797 connections received)
+2021-07-07 15:57:21	!	- kinetic.oftc.net Message of the Day -
+2021-07-07 15:57:21	!	-   O
+2021-07-07 15:57:21	!	-    \   The Open and Free
+2021-07-07 15:57:21	!	-     O  Technology Community
+2021-07-07 15:57:21	!	-    /|  https://www.oftc.net
+2021-07-07 15:57:21	!	- O-O O
+2021-07-07 15:57:21	!	-
+2021-07-07 15:57:21	!	- Welcome to the OFTC IRC Network.
+2021-07-07 15:57:21	!	-
+2021-07-07 15:57:21	!	- The Open and Free Technology Community was founded at the
+2021-07-07 15:57:21	!	- end of 2001 by a group of experienced members of the Open
+2021-07-07 15:57:21	!	- Source and Free Software communities; it is aimed at
+2021-07-07 15:57:21	!	- providing these communities with better communication,
+2021-07-07 15:57:21	!	- development, and support infrastructure. Our goal is to
+2021-07-07 15:57:21	!	- provide stable services to members of the community in any
+2021-07-07 15:57:21	!	- part of the world, while listening closely to their needs
+2021-07-07 15:57:21	!	- and desires.
+2021-07-07 15:57:21	!	-
+2021-07-07 15:57:21	!	- We are not a general purpose chat platform, but a topical
+2021-07-07 15:57:21	!	- network intent on providing the open source and free
+2021-07-07 15:57:21	!	- software communities a means to cooperate and communicate.
+2021-07-07 15:57:21	!	- As such, illegal and off-topic activity, such as warez
+2021-07-07 15:57:21	!	- trading, will result in being barred from access.
+2021-07-07 15:57:21	!	-
+2021-07-07 15:57:21	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-07 15:57:21	!	- and process information about IRC connections, nicknames,
+2021-07-07 15:57:21	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-07 15:57:21	!	- that data, and what your rights are. By connecting, you
+2021-07-07 15:57:21	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-07 15:57:21	!	-
+2021-07-07 15:57:21	!	- If you require assistance with using the OFTC IRC network,
+2021-07-07 15:57:21	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-07 15:57:21	!	- details. For help with non-IRC questions please refer to
+2021-07-07 15:57:21	!	- the respective channels and project homepages.
+2021-07-07 15:57:21	!	-
+2021-07-07 15:57:21	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-07 15:57:21	!	End of /MOTD command.
+2021-07-07 15:57:21	!	User mode [+Ri] by dyuri
+2021-07-08 06:40:42	!	irc: connecting to server nas/16667...
+2021-07-08 06:40:42	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-08 06:40:42	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-08 06:40:42	!	Your host is kinetic.oftc.net[109.169.7.194/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-08 06:40:42	!	This server was created Mar 26 2021 at 20:36:49
+2021-07-08 06:40:42	!	kinetic.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-08 06:40:42	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-08 06:40:42	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2021-07-08 06:40:42	!	There are 31 users and 19724 invisible on 18 servers
+2021-07-08 06:40:42	!	23 :IRC Operators online
+2021-07-08 06:40:42	!	3902 :channels formed
+2021-07-08 06:40:42	!	I have 3681 clients and 1 servers
+2021-07-08 06:40:42	!	Current local users: 3681  Max: 4432
+2021-07-08 06:40:42	!	Current global users: 19755  Max: 20571
+2021-07-08 06:40:42	!	Highest connection count: 4433 (4432 clients) (88797 connections received)
+2021-07-08 06:40:42	!	- kinetic.oftc.net Message of the Day -
+2021-07-08 06:40:42	!	-   O
+2021-07-08 06:40:42	!	-    \   The Open and Free
+2021-07-08 06:40:42	!	-     O  Technology Community
+2021-07-08 06:40:42	!	-    /|  https://www.oftc.net
+2021-07-08 06:40:42	!	- O-O O
+2021-07-08 06:40:42	!	-
+2021-07-08 06:40:42	!	- Welcome to the OFTC IRC Network.
+2021-07-08 06:40:42	!	-
+2021-07-08 06:40:42	!	- The Open and Free Technology Community was founded at the
+2021-07-08 06:40:42	!	- end of 2001 by a group of experienced members of the Open
+2021-07-08 06:40:42	!	- Source and Free Software communities; it is aimed at
+2021-07-08 06:40:42	!	- providing these communities with better communication,
+2021-07-08 06:40:42	!	- development, and support infrastructure. Our goal is to
+2021-07-08 06:40:42	!	- provide stable services to members of the community in any
+2021-07-08 06:40:42	!	- part of the world, while listening closely to their needs
+2021-07-08 06:40:42	!	- and desires.
+2021-07-08 06:40:42	!	-
+2021-07-08 06:40:42	!	- We are not a general purpose chat platform, but a topical
+2021-07-08 06:40:42	!	- network intent on providing the open source and free
+2021-07-08 06:40:42	!	- software communities a means to cooperate and communicate.
+2021-07-08 06:40:42	!	- As such, illegal and off-topic activity, such as warez
+2021-07-08 06:40:42	!	- trading, will result in being barred from access.
+2021-07-08 06:40:42	!	-
+2021-07-08 06:40:42	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-08 06:40:42	!	- and process information about IRC connections, nicknames,
+2021-07-08 06:40:42	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-08 06:40:42	!	- that data, and what your rights are. By connecting, you
+2021-07-08 06:40:42	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-08 06:40:42	!	-
+2021-07-08 06:40:42	!	- If you require assistance with using the OFTC IRC network,
+2021-07-08 06:40:42	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-08 06:40:42	!	- details. For help with non-IRC questions please refer to
+2021-07-08 06:40:42	!	- the respective channels and project homepages.
+2021-07-08 06:40:42	!	-
+2021-07-08 06:40:42	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-08 06:40:42	!	End of /MOTD command.
+2021-07-08 06:40:42	!	User mode [+Ri] by dyuri
+2021-07-08 06:40:42	!	You have been marked as being away
+2021-07-08 06:40:42	!	You are no longer marked as being away
+2021-07-09 08:00:45	!	irc: connecting to server nas/16667...
+2021-07-09 08:00:45	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-09 08:00:45	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-09 08:00:45	!	Your host is kinetic.oftc.net[109.169.7.194/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-09 08:00:45	!	This server was created Mar 26 2021 at 20:36:49
+2021-07-09 08:00:45	!	kinetic.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-09 08:00:45	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-09 08:00:45	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2021-07-09 08:00:45	!	There are 31 users and 19724 invisible on 18 servers
+2021-07-09 08:00:45	!	23 :IRC Operators online
+2021-07-09 08:00:45	!	3902 :channels formed
+2021-07-09 08:00:45	!	I have 3681 clients and 1 servers
+2021-07-09 08:00:45	!	Current local users: 3681  Max: 4432
+2021-07-09 08:00:45	!	Current global users: 19755  Max: 20571
+2021-07-09 08:00:45	!	Highest connection count: 4433 (4432 clients) (88797 connections received)
+2021-07-09 08:00:45	!	- kinetic.oftc.net Message of the Day -
+2021-07-09 08:00:45	!	-   O
+2021-07-09 08:00:45	!	-    \   The Open and Free
+2021-07-09 08:00:45	!	-     O  Technology Community
+2021-07-09 08:00:45	!	-    /|  https://www.oftc.net
+2021-07-09 08:00:45	!	- O-O O
+2021-07-09 08:00:45	!	-
+2021-07-09 08:00:45	!	- Welcome to the OFTC IRC Network.
+2021-07-09 08:00:45	!	-
+2021-07-09 08:00:45	!	- The Open and Free Technology Community was founded at the
+2021-07-09 08:00:45	!	- end of 2001 by a group of experienced members of the Open
+2021-07-09 08:00:45	!	- Source and Free Software communities; it is aimed at
+2021-07-09 08:00:45	!	- providing these communities with better communication,
+2021-07-09 08:00:45	!	- development, and support infrastructure. Our goal is to
+2021-07-09 08:00:45	!	- provide stable services to members of the community in any
+2021-07-09 08:00:45	!	- part of the world, while listening closely to their needs
+2021-07-09 08:00:45	!	- and desires.
+2021-07-09 08:00:45	!	-
+2021-07-09 08:00:45	!	- We are not a general purpose chat platform, but a topical
+2021-07-09 08:00:45	!	- network intent on providing the open source and free
+2021-07-09 08:00:45	!	- software communities a means to cooperate and communicate.
+2021-07-09 08:00:45	!	- As such, illegal and off-topic activity, such as warez
+2021-07-09 08:00:45	!	- trading, will result in being barred from access.
+2021-07-09 08:00:45	!	-
+2021-07-09 08:00:45	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-09 08:00:45	!	- and process information about IRC connections, nicknames,
+2021-07-09 08:00:45	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-09 08:00:45	!	- that data, and what your rights are. By connecting, you
+2021-07-09 08:00:45	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-09 08:00:45	!	-
+2021-07-09 08:00:45	!	- If you require assistance with using the OFTC IRC network,
+2021-07-09 08:00:45	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-09 08:00:45	!	- details. For help with non-IRC questions please refer to
+2021-07-09 08:00:45	!	- the respective channels and project homepages.
+2021-07-09 08:00:45	!	-
+2021-07-09 08:00:45	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-09 08:00:45	!	End of /MOTD command.
+2021-07-09 08:00:45	!	User mode [+Ri] by dyuri
+2021-07-09 08:00:45	!	You have been marked as being away
+2021-07-09 08:00:45	!	You are no longer marked as being away
+2021-07-09 16:05:48	!	helix.oftc.net: *** Looking up your hostname...
+2021-07-09 16:05:48	!	helix.oftc.net: *** Checking Ident
+2021-07-09 16:05:48	!	helix.oftc.net: *** Found your hostname
+2021-07-09 16:05:59	!	helix.oftc.net: *** No Ident response
+2021-07-09 16:05:59	!	helix.oftc.net: *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-07-09 16:05:59	!	You are now known as |RePa|
+2021-07-09 16:05:59	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-09 16:05:59	!	Your host is helix.oftc.net[130.239.18.116/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-09 16:05:59	!	This server was created Mar 26 2021 at 20:38:16
+2021-07-09 16:05:59	!	helix.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-09 16:05:59	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-09 16:05:59	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-07-09 16:05:59	!	4G4AAB2VG :your unique ID
+2021-07-09 16:05:59	!	There are 32 users and 19847 invisible on 18 servers
+2021-07-09 16:05:59	!	23 :IRC Operators online
+2021-07-09 16:05:59	!	3905 :channels formed
+2021-07-09 16:05:59	!	I have 3643 clients and 1 servers
+2021-07-09 16:05:59	!	Current local users: 3643  Max: 4510
+2021-07-09 16:05:59	!	Current global users: 19879  Max: 20571
+2021-07-09 16:05:59	!	Highest connection count: 4511 (4510 clients) (83707 connections received)
+2021-07-09 16:05:59	!	- helix.oftc.net Message of the Day -
+2021-07-09 16:05:59	!	-   O
+2021-07-09 16:05:59	!	-    \   The Open and Free
+2021-07-09 16:05:59	!	-     O  Technology Community
+2021-07-09 16:05:59	!	-    /|  https://www.oftc.net
+2021-07-09 16:05:59	!	- O-O O
+2021-07-09 16:05:59	!	-
+2021-07-09 16:05:59	!	- Welcome to the OFTC IRC Network.
+2021-07-09 16:05:59	!	-
+2021-07-09 16:05:59	!	- The Open and Free Technology Community was founded at the
+2021-07-09 16:05:59	!	- end of 2001 by a group of experienced members of the Open
+2021-07-09 16:05:59	!	- Source and Free Software communities; it is aimed at
+2021-07-09 16:05:59	!	- providing these communities with better communication,
+2021-07-09 16:05:59	!	- development, and support infrastructure. Our goal is to
+2021-07-09 16:05:59	!	- provide stable services to members of the community in any
+2021-07-09 16:05:59	!	- part of the world, while listening closely to their needs
+2021-07-09 16:05:59	!	- and desires.
+2021-07-09 16:05:59	!	-
+2021-07-09 16:05:59	!	- We are not a general purpose chat platform, but a topical
+2021-07-09 16:05:59	!	- network intent on providing the open source and free
+2021-07-09 16:05:59	!	- software communities a means to cooperate and communicate.
+2021-07-09 16:05:59	!	- As such, illegal and off-topic activity, such as warez
+2021-07-09 16:05:59	!	- trading, will result in being barred from access.
+2021-07-09 16:05:59	!	-
+2021-07-09 16:05:59	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-09 16:05:59	!	- and process information about IRC connections, nicknames,
+2021-07-09 16:05:59	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-09 16:05:59	!	- that data, and what your rights are. By connecting, you
+2021-07-09 16:05:59	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-09 16:05:59	!	-
+2021-07-09 16:05:59	!	- If you require assistance with using the OFTC IRC network,
+2021-07-09 16:05:59	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-09 16:05:59	!	- details. For help with non-IRC questions please refer to
+2021-07-09 16:05:59	!	- the respective channels and project homepages.
+2021-07-09 16:05:59	!	-
+2021-07-09 16:05:59	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-09 16:05:59	!	End of /MOTD command.
+2021-07-09 16:05:59	!	User mode [+i] by |RePa|
+2021-07-09 16:05:59	!	[*] |RePa| (~dyuri@94-21-131-114.pool.digikabel.hu) H 0 (Gyuri Horak)
+2021-07-09 16:05:59	!	[|RePa|] End of /WHO list.
+2021-07-09 16:05:59	!	NickServ (services@services.oftc.net): This nickname is registered and protected.  If it is your nickname, you may
+2021-07-09 16:05:59	!	NickServ (services@services.oftc.net): authenticate yourself to services with the IDENTIFY command.  You are
+2021-07-09 16:05:59	!	NickServ (services@services.oftc.net): getting this message because you are not on the access list for the
+2021-07-09 16:05:59	!	NickServ (services@services.oftc.net): |RePa| nickname.
+2021-07-09 16:05:59	!	helix.oftc.net: Activating Cloak: 0002c78d.user.oftc.net
+2021-07-09 16:05:59	!	User mode [+R] by |RePa|
+2021-07-09 16:05:59	!	NickServ (services@services.oftc.net): You are successfully identified as |RePa|.
+2021-07-09 17:03:25	!	You are now known as dyuri
+2021-07-09 17:03:25	!	User mode [-R] by dyuri
+2021-07-09 17:03:25	!	User mode [+R] by dyuri
+2021-07-10 09:25:40	!	irc: connecting to server nas/16667...
+2021-07-10 09:25:40	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-10 09:25:40	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-10 09:25:40	!	Your host is helix.oftc.net[130.239.18.116/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-10 09:25:40	!	This server was created Mar 26 2021 at 20:38:16
+2021-07-10 09:25:40	!	helix.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-10 09:25:40	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-10 09:25:40	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-07-10 09:25:40	!	There are 32 users and 19847 invisible on 18 servers
+2021-07-10 09:25:40	!	23 :IRC Operators online
+2021-07-10 09:25:40	!	3905 :channels formed
+2021-07-10 09:25:40	!	I have 3643 clients and 1 servers
+2021-07-10 09:25:40	!	Current local users: 3643  Max: 4510
+2021-07-10 09:25:40	!	Current global users: 19879  Max: 20571
+2021-07-10 09:25:40	!	Highest connection count: 4511 (4510 clients) (83707 connections received)
+2021-07-10 09:25:40	!	- helix.oftc.net Message of the Day -
+2021-07-10 09:25:40	!	-   O
+2021-07-10 09:25:40	!	-    \   The Open and Free
+2021-07-10 09:25:40	!	-     O  Technology Community
+2021-07-10 09:25:40	!	-    /|  https://www.oftc.net
+2021-07-10 09:25:40	!	- O-O O
+2021-07-10 09:25:40	!	-
+2021-07-10 09:25:40	!	- Welcome to the OFTC IRC Network.
+2021-07-10 09:25:40	!	-
+2021-07-10 09:25:40	!	- The Open and Free Technology Community was founded at the
+2021-07-10 09:25:40	!	- end of 2001 by a group of experienced members of the Open
+2021-07-10 09:25:40	!	- Source and Free Software communities; it is aimed at
+2021-07-10 09:25:40	!	- providing these communities with better communication,
+2021-07-10 09:25:40	!	- development, and support infrastructure. Our goal is to
+2021-07-10 09:25:40	!	- provide stable services to members of the community in any
+2021-07-10 09:25:40	!	- part of the world, while listening closely to their needs
+2021-07-10 09:25:40	!	- and desires.
+2021-07-10 09:25:40	!	-
+2021-07-10 09:25:40	!	- We are not a general purpose chat platform, but a topical
+2021-07-10 09:25:40	!	- network intent on providing the open source and free
+2021-07-10 09:25:40	!	- software communities a means to cooperate and communicate.
+2021-07-10 09:25:40	!	- As such, illegal and off-topic activity, such as warez
+2021-07-10 09:25:40	!	- trading, will result in being barred from access.
+2021-07-10 09:25:40	!	-
+2021-07-10 09:25:40	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-10 09:25:40	!	- and process information about IRC connections, nicknames,
+2021-07-10 09:25:40	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-10 09:25:40	!	- that data, and what your rights are. By connecting, you
+2021-07-10 09:25:40	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-10 09:25:40	!	-
+2021-07-10 09:25:40	!	- If you require assistance with using the OFTC IRC network,
+2021-07-10 09:25:40	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-10 09:25:40	!	- details. For help with non-IRC questions please refer to
+2021-07-10 09:25:40	!	- the respective channels and project homepages.
+2021-07-10 09:25:40	!	-
+2021-07-10 09:25:40	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-10 09:25:40	!	End of /MOTD command.
+2021-07-10 09:25:40	!	User mode [+Ri] by dyuri
+2021-07-10 09:25:40	!	You have been marked as being away
+2021-07-10 09:25:40	!	You are no longer marked as being away
+2021-07-11 08:47:59	!	irc: connecting to server nas/16667...
+2021-07-11 08:47:59	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-11 08:47:59	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-11 08:47:59	!	Your host is helix.oftc.net[130.239.18.116/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-11 08:47:59	!	This server was created Mar 26 2021 at 20:38:16
+2021-07-11 08:47:59	!	helix.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-11 08:47:59	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-11 08:47:59	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-07-11 08:47:59	!	There are 32 users and 19847 invisible on 18 servers
+2021-07-11 08:47:59	!	23 :IRC Operators online
+2021-07-11 08:47:59	!	3905 :channels formed
+2021-07-11 08:47:59	!	I have 3643 clients and 1 servers
+2021-07-11 08:47:59	!	Current local users: 3643  Max: 4510
+2021-07-11 08:47:59	!	Current global users: 19879  Max: 20571
+2021-07-11 08:47:59	!	Highest connection count: 4511 (4510 clients) (83707 connections received)
+2021-07-11 08:47:59	!	- helix.oftc.net Message of the Day -
+2021-07-11 08:47:59	!	-   O
+2021-07-11 08:47:59	!	-    \   The Open and Free
+2021-07-11 08:47:59	!	-     O  Technology Community
+2021-07-11 08:47:59	!	-    /|  https://www.oftc.net
+2021-07-11 08:47:59	!	- O-O O
+2021-07-11 08:47:59	!	-
+2021-07-11 08:47:59	!	- Welcome to the OFTC IRC Network.
+2021-07-11 08:47:59	!	-
+2021-07-11 08:47:59	!	- The Open and Free Technology Community was founded at the
+2021-07-11 08:47:59	!	- end of 2001 by a group of experienced members of the Open
+2021-07-11 08:47:59	!	- Source and Free Software communities; it is aimed at
+2021-07-11 08:47:59	!	- providing these communities with better communication,
+2021-07-11 08:47:59	!	- development, and support infrastructure. Our goal is to
+2021-07-11 08:47:59	!	- provide stable services to members of the community in any
+2021-07-11 08:47:59	!	- part of the world, while listening closely to their needs
+2021-07-11 08:47:59	!	- and desires.
+2021-07-11 08:47:59	!	-
+2021-07-11 08:47:59	!	- We are not a general purpose chat platform, but a topical
+2021-07-11 08:47:59	!	- network intent on providing the open source and free
+2021-07-11 08:47:59	!	- software communities a means to cooperate and communicate.
+2021-07-11 08:47:59	!	- As such, illegal and off-topic activity, such as warez
+2021-07-11 08:47:59	!	- trading, will result in being barred from access.
+2021-07-11 08:47:59	!	-
+2021-07-11 08:47:59	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-11 08:47:59	!	- and process information about IRC connections, nicknames,
+2021-07-11 08:47:59	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-11 08:47:59	!	- that data, and what your rights are. By connecting, you
+2021-07-11 08:47:59	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-11 08:47:59	!	-
+2021-07-11 08:47:59	!	- If you require assistance with using the OFTC IRC network,
+2021-07-11 08:47:59	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-11 08:47:59	!	- details. For help with non-IRC questions please refer to
+2021-07-11 08:47:59	!	- the respective channels and project homepages.
+2021-07-11 08:47:59	!	-
+2021-07-11 08:47:59	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-11 08:47:59	!	End of /MOTD command.
+2021-07-11 08:47:59	!	User mode [+Ri] by dyuri
+2021-07-11 08:47:59	!	You have been marked as being away
+2021-07-11 08:47:59	!	You are no longer marked as being away
+2021-07-12 06:56:51	!	irc: connecting to server nas/16667...
+2021-07-12 06:56:51	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-12 06:56:51	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-12 06:56:51	!	Your host is helix.oftc.net[130.239.18.116/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-12 06:56:51	!	This server was created Mar 26 2021 at 20:38:16
+2021-07-12 06:56:51	!	helix.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-12 06:56:51	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-12 06:56:51	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-07-12 06:56:51	!	There are 32 users and 19847 invisible on 18 servers
+2021-07-12 06:56:51	!	23 :IRC Operators online
+2021-07-12 06:56:51	!	3905 :channels formed
+2021-07-12 06:56:51	!	I have 3643 clients and 1 servers
+2021-07-12 06:56:51	!	Current local users: 3643  Max: 4510
+2021-07-12 06:56:51	!	Current global users: 19879  Max: 20571
+2021-07-12 06:56:51	!	Highest connection count: 4511 (4510 clients) (83707 connections received)
+2021-07-12 06:56:51	!	- helix.oftc.net Message of the Day -
+2021-07-12 06:56:51	!	-   O
+2021-07-12 06:56:51	!	-    \   The Open and Free
+2021-07-12 06:56:51	!	-     O  Technology Community
+2021-07-12 06:56:51	!	-    /|  https://www.oftc.net
+2021-07-12 06:56:51	!	- O-O O
+2021-07-12 06:56:51	!	-
+2021-07-12 06:56:51	!	- Welcome to the OFTC IRC Network.
+2021-07-12 06:56:51	!	-
+2021-07-12 06:56:51	!	- The Open and Free Technology Community was founded at the
+2021-07-12 06:56:51	!	- end of 2001 by a group of experienced members of the Open
+2021-07-12 06:56:51	!	- Source and Free Software communities; it is aimed at
+2021-07-12 06:56:51	!	- providing these communities with better communication,
+2021-07-12 06:56:51	!	- development, and support infrastructure. Our goal is to
+2021-07-12 06:56:51	!	- provide stable services to members of the community in any
+2021-07-12 06:56:51	!	- part of the world, while listening closely to their needs
+2021-07-12 06:56:51	!	- and desires.
+2021-07-12 06:56:51	!	-
+2021-07-12 06:56:51	!	- We are not a general purpose chat platform, but a topical
+2021-07-12 06:56:51	!	- network intent on providing the open source and free
+2021-07-12 06:56:51	!	- software communities a means to cooperate and communicate.
+2021-07-12 06:56:51	!	- As such, illegal and off-topic activity, such as warez
+2021-07-12 06:56:51	!	- trading, will result in being barred from access.
+2021-07-12 06:56:51	!	-
+2021-07-12 06:56:51	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-12 06:56:51	!	- and process information about IRC connections, nicknames,
+2021-07-12 06:56:51	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-12 06:56:51	!	- that data, and what your rights are. By connecting, you
+2021-07-12 06:56:51	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-12 06:56:51	!	-
+2021-07-12 06:56:51	!	- If you require assistance with using the OFTC IRC network,
+2021-07-12 06:56:51	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-12 06:56:51	!	- details. For help with non-IRC questions please refer to
+2021-07-12 06:56:51	!	- the respective channels and project homepages.
+2021-07-12 06:56:51	!	-
+2021-07-12 06:56:51	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-12 06:56:51	!	End of /MOTD command.
+2021-07-12 06:56:51	!	User mode [+Ri] by dyuri
+2021-07-12 06:56:51	!	You have been marked as being away
+2021-07-12 06:56:51	!	You are no longer marked as being away
+2021-07-12 22:10:38	!	#xonsh: End of Channel Quiet List
+2021-07-13 08:43:40	!	irc: connecting to server nas/16667...
+2021-07-13 08:43:40	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-13 08:43:40	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-13 08:43:40	!	Your host is helix.oftc.net[130.239.18.116/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-13 08:43:40	!	This server was created Mar 26 2021 at 20:38:16
+2021-07-13 08:43:40	!	helix.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-13 08:43:40	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-13 08:43:40	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-07-13 08:43:40	!	There are 32 users and 19847 invisible on 18 servers
+2021-07-13 08:43:40	!	23 :IRC Operators online
+2021-07-13 08:43:40	!	3905 :channels formed
+2021-07-13 08:43:40	!	I have 3643 clients and 1 servers
+2021-07-13 08:43:40	!	Current local users: 3643  Max: 4510
+2021-07-13 08:43:40	!	Current global users: 19879  Max: 20571
+2021-07-13 08:43:40	!	Highest connection count: 4511 (4510 clients) (83707 connections received)
+2021-07-13 08:43:40	!	- helix.oftc.net Message of the Day -
+2021-07-13 08:43:40	!	-   O
+2021-07-13 08:43:40	!	-    \   The Open and Free
+2021-07-13 08:43:40	!	-     O  Technology Community
+2021-07-13 08:43:40	!	-    /|  https://www.oftc.net
+2021-07-13 08:43:40	!	- O-O O
+2021-07-13 08:43:40	!	-
+2021-07-13 08:43:40	!	- Welcome to the OFTC IRC Network.
+2021-07-13 08:43:40	!	-
+2021-07-13 08:43:40	!	- The Open and Free Technology Community was founded at the
+2021-07-13 08:43:40	!	- end of 2001 by a group of experienced members of the Open
+2021-07-13 08:43:40	!	- Source and Free Software communities; it is aimed at
+2021-07-13 08:43:40	!	- providing these communities with better communication,
+2021-07-13 08:43:40	!	- development, and support infrastructure. Our goal is to
+2021-07-13 08:43:40	!	- provide stable services to members of the community in any
+2021-07-13 08:43:40	!	- part of the world, while listening closely to their needs
+2021-07-13 08:43:40	!	- and desires.
+2021-07-13 08:43:40	!	-
+2021-07-13 08:43:40	!	- We are not a general purpose chat platform, but a topical
+2021-07-13 08:43:40	!	- network intent on providing the open source and free
+2021-07-13 08:43:40	!	- software communities a means to cooperate and communicate.
+2021-07-13 08:43:40	!	- As such, illegal and off-topic activity, such as warez
+2021-07-13 08:43:40	!	- trading, will result in being barred from access.
+2021-07-13 08:43:40	!	-
+2021-07-13 08:43:40	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-13 08:43:40	!	- and process information about IRC connections, nicknames,
+2021-07-13 08:43:40	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-13 08:43:40	!	- that data, and what your rights are. By connecting, you
+2021-07-13 08:43:40	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-13 08:43:40	!	-
+2021-07-13 08:43:40	!	- If you require assistance with using the OFTC IRC network,
+2021-07-13 08:43:40	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-13 08:43:40	!	- details. For help with non-IRC questions please refer to
+2021-07-13 08:43:40	!	- the respective channels and project homepages.
+2021-07-13 08:43:40	!	-
+2021-07-13 08:43:40	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-13 08:43:40	!	End of /MOTD command.
+2021-07-13 08:43:40	!	User mode [+Ri] by dyuri
+2021-07-13 08:43:40	!	You have been marked as being away
+2021-07-13 08:43:40	!	You are no longer marked as being away
+2021-07-14 10:51:06	!	irc: connecting to server nas/16667...
+2021-07-14 10:51:06	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-14 10:51:06	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-14 10:51:06	!	Your host is helix.oftc.net[130.239.18.116/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-14 10:51:06	!	This server was created Mar 26 2021 at 20:38:16
+2021-07-14 10:51:06	!	helix.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-14 10:51:06	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-14 10:51:06	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-07-14 10:51:06	!	There are 32 users and 19847 invisible on 18 servers
+2021-07-14 10:51:06	!	23 :IRC Operators online
+2021-07-14 10:51:06	!	3905 :channels formed
+2021-07-14 10:51:06	!	I have 3643 clients and 1 servers
+2021-07-14 10:51:06	!	Current local users: 3643  Max: 4510
+2021-07-14 10:51:06	!	Current global users: 19879  Max: 20571
+2021-07-14 10:51:06	!	Highest connection count: 4511 (4510 clients) (83707 connections received)
+2021-07-14 10:51:06	!	- helix.oftc.net Message of the Day -
+2021-07-14 10:51:06	!	-   O
+2021-07-14 10:51:06	!	-    \   The Open and Free
+2021-07-14 10:51:06	!	-     O  Technology Community
+2021-07-14 10:51:06	!	-    /|  https://www.oftc.net
+2021-07-14 10:51:06	!	- O-O O
+2021-07-14 10:51:06	!	-
+2021-07-14 10:51:06	!	- Welcome to the OFTC IRC Network.
+2021-07-14 10:51:06	!	-
+2021-07-14 10:51:06	!	- The Open and Free Technology Community was founded at the
+2021-07-14 10:51:06	!	- end of 2001 by a group of experienced members of the Open
+2021-07-14 10:51:06	!	- Source and Free Software communities; it is aimed at
+2021-07-14 10:51:06	!	- providing these communities with better communication,
+2021-07-14 10:51:06	!	- development, and support infrastructure. Our goal is to
+2021-07-14 10:51:06	!	- provide stable services to members of the community in any
+2021-07-14 10:51:06	!	- part of the world, while listening closely to their needs
+2021-07-14 10:51:06	!	- and desires.
+2021-07-14 10:51:06	!	-
+2021-07-14 10:51:06	!	- We are not a general purpose chat platform, but a topical
+2021-07-14 10:51:06	!	- network intent on providing the open source and free
+2021-07-14 10:51:06	!	- software communities a means to cooperate and communicate.
+2021-07-14 10:51:06	!	- As such, illegal and off-topic activity, such as warez
+2021-07-14 10:51:06	!	- trading, will result in being barred from access.
+2021-07-14 10:51:06	!	-
+2021-07-14 10:51:06	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-14 10:51:06	!	- and process information about IRC connections, nicknames,
+2021-07-14 10:51:06	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-14 10:51:06	!	- that data, and what your rights are. By connecting, you
+2021-07-14 10:51:06	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-14 10:51:06	!	-
+2021-07-14 10:51:06	!	- If you require assistance with using the OFTC IRC network,
+2021-07-14 10:51:06	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-14 10:51:06	!	- details. For help with non-IRC questions please refer to
+2021-07-14 10:51:06	!	- the respective channels and project homepages.
+2021-07-14 10:51:06	!	-
+2021-07-14 10:51:06	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-14 10:51:06	!	End of /MOTD command.
+2021-07-14 10:51:06	!	User mode [+Ri] by dyuri
+2021-07-14 10:51:06	!	You have been marked as being away
+2021-07-14 10:51:06	!	You are no longer marked as being away
+2021-07-15 11:09:15	!	irc: connecting to server nas/16667...
+2021-07-15 11:09:15	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-15 11:09:15	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-15 11:09:15	!	Your host is helix.oftc.net[130.239.18.116/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-15 11:09:15	!	This server was created Mar 26 2021 at 20:38:16
+2021-07-15 11:09:15	!	helix.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-15 11:09:15	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-15 11:09:15	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-07-15 11:09:15	!	There are 32 users and 19847 invisible on 18 servers
+2021-07-15 11:09:15	!	23 :IRC Operators online
+2021-07-15 11:09:15	!	3905 :channels formed
+2021-07-15 11:09:15	!	I have 3643 clients and 1 servers
+2021-07-15 11:09:15	!	Current local users: 3643  Max: 4510
+2021-07-15 11:09:15	!	Current global users: 19879  Max: 20571
+2021-07-15 11:09:15	!	Highest connection count: 4511 (4510 clients) (83707 connections received)
+2021-07-15 11:09:15	!	- helix.oftc.net Message of the Day -
+2021-07-15 11:09:15	!	-   O
+2021-07-15 11:09:15	!	-    \   The Open and Free
+2021-07-15 11:09:15	!	-     O  Technology Community
+2021-07-15 11:09:15	!	-    /|  https://www.oftc.net
+2021-07-15 11:09:15	!	- O-O O
+2021-07-15 11:09:15	!	-
+2021-07-15 11:09:15	!	- Welcome to the OFTC IRC Network.
+2021-07-15 11:09:15	!	-
+2021-07-15 11:09:15	!	- The Open and Free Technology Community was founded at the
+2021-07-15 11:09:15	!	- end of 2001 by a group of experienced members of the Open
+2021-07-15 11:09:15	!	- Source and Free Software communities; it is aimed at
+2021-07-15 11:09:15	!	- providing these communities with better communication,
+2021-07-15 11:09:15	!	- development, and support infrastructure. Our goal is to
+2021-07-15 11:09:15	!	- provide stable services to members of the community in any
+2021-07-15 11:09:15	!	- part of the world, while listening closely to their needs
+2021-07-15 11:09:15	!	- and desires.
+2021-07-15 11:09:15	!	-
+2021-07-15 11:09:15	!	- We are not a general purpose chat platform, but a topical
+2021-07-15 11:09:15	!	- network intent on providing the open source and free
+2021-07-15 11:09:15	!	- software communities a means to cooperate and communicate.
+2021-07-15 11:09:15	!	- As such, illegal and off-topic activity, such as warez
+2021-07-15 11:09:15	!	- trading, will result in being barred from access.
+2021-07-15 11:09:15	!	-
+2021-07-15 11:09:15	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-15 11:09:15	!	- and process information about IRC connections, nicknames,
+2021-07-15 11:09:15	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-15 11:09:15	!	- that data, and what your rights are. By connecting, you
+2021-07-15 11:09:15	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-15 11:09:15	!	-
+2021-07-15 11:09:15	!	- If you require assistance with using the OFTC IRC network,
+2021-07-15 11:09:15	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-15 11:09:15	!	- details. For help with non-IRC questions please refer to
+2021-07-15 11:09:15	!	- the respective channels and project homepages.
+2021-07-15 11:09:15	!	-
+2021-07-15 11:09:15	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-15 11:09:15	!	End of /MOTD command.
+2021-07-15 11:09:15	!	User mode [+Ri] by dyuri
+2021-07-15 11:09:15	!	You have been marked as being away
+2021-07-15 11:09:15	!	You are no longer marked as being away
+2021-07-20 13:24:00	!	irc: connecting to server nas/16667...
+2021-07-20 13:24:00	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-20 13:24:00	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-20 13:24:00	!	Your host is liquid.oftc.net[188.240.145.40/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-20 13:24:00	!	This server was created Mar 26 2021 at 20:37:26
+2021-07-20 13:24:00	!	liquid.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-20 13:24:00	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-20 13:24:00	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2021-07-20 13:24:00	!	There are 37 users and 21042 invisible on 18 servers
+2021-07-20 13:24:00	!	23 :IRC Operators online
+2021-07-20 13:24:00	!	3866 :channels formed
+2021-07-20 13:24:00	!	I have 3835 clients and 1 servers
+2021-07-20 13:24:00	!	Current local users: 3835  Max: 3883
+2021-07-20 13:24:00	!	Current global users: 21079  Max: 21086
+2021-07-20 13:24:00	!	Highest connection count: 3884 (3883 clients) (62805 connections received)
+2021-07-20 13:24:00	!	You are now known as |RePa|
+2021-07-20 13:24:00	!	- liquid.oftc.net Message of the Day -
+2021-07-20 13:24:00	!	-   O
+2021-07-20 13:24:00	!	-    \   The Open and Free
+2021-07-20 13:24:00	!	-     O  Technology Community
+2021-07-20 13:24:00	!	-    /|  https://www.oftc.net
+2021-07-20 13:24:00	!	- O-O O
+2021-07-20 13:24:00	!	-
+2021-07-20 13:24:00	!	- Welcome to the OFTC IRC Network.
+2021-07-20 13:24:00	!	-
+2021-07-20 13:24:00	!	- The Open and Free Technology Community was founded at the
+2021-07-20 13:24:00	!	- end of 2001 by a group of experienced members of the Open
+2021-07-20 13:24:00	!	- Source and Free Software communities; it is aimed at
+2021-07-20 13:24:00	!	- providing these communities with better communication,
+2021-07-20 13:24:00	!	- development, and support infrastructure. Our goal is to
+2021-07-20 13:24:00	!	- provide stable services to members of the community in any
+2021-07-20 13:24:00	!	- part of the world, while listening closely to their needs
+2021-07-20 13:24:00	!	- and desires.
+2021-07-20 13:24:00	!	-
+2021-07-20 13:24:00	!	- We are not a general purpose chat platform, but a topical
+2021-07-20 13:24:00	!	- network intent on providing the open source and free
+2021-07-20 13:24:00	!	- software communities a means to cooperate and communicate.
+2021-07-20 13:24:00	!	- As such, illegal and off-topic activity, such as warez
+2021-07-20 13:24:00	!	- trading, will result in being barred from access.
+2021-07-20 13:24:00	!	-
+2021-07-20 13:24:00	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-20 13:24:00	!	- and process information about IRC connections, nicknames,
+2021-07-20 13:24:00	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-20 13:24:00	!	- that data, and what your rights are. By connecting, you
+2021-07-20 13:24:00	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-20 13:24:00	!	-
+2021-07-20 13:24:00	!	- If you require assistance with using the OFTC IRC network,
+2021-07-20 13:24:00	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-20 13:24:00	!	- details. For help with non-IRC questions please refer to
+2021-07-20 13:24:00	!	- the respective channels and project homepages.
+2021-07-20 13:24:00	!	-
+2021-07-20 13:24:00	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-20 13:24:00	!	End of /MOTD command.
+2021-07-20 13:24:00	!	User mode [+Ri] by |RePa|
+2021-07-20 13:24:00	!	You have been marked as being away
+2021-07-20 13:24:00	!	liquid.oftc.net: [14:31:42] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-07-20 13:24:00	!	NickServ (services@services.oftc.net): [14:31:42] This nickname is registered and protected.  If it is your nickname, you may
+2021-07-20 13:24:00	!	NickServ (services@services.oftc.net): [14:31:42] authenticate yourself to services with the IDENTIFY command.  You are
+2021-07-20 13:24:00	!	NickServ (services@services.oftc.net): [14:31:42] getting this message because you are not on the access list for the
+2021-07-20 13:24:00	!	NickServ (services@services.oftc.net): [14:31:42] |RePa| nickname.
+2021-07-20 13:24:00	!	ChanServ (services@services.oftc.net): [14:31:42] [#xonsh] Welcome to #xonsh
+2021-07-20 13:24:00	!	liquid.oftc.net: [14:31:42] Activating Cloak: 0002c78d.user.oftc.net
+2021-07-20 13:24:00	!	NickServ (services@services.oftc.net): [14:31:42] You are successfully identified as |RePa|.
+2021-07-20 13:24:00	!	You are no longer marked as being away
+2021-07-20 13:24:16	!	You are now known as dyuri
+2021-07-20 13:24:16	!	User mode [-R] by dyuri
+2021-07-20 13:24:16	!	User mode [+R] by dyuri
+2021-07-20 13:35:47	!	irc: connecting to server nas/16667...
+2021-07-20 13:35:47	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-20 13:35:47	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-20 13:35:47	!	Your host is liquid.oftc.net[188.240.145.40/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-20 13:35:47	!	This server was created Mar 26 2021 at 20:37:26
+2021-07-20 13:35:47	!	liquid.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-20 13:35:47	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-20 13:35:47	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2021-07-20 13:35:47	!	There are 37 users and 21042 invisible on 18 servers
+2021-07-20 13:35:47	!	23 :IRC Operators online
+2021-07-20 13:35:47	!	3866 :channels formed
+2021-07-20 13:35:47	!	I have 3835 clients and 1 servers
+2021-07-20 13:35:47	!	Current local users: 3835  Max: 3883
+2021-07-20 13:35:47	!	Current global users: 21079  Max: 21086
+2021-07-20 13:35:47	!	Highest connection count: 3884 (3883 clients) (62805 connections received)
+2021-07-20 13:35:47	!	- liquid.oftc.net Message of the Day -
+2021-07-20 13:35:47	!	-   O
+2021-07-20 13:35:47	!	-    \   The Open and Free
+2021-07-20 13:35:47	!	-     O  Technology Community
+2021-07-20 13:35:47	!	-    /|  https://www.oftc.net
+2021-07-20 13:35:47	!	- O-O O
+2021-07-20 13:35:47	!	-
+2021-07-20 13:35:47	!	- Welcome to the OFTC IRC Network.
+2021-07-20 13:35:47	!	-
+2021-07-20 13:35:47	!	- The Open and Free Technology Community was founded at the
+2021-07-20 13:35:47	!	- end of 2001 by a group of experienced members of the Open
+2021-07-20 13:35:47	!	- Source and Free Software communities; it is aimed at
+2021-07-20 13:35:47	!	- providing these communities with better communication,
+2021-07-20 13:35:47	!	- development, and support infrastructure. Our goal is to
+2021-07-20 13:35:47	!	- provide stable services to members of the community in any
+2021-07-20 13:35:47	!	- part of the world, while listening closely to their needs
+2021-07-20 13:35:47	!	- and desires.
+2021-07-20 13:35:47	!	-
+2021-07-20 13:35:47	!	- We are not a general purpose chat platform, but a topical
+2021-07-20 13:35:47	!	- network intent on providing the open source and free
+2021-07-20 13:35:47	!	- software communities a means to cooperate and communicate.
+2021-07-20 13:35:47	!	- As such, illegal and off-topic activity, such as warez
+2021-07-20 13:35:47	!	- trading, will result in being barred from access.
+2021-07-20 13:35:47	!	-
+2021-07-20 13:35:47	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-20 13:35:47	!	- and process information about IRC connections, nicknames,
+2021-07-20 13:35:47	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-20 13:35:47	!	- that data, and what your rights are. By connecting, you
+2021-07-20 13:35:47	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-20 13:35:47	!	-
+2021-07-20 13:35:47	!	- If you require assistance with using the OFTC IRC network,
+2021-07-20 13:35:47	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-20 13:35:47	!	- details. For help with non-IRC questions please refer to
+2021-07-20 13:35:47	!	- the respective channels and project homepages.
+2021-07-20 13:35:47	!	-
+2021-07-20 13:35:47	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-20 13:35:47	!	End of /MOTD command.
+2021-07-20 13:35:47	!	User mode [+Ri] by dyuri
+2021-07-20 13:35:47	!	You have been marked as being away
+2021-07-20 13:35:47	!	You are no longer marked as being away
+2021-07-21 14:56:56	!	irc: connecting to server nas/16667...
+2021-07-21 14:56:56	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-21 14:56:56	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-21 14:56:56	!	Your host is liquid.oftc.net[188.240.145.40/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-21 14:56:56	!	This server was created Mar 26 2021 at 20:37:26
+2021-07-21 14:56:56	!	liquid.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-21 14:56:56	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-21 14:56:56	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS ELIST=CMNTU SAFELIST AWAYLEN=160 KNOCK EXCEPTS=e INVEX=I :are supported by this server
+2021-07-21 14:56:56	!	There are 37 users and 21042 invisible on 18 servers
+2021-07-21 14:56:56	!	23 :IRC Operators online
+2021-07-21 14:56:56	!	3866 :channels formed
+2021-07-21 14:56:56	!	I have 3835 clients and 1 servers
+2021-07-21 14:56:56	!	Current local users: 3835  Max: 3883
+2021-07-21 14:56:56	!	Current global users: 21079  Max: 21086
+2021-07-21 14:56:56	!	Highest connection count: 3884 (3883 clients) (62805 connections received)
+2021-07-21 14:56:56	!	- liquid.oftc.net Message of the Day -
+2021-07-21 14:56:56	!	-   O
+2021-07-21 14:56:56	!	-    \   The Open and Free
+2021-07-21 14:56:56	!	-     O  Technology Community
+2021-07-21 14:56:56	!	-    /|  https://www.oftc.net
+2021-07-21 14:56:56	!	- O-O O
+2021-07-21 14:56:56	!	-
+2021-07-21 14:56:56	!	- Welcome to the OFTC IRC Network.
+2021-07-21 14:56:56	!	-
+2021-07-21 14:56:56	!	- The Open and Free Technology Community was founded at the
+2021-07-21 14:56:56	!	- end of 2001 by a group of experienced members of the Open
+2021-07-21 14:56:56	!	- Source and Free Software communities; it is aimed at
+2021-07-21 14:56:56	!	- providing these communities with better communication,
+2021-07-21 14:56:56	!	- development, and support infrastructure. Our goal is to
+2021-07-21 14:56:56	!	- provide stable services to members of the community in any
+2021-07-21 14:56:56	!	- part of the world, while listening closely to their needs
+2021-07-21 14:56:56	!	- and desires.
+2021-07-21 14:56:56	!	-
+2021-07-21 14:56:56	!	- We are not a general purpose chat platform, but a topical
+2021-07-21 14:56:56	!	- network intent on providing the open source and free
+2021-07-21 14:56:56	!	- software communities a means to cooperate and communicate.
+2021-07-21 14:56:56	!	- As such, illegal and off-topic activity, such as warez
+2021-07-21 14:56:56	!	- trading, will result in being barred from access.
+2021-07-21 14:56:56	!	-
+2021-07-21 14:56:56	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-21 14:56:56	!	- and process information about IRC connections, nicknames,
+2021-07-21 14:56:56	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-21 14:56:56	!	- that data, and what your rights are. By connecting, you
+2021-07-21 14:56:56	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-21 14:56:56	!	-
+2021-07-21 14:56:56	!	- If you require assistance with using the OFTC IRC network,
+2021-07-21 14:56:56	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-21 14:56:56	!	- details. For help with non-IRC questions please refer to
+2021-07-21 14:56:56	!	- the respective channels and project homepages.
+2021-07-21 14:56:56	!	-
+2021-07-21 14:56:56	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-21 14:56:56	!	End of /MOTD command.
+2021-07-21 14:56:56	!	User mode [+Ri] by dyuri
+2021-07-21 14:56:56	!	You have been marked as being away
+2021-07-21 14:56:56	!	You are no longer marked as being away
+2021-07-24 17:15:31	!	irc: connecting to server nas/16667...
+2021-07-24 17:15:31	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-24 17:15:31	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-24 17:15:31	!	Your host is coulomb.oftc.net[109.74.200.93/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-24 17:15:31	!	This server was created Mar 26 2021 at 20:37:28
+2021-07-24 17:15:31	!	coulomb.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-24 17:15:31	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-24 17:15:31	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-07-24 17:15:31	!	There are 30 users and 20934 invisible on 18 servers
+2021-07-24 17:15:31	!	23 :IRC Operators online
+2021-07-24 17:15:31	!	3850 :channels formed
+2021-07-24 17:15:31	!	I have 4081 clients and 1 servers
+2021-07-24 17:15:31	!	Current local users: 4081  Max: 4548
+2021-07-24 17:15:31	!	Current global users: 20964  Max: 21108
+2021-07-24 17:15:31	!	Highest connection count: 4549 (4548 clients) (124756 connections received)
+2021-07-24 17:15:31	!	You are now known as |RePa|
+2021-07-24 17:15:31	!	- coulomb.oftc.net Message of the Day -
+2021-07-24 17:15:31	!	-   O
+2021-07-24 17:15:31	!	-    \   The Open and Free
+2021-07-24 17:15:31	!	-     O  Technology Community
+2021-07-24 17:15:31	!	-    /|  https://www.oftc.net
+2021-07-24 17:15:31	!	- O-O O
+2021-07-24 17:15:31	!	-
+2021-07-24 17:15:31	!	- Welcome to the OFTC IRC Network.
+2021-07-24 17:15:31	!	-
+2021-07-24 17:15:31	!	- The Open and Free Technology Community was founded at the
+2021-07-24 17:15:31	!	- end of 2001 by a group of experienced members of the Open
+2021-07-24 17:15:31	!	- Source and Free Software communities; it is aimed at
+2021-07-24 17:15:31	!	- providing these communities with better communication,
+2021-07-24 17:15:31	!	- development, and support infrastructure. Our goal is to
+2021-07-24 17:15:31	!	- provide stable services to members of the community in any
+2021-07-24 17:15:31	!	- part of the world, while listening closely to their needs
+2021-07-24 17:15:31	!	- and desires.
+2021-07-24 17:15:31	!	-
+2021-07-24 17:15:31	!	- We are not a general purpose chat platform, but a topical
+2021-07-24 17:15:31	!	- network intent on providing the open source and free
+2021-07-24 17:15:31	!	- software communities a means to cooperate and communicate.
+2021-07-24 17:15:31	!	- As such, illegal and off-topic activity, such as warez
+2021-07-24 17:15:31	!	- trading, will result in being barred from access.
+2021-07-24 17:15:31	!	-
+2021-07-24 17:15:31	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-24 17:15:31	!	- and process information about IRC connections, nicknames,
+2021-07-24 17:15:31	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-24 17:15:31	!	- that data, and what your rights are. By connecting, you
+2021-07-24 17:15:31	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-24 17:15:31	!	-
+2021-07-24 17:15:31	!	- If you require assistance with using the OFTC IRC network,
+2021-07-24 17:15:31	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-24 17:15:31	!	- details. For help with non-IRC questions please refer to
+2021-07-24 17:15:31	!	- the respective channels and project homepages.
+2021-07-24 17:15:31	!	-
+2021-07-24 17:15:31	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-24 17:15:31	!	End of /MOTD command.
+2021-07-24 17:15:31	!	User mode [+Ri] by |RePa|
+2021-07-24 17:15:31	!	You have been marked as being away
+2021-07-24 17:15:31	!	coulomb.oftc.net: [14:43:30] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-07-24 17:15:31	!	NickServ (services@services.oftc.net): [14:43:30] This nickname is registered and protected.  If it is your nickname, you may
+2021-07-24 17:15:31	!	NickServ (services@services.oftc.net): [14:43:30] authenticate yourself to services with the IDENTIFY command.  You are
+2021-07-24 17:15:31	!	NickServ (services@services.oftc.net): [14:43:30] getting this message because you are not on the access list for the
+2021-07-24 17:15:31	!	NickServ (services@services.oftc.net): [14:43:30] |RePa| nickname.
+2021-07-24 17:15:31	!	ChanServ (services@services.oftc.net): [14:43:30] [#xonsh] Welcome to #xonsh
+2021-07-24 17:15:31	!	coulomb.oftc.net: [14:43:30] Activating Cloak: 0002c78d.user.oftc.net
+2021-07-24 17:15:31	!	NickServ (services@services.oftc.net): [14:43:30] You are successfully identified as |RePa|.
+2021-07-24 17:15:31	!	You are no longer marked as being away
+2021-07-24 17:15:48	!	You are now known as dyuri
+2021-07-24 17:15:48	!	User mode [-R] by dyuri
+2021-07-24 17:15:48	!	User mode [+R] by dyuri
+2021-07-26 09:54:28	!	irc: connecting to server nas/16667...
+2021-07-26 09:54:28	!	irc: connected to nas/16667 (192.168.0.13)
+2021-07-26 09:54:28	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-07-26 09:54:28	!	Your host is coulomb.oftc.net[109.74.200.93/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-07-26 09:54:28	!	This server was created Mar 26 2021 at 20:37:28
+2021-07-26 09:54:28	!	coulomb.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-07-26 09:54:28	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-07-26 09:54:28	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-07-26 09:54:28	!	There are 30 users and 20934 invisible on 18 servers
+2021-07-26 09:54:28	!	23 :IRC Operators online
+2021-07-26 09:54:28	!	3850 :channels formed
+2021-07-26 09:54:28	!	I have 4081 clients and 1 servers
+2021-07-26 09:54:28	!	Current local users: 4081  Max: 4548
+2021-07-26 09:54:28	!	Current global users: 20964  Max: 21108
+2021-07-26 09:54:28	!	Highest connection count: 4549 (4548 clients) (124756 connections received)
+2021-07-26 09:54:28	!	- coulomb.oftc.net Message of the Day -
+2021-07-26 09:54:28	!	-   O
+2021-07-26 09:54:28	!	-    \   The Open and Free
+2021-07-26 09:54:28	!	-     O  Technology Community
+2021-07-26 09:54:28	!	-    /|  https://www.oftc.net
+2021-07-26 09:54:28	!	- O-O O
+2021-07-26 09:54:28	!	-
+2021-07-26 09:54:28	!	- Welcome to the OFTC IRC Network.
+2021-07-26 09:54:28	!	-
+2021-07-26 09:54:28	!	- The Open and Free Technology Community was founded at the
+2021-07-26 09:54:28	!	- end of 2001 by a group of experienced members of the Open
+2021-07-26 09:54:28	!	- Source and Free Software communities; it is aimed at
+2021-07-26 09:54:28	!	- providing these communities with better communication,
+2021-07-26 09:54:28	!	- development, and support infrastructure. Our goal is to
+2021-07-26 09:54:28	!	- provide stable services to members of the community in any
+2021-07-26 09:54:28	!	- part of the world, while listening closely to their needs
+2021-07-26 09:54:28	!	- and desires.
+2021-07-26 09:54:28	!	-
+2021-07-26 09:54:28	!	- We are not a general purpose chat platform, but a topical
+2021-07-26 09:54:28	!	- network intent on providing the open source and free
+2021-07-26 09:54:28	!	- software communities a means to cooperate and communicate.
+2021-07-26 09:54:28	!	- As such, illegal and off-topic activity, such as warez
+2021-07-26 09:54:28	!	- trading, will result in being barred from access.
+2021-07-26 09:54:28	!	-
+2021-07-26 09:54:28	!	- OFTC honors your privacy. To operate the network, we store
+2021-07-26 09:54:28	!	- and process information about IRC connections, nicknames,
+2021-07-26 09:54:28	!	- and channels. Our Privacy Policy explains what we do with
+2021-07-26 09:54:28	!	- that data, and what your rights are. By connecting, you
+2021-07-26 09:54:28	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-07-26 09:54:28	!	-
+2021-07-26 09:54:28	!	- If you require assistance with using the OFTC IRC network,
+2021-07-26 09:54:28	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-07-26 09:54:28	!	- details. For help with non-IRC questions please refer to
+2021-07-26 09:54:28	!	- the respective channels and project homepages.
+2021-07-26 09:54:28	!	-
+2021-07-26 09:54:28	!	- Thanks and enjoy your stay! The OFTC team.
+2021-07-26 09:54:28	!	End of /MOTD command.
+2021-07-26 09:54:28	!	User mode [+Ri] by dyuri
+2021-07-26 09:54:28	!	You have been marked as being away
+2021-07-26 09:54:28	!	You are no longer marked as being away
+2021-08-05 16:25:43	!	irc: connecting to server nas/16667...
+2021-08-05 16:25:43	!	irc: connected to nas/16667 (192.168.0.13)
+2021-08-05 16:25:43	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-08-05 16:25:43	!	Your host is weber.oftc.net[207.192.72.99/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-08-05 16:25:43	!	This server was created Mar 26 2021 at 20:37:48
+2021-08-05 16:25:43	!	weber.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-08-05 16:25:43	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-08-05 16:25:43	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-08-05 16:25:43	!	There are 32 users and 20950 invisible on 18 servers
+2021-08-05 16:25:43	!	23 :IRC Operators online
+2021-08-05 16:25:43	!	3886 :channels formed
+2021-08-05 16:25:43	!	I have 1604 clients and 1 servers
+2021-08-05 16:25:43	!	Current local users: 1604  Max: 2448
+2021-08-05 16:25:43	!	Current global users: 20982  Max: 21107
+2021-08-05 16:25:43	!	Highest connection count: 2449 (2448 clients) (158219 connections received)
+2021-08-05 16:25:43	!	You are now known as |RePa|
+2021-08-05 16:25:43	!	- weber.oftc.net Message of the Day -
+2021-08-05 16:25:43	!	-   O
+2021-08-05 16:25:43	!	-    \   The Open and Free
+2021-08-05 16:25:43	!	-     O  Technology Community
+2021-08-05 16:25:43	!	-    /|  https://www.oftc.net
+2021-08-05 16:25:43	!	- O-O O
+2021-08-05 16:25:43	!	-
+2021-08-05 16:25:43	!	- Welcome to the OFTC IRC Network.
+2021-08-05 16:25:43	!	-
+2021-08-05 16:25:43	!	- The Open and Free Technology Community was founded at the
+2021-08-05 16:25:43	!	- end of 2001 by a group of experienced members of the Open
+2021-08-05 16:25:43	!	- Source and Free Software communities; it is aimed at
+2021-08-05 16:25:43	!	- providing these communities with better communication,
+2021-08-05 16:25:43	!	- development, and support infrastructure. Our goal is to
+2021-08-05 16:25:43	!	- provide stable services to members of the community in any
+2021-08-05 16:25:43	!	- part of the world, while listening closely to their needs
+2021-08-05 16:25:43	!	- and desires.
+2021-08-05 16:25:43	!	-
+2021-08-05 16:25:43	!	- We are not a general purpose chat platform, but a topical
+2021-08-05 16:25:43	!	- network intent on providing the open source and free
+2021-08-05 16:25:43	!	- software communities a means to cooperate and communicate.
+2021-08-05 16:25:43	!	- As such, illegal and off-topic activity, such as warez
+2021-08-05 16:25:43	!	- trading, will result in being barred from access.
+2021-08-05 16:25:43	!	-
+2021-08-05 16:25:43	!	- OFTC honors your privacy. To operate the network, we store
+2021-08-05 16:25:43	!	- and process information about IRC connections, nicknames,
+2021-08-05 16:25:43	!	- and channels. Our Privacy Policy explains what we do with
+2021-08-05 16:25:43	!	- that data, and what your rights are. By connecting, you
+2021-08-05 16:25:43	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-08-05 16:25:43	!	-
+2021-08-05 16:25:43	!	- If you require assistance with using the OFTC IRC network,
+2021-08-05 16:25:43	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-08-05 16:25:43	!	- details. For help with non-IRC questions please refer to
+2021-08-05 16:25:43	!	- the respective channels and project homepages.
+2021-08-05 16:25:43	!	-
+2021-08-05 16:25:43	!	- Thanks and enjoy your stay! The OFTC team.
+2021-08-05 16:25:43	!	End of /MOTD command.
+2021-08-05 16:25:43	!	User mode [+Ri] by |RePa|
+2021-08-05 16:25:43	!	You have been marked as being away
+2021-08-05 16:25:43	!	ChanServ (services@services.oftc.net): [22:58:48] [#xonsh] Welcome to #xonsh
+2021-08-05 16:25:43	!	ChanServ (services@services.oftc.net): [23:12:07] [#xonsh] Welcome to #xonsh
+2021-08-05 16:25:43	!	weber.oftc.net: [16:26:46] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-08-05 16:25:43	!	NickServ (services@services.oftc.net): [16:26:46] This nickname is registered and protected.  If it is your nickname, you may
+2021-08-05 16:25:43	!	NickServ (services@services.oftc.net): [16:26:46] authenticate yourself to services with the IDENTIFY command.  You are
+2021-08-05 16:25:43	!	NickServ (services@services.oftc.net): [16:26:46] getting this message because you are not on the access list for the
+2021-08-05 16:25:43	!	NickServ (services@services.oftc.net): [16:26:46] |RePa| nickname.
+2021-08-05 16:25:43	!	ChanServ (services@services.oftc.net): [16:26:46] [#xonsh] Welcome to #xonsh
+2021-08-05 16:25:43	!	weber.oftc.net: [16:26:46] Activating Cloak: 0002c78d.user.oftc.net
+2021-08-05 16:25:43	!	NickServ (services@services.oftc.net): [16:26:46] You are successfully identified as |RePa|.
+2021-08-05 16:25:44	!	You are no longer marked as being away
+2021-08-05 16:25:59	!	You are now known as dyuri
+2021-08-05 16:25:59	!	User mode [-R] by dyuri
+2021-08-05 16:25:59	!	User mode [+R] by dyuri
+2021-08-10 08:41:46	!	irc: connecting to server nas/16667...
+2021-08-10 08:41:46	!	irc: connected to nas/16667 (192.168.0.13)
+2021-08-10 08:41:46	!	Welcome to the OFTC Internet Relay Chat Network |RePa|
+2021-08-10 08:41:46	!	Your host is coulomb.oftc.net[109.74.200.93/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-08-10 08:41:46	!	This server was created Mar 26 2021 at 20:37:28
+2021-08-10 08:41:46	!	coulomb.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-08-10 08:41:46	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-08-10 08:41:46	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-08-10 08:41:46	!	There are 31 users and 22505 invisible on 18 servers
+2021-08-10 08:41:46	!	23 :IRC Operators online
+2021-08-10 08:41:46	!	4026 :channels formed
+2021-08-10 08:41:46	!	I have 4389 clients and 1 servers
+2021-08-10 08:41:46	!	Current local users: 4389  Max: 4548
+2021-08-10 08:41:46	!	Current global users: 22536  Max: 22580
+2021-08-10 08:41:46	!	Highest connection count: 4549 (4548 clients) (141600 connections received)
+2021-08-10 08:41:46	!	You are now known as |RePa|
+2021-08-10 08:41:46	!	- coulomb.oftc.net Message of the Day -
+2021-08-10 08:41:46	!	-   O
+2021-08-10 08:41:46	!	-    \   The Open and Free
+2021-08-10 08:41:46	!	-     O  Technology Community
+2021-08-10 08:41:46	!	-    /|  https://www.oftc.net
+2021-08-10 08:41:46	!	- O-O O
+2021-08-10 08:41:46	!	-
+2021-08-10 08:41:46	!	- Welcome to the OFTC IRC Network.
+2021-08-10 08:41:46	!	-
+2021-08-10 08:41:46	!	- The Open and Free Technology Community was founded at the
+2021-08-10 08:41:46	!	- end of 2001 by a group of experienced members of the Open
+2021-08-10 08:41:46	!	- Source and Free Software communities; it is aimed at
+2021-08-10 08:41:46	!	- providing these communities with better communication,
+2021-08-10 08:41:46	!	- development, and support infrastructure. Our goal is to
+2021-08-10 08:41:46	!	- provide stable services to members of the community in any
+2021-08-10 08:41:46	!	- part of the world, while listening closely to their needs
+2021-08-10 08:41:46	!	- and desires.
+2021-08-10 08:41:46	!	-
+2021-08-10 08:41:46	!	- We are not a general purpose chat platform, but a topical
+2021-08-10 08:41:46	!	- network intent on providing the open source and free
+2021-08-10 08:41:46	!	- software communities a means to cooperate and communicate.
+2021-08-10 08:41:46	!	- As such, illegal and off-topic activity, such as warez
+2021-08-10 08:41:46	!	- trading, will result in being barred from access.
+2021-08-10 08:41:46	!	-
+2021-08-10 08:41:46	!	- OFTC honors your privacy. To operate the network, we store
+2021-08-10 08:41:46	!	- and process information about IRC connections, nicknames,
+2021-08-10 08:41:46	!	- and channels. Our Privacy Policy explains what we do with
+2021-08-10 08:41:46	!	- that data, and what your rights are. By connecting, you
+2021-08-10 08:41:46	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-08-10 08:41:46	!	-
+2021-08-10 08:41:46	!	- If you require assistance with using the OFTC IRC network,
+2021-08-10 08:41:46	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-08-10 08:41:46	!	- details. For help with non-IRC questions please refer to
+2021-08-10 08:41:46	!	- the respective channels and project homepages.
+2021-08-10 08:41:46	!	-
+2021-08-10 08:41:46	!	- Thanks and enjoy your stay! The OFTC team.
+2021-08-10 08:41:46	!	End of /MOTD command.
+2021-08-10 08:41:46	!	User mode [+Ri] by |RePa|
+2021-08-10 08:41:46	!	You have been marked as being away
+2021-08-10 08:41:46	!	coulomb.oftc.net: [17:18:57] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-08-10 08:41:46	!	NickServ (services@services.oftc.net): [17:18:57] This nickname is registered and protected.  If it is your nickname, you may
+2021-08-10 08:41:46	!	NickServ (services@services.oftc.net): [17:18:57] authenticate yourself to services with the IDENTIFY command.  You are
+2021-08-10 08:41:46	!	NickServ (services@services.oftc.net): [17:18:57] getting this message because you are not on the access list for the
+2021-08-10 08:41:46	!	NickServ (services@services.oftc.net): [17:18:57] |RePa| nickname.
+2021-08-10 08:41:46	!	ChanServ (services@services.oftc.net): [17:18:57] [#xonsh] Welcome to #xonsh
+2021-08-10 08:41:46	!	coulomb.oftc.net: [17:18:57] Activating Cloak: 0002c78d.user.oftc.net
+2021-08-10 08:41:46	!	NickServ (services@services.oftc.net): [17:18:57] You are successfully identified as |RePa|.
+2021-08-10 08:41:46	!	You are no longer marked as being away
+2021-08-10 08:41:51	!	You are now known as dyuri
+2021-08-10 08:41:51	!	User mode [-R] by dyuri
+2021-08-10 08:41:51	!	User mode [+R] by dyuri
+2021-09-14 13:11:49	!	irc: connecting to server nas/16667...
+2021-09-14 13:11:49	!	irc: connected to nas/16667 (192.168.0.13)
+2021-09-14 13:11:49	!	Welcome to the OFTC Internet Relay Chat Network dyuri
+2021-09-14 13:11:49	!	Your host is coulomb.oftc.net[109.74.200.93/6697], running version hybrid-7.2.2+oftc1.7.3
+2021-09-14 13:11:49	!	This server was created Mar 26 2021 at 20:37:28
+2021-09-14 13:11:49	!	coulomb.oftc.net hybrid-7.2.2+oftc1.7.3 CDGPRSabcdfgijklnorsuwxyz bciklmnopstvzeIMRS bkloveI
+2021-09-14 13:11:49	!	CALLERID CASEMAPPING=rfc1459 DEAF=D KICKLEN=160 MODES=4 NICKLEN=30 PREFIX=(ov)@+ STATUSMSG=@+ TOPICLEN=391 NETWORK=OFTC MAXLIST=beI:100 MAXTARGETS=1 CHANTYPES=# :are supported by this server
+2021-09-14 13:11:49	!	CHANLIMIT=#:120 CHANNELLEN=50 CHANMODES=eIqb,k,l,cimnpstzMRS AWAYLEN=160 KNOCK ELIST=CMNTU SAFELIST EXCEPTS=e INVEX=I :are supported by this server
+2021-09-14 13:11:49	!	There are 31 users and 22101 invisible on 18 servers
+2021-09-14 13:11:49	!	21 :IRC Operators online
+2021-09-14 13:11:49	!	4113 :channels formed
+2021-09-14 13:11:49	!	I have 5289 clients and 1 servers
+2021-09-14 13:11:49	!	Current local users: 5289  Max: 5508
+2021-09-14 13:11:49	!	Current global users: 22132  Max: 22879
+2021-09-14 13:11:49	!	Highest connection count: 5509 (5508 clients) (181317 connections received)
+2021-09-14 13:11:49	!	- coulomb.oftc.net Message of the Day -
+2021-09-14 13:11:49	!	-   O
+2021-09-14 13:11:49	!	-    \   The Open and Free
+2021-09-14 13:11:49	!	-     O  Technology Community
+2021-09-14 13:11:49	!	-    /|  https://www.oftc.net
+2021-09-14 13:11:49	!	- O-O O
+2021-09-14 13:11:49	!	-
+2021-09-14 13:11:49	!	- Welcome to the OFTC IRC Network.
+2021-09-14 13:11:49	!	-
+2021-09-14 13:11:49	!	- The Open and Free Technology Community was founded at the
+2021-09-14 13:11:49	!	- end of 2001 by a group of experienced members of the Open
+2021-09-14 13:11:49	!	- Source and Free Software communities; it is aimed at
+2021-09-14 13:11:49	!	- providing these communities with better communication,
+2021-09-14 13:11:49	!	- development, and support infrastructure. Our goal is to
+2021-09-14 13:11:49	!	- provide stable services to members of the community in any
+2021-09-14 13:11:49	!	- part of the world, while listening closely to their needs
+2021-09-14 13:11:49	!	- and desires.
+2021-09-14 13:11:49	!	-
+2021-09-14 13:11:49	!	- We are not a general purpose chat platform, but a topical
+2021-09-14 13:11:49	!	- network intent on providing the open source and free
+2021-09-14 13:11:49	!	- software communities a means to cooperate and communicate.
+2021-09-14 13:11:49	!	- As such, illegal and off-topic activity, such as warez
+2021-09-14 13:11:49	!	- trading, will result in being barred from access.
+2021-09-14 13:11:49	!	-
+2021-09-14 13:11:49	!	- OFTC honors your privacy. To operate the network, we store
+2021-09-14 13:11:49	!	- and process information about IRC connections, nicknames,
+2021-09-14 13:11:49	!	- and channels. Our Privacy Policy explains what we do with
+2021-09-14 13:11:49	!	- that data, and what your rights are. By connecting, you
+2021-09-14 13:11:49	!	- accept these terms: https://www.oftc.net/Privacy_Policy/
+2021-09-14 13:11:49	!	-
+2021-09-14 13:11:49	!	- If you require assistance with using the OFTC IRC network,
+2021-09-14 13:11:49	!	- stop by in channel #oftc, or email support@oftc.net with
+2021-09-14 13:11:49	!	- details. For help with non-IRC questions please refer to
+2021-09-14 13:11:49	!	- the respective channels and project homepages.
+2021-09-14 13:11:49	!	-
+2021-09-14 13:11:49	!	- Thanks and enjoy your stay! The OFTC team.
+2021-09-14 13:11:49	!	End of /MOTD command.
+2021-09-14 13:11:49	!	User mode [+Ri] by dyuri
+2021-09-14 13:11:49	!	You have been marked as being away
+2021-09-14 13:11:49	!	coulomb.oftc.net: [19:13:41] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [19:13:41] This nickname is registered and protected.  If it is your nickname, you may
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [19:13:41] authenticate yourself to services with the IDENTIFY command.  You are
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [19:13:41] getting this message because you are not on the access list for the
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [19:13:41] |RePa| nickname.
+2021-09-14 13:11:49	!	ChanServ (services@services.oftc.net): [19:13:41] [#xonsh] Welcome to #xonsh
+2021-09-14 13:11:49	!	coulomb.oftc.net: [19:13:41] Activating Cloak: 0002c78d.user.oftc.net
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [19:13:41] You are successfully identified as |RePa|.
+2021-09-14 13:11:49	!	liquid.oftc.net: [21:13:01] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:13:01] This nickname is registered and protected.  If it is your nickname, you may
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:13:01] authenticate yourself to services with the IDENTIFY command.  You are
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:13:01] getting this message because you are not on the access list for the
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:13:01] dyuri nickname.
+2021-09-14 13:11:49	!	ChanServ (services@services.oftc.net): [21:13:01] [#xonsh] Welcome to #xonsh
+2021-09-14 13:11:49	!	liquid.oftc.net: [21:13:01] Activating Cloak: 0002c78d.user.oftc.net
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:13:01] You are successfully identified as dyuri.
+2021-09-14 13:11:49	!	helix.oftc.net: [21:51:04] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:51:04] This nickname is registered and protected.  If it is your nickname, you may
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:51:04] authenticate yourself to services with the IDENTIFY command.  You are
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:51:04] getting this message because you are not on the access list for the
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:51:04] |RePa| nickname.
+2021-09-14 13:11:49	!	ChanServ (services@services.oftc.net): [21:51:04] [#xonsh] Welcome to #xonsh
+2021-09-14 13:11:49	!	helix.oftc.net: [21:51:04] Activating Cloak: 0002c78d.user.oftc.net
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:51:04] You are successfully identified as |RePa|.
+2021-09-14 13:11:49	!	helix.oftc.net: [12:30:57] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [12:31:03] This nickname is registered and protected.  If it is your nickname, you may
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [12:31:03] authenticate yourself to services with the IDENTIFY command.  You are
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [12:31:03] getting this message because you are not on the access list for the
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [12:31:03] dyuri nickname.
+2021-09-14 13:11:49	!	ChanServ (services@services.oftc.net): [12:31:03] [#xonsh] Welcome to #xonsh
+2021-09-14 13:11:49	!	helix.oftc.net: [12:31:03] Activating Cloak: 0002c78d.user.oftc.net
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [12:31:03] You are successfully identified as dyuri.
+2021-09-14 13:11:49	!	helix.oftc.net: [18:01:45] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [18:01:45] This nickname is registered and protected.  If it is your nickname, you may
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [18:01:45] authenticate yourself to services with the IDENTIFY command.  You are
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [18:01:45] getting this message because you are not on the access list for the
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [18:01:45] dyuri nickname.
+2021-09-14 13:11:49	!	ChanServ (services@services.oftc.net): [18:01:45] [#xonsh] Welcome to #xonsh
+2021-09-14 13:11:49	!	helix.oftc.net: [18:01:45] Activating Cloak: 0002c78d.user.oftc.net
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [18:01:45] You are successfully identified as dyuri.
+2021-09-14 13:11:49	!	helix.oftc.net: [19:01:11] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [19:01:11] This nickname is registered and protected.  If it is your nickname, you may
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [19:01:11] authenticate yourself to services with the IDENTIFY command.  You are
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [19:01:11] getting this message because you are not on the access list for the
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [19:01:11] dyuri nickname.
+2021-09-14 13:11:49	!	ChanServ (services@services.oftc.net): [19:01:11] [#xonsh] Welcome to #xonsh
+2021-09-14 13:11:49	!	helix.oftc.net: [19:01:11] Activating Cloak: 0002c78d.user.oftc.net
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [19:01:11] You are successfully identified as dyuri.
+2021-09-14 13:11:49	!	liquid.oftc.net: [21:59:41] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:59:41] This nickname is registered and protected.  If it is your nickname, you may
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:59:41] authenticate yourself to services with the IDENTIFY command.  You are
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:59:41] getting this message because you are not on the access list for the
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:59:41] |RePa| nickname.
+2021-09-14 13:11:49	!	ChanServ (services@services.oftc.net): [21:59:41] [#xonsh] Welcome to #xonsh
+2021-09-14 13:11:49	!	liquid.oftc.net: [21:59:41] Activating Cloak: 0002c78d.user.oftc.net
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [21:59:41] You are successfully identified as |RePa|.
+2021-09-14 13:11:49	!	coulomb.oftc.net: [22:50:30] *** Connected securely via TLSv1.2 ECDHE-RSA-CHACHA20-POLY1305-256
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [22:50:30] This nickname is registered and protected.  If it is your nickname, you may
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [22:50:30] authenticate yourself to services with the IDENTIFY command.  You are
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [22:50:30] getting this message because you are not on the access list for the
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [22:50:30] dyuri nickname.
+2021-09-14 13:11:49	!	ChanServ (services@services.oftc.net): [22:50:30] [#xonsh] Welcome to #xonsh
+2021-09-14 13:11:49	!	coulomb.oftc.net: [22:50:30] Activating Cloak: 0002c78d.user.oftc.net
+2021-09-14 13:11:49	!	NickServ (services@services.oftc.net): [22:50:30] You are successfully identified as dyuri.
+2021-09-14 13:11:49	!	You are no longer marked as being away
+2021-10-04 21:10:22	!	irc: connecting to server nas/16667...
+2021-10-04 21:10:22	×	irc: connection refused
+2021-10-04 21:10:22	!	irc: reconnecting to server in 10 seconds
+2021-10-04 21:10:32	!	irc: reconnecting to server...
+2021-10-04 21:10:32	!	irc: connecting to server nas/16667...
+2021-10-04 21:10:32	×	irc: connection refused
+2021-10-04 21:10:32	!	irc: reconnecting to server in 20 seconds
+2021-10-04 21:10:52	!	irc: reconnecting to server...
+2021-10-04 21:10:52	!	irc: connecting to server nas/16667...
+2021-10-04 21:10:52	×	irc: connection refused
+2021-10-04 21:10:52	!	irc: reconnecting to server in 40 seconds
+2021-10-04 21:11:32	!	irc: reconnecting to server...
+2021-10-04 21:11:32	!	irc: connecting to server nas/16667...
+2021-10-04 21:11:32	×	irc: connection refused
+2021-10-04 21:11:32	!	irc: reconnecting to server in 1 minute, 20 seconds
+2021-10-04 21:12:52	!	irc: reconnecting to server...
+2021-10-04 21:12:52	!	irc: connecting to server nas/16667...
+2021-10-04 21:12:52	×	irc: connection refused
+2021-10-04 21:12:52	!	irc: reconnecting to server in 2 minutes, 40 seconds
+2021-10-04 21:15:32	!	irc: reconnecting to server...
+2021-10-04 21:15:32	!	irc: connecting to server nas/16667...
+2021-10-04 21:15:32	×	irc: connection refused
+2021-10-04 21:15:32	!	irc: reconnecting to server in 5 minutes, 20 seconds
+2021-10-04 21:20:52	!	irc: reconnecting to server...
+2021-10-04 21:20:52	!	irc: connecting to server nas/16667...
+2021-10-04 21:20:52	×	irc: connection refused
+2021-10-04 21:20:52	!	irc: reconnecting to server in 10 minutes
+2021-10-04 21:30:52	!	irc: reconnecting to server...
+2021-10-04 21:30:52	!	irc: connecting to server nas/16667...
+2021-10-04 21:30:52	×	irc: connection refused
+2021-10-04 21:30:52	!	irc: reconnecting to server in 10 minutes
+2021-10-04 21:40:52	!	irc: reconnecting to server...
+2021-10-04 21:40:52	!	irc: connecting to server nas/16667...
+2021-10-04 21:40:52	×	irc: connection refused
+2021-10-04 21:40:52	!	irc: reconnecting to server in 10 minutes
+2021-10-04 21:50:52	!	irc: reconnecting to server...
+2021-10-04 21:50:52	!	irc: connecting to server nas/16667...
+2021-10-04 21:50:52	×	irc: connection refused
+2021-10-04 21:50:52	!	irc: reconnecting to server in 10 minutes

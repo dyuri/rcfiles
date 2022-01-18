@@ -1,0 +1,19 @@
+2021-02-04 22:14:24	--	matrix: Connecting to matrix.org:443 (SSL)...
+2021-02-04 22:14:24	--	matrix: Doing SSL handshake...
+2021-02-04 22:14:24	--	matrix: Connected using TLSv1.3, and 256 bit TLS_AES_256_GCM_SHA384 cipher suite.
+2021-02-04 22:14:24	--	matrix: received certificate
+2021-02-04 22:14:24		 - certificate info:
+2021-02-04 22:14:24		    - subject: commonName=www.matrix.org, serial number
+2021-02-04 22:14:24		        037E4F2B479C7A093C8A1D60D21F0B8EC754
+2021-02-04 22:14:24		    - issuer: countryName=US, organizationName=Let's Encrypt,
+2021-02-04 22:14:24		        commonName=R3
+2021-02-04 22:14:24		    - key info: RSA key 4096 bits, signed using
+2021-02-04 22:14:24		        sha256WithRSAEncryption
+2021-02-04 22:14:24		    - period of validity:
+2021-02-04 22:14:24		        Begins on:  Dec  5 02:01:05 2020 GMT
+2021-02-04 22:14:24		        Expires on: Mar  5 02:01:05 2021 GMT
+2021-02-04 22:14:24		    - fingerprints:
+2021-02-04 22:14:24		        SHA1:   67:56:0E:AA:CD:95:A0:C9:B4:1C:19:D7:10:72:F9:B6:0E:59:CD:DA
+2021-02-04 22:14:24		        SHA256: C7:6F:74:93:58:DF:8E:DC:97:6E:1C:91:04:95:D1:2F:5F:38:56:2E:96:30:5A:94:27:45:A4:FF:22:B2:69:B7
+2021-02-04 22:14:24	--	matrix: Logging in...
+2021-02-04 22:14:27	--	matrix: Logged in as @dyuri:matrix.org

@@ -10,6 +10,7 @@
 $XONSH_COLOR_STYLE="monokai"
 
 $FOREIGN_ALIASES_SUPPRESS_SKIP_MESSAGE=True
+$UPDATE_OS_ENVIRON = True
 
 $PROMPT_TOOLKIT_COLOR_DEPTH='DEPTH_24_BIT'
 $XONSH_SHOW_TRACEBACK=False
@@ -52,6 +53,7 @@ xontrib load termcolors
 xontrib load autoxsh
 xontrib load xonsh_cctrlw
 xontrib load pyrtn
+# xontrib load term_integration
 
 $AXSH_CHECK_PARENTS = True
 
@@ -73,6 +75,10 @@ source-bash $(dircolors ~/config/dircolors/dircolors.molokai)
 # kitty diff
 if $TERM == 'xterm-kitty':
   aliases['d'] = ["kitty", "+kitten", "diff"]
+
+# nvm TODO
+#$NVM_DIR = "~/.nvm"
+#source-bash $NVM_DIR/nvm.sh
 
 # sudo askpass for non SSH sessions
 if 'SSH_CLIENT' not in ${...}:

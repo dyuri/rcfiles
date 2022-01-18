@@ -9,3 +9,4 @@ configuration {
   xoffset: -20;
   */
 }
+@theme "gruvbox-dark"

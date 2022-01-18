@@ -31,6 +31,7 @@
 - vifm => nnn
 - repassh
 - croc
+- drill (<= nslookup, dig)
 - jq => fx - json query
 - jc - json convert
 - bitwise - bitwise calculator
@@ -38,8 +39,11 @@
 - uni - unicode query
 - typora - markdown editor
 - hexyl - colored hex viewer
-- gitui
+- fq - jq for binary files
+- lg (lazygit) (<= gitui)
 - podman (<= docker)
+- hetty - debug MITM proxy
+- codext - encoding/decoding whatever
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 
@@ -58,3 +62,13 @@ pikaur -S neovim ripgrep fd bat tmux exa kitty rofi-emoji glances gotop figlet l
 ## Notes
 
 - use `pipx` for python tools
+
+## Video interpolation
+
+```
+ffmpeg \
+  -i input.mp4 \
+  -crf 10 \
+  -vf "minterpolate=fps=60:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1" \
+  output.60fps.mp4
+```
