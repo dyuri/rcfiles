@@ -95,6 +95,10 @@ call plug#begin()
   " python
   Plug 'ambv/black'
   Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
+
+  " go
+  "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " stucks on save
+  Plug 'darrikonn/vim-gofmt'
 call plug#end()
 
 " Look & feel
@@ -199,7 +203,7 @@ let g:lightline.colorscheme = 'gruvbox_material'
 let g:lightline#bufferline#enable_devicons = 1
 let g:lightline#bufferline#unicode_symbols = 1
 
-set ls=2          " enable the status
+set ls=3          " enable the status
 
 " cursor
 let &t_SI = "\e[6 q"
@@ -335,6 +339,8 @@ augroup END
 
 au FileType python setlocal tw=0 sw=4 ts=4 sta sts=4 ai et
 au FileType html,htmldjango setlocal tw=0 sw=2 ts=2 sta sts=2 ai et
+au FileType go setlocal tw=0 sw=4 ts=4 sts=4 noet
+au FileType go au BufWritePre * GoFmt
 
 " frissen beillesztett resz kijelolese
 nnoremap <leader>v V`]
@@ -616,47 +622,66 @@ hi ALEInfoSign          guifg=#83a598 guibg=#232526
 " lsp lua
 "lua << EOF
 "local lsp_installer = require("nvim-lsp-installer")
+"local kmopts = { noremap=true, silent=true }
+"local function on_attach(client, bufnr)
+  "-- mappings
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', kmopts)
+  "vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', kmopts)
+"end
 
 "lsp_installer.on_server_ready(function(server)
-  "local opts = {}
+  "local opts = {
+    "on_attach = on_attach,
+  "}
 
   "server:setup(opts)
 "end)
 "EOF
 
-" navigator
+
+" `tsserver` installed manually with npm
+" lsp server manual config - for navigator to work properly
 lua << EOF
 local path = require 'nvim-lsp-installer.path'
 local install_root_dir = path.concat {vim.fn.stdpath 'data', 'lsp_servers'}
 
 require'navigator'.setup({
-  lsp_installer = false,
-
+  debug = true,
   lsp = {
     gopls = {
       cmd = { install_root_dir .. '/go/gopls' }
     },
     pyright = {
-      cmd = { install_root_dir .. '/python/node_modules/.bin/pyright' }
+      cmd = { install_root_dir .. '/python/node_modules/.bin/pyright-langserver', '--stdio' }
     },
     jedi_language_server = {
       cmd = { install_root_dir .. '/jedi_language_server/venv/bin/jedi-language-server' }
     },
-    tsserver = {
-      cmd = { install_root_dir .. '/tsserver/node_modules/.bin/tsserver' }
-    },
-    eslint = {
-      cmd = { install_root_dir .. '/vscode-eslint/node_modules/.bin/vscode-eslint-language-server' }
-    },
     html = {
-      cmd = { install_root_dir .. '/html/node_modules/.bin/vscode-html-language-server' }
+      cmd = { install_root_dir .. '/html/node_modules/.bin/vscode-html-language-server', '--stdio' }
     },
     cssls = {
-      cmd = { install_root_dir .. '/cssls/node_modules/.bin/vscode-css-language-server' }
+      cmd = { install_root_dir .. '/cssls/node_modules/.bin/vscode-css-language-server', '--stdio' }
     },
   }
 })
 EOF
+
+" formatting
+nmap <leader>f :lua vim.lsp.buf.formatting()<cr>
+vmap <leader>f :lua vim.lsp.buf.range_formatting()<cr>
+
 
 " nvim-cmp lua
 lua << EOF

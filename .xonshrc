@@ -54,6 +54,7 @@ xontrib load autoxsh
 xontrib load xonsh_cctrlw
 xontrib load pyrtn
 # xontrib load term_integration
+xontrib load abbrevs
 
 $AXSH_CHECK_PARENTS = True
 
@@ -101,6 +102,10 @@ aliases['ping']='prettyping --nolegend'
 aliases['fzvim']='vim `fzf`'
 aliases['py']='ipython'
 aliases['mosh']=['mosh', '--ssh=repassh']
+
+# abbrevs
+abbrevs['!$'] = lambda buffer, word: _.args[-1]
+abbrevs['!!'] = lambda buffer, word: " ".join(_.args)
 
 # json
 try:
