@@ -4,7 +4,7 @@
 ### - xontrib-z - https://github.com:dyuri/xontrib-z @ zoxide
 # - xontrib-zoxide
 # - xontrib-ssh-agent
-# - xontrib-pyenv
+# - xontrib-langenv <= (xontrib-pyenv)
 # - xontrib-repa-prompt => xontrib-powerline-binding
 
 $XONSH_COLOR_STYLE="monokai"

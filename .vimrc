@@ -58,11 +58,16 @@ call plug#begin()
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
+  " fzf
+  " Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
+  Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+
   " development
   Plug 'ryanoasis/vim-devicons'
   Plug 'scrooloose/nerdcommenter'
   Plug 'tpope/vim-fugitive'
-  Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'mileszs/ack.vim'
   Plug 'ddrscott/vim-side-search'
@@ -189,7 +194,7 @@ let g:lightline = {
   \     'lineinfo': ' %3l:%-2v',
   \   },
   \   'component_function': {
-  \     'gitbranch': 'fugitive#head',
+  \     'gitbranch': 'FugitiveHead',
   \   },
   \   'separator': {
   \     'left': '', 'right': ''
@@ -382,12 +387,16 @@ nnoremap <F5> :MundoToggle<CR>
 nnoremap <C-F6> mzggg?G'z
 inoremap <C-F6> <ESC>mzggg?G'z
 
-nnoremap <F7> :Leaderf file<cr>
-nnoremap <S-F7> :Leaderf rg<cr>
-nnoremap <C-F7> :Leaderf mru<cr>
-nnoremap <F19> :Leaderf rg<cr>
-nnoremap <F31> :Leaderf mru<cr>
-nnoremap ; :Leaderf buffer<cr>
+"nnoremap <F7> :Leaderf file<cr>
+"nnoremap <S-F7> :Leaderf rg<cr>
+"nnoremap <C-F7> :Leaderf mru<cr>
+"nnoremap <F19> :Leaderf rg<cr>
+"nnoremap <F31> :Leaderf mru<cr>
+"nnoremap ; :Leaderf buffer<cr>
+" leaderf => telescope
+nnoremap <F7> <cmd>Telescope find_files<cr>
+nnoremap <S-F7> <cmd>Telescope live_grep<cr>
+nnoremap <F19> <cmd>Telescope live_grep<cr>
 
 nmap <F8> :set wrap!<CR>
 nmap <F9> :TagbarToggle<CR>
@@ -486,18 +495,32 @@ command! LG FloatermNew lazygit
 command! FM FloatermNew nnn
 
 " LeaderF
-let g:Lf_WindowPosition = 'popup'
-let g:Lf_PreviewInPopup = 1
-let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
-let g:Lf_StlSeparator = {'left': "\ue0b0", 'right': "\ue0b2"}
-let g:Lf_HideHelp = 1
-let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
-let g:Lf_ShortcutF = "<leader>ff"
+"let g:Lf_WindowPosition = 'popup'
+"let g:Lf_PreviewInPopup = 1
+"let g:Lf_CommandMap = {'<C-K>': ['<Up>'], '<C-J>': ['<Down>']}
+"let g:Lf_StlSeparator = {'left': "\ue0b0", 'right': "\ue0b2"}
+"let g:Lf_HideHelp = 1
+"let g:Lf_PreviewResult = {'Function': 0, 'BufTag': 0 }
+"let g:Lf_ShortcutF = "<leader>ff"
 
-noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
-noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
-noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
-noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+"noremap <leader>fb :<C-U><C-R>=printf("Leaderf buffer %s", "")<CR><CR>
+"noremap <leader>fm :<C-U><C-R>=printf("Leaderf mru %s", "")<CR><CR>
+"noremap <leader>ft :<C-U><C-R>=printf("Leaderf bufTag %s", "")<CR><CR>
+"noremap <leader>fl :<C-U><C-R>=printf("Leaderf line %s", "")<CR><CR>
+
+" leaderf => telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+
+lua << EOF
+require('telescope').setup({
+  defaults = {
+    layout_strategy = 'vertical',
+  },
+})
+require('telescope').load_extension('fzf')
+EOF
 
 " indentline - disable by default
 let g:indentLine_enabled = 0
@@ -653,8 +676,7 @@ hi ALEInfoSign          guifg=#83a598 guibg=#232526
 " `tsserver` installed manually with npm
 " lsp server manual config - for navigator to work properly
 lua << EOF
-local path = require 'nvim-lsp-installer.path'
-local install_root_dir = path.concat {vim.fn.stdpath 'data', 'lsp_servers'}
+local install_root_dir = '/home/dyuri/.local/share/nvim/lsp_servers'
 
 require'navigator'.setup({
   debug = true,
@@ -694,6 +716,8 @@ cmp.setup({
   },
   mapping = {
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
+    ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
