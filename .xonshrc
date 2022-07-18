@@ -23,8 +23,9 @@ $VC_BRANCH_TIMEOUT=.2
 $NPM_PACKAGES=$HOME+'/.npm'
 $GOPATH="/home/dyuri/egyeb/prog/go"
 $PYENV_ROOT=$HOME+"/.pyenv"
+$NODENV_ROOT=$HOME+"/.nodenv"
 $PATH=[$HOME+'/bin', $HOME+'/.local/bin', $HOME+'/.cargo/bin'] + $PATH
-$PATH=$PATH + [$PYENV_ROOT+'/bin', $PYENV_ROOT+'/shims', $PYENV_ROOT+'/plugins/pyenv-virtualenv/shims']
+$PATH=$PATH + [$NODENV_ROOT+'/shims', $PYENV_ROOT+'/bin', $PYENV_ROOT+'/shims', $PYENV_ROOT+'/plugins/pyenv-virtualenv/shims']
 $PATH.append($NPM_PACKAGES+'/bin')
 $PATH.append($GOPATH[0]+'/bin')
 # $GO111MODULE="on"
@@ -33,6 +34,9 @@ $AUDIODEV="default"
 $PYTHONSTARTUP=$HOME+"/.pythonrc"
 $BROWSER="/home/dyuri/bin/google-chrome"
 # $BINARY_SSH="/bin/ssh"
+
+# amd vulkan
+$VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/radeon_icd.i686.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json"
 
 # start powerline daemon
 powerline-daemon -q
@@ -44,6 +48,7 @@ xontrib load powerline_binding
 xontrib load readable-traceback
 xontrib load ssh_agent
 xontrib load pyenv
+#xontrib load nodenv
 xontrib load kitty
 xontrib load jedi
 xontrib load gitinfo
@@ -102,6 +107,7 @@ aliases['ping']='prettyping --nolegend'
 aliases['fzvim']='vim `fzf`'
 aliases['py']='ipython'
 aliases['mosh']=['mosh', '--ssh=repassh']
+aliases['watch']='viddy'
 
 # abbrevs
 abbrevs['!$'] = lambda buffer, word: _.args[-1]

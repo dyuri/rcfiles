@@ -64,14 +64,18 @@ call plug#begin()
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
-  " development
-  Plug 'ryanoasis/vim-devicons'
-  Plug 'scrooloose/nerdcommenter'
+  " git
   Plug 'tpope/vim-fugitive'
+  Plug 'tanvirtin/vgit.nvim'
+
+  " development
+  " Plug 'ryanoasis/vim-devicons' => nvim-web-devicons
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'scrooloose/nerdcommenter'
   Plug 'lukas-reineke/indent-blankline.nvim'
   Plug 'mileszs/ack.vim'
   Plug 'ddrscott/vim-side-search'
-  Plug 'mhinz/vim-signify'
+  " Plug 'mhinz/vim-signify' => vgit
   Plug 'mhinz/vim-startify'
   Plug 'tpope/vim-unimpaired'
   Plug 'tpope/vim-surround'
@@ -522,6 +526,11 @@ require('telescope').setup({
 require('telescope').load_extension('fzf')
 EOF
 
+" vgit
+lua << EOF
+require('vgit').setup()
+EOF
+
 " indentline - disable by default
 let g:indentLine_enabled = 0
 let g:indent_blankline_enabled = v:false
@@ -559,12 +568,12 @@ map gz* <Plug>(asterisk-gz*)
 map z#  <Plug>(asterisk-z#)
 map gz# <Plug>(asterisk-gz#)
 
-" Signify
-let g:signify_vcs_list = [ 'git', 'hg' ]
-let g:signify_sign_add               = '▌'
-let g:signify_sign_delete            = '▌' " '▁'
-let g:signify_sign_delete_first_line = '▌'
-let g:signify_sign_change            = '▌'
+" Signify => vgit
+"let g:signify_vcs_list = [ 'git', 'hg' ]
+"let g:signify_sign_add               = '▌'
+"let g:signify_sign_delete            = '▌' " '▁'
+"let g:signify_sign_delete_first_line = '▌'
+"let g:signify_sign_change            = '▌'
 
 " Sign colors
 hi DiffAdd              guifg=#8ec02b guibg=#232526
@@ -642,6 +651,9 @@ hi ALEErrorSign         guifg=#fb4934 guibg=#232526
 hi ALEWarningSign       guifg=#fabd2f guibg=#232526
 hi ALEInfoSign          guifg=#83a598 guibg=#232526
 
+" copilot
+let g:copilot_node_command = "~/.nodenv/versions/16.15.0/bin/node"
+
 " lsp lua
 "lua << EOF
 "local lsp_installer = require("nvim-lsp-installer")
@@ -696,6 +708,7 @@ require'navigator'.setup({
     cssls = {
       cmd = { install_root_dir .. '/cssls/node_modules/.bin/vscode-css-language-server', '--stdio' }
     },
+    format_on_save = false,
   }
 })
 EOF

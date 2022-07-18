@@ -42,13 +42,15 @@
 - fq - jq for binary files
 - lg (lazygit) (<= gitui)
 - podman (<= docker)
-- hetty - debug MITM proxy
+- hetty - debug HTTP MITM proxy
+- tproxy - tcp MITM proxy
 - codext - encoding/decoding whatever
 - systeroid (<= sysctl)
 - sampler, wtfutil - text dashboard
 - mprocs - multi process runner
 - ali - http performance
 - gomuks - matrix client
+- viddy - watch alternative
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 

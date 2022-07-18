@@ -44,6 +44,7 @@
   pager = delta
 [push]
 	default = simple
+	autoSetupRemote = true
 [pull]
   rebase = true
 [mergetool]
@@ -71,3 +72,5 @@
   navigate = true
 [interactive]
   diffFilter = delta --color-only
+[safe]
+	directory = /mnt/nas/www/prezik/txtpresentations
