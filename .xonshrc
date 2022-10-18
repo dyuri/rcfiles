@@ -133,7 +133,7 @@ aliases["f"] = "__fixit($(which thefuck), $(history -1))"
 
 
 # MOTD
-~/bin/repamotd
+~/bin/go-repamotd
 
 #### custom styles
 def _style_to_dict(name):

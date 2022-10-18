@@ -16,7 +16,7 @@
 - httpie => xh, httpx[cli]
 - duf (<= df)
 - procs (<= ps)
-- gotop/glances (<= htop)
+- gotop/bottom/glances (<= htop)
 - powerline
 - neofetch
 - wpgtk (<= pywal)
@@ -31,7 +31,7 @@
 - vifm => nnn
 - repassh
 - croc - file transfer
-- drill (<= nslookup, dig)
+- dog <= drill (<= nslookup, dig)
 - jq => fx - json query
 - jc - json convert
 - bitwise - bitwise calculator
@@ -51,6 +51,10 @@
 - ali - http performance
 - gomuks - matrix client
 - viddy - watch alternative
+- visidata - data visualisation
+- lnav - log navigator/viewer
+- caddy - `python -m http.server` replacement
+- bandwhich - bandwidth monitor
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 

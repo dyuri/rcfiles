@@ -1,3 +1,6 @@
+# amd radv driver
+export VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/radeon_icd.i686.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json"
+
 # screen layout
 # xrandr --output DVI-D-0 --mode 1920x1200 --pos 0x0 --rotate left --output HDMI-0 --primary --mode 1920x1200 --pos 1200x515 --rotate normal
 # xrandr --output DVI-D-0 --mode 1920x1200 --rotate normal --output DisplayPort-0 --primary --mode 1920x1200 --rotate normal --right-of DVI-D-0

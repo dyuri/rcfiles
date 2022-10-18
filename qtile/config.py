@@ -377,7 +377,7 @@ screens = [
             widget.Spacer(background=color(0) + "00"),
             widget.TextBox("", background=color(0) + "00", foreground=color("d1"), padding=0, fontsize=21),
             widget.TextBox("墳", background=color("d1"), foreground=color(3)),
-            widget.Volume(**widget_defaults, background=color("d1"), foreground=color("d4"), cardid=0, channel="PCM", device="sysdefault:0"),
+            widget.Volume(**widget_defaults, background=color("d1"), foreground=color("d4"), cardid=2, channel="PCM", device="sysdefault:2"),
             widget.TextBox("", background=color("d1"), foreground=color("d2"), padding=0, fontsize=21),
             widget.CPUGraph(
                 graph_color=color(10),

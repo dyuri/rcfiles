@@ -42,6 +42,10 @@ call plug#begin()
 
   Plug 'Shougo/denite.nvim'
 
+  Plug 'MunifTanjim/nui.nvim'
+  Plug 'rcarriga/nvim-notify'
+  " Plug 'folke/noice.nvim' " considering, style issues
+
   " LSP
   Plug 'mattn/emmet-vim'
   Plug 'hrsh7th/nvim-cmp'
@@ -57,6 +61,16 @@ call plug#begin()
   Plug 'ray-x/navigator.lua'
   Plug 'nvim-treesitter/nvim-treesitter'
   Plug 'nvim-treesitter/nvim-treesitter-refactor'
+
+  " debug - dap
+  Plug 'mfussenegger/nvim-dap'
+  Plug 'rcarriga/nvim-dap-ui'
+  Plug 'theHamsta/nvim-dap-virtual-text'
+  Plug 'Pocco81/DAPInstall.nvim'
+  Plug 'nvim-telescope/telescope-dap.nvim'
+
+  Plug 'mfussenegger/nvim-dap-python'
+  Plug 'leoluz/nvim-dap-go'
 
   " fzf
   " Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
@@ -86,6 +100,7 @@ call plug#begin()
   Plug 'sbdchd/neoformat'
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'preservim/tagbar'
+  Plug 'lfv89/vim-interestingwords'
 
   Plug 'dense-analysis/ale'
 
@@ -269,14 +284,14 @@ set showbreak=↪
 set et            " expandt tab
 set mousemodel=extend
 set mouse=v
-set ch=2
+set ch=0
 set tabstop=2
 set softtabstop=2
 set smarttab
 set textwidth=0
 set so=5          " 5 lines of scope
 set vb            " visual bell
-set lz            " lazy redraw
+" set lz            " lazy redraw
 set hidden        " allow switching from unsaved changes
 set completeopt=menu,menuone,noselect " don't need python docstrings
 set clipboard=unnamed " use the system clipboard
@@ -301,7 +316,7 @@ set smartcase     " smart case
 " set gdefault      " default s///g
 
 " clear hilites with leader+space
-nnoremap <leader><space> :noh<cr>
+nmap <leader><space> :noh<cr>
 
 " cursor movement for broken lines
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
@@ -351,6 +366,9 @@ au FileType html,htmldjango setlocal tw=0 sw=2 ts=2 sta sts=2 ai et
 au FileType go setlocal tw=0 sw=4 ts=4 sts=4 noet
 au FileType go au BufWritePre * GoFmt
 
+" prettier
+au BufWritePre *.js Neoformat
+
 " frissen beillesztett resz kijelolese
 nnoremap <leader>v V`]
 
@@ -387,9 +405,6 @@ imap <F3> <ESC>:bp!<cr>a
 imap <F4> <ESC>:bn!<cr>a
 
 nnoremap <F5> :MundoToggle<CR>
-
-nnoremap <C-F6> mzggg?G'z
-inoremap <C-F6> <ESC>mzggg?G'z
 
 "nnoremap <F7> :Leaderf file<cr>
 "nnoremap <S-F7> :Leaderf rg<cr>
@@ -517,6 +532,14 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 
+" notify
+lua << EOF
+vim.opt.termguicolors = true
+vim.notify = require('notify')
+
+-- require("noice").setup() -- style issues
+EOF
+
 lua << EOF
 require('telescope').setup({
   defaults = {
@@ -626,6 +649,10 @@ nnoremap <leader>% :MtaJumpToOtherTag<cr>
 let g:Hexokinase_highlighters = ['virtual']
 let g:Hexokinase_ftEnabled = ['css', 'html', 'js']
 let g:Hexokinase_optInPatterns = ['full_hex', 'rgb', 'rgba', 'hsl', 'hsla']
+
+" interesting words
+let g:interestingWordsTermColors = ["#cc241d", "#98971a", "#d79921", "#458588", "#b16286", "#689d6a", "#a89984"]
+let g:interestingWordsGUIColors = ["#cc241d", "#98971a", "#d79921", "#458588", "#b16286", "#689d6a", "#a89984"]
 
 " css - dash is inside words
 au! FileType css,scss,js setl iskeyword+=-
@@ -741,3 +768,191 @@ cmp.setup({
 })
 EOF
 
+" dap
+lua << EOF
+require('dap-python').setup()
+
+require('dap-go').setup()
+local dap = require "dap"
+  dap.adapters.go = function(callback, config)
+    local stdout = vim.loop.new_pipe(false)
+    local handle
+    local pid_or_err
+    local port = 38697
+    local opts = {
+      stdio = {nil, stdout},
+      args = {"dap", "-l", "127.0.0.1:" .. port},
+      detached = true
+    }
+    handle, pid_or_err = vim.loop.spawn("dlv", opts, function(code)
+      stdout:close()
+      handle:close()
+      if code ~= 0 then
+        print('dlv exited with code', code)
+      end
+    end)
+    assert(handle, 'Error running dlv: ' .. tostring(pid_or_err))
+    stdout:read_start(function(err, chunk)
+      assert(not err, err)
+      if chunk then
+        vim.schedule(function()
+          require('dap.repl').append(chunk)
+        end)
+      end
+    end)
+    -- Wait for delve to start
+    vim.defer_fn(
+      function()
+        callback({type = "server", host = "127.0.0.1", port = port})
+      end,
+      100)
+  end
+  -- https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv_dap.md
+  dap.configurations.go = {
+    {
+      type = "go",
+      name = "Debug",
+      request = "launch",
+      program = "${file}"
+    },
+    {
+      type = "go",
+      name = "Debug test", -- configuration for debugging test files
+      request = "launch",
+      mode = "test",
+      program = "${file}"
+    },
+    -- works with go.mod packages and sub packages 
+    {
+      type = "go",
+      name = "Debug test (go.mod)",
+      request = "launch",
+      mode = "test",
+      program = "./${relativeFileDirname}"
+    } 
+}
+
+require("dapui").setup({
+  icons = { expanded = "▾", collapsed = "▸", current_frame = "▸" },
+  mappings = {
+    -- Use a table to apply multiple mappings
+    expand = { "<CR>", "<2-LeftMouse>" },
+    open = "o",
+    remove = "d",
+    edit = "e",
+    repl = "r",
+    toggle = "t",
+  },
+  -- Expand lines larger than the window
+  -- Requires >= 0.7
+  expand_lines = vim.fn.has("nvim-0.7") == 1,
+  -- Layouts define sections of the screen to place windows.
+  -- The position can be "left", "right", "top" or "bottom".
+  -- The size specifies the height/width depending on position. It can be an Int
+  -- or a Float. Integer specifies height/width directly (i.e. 20 lines/columns) while
+  -- Float value specifies percentage (i.e. 0.3 - 30% of available lines/columns)
+  -- Elements are the elements shown in the layout (in order).
+  -- Layouts are opened in order so that earlier layouts take priority in window sizing.
+  layouts = {
+    {
+      elements = {
+      -- Elements can be strings or table with id and size keys.
+        { id = "scopes", size = 0.25 },
+        "breakpoints",
+        "stacks",
+        "watches",
+      },
+      size = 40, -- 40 columns
+      position = "left",
+    },
+    {
+      elements = {
+        "repl",
+        "console",
+      },
+      size = 0.25, -- 25% of total lines
+      position = "bottom",
+    },
+  },
+  controls = {
+    -- Requires Neovim nightly (or 0.8 when released)
+    enabled = true,
+    -- Display controls in this element
+    element = "repl",
+    icons = {
+      pause = "",
+      play = "",
+      step_into = "",
+      step_over = "",
+      step_out = "",
+      step_back = "",
+      run_last = "↻",
+      terminate = "□",
+    },
+  },
+  floating = {
+    max_height = nil, -- These can be integers or a float between 0 and 1.
+    max_width = nil, -- Floats will be treated as percentage of your screen.
+    border = "single", -- Border style. Can be "single", "double" or "rounded"
+    mappings = {
+      close = { "q", "<Esc>" },
+    },
+  },
+  windows = { indent = 1 },
+  render = {
+    max_type_length = nil, -- Can be integer or nil.
+    max_value_lines = 100, -- Can be integer or nil.
+  }
+})
+EOF
+
+lua << EOF
+-- mappings
+local function map(mode, lhs, rhs, opts)
+    local options = { noremap = true }
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+-- clear notifications
+map("n", "<leader><space>", ":noh<CR>:lua require('notify').dismiss()<CR>")
+
+-- dap
+map("n", "<F6>", ":lua require('dapui').toggle()<CR>:set mouse=a<CR>")
+map("n", "<Leader>db", ":lua require('dap').toggle_breakpoint()<CR>")
+map("n", "<Leader>dc", ":lua require('dap').continue()<CR>")
+
+map("n", "<S-F6>", ":lua require('dap').toggle_breakpoint()<CR>")
+map("n", "<S-F5>", ":lua require('dap').continue()<CR>")
+map("n", "<S-F4>", ":lua require('dap').step_over()<CR>")
+map("n", "<S-F3>", ":lua require('dap').step_into()<CR>")
+map("n", "<S-F2>", ":lua require('dap').step_out()<CR>")
+map("n", "<F18>", ":lua require('dap').toggle_breakpoint()<CR>")
+map("n", "<F17>", ":lua require('dap').continue()<CR>")
+map("n", "<F16>", ":lua require('dap').step_over()<CR>")
+map("n", "<F15>", ":lua require('dap').step_into()<CR>")
+map("n", "<F14>", ":lua require('dap').step_out()<CR>")
+
+map("n", "<Leader>dsc", ":lua require('dap').continue()<CR>")
+map("n", "<Leader>dsv", ":lua require('dap').step_over()<CR>")
+map("n", "<Leader>dsi", ":lua require('dap').step_into()<CR>")
+map("n", "<Leader>dso", ":lua require('dap').step_out()<CR>")
+
+map("n", "<Leader>dhh", ":lua require('dap.ui.variables').hover()<CR>")
+map("v", "<Leader>dhv", ":lua require('dap.ui.variables').visual_hover()<CR>")
+
+map("n", "<Leader>duh", ":lua require('dap.ui.widgets').hover()<CR>")
+map("n", "<Leader>duf", ":lua local widgets=require('dap.ui.widgets');widgets.centered_float(widgets.scopes)<CR>")
+
+map("n", "<Leader>dro", ":lua require('dap').repl.open()<CR>")
+map("n", "<Leader>drl", ":lua require('dap').repl.run_last()<CR>")
+
+map("n", "<Leader>dbc", ":lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+map("n", "<Leader>dbm", ":lua require('dap').set_breakpoint({ nil, nil, vim.fn.input('Log point message: '))<CR>")
+map("n", "<Leader>dbt", ":lua require('dap').toggle_breakpoint()<CR>")
+
+map("n", "<Leader>dvs", ":lua require('dap.ui.variables').scopes()<CR>")
+map("n", "<Leader>di", ":lua require('dapui').toggle()<CR>")
+EOF
