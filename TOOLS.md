@@ -3,11 +3,11 @@
 - xonsh
 - qtile (<= i3 + polybar)
 - rofi w/ rofi-emoji
-- kitty
+- wezterm (<= kitty)
 - neovim
 - exa (alias ll), lsd
-- prettyping + mtr
-- bat
+- prettyping + mtr + trippy
+- bat (maybe moar)
 - tmux => ? zellij
 - fzf
 - fd
@@ -15,6 +15,7 @@
 - mpv (<= mplayer)
 - httpie => xh, httpx[cli]
 - duf (<= df)
+- dust, erdtree (<= du)
 - procs (<= ps)
 - gotop/bottom/glances (<= htop)
 - powerline
@@ -24,12 +25,13 @@
 - chafa
 - msgcat --color=test
 - wuzz
-- hyperfine
-- asciinema + svg-term-cli OR terminalizer
+- hyperfine - time
+- vhs (programmed) OR asciinema + svg-term-cli OR terminalizer
 - pastel (https://github.com/sharkdp/pastel) -> repacolors
 - direnv
 - vifm => nnn
 - repassh
+- termscp (scp)
 - croc - file transfer
 - dog <= drill (<= nslookup, dig)
 - jq => fx - json query
@@ -38,7 +40,7 @@
 - theme.sh
 - uni - unicode query
 - marktext - (typora isn't free anymore) - markdown editor
-- hexyl - colored hex viewer
+- hexyl - colored hex viewer (imhex is the ultimate tool, but it's an overkill)
 - fq - jq for binary files
 - lg (lazygit) (<= gitui)
 - podman (<= docker)
@@ -55,6 +57,13 @@
 - lnav - log navigator/viewer
 - caddy - `python -m http.server` replacement
 - bandwhich - bandwidth monitor
+- gpxsee, routeconverter - GPX view / edit
+- ttyd - share terminal over web
+- andcli - (+ aegis) 2FA TOTP
+- popsicle - pendrive iso
+- slides (https://github.com/maaslalani/slides) - md presentation
+- parcellite - clipboard manager widget
+- clipboard (https://github.com/Slackadays/clipboard) - custom clipboard manager
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 
@@ -62,8 +71,13 @@ Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 
 - install [pikaur](https://github.com/actionless/pikaur)
 
+### Check packages that are not needed:
 ```
-pikaur -S neovim ripgrep fd bat tmux exa kitty rofi-emoji glances gotop figlet lolcat
+$ pacman -Qdtq
+```
+
+```
+pikaur -S neovim ripgrep fd bat tmux exa wezterm rofi-emoji glances gotop figlet lolcat
 ```
 
 ## Python

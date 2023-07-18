@@ -4885,3 +4885,316 @@
 2021-10-04 21:10:22		script: 365 scripts for WeeChat 3.2
 2021-10-04 21:10:22		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, perl, python, relay, ruby, script, spell, trigger, xfer
 2021-10-04 21:56:19		python: scripts unloaded
+2022-10-29 14:31:03	×	Warning: /home/dyuri/.weechat/relay.conf, line 33: unknown option for section "network": compression_level = 6
+2022-10-29 14:31:03	×	python: script "/home/dyuri/rcfiles/weechat/python/autoload/weechat-matrix.py" not found
+2022-10-29 14:31:03		python scripts loaded: autosort
+2022-10-29 14:31:03		script: 365 scripts for WeeChat 3.7.1
+2022-10-29 14:31:03		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
+2022-10-29 14:31:20		python: scripts unloaded
+2022-10-29 14:41:00	×	python: script "/home/dyuri/rcfiles/weechat/python/autoload/weechat-matrix.py" not found
+2022-10-29 14:41:00		python scripts loaded: autosort
+2022-10-29 14:41:00		script: 365 scripts for WeeChat 3.7.1
+2022-10-29 14:41:00		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
+2022-10-29 14:41:10	×	Unknown command "/setting" (type /help for help)
+2022-10-29 14:41:13	×	Unknown command "/config" (type /help for help)
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[core]
+2022-10-29 14:41:25		  away     buffer   command  debug    filter   history  item     layout   mute     print    quit     repeat   secure   toggle   upgrade  version  window 
+2022-10-29 14:41:25		  bar      color    cursor   eval     help     input    key      mouse    plugin   proxy    reload   save     set      unset    uptime   wait   
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[alias]
+2022-10-29 14:41:25		  AAWAY    ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII      WW     
+2022-10-29 14:41:25		  alias    BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WM     
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[buflist]
+2022-10-29 14:41:25		  buflist
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[charset]
+2022-10-29 14:41:25		  charset
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[exec]
+2022-10-29 14:41:25		  exec
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[fifo]
+2022-10-29 14:41:25		  fifo
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[fset]
+2022-10-29 14:41:25		  fset
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[guile]
+2022-10-29 14:41:25		  guile
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[irc]
+2022-10-29 14:41:25		  admin       ban         dehalfop    ignore      kickban     me          notice      pong        remove      saquit      squit       unban       wallchops 
+2022-10-29 14:41:25		  allchan     cap         deop        info        kill        mode        notify      query       restart     server      stats       unquiet     wallops   
+2022-10-29 14:41:25		  allpv       connect     devoice     invite      links       motd        op          quiet       sajoin      service     summon      userhost    who       
+2022-10-29 14:41:25		  allserv     ctcp        die         ison        list        msg         oper        quote       samode      servlist    time        users       whois     
+2022-10-29 14:41:25		  auth        cycle       disconnect  join        lusers      names       part        reconnect   sanick      setname     topic       version     whowas    
+2022-10-29 14:41:25		  autojoin    dcc         halfop      kick        map         nick        ping        rehash      sapart      squery      trace       voice     
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[logger]
+2022-10-29 14:41:25		  logger
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[lua]
+2022-10-29 14:41:25		  lua
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[perl]
+2022-10-29 14:41:25		  perl
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[python]
+2022-10-29 14:41:25		  autosort  python
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[relay]
+2022-10-29 14:41:25		  relay
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[ruby]
+2022-10-29 14:41:25		  ruby
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[script]
+2022-10-29 14:41:25		  script
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[spell]
+2022-10-29 14:41:25		  spell
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[trigger]
+2022-10-29 14:41:25		  trigger
+2022-10-29 14:41:25		
+2022-10-29 14:41:25		[xfer]
+2022-10-29 14:41:25		  me  xfer
+2022-10-29 14:42:38		python: scripts unloaded
+2022-10-29 14:42:39	×	python: script "/home/dyuri/rcfiles/weechat/python/autoload/weechat-matrix.py" not found
+2022-10-29 14:42:39		python scripts loaded: autosort
+2022-10-29 14:42:39		script: 365 scripts for WeeChat 3.7.1
+2022-10-29 14:42:39		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
+2022-10-29 17:06:41		python: scripts unloaded
+2022-10-29 17:07:25	×	python: script "/home/dyuri/rcfiles/weechat/python/autoload/weechat-matrix.py" not found
+2022-10-29 17:07:25		python scripts loaded: autosort
+2022-10-29 17:07:25		script: 365 scripts for WeeChat 3.7.1
+2022-10-29 17:07:25		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
+2022-10-29 22:15:48		python: scripts unloaded
+2022-10-31 16:45:38	×	python: script "/home/dyuri/rcfiles/weechat/python/autoload/weechat-matrix.py" not found
+2022-10-31 16:45:38		python scripts loaded: autosort
+2022-10-31 16:45:38		script: 365 scripts for WeeChat 3.7.1
+2022-10-31 16:45:38		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
+2022-10-31 21:49:54		python: scripts unloaded
+2022-11-18 10:26:27	×	python: script "/home/dyuri/rcfiles/weechat/python/autoload/weechat-matrix.py" not found
+2022-11-18 10:26:27		python scripts loaded: autosort
+2022-11-18 10:26:27		script: 365 scripts for WeeChat 3.7.1
+2022-11-18 10:26:27		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[core]
+2022-11-18 10:26:38		  away     buffer   command  debug    filter   history  item     layout   mute     print    quit     repeat   secure   toggle   upgrade  version  window 
+2022-11-18 10:26:38		  bar      color    cursor   eval     help     input    key      mouse    plugin   proxy    reload   save     set      unset    uptime   wait   
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[alias]
+2022-11-18 10:26:38		  AAWAY    ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII      WW     
+2022-11-18 10:26:38		  alias    BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WM     
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[buflist]
+2022-11-18 10:26:38		  buflist
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[charset]
+2022-11-18 10:26:38		  charset
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[exec]
+2022-11-18 10:26:38		  exec
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[fifo]
+2022-11-18 10:26:38		  fifo
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[fset]
+2022-11-18 10:26:38		  fset
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[guile]
+2022-11-18 10:26:38		  guile
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[irc]
+2022-11-18 10:26:38		  admin       ban         dehalfop    ignore      kickban     me          notice      pong        remove      saquit      squit       unban       wallchops 
+2022-11-18 10:26:38		  allchan     cap         deop        info        kill        mode        notify      query       restart     server      stats       unquiet     wallops   
+2022-11-18 10:26:38		  allpv       connect     devoice     invite      links       motd        op          quiet       sajoin      service     summon      userhost    who       
+2022-11-18 10:26:38		  allserv     ctcp        die         ison        list        msg         oper        quote       samode      servlist    time        users       whois     
+2022-11-18 10:26:38		  auth        cycle       disconnect  join        lusers      names       part        reconnect   sanick      setname     topic       version     whowas    
+2022-11-18 10:26:38		  autojoin    dcc         halfop      kick        map         nick        ping        rehash      sapart      squery      trace       voice     
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[logger]
+2022-11-18 10:26:38		  logger
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[lua]
+2022-11-18 10:26:38		  lua
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[perl]
+2022-11-18 10:26:38		  perl
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[python]
+2022-11-18 10:26:38		  autosort  python
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[relay]
+2022-11-18 10:26:38		  relay
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[ruby]
+2022-11-18 10:26:38		  ruby
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[script]
+2022-11-18 10:26:38		  script
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[spell]
+2022-11-18 10:26:38		  spell
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[trigger]
+2022-11-18 10:26:38		  trigger
+2022-11-18 10:26:38		
+2022-11-18 10:26:38		[xfer]
+2022-11-18 10:26:38		  me  xfer
+2022-11-18 22:18:20		python: scripts unloaded
+2022-12-31 10:20:54	×	python: script "/home/dyuri/rcfiles/weechat/python/autoload/weechat-matrix.py" not found
+2022-12-31 10:20:54		python scripts loaded: autosort
+2022-12-31 10:20:54		script: 365 scripts for WeeChat 3.7.1
+2022-12-31 10:20:54		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[core]
+2022-12-31 10:21:00		  away     buffer   command  debug    filter   history  item     layout   mute     print    quit     repeat   secure   toggle   upgrade  version  window 
+2022-12-31 10:21:00		  bar      color    cursor   eval     help     input    key      mouse    plugin   proxy    reload   save     set      unset    uptime   wait   
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[alias]
+2022-12-31 10:21:00		  AAWAY    ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII      WW     
+2022-12-31 10:21:00		  alias    BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WM     
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[buflist]
+2022-12-31 10:21:00		  buflist
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[charset]
+2022-12-31 10:21:00		  charset
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[exec]
+2022-12-31 10:21:00		  exec
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[fifo]
+2022-12-31 10:21:00		  fifo
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[fset]
+2022-12-31 10:21:00		  fset
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[guile]
+2022-12-31 10:21:00		  guile
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[irc]
+2022-12-31 10:21:00		  admin       ban         dehalfop    ignore      kickban     me          notice      pong        remove      saquit      squit       unban       wallchops 
+2022-12-31 10:21:00		  allchan     cap         deop        info        kill        mode        notify      query       restart     server      stats       unquiet     wallops   
+2022-12-31 10:21:00		  allpv       connect     devoice     invite      links       motd        op          quiet       sajoin      service     summon      userhost    who       
+2022-12-31 10:21:00		  allserv     ctcp        die         ison        list        msg         oper        quote       samode      servlist    time        users       whois     
+2022-12-31 10:21:00		  auth        cycle       disconnect  join        lusers      names       part        reconnect   sanick      setname     topic       version     whowas    
+2022-12-31 10:21:00		  autojoin    dcc         halfop      kick        map         nick        ping        rehash      sapart      squery      trace       voice     
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[logger]
+2022-12-31 10:21:00		  logger
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[lua]
+2022-12-31 10:21:00		  lua
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[perl]
+2022-12-31 10:21:00		  perl
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[python]
+2022-12-31 10:21:00		  autosort  python
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[relay]
+2022-12-31 10:21:00		  relay
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[ruby]
+2022-12-31 10:21:00		  ruby
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[script]
+2022-12-31 10:21:00		  script
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[spell]
+2022-12-31 10:21:00		  spell
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[trigger]
+2022-12-31 10:21:00		  trigger
+2022-12-31 10:21:00		
+2022-12-31 10:21:00		[xfer]
+2022-12-31 10:21:00		  me  xfer
+2022-12-31 10:23:38		python: scripts unloaded
+2023-06-12 18:52:10	×	python: script "/home/dyuri/rcfiles/weechat/python/autoload/weechat-matrix.py" not found
+2023-06-12 18:52:10		python scripts loaded: autosort
+2023-06-12 18:52:10		script: 365 scripts for WeeChat 3.7.1
+2023-06-12 18:52:10		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
+2023-06-12 18:52:16	×	irc: command "list" must be executed on irc buffer (server, channel or private)
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[core]
+2023-06-12 18:52:21		  away     cursor   history  mouse    quit     set      version
+2023-06-12 18:52:21		  bar      debug    input    mute     reload   toggle   wait   
+2023-06-12 18:52:21		  buffer   eval     item     plugin   repeat   unset    window 
+2023-06-12 18:52:21		  color    filter   key      print    save     upgrade
+2023-06-12 18:52:21		  command  help     layout   proxy    secure   uptime 
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[alias]
+2023-06-12 18:52:21		  AAWAY    C        IG       M        REDRAW   UMODE    WII    
+2023-06-12 18:52:21		  alias    CHAT     J        MSGBUF   SAY      V        WM     
+2023-06-12 18:52:21		  ANICK    CL       K        MUB      SIGNOFF  W        WW     
+2023-06-12 18:52:21		  BEEP     CLOSE    KB       N        T        WC     
+2023-06-12 18:52:21		  BYE      EXIT     LEAVE    Q        UB       WI     
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[buflist]
+2023-06-12 18:52:21		  buflist
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[charset]
+2023-06-12 18:52:21		  charset
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[exec]
+2023-06-12 18:52:21		  exec
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[fifo]
+2023-06-12 18:52:21		  fifo
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[fset]
+2023-06-12 18:52:21		  fset
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[guile]
+2023-06-12 18:52:21		  guile
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[irc]
+2023-06-12 18:52:21		  admin       deop        links       oper        sanick      trace     
+2023-06-12 18:52:21		  allchan     devoice     list        part        sapart      unban     
+2023-06-12 18:52:21		  allpv       die         lusers      ping        saquit      unquiet   
+2023-06-12 18:52:21		  allserv     disconnect  map         pong        server      userhost  
+2023-06-12 18:52:21		  auth        halfop      me          query       service     users     
+2023-06-12 18:52:21		  autojoin    ignore      mode        quiet       servlist    version   
+2023-06-12 18:52:21		  ban         info        motd        quote       setname     voice     
+2023-06-12 18:52:21		  cap         invite      msg         reconnect   squery      wallchops 
+2023-06-12 18:52:21		  connect     ison        names       rehash      squit       wallops   
+2023-06-12 18:52:21		  ctcp        join        nick        remove      stats       who       
+2023-06-12 18:52:21		  cycle       kick        notice      restart     summon      whois     
+2023-06-12 18:52:21		  dcc         kickban     notify      sajoin      time        whowas    
+2023-06-12 18:52:21		  dehalfop    kill        op          samode      topic     
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[logger]
+2023-06-12 18:52:21		  logger
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[lua]
+2023-06-12 18:52:21		  lua
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[perl]
+2023-06-12 18:52:21		  perl
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[python]
+2023-06-12 18:52:21		  autosort  python
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[relay]
+2023-06-12 18:52:21		  relay
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[ruby]
+2023-06-12 18:52:21		  ruby
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[script]
+2023-06-12 18:52:21		  script
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[spell]
+2023-06-12 18:52:21		  spell
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[trigger]
+2023-06-12 18:52:21		  trigger
+2023-06-12 18:52:21		
+2023-06-12 18:52:21		[xfer]
+2023-06-12 18:52:21		  me  xfer
+2023-06-12 19:00:10		python: scripts unloaded

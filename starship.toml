@@ -1,0 +1,87 @@
+format = """
+[  ](bg:bright_green fg:black)\
+$hostname\
+[](fg:bright_green bg:gray_2)\
+$directory\
+[](fg:gray_2 bg:gray_1)\
+$git_branch\
+$git_status\
+[](fg:gray_1 bg:gray_0)\
+$python\
+[](fg:gray_0)\
+$fill\
+[](fg:gray_0)\
+$cmd_duration\
+[](fg:yellow bg:gray_0)\
+$time\
+\n$character"""
+
+add_newline = false
+palette = "gruvbox_dark"
+
+[palettes.gruvbox_dark]
+black = "#1d1f21"
+red = "#cc241d"
+green = "#98971a"
+yellow = "#d79921"
+blue = "#458588"
+purple = "#b16286"
+cyan = "#689d6a"
+gray = "#a89984"
+dark_gray = "#928374"
+bright_red = "#fb4934"
+bright_green = "#b8bb26"
+bright_yellow = "#fabd2f"
+bright_blue = "#83a598"
+bright_purple = "#d3869b"
+bright_cyan = "#8ec07c"
+white = "#ebdbb2"
+gray_0 = "#282828"
+gray_1 = "#3c3836"
+gray_2 = "#504945"
+
+[hostname]
+style = "bg:bright_green fg:black"
+format = '[$hostname ]($style)'
+
+[directory]
+style = "fg:bright_green bg:gray_2"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"alma" = " "
+
+[git_branch]
+symbol = ""
+style = "bg:gray_1 fg:bright_blue"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bold bg:gray_1 fg:bright_purple"
+format = '[($all_status$ahead_behind )]($style)'
+
+[python]
+symbol = ""
+style = "bg:gray_0 fg:cyan"
+format = '[ $symbol ($virtualenv )]($style)'
+
+[fill]
+symbol = " "
+style = "black"
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:yellow fg:black"
+format = '[  $time ]($style)'
+
+[cmd_duration]
+min_time = 500
+style = "bg:gray_0 fg:bright_yellow"
+format = '[ $duration ]($style)'
+
+[character]
+success_symbol = "[▶ ](bold bright_green)"
+error_symbol = "[▶ ](bold red)"

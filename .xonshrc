@@ -7,6 +7,9 @@
 # - xontrib-langenv <= (xontrib-pyenv)
 # - xontrib-repa-prompt => xontrib-powerline-binding
 
+# ptk deprecationwarning
+__import__('warnings').filterwarnings('ignore', 'There is no current event loop', DeprecationWarning, 'prompt_toolkit.eventloop.utils')
+
 $XONSH_COLOR_STYLE="monokai"
 
 $FOREIGN_ALIASES_SUPPRESS_SKIP_MESSAGE=True
@@ -50,7 +53,7 @@ xontrib load ssh_agent
 xontrib load pyenv
 #xontrib load nodenv
 xontrib load kitty
-xontrib load jedi
+#xontrib load jedi
 xontrib load gitinfo
 # xontrib load z
 xontrib load zoxide
@@ -133,7 +136,7 @@ aliases["f"] = "__fixit($(which thefuck), $(history -1))"
 
 
 # MOTD
-~/bin/go-repamotd
+go-repamotd
 
 #### custom styles
 def _style_to_dict(name):

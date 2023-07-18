@@ -1861,3 +1861,218 @@
 2021-10-04 21:10:40	!	[szogi] is a NetAdmin on Localnet
 2021-10-04 21:10:40	!	[szogi] idle: 00 hours 06 minutes 41 seconds, signon at: Tue, 19 Nov 2019 05:04:29
 2021-10-04 21:10:40	!	[szogi] End of /WHOIS list.
+2022-10-29 14:42:44	!	irc: connecting to server irc.localnet.cloud/6667...
+2022-10-29 14:42:44	!	irc: connected to irc.localnet.cloud/6667 (85.255.9.105)
+2022-10-29 14:42:44	!	irc.localnet.cloud: *** Looking up your hostname...
+2022-10-29 14:42:45	!	irc.localnet.cloud: *** Found your hostname (178-164-188-6.pool.digikabel.hu)
+2022-10-29 14:42:46	!	Welcome to the LocalNET IRC Network |RePa|!dyuri@178-164-188-6.pool.digikabel.hu
+2022-10-29 14:42:46	!	Your host is irc.localnet.cloud, running version InspIRCd-3
+2022-10-29 14:42:46	!	This server was created 16:41:08 Apr 22 2022
+2022-10-29 14:42:46	!	irc.localnet.cloud InspIRCd-3 Wiosw Hbiklmnopstvz Hbklov
+2022-10-29 14:42:46	!	AWAYLEN=200 CASEMAPPING=ascii CHANLIMIT=#:20 CHANMODES=b,k,Hl,imnpstz CHANNELLEN=64 CHANTYPES=# ELIST=CMNTU EXTBAN=,Gnz HOSTLEN=64 KEYLEN=32 KICKLEN=255 LINELEN=512 are supported by this server
+2022-10-29 14:42:46	!	MAXLIST=b:100 MAXTARGETS=20 MODES=20 NAMELEN=128 NETWORK=LocalNET NICKLEN=30 PREFIX=(ov)@+ SAFELIST STATUSMSG=@+ TOPICLEN=307 USERLEN=10 USERMODES=,,s,Wiow WHOX are supported by this server
+2022-10-29 14:42:46	!	There are 6 users and 19 invisible on 1 servers
+2022-10-29 14:42:46	!	1 operator(s) online
+2022-10-29 14:42:46	!	1 unknown connections
+2022-10-29 14:42:46	!	2 channels formed
+2022-10-29 14:42:46	!	I have 25 clients and 0 servers
+2022-10-29 14:42:46	!	Current local users: 25  Max: 27
+2022-10-29 14:42:46	!	Current global users: 25  Max: 27
+2022-10-29 14:42:46	!	irc.localnet.cloud message of the day
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	  #    #  ######  #        ####    ####   #    #  ######
+2022-10-29 14:42:46	!	  #    #  #       #       #    #  #    #  ##  ##  #
+2022-10-29 14:42:46	!	  #    #  #####   #       #       #    #  # ## #  #####
+2022-10-29 14:42:46	!	  # ## #  #       #       #       #    #  #    #  #
+2022-10-29 14:42:46	!	  ##  ##  #       #       #    #  #    #  #    #  #
+2022-10-29 14:42:46	!	  #    #  ######  ######   ####    ####   #    #  ######
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	   #####   ####
+2022-10-29 14:42:46	!	     #    #    #
+2022-10-29 14:42:46	!	     #    #    #
+2022-10-29 14:42:46	!	     #    #    #
+2022-10-29 14:42:46	!	     #    #    #
+2022-10-29 14:42:46	!	     #     ####
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	  #        ####    ####     ##    #       #    #  ######   #####
+2022-10-29 14:42:46	!	  #       #    #  #    #   #  #   #       ##   #  #          #
+2022-10-29 14:42:46	!	  #       #    #  #       #    #  #       # #  #  #####      #
+2022-10-29 14:42:46	!	  #       #    #  #       ######  #       #  # #  #          #
+2022-10-29 14:42:46	!	  #       #    #  #    #  #    #  #       #   ##  #          #
+2022-10-29 14:42:46	!	  ######   ####    ####   #    #  ######  #    #  ######     #
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	  #          #    #    #   ####   ######  ######
+2022-10-29 14:42:46	!	  #          #    ##   #  #           #   #
+2022-10-29 14:42:46	!	  #          #    # #  #   ####      #    #####
+2022-10-29 14:42:46	!	  #          #    #  # #       #    #     #
+2022-10-29 14:42:46	!	  #          #    #   ##  #    #   #      #
+2022-10-29 14:42:46	!	  ######     #    #    #   ####   ######  ######
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	     #    #####    ####
+2022-10-29 14:42:46	!	     #    #    #  #    #
+2022-10-29 14:42:46	!	     #    #    #  #
+2022-10-29 14:42:46	!	     #    #####   #
+2022-10-29 14:42:46	!	     #    #   #   #    #
+2022-10-29 14:42:46	!	     #    #    #   ####
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	   ####   ######  #####   #    #  ######  #####
+2022-10-29 14:42:46	!	  #       #       #    #  #    #  #       #    #
+2022-10-29 14:42:46	!	   ####   #####   #    #  #    #  #####   #    #
+2022-10-29 14:42:46	!	       #  #       #####   #    #  #       #####
+2022-10-29 14:42:46	!	  #    #  #       #   #    #  #   #       #   #
+2022-10-29 14:42:46	!	   ####   ######  #    #    ##    ######  #    #
+2022-10-29 14:42:46	!	
+2022-10-29 14:42:46	!	End of message of the day.
+2022-10-29 14:43:56	!	[DeeJayy] (deejayy@193.224.130.190): http://deejayy.hu/
+2022-10-29 14:43:56	!	[DeeJayy] #twitter
+2022-10-29 14:43:56	!	[DeeJayy] irc.localnet.cloud (LocalNET iRC server)
+2022-10-29 14:43:56	!	[DeeJayy] * is connecting from an unknown country
+2022-10-29 14:43:56	!	[DeeJayy] idle: 13 hours 53 minutes 50 seconds, signon at: Fri, 28 Oct 2022 22:48:03
+2022-10-29 14:43:56	!	[DeeJayy] End of /WHOIS list.
+2022-10-29 14:44:12	!	[|RePa|] (dyuri@178-164-188-6.pool.digikabel.hu): dyuri
+2022-10-29 14:44:12	!	[|RePa|] is connecting from dyuri@178-164-188-6.pool.digikabel.hu 178.164.188.6
+2022-10-29 14:44:12	!	[|RePa|] #twitter
+2022-10-29 14:44:12	!	[|RePa|] irc.localnet.cloud (LocalNET iRC server)
+2022-10-29 14:44:12	!	[|RePa|] is using modes +
+2022-10-29 14:44:12	!	[|RePa|] * is connecting from an unknown country
+2022-10-29 14:44:12	!	[|RePa|] idle: 00 hours 00 minutes 58 seconds, signon at: Sat, 29 Oct 2022 14:42:44
+2022-10-29 14:44:12	!	[|RePa|] End of /WHOIS list.
+2022-10-29 17:07:30	!	irc: connecting to server irc.localnet.cloud/6667...
+2022-10-29 17:07:30	!	irc: connected to irc.localnet.cloud/6667 (85.255.9.105)
+2022-10-29 17:07:30	!	irc.localnet.cloud: *** Looking up your hostname...
+2022-10-29 17:07:30	!	irc.localnet.cloud: *** Found your hostname (178-164-188-6.pool.digikabel.hu)
+2022-10-29 17:07:31	!	Welcome to the LocalNET IRC Network |RePa|!dyuri@178-164-188-6.pool.digikabel.hu
+2022-10-29 17:07:31	!	Your host is irc.localnet.cloud, running version InspIRCd-3
+2022-10-29 17:07:31	!	This server was created 16:41:08 Apr 22 2022
+2022-10-29 17:07:31	!	irc.localnet.cloud InspIRCd-3 Wiosw Hbiklmnopstvz Hbklov
+2022-10-29 17:07:31	!	AWAYLEN=200 CASEMAPPING=ascii CHANLIMIT=#:20 CHANMODES=b,k,Hl,imnpstz CHANNELLEN=64 CHANTYPES=# ELIST=CMNTU EXTBAN=,Gnz HOSTLEN=64 KEYLEN=32 KICKLEN=255 LINELEN=512 are supported by this server
+2022-10-29 17:07:31	!	MAXLIST=b:100 MAXTARGETS=20 MODES=20 NAMELEN=128 NETWORK=LocalNET NICKLEN=30 PREFIX=(ov)@+ SAFELIST STATUSMSG=@+ TOPICLEN=307 USERLEN=10 USERMODES=,,s,Wiow WHOX are supported by this server
+2022-10-29 17:07:31	!	There are 6 users and 19 invisible on 1 servers
+2022-10-29 17:07:31	!	1 operator(s) online
+2022-10-29 17:07:31	!	1 unknown connections
+2022-10-29 17:07:31	!	2 channels formed
+2022-10-29 17:07:31	!	I have 25 clients and 0 servers
+2022-10-29 17:07:31	!	Current local users: 25  Max: 27
+2022-10-29 17:07:31	!	Current global users: 25  Max: 27
+2022-10-29 17:07:31	!	irc.localnet.cloud message of the day
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	  #    #  ######  #        ####    ####   #    #  ######
+2022-10-29 17:07:31	!	  #    #  #       #       #    #  #    #  ##  ##  #
+2022-10-29 17:07:31	!	  #    #  #####   #       #       #    #  # ## #  #####
+2022-10-29 17:07:31	!	  # ## #  #       #       #       #    #  #    #  #
+2022-10-29 17:07:31	!	  ##  ##  #       #       #    #  #    #  #    #  #
+2022-10-29 17:07:31	!	  #    #  ######  ######   ####    ####   #    #  ######
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	   #####   ####
+2022-10-29 17:07:31	!	     #    #    #
+2022-10-29 17:07:31	!	     #    #    #
+2022-10-29 17:07:31	!	     #    #    #
+2022-10-29 17:07:31	!	     #    #    #
+2022-10-29 17:07:31	!	     #     ####
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	  #        ####    ####     ##    #       #    #  ######   #####
+2022-10-29 17:07:31	!	  #       #    #  #    #   #  #   #       ##   #  #          #
+2022-10-29 17:07:31	!	  #       #    #  #       #    #  #       # #  #  #####      #
+2022-10-29 17:07:31	!	  #       #    #  #       ######  #       #  # #  #          #
+2022-10-29 17:07:31	!	  #       #    #  #    #  #    #  #       #   ##  #          #
+2022-10-29 17:07:31	!	  ######   ####    ####   #    #  ######  #    #  ######     #
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	  #          #    #    #   ####   ######  ######
+2022-10-29 17:07:31	!	  #          #    ##   #  #           #   #
+2022-10-29 17:07:31	!	  #          #    # #  #   ####      #    #####
+2022-10-29 17:07:31	!	  #          #    #  # #       #    #     #
+2022-10-29 17:07:31	!	  #          #    #   ##  #    #   #      #
+2022-10-29 17:07:31	!	  ######     #    #    #   ####   ######  ######
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	     #    #####    ####
+2022-10-29 17:07:31	!	     #    #    #  #    #
+2022-10-29 17:07:31	!	     #    #    #  #
+2022-10-29 17:07:31	!	     #    #####   #
+2022-10-29 17:07:31	!	     #    #   #   #    #
+2022-10-29 17:07:31	!	     #    #    #   ####
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	   ####   ######  #####   #    #  ######  #####
+2022-10-29 17:07:31	!	  #       #       #    #  #    #  #       #    #
+2022-10-29 17:07:31	!	   ####   #####   #    #  #    #  #####   #    #
+2022-10-29 17:07:31	!	       #  #       #####   #    #  #       #####
+2022-10-29 17:07:31	!	  #    #  #       #   #    #  #   #       #   #
+2022-10-29 17:07:31	!	   ####   ######  #    #    ##    ######  #    #
+2022-10-29 17:07:31	!	
+2022-10-29 17:07:31	!	End of message of the day.
+2022-10-31 16:45:41	!	irc: connecting to server irc.localnet.cloud/6667...
+2022-10-31 16:45:42	!	irc: connected to irc.localnet.cloud/6667 (85.255.9.105)
+2022-10-31 16:45:42	!	irc.localnet.cloud: *** Looking up your hostname...
+2022-10-31 16:45:42	!	irc.localnet.cloud: *** Found your hostname (178-164-188-6.pool.digikabel.hu)
+2022-10-31 16:45:43	!	Welcome to the LocalNET IRC Network |RePa|!dyuri@178-164-188-6.pool.digikabel.hu
+2022-10-31 16:45:43	!	Your host is irc.localnet.cloud, running version InspIRCd-3
+2022-10-31 16:45:43	!	This server was created 16:41:08 Apr 22 2022
+2022-10-31 16:45:43	!	irc.localnet.cloud InspIRCd-3 Wiosw Hbiklmnopstvz Hbklov
+2022-10-31 16:45:43	!	AWAYLEN=200 CASEMAPPING=ascii CHANLIMIT=#:20 CHANMODES=b,k,Hl,imnpstz CHANNELLEN=64 CHANTYPES=# ELIST=CMNTU EXTBAN=,Gnz HOSTLEN=64 KEYLEN=32 KICKLEN=255 LINELEN=512 are supported by this server
+2022-10-31 16:45:43	!	MAXLIST=b:100 MAXTARGETS=20 MODES=20 NAMELEN=128 NETWORK=LocalNET NICKLEN=30 PREFIX=(ov)@+ SAFELIST STATUSMSG=@+ TOPICLEN=307 USERLEN=10 USERMODES=,,s,Wiow WHOX are supported by this server
+2022-10-31 16:45:43	!	There are 6 users and 19 invisible on 1 servers
+2022-10-31 16:45:43	!	1 operator(s) online
+2022-10-31 16:45:43	!	1 unknown connections
+2022-10-31 16:45:43	!	2 channels formed
+2022-10-31 16:45:43	!	I have 25 clients and 0 servers
+2022-10-31 16:45:43	!	Current local users: 25  Max: 27
+2022-10-31 16:45:43	!	Current global users: 25  Max: 27
+2022-10-31 16:45:43	!	irc.localnet.cloud message of the day
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	  #    #  ######  #        ####    ####   #    #  ######
+2022-10-31 16:45:43	!	  #    #  #       #       #    #  #    #  ##  ##  #
+2022-10-31 16:45:43	!	  #    #  #####   #       #       #    #  # ## #  #####
+2022-10-31 16:45:43	!	  # ## #  #       #       #       #    #  #    #  #
+2022-10-31 16:45:43	!	  ##  ##  #       #       #    #  #    #  #    #  #
+2022-10-31 16:45:43	!	  #    #  ######  ######   ####    ####   #    #  ######
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	   #####   ####
+2022-10-31 16:45:43	!	     #    #    #
+2022-10-31 16:45:43	!	     #    #    #
+2022-10-31 16:45:43	!	     #    #    #
+2022-10-31 16:45:43	!	     #    #    #
+2022-10-31 16:45:43	!	     #     ####
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	  #        ####    ####     ##    #       #    #  ######   #####
+2022-10-31 16:45:43	!	  #       #    #  #    #   #  #   #       ##   #  #          #
+2022-10-31 16:45:43	!	  #       #    #  #       #    #  #       # #  #  #####      #
+2022-10-31 16:45:43	!	  #       #    #  #       ######  #       #  # #  #          #
+2022-10-31 16:45:43	!	  #       #    #  #    #  #    #  #       #   ##  #          #
+2022-10-31 16:45:43	!	  ######   ####    ####   #    #  ######  #    #  ######     #
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	  #          #    #    #   ####   ######  ######
+2022-10-31 16:45:43	!	  #          #    ##   #  #           #   #
+2022-10-31 16:45:43	!	  #          #    # #  #   ####      #    #####
+2022-10-31 16:45:43	!	  #          #    #  # #       #    #     #
+2022-10-31 16:45:43	!	  #          #    #   ##  #    #   #      #
+2022-10-31 16:45:43	!	  ######     #    #    #   ####   ######  ######
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	     #    #####    ####
+2022-10-31 16:45:43	!	     #    #    #  #    #
+2022-10-31 16:45:43	!	     #    #    #  #
+2022-10-31 16:45:43	!	     #    #####   #
+2022-10-31 16:45:43	!	     #    #   #   #    #
+2022-10-31 16:45:43	!	     #    #    #   ####
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	   ####   ######  #####   #    #  ######  #####
+2022-10-31 16:45:43	!	  #       #       #    #  #    #  #       #    #
+2022-10-31 16:45:43	!	   ####   #####   #    #  #    #  #####   #    #
+2022-10-31 16:45:43	!	       #  #       #####   #    #  #       #####
+2022-10-31 16:45:43	!	  #    #  #       #   #    #  #   #       #   #
+2022-10-31 16:45:43	!	   ####   ######  #    #    ##    ######  #    #
+2022-10-31 16:45:43	!	
+2022-10-31 16:45:43	!	End of message of the day.

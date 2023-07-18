@@ -115,14 +115,21 @@ call plug#begin()
   Plug 'RRethy/vim-hexokinase', { 'do': 'make hexokinase' }
   Plug 'stephenway/postcss.vim'
   Plug 'jonsmithers/vim-html-template-literals'
+  " Plug 'leafgarland/typescript-vim'
+  Plug 'peitalin/vim-jsx-typescript'
+  Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx','typescript'], 'do': 'make install' }
 
   " python
   Plug 'ambv/black'
   Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
 
+  " rust
+  Plug 'simrat39/rust-tools.nvim'
+
   " go
   "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' } " stucks on save
   Plug 'darrikonn/vim-gofmt'
+  Plug 'joerdav/templ.vim'
 call plug#end()
 
 " Look & feel
@@ -284,7 +291,7 @@ set showbreak=↪
 set et            " expandt tab
 set mousemodel=extend
 set mouse=v
-set ch=0
+set ch=1
 set tabstop=2
 set softtabstop=2
 set smarttab
@@ -297,6 +304,7 @@ set completeopt=menu,menuone,noselect " don't need python docstrings
 set clipboard=unnamed " use the system clipboard
 set title
 set autoread " auto read file if changed
+set digraph " digraphs
 
 " backup
 " backup/swap to ~/backup first
@@ -367,7 +375,7 @@ au FileType go setlocal tw=0 sw=4 ts=4 sts=4 noet
 au FileType go au BufWritePre * GoFmt
 
 " prettier
-au BufWritePre *.js Neoformat
+"au BufWritePre *.js Neoformat
 
 " frissen beillesztett resz kijelolese
 nnoremap <leader>v V`]
@@ -532,6 +540,9 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 
+" LSP diagnostic
+nnoremap <leader>e <cmd>lua vim.diagnostic.open_float()<cr>
+
 " notify
 lua << EOF
 vim.opt.termguicolors = true
@@ -573,13 +584,13 @@ map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
-let g:incsearch#auto_nohlsearch = 1
-map n  <Plug>(incsearch-nohl-n)
-map N  <Plug>(incsearch-nohl-N)
-map *  <Plug>(incsearch-nohl-*)
-map #  <Plug>(incsearch-nohl-#)
-map g* <Plug>(incsearch-nohl-g*)
-map g# <Plug>(incsearch-nohl-g#)
+"let g:incsearch#auto_nohlsearch = 1
+"map n  <Plug>(incsearch-nohl-n)
+"map N  <Plug>(incsearch-nohl-N)
+"map *  <Plug>(incsearch-nohl-*)
+"map #  <Plug>(incsearch-nohl-#)
+"map g* <Plug>(incsearch-nohl-g*)
+"map g# <Plug>(incsearch-nohl-g#)
 
 " vim-asterisk
 map *   <Plug>(asterisk-*)
@@ -681,6 +692,9 @@ hi ALEInfoSign          guifg=#83a598 guibg=#232526
 " copilot
 let g:copilot_node_command = "~/.nodenv/versions/16.15.0/bin/node"
 
+" jsdoc
+nnoremap <leader>j :JsDoc<cr>
+
 " lsp lua
 "lua << EOF
 "local lsp_installer = require("nvim-lsp-installer")
@@ -720,15 +734,18 @@ local install_root_dir = '/home/dyuri/.local/share/nvim/lsp_servers'
 require'navigator'.setup({
   debug = true,
   lsp = {
+    rust_analyzer = {
+      cmd = { install_root_dir .. '/rust/rust-analyzer' },
+    },
     gopls = {
       cmd = { install_root_dir .. '/go/gopls' }
     },
     pyright = {
       cmd = { install_root_dir .. '/python/node_modules/.bin/pyright-langserver', '--stdio' }
     },
-    jedi_language_server = {
-      cmd = { install_root_dir .. '/jedi_language_server/venv/bin/jedi-language-server' }
-    },
+    -- jedi_language_server = {
+    --  cmd = { install_root_dir .. '/jedi_language_server/venv/bin/jedi-language-server' }
+    -- },
     html = {
       cmd = { install_root_dir .. '/html/node_modules/.bin/vscode-html-language-server', '--stdio' }
     },
@@ -744,6 +761,8 @@ EOF
 nmap <leader>f :lua vim.lsp.buf.formatting()<cr>
 vmap <leader>f :lua vim.lsp.buf.range_formatting()<cr>
 
+" errors
+nmap <leader>e :lua vim.diagnostic.open_float()<CR>
 
 " nvim-cmp lua
 lua << EOF
@@ -755,7 +774,7 @@ cmp.setup({
     end,
   },
   mapping = {
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = cmp.mapping.confirm({ select = false }),
     ['<Down>'] = cmp.mapping(cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
     ['<Up>'] = cmp.mapping(cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }), {'i'}),
   },

@@ -1,65 +1,49 @@
-[2021-10-04 21:10:22] WeeChat 3.2 (compiled on Jun 14 2021 00:39:47)
-[2021-10-04 21:10:22] Reading configuration file sec.conf
-[2021-10-04 21:10:22] Reading configuration file weechat.conf
-[2021-10-04 21:10:22] Reading configuration file plugins.conf
-[2021-10-04 21:10:22] Reading configuration file charset.conf
-[2021-10-04 21:10:22] Reading configuration file logger.conf
-[2021-10-04 21:10:22] Reading configuration file exec.conf
-[2021-10-04 21:10:22] Reading configuration file trigger.conf
-[2021-10-04 21:10:22] Reading configuration file spell.conf
-[2021-10-04 21:10:22] Reading configuration file alias.conf
-[2021-10-04 21:10:22] Reading configuration file buflist.conf
-[2021-10-04 21:10:22] Reading configuration file fifo.conf
-[2021-10-04 21:10:22] Reading configuration file xfer.conf
-[2021-10-04 21:10:22] Reading configuration file irc.conf
-[2021-10-04 21:10:22] Reading configuration file relay.conf
-[2021-10-04 21:10:22] Reading configuration file guile.conf
-[2021-10-04 21:10:22] Reading configuration file perl.conf
-[2021-10-04 21:10:22] Reading configuration file python.conf
-[2021-10-04 21:10:22] Reading configuration file autosort.conf
-[2021-10-04 21:10:22] Writing configuration file autosort.conf
-[2021-10-04 21:10:22] Reading configuration file ruby.conf
-[2021-10-04 21:10:22] Reading configuration file script.conf
-[2021-10-04 21:10:22] Reading configuration file fset.conf
-[2021-10-04 21:10:22] irc: connecting to server nas/16667...
-[2021-10-04 21:10:22] irc: connecting to server nas/16667...
-[2021-10-04 21:10:29] irc: connecting to server irc.localnet.cloud/6667...
-[2021-10-04 21:10:32] irc: connecting to server nas/16667...
-[2021-10-04 21:10:32] irc: connecting to server nas/16667...
-[2021-10-04 21:10:52] irc: connecting to server nas/16667...
-[2021-10-04 21:10:52] irc: connecting to server nas/16667...
-[2021-10-04 21:11:32] irc: connecting to server nas/16667...
-[2021-10-04 21:11:32] irc: connecting to server nas/16667...
-[2021-10-04 21:12:52] irc: connecting to server nas/16667...
-[2021-10-04 21:12:52] irc: connecting to server nas/16667...
-[2021-10-04 21:15:32] irc: connecting to server nas/16667...
-[2021-10-04 21:15:32] irc: connecting to server nas/16667...
-[2021-10-04 21:20:52] irc: connecting to server nas/16667...
-[2021-10-04 21:20:52] irc: connecting to server nas/16667...
-[2021-10-04 21:30:52] irc: connecting to server nas/16667...
-[2021-10-04 21:30:52] irc: connecting to server nas/16667...
-[2021-10-04 21:40:52] irc: connecting to server nas/16667...
-[2021-10-04 21:40:52] irc: connecting to server nas/16667...
-[2021-10-04 21:50:52] irc: connecting to server nas/16667...
-[2021-10-04 21:50:52] irc: connecting to server nas/16667...
-[2021-10-04 21:56:19] Writing configuration file plugins.conf
-[2021-10-04 21:56:19] Writing configuration file xfer.conf
-[2021-10-04 21:56:19] Writing configuration file trigger.conf
-[2021-10-04 21:56:19] Writing configuration file spell.conf
-[2021-10-04 21:56:19] Writing configuration file script.conf
-[2021-10-04 21:56:19] Writing configuration file ruby.conf
-[2021-10-04 21:56:19] Writing configuration file relay.conf
-[2021-10-04 21:56:19] Writing configuration file autosort.conf
-[2021-10-04 21:56:19] Writing configuration file python.conf
-[2021-10-04 21:56:19] Writing configuration file perl.conf
-[2021-10-04 21:56:19] Writing configuration file logger.conf
-[2021-10-04 21:56:19] Writing configuration file irc.conf
-[2021-10-04 21:56:19] Writing configuration file guile.conf
-[2021-10-04 21:56:19] Writing configuration file fset.conf
-[2021-10-04 21:56:19] Writing configuration file fifo.conf
-[2021-10-04 21:56:19] Writing configuration file exec.conf
-[2021-10-04 21:56:19] Writing configuration file charset.conf
-[2021-10-04 21:56:19] Writing configuration file buflist.conf
-[2021-10-04 21:56:19] Writing configuration file alias.conf
-[2021-10-04 21:56:19] Writing configuration file weechat.conf
-[2021-10-04 21:56:19] Writing configuration file sec.conf
+[2023-06-12 18:52:10] WeeChat 3.7.1 (compiled on Nov 10 2022 01:28:52)
+[2023-06-12 18:52:10] Reading configuration file sec.conf
+[2023-06-12 18:52:10] Reading configuration file weechat.conf
+[2023-06-12 18:52:10] Reading configuration file plugins.conf
+[2023-06-12 18:52:10] Reading configuration file charset.conf
+[2023-06-12 18:52:10] Reading configuration file logger.conf
+[2023-06-12 18:52:10] Reading configuration file exec.conf
+[2023-06-12 18:52:10] Reading configuration file trigger.conf
+[2023-06-12 18:52:10] Reading configuration file spell.conf
+[2023-06-12 18:52:10] Reading configuration file alias.conf
+[2023-06-12 18:52:10] Reading configuration file buflist.conf
+[2023-06-12 18:52:10] Reading configuration file fifo.conf
+[2023-06-12 18:52:10] Reading configuration file typing.conf
+[2023-06-12 18:52:10] Reading configuration file xfer.conf
+[2023-06-12 18:52:10] Reading configuration file irc.conf
+[2023-06-12 18:52:10] Reading configuration file relay.conf
+[2023-06-12 18:52:10] Reading configuration file guile.conf
+[2023-06-12 18:52:10] Reading configuration file lua.conf
+[2023-06-12 18:52:10] Reading configuration file perl.conf
+[2023-06-12 18:52:10] Reading configuration file python.conf
+[2023-06-12 18:52:10] Reading configuration file autosort.conf
+[2023-06-12 18:52:10] Writing configuration file autosort.conf
+[2023-06-12 18:52:10] Reading configuration file ruby.conf
+[2023-06-12 18:52:10] Reading configuration file script.conf
+[2023-06-12 18:52:10] Reading configuration file fset.conf
+[2023-06-12 18:52:32] irc: connecting to server irc.eu.libera.chat/6697 (SSL)...
+[2023-06-12 19:00:10] Writing configuration file plugins.conf
+[2023-06-12 19:00:10] Writing configuration file xfer.conf
+[2023-06-12 19:00:10] Writing configuration file typing.conf
+[2023-06-12 19:00:10] Writing configuration file trigger.conf
+[2023-06-12 19:00:10] Writing configuration file spell.conf
+[2023-06-12 19:00:10] Writing configuration file script.conf
+[2023-06-12 19:00:10] Writing configuration file ruby.conf
+[2023-06-12 19:00:10] Writing configuration file relay.conf
+[2023-06-12 19:00:10] Writing configuration file autosort.conf
+[2023-06-12 19:00:10] Writing configuration file python.conf
+[2023-06-12 19:00:10] Writing configuration file perl.conf
+[2023-06-12 19:00:10] Writing configuration file lua.conf
+[2023-06-12 19:00:10] Writing configuration file logger.conf
+[2023-06-12 19:00:10] Writing configuration file irc.conf
+[2023-06-12 19:00:10] Writing configuration file guile.conf
+[2023-06-12 19:00:10] Writing configuration file fset.conf
+[2023-06-12 19:00:10] Writing configuration file fifo.conf
+[2023-06-12 19:00:10] Writing configuration file exec.conf
+[2023-06-12 19:00:10] Writing configuration file charset.conf
+[2023-06-12 19:00:10] Writing configuration file buflist.conf
+[2023-06-12 19:00:10] Writing configuration file alias.conf
+[2023-06-12 19:00:10] Writing configuration file weechat.conf
+[2023-06-12 19:00:10] Writing configuration file sec.conf

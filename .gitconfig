@@ -74,3 +74,6 @@
   diffFilter = delta --color-only
 [safe]
 	directory = /mnt/nas/www/prezik/txtpresentations
+	directory = /mnt/nas/www/jsbottle
+	directory = /mnt/nas/www/
+	directory = /mnt/nas/www/repa-css-mesh

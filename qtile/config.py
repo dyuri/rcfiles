@@ -4,7 +4,7 @@ from libqtile import qtile, layout, bar, widget, hook
 from libqtile.config import EzKey
 from mpris2widget import Mpris2
 
-from plasma import Plasma
+# from plasma import Plasma
 from qtools.xresources import get as get_resources
 import qtools.focus
 import os
@@ -49,7 +49,8 @@ COLORS = {
     "colorrgy": "#cddc39",
 }
 COLORS.update({key: value for key, value in get_resources().items() if key.startswith("color")})
-TERMINAL = os.environ.get('TERMINAL', 'kitty')
+#TERMINAL = os.environ.get('TERMINAL', 'kitty')
+TERMINAL = os.environ.get('TERMINAL', 'wezterm')
 
 
 def color(num, alpha=None, fallback="#888888"):
@@ -281,15 +282,20 @@ for idx, g in enumerate(groups):
     )
 
 groups.extend([
-    Group('www', layout='plasma', persist=True, init=True, screen_affinity=1,
+    Group('www', layout='bsp', persist=True, init=True, screen_affinity=1, # plasma layout
           matches=[
               Match(wm_class='Navigator'),
               Match(wm_class='firefoxdeveloperedition'),
               Match(wm_class='google-chrome'),
               Match(wm_class='google-chrome-unstable'),
-              Match(wm_class='Google-chrome')]),
+              Match(wm_class='Google-chrome'),
+              ]),
     Group('steam', layout='max', persist=False, init=False, screen_affinity=1,
-          matches=[Match(wm_class='Steam'), Match(wm_class='steam')]),
+          matches=[
+              Match(wm_class='Steam'),
+              Match(wm_class='steam'),
+              Match(wm_class='steamwebhelper'),
+              ]),
     Group('gimp', layout='max', persist=False, init=False, screen_affinity=1,
           matches=[Match(wm_class='gimp'), Match(wm_class='Gimp')]),
 ])
@@ -328,13 +334,15 @@ layout_cfg = dict(
     border_normal='#282828',
     border_width=1,
     border_width_single=0,
+    border_on_single=0,
     margin=10,
     margin_single=0,
+    margin_on_single=0,
 )
 
 layouts = [
-    Plasma(**layout_cfg),
-    # layout.Bsp(**layout_cfg),  # I prefer Plasma
+    # Plasma(**layout_cfg),
+    layout.Bsp(**layout_cfg),  # I prefer Plasma
     layout.Tile(**layout_cfg),
     layout.Max(),
 ]
@@ -457,13 +465,13 @@ def dialogs(window):
         window.floating = True
 
 
-@hook.subscribe.screen_change
-def restart_on_randr(ev):
-    global _first_screen_change
-    if _first_screen_change:
-        _first_screen_change = False
-    else:
-        qtile.cmd_restart()
+# @hook.subscribe.screen_change
+# def restart_on_randr(ev):
+#     global _first_screen_change
+#     if _first_screen_change:
+#         _first_screen_change = False
+#     else:
+#         qtile.cmd_restart()
 
 
 # @hook.subscribe.client_new

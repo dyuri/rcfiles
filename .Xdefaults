@@ -6,39 +6,6 @@ Xft.hinting:true
 Xft.dpi:96
 Xft.lcdfilter:lcddefault
 
-!URxvt.font:xft:Bitstream Vera Sans Mono:pixelsize=12
-URxvt*font: xft:Meslo LG S for Powerline:pixelsize=13:antialias=true:hinting=true
-URxvt*boldFont: xft:Meslo LG S for Powerline:bold:pixelsize=13:antialias=true:hinting=true
-URxvt.transparent:true
-URxvt.dynamicColors:on
-URxvt.highlightSelection:true
-URxvt.eightBitInput:true
-URxvt.tintColor:#102018
-URxvt.fading:25
-URxvt.scrollBar:false
-URxvt.internalBorder:0
-URxvt.externalBorder:0
-URxvt.inheritPixmap:true
-URxvt.cursorColor:#20b020
-URxvt.cursorBlink:false
-URxvt.underlineColor:#609090
-URxvt.visualBell:true
-URxvt.borderless:false
-URxvt.secondaryScroll: true
-
-URxvt.urlLauncher:firefox
-!URxvt.perl-ext:mark-urls
-
-!keysyms
-URxvt.keysym.M-Down:        \033[1;3B
-URxvt.keysym.M-Up:          \033[1;3A
-URxvt.keysym.M-Left:        \033[1;3D
-URxvt.keysym.M-Right:       \033[1;3C
-URxvt.keysym.Control-Up:    \033[1;5A
-URxvt.keysym.Control-Down:  \033[1;5B
-URxvt.keysym.Control-Left:  \033[1;5D
-URxvt.keysym.Control-Right: \033[1;5C
-
 ! -----
 #define repa_bg       #383031
 #define repa_bg_l     #585051
