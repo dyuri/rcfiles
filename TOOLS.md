@@ -40,6 +40,7 @@
 - theme.sh
 - uni - unicode query
 - marktext - (typora isn't free anymore) - markdown editor
+- glow - markdown reader
 - hexyl - colored hex viewer (imhex is the ultimate tool, but it's an overkill)
 - fq - jq for binary files
 - lg (lazygit) (<= gitui)

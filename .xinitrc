@@ -11,7 +11,7 @@ xrandr --output DisplayPort-0 --primary --mode 1920x1200 --rotate normal --outpu
 # xmodmap ~/config/.xmodmap.capsoff 2> /dev/null
 # xkbcomp ~/config/keyboard/repa.xkb $DISPLAY
 xsetroot -cursor_name left_ptr
-xset -dpms # TODO test
+xset dpms 3600 3700 3800
 
 # X resources
 xrdb ~/.Xdefaults

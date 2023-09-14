@@ -12,7 +12,7 @@ $python\
 $fill\
 [](fg:gray_0)\
 $cmd_duration\
-[](fg:yellow bg:gray_0)\
+[](fg:gray_1 bg:gray_0)\
 $time\
 \n$character"""
 
@@ -39,6 +39,7 @@ white = "#ebdbb2"
 gray_0 = "#282828"
 gray_1 = "#3c3836"
 gray_2 = "#504945"
+real_yellow = "#dabc3f"
 
 [hostname]
 style = "bg:bright_green fg:black"
@@ -47,7 +48,7 @@ format = '[$hostname ]($style)'
 [directory]
 style = "fg:bright_green bg:gray_2"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 5
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -74,7 +75,7 @@ style = "black"
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:yellow fg:black"
+style = "bg:gray_1 fg:real_yellow"
 format = '[  $time ]($style)'
 
 [cmd_duration]
@@ -83,5 +84,5 @@ style = "bg:gray_0 fg:bright_yellow"
 format = '[ $duration ]($style)'
 
 [character]
-success_symbol = "[▶ ](bold bright_green)"
-error_symbol = "[▶ ](bold red)"
+success_symbol = "[▶](bold bright_green)"
+error_symbol = "[▶](bold red)"

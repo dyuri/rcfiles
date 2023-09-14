@@ -200,4 +200,4 @@ column = 0
 order = "Ascending"
 
 [pager]
-mode = "Auto"
+command = "ov -H=1 -w=false -d=│"

@@ -29,7 +29,7 @@ call plug#begin()
   Plug 'kristijanhusak/defx-icons'
 
   Plug 'voldikss/vim-floaterm'
-  Plug 'simnalamburt/vim-mundo'
+  " Plug 'simnalamburt/vim-mundo'
   Plug 'tpope/vim-abolish'
   Plug 'phaazon/hop.nvim'
 
@@ -77,6 +77,9 @@ call plug#begin()
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+
+  " undo
+  Plug 'debugloop/telescope-undo.nvim'
 
   " git
   Plug 'tpope/vim-fugitive'
@@ -412,7 +415,7 @@ map <F4> :bn!<cr>
 imap <F3> <ESC>:bp!<cr>a
 imap <F4> <ESC>:bn!<cr>a
 
-nnoremap <F5> :MundoToggle<CR>
+nnoremap <F5> :Telescope undo<CR>
 
 "nnoremap <F7> :Leaderf file<cr>
 "nnoremap <S-F7> :Leaderf rg<cr>
@@ -424,10 +427,14 @@ nnoremap <F5> :MundoToggle<CR>
 nnoremap <F7> <cmd>Telescope find_files<cr>
 nnoremap <S-F7> <cmd>Telescope live_grep<cr>
 nnoremap <F19> <cmd>Telescope live_grep<cr>
+nnoremap <F8> <cmd>Telescope oldfiles<cr>
 
-nmap <F8> :set wrap!<CR>
 nmap <F9> :TagbarToggle<CR>
+nmap <S-F9> :Telescope treesitter<CR>
+nmap <F21> :Telescope treesitter<CR>
 nmap <F11> :set nu!<CR>:set relativenumber!<CR>
+nmap <S-F11> :set wrap!<CR>
+nmap <F23> :set wrap!<CR>
 nmap <F12> :set list!<CR>:RainbowToggle<CR>
 nmap <C-F12> :set cursorline!<CR>:set cursorcolumn!<CR>
 nmap <F36> :set cursorline!<CR>:set cursorcolumn!<CR>
@@ -558,6 +565,16 @@ require('telescope').setup({
   },
 })
 require('telescope').load_extension('fzf')
+require('telescope').load_extension('undo')
+EOF
+
+lua << EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
 EOF
 
 " vgit
@@ -848,7 +865,14 @@ local dap = require "dap"
       request = "launch",
       mode = "test",
       program = "./${relativeFileDirname}"
-    } 
+    }, 
+    -- remote debugging configuration, port should be 38697
+    {
+      type = "go",
+      name = "Attach remote",
+      request = "attach",
+      mode = "remote",
+    }
 }
 
 require("dapui").setup({
