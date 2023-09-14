@@ -1,77 +1,96 @@
 -- Lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
-	vim.fn.system({
-		"git",
-		"clone",
-		"--filter=blob:none",
-		"https://github.com/folke/lazy.nvim.git",
-		"--branch=stable", -- latest stable release
-		lazypath,
-	})
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	-- colorscheme
-	{ "gruvbox-community/gruvbox" },
-	{ "sainnhe/gruvbox-material" },
+  -- colorscheme
+  { "gruvbox-community/gruvbox" },
+  { "sainnhe/gruvbox-material" },
 
-	-- dashboard
-	{
-		"goolord/alpha-nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
+  -- dashboard
+  {
+    "goolord/alpha-nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 
-	-- notifications
-	{ "rcarriga/nvim-notify" },
+  -- notifications
+  { "rcarriga/nvim-notify" },
 
-	-- file tree
-	{
-		"nvim-tree/nvim-tree.lua",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
+  -- file tree
+  {
+    "nvim-tree/nvim-tree.lua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 
-	-- bufferline
-	{
-		"akinsho/bufferline.nvim",
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-	},
+  -- bufferline
+  {
+    "akinsho/bufferline.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 
-	-- lualine
-	{ "nvim-lualine/lualine.nvim" },
+  -- lualine
+  { "nvim-lualine/lualine.nvim" },
 
-	-- telescope
-	{
-		"nvim-telescope/telescope.nvim",
-		dependencies = {
-			{ "nvim-lua/plenary.nvim" },
-			{ "kdheepak/lazygit.nvim" },
-		},
-		config = function()
-			require("telescope").load_extension("lazygit")
-		end,
-	},
+  -- telescope
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+      { "nvim-lua/plenary.nvim" },
+      { "kdheepak/lazygit.nvim" },
+    },
+    config = function()
+      require("telescope").load_extension("lazygit")
+    end,
+  },
   -- telescope FZF
   {
     "nvim-telescope/telescope-fzf-native.nvim",
-    build = "make"
+    build = "make",
   },
   -- telescope undo
   { "debugloop/telescope-undo.nvim" },
 
-	-- non-lsp formatting
-	{
-		"jose-elias-alvarez/null-ls.nvim",
-		dependencies = {
-			{ "nvim-lua/plenary.nvim" },
-		},
-	},
+  -- TODO comments
+  {
+    "folke/todo-comments.nvim",
+    dependencies = {
+      { "nvim-lua/plenary.nvim" },
+    },
+  },
+
+  -- fundo
+  {
+    "kevinhwang91/nvim-fundo",
+    dependencies = {
+      "kevinhwang91/promise-async",
+    },
+    build = function()
+      require("fundo").install()
+    end,
+  },
+
+  -- non-lsp formatting
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    dependencies = {
+      { "nvim-lua/plenary.nvim" },
+    },
+  },
 
   -- hexokinase
   {
     "RRethy/vim-hexokinase",
-    build = "make hexokinase"
+    build = "make hexokinase",
   },
 
   -- indentline
@@ -109,7 +128,7 @@ local plugins = {
   {
     "L3MON4D3/LuaSnip",
     dependencies = { "rafamadriz/friendly-snippets" },
-	},
+  },
   { "saadparwaiz1/cmp_luasnip" },
 
   -- lspsaga
@@ -127,33 +146,32 @@ local plugins = {
 
   -- navigator
   {
-    'ray-x/guihua.lua',
-    build = 'cd lua/fzy && make'
+    "ray-x/guihua.lua",
+    build = "cd lua/fzy && make",
   },
-  { 'ray-x/navigator.lua' },
+  { "ray-x/navigator.lua" },
 
   -- dap
   {
-    'rcarriga/nvim-dap-ui',
+    "rcarriga/nvim-dap-ui",
     dependencies = { "mfussenegger/nvim-dap" },
   },
-  { 'theHamsta/nvim-dap-virtual-text' },
-  { 'nvim-telescope/telescope-dap.nvim' },
-
+  { "theHamsta/nvim-dap-virtual-text" },
+  { "nvim-telescope/telescope-dap.nvim" },
 
   -- aerial - tagbar like
-  { 'stevearc/aerial.nvim' },
+  { "stevearc/aerial.nvim" },
 
   -- etc
-  { 'machakann/vim-highlightedyank' },
-  { 'levouh/tint.nvim' },
-  { 'farmergreg/vim-lastplace' },
-  { 'tpope/vim-fugitive' },
-  { 'manicmaniac/betterga' },
-  { 'valloric/MatchTagAlways' },
+  { "machakann/vim-highlightedyank" },
+  { "levouh/tint.nvim" },
+  { "farmergreg/vim-lastplace" },
+  { "tpope/vim-fugitive" },
+  { "manicmaniac/betterga" },
+  { "valloric/MatchTagAlways" },
 
   -- copilot
-  { 'github/copilot.vim' },
+  { "github/copilot.vim" },
 }
 
 local opts = {}

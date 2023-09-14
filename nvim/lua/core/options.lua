@@ -7,12 +7,12 @@ vim.cmd("let g:gruvbox_contrast_dark = 'hard'")
 vim.cmd([[colorscheme gruvbox]])
 vim.opt.termguicolors = true
 vim.o.pumheight = 10 -- popup menu
-vim.o.cmdheight = 1 -- command menu
+vim.o.cmdheight = 1  -- command menu
 
 -- Files
 vim.o.modifiable = true
 vim.o.fileencoding = "utf-8" -- File Encoding
-vim.g.loaded_netrw = 1 -- Helps opening links in the internet (probabilly -_-)
+vim.g.loaded_netrw = 1       -- Helps opening links in the internet (probabilly -_-)
 vim.g.loaded_netrwPlugin = 1
 -- vim.opt.autochdir = true
 vim.cmd("filetype plugin indent on")
@@ -59,10 +59,10 @@ vim.o.mouse = "nv"
 
 -- Wrapping
 vim.wo.wrap = true
-vim.wo.number = false -- F11
+vim.wo.number = false         -- F11
 vim.wo.relativenumber = false -- F11
-vim.o.cursorline = true -- F12
-vim.o.cursorcolumn = true -- F12
+vim.o.cursorline = false      -- F12
+vim.o.cursorcolumn = false    -- F12
 vim.wo.signcolumn = "yes"
 vim.o.startofline = false
 vim.o.showmatch = true
@@ -89,7 +89,7 @@ vim.o.ruler = true
 vim.o.showcmd = true
 
 -- Whitespaces
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars = { tab = "▸ ", eol = "¬", trail = "⋅", extends = "❯", precedes = "❮" }
 vim.opt.showbreak = "↪"
 vim.opt.fillchars = { eob = "-", fold = " " }
@@ -100,16 +100,17 @@ function _G.custom_fold_text()
   local line_count = vim.v.foldend - vim.v.foldstart + 1
   return "  [" .. line_count .. "] " .. line
 end
-vim.o.foldenable = true
+
+vim.o.foldenable = false
 vim.o.foldlevelstart = 10
 vim.o.foldnestmax = 10
-vim.o.foldmethod = 'indent'
-vim.o.foldtext = 'v:lua.custom_fold_text()'
+vim.o.foldmethod = "indent"
+vim.o.foldtext = "v:lua.custom_fold_text()"
 
 -- Nvim Notify
 vim.notify = require("notify")
 
 -- diff
-vim.o.diffopt = 'filler,internal,closeoff,algorithm:patience,indent-heuristic'
+vim.o.diffopt = "filler,internal,closeoff,algorithm:patience,indent-heuristic"
 
 -- TODO session handling? https://github.com/rmagatti/auto-session
