@@ -16,6 +16,8 @@
   "gitsigns.nvim": { "branch": "main", "commit": "907ae8636016aab2f283576fc60d46ca3427e579" },
   "gruvbox": { "branch": "master", "commit": "121309cebfc5a9b4f71b7b962d0d0df7e82cc456" },
   "gruvbox-material": { "branch": "master", "commit": "b5f8c6a6c1cda630c53b061b765068a0898d47a3" },
+  "guard-collection": { "branch": "main", "commit": "05a1ecaedbb039179f8ada93634c555397576a4c" },
+  "guard.nvim": { "branch": "main", "commit": "28e7db652cd4e7b44156158ba746eeea8495206d" },
   "guihua.lua": { "branch": "master", "commit": "5ad8dba19ce9b9fd8965598984dfdc9c119f97e4" },
   "indent-blankline.nvim": { "branch": "master", "commit": "9637670896b68805430e2f72cf5d16be5b97a22a" },
   "lazy.nvim": { "branch": "main", "commit": "2a9354c7d2368d78cbd5575a51a2af5bd8a6ad01" },
@@ -29,7 +31,6 @@
   "mason-tool-installer.nvim": { "branch": "main", "commit": "031903fefbf59371502092ef9e22cab9161d90ba" },
   "mason.nvim": { "branch": "main", "commit": "d66c60e17dd6fd8165194b1d14d21f7eb2c1697a" },
   "navigator.lua": { "branch": "master", "commit": "a9b63b0f9c7196dac01531d9586dfc31493c0f5d" },
-  "null-ls.nvim": { "branch": "main", "commit": "0010ea927ab7c09ef0ce9bf28c2b573fc302f5a7" },
   "nvim-cmp": { "branch": "main", "commit": "5dce1b778b85c717f6614e3f4da45e9f19f54435" },
   "nvim-dap": { "branch": "master", "commit": "b3d4408e29d924fe130c9397a7c3b3630b3ea671" },
   "nvim-dap-ui": { "branch": "master", "commit": "34160a7ce6072ef332f350ae1d4a6a501daf0159" },
@@ -54,5 +55,6 @@
   "vim-hexokinase": { "branch": "master", "commit": "62324b43ea858e268fb70665f7d012ae67690f43" },
   "vim-highlightedyank": { "branch": "master", "commit": "fa3f57b097e9521ce41a66b6c7cf5d9adea70ea3" },
   "vim-lastplace": { "branch": "master", "commit": "bb3191b134ade9d1f01014e17c3df91e8911dd5c" },
+  "vim-monkey-c": { "branch": "master", "commit": "2b3b5df632c4d056c0a9975cf7efed72bf0950cb" },
   "which-key.nvim": { "branch": "main", "commit": "7ccf476ebe0445a741b64e36c78a682c1c6118b7" }
 }

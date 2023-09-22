@@ -79,11 +79,11 @@ local plugins = {
     end,
   },
 
-  -- non-lsp formatting
+  -- non-lsp formatting - guard
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimdev/guard.nvim",
     dependencies = {
-      { "nvim-lua/plenary.nvim" },
+      "nvimdev/guard-collection",
     },
   },
 
@@ -169,6 +169,9 @@ local plugins = {
   { "tpope/vim-fugitive" },
   { "manicmaniac/betterga" },
   { "valloric/MatchTagAlways" },
+
+  -- garmin monkey-c
+  { "klimeryk/vim-monkey-c" },
 
   -- copilot
   { "github/copilot.vim" },
