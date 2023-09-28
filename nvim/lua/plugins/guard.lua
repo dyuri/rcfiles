@@ -8,7 +8,8 @@ end
 -- setting up
 ft = require("guard.filetype")
 
-ft('typescript,javascript,typescriptreact'):fmt('prettier'):lint('eslint')
+-- ft('typescript,javascript,typescriptreact'):fmt('prettier'):lint('eslint')
+ft('typescript,javascript,typescriptreact'):fmt('prettier')
 ft('python'):fmt('black'):lint('flake8')
 ft('go'):fmt('gofmt')
 

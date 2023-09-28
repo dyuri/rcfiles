@@ -114,10 +114,14 @@ LspConfig.pyright.setup({
   capabilities = capabilities,
 })
 
--- tsserver
+-- ts + js
 LspConfig.tsserver.setup({
   capabilities = capabilities,
 })
+LspConfig.eslint.setup({
+  capabilities = capabilities,
+})
+
 
 -- rust_analyzer
 LspConfig.rust_analyzer.setup({

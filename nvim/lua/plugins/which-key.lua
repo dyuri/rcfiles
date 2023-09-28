@@ -10,6 +10,13 @@ local leader_mappings = {
   e = { ":NvimTreeToggle<CR>", "File Explorer" },
   v = { "V`]", "Reselect pasted" },
 
+  -- Format
+  f = {
+    name = "Format",
+    f = { ":lua vim.lsp.buf.format({ async = true })<cr>", "LSP format" },
+    g = { ":GuardFmt<cr>", "Guard format" },
+  },
+
   -- Telescope
   s = {
     name = "Telescope",
@@ -19,6 +26,7 @@ local leader_mappings = {
     g = { ":Telescope live_grep<cr>", "Live grep" },
     b = { ":Telescope buffers<cr>", "Buffers" },
     t = { ":Telescope treesitter<cr>", "Treesitter" },
+    d = { ":Telescope diagnostics<cr>", "Diagnostic" },
     T = { ":TodoTelescope<cr>", "TODO" },
   },
 
@@ -36,12 +44,16 @@ local leader_mappings = {
     x = { ":lua require'dap'.terminate()<cr>", "Terminate" },
   },
 
+  -- LSP
   l = {
     name = "LSP",
     c = { ":Lspsaga code_action<cr>", "Code action" },
     f = { ":lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
     d = { ":lua vim.lsp.buf.definition()<cr>", "Definition" },
     r = { ":lua vim.lsp.buf.references()<cr>", "References" },
+    n = { ":lua vim.diagnostic.goto_next()<cr>", "Next diagnostic" },
+    p = { ":lua vim.diagnostic.goto_prev()<cr>", "Previous diagnostic" },
+    s = { ":lua vim.diagnostic.open_float()<cr>", "Show diagnostic" },
   },
 }
 wk.register(leader_mappings, { prefix = "<leader>" })
