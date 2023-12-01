@@ -21,7 +21,7 @@ vim.o.hidden = true
 vim.o.whichwrap = "b,s,<,>,[,],h,l"
 vim.o.title = true
 vim.o.autoread = true
-vim.o.digraph = true
+-- vim.o.digraph = true -- use ctrl+k for digraphs
 
 -- Split Windows
 vim.o.splitbelow = true

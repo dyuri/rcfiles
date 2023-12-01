@@ -15,7 +15,26 @@ config.selection_word_boundary = ' {}[]()"\'`,;:|│'
 -- style
 config.color_scheme = 'Gruvbox dark, hard (base16)'
 config.window_background_opacity = 0.8
-config.font = wezterm.font_with_fallback { 'Hasklug Nerd Font', 'FuraCode Nerd Font', 'Noto Color Emoji' }
+config.font = wezterm.font_with_fallback {
+  {
+    family = 'Monaspace Neon',
+    harfbuzz_features = {
+      'ss01=1',
+      'ss02=1',
+      'ss03=1',
+      'ss04=1',
+      'ss05=1',
+      'ss06=1',
+      'ss07=1',
+      'ss08=1',
+      'calt=1',
+      'dlig=1',
+    },
+  },
+  'Hasklug Nerd Font',
+  'FuraCode Nerd Font',
+  'Noto Color Emoji'
+}
 config.font_size = 11.0
 config.freetype_load_target = 'HorizontalLcd'
 config.window_padding = {

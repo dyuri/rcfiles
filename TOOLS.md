@@ -8,6 +8,7 @@
 - exa (alias ll), lsd
 - prettyping + mtr + trippy
 - bat (maybe moar)
+- ov (pager, less)
 - tmux => ? zellij
 - fzf
 - fd
