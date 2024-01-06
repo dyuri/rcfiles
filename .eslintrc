@@ -1,4 +1,5 @@
 {
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module"
@@ -9,7 +10,8 @@
     "es6": true
   },
   "plugins": [
-    "html"
+    "html",
+    "@typescript-eslint"
   ],
   "globals": {
     "_": true
@@ -39,11 +41,16 @@
     "no-unreachable": 2,
     "use-isnan": 1,
     "valid-typeof": 2,
-
     "consistent-return": 1,
-    "curly": [2, "all"],
+    "curly": [
+      2,
+      "all"
+    ],
     "dot-notation": 1,
-    "eqeqeq": [2, "smart"],
+    "eqeqeq": [
+      2,
+      "smart"
+    ],
     "guard-for-in": 1,
     "no-alert": 1,
     "no-caller": 1,
@@ -80,12 +87,13 @@
     "no-with": 2,
     "radix": 2,
     "vars-on-top": 0,
-    "wrap-iife": [2, "any"],
+    "wrap-iife": [
+      2,
+      "any"
+    ],
     "yoda": 0,
-
     "global-strict": 0,
     "strict": 1,
-
     "no-catch-shadow": 1,
     "no-delete-var": 2,
     "no-label-var": 2,
@@ -96,11 +104,13 @@
     "no-undef-init": 1,
     "no-unused-vars": 1,
     "no-use-before-define": 1,
-
     "brace-style": 0, // [1, "1tbs", {"allowSingleLine": true}]
     "camelcase": 0,
     "comma-spacing": 0, // [1, {before: false, after: true}],
-    "comma-style": [1, "last"],
+    "comma-style": [
+      1,
+      "last"
+    ],
     "consistent-this": 0, // [1, "self"]
     "eol-last": 1,
     "func-names": 0,
@@ -114,7 +124,13 @@
     "no-mixed-spaces-and-tabs": 1,
     "no-nested-ternary": 0,
     "no-new-object": 2,
-    "semi-spacing": [1, { "before": false, "after": true }],
+    "semi-spacing": [
+      1,
+      {
+        "before": false,
+        "after": true
+      }
+    ],
     "no-spaced-func": 1,
     "no-ternary": 0,
     "no-trailing-spaces": 1,
@@ -124,8 +140,14 @@
     "one-var": 0,
     "padded-blocks": 0,
     "quotes": 0,
-    "quote-props": [1, "as-needed"],
-    "semi": [2, "always"],
+    "quote-props": [
+      1,
+      "as-needed"
+    ],
+    "semi": [
+      2,
+      "always"
+    ],
     "sort-vars": 0,
     "space-after-keywords": 0, // [1, "always"],
     "space-before-blocks": 0, // [1, "always"],

@@ -14,7 +14,8 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
   -- colorscheme
-  { "gruvbox-community/gruvbox" },
+  -- { "gruvbox-community/gruvbox" },
+  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, },
   { "sainnhe/gruvbox-material" },
 
   -- dashboard

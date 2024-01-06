@@ -2,9 +2,9 @@
 -- Appearance
 vim.o.background = "dark"
 vim.cmd("let g:gruvbox_material_palette = 'original'")
-vim.cmd("let g:gruvbox_material_background = 'hard'")
-vim.cmd("let g:gruvbox_contrast_dark = 'hard'")
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd("let g:gruvbox_material_background = 'medium'")
+vim.cmd("let g:gruvbox_contrast_dark = 'soft'")
+vim.cmd([[colorscheme gruvbox-material]])
 vim.opt.termguicolors = true
 vim.o.pumheight = 10 -- popup menu
 vim.o.cmdheight = 1  -- command menu

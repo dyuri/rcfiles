@@ -504,6 +504,7 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(**layout_cfg)
+floats_kept_above = True
 auto_fullscreen = True
 
 # wmname = "LG3D"

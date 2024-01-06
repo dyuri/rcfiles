@@ -35,7 +35,8 @@
 - termscp (scp)
 - croc - file transfer
 - dog <= drill (<= nslookup, dig)
-- jq => fx - json query
+- fx (<= jq) - json query
+- gron - json grep
 - jc - json convert
 - bitwise - bitwise calculator
 - theme.sh

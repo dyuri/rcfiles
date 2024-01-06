@@ -5375,3 +5375,13 @@
 2023-11-12 17:18:34		script: 365 scripts for WeeChat 4.1.1
 2023-11-12 17:18:34		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
 2023-11-12 17:25:00		python: scripts unloaded
+2023-12-14 09:26:13	×	python: script "/home/dyuri/rcfiles/weechat/python/autoload/weechat-matrix.py" not found
+2023-12-14 09:26:13		python scripts loaded: autosort
+2023-12-14 09:26:13		script: 365 scripts for WeeChat 4.1.1
+2023-12-14 09:26:13		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
+2023-12-14 09:30:42		python: scripts unloaded
+2023-12-28 11:20:27	×	python: script "/home/dyuri/rcfiles/weechat/python/autoload/weechat-matrix.py" not found
+2023-12-28 11:20:27		python scripts loaded: autosort
+2023-12-28 11:20:27		script: 365 scripts for WeeChat 4.1.1
+2023-12-28 11:20:27		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
+2023-12-28 11:23:17		python: scripts unloaded
