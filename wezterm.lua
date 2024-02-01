@@ -4,7 +4,7 @@ local act = wezterm.action
 local config = {}
 
 -- wayland
-config.enable_wayland = true
+config.enable_wayland = false -- TODO
 
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
@@ -16,11 +16,20 @@ end
 config.selection_word_boundary = ' {}[]()"\'`,;:|│'
 
 -- style
-config.color_scheme = 'Gruvbox dark, hard (base16)'
+-- config.color_scheme = 'Gruvbox dark, hard (base16)'
+config.color_scheme = 'GruvboxDarkHard'
+config.colors = {
+  foreground = '#ebdbb2',
+  background = '#282828',
+  cursor_bg = '#ebdbb2',
+  cursor_border = '#ebdbb2',
+  cursor_fg = '#282828',
+}
 config.window_background_opacity = 0.8
 config.font = wezterm.font_with_fallback {
   {
     family = 'Monaspace Neon',
+    weight = 200,
     harfbuzz_features = {
       'ss01=1',
       'ss02=1',

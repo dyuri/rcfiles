@@ -67,6 +67,8 @@
 - slides (https://github.com/maaslalani/slides) - md presentation
 - parcellite - clipboard manager widget
 - clipboard (https://github.com/Slackadays/clipboard) - custom clipboard manager
+- harlequin (https://harlequin.sh/) - sql client
+- kooha - screen recorder
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 
