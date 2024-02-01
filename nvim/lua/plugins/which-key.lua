@@ -55,5 +55,17 @@ local leader_mappings = {
     p = { ":lua vim.diagnostic.goto_prev()<cr>", "Previous diagnostic" },
     s = { ":lua vim.diagnostic.open_float()<cr>", "Show diagnostic" },
   },
+
+  -- Copilot chat
+  c = {
+    c = {
+      name = "Copilot Chat",
+      x = { ":CopilotChatInPlace<cr>", "Chat in-place" },
+      e = { ":CopilotChatExplain<cr>", "Explain" },
+      t = { ":CopilotChatTests<cr>", "Generate Test" },
+      r = { ":CopilotChatReview<cr>", "Review" },
+      R = { ":CopilotChatRefactor<cr>", "Refactor" },
+    },
+  },
 }
 wk.register(leader_mappings, { prefix = "<leader>" })
