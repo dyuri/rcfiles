@@ -19,5 +19,6 @@ IndentBlankLine.setup({
   },
   scope = {
     highlight = "IndentBlanklineContextChar",
+    show_start = false,
   },
 })

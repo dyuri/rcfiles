@@ -55,7 +55,9 @@ local leader_mappings = {
     p = { ":lua vim.diagnostic.goto_prev()<cr>", "Previous diagnostic" },
     s = { ":lua vim.diagnostic.open_float()<cr>", "Show diagnostic" },
   },
+}
 
+local copilot = {
   -- Copilot chat
   c = {
     c = {
@@ -68,4 +70,7 @@ local leader_mappings = {
     },
   },
 }
+
 wk.register(leader_mappings, { prefix = "<leader>" })
+wk.register(copilot, { prefix = "<leader>" })
+wk.register(copilot, { prefix = "<leader>", mode = "v" })
