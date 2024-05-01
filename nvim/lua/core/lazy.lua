@@ -174,6 +174,26 @@ local plugins = {
   -- garmin monkey-c
   { "klimeryk/vim-monkey-c" },
 
+  -- nushell
+  {
+    'LhKipp/nvim-nu',
+    config = function()
+      require('nu').setup({
+        use_lsp_features = false,
+      })
+    end,
+  },
+
+  -- markdown
+  {
+    'MeanderingProgrammer/markdown.nvim',
+    name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+        require('render-markdown').setup({})
+    end,
+  },
+
   -- copilot
   { "github/copilot.vim" },
   {

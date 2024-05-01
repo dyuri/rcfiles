@@ -4,7 +4,7 @@ local act = wezterm.action
 local config = {}
 
 -- wayland
-config.enable_wayland = false -- TODO
+config.enable_wayland = true
 
 -- In newer versions of wezterm, use the config_builder which will
 -- help provide clearer error messages
@@ -29,7 +29,7 @@ config.window_background_opacity = 0.8
 config.font = wezterm.font_with_fallback {
   {
     family = 'Monaspace Neon',
-    weight = 200,
+    weight = 300,
     harfbuzz_features = {
       'ss01=1',
       'ss02=1',

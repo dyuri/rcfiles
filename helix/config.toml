@@ -1,0 +1,31 @@
+theme = "gruvbox"
+
+[editor]
+line-number = "relative"
+bufferline = "multiple"
+true-color = true
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["version-control", "diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "|"
+
+[editor.whitespace]
+render = "all"
+
+[editor.indent-guides]
+render = true
+skip-levels = 1
+character = "╎"
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 20
+wrap-indicator = ""

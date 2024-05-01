@@ -1,0 +1,290 @@
+ls
+ps -ef
+ps
+ps | where cpu > 1
+htop
+ps | where cpu > 1
+1 + 1
+feh alma/kishaz_villany.jpg
+ls
+cd alma
+cd ..
+ls
+ls -lta
+ls -ltra
+ll
+lsd
+exa
+exa -ltra
+exa -lt
+ls -l
+exa -l
+exa -lt
+ls | sort-by modified
+ls | sort-by modified | reverse
+ls -a | sort-by modified | reverse
+/bin/ls -ltar
+/bin/ls -lta
+cat .bash_logout
+bash
+date
+date now
+date humanize 
+date now | date humanize 
+sys
+sys | get host
+sys | get host.sessien
+sys | get host.session
+sys | get host.sessions
+sys | get host.sessions.name
+sys | get host
+sys | get host.sessions.name | echo
+sys | get host.sessions.name
+sys | get host.sessions.name | each { |it| echo $it }
+sys | get host.sessions.name | each { |it| ^echo $it }
+^echo cica
+echo cica
+^echo $HOME
+^echo $env.HOME
+echo $env.HOME
+ls
+^ls
+^ls -ltra
+ls *.png
+^ls *.png
+ls | length
+ls | wc -l
+ls *.png | wc -l
+ls *.png
+ls *.png | length
+ls *.png | each { |it| ^echo $it }
+ls *.png | get name | each { |it| ^echo $it }
+"12" | into int | + 2
+"12" | into int | math sum 2
+"12" | into int | math sum
+help math sum
+ls *json
+cat images.json
+cat images.json| echo
+cat images.json| select image
+cat images.json| select images
+images.json | select images
+images.json | get images
+cat images.json | get images
+read images.json
+open images.json| get images
+open images.json| get images | select image
+open images.json| get images | select image, thumbnail
+open images.json| get images.image
+open images.json
+open images.json | get images
+open images.json | get images | get image
+open images.json | get images | select image
+config env --default | nu-highlight | lines
+config env --default | nu-highlight | lines | bat
+config env --default | bat
+config env --default | nu-highlight | bat
+config nu --default | nu-highlight | bat
+$nu.default-config-dir
+ls .config/nushell/
+config nu
+$env | reject config | transpose key val | each {|r| echo $"$env.($r.key) = '($r.val)'"} | str join (char nl)<\n>
+config nu
+config env
+$env | reject config | transpose key val | each {|r| echo $"$env.($r.key) = '($r.val)'"} | str join (char nl)<\n>
+$env.PATH
+which
+which rustup
+which rust
+which rustc
+$env.PATH
+which java
+java -version
+vim .xonshrc
+go-repamotd
+sudo btrfs subvolume list / | grep root
+sudo btrfs subvolume delete _snapshots/root_snaps/21355/snapshot _snapshots/root_snaps/21354/snapshot _snapshots/root_snaps/21353/snapshot _snapshots/root_snaps/21352/snapshot
+sudo btrfs subvolume delete _snapshots/root_snaps/21355/snapshot 
+sudo btrfs subvolume list / | grep root
+sudo btrfs subvolume list / | grep root | head 20
+sudo btrfs subvolume list / | grep root | head -20
+sudo btrfs subvolume delete _snapshots/root_snaps/1/snapshot
+sudo btrfs subvolume delete .snapshots/1
+cd .snapshots/
+sudo btrfs subvolume delete 1
+ls
+sudo btrfs subvolume list .
+sudo btrfs subvolume delete 1/snapshot
+sudo btrfs subvolume delete 2/snapshot
+sudo btrfs subvolume delete 3/snapshot
+ls
+ls 3
+ls 2
+ls 4
+ls
+ls 4205
+sudo btrfs subvolume delete ./4205/snapshot/
+rm -rf 1 2 3 4205/
+sudo rm -rf 1 2 3 4205/
+ls
+duf
+ls
+snapper
+snapper list-configs
+snapper -c root list
+sudo snapper -c root list
+sudo snapper -c root delete 12913
+sudo snapper -c root list
+sudo snapper -c root delete 16125-20286
+sudo snapper -c root list
+config env
+nvim .xonshrc
+ls
+vim .xonshrc
+ls
+nvim .xonshrc
+ls
+ls -ltar
+ll
+exa
+exa -lt
+exa -l -snew
+ll
+ls -h
+ls -la
+ls -la | sort-by modified
+ls -la | sort-by modified | reverse
+ls -la | sort-by modified
+ls -l | sort-by modified
+ls | sort-by modified
+ls
+yay -S oh-my-posh
+oh-my-posh get nu
+oh-my-posh get shell
+cd .config/nushell/
+oh-my-posh init nu
+ls
+cd
+ls -l | sort-by modified
+ls -al | sort-by modified
+cat .oh-my-posh.nu
+mv .oh-my-posh.nu .config/nushell/oh-my-posh.nu
+source ~/.config/nushell/oh-my-posh.nu
+ls
+vim .config/nushell/env.nu
+nvim .config/nushell/env.nu .config/nushell/config.nu
+ls
+echo cic
+echo $cic
+kitty -e nu
+pacman -Ss glibc
+ls
+go-repamotd 
+vim
+ls
+ssh icesus
+vim .config/nushell/env.nu
+ssh icesus
+which repassh
+ssh icesus
+ls
+which node
+which python
+py
+xonsh
+file mafia_code
+cat mafia_code
+rm mafia_code
+cat wifi.ansi
+starship
+starship prompt
+ls
+cd .config
+ls
+ls -al | sort-by modified
+cd
+wezterm -e bash
+ls
+cd nushell/
+ls
+cat history.txt
+oh-my-posh config export --output repa.omp.json
+vim repa.omp.json
+ls ~/.config/omf/
+vim config/nushell/oh-my-posh.nu
+oh-my-posh
+oh-my-posh print
+oh-my-posh print primary
+oh-my-posh print primary -c ~/.config/nushell/repa.omp.json
+starship prompt
+oh-my-posh print primary -c ~/.config/nushell/repa.omp.json
+ssh icesus
+ssh localhost
+starship prompt
+oh-my-posh print primary -c ~/.config/nushell/repa.omp.json
+starship prompt
+oh-my-posh print primary -c ~/.config/nushell/repa.omp.json
+oh-my-posh print
+oh-my-posh print right -c ~/.config/nushell/repa.omp.json
+oh-my-posh print primary -c ~/.config/nushell/repa.omp.json
+vim .config/starship.toml
+ls
+z go-repamotd
+ls
+cd egyeb
+ls
+cd go-repamotd/
+ls
+starship prompt
+touch cica.txt
+git add cica.txt
+git reset .
+git st
+rm cica.txt
+cd ..
+ls
+cd /usr
+ls
+cd share/
+ls
+cd wayland/
+ls
+cd ..
+ls
+cd java/
+ls
+cd archlinux-java-run/
+ls
+cd /usr/lib/X11/
+ls
+cd x11perfcomp/
+ls
+cd ..
+cd 
+cd egyeb/
+ls
+cd prog/
+ls
+rm -rf unladen-swallow/
+ls -l | sort-by modified
+cd go
+ls
+cd src
+ls
+cd github.com/
+ls
+cd shirou/
+ls
+cd gopsutil/
+ls
+cd cpu
+ls
+cd testdata/
+ls
+cd ..
+vim repa.omp.json
+jj st
+git st
+cd ..
+ls
+git st

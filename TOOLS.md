@@ -64,11 +64,13 @@
 - ttyd - share terminal over web
 - andcli - (+ aegis) 2FA TOTP
 - popsicle - pendrive iso
-- slides (https://github.com/maaslalani/slides) - md presentation
+- slides (https://github.com/maaslalani/slides) - markdown presentation
 - parcellite - clipboard manager widget
 - clipboard (https://github.com/Slackadays/clipboard) - custom clipboard manager
 - harlequin (https://harlequin.sh/) - sql client
 - kooha - screen recorder
+- toolong - log viewer/merger
+- netscanner - scan local networks
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 
@@ -88,6 +90,8 @@ pikaur -S neovim ripgrep fd bat tmux exa wezterm rofi-emoji glances gotop figlet
 ## Python
 
 - rich
+- ruff
+- rye
 
 ## Notes
 

@@ -5385,3 +5385,20 @@
 2023-12-28 11:20:27		script: 365 scripts for WeeChat 4.1.1
 2023-12-28 11:20:27		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
 2023-12-28 11:23:17		python: scripts unloaded
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 137: ignoring unknown option for section "server_default": anti_flood_prio_high = 2
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 138: ignoring unknown option for section "server_default": anti_flood_prio_low = 2
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 218: ignoring invalid value for option in section "server": localnet.anti_flood_prio_high
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 219: ignoring invalid value for option in section "server": localnet.anti_flood_prio_low
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 264: ignoring invalid value for option in section "server": oftc.anti_flood_prio_high
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 265: ignoring invalid value for option in section "server": oftc.anti_flood_prio_low
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 310: ignoring invalid value for option in section "server": libera.anti_flood_prio_high
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 311: ignoring invalid value for option in section "server": libera.anti_flood_prio_low
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 356: ignoring invalid value for option in section "server": zlibera.anti_flood_prio_high
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 357: ignoring invalid value for option in section "server": zlibera.anti_flood_prio_low
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 402: ignoring invalid value for option in section "server": zoftc.anti_flood_prio_high
+2024-03-05 17:15:41	×	Warning: /home/dyuri/.weechat/irc.conf, line 403: ignoring invalid value for option in section "server": zoftc.anti_flood_prio_low
+2024-03-05 17:15:41	×	python: script "/home/dyuri/rcfiles/weechat/python/autoload/weechat-matrix.py" not found
+2024-03-05 17:15:41		python scripts loaded: autosort
+2024-03-05 17:15:41		script: 365 scripts for WeeChat 4.2.1
+2024-03-05 17:15:41		Plugins loaded: alias, buflist, charset, exec, fifo, fset, guile, irc, logger, lua, perl, python, relay, ruby, script, spell, trigger, typing, xfer
+2024-03-05 17:16:38		python: scripts unloaded
