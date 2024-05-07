@@ -868,3 +868,14 @@ $env.config = {
 # oh-my-posh
 source ~/.config/nushell/oh-my-posh.nu
 
+# zoxide
+source ~/.config/nushell/zoxide.nu
+
+# atuin
+source ~/.config/nushell/atuin.nu
+source ~/.config/nushell/atuin.comp.nu
+
+# direnv
+$env.config.hooks.env_change.PWD = (
+  $env.config.hooks.env_change.PWD | append (source ~/.config/nushell/direnv.nu)
+)

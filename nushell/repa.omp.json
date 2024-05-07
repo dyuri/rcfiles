@@ -13,7 +13,7 @@
           "style": "powerline",
           "foreground": "p:black",
           "background": "p:green",
-          "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }} "
+          "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .HostName }} "
         },
         {
           "type": "path",
@@ -70,12 +70,9 @@
           "style": "diamond",
           "foreground": "p:green",
           "foreground_templates": [
-            "{{ if gt .Code 0 }}p:white{{ end }}"
+            "{{ if gt .Code 0 }}p:red{{ end }}"
           ],
           "background": "p:gray2",
-          "background_templates": [
-            "{{ if gt .Code 0 }}p:dark_red{{ end }}"
-          ],
           "leading_diamond": "",
           "trailing_diamond": "\ue0b0",
           "template": " {{ if gt .Code 0 }}\uf00d{{ else }}\uf00c{{ end }} ",
@@ -94,7 +91,7 @@
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "<transparent,background>\ue0b2",
           "foreground": "p:purple",
-          "background": "p:gray1",
+          "background": "p:gray0",
           "template": " \ue718 ",
           "properties": {
             "display_mode": "files",
@@ -108,7 +105,7 @@
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "<transparent,background>\ue0b2",
           "foreground": "p:cyan",
-          "background": "p:gray1",
+          "background": "p:gray0",
           "template": " \ue626 ",
           "properties": {
             "fetch_version": false
@@ -120,12 +117,24 @@
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "<transparent,background>\ue0b2",
           "foreground": "p:yellow",
-          "background": "p:gray1",
+          "background": "p:gray0",
           "template": " \ue235 ",
           "properties": {
             "display_mode": "files",
             "fetch_version": false,
             "fetch_virtual_env": false
+          }
+        },
+        {
+          "type": "executiontime",
+          "style": "diamond",
+          "leading_diamond": "\ue0b2",
+          "trailing_diamond": "<transparent,background>\ue0b2",
+          "foreground": "p:yellow",
+          "background": "p:gray1",
+          "properties": {
+            "threshold": 500,
+            "style": "round"
           }
         },
         {
@@ -175,12 +184,12 @@
   "transient_prompt": {
     "foreground": "p:black",
     "background": "transparent",
-    "template": "<p:yellow,transparent>\ue0b6</><,p:yellow> {{ .Folder }} </><p:yellow,transparent>\ue0b0</> "
+    "template": "<,p:yellow> {{ .Folder }} </><p:yellow,transparent>\ue0b0</> "
   },
   "secondary_prompt": {
     "foreground": "p:black",
     "background": "transparent",
-    "template": "<p:yellow,transparent>\ue0b6</><,p:yellow> > </><p:yellow,transparent>\ue0b0</> "
+    "template": "<,p:blue> > </><p:blue,transparent>\ue0b0</> "
   },
   "palette": {
     "black": "#1d1f21",

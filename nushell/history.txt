@@ -288,3 +288,310 @@ git st
 cd ..
 ls
 git st
+git add .
+git ci -m "nushell"
+git push
+ls
+ssh icesus
+getent hosts icesus
+which zellij
+zellij
+ssh icesus
+xonsh
+andcli
+rm alma/23_BOOKLET_ZIPSCENE.pdf.crdownload
+ssh icesus
+inkscape zip-date-2023.svg
+ls -ltra
+ls 
+mv zip-date-2023.svg zip-date-2024.svg
+scp zip-date-2024.svg icesus:
+vim config/nushell/env.nu
+cd 
+cd bin
+(which repassh)
+ln -s scp (which repassh)
+ln -s scp (which repassh).path
+ln -s scp (which repassh).0.path
+ln -s (which repassh).0.path scp
+scp zip-date-2024.svg icesus:
+ssh icesus
+lsz
+ls
+cat starship.sh
+rm starship.sh
+hostname
+vim config/nushell/oh-my-posh.nu
+vim config/nushell/repa.omp.json
+getent hosts conf.zip-scene.com
+ssh bubble
+ssh bubi
+ls
+cd config/nushell/
+ls
+vim env.nu
+vim config.nu
+zoxide init nu
+zoxide init nushell
+zoxide init nushell > zoxide.nu
+zoxide init nushell | save zoxide.nu
+ls
+z go-repamot
+vim repa.omp.json
+ls
+vim repa.omp.json
+git st
+z 3
+cd -
+z 3body
+ls
+z hu-go
+ls
+cd content/posts/jj
+ls
+ssh icesus
+slides jj-slides.md
+mpv '3.Body.Problem.S01.COMPLETE.720p.NF.WEBRip.x264-GalaxyTV[TGx]/3.Body.Problem.S01E08.720p.NF.WEBRip.x264-GalaxyTV.mkv'
+ls
+ls '3.Body.Problem.S01.COMPLETE.720p.NF.WEBRip.x264-GalaxyTV[TGx]/'
+mv 1x7 1x8
+rm -rf '3.Body.Problem.S01.COMPLETE.720p.NF.WEBRip.x264-GalaxyTV[TGx]/'
+ssh icesus
+ssh bubi
+ls
+which atuin
+yay -S autin
+yay -S autin-git
+yay -Ss atuin
+yay -S atuin
+atuin
+z config/nushell/
+ls
+atuin init nu | save atuin.nu
+source atuin.nu
+ls
+vim config.nu
+cd
+vim .config/atuin/config.toml
+ps | where name = atuin
+ps
+ps | where name == atuin
+ps | where name == chrome
+^ps | grep atuin
+ssh icesus
+atuin stats
+atuin gen-completions
+atuin gen-completions --shell nushell
+cd config/nushell/
+ls
+zoxide -h
+atuin gen-completions --shell nushell | save atuin.comp.nu
+vim config.nu
+atuin help sync 
+atuin info 
+ssh icesus
+ls
+z RepaMap
+ls
+code .
+nautilus .
+z RepaMap
+vim TODO.md
+z torrent/Videos
+mkdir swtales
+cd swtales/
+ls
+rtorrent magnet:?xt=urn:btih:8220CA02D74221DDF90CA3E4D4C6D2036DD6A2C2&dn=Star.Wars.Tales.of.the.Empire.S01.COMPLETE.720p.DSNP.WEBRip.x264-GalaxyTV&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+z RepaMap
+code .
+vim TODO.md
+which direnv
+direnv
+yay -Ss direnv
+yay -S direnv
+z RepaMap
+ls ..
+cat ../.enter.xsh
+direnv
+andcli
+z torrent/Videos
+ls
+ls -ltra
+rm archlinux-2018.07.01-x86_64.iso
+ls | sort-by modified
+cd swtales/
+ls
+rm *meta
+ls
+ls -ltra
+vim config/hypr/hyprland.conf
+cat bin/wl-screenshot
+cp bin/wl-screenshot bin/wl-screenshot-full
+cd bin
+cp wl-screenshot ~/config/bin/
+vim wl-screenshot-full
+cd
+vim config/hypr/hyprland.conf
+mpv 'Star.Wars.Tales.of.the.Empire.S01.COMPLETE.720p.DSNP.WEBRip.x264-GalaxyTV[TGx]/Star.Wars.Tales.of.the.Empire.S01E01.720p.DSNP.WEBRip.x264-GalaxyTV.mkv'
+touch 1x1
+ls
+mpv 'Star.Wars.Tales.of.the.Empire.S01.COMPLETE.720p.DSNP.WEBRip.x264-GalaxyTV[TGx]/Star.Wars.Tales.of.the.Empire.S01E02.720p.DSNP.WEBRip.x264-GalaxyTV.mkv'
+mv 1x1 1x2
+ls
+mpv 'Star.Wars.Tales.of.the.Empire.S01.COMPLETE.720p.DSNP.WEBRip.x264-GalaxyTV[TGx]/Star.Wars.Tales.of.the.Empire.S01E03.720p.DSNP.WEBRip.x264-GalaxyTV.mkv'
+icat alma/kishaz_vazlat.jpg
+bin/icat
+vim .xonshrc
+wezterm imgcat alma/kishaz_vazlat.jpg
+wezterm imgcat alma/kishaz_villany.jpg
+mpv 'Star.Wars.Tales.of.the.Empire.S01.COMPLETE.720p.DSNP.WEBRip.x264-GalaxyTV[TGx]/Star.Wars.Tales.of.the.Empire.S01E04.720p.DSNP.WEBRip.x264-GalaxyTV.mkv'
+mv 1x2 1x4
+ssh icesus
+wezterm imgcat alma/kishaz_villany.jpg
+z torrent/Videos
+ls
+cd swvisions/
+ls
+cd ..
+exa -l -snew
+cd swtales
+ls
+mpv 'Star.Wars.Tales.of.the.Empire.S01.COMPLETE.720p.DSNP.WEBRip.x264-GalaxyTV[TGx]/Star.Wars.Tales.of.the.Empire.S01E05.720p.DSNP.WEBRip.x264-GalaxyTV.mkv'
+mv 1x4 1x5
+ls
+mpv 'Star.Wars.Tales.of.the.Empire.S01.COMPLETE.720p.DSNP.WEBRip.x264-GalaxyTV[TGx]/Star.Wars.Tales.of.the.Empire.S01E06.720p.DSNP.WEBRip.x264-GalaxyTV.mkv'
+mv 1x5 1x6
+ls 'Star.Wars.Tales.of.the.Empire.S01.COMPLETE.720p.DSNP.WEBRip.x264-GalaxyTV[TGx]/'
+rm -rf 'Star.Wars.Tales.of.the.Empire.S01.COMPLETE.720p.DSNP.WEBRip.x264-GalaxyTV[TGx]/'
+z RepaMap
+ls
+code .
+vim TODO.md
+jj st
+jj describe -m "properties"
+jj git push
+ssh icesus
+$env.GIT_SSH
+xonsh
+repassh
+repassh -h
+ls
+z torrent/Videos
+ls | sort-by modified
+ls bodies
+cd fallout
+ls
+ls 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/'
+mpv 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/Fallout.2024.S01E01.720p.AMZN.WEBRip.x264-GalaxyTV.mkv'
+touch 1x1
+ls
+mpv 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/Fallout.2024.S01E02.720p.AMZN.WEBRip.x264-GalaxyTV.mkv'
+ls
+ls -ltra
+mv 1x1 1x2
+vim .xonshrc
+cd egyeb/xonsh/xontrib-ssh-agent/
+ls
+vim xontrib/ssh_agent.xsh
+cd ..
+cd repassh/
+ls
+ssh-agent -h
+ps -ef | grep ssh
+ps | grep ssh
+ps | grep ssh-agent
+ps | find name=ssh-agent
+ps
+ps | head 1
+ps | head -1
+ps | head -2
+ps | find name = 'ssh-agent'
+^ps -ef | grep ssh-agent
+repassh
+python -m repassh repassh.get_agent_file()
+python
+ssh-add -l
+vim repassh/ssh.py
+$nu.temp-path
+$nu.temp-path | path join $"ssh-agent($env.USER)"
+cd
+ls -ltra
+exa -l -snew
+exa -la -snew
+rm zip-date-2024.svg
+ls -l .config/repassh/
+vim .config/repassh//config.json
+keychain
+xonsh
+id
+$env.USER
+$env.UID
+$env
+vim config/hypr/hyprland.conf
+ssh icesus
+vim config/hypr/hyprland.conf
+ps | find name = 'ssh-agent'
+ssh-agend -D
+ls -l /run/user/1000/ssh-agent.socket
+$env.XDG_RUNTIME_DIR
+$env.WAYLAND_DISPLAY
+$env.SSH_AUTH_SOCK
+ps | find name = 'ssh-agent'
+ssh icesus
+ls -ltra
+ls -la
+ls -la | sort-by modified
+killall ssh-agent
+rm SSH_AUTH_SOCK
+ls
+ls -la | sort-by modified
+vim config/hypr/hyprland.conf
+$env.SSH_AUTH_SOCK
+ssh icesus
+yay -S direnv
+direnv
+z garmin
+which simulator
+ls
+cat .enter.xsh
+vim .envrc
+rm -rf config.hg/
+vim config/nushell/direnv.nu
+vim config/nushell/config.nu
+vim config/nushell/direnv.nu
+vim config/nushell/config.nu
+z garmin
+direnv allow
+z garmin
+vim .bashrc
+broot
+z garmin
+vim .envrc
+cd ..
+cd garmin
+direnv allow
+cd ..
+cd garmin
+$env.GARMIN
+ls
+cd tmp
+cd ..
+cd tmp
+cd ../..
+cd garmin
+vim .envrc .enter.xsh
+cd ..
+cd garmin
+direnv allow
+cd ..
+cd garmin
+$env.PATH
+vim .envrc
+z garmin
+direnv allow
+cd .
+cd ..
+cd garmin
+simulator
+cd config
+git st
