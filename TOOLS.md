@@ -30,7 +30,7 @@
 - vhs (programmed) OR asciinema + svg-term-cli OR terminalizer
 - pastel (https://github.com/sharkdp/pastel) -> repacolors
 - direnv
-- vifm => nnn
+- vifm => nnn | spf (superfile) ?
 - repassh
 - termscp (scp)
 - croc - file transfer

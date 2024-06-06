@@ -90,7 +90,7 @@ vim.o.showcmd = true
 
 -- Whitespaces
 vim.opt.list = false
-vim.opt.listchars = { tab = "▸ ", eol = "¬", trail = "⋅", extends = "❯", precedes = "❮" }
+vim.opt.listchars = { tab = "▸ ", eol = "¬", trail = "⋅", extends = "❯", precedes = "❮", nbsp = "␣" }
 vim.opt.showbreak = "↪"
 vim.opt.fillchars = { eob = "-", fold = " " }
 

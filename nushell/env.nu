@@ -110,7 +110,7 @@ $env.FZF_DEFAULT_OPTS = '--color 'bg:0,bg+:2,fg:8,fg+:15,hl:10,hl+:11,prompt:11,
 $env.GIT_SSH = '/home/dyuri/.local/bin/repassh'
 $env.GOPATH = '/home/dyuri/egyeb/prog/go'
 $env.JAVA_HOME = '/usr/lib/jvm/default'
-$env.LD_LIBRARY_PATH = '/lib:/lib:/lib:/usr/lib/jvm/default/lib/:/usr/lib/jvm/default/lib/server/'
+# $env.LD_LIBRARY_PATH = ':/lib:/usr/lib/jvm/default/lib/:/usr/lib/jvm/default/lib/server/'
 $env.LS_OPTIONS = ' --color=auto -F -b -T 0'
 $env.NODENV_ROOT = '/home/dyuri/.nodenv'
 $env.NPM_PACKAGES = '/home/dyuri/.npm'
@@ -125,7 +125,7 @@ $env.XCURSOR_SIZE = '24'
 
 # update path
 use std *
-path add ($env.HOME | path join "bin") ($env.HOME | path join ".local" "bin") ($env.GOPATH | path join "bin") ($env.NPM_PACKAGES | path join "bin") ($env.PYENV_ROOT | path join "bin") ($env.PYENV_ROOT | path join "shims") ($env.NODENV_ROOT | path join "bin") ($env.NODENV_ROOT | path join "shims") ($env.JAVA_HOME | path join "bin")
+path add ($env.HOME | path join "bin") ($env.HOME | path join ".local" "bin") ($env.HOME | path join ".cargo" "bin") ($env.GOPATH | path join "bin") ($env.NPM_PACKAGES | path join "bin") ($env.PYENV_ROOT | path join "bin") ($env.PYENV_ROOT | path join "shims") ($env.NODENV_ROOT | path join "bin") ($env.NODENV_ROOT | path join "shims") ($env.JAVA_HOME | path join "bin")
 
 # aliases
 alias bible = shuf -n1 ~/txt/bible.txt

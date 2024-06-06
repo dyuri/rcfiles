@@ -130,7 +130,7 @@
           "style": "diamond",
           "leading_diamond": "\ue0b2",
           "trailing_diamond": "<transparent,background>\ue0b2",
-          "foreground": "p:yellow",
+          "foreground": "p:cyan",
           "background": "p:gray1",
           "properties": {
             "threshold": 500,
@@ -182,9 +182,9 @@
     }
   ],
   "transient_prompt": {
-    "foreground": "p:black",
+    "foreground": "p:green",
     "background": "transparent",
-    "template": "<,p:yellow> {{ .Folder }} </><p:yellow,transparent>\ue0b0</> "
+    "template": "<,p:gray2> {{ .Segments.Path.Path }} </><p:gray2,transparent>\ue0b0</> "
   },
   "secondary_prompt": {
     "foreground": "p:black",

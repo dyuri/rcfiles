@@ -595,3 +595,1810 @@ cd garmin
 simulator
 cd config
 git st
+git add .
+git ci -m "nushell - direnv, zoxide, atuin"
+git push
+ls
+echo 11
+ls
+cd alma
+ls
+cd ..
+ls
+echo cica
+ls | sort-by modified | head 1
+ls | sort-by modified | limit 1
+ls | sort-by modified | first 2
+ls | sort-by modified | last 2
+cd alma
+echo cica
+cd ..
+cd config
+ls
+ls | sort-by modified | last 2
+cd ..
+ls
+ls | sort-by modified | last 2
+echo cica
+cd alma
+ls | sort-by modified | last 2
+rm `Bevezeto�%8B a passzi�%81vha�%81zak vila�%81ga�%81ba.pdf`
+rm Bevez*
+bash
+ls | sort-by modified | last 2
+cd ..
+echo cica
+vim .config/nushell/repa.omp.json
+z garmin
+connectiq
+z RepaMap
+ls
+code .
+ssh icesus
+ls alma | sort-by modified
+evince alma/ertesites_adobevallasi_tervezetrol_e.pdf
+rm alma/ertesites_adobevallasi_tervezetrol_e.pdf
+jj st
+vim TODO.md
+jj st
+jj git push
+jj new -m "layout fixes"
+jj branch set main
+jj st
+jj git push
+jj new -m "background"
+jj branch set main
+jj st
+vim TODO.md
+jj st
+jj git push
+jj new -m "hires watches"
+jj branch set main
+jj git push
+jj new
+jj branch set main
+cd export/
+ls ~/alma | sort-by modified
+mv ~/alma/IMG_20240504_100725647.jpg .
+resize IMG_20240504_100725647.jpg -scale 1440x hero.jpg
+convert -resize IMG_20240504_100725647.jpg -scale 1440x hero.jpg
+convert resize IMG_20240504_100725647.jpg -scale 1440x hero.jpg
+convert IMG_20240504_100725647.jpg -resize 1440x hero.jpg
+ls | sort-by modified | last 2
+file hero.jpg
+gimp hero.jpg
+z RepaMap
+vim TODO.md
+jj log
+jj
+jj st
+jj config set --user ui.default-command st
+jj
+jj log
+jj log -l 10
+jj help log
+jj log --git
+git log
+jj log -h
+jj log -R .
+jj log -r .
+jj log -r @
+jj log --reversed
+nautilus .
+z RepaMap
+jj log
+cd ..
+fd manifest.xml
+cat SimpleDataField/manifest.xml | grep id
+cat RepaMapOverlay/manifest.xml | grep id
+cat ConnectIQ/Sdks/connectiq-sdk-lin-7.1.0_RC2-2024-02-14-4a71df847/bin/templates/datafield/simple/manifest.xml | grep id
+cat ConnectIQ/Sdks/connectiq-sdk-lin-7.1.0_RC2-2024-02-14-4a71df847/samples/SimpleDataField/manifest.xml | grep id
+cd RepaMapOverlay/
+jj log -r '@ | root() | branches()'
+jj log -r '@ | root()'
+jj log -r '@::'
+jj log -r '::@'
+vim TODO.md
+jj st
+code .
+nautilus .
+andcli
+bin/screenrecord.sh
+vim bin/screenrecord.sh
+ls bin
+vim config/bin/screenrecord.sh
+yay -S wl-screenrec
+vim config/bin/wl-screenrecord.sh
+cd 
+cd bin
+rm screenrecord.sh
+ln -s ~/config/bin/wl-screenrecord.sh screenrecord.sh
+screenrecord.sh
+chmod +x config/bin/wl-screenrecord.sh
+screenrecord.sh
+ls -ltra
+ls | sort-by modified | last 2
+mpv screenrecord.mp4
+rm screenrecord.mp4
+screenrecord.sh
+mpv screenrecord.mp4
+ssh icesus
+evince `alma/Útitárs Casco évfordulós levél.pdf`
+z RepaMap
+ls
+code .
+vim TODO.md
+1.6 * .62
+code .
+jj st
+jj diff
+vim TODO.md
+jj st
+jj diff
+ls
+vim TODO.md
+cd export
+ls ~/Pictures/Screenshots/satty-20240508-20:39:50.png
+wezterm imgcat ~/Pictures/Screenshots/satty-20240508-20:39:50.png
+convert ~/Pictures/Screenshots/satty-20240508-20:39:50.png -resize 500x screen2.jpg
+ls -ltra
+ls | sort-by modified | last 2
+file screen2.jpg
+wezterm imgcat screen2.jpg
+vim config/nushell/repa.omp.json
+vim config/hypr/hyprland.conf
+vim config/nushell/config.nu
+ssh icesus
+z torrent/Videos
+ls
+rm neverhood.iso
+cd fallout/
+ls
+docker-compose
+which docker
+docker --help
+cd egyeb
+mkdir wanderer
+cd wanderer
+cd ..
+rm -rf wanderer/
+git clone git@github.com:Flomp/wanderer.git
+go-repamotd 
+cd wanderer
+lz
+ls
+docker-compose up
+podman compose .
+podman compose up
+systemctl status podman
+sudo podman compose up
+sudo docker-compose up
+vim docker-compose.yml
+sudo docker-compose up
+vim docker-compose.yml
+sudo podman network create wanderer
+sudo docker-compose up
+vim docker-compose.yml
+sudo docker-compose up
+sudo podman network delete wanderer
+sudo podman network --help
+sudo podman network rm wanderer
+cat docker-compose.yml
+git st
+git restore .
+ls
+ls db
+ls
+vim docker-compose.yml
+telnet localhost 7700
+sudo docker-compose up
+vim docker-compose.yml
+sudo docker-compose up
+ls
+vim docker-compose.yml
+ls
+ls data
+ls
+cd ..
+rm -rf wanderer
+sudo rm -rf wanderer/
+mkdir wanderer
+cd wanderer
+cd ..
+rmdir wanderer/
+git clone git@github.com:Flomp/wanderer.git
+cd wanderer/
+ls
+node -version
+node -v
+ls search
+cd search/
+ls
+cat Dockerfile
+cat entrypoint.sh
+yay -S meili
+cd ..
+mkdir wanderer-test
+mv wanderer-test wanderer
+cd wanderer/
+mv ~/alma/meilisearch-linux-amd64 ./meilisearch
+./meilisearch
+chmod +x meilisearch
+./meilisearch
+./meilisearch --import-dump wanderer/search/migrations/migration.dump
+rm data.ms/ -rf
+./meilisearch --import-dump wanderer/search/migrations/migration.dump
+ls
+cd ..
+ls
+^ls -ltra
+ls wanderer/
+mv wanderer/wanderer-test .
+mv wanderer wanderer-test/
+cd wanderer-test/
+mv wanderer/meilisearch .
+z wanderer
+ls
+cd wanderer/
+ls
+cd db
+ls
+go mod tidy
+go build
+./meilisearch --import-dump wanderer/search/migrations/migration.dump
+ls
+cd ..
+cd web/
+ls
+npm ci --omit=dev
+npm run build
+npm ci
+npm run build
+cat ../docker-compose.yml
+$env.PUBLIC_VALHALLA_URL = "https://valhalla1.openstreetmap.de"
+npm run build
+cd ..
+ls
+zellij -s wanderer
+zellij
+$env.PATH
+mpv 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/Fallout.2024.S01E03.720p.AMZN.WEBRip.x264-GalaxyTV.mkv'
+ls
+mv 1x2 1x3
+vim ~/config/nushell/env.nu
+z wanderer
+ls
+cd ..
+ls
+vim .envrc
+cd ..
+cd -
+direnv allow
+cd ..
+cd -
+./meilisearch --master-key $env.MEILI_MASTER_KEY
+ls
+./wanderer/db/pocketbase serve
+cd wanderer/db
+ls
+cd ..
+cd web
+ls
+cd build
+ls
+node build
+node index.js
+cd ..
+ls
+rg MASTER_KEY
+./pocketbase serve
+$env.MEILI_MASTER_KEY
+./pocketbase serve
+$env.PUBLIC_DISABLE_SIGNUP = false
+node build
+ls
+cd build
+ls
+node index.js -h
+node index.js --help
+vim index.js
+$env.HOST = localhost
+node index.js
+$env.HOST = 127.0.0.1
+ssh icesus
+node index.js
+cd ..
+ls
+npm run dev
+$env.PUBLIC_VALHALLA_URL = "https://valhalla1.openstreetmap.de"
+cat wanderer/docker-compose.yml
+go-repamotd 
+podman list images
+podman images list
+sudo podman images list
+sudo podman images ls
+sudo podman images
+podman images rm docker.io/flomp/wanderer-web
+sudo podman images -h
+sudo podman image rm docker.io/flomp/wanderer-web
+sudo podman container ls
+sudo podman container ls a-
+sudo podman container ls -a
+sudo podman container rm wanderer-search wanderer-db wanderer-web
+sudo podman image rm docker.io/flomp/wanderer-web
+sudo podman image rm docker.io/flomp/wanderer-db
+sudo podman image rm docker.io/flomp/wanderer-search
+ls
+cd wanderer/
+ls
+cd web
+ls
+rg gpx
+ls
+ls src
+vim src/routes/trails/
+ls
+cd src
+rg gpx
+vim routes/api/v1/trail/upload/+server.ts
+fd gpx_util
+vim lib/util/gpx_util.ts
+rm alma/_Munk_b_l_haza_Hszi_Csi_NemPing.gpx
+ssh icesus
+z wanderer
+ls
+cd wanderer/
+ls
+cd db
+ls
+rg upload
+rg gpx
+vim meilisearch.go
+cd ..
+ls
+cd web
+ls
+cd src
+ls
+cat app.html
+cd ..
+cd -
+ls
+cd routes/api/v1/trail/
+ls
+vim upload/+server.ts
+cd ../..
+ls
+cd ../..
+ls
+ls lib
+ls lib/models/
+ls lib/models/gpx
+rg elevation-control
+rg elevation
+cd routes/trail/
+ls
+vim 'view/[id]/+page.svelte'
+cd ..
+fd TrailInfo
+ls
+rg TrailInfo
+ls lib/components/trail/
+vim lib/components/trail/trail_info_panel.svelte
+npm run dev
+vim 'routes/map/trail/[id]/+page.svelte'
+vim 'routes/map/trail/[id]/+page.ts'
+vim 'routes/map/trail/[id]/+page.svelte'
+jj st
+git st
+git restore .
+git st
+cd ../..
+ls
+cd ..
+ls
+ls data.ms
+getent hosts trax.horak.hu
+ssh icesus
+getent hosts trax.horak.hu
+nslookup trax.horak.hu
+dog trax.horak.hu
+dog trax.horak.hu ns.horak.hu
+ssh icesus
+dog trax.horak.hu -n dns1.bitnet.hu
+getent hosts trax.horak.hu
+bash
+ssh pi
+getent hosts pi
+ssh repapi
+ls
+getent hosts pi
+getent hosts trax.horak.hu
+./pocketbase serve
+./meilisearch --master-key $env.MEILI_MASTER_KEY
+zellij -s wanderer
+ssh nas
+rm alma/COURSE_268181119.gpx
+40500 + 40500 + 37843 + 22284
+523875 * 4
+cd alma
+ls | sort-by modified
+rm `02 Az önalló tevékenységb_l származó jövedelem és adózása 20220128.pdf`
+evince `03 Az egyéni vállalkozók szja- és járulékkötelezettsége 2024.01.29 (1).pdf`
+ls
+rm `03 Az egyéni vállalkozók szja- és járulékkötelezettsége 2024.01.29 (1).pdf`
+ls -ltra alma
+ls alma | sort-by modified
+rm `alma/image (1).png`
+rm alma/strava_avatar.jpg
+z torrent/Videos
+rtorrent magnet:?xt=urn:btih:3D6352E4205C0C4011562D930AE9899F54E8A44C&dn=The.Ministry.of.Ungentlemanly.Warfare.2024.720p.AMZN.WEBRip.800MB.x264-GalaxyRG&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls | sort-by modified
+rm *meta
+cd fallout/
+ls
+mpv 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/Fallout.2024.S01E04.720p.AMZN.WEBRip.x264-GalaxyTV.mkv'
+cd
+z garmin
+ls
+ssh icesus
+cd RepaMapOverlay/
+code .
+ls
+ls resources/
+mkdir resources_lowres
+ls ../RepaGrunge/
+ls -l ../RepaField/
+mv resources_lowres resources-lowres
+ln -s resources-lowres resources-round-240x240
+ln -s resources-lowres resources-round-260x260
+ln -s resources-lowres resources-round-280x280
+ls
+ls resources
+ls resources/images
+cd resources-lowres/
+cp ../resources/mapoverlay_icons_24* .
+ls
+convert mapoverlay_icons_24.png -resize 50% mapoverlay_icons_12.png
+ls
+wezterm imgcat mapoverlay_icons_24.png
+wezterm imgcat mapoverlay_icons_12.png
+mv mapoverlay_icons_24.fnt mapoverlay_icons_12.fnt
+rm mapoverlay_icons_24.png
+vim mapoverlay_icons_12.fnt
+cp ../resources/resources.xml .
+vim resources.xml
+code .
+cd ..
+code .
+ls
+cp resources/mapoverlay_icons.png resources-lowres/mapoverlay_icons.png
+cd resources-lowres/
+convert mapoverlay_icons.png -resize 50% mapoverlay_icons_16.png
+wezterm imgcat mapoverlay_icons_16.png
+wezterm imgcat mapoverlay_icons_12.png
+ls
+rm mapoverlay_icons.png
+ls
+cp mapoverlay_icons_12.fnt mapoverlay_icons_16.fnt
+vim mapoverlay_icons_16.fnt
+ls
+vim resources.xml
+jj st
+cd ..
+vim TODO.md
+jj describe -m "lowres support"
+jj st
+jj git push
+code .
+jj st
+jj diff manifest.xml
+jj st
+jj git push
+jj new
+hyprctl clients
+ps
+^ps -ef | grep -i sniper
+ls alma | sort-by modified
+z RepaMap
+cat TODO.md
+cd
+andcli
+z RepaMap
+vim TODO.md
+jj st
+vim TODO.md
+z torrent/Videos
+rtorrent magnet:?xt=urn:btih:F1D770AEAF7C3162734153B1CD27EE670903CA8D&dn=Godzilla.X.Kong.The.New.Empire.2024.1080p.WEB-DL.AAC5.1.H.264-GODZiLLA+%5BProtonMovies%5D&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.tamersunion.org%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.gbitt.info%3A443%2Fannounce&tr=http%3A%2F%2Ftracker.gbitt.info%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker-udp.gbitt.info%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.theoks.net%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dump.cl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=https%3A%2F%2Ftracker.bt4g.com%3A443%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+ls | sort-by modified
+rm *meta
+ssh icesus
+z brows
+ls
+./BrowserStackLocal --key SpqfiUJ2zEdXXTAGnxzM
+ls alma | sort-by modified
+rm `alma/1714034409Csévi Araszoló TT 34 km 1120 m.gpx`
+1500 / 60
+cd alma
+ls
+ls -ltra
+ls | sort-by modified
+rm `S00794_24FE_Horák György.pdf`
+rm BK04277-24VR_Horák_György.pdf
+ls
+ls | sort-by modified
+cd 'Godzilla.X.Kong.The.New.Empire.2024.1080p.WEB-DL.AAC5.1.H.264-GODZiLLA [ProtonMovies]/'
+ls
+mpv Godzilla.X.Kong.The.New.Empire.2024.1080p.WEB-DL.AAC5.1.H.264-GODZiLLA.mkv
+code .
+vim TODO.md
+jj st
+vim TODO.md
+jj st
+jj describe -m "cadence, speed"
+jj branch set main
+jj git push
+jj new
+jj st
+jj diff
+code .
+jj st
+jj diff
+jj describe -m "layout experiments"
+jj branch set main
+jj git push
+z torrent/Videos
+cd 'Godzilla.X.Kong.The.New.Empire.2024.1080p.WEB-DL.AAC5.1.H.264-GODZiLLA [ProtonMovies]/'
+mpv Godzilla.X.Kong.The.New.Empire.2024.1080p.WEB-DL.AAC5.1.H.264-GODZiLLA.mkv
+cd ..
+rm -rf 'Godzilla.X.Kong.The.New.Empire.2024.1080p.WEB-DL.AAC5.1.H.264-GODZiLLA [ProtonMovies]/'
+ls
+ls | sort-by modified
+cd 'The.Ministry.of.Ungentlemanly.Warfare.2024.720p.AMZN.WEBRip.800MB.x264-GalaxyRG[TGx]/'
+ls
+ssh icesus
+mpv The.Ministry.of.Ungentlemanly.Warfare.2024.720p.AMZN.WEBRip.800MB.x264-GalaxyRG.mkv
+cd ..
+rm -rf 'The.Ministry.of.Ungentlemanly.Warfare.2024.720p.AMZN.WEBRip.800MB.x264-GalaxyRG[TGx]/'
+ls
+ls | sort-by modified
+cd fallout/
+ls
+31 * 15000
+mpv 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/Fallout.2024.S01E05.720p.AMZN.WEBRip.x264-GalaxyTV.mkv'
+mv 1x3 1x4
+mpv 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/Fallout.2024.S01E04.720p.AMZN.WEBRip.x264-GalaxyTV.mkv'
+ls
+mv 1x4 1x5
+z RepaMap
+code .
+andcli
+nautilus .
+jj st
+jj diff
+jj st
+jj diff
+jj st
+vim resources/settings/properties.xml
+jj st
+jj git push
+jj st
+jj new
+ls alma | sort-by modified
+z garmin
+ls
+mkdir maps
+cd maps
+mv ~/alma/OpenHikingHU.zip .
+unzip OpenHikingHU.zip
+ls
+rm OpenHikingHU.zip
+mpv 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/Fallout.2024.S01E06.720p.AMZN.WEBRip.x264-GalaxyTV.mkv'
+mv 1x5 1x6
+ls 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/'
+cd `OpenHiking HU.gmap/`
+ls
+find .
+fd .
+ls openhiking_mdr/
+mc
+pwd
+ls
+cd ..
+ls
+ls ~/alma | sort-by modified
+mv ~/alma/gmapsupp_hu.img .
+nautilus .
+ssh icesus
+z garmin
+mv ~/alma/Garmin-Map-Themes.pdf .
+ls
+cd maps
+ls
+mkdir themes
+cd themes
+ls
+nautilus .
+ls
+vim Popularity.kmtf
+cat Popularity.kmtf
+read Popularity.kmtf
+open Popularity.kmtf
+open Popularity.kmtf | to xml
+ls
+cp `High Contrast.kmtf` Repa.kmtf
+vim Repa.kmtf
+mv Repa.kmtf Repa.xml
+vim Repa.xml
+mv Repa.xml Repa.kmtf
+vim Repa.xml
+vim Repa.kmtf
+xmllint
+xmllint --format Repa.kmtf
+rm Repa.kmtf
+xmllint --format `High Contrast.kmtf` | save Repa.kmtf
+ls
+vim Repa.kmtf
+ls
+ls
+cd ..
+ls
+mv Garmin-Map-Themes.pdf maps/themes/
+cd maps/themes/
+evince Garmin-Map-Themes.pdf
+ls
+xmllint --format Popularity.kmtf | save Repa.kmtf
+xmllint --format Popularity.kmtf
+ls
+ls apps
+gpxsee 
+vim Repa.kmtf
+xmllint --format Popularity.kmtf | save Pop.kmtf
+ls
+vim Pop.kmtf
+ls
+mv ~/alma/repahc.kmtf .
+ls
+vim repahc.kmtf
+nautilus .
+mv ~/alma/repahc.kmtf .
+ls
+vim repahc.kmtf
+mv ~/alma/repadark.kmtf .
+vim .Xdefaults
+vim .config/powerline/colors.json
+mv ~/alma/repadark.kmtf .
+nautilus .
+z garmin
+cd maps
+ls
+andcli
+z fallout
+ls
+getent hosts freshdirect.com
+http get freshdirect.com
+http get https://freshdirect.com
+ssh icesus
+j st
+mpv 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/Fallout.2024.S01E07.720p.AMZN.WEBRip.x264-GalaxyTV.mkv'
+ls
+mv 1x6 1x7
+z garmin
+cd map
+cd maps
+ls
+vim maps.txt
+mv ~/alma/heyjoegmapsupp.img .
+ls
+file heyjoegmapsupp.img
+nautilus .
+ls
+yay -Ss qmapshack
+yay -S qmapshack
+yay -Sy
+yay -S qmapshack
+qmapshack
+yay -Sy
+yay -Syu
+sudo pacman -Syu
+qmapshack
+ssh icesus
+wezterm
+which wezterm
+yay -S wezterm
+yay -Ss wezterm
+ssh icesus
+python
+which repassh
+pip install repassh
+$env.PYENV_ROOT
+py
+python
+cat /home/dyuri/.local/bin/repassh
+which python
+which /usr/bin/python
+/usr/bin/python
+ls .local/lib/python3.11/
+ls .local/lib/python3.11/site-packages/
+xonsh
+ls .local/lib/python3.11/site-packages/
+ls
+pyenv
+pyenv version
+python
+vim /home/dyuri/.pyenv/version
+pyenv versions
+pyenv global
+pyenv global system
+python
+pip install repassh repacolor
+pipx
+yay -S python-pipx
+yay -S wezterm-git
+python
+rm .local/bin/pipx
+pipx
+pipx install repassh
+rm /home/dyuri/.local/bin/repassh
+pipx install repassh
+pipx install repassh --force
+repassh
+ssh icesus
+repacolor
+rm /home/dyuri/.local/bin/repacolor
+pipx install repacolor
+pipx install repacolors
+repacolor
+repacolor colorwheel
+repacolor display red
+ls .local/bin/
+which xonsh
+/usr/bin/xonsh
+yay -S xonsh
+rm .local/bin/xonsh*
+rm .local/bin/xonsh
+xonsh
+ls
+ls .local/bin/
+ipython
+yay -S ipython
+py
+ls
+ls venv
+qmapshack
+coreadm
+coredumpctl 
+coredumpctl -t
+coredumpctl -h
+coredumpctl info qmapshack
+ls
+bash
+ls .QMapShack/
+rm -rf .QMapShack/
+ls .config | sort-by modified
+ls .local | sort-by modified
+ls .local/share | sort-by modified
+krita
+qmapshack -h
+qmapshack -d
+bash
+$env.QT_QPA_PLATFORMTHEME
+pacman -Ss qtweb
+sudo pacman -R python-pyqt5-webengine
+openshot
+pacman -Ql openshot
+pacman -Ql openshot| grep bin
+openshot-qt 
+yay -Ss openshot
+yay -R openshot
+sudo pacman -R python-pyqt5-webengine
+qmapshack
+pacman -Ss qtweb
+$env.LD_LIBRARY_PATH
+$env.LD_LIBRARY_PATH = ""
+$env.LD_LIBRARY_PATH
+qmapshack
+z garmin
+simulator
+cd
+vim .config/nushell/env.nu
+z garmin
+cd maps
+ls ~/alma | sort-by modified
+mv ~/alma/hungary-latest.osm.pbf .
+mv ~/alma/M33.zip .
+mv ~/alma/M34.zip .
+mv ~/alma/L33.zip .
+mv ~/alma/L34.zip .
+ssh icesus
+ls
+mkdir DEM
+mv *zip DEM
+ls
+cd DEM
+ls
+unzip L33.zip
+ls
+rm `New Folder/`
+rm -rf L33
+ls
+unzip *zip
+ls
+unzip L33.zip
+unzip L34.zip
+unzip M33.zip
+unzip M34.zip
+ls
+mv L33/* .
+mv L34/* .
+mv M33/* .
+mv M34/* .
+rmdir L33 L34 M33 M34
+ls
+qmapshack
+cd ..
+ls routino/
+vim DEM/repa.vrt
+yay -Ss gdal
+pacman -Ql gdal
+/usr/bin/gdalbuildvrt
+z garmin
+cd maps
+ls
+cd DEM
+ls
+ls -ltra
+ls | sort-by modified
+rm *hgt
+ls
+rm N49E0*
+ls
+gdalbuildvrt -h
+unzip M34.zip
+rm N49E019.zip N49E020.zip
+cd M32
+cd M34
+rm N49E019.zip N49E020.zip
+ls
+vim N51E018.hgt
+ls
+cd ..
+gdalbuildvrt repa.vrt M34/*hgt
+ls
+vim repa.vrt
+gdalbuildvrt repa.vrt M34.zip
+vim repa.vrt
+ls
+unzip M33.zip
+unzip L33.zip
+unzip L34.zip
+rm repa.vrt
+gdalbuildvrt repa.vrt M34/*hgt M33/*hgt L33/*hgt L34/*hgt
+vim repa.vrt
+yay -S google-chrome
+mkgmap
+yay -Ss mkgmap
+yay -S mkgmap
+mkgmap
+mkgmap | less
+mkgmap | bat
+mkgmap
+ya -Ss gmaptool
+yay -Ss gmaptool
+yay -S gmaptool-static-bin
+gmaptool
+cd ..
+ls
+gmaptool -i gmapsupp_hu.img
+mkdir openhiking
+cp gmapsupp_hu.img openhiking/
+cd openhiking/
+gmaptool -h
+gmaptool -s gmapsupp_hu.img
+ls
+rm gmapsupp_hu.img
+ls
+vim MAKEGMAP.MPS
+gmaptool -j * -o a.img
+ls
+ls -ltra
+ls | sort-by modified
+file MAKEGMAP.MPS
+gmaptool -j *img *typ -o a.img
+gmaptool -j *img *TYP -o a.img
+ls
+ls ..
+gmaptool -i a.img
+ls
+rm a.img
+file 000OHMHU.TYP
+vim 000OHMHU.TYP
+31 * 15000
+z garmin
+cd maps
+ls
+mv `~/alma/MapTk 4.4.7 Windows.exe`.
+mv `~/alma/MapTk 4.4.7 Windows.exe` .
+mv `MapTk 4.4.7 Windows.exe` maptk.exe
+wine maptk.exe
+yay -S wine
+wine maptk.exe
+ls `~/.wine/drive_c/Program Files/MapTk/`
+z garmin
+cd maps
+ls
+ls -ltra
+wine `/home/dyuri/.wine/drive_c/Program Files/MapTk/MapTk.exe`
+ls
+mkdir typwiz
+cd typwiz
+mv ~/alma/twz7LI.zip .
+unzip twz7LI.zip
+ls
+rm twz7LI.zip
+cd twz7LI/
+ls
+unzip twz7LI_setup.zip
+cat `!!!VERY Important!.txt`
+wine twz7LI_setup.exe
+andcli
+z fallout
+mpv 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/Fallout.2024.S01E08.720p.AMZN.WEBRip.x264-GalaxyTV.mkv'
+ls
+mv 1x7 1x8
+rm -rf 'Fallout.2024.S01.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV[TGx]/'
+cd ..
+ls
+ls | sort-by modified
+cd avatar/
+ls
+cd ..
+ls monarch/
+wev
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+z garmin
+ls
+cd ..
+ls
+cd ..
+ls
+cp gmapsupp_hu.img test.img
+mkmap
+gmaptool -i test.img
+gmaptool -h
+mkgmap
+mkgmap --help=options
+mkgmap --help=options|grep typ
+mkgmap --help=options|grep TYP
+ls
+cd openhiking/
+ls
+rm 000OHMHU.TYP
+cp ../M00000.typ .
+file M00000.typ
+gmaptool -j *img *TYP -o a.img
+gmaptool -j *img *typ -o a.img
+ls
+gmaptoos -i a.img
+gmaptool -i a.img
+gmaptool -h
+rm a.img
+gmaptool -i ../test.img
+gmaptool -j *img *typ -o a.img -f 3690
+gmaptool -i a.img
+nautilus .
+mv a.img ..
+qmapshack
+ls
+ls
+ls
+rm *
+rm ../a.img
+gmaptool -s ../test.img
+gmaptool -j *img *typ -o a.img -f 3690
+gmaptool -j *img *TYP -o a.img -f 3690
+gmaptool -h
+gmaptool -w?
+ls
+mv a.img ..
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+yay -Ss ttf
+yay -Ss ttf-ms
+yay -S ttf-ms-fonts
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+cd ..
+ls
+cd typwiz/
+ls
+rm *
+rm -rf twz7LI/
+mv ~/alma/tpwz7_.zip .
+unzip tpwz7_.zip
+ls
+rm tpwz7_.zip
+cat `Important Licence Agreement.txt`
+ls
+unzip twz7_setup.zip
+ls
+rm twz7_setup.zip
+cat whatsnew.txt
+ls
+wine twz7_setup.exe
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+ls -ltra
+ls | sort-by modified
+ls
+ls
+cp oh_3690.typ openhiking/
+cd openhiking/
+ls
+rm 000OHMHU.TYP
+gmaptool -w?
+ls
+ls ..
+gmaptool -w -x oh_3690.typ ../a.img
+gmaptool -i ../a.img
+qmapshack
+yay -Ss superfile
+yay -S superfile
+spf
+vim .config/superfile/config.toml
+ls
+vim config/TOOLS.md
+getent hosts villanyszerelobuda.hu
+getent hosts 185.111.89.170
+ssh icesus
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+cd ..
+ls
+cd typwiz/
+ls
+mv ~/alma/theme_editor_setup.zip .
+unzip theme_editor_setup.zip
+ls
+mv theme_editor_setup.zip te.zip
+unzip te.zip
+rm te.zip
+unzip theme_editor_setup.zip
+ls
+rm theme_editor_setup.zip
+wine theme_editor_setup.exe
+ls
+cd ..
+ls
+vim oh_3690.txt
+ls
+rm oh_3690.txt
+ls
+vim themes/repadark.kmtf
+ls
+ls | sort-by modified
+gmaptool -w -x oh_3690.typ a.img
+z garmin
+cd maps
+ls
+cd typwiz/
+mv ~/alma/TYPWiz7.pdf .
+evince TYPWiz7.pdf
+wine `/home/dyuri/.wine/drive_c/Program Files/MapTk/MapTk.exe`
+ls | sort-by modified
+vim oh_3690.typ.prj
+ls
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+ls | sort-by modified
+rm oh_3690.typ.p*
+ls
+gmaptool -w -x oh_3690.typ a.img
+getent hosts turistautak.elte.hu
+z garmin
+cd maps
+ls
+ls ~/alma | sort-by modified
+mv ~/alma/turistautak-* .
+mv ~/alma/GMAPSUPP_10.IMG turistautak-shaded-10.img
+qmapshack
+mv alma/gpx alma/bh36.gpx
+cd alma
+ls | sort-by modified
+rm bh36.gpx MapTk_en.pdf `Börzsönyi Lihegő 26 km - 660 m.gpx`
+ls | sort-by modified
+z garmin
+cd map
+cd maps
+ls
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+4.8 * 5.6
+2.9 * 3.4
+z garmin
+cd maps
+ls
+gmaptool -w -x oh_3690.typ a.img
+qmapshack
+gmaptool -w -x oh_3690.typ a.img
+qmapshack
+gmaptool -w -x oh_3690.typ a.img
+qmapshack
+gmaptool -w -x oh_3690.typ a.img
+qmapshack
+gmaptool -w -x oh_3690.typ a.img
+qmapshack
+gmaptool -w -x oh_3690.typ a.img
+qmapshack
+gmaptool -w -x oh_3690.typ a.img
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+qmapshack
+gmaptool -w -x oh_3690.typ a.img
+qmapshack
+nautilus .
+5.2 / 230
+5200 / 230
+z garmin
+cd maps
+ls
+cp gmapsupp_hu.img gmapsupp_repa.img
+gmaptool -w -x oh_3690.typ gmapsupp_repa.img
+ls -ltra
+ls | sort-by modified
+ls
+gmaptool -w?
+gmaptool -i gmapsupp_hu.img
+gmaptool -w?
+gmaptool -w -m "openhiking repa" gmapsupp_repa.img
+gmaptool -i gmapsupp_repa.img
+nautilus .
+ls
+cat maps.txt
+ps -ef | grep steam
+ps | find name = 'steam'
+13960 / 24
+z garmin
+cd RepaMapOverlay/
+ls
+vim TODO.md
+jj st
+jj describe -m "TODO update"
+jj branch set main
+jj git push
+ssh icesus
+jj git push
+jj new -m "CLONE 2"
+ls
+jj branch create clone2
+code .
+vim manifest.xml
+vim resources/strings.xml
+ls
+jj st
+jj git push
+jj new main
+jj describe -m "CLONE 3"
+vim resources/strings.xml
+vim manifest.xml
+jj st
+jj branch create clone3
+jj git push
+jj new main
+ls
+ls export/v2/
+ls export/v3/
+ls
+ls export/
+krita export/hero.jpg
+ls
+jj edit clone2
+ls
+code .
+jj st
+code .
+nautilus .
+jj st
+jj new main
+ls
+jj st
+jj diff
+jj st
+jj describe -m "possible crash fix"
+jj branch set main
+jj st
+jj git push
+code .
+jj st
+jj git push
+jj edit clone2
+jj rebase -d main
+jj st
+vim resources/settings/properties.xml resources/strings.xml
+jj undo
+jj st
+jj edit main
+jj st
+jj new main
+jj st
+jj edit clone2
+jj rebase -d main
+vim resources/settings/properties.xml resources/strings.xml
+jj st
+jj git push
+jj new main
+z RepaMap
+cd export
+vim export/RepaMapOverlay.prg.debug.xml
+nautilus .
+ls
+mkdir -p export/v1
+mkdir export/v1
+jj st
+jj describe -m "+extra nullchecks"
+jj branch set main
+jj git push
+jj edit clone2
+jj rebase -d main
+jj st
+jj git push
+jj new main
+ps | find name = 'wine'
+pz
+ps
+^ps -ef | grep -i sniper
+steam
+nslookup trax.horak.hu
+dog trax.horak.hu -n dns1.bitnet.hu
+ping 192.168.0.1
+ping 192.168.0.51
+ssh icesus
+ssh nas
+andcli
+ssh nas
+ssh icesus
+vim
+rm tmp/TODO_aram.md
+z garmin
+ls
+cd maps
+qmapshack
+evince alma/labor.pdf
+cd
+cd egyeb
+cd prog
+cd rust
+ls
+mkdir rust-excercises
+cd rust-excercises/
+cd ..
+rmdir rust-excercises/
+git clone git@github.com:mainmatter/100-exercises-to-learn-rust.git
+ls
+cd 100-exercises-to-learn-rust/
+ls
+git co -b dyuri
+z 100-
+ls
+cargo install --locked workshop-runner
+wr
+vim exercises/01_intro/00_welcome/src/lib.rs
+wr
+vim exercises/01_intro/01_syntax/src/lib.rs
+vim exercises/02_basic_calculator/00_intro/src/lib.rs
+ws
+wr
+vim exercises/02_basic_calculator/01_integers/src/lib.rs
+wr
+vim exercises/02_basic_calculator/02_variables/src/
+wr
+vim exercises/02_basic_calculator/03_if_else/src/
+vim exercises/02_basic_calculator/04_panics/src/lib.rs
+wr
+vim exercises/02_basic_calculator/05_factorial/src/lib.rs
+vim exercises/02_basic_calculator/06_while/src/lib.rs
+wr
+vim exercises/02_basic_calculator/07_for/src/lib.rs
+vim Cargo.toml
+wr
+vim exercises/02_basic_calculator/08_overflow/src/lib.rs
+wr
+vim exercises/02_basic_calculator/09_saturating/src/lib.rs
+wr
+vim exercises/02_basic_calculator/10_as_casting/src/lib.rs
+vim exercises/03_ticket_v1/00_intro/src/lib.rs
+ssh icesus
+wr
+vim exercises/03_ticket_v1/01_struct/src/lib.rs
+vim exercises/03_ticket_v1/02_validation/src/lib.rs
+wr
+vim exercises/03_ticket_v1/03_modules/src/lib.rs
+git ls
+cd config
+git ls
+git ls -la
+git ls -t
+icat Pictures/Screenshots/satty-20240522-16:42:23.png
+wezterm icat Pictures/Screenshots/satty-20240522-16:42:23.png
+wezterm imgcat Pictures/Screenshots/satty-20240522-16:42:23.png
+file Pictures/Screenshots/satty-20240522-16:42:23.png
+z RepaMap
+cd export
+ls
+convert ~/Pictures/Screenshots/satty-20240522-16:42:23.png -resize 500x screen3.jpg
+wezterm imgcat screen3.jpg
+z rust
+ls
+cd ../prog/rust/
+ls
+cd 100-exercises-to-learn-rust/
+z exer
+ls
+wr
+vim exercises/03_ticket_v1/03_modules/src/lib.rs
+wr
+vim .config/nvim/lua/plugins/comment.lua
+vim exercises/03_ticket_v1/04_visibility/src/lib.rs
+wr
+vim exercises/03_ticket_v1/05_encapsulation/src/lib.rs
+wr
+vim exercises/03_ticket_v1/06_ownership/src/lib.rs
+wr
+vim exercises/03_ticket_v1/07_setters/src/lib.rs
+andcli
+rm alma/labor.pdf
+evince alma/medicover.pdf
+rm alma/medicover.pdf
+evince `alma/Gépjármű-biztosítási évfordulós levél.pdf`
+rm `alma/Gépjármű-biztosítási évfordulós levél.pdf`
+bash
+z exer
+z exer
+- ajtot/ablakot rendelni
+vim
+125 * 1.27
+ssh icesus
+steam
+cd .gaim/
+ls
+cd logs
+ls
+cd icq
+ls
+ls 65252482/
+cat 65252482/23154294/2007-05-02.203614+0200CEST.txt
+cat 65252482/23154294/2007-05-02.203614+0200CEST.txt | tail -l 3
+cat 65252482/23154294/2007-05-02.203614+0200CEST.txt | tail -3
+cat 65252482/23154294/2007-05-02.203614+0200CEST.txt | tail -5
+3.3 * 3.4
+3.3 * 3.3
+cd .gaim/logs/icq/
+ls
+cd 65252482/
+ls | sort-by modified
+cat 23154294/2007-05-02.203614+0200CEST.txt
+cat 23154294/2005-07-26.220631.txt
+cat 23154294/2004-08-05.122043.txt
+cat 23154294/2004-08-05.123026.txt
+cat 23154294/2004-10-09.135354.txt
+cat 23154294/2004-10-09.134953.txt
+cd .gaim/logs/icq/
+ls
+cd 65252482/
+rg Czo
+cat 119111315/2008-03-24.192902+0100CET.txt
+cat 119111315/2008-03-08.190421+0100CET.txt
+cat 119111315/2008-03-05.215833+0100CET.txt
+cd .gaim/logs/icq/
+cd 65252482/
+ls
+ls -ltra
+ls | sort-by modified
+cat 69087915/2008-03-25.233840+0100CET.txt
+ls | sort-by modified
+cat 247778239/2008-03-29.191101+0100CET.txt
+cat 247778239/2004-03-29.224644.txt
+cd
+ls .purple/logs/icq/
+ls .purple/logs/icq/65252482/
+cd .purple/logs/icq/65252482/
+ls
+ls | sort-by modified
+ls 40864617/
+cat 40864617/2015-01-06.220814+0100CET.txt
+^ps -ef | grep -i proton
+kill 15751
+^ps -ef | grep -i proton
+kill 15725<\n>
+^ps -ef | grep -i proton
+kill 15664
+^ps -ef | grep -i proton
+^ps -ef | grep -i ACO
+kill 15753 16076
+yay -Ss nss
+yay -Ss nss-tools
+yay -Ss nss-tool
+yay -Ss libnss
+certutil
+cpupower
+yay -Ss cpupower
+yay -S cpupower
+cpupower -h
+cpupower frequency-info
+cpupower frequency-set -g performance
+sudo cpupower frequency-set -g performance
+cpupower frequency-info
+wkill
+steam
+cpupower frequency-info
+sudo cpupower frequency-set -g schedutil
+andcli
+9 + 9 + 10
+28 * 2.5
+70 * 1150
+70 * 1700
+rm alma/Magasagyas.pdf
+yay -Ss mkcert
+yay -S mkcert
+mkcert
+ssh icessu
+ssh icesus
+mv uxe.icesus.freshdirect.com.pem egyeb/melo/FreshDirect/
+cd egyeb/melo/FreshDirect/
+ls
+mkcert -install
+ls
+mkcert -h
+mkcert -install -h
+mkcert -install
+ls -l /home/dyuri/.mozilla/
+^ls -l /home/dyuri/.mozilla/
+^ls -l /home/dyuri/.mozilla/firefox/
+rm -rf /home/dyuri/.mozilla/firefox/6ela223k.dyuri/
+rm -rf /home/dyuri/.mozilla/firefox/l7pm8auk.p*
+rm -rf /home/dyuri/.mozilla/firefox/orld9pl1.tablet/
+mkcert -install
+ssh icesus
+ssh icessu
+ssh icesus
+mv uxe.icesus.freshdirect.com-key.pem egyeb/melo/FreshDirect/
+mkcert -h
+ls -l /etc/ImageMagick-7/
+ls -l /etc
+ls -l /etc | sort-by modified
+ls .mozilla/firefox/49fbvi46.default/
+ls /etc/ca-certificates/
+ls /etc/ca-certificates/extracted/
+ls /etc/ca-certificates/extracted/ | sort-by modified
+ls /etc/ca-certificates/extracted/cadir | sort-by modified
+ssh icesus
+sudo mv mkcert_dyuri_cokezero__Gyuri_.pem /etc/ca-certificates/extracted/cadir/
+yay -S update-ca
+sudo trust extract-compat
+ls /etc/ca-certificates/extracted/cadir | sort-by modified
+ls /etc/ca-certificates/extracted/cadir | grep mk
+^ls /etc/ca-certificates/extracted/cadir -l | grep mk
+ls
+ls -ltra
+trust -h
+trust list
+trust list | grep mk
+trust -h
+update-ca-trust
+sudo vim /etc/ca-certificates/trust-source/anchors/mkcert_development_CA_111104171265888673669141843962209527987.crt
+sudo vim /etc/ca-certificates/trust-source/anchors/mkcert_development_CA_icesus.crt
+update-ca-trust
+sudo update-ca-trust
+trust list | grep mk
+ssh icesus
+ssh icesus
+ls
+z exer
+ls
+z exer
+wr
+z exer
+wr
+vim exercises/03_ticket_v1/08_stack/src/lib.rs
+wr
+vim exercises/03_ticket_v1/09_heap/
+vim exercises/03_ticket_v1/10_references_in_memory/src/lib.rs
+vim exercises/03_ticket_v1/11_destructor/src/lib.rs
+wr
+vim exercises/03_ticket_v1/12_outro/src/lib.rs
+cat /proc/sys/vm/max_map_count
+sudo vim /etc/sysctl.d/80-gamecompatibility.conf
+sudo sysctl vm.max_map_count
+sudo sysctl -h
+sudo sysctl vm.max_map_count=2147483642
+sudo sysctl vm.max_map_count
+perf
+yay -S perf
+perf top
+perf -h
+$env.VK_ICD_FILENAMES
+vim config/TOOLS.md
+vim config/hypr/hyprland.conf
+killall wine
+killall proton
+^ps -ef | grep -i ACO
+kill 165896 165584 165582 165556<\n> 165494<\n> 165493
+htop
+ssh icesus
+andcli
+getent hosts bubi.codeandsoda.hu
+getent hosts 54.220.21.127
+getent hosts messaging.parker.hu
+getent hosts parkermessaging.codeandsoda.hu
+z exer
+ls
+wr
+vim exercises/04_traits/00_intro/src/lib.rs
+pastel -h
+pastel format
+pastel red
+pastel color red
+pastel color red | pastel format hsl
+pastel color red | pastel format ansi
+pastel color red | pastel format ansi-8bit
+which pastel
+cargo install pastel
+cargo install pastel --force
+pastel color red | pastel format ansi-8bit
+pastel format
+pastel format -h
+pastel color red | pastel format ansi-24bit
+pastel color red | pastel format oklab
+pastel color red | pastel format lab
+pastel color red | pastel format lab-a
+pastel color red | pastel format lab-b
+pastel color oklab(53, 80, 67)
+qmapshack
+jj -v
+jj
+jj -version
+jj --help
+jj -V
+wr
+vim exercises/04_traits/01_trait/src/lib.rs
+vim exercises/04_traits/02_orphan_rule/src/lib.rs
+wr
+jj log -r@ -l1 --ignore-working-copy --no-graph --color always  -T '<\n>  separate(" ",<\n>    branches.map(|x| if(<\n>        x.name().substr(0, 10).starts_with(x.name()),<\n>        x.name().substr(0, 10),<\n>        x.name().substr(0, 9) ++ "…")<\n>      ).join(" "),<\n>    tags.map(|x| if(<\n>        x.name().substr(0, 10).starts_with(x.name()),<\n>        x.name().substr(0, 10),<\n>        x.name().substr(0, 9) ++ "…")<\n>      ).join(" "),<\n>    surround("\"","\"",<\n>      if(<\n>         description.first_line().substr(0, 24).starts_with(description.first_line()),<\n>         description.first_line().substr(0, 24),<\n>         description.first_line().substr(0, 23) ++ "…"<\n>      )<\n>    ),<\n>    if(conflict, "conflict"),<\n>    if(divergent, "divergent"),<\n>    if(hidden, "hidden"),<\n>  )<\n>'
+ssh icesus
+ssh icesus
+vim exercises/04_traits/03_operator_overloading/src/lib.rs
+wr
+vim exercises/04_traits/04_derive/src/lib.rs
+cargo expand exercises/04_traits/04_derive/src/lib.rs
+cargo install cargo-expand
+cargo expand exercises/04_traits/04_derive/src/lib.rs
+cd exercises/04_traits/04_derive
+cargo expand
+cd -
+ls
+vim
+andcli
+sha1
+python
+echo "banana" > sha256sum 
+echo "banana" | sha256sum
+cd .config/nvim/
+rg list
+vim lua/core/options.lua
+ssh icesus
+ssh icesus
+dnstrack -s 8.8.8.8 -o j -d '^lo0$'
+z exer
+z exer
+wr
+git pull
+git stash
+git pull
+git merge main
+git co main
+git pull
+git co dyuri
+git merge main
+git stash pop
+git restore --staged .
+git st
+jj st
+git st
+wr
+ls -ltra
+^ls -ltra
+ls helpers
+rg 05_str_slice
+wr
+ls
+vim dprint.json
+vim Cargo.toml
+rg str_slice
+wr
+cargo install workshop-runner
+cargo install workshop-runner --force
+wr
+wr -h
+^ls -ltra ~/.config
+^ls -ltra ~/.config/
+wr
+^ls -ltra
+vim .wr.toml
+ls ~/.wr
+wr
+vim exercises/04_traits/05_trait_bounds/src/lib.rs
+ls
+fd . | grep progress
+fd . | grep progress
+cd
+^ls | grep progress
+^ls | grep -i progress
+ls
+ls exercises/
+sqlite3 exercises/progress.db
+wr
+cd -
+wr
+cd alma
+ls | sort-by modified
+evince Quote_A_2024_12418_0.pdf
+ls | sort-by modified
+evince `DB-2024-00374 Horák.pdf`
+rm Quo*
+rm `DB-2024-00374 Horák.pdf`
+py
+python
+echo "alma" | sha256sum
+ls www
+ls www/prezik
+ls www/prezik/python-basics
+ls www/prezik/python-basics-presentation/
+cd www/prezik
+ls
+git clone git@github.com:dyuri/python-advanced-presentation.git
+rm alma/onlineajto.pdf
+26*400
+26 * 400
+110 * 190
+110 * 190 * 200
+110 * 190 * 200 / 1000000
+z exer
+z exer
+ls
+wr
+vim exercises/04_traits/06_str_slice/src/lib.rs
+vim exercises/04_traits/07_deref/src/lib.rs
+wr
+vim exercises/04_traits/08_sized/src/lib.rs
+ls
+cd exercises/04_traits/08_sized/
+cargo test
+vim src/lib.rs
+cargo test
+cargo run 
+cd ../..
+s
+ls
+cd ..
+wr
+vim exercises/04_traits/09_from/src/lib.rs
+qmapshack
+andcli
+z exer
+z exer
+ls
+wr
+vim exercises/04_traits/10_assoc_vs_generic/src/lib.rs
+ls
+wr
+vim exercises/04_traits/11_clone/src/lib.rs
+wr
+vim exercises/04_traits/12_copy/src/lib.rs
+vim exercises/04_traits/13_drop/src/lib.rs
+wr
+vim exercises/04_traits/14_outro/src/lib.rs
+jj st
+ssh icesus
+jj root
+z garmin
+ls
+cd maps
+ls
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+qm
+33
+ls
+ls -ltra
+ls | sort-by modified
+gmaptool -w -x oh_3690.typ gmapsupp_repa.img
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+gmaptool -w -x oh_3690.typ gmapsupp_repa.img
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+gmaptool -w -x oh_3690.typ gmapsupp_repa.img
+qmapshack
+nautilus .
+z torrent/Videos
+mkdir swacolyte
+cd swacolyte/
+rtorrent magnet:?xt=urn:btih:BB35511B18978FABEC2CFDBF7D5FBDEE7F49C228&dn=The.Acolyte.S01E01.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce magnet:?xt=urn:btih:6A9AF28F2EA6970F9F624A70E1B1F8154ECF8064&dn=The.Acolyte.S01E02.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ssh richardzilahi.hu
+andcli
+ls
+rm *meta
+mpv 'The.Acolyte.S01E01.WEB.x264-TORRENTGALAXY[TGx]/The.Acolyte.S01E01.WEB.x264-TORRENTGALAXY.mkv'
+ls
+touch 1x1
+rm -rf 'The.Acolyte.S01E01.WEB.x264-TORRENTGALAXY[TGx]/'
+mpv 'The.Acolyte.S01E02.WEB.x264-TORRENTGALAXY[TGx]/The.Acolyte.S01E02.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'The.Acolyte.S01E02.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 1x1 1x2
+cd
+z exer
+z exer
+wr
+vim exercises/05_ticket_v2/00_intro/
+wr
+vim exercises/05_ticket_v2/01_enum/
+ls
+vim exercises/05_ticket_v2/02_match/
+ssh icesus
+ssh icesus
+z map
+ls
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+andcli
+z exer
+z exer
+wr
+command 
+which jj
+which cica
+cd tmp
+vim jj.nu
+mv jj.nu tmp
+cd tmp
+chmod +x jj.nu
+jj
+jj.nu
+./jj.nu
+jj.nu
+./jj.nu
+jj.nu
+./jj.nu
+jj root --ignore-working-copy
+./jj.nu
+jj root 
+jj root -h
+jj root --quiet
+./jj.nu
+ls
+./jj.nu
+echo cica
+./jj.nu
+z RepaMap
+jj st
+~/tmp/jj.nu
+touch cica.txt
+jj st
+~/tmp/jj.nu
+jj describe -m "cica"
+~/tmp/jj.nu
+jj undo
+~/tmp/jj.nu
+rm cica.txt
+jj st
+jj -h
+jj -V
+cargo install jj-cli
+rustup
+rustup update
+cargo install jj-cli
+~/tmp/jj.nu
+jj edit main
+jj edit main --ignore-immutable
+~/tmp/jj.nu
+jj new
+~/tmp/jj.nu
+jj edit main --ignore-immutable
+~/tmp/jj.nu
+jj new
+~/tmp/jj.nu
+vim jj.nu
+mv jj.nu ~/config/bin/jjprompt.nu
+cd ~/config
+git st
