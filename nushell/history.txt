@@ -2402,3 +2402,3777 @@ vim jj.nu
 mv jj.nu ~/config/bin/jjprompt.nu
 cd ~/config
 git st
+git add .
+git ci -m "nushell settings, jj prompt, screenrecord"
+git push
+cd ~/bin
+ln -s ~/config/bin/jjprompt.nu .
+cd
+jjprompt.nu 
+jjprompt.nu
+vim config/nushell/oh-my-posh.nu
+ls config | sort-by modified
+z RepaMap
+ls
+z RepaMap
+vim config/nushell/repa.omp.json
+vim bin/jjprompt.nu
+cd
+cd alma
+pwd
+cd -
+z RepaMap
+vim config/nushell/repa.omp.json
+ssh icesus
+ssh icesus
+2.5/13 * 22
+2.5 / 13 * 22
+ssh ices
+andcli
+ssh icesus
+2.1 * 2.2 * 1.9
+2.1 * (2.2 + 1.9) * 2
+2.1 * (2.2 + 1.2) * 2
+(2.2 + 1.1) * 1.9
+24.5 + 9.2
+33.7 * 1.1
+520 + 520 + 472 + 472 + 344 + 344 + 267 + 267 
+520 + 520 + 472 + 472 + 344 + 344 + 267 + 267 - (140 + 70 + 80 + 80 + 150)
+2700 * 1.1
+3 * 2 * 4 + 3 * 3
+3 * 2 * 4
+6 * 24
+z exer
+z exer
+andcli
+jj config list
+jj config set --user ui.paginate "never"
+jj config list
+ssh icesus
+530 * .15
+rm `alma/Screenshot 2024-06-10 at 6.05.26 PM.png`
+rm alma/Screenshot_20191209-080903.jpg
+cd alma
+ls -ltra
+ls | sort-by modified
+rm Policy3b3f63a8-51aa-4600-941f-d881f028a9f9_1718094969.pdf
+mv `Converage confirmation3b3f63a8-51aa-4600-941f-d881f028a9f9_1718097910.pdf` kotelezo_2024-25.pdf
+ls
+rm kotelezo_2024-25.pdf
+ls -ltra
+ls | sort-by modified
+mv `Green card3b3f63a8-51aa-4600-941f-d881f028a9f9_1718097981.pdf` zoldkartya_2024-25.pdf
+rm zoldkartya_2024-25.pdf
+ls | sort-by modified
+rm ureghu-bejaratok-20240602-094216.gpx
+rm 2024*gpx
+cd ..
+z egyeb
+ls
+git clone git@github.com:CorentinTh/it-tools.git
+cd it-tools/
+ls
+pnpm
+yay -Ss pnpm
+yay -S pnpm
+yay -Sy pnpm
+pnpm install
+pnpm dev
+pnpm test
+pnpm lint
+ls
+cat nginx.conf
+pnpm build
+ls
+vim src/App.vue
+lls
+vim src/main.ts
+ls
+python -m http.server
+ls
+vim vite.config.ts
+$env.BASE_URL = '/dist/'
+pnpm build
+python -m http.server
+$env.BASE_URL = '/'
+pnpm build
+z it-tools
+ls
+ls
+ls dist
+vim dist/sw.js
+ls
+vim vite.config.ts
+ls dist
+vim dist/manifest.webmanifest
+z it-tools
+ls
+fd n-input
+fd NInput
+ls
+ls src
+ls src/ui
+fd n-input
+vim package.json
+vim src/tools/temperature-converter/
+git st
+git diff
+git restore pnpm-lock.yaml components.d.ts
+git st
+git restore components.d.ts
+jj st
+pnpm dev
+git st
+git remote 
+git remote -v
+git remote set origin git@github.com:dyuri/it-tools.git
+git remote set-url origin git@github.com:dyuri/it-tools.git
+git st
+git diff
+git co -b 1144_temperature_limits
+pnpm build
+pnpm test
+pnpm lint
+pnpm lint
+jj st
+git diff
+git st
+git diff src/tools/temperature-converter/temperature-converter.vue
+pnpm lint
+git diff src/tools/temperature-converter/temperature-converter.vue
+pnpm lint
+rg "else"
+ls -l
+vim env.d.ts
+vim tsconfig.json
+vim tsconfig.app.json
+vim package.json
+ls src
+eslint src --ext vue
+npx eslint src --ext vue
+eslint src --ext vue
+vim src/tools/temperature-converter/temperature-converter.vue
+which eslint
+mv /home/dyuri/.npm/bin/eslint /home/dyuri/.npm/bin/eslint.bak
+eslint
+vim src/tools/temperature-converter/temperature-converter.vue
+mv /home/dyuri/.npm/bin/eslint.bak /home/dyuri/.npm/bin/eslint
+eslint src --ext vue
+vim ~/.eslintrc
+git push
+jj st
+git st
+git add src/tools/temperature-converter/temperature-converter.vue
+git ci -m "Added temperature limits #1144"
+git push
+git st
+ls
+vim package.json
+rg packageManager
+cd .git
+ls
+cd hooks/
+ls
+rg packageManager
+cd ..
+ls
+cd ..
+cd .github/
+ls
+cd workflows/
+ls
+rg packageManager
+vim ci.yml
+ls
+vim package.json
+cd ../..
+ls
+vim package.json
+npx pnpm
+corepack use pnpm@latest
+git diff
+git st
+git diff pnpm-lock.yaml
+git restore pnpm-lock.yaml
+git st
+corepack enable pnpm
+git st
+ls -ltra
+^ls -ltra
+vim package.json
+corepack enable
+git st
+git diff package.json
+pnpm -v
+git add package.json
+git ci -m "[?] added packageManager to package.json"
+git push
+ssh icesus
+andcli
+ping 192.168.0.51
+ssh icesus
+ls alma | sort-by modified
+rm alma/adategyezeto__regisztralt_egyeni_vallalkozasok_alairt.pdf
+z torrent/Videos
+cd boys/
+ls
+rtorrent magnet:?xt=urn:btih:F32F0A54835D7E6D89FAAA7FA99D0FC022D741A8&dn=The.Boys.S04E01.720p.x265-TiPEX%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce magnet:?xt=urn:btih:5F51A44622A719773AF0A4382A2076966B1DE0E6&dn=The.Boys.S04E03.720p.x265-TiPEX%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce magnet:?xt=urn:btih:A2851E2C6AD2E8F21E433C9D011571F834CDB766&dn=The.Boys.S04E02.720p.x265-TiPEX%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+ls
+ssh icesus
+ls
+z RepaMap
+code .
+ls -ltra export
+ls export | sort-by modified
+jj st
+jj log
+jj new clone2
+mv export/RepaMapOverlay.prg export/RepaMapOverlayClone2.prg
+lnav
+journalctl | lnav
+vim config/TOOLS.md
+z torrent/Videos
+cd dragon/
+ls
+rtorrent magnet:?xt=urn:btih:D8CE3968796833EE8589A65B706A40EBE0382E3C&dn=House.of.the.Dragon.S02E01.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+ssh icesus
+ssh nas.horak.hu
+ssh 192.168.0.13
+ssh nas
+cat .ssh/config | grep nas
+cat .ssh/config | grep nas -C 3
+ssh nas
+ls
+ls install/
+ls apps/
+./apps/MQTT-Explorer-0.4.0-beta1.AppImage
+andcli
+z boys
+ls
+cd ..
+cd dragon
+ls
+mpv 'House.of.the.Dragon.S02E01.WEB.x264-TORRENTGALAXY[TGx]/House.of.the.Dragon.S02E01.WEB.x264-TORRENTGALAXY.mkv'
+ssh icesus
+ssh icesus
+ls
+rm -rf 'House.of.the.Dragon.S02E01.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 1x10 2x1
+z boys
+ls
+systemd-tmpfiles -h
+systemd-tmpfiles --version
+systemd-tmpfiles --dry-run
+systemd-tmpfiles -h
+cat /usr/lib/tmpfiles.d/home.conf
+ls /srv
+mpv 'The.Boys.S04E01.720p.x265-TiPEX[TGx]/The.Boys.S04E01.720p.x265-TiPEX.mkv'
+ls
+rm -rf 'The.Boys.S04E01.720p.x265-TiPEX[TGx]/'
+mv 3x8 4x1
+andcli
+z acolyte
+ls
+rtorrent magnet:?xt=urn:btih:F8DDA18EFAAEC6B0BACFB0E5824B5A89D694C949&dn=The.Acolyte.S01E04.1080p.HEVC.x265-MeGusta%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+ls
+mv 1x2 1x3
+mpv 'The.Acolyte.S01E04.1080p.HEVC.x265-MeGusta[TGx]/The.Acolyte.S01E04.1080p.HEVC.x265-MeGusta.mkv'
+ls
+mv 1x3 1x4
+rm 'The.Acolyte.S01E04.1080p.HEVC.x265-MeGusta[TGx]/'
+rm -rf 'The.Acolyte.S01E04.1080p.HEVC.x265-MeGusta[TGx]/'
+cd ../boys
+ls
+ssh icesus
+mpv 'The.Boys.S04E02.720p.x265-TiPEX[TGx]/The.Boys.S04E02.720p.x265-TiPEX.mkv'
+ls
+mv 4x1 4x2
+rm -rf 'The.Boys.S04E02.720p.x265-TiPEX[TGx]/'
+andcli
+mpv 'The.Boys.S04E03.720p.x265-TiPEX[TGx]/The.Boys.S04E03.720p.x265-TiPEX.mkv'
+ls
+rm -rf 'The.Boys.S04E03.720p.x265-TiPEX[TGx]/'
+mv 4x2 4x3
+cd alma
+ls -ltra
+ls | sort-by modified
+rm horvath_gabor_E0301.pdf
+cd
+z boys
+ls
+rtorrent magnet:?xt=urn:btih:A4E362FC3972B3AE236F3BC767ED09E7D832AA85&dn=The.Boys.S04E04.720p.WEB.x265-MiNX%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+cd alma
+ls | sort-by modified
+rm b1.jpg b2.jpg b3.jpg
+icat 448550793_1031578465634011_1884912531388719167_n.jpg
+wezterm imgcat 448550793_1031578465634011_1884912531388719167_n.jpg
+rm 448550793_1031578465634011_1884912531388719167_n.jpg
+rm 448553359_1031577958967395_3335406564046561662_n.jpg
+rm 448600576_1031578575634000_4356418475761081700_n.jpg
+rm alma/b0.jpg
+ls
+rm *mtea
+rm *meta
+ssh icesus
+andcli
+mpv 'The.Boys.S04E04.720p.WEB.x265-MiNX[TGx]/The.Boys.S04E04.720p.WEB.x265-MiNX.mkv'
+ls
+mv 4x3 4x4
+rm -rf 'The.Boys.S04E04.720p.WEB.x265-MiNX[TGx]/'
+6 * 1.5
+5 * 1.5
+telnet 192.168.0.13 5683
+ssh nas
+ssh icesus
+z dragon
+ls
+andcli
+rtorrent magnet:?xt=urn:btih:3311983CC9E13CF7FED857F6EECC69A24A34285E&dn=House.Of.The.Dragon.S02E02.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+cd ..
+rtorrent magnet:?xt=urn:btih:710B5104DE7A91D5D70BEED7086A7869FB263BE2&dn=Furiosa.A.Mad.Max.Saga.2024.720p.WEBRip.900MB.x264-GalaxyRG&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+cd dragon/
+ls
+rm *meta
+rm alma/activity_15920284726.gpx
+ssh nas
+rm docker-compose.yml
+mpv 'House.Of.The.Dragon.S02E02.WEB.x264-TORRENTGALAXY[TGx]/House.Of.The.Dragon.S02E02.WEB.x264-TORRENTGALAXY.mkv'
+ls
+mv 2x1 2x2
+ls
+rm -rf 'House.Of.The.Dragon.S02E02.WEB.x264-TORRENTGALAXY[TGx]/'
+cd ..
+ls
+ls | sort-by modified
+cd 'Furiosa.A.Mad.Max.Saga.2024.720p.WEBRip.900MB.x264-GalaxyRG[TGx]/'
+ls
+rm alma/tasmota32-zbbrdgpro.bin
+dmesg
+lsusb
+cd tmp
+cd
+ls alma | sort-by modified
+vim zigbee.txt
+ls
+cd ..
+cd alma
+ls
+ls | sort-by modified
+file ncp-uart-sw_6.7.8_115200.ota
+cd egyeb
+z egyeb
+ls
+cd tasmota
+git clone git@github.com:arendst/Tasmota.git
+cd Tasmota
+ls
+pio
+yay -Ss platformio
+yay -S platformio-core
+yay -Sy platformio-core
+ls
+rg zbbrigde
+fd zbbridge
+rg zbbridge
+vim tasmota/include/tasmota_configurations.h
+cd alma
+ls | sort-by modified
+mv `tasmota32-zbbrdgpro (1).bin` tasmota32-zbbrdgpro.13.2.0.bin
+ls | sort-by modified
+rm ncp-uart-nsw_6.7.9_115200.ota ncp-uart-sw_6.7.8_115200.ota ncp-uart-sw_7.4.3.0_115200.ota ncp-uart-sw_6.7.10_115200.ota ncp-uart-sw_7.4.3.0_115200.gbl efr32mg21_zigbee_router_6.7.10.ota
+rm `ncp-uart-sw_6.7.8_115200 (1).ota`
+cd tmp
+vim zigbee.txt
+ls
+pio
+ls
+cd ..
+rm -rf Tasmota/
+ls | sort-by modified
+rm tasmota32-zbbrdgpro.13.2.0.bin tasmota32-zbbrdgpro.bin tasmota32-zbbrdgpro.factory.bin
+ls
+ls | sort-by modified
+rm `ncp-uart-sw_6.7.10_115200 (1).ota`
+cd
+cd apps
+ls
+./MQTT-Explorer-0.4.0-beta1.AppImage
+getent hosts nas
+cd ~/alma
+vim Config_zigbee_haz_6776_14.0.0.dmp
+yay -Ss tasmota
+ls -ltra
+ls | sort-by modified
+./decode-config.py
+chmod +x ./decode-config.py
+./decode-config.py
+yay -Ss configargparse
+yay -S python-configargparse
+./decode-config.py
+./decode-config.py -s Config_zigbee_haz_6776_14.0.0.dmp
+./decode-config.py -s Config_zigbee_haz_6776_14.0.0.dmp | gq
+./decode-config.py -s Config_zigbee_haz_6776_14.0.0.dmp | jq
+./decode-config.py -s Config_zigbee_haz_6776_14.0.0.dmp | save config_zigbee_dump.json
+vim config_zigbee_dump.json
+rm config.bin
+rm Config_zigbee_haz_6776_14.0.0.dmp
+rm config_zigbee_dump.json
+rm configuration.yaml
+./decode-config.py -s Config_zigbee_haz_6776_14.0.0.dmp | save config_zigbee_dump.json
+vim config_zigbee_dump.json
+ls | sort-by modified
+ls ~/alma | sort-by modified
+./MQTT-Explorer-0.4.0-beta1.AppImage
+ssh icesus
+ssh nas
+andcli
+z torrent/Videos
+ls
+ls | sort-by modified
+ls boys/
+ls monarch/
+ls bodies/
+ls
+ls | sort-by modified
+ssh icesus
+mpv 'Furiosa.A.Mad.Max.Saga.2024.720p.WEBRip.900MB.x264-GalaxyRG[TGx]/Furiosa.A.Mad.Max.Saga.2024.720p.WEBRip.900MB.x264-GalaxyRG.mkv'
+ls
+rm -rf 'Furiosa.A.Mad.Max.Saga.2024.720p.WEBRip.900MB.x264-GalaxyRG[TGx]/'
+ls
+go-repamotd 
+ssh icesus
+cd alma
+ls | sort-by modified
+ls ~/alma | sort-by modified
+mv alma/Otthon-1719331915684.json alma/otthon_dashboard.json
+andcli
+cd alma
+ls | sort-by modified
+mv MGC_9.2.113_A11_V12_ENG_gcamapk.io.apk ~/web/MGC.apk
+mv MGC_9.2.113_A11_V12_ENG_gcamapk.io.apk ~/www/MGC.apk
+rm ~/www/MGC.apk
+vim /etc/resolv.conf
+sudo vim /etc/resolve.conf
+sudo vim /etc/resolv.conf
+ssh icesus
+cd alma
+ls | sort-by modified
+rm 448*
+rm 449100077_7758981430888151_917711102083581090_n.mp4
+cd alma
+ls | sort-by modified
+rm IMG_20240627_202* 448427556_675778301384525_7940326356798974173_n.jpg_compressed.JPEG
+z boys
+ls
+rtorrent magnet:?xt=urn:btih:8EF15FEBAAB9D5CF599A96326C771B9B801CF6BA&dn=The.Boys.S04E05.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+andcli
+go install github.com/immanelg/pik@latest
+pik
+go uninstall github.com/immanelg/pik
+go help
+go install github.com/immanelg/pik@none
+go clean -i -n github.com/immanelg/pik
+z egyeb
+ls
+git clone git@github.com:immanelg/pik.git
+z pik
+z egyeb
+cd pi]
+cd pik
+ls
+ls app
+9 + 7 + 3 + 1 + 3 + 3
+7 + 12 + 3 + 4
+ls
+vim main.go
+vim app/app.go
+z pik
+ls
+go run . red
+go run . -h
+go run . -init red
+go run . -init ff0000
+vim main.go
+go-colorful
+rm `alma/Activities (1).csv` alma/Activities.csv
+vim alma/Activities.csv
+cd alma
+cd egyeb
+ls
+z egyeb
+ls
+mkdir futas
+cd futas
+mv ~/alma/Activities.csv
+mv ~/alma/Activities.csv .
+cat Activities.csv
+cat Activities.csv | from csv
+z futas
+ls
+cp Activities.csv futasok.csv
+vim futasok.csv
+cat futasok.csv | from csv
+ssh icesus
+cp futasok.csv Activities.csv
+vim futasok.csv
+cp Activities.csv futasok.csv
+vim futasok.csv
+cat futasok.csv | from csv
+ssh icesus
+ls -la
+ls -la
+cat futasok.csv | from csv
+cat futasok.csv | from csv | insert year-month --after Date
+cat futasok.csv | from csv | insert year-month | move year-month --after Date
+cat futasok.csv | from csv | insert year-month 0000-00 | move year-month --after Date
+cat futasok.csv | from csv | insert year-month 0000-00 --after Date
+cat futasok.csv | from csv | insert year-month 0000-00 | move year-month --after Date
+cat futasok.csv | from csv | insert year-month 0000-00 | move year-month --after Date | save fut.csv
+vim fut.csv
+python
+ls | sort-by modified
+vim fut_t.csv
+py
+ls
+vim transform.py
+python transform.py
+ls
+vim fut_t.csv
+mpv 'The.Boys.S04E05.WEB.x264-TORRENTGALAXY[TGx]/The.Boys.S04E05.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'The.Boys.S04E05.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 4x4 4x5
+9 + 7 + 3 + 1 + 3 + 3
+7 + 12 + 3 + 4
+z egyeb
+ls
+ls repacolors/
+mkdir repacolor
+repacolor
+which repacolor
+cd egyeb
+cd repacolor
+z repacolor
+ls
+git clone git@github.com:dyuri/repacolor.git .
+ls
+go mod init github.com/dyuri/repacolor
+go install github.com/spf13/cobra-cli@latest
+cobra-cli init
+ls
+vim main.go
+vim cmd/root.go
+vim LICENSE
+ls
+git st
+git restore LICENSE
+ls
+vim LICENSE
+ls
+vim main.go
+ls
+ls cmd
+go run .
+repacolors
+repacolor
+go run .
+go run . -h
+go run . -t
+go run . --help
+go run . toggle
+vim cmd/root.go
+cobra-cli add display
+go run .
+go run -h
+go run . -h
+go run . display
+vim main.go
+ls
+mkdir utils
+go mod tidy
+vim cmd/display.go
+go mod tidy
+ls
+mv utils/ color
+go mod tidy
+vim cmd/display.go color/parse_color.go
+mv color/parse_color.go color.go
+rmdir color
+go mod tidy
+mkdir color
+mv color.go color/
+go mod tidy
+go run . display
+go run . display "#000000"
+go run . display "#ff0000"
+go run . display "#ff000011"
+go run . display "#88ff00"
+go run . display "#88ff22"
+go run . display "#aaff22"
+vim cmd/display.go color/color.go
+git st
+git add .
+git ci -m "simple hex color display"
+git push
+andcli
+z dragon
+ls
+rtorrent magnet:?xt=urn:btih:E43016653FFB0DA7AF865FC009E7A483793AD912&dn=House.of.the.Dragon.S02E03.720p.WEB.x265-MiNX%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+mpv 'House.of.the.Dragon.S02E03.720p.WEB.x265-MiNX[TGx]/House.of.the.Dragon.S02E03.720p.WEB.x265-MiNX.mkv'
+ls
+rm -rf 'House.of.the.Dragon.S02E03.720p.WEB.x265-MiNX[TGx]/'
+mv 2x2 2x3
+z repacolor
+ls
+git st
+cat TODO.md
+cd ../repacolor
+cd ../repacolor
+ls
+go run . display "#aaff22"
+go run . display 
+andcli
+go run . display -h
+go run . display "rgb(100 200 0)"
+go run . display "#aaff2288"
+go run . display "rgb(100 200 0 / .2)"
+go run . display "rgb(100 200 0)"
+go run . display "rgb(100 200    0)"
+go run . display "rgb(100 200 0 88)"
+go run . display "rgb(100 200 0 / 88)"
+go run . display "rgb(100 200 0 / 0.88)"
+go run . display "rgb(100 200 0 / 88)"
+go run . display "rgb(100 200 0 / .88)"
+go run . display "rgb(100 200 0 .88)"
+go run . display "rgba(100,200,0,.88)"
+go run . display "rgba(100,200,0,50%)"
+go run . display "rgba(100,200,0,20%)"
+go run . display "rgba(100,200,0,.2)"
+go run . display "rgba(100 200 0 / .2)"
+go run . display "rgb(100 200 0 / .2)"
+vim color/color.go
+gofmt
+gofmt color/color.go
+vim color/color.go
+cd alma
+mkdir brekel
+mv Documentation.zip brekel
+cd brekel
+ls
+unzip Documentation.zip
+rm Documentation.zip
+evince Documentation.pdf
+ls
+cd ..
+rm -rf brekel
+go run . display "rgb(100 200 0 / 1)"
+gofmt color/color_test.go
+go test .
+go test color
+cd color
+go test .
+cd ..
+go test ./color
+go test ./color -v
+ssh icesus
+go test ./color -v
+0x3c
+go test ./color -v
+rm ~/alma/BYD_ATTO3_HUN_Arlista_20240605.pdf
+rm `~/alma/BYD DOLPHIN HU-V3.pdf`
+git st
+git diff
+git add .
+git ci -m "rgb() parsing"
+git push
+jj init -h
+jj init -R .
+jj git init --colocate
+jj st
+jj branch track main@origin
+jj st
+yay -Ss openssh
+yay -Sy
+yay -Syu
+yay -Ss openssh
+yay -Syu
+rm -rf /home/dyuri/.cache/yay/electron22/chromium-mirror
+sudo pacman -Syu
+yay -R electron22
+yay -R icu
+sudo pacman -Syu
+yay -R riscv64-elf-newlib
+yay -R riscv64-elf-gcc
+yay -S riscv64
+yay -Ss riscv64
+yay -S wezterm
+yay -S ncurses
+sudo pacman -Syu
+sudo rm /usr/share/terminfo/w/wezterm
+sudo pacman -Syu
+hyprpicker 
+yay -Syu
+snapper 
+snapper -c root list
+sudo snapper -c root list
+ls
+vim config/hypr/hyprland.conf
+py
+yay -S python-neovim
+vim config/hypr/hyprland.conf
+config nu --default
+config nu --default | grep shell
+config nu --default | grep shell -C 5
+config nu --default | grep shell_int -C 5
+config nu --default | grep shell_int -C 10
+vim config/hypr/hyprland.conf
+config nu --default | grep shell_int -B 20
+config nu --default | grep shell_int -A 20
+config nu --default | grep shell_int -A 25
+config nu --default | grep shell_int -A 30
+vim config/nushell/config.nu
+ls
+sleep 2
+sleep 2s
+sleep -h
+sleep 2sec
+z repacolor
+cd ../repacolo
+cd ../repacolor
+go run . display "rgb(100 200 0 / 1)"
+go run . display "rgb(192 255 0 / 1)"
+vim
+z repacolor
+cd ../repacolor
+vim main.go
+vim
+vim main.go
+yay -Ss luarocks
+yay -S luarocks
+npm install -g neovim
+vim main.go
+npm install -g neovim
+vim main.go
+cd .config/nvim/
+ls
+rm -rf .local/share/nvim/lazy/Comment.nvim/
+vim init.lua
+vim
+rm -rf .local/share/nvim/lazy/
+vim
+rm -rf .local/share/nvim/lazy/guihua.lua/
+cd .local/share/nvim/lazy/guihua.lua/
+ls
+make
+bash
+rg fzy
+rg fzy | grep make
+cd
+cd .config/nvim/
+rg guihua
+vim lua/core/lazy.lua
+bash
+cd -
+cd .local/share/nvim/lazy/guihua.lua/
+cd lua
+ls
+cd fzy
+make
+cd ..
+cd
+cd .config/nvim/
+ls
+vim init.lua
+ls
+cd lua
+ls
+ls core
+vim core/init.lua
+vim main.go
+vim core/lazy.lua
+vim core/lazy.lua
+vim plugins/init.lua
+rg mason
+rg dapui
+vim main.go
+vim plugins/lsp.lua
+vim plugins/lsp.lua
+vim main.go
+yay -Ss openssh
+ssh bubi
+cd egyeb/repacolor
+cd egyeb/repacolor
+go run . display "rgb(192 255 0 / 1)"
+ls
+vim color/color.go
+cp color/color.go color/parse_color.go
+mv color/color_test.go color/parse_color_test.go
+go test ./color -v
+go run . -h
+go run . display -h
+vim color/color.go color/parse_color.go
+repacolor show red
+repacolor display red
+repacolor display red -h
+repacolor display red --help
+repacolor display red --format rgb
+repacolor display red --format hsl
+go run . display -h
+go run . display "rgb(192 255 0 / 1)"
+go run . display "rgb(192 255 0 / 1)" -f rgb
+go run . display -h
+go run . display "rgb(192 255 0 / 1)" -f rgb
+go run . display "rgb(192 255 0 / .2)" -f rgb
+go test ./color -v
+vim color/color.go
+jj st
+ls
+rm -rf .npm
+jj st
+jj describe -m "rgb output"
+jj new
+jj git push
+jj branch set main
+jj git push
+jj st
+jj co vw
+jj edit vw
+jj branch set main
+jj branch set main --allow-backwards
+jj git push
+go run . display "rgb(192 255 0 / .2)" -f rgb
+go run . display "rgb(192 255 0 / .2)" -f hsl
+repacolor display "hsl(74, 100, 50)"
+repacolor display "hsl(74, 255, 255)"
+repacolor display "hsl(74, 360, 360)"
+repacolor display "hsl(74, 360, 180)"
+repacolor display "rgb(192, 255, 0)"
+go run . display "rgb(192 255 0 / .2)" -f hsl
+go run . display "rgb(192 254 0 / .2)" -f hsl
+go run . display "rgb(192 255 0 / .2)" -f hsl
+go run . display "rgb(192 255 0 / .2)" -f lab
+go run . display "rgb(192 255 0 / .2)" -f lch
+go run . display "rgb(192 254 0 / .2)" -f hsl
+go run . display "rgb(192 254 0 / .2)" -f xyz
+vim go.mod
+cat go.mod
+go get -u github.com/lucasb-eyer/go-colorful@master
+go get -u github.com/lucasb-eyer/go-colorful@main
+go get -u github.com/lucasb-eyer/go-colorful@master
+vim go.mod
+go run . display "rgb(192 254 0 / .2)" -f xyz
+go run . display "rgb(192 254 0 / .2)" -f oklab
+go run . display "rgb(192 254 0 / .2)" -f lab
+go run . display "rgb(192 254 0 / .2)" -f lch
+go run . display "rgb(192 254 0 / .2)" -f oklch
+go run . display "rgb(192 254 0 / .2)" -h
+ssh icesus
+go mod tidy
+go run . display "rgb(192 254 0 / .2)" -f oklch
+go run . display "rgb(192 254 0 / .2)"
+go run . display rebeccapurple
+go run . display red
+go run . display "hwb(100 100 100)"
+go run . display "hwb(100 100 100)" -f hsl
+go run . display "hwb(100 100 100)" -f oklch
+go run . display "hwb(100 100 100)" -f oklab
+1 / 255
+go run . display "hwb(100 100 100)" -f oklab
+rg delta
+go run . display "hwb(100 100 100)" -f oklab
+go run . display "hwb(100 100 100)" -f rgb
+go test ./color -v
+vim color/color.go
+ss jst
+jj st
+jj describe -m "csscolorparses"
+jj branch set main
+jj git push
+andcli
+lsusb
+dmesg
+journalctl | lnav
+sudo chmod 666 /dev/ttyUSB0
+z torrent/Videos
+ls
+ls | sort-by modified
+ls boys
+cd twisted
+ls
+mpv 'Twisted.Metal.S01.COMPLETE.720p.PCOK.WEBRip.x264-GalaxyTV[TGx]/Twisted.Metal.S01E07.720p.PCOK.WEBRip.x264-GalaxyTV.mkv'
+ls
+mv 1x6 1x7
+ssh icesus
+cd egyeb/repacolor
+go run . display "hwb(100 100 100)" -f rgb
+go run . display "hwb(100 100 100)"
+ls
+vim color/color.go
+go run . display "hwb(100 100 100)"
+go test ./color -v
+go run . display "cica"
+go run . display "brightred"
+go run . display "lightred"
+go run . display "red"
+go mod tidy
+go run . display "red"
+go run . display "red" -n
+go run . display "red"
+go run . display "rgb(160 255 0 .5)"
+go run . display "red"
+go run . display "darkred"
+go run . display "black"
+go run . display "white"
+go run . display "red"
+go run . display "rgb(160 255 0 .5)"
+go run . display "rgb(160 255 0 .5)" -f lab
+go run . display "black" -f lab
+go run . display "white" -f lab
+go run . display "white" -f xyz
+go run . display "black" -f xyz
+go run . display "rgb(160 255 0 .5)" -f lab
+go run . display "red" -f lab
+go run . display "yellow" -f lab
+go run . display "darkyellow" -f lab
+go run . display "blue" -f lab
+go run . display "blue" -f lab | cat
+ssh icesus
+ping office.codeandsoda.com
+ping office.codeandsoda.hu
+mpv 'Twisted.Metal.S01.COMPLETE.720p.PCOK.WEBRip.x264-GalaxyTV[TGx]/Twisted.Metal.S01E08.720p.PCOK.WEBRip.x264-GalaxyTV.mkv'
+ls
+mv 1x7 1x8
+mpv 'Twisted.Metal.S01.COMPLETE.720p.PCOK.WEBRip.x264-GalaxyTV[TGx]/Twisted.Metal.S01E09.720p.PCOK.WEBRip.x264-GalaxyTV.mkv'
+mv 1x8 1x9
+ls
+mpv 'Twisted.Metal.S01.COMPLETE.720p.PCOK.WEBRip.x264-GalaxyTV[TGx]/Twisted.Metal.S01E10.720p.PCOK.WEBRip.x264-GalaxyTV.mkv'
+ls
+ls 'Twisted.Metal.S01.COMPLETE.720p.PCOK.WEBRip.x264-GalaxyTV[TGx]/'
+rm -rf 'Twisted.Metal.S01.COMPLETE.720p.PCOK.WEBRip.x264-GalaxyTV[TGx]/'
+mv 1x9 1x10
+go run . display "rgb(160 255 0 .5)" -f lab
+go run . display "rgb(160 255 0 .5)"
+ls -ltra
+ls | sort-by modified
+feh color.png
+wezterm imgcat color.png
+go run . display "rgb(160 255 0)"
+wezterm imgcat color.png
+repacolor display "rgb(192, 255, 0)"
+go run . display "rgb(160 255 0)"
+wezterm imgcat color.png
+go run . display "rgb(160 255 0)"
+wezterm imgcat color.png
+feh color.png
+go run . display "rgb(160 255 0)"
+feh color.png
+go run . display "rgb(160 255 0)"
+feh color.png
+go run . display "rgb(160 255 0 / .5)"
+feh color.png
+go run . display "rgb(160 255 0 / .5)"
+rm color.png
+go run . display "rgb(160 255 0 / .5)"
+go run . display "rgb(160 255 0 / .2)"
+go run . display "rgb(160 255 0 / .9)"
+repacolor display "rgb(192, 255, 0)"
+repacolor display "rgb(192, 255, 0, 120)"
+go run . display "rgb(160 255 0 / .3)"
+go run . display "rgb(160 255 0 / .9)"
+go run . display "rgb(160 255 0 / .5)"
+go run . display "rgb(160 255 0 / .6)"
+go run . display "rgb(160 255 0 / .7)"
+go run . display "rgb(160 255 0 / .8)"
+go run . display "rgb(160 255 0 / .5)"
+go run . display "rgb(160 255 0 / .7)"
+go run . display "rgb(160 255 0 / 1)"
+go run . display "rgb(160 255 0 / .4)"
+go run . display "rgb(160 255 0 / .7)"
+repacolor display "rgb(192, 255, 0, 180)"
+go run . display "rgb(192 255 0 / .7)"
+vim color/color.go
+jj st
+jj diff
+jj st
+jj describe -m "ansi image display POC"
+jj branch set main
+jj git push
+z torrent/Videos
+z boys
+ls
+rtorrent magnet:?xt=urn:btih:B97A8E0F1DE1FEBC751076061DEA6965BB90255E&dn=The.Boys.S04E06.720p.WEB.x265-MiNX%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+z dragon
+rtorrent magnet:?xt=urn:btih:88FE69C8C545253AD360C37FA93DB272AC900441&dn=House.of.the.Dragon.S02E04.720p.WEB.x265-MiNX%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+andcli
+ls
+rm *meta
+cd ../boys
+ls
+mpv 'The.Boys.S04E06.720p.WEB.x265-MiNX[TGx]/The.Boys.S04E06.720p.WEB.x265-MiNX.mkv'
+file 'The.Boys.S04E06.720p.WEB.x265-MiNX[TGx]/The.Boys.S04E06.720p.WEB.x265-MiNX.mkv'
+cd 'The.Boys.S04E06.720p.WEB.x265-MiNX[TGx]/'
+ls
+cd ..
+ls
+rm -rf 'The.Boys.S04E06.720p.WEB.x265-MiNX[TGx]/'
+rtorrent magnet:?xt=urn:btih:6EA78CF295713C0C246B4AE8A825C25BD0478908&dn=The.Boys.S04E06.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls ~/alma | sort-by modified
+rm alma/document_17fb97c9-3d9e-40bd-b43e-04f8ba1be71e.pdf
+rm alma/esp32-2432s028r_full_4MB_v0.7.0-rc12_cd34d89.bin
+ssh icesus
+mpv 'The.Boys.S04E06.WEB.x264-TORRENTGALAXY[TGx]/The.Boys.S04E06.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'The.Boys.S04E06.WEB.x264-TORRENTGALAXY[TGx]/'
+rm *meta
+mv 4x5 4x6
+whois 209.97.175.154
+ls
+vim alma/unifi_controller_6.json
+ls ~/alma | sort-by modified
+ssh icesus
+z dragon
+ls
+mpv 'House.of.the.Dragon.S02E04.720p.WEB.x265-MiNX[TGx]/'
+mpv 'House.of.the.Dragon.S02E04.720p.WEB.x265-MiNX[TGx]/House.of.the.Dragon.S02E04.720p.WEB.x265-MiNX.mkv'
+ls
+rm -rf 'House.of.the.Dragon.S02E04.720p.WEB.x265-MiNX[TGx]/'
+mv 2x3 2x4
+z egyeb/repacolor
+z egyeb/repacolor
+go run . display "rgb(192 255 0 / .7)"
+ls
+go run . display "rgb(192 255 0 / .7)"
+vim cmd/display.go
+minecraft-launcher 
+yay -Ss minecraft
+minecraft-launcher 
+andcli
+getent hosts bubi.codeandsoda.hu
+ssh bubi
+z torrent/Videos
+ls | sort-by modified
+cd twisted/
+ls
+cd ..
+ssh icesus
+vim config/TOOLS.md
+rm `alma/Orbinox+TL+Datasheet+(1).pdf`
+ls ~/alma | sort-by modified
+rm alma/*epub
+rm alma/VRG130_hu_I_LR.pdf
+rm alma/Anv_VRG130_98140269_utgF_lr.pdf
+rm `alma/ESBE Selection Guide_Controllers_en_A_LR.pdf`
+telnet icesus 4318
+ls | sort-by modified
+ls ~alma/ | sort-by modified
+ls ~/alma | sort-by modified
+rm alma/jaeger-1.59.0-linux-amd64.tar.gz
+ssh icesus
+ssh icesus
+24 * 200
+24 * 300
+9 * 300
+z boys
+ls
+rtorrent magnet:?xt=urn:btih:52F732C61D83C5413720A8E8D4FC0FEF72F0738D&dn=The.Boys.S04E07.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+z melo
+ls
+cd FreshDirect/
+ls
+wget https://uxe.icesus.freshdirect.com/media/editorial/food_safety/css/updates/foodsafetystyle.css
+vim foodsafetystyle.css
+bin/screenrecord.sh
+yay -S wl-screenrec
+yay -h
+yay -c
+yay --clean
+yay Sy -c
+yay S -c
+yay Su -c
+yay -Suc
+yay -Syc
+yay -Sc
+yay -S wl-screenrec
+yay -Ss wl-screenrec
+yay -S wl-screenrec-git
+yay -R wl-screenrec-debug
+yay -S wl-screenrec-git
+screenrecord.sh
+ls -ltra
+ls | sort-by modified
+mpv screenrecord.mp4
+rm screenrecord.mp4
+mpv 'The.Boys.S04E07.WEB.x264-TORRENTGALAXY[TGx]/The.Boys.S04E07.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'The.Boys.S04E07.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 4x6 4x7
+ssh icesus
+z repacolor
+cd ../repacolor
+z egyeb/repacolor
+cd ../repacolor
+ls
+go run . display "rgb(192 255 0 / .7)"
+jj st
+vim cmd/display.go
+go run . display "rgb(192 255 0 / .7)"
+yay -S flutter
+go run . display "rgb(192 255 0 / .7)"
+go run . display "rgb(192 255 0 / .7)" -f hex
+go run . display "rgb(192 255 0 / .7)" -f hex | /bin/cat
+vim cmd/display.go
+rg NoColor
+vim color/parse_color.go
+go run . display "rgb(192 255 0 / .7)" -f hex
+go run . display "rgb(192 255 0 / .7)"
+go run . display "rgb(192 255 0 / .7)" -f rgba
+go run . display "rgb(192 255 0 / .7)" -f rgb
+go run . display "rgb(192 255 0 / .7)" -f rgba
+go run . display "cica"
+go run . display -h
+go run . display "cica"
+go run . display "cica" --nofallback
+go run . display "cica"
+go run . display "mokus"
+go run . display "Gyuri"
+go run . display "Repa"
+go run . display "Répa"
+go run . display "Répa" --nofallback
+vim color/parse_color.go
+jj st
+jj branch set main
+jj describe -m "ansi image display enhancement, deterministic random parsing"
+jj git push
+naptar
+rm `~/alma/GPSRetailMedia Developer Documentation.pdf`
+sudo chmod 666 /dev/ttyUSB0
+cat alma/Alarm_Keypad.widget.json
+rm alma/Alarm_Keypad.widget.json
+ls ~/alma | sort-by modified
+rm alma/unifi_controller_6.json
+rm alma/haspdesigner_settings.json
+ssh nas
+ssh repanas
+ssh almanas
+ssh nas
+ssh 192.168.0.13
+ssh dyuri@nas
+ssh root@nas
+ssh root@almanas
+ssh 192.168.0.13
+ssh 192.168.0.13 -p 12223
+vim .ssh/config
+getent hosts nas
+ssh nas
+vim /etc/hosts
+sudo vim /etc/hosts
+ssh nas
+rm alma/hasp2.jsonl
+cd apps
+./MQTT-Explorer-0.4.0-beta1.AppImage
+python
+py
+pi
+py
+z dragon
+ls
+rtorrent magnet:?xt=urn:btih:6406C63CED7EE3D557044682A2F91A4450C9770A&dn=House.of.the.Dragon.S02E05.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+evince `alma/GPSRetailMedia Developer Documentation.pdf`
+andcli
+cd egyeb/repacolor
+vim TODO.md
+ssh icesus
+ls
+rm *meta
+(2 * 220 + 2 * 190) * 210
+(2 * 2.20 + 2 * 1.90) * 2.10
+mpv 'House.of.the.Dragon.S02E05.WEB.x264-TORRENTGALAXY[TGx]/House.of.the.Dragon.S02E05.WEB.x264-TORRENTGALAXY.mkv'
+ls
+mv 2x4 2x5
+rm -rf 'House.of.the.Dragon.S02E05.WEB.x264-TORRENTGALAXY[TGx]/'
+(2 * 2.20 + 2 * 1.90) * 2.30
+rm alma/hasp2.jsonl
+ssh icesus
+ping office.codeandsoda.hu
+cd egyeb/repacolor
+cd egyeb/repacolor
+go run . display "Répa" --nofallback
+go run . display "Répa"
+go run . display "Gyuri"
+go run . display "Repa"
+go run . display "Repa" | /bin/cat
+go run . display "Repa"
+go run . display "Repa" -f ansi
+go run . display "Repa" -f text
+vim cmd/display.go
+jj st
+jj diff
+jj branch set main
+jj git push
+jj describe -m "minimal display refactor"
+jj git push
+andcli
+cd egyeb/repacolor
+cd egyeb/repacolor
+go run . display "Repa" -f text
+go run . display "Repa" -f ansi
+go run . display "Repa" -f ansi --nofallback
+go run . display "Repa" -f ansi
+4800/3
+4800 / 3
+8400 / 3
+12 / 3
+z boys
+rtorrent magnet:?xt=urn:btih:B20640CA179148FD4918285E2FAABCD33BB2E31A&dn=The.Boys.S04E08.720p.WEB.x265-MiNX%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+z garmin
+ls
+feh RepaMapOverlay/export/screen3.jpg
+ls
+cd maps
+ls
+wine `~/.wine/drive_c/Program Files/TYPWiz7LI/twz7.exe`
+z garmin/maps
+ls
+qmapshack
+mpv 'The.Boys.S04E08.720p.WEB.x265-MiNX[TGx]/The.Boys.S04E08.720p.WEB.x265-MiNX.mkv'
+ls
+mv 4x7 4x8
+rm -rf 'The.Boys.S04E08.720p.WEB.x265-MiNX[TGx]/'
+ssh icesus
+getent hosts host.docker.internal
+z dragon
+andcli
+rtorrent magnet:?xt=urn:btih:A138851EC880C1F2BF9083A69A87F86F81C17AF2&dn=House.of.the.Dragon.S02E06.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+ping 192.168.210.105
+getent hosts storedev07.nj01.freshdirect.com
+curl https://storedev07.nj01.freshdirect.com
+tracepath storedev07.nj01.freshdirect.com
+sudo su -
+mpv 'House.of.the.Dragon.S02E06.WEB.x264-TORRENTGALAXY[TGx]/House.of.the.Dragon.S02E06.WEB.x264-TORRENTGALAXY.mkv'
+cd egyeb/repacolor
+cd ~/egyeb/repacolor
+ls
+go run . display "Repa" -f ansi
+ls
+pastel color oklab(53, 80, 67)
+pastel color "oklab(53, 80, 67)"
+pastel color "lab(53, 80, 67)"
+go run . display "Repa" -f text
+go run . display "red" -f text
+ssh icesus
+go run . display "red" -f text
+go run . display "red"
+vim cmd/display.go
+jj st
+jj describe -m "combined display"
+jj branch set main
+jj git push
+go run . display "rgb(192 255 0 / .7)" -f rgba
+go run . display "rgb(192 255 0 / .7)"
+vim cmd/display.go
+ping telex.hu
+ping 192.168.0.2
+sudo su -
+cat /etc/ntp.conf
+getent hosts 0.arch.pool.ntp.org
+cd alma
+ls ~/alma | sort-by modified
+rm *torrent
+mkdir zigbee
+mv tasmota32-ZB-GW03-EN.bin Config_zigbee_haz_6776_14.0.0.dmp config_zigbee_dump.json zigbee
+rm `1719994210KKP 30 2024.gpx`
+rm `Útitárs Casco évfordulós levél.pdf`
+rm employees-0.0.1-jdk17.war
+mv efr32mg21_zigbee_router_6.7.10.ota zigbee/
+ls zigbee2mqtt/
+andcli
+9 + 14
+cd egyeb
+cd tasmota
+ls
+z tasmota
+git clone git@github.com:arendst/Tasmota.git
+cd Tasmota/
+ls
+rg 5536
+rg 5794
+rg 5793
+vim TEMPLATES.md
+python
+rg 16a1
+ls
+vim I2CDEVICES.md
+rg 2976
+cd ..
+ls
+go-repamotd 
+vim alma/zigbee/config_diff.txt
+ssh icesus
+ping 192.168.0.2
+ping 192.168.0.91
+ping 192.168.0.2
+ls -ltra
+ls ~/alma | sort-by modified
+rm Archer_C7_V2_Utility_131220.zip
+mkdir archer
+cd archer
+mv `../Archer C7(EU)_V2_170803.zip` .
+unzip `Archer C7(EU)_V2_170803.zip`
+cd ..
+rm -rf archer/
+rm archive.zip
+andcli
+bin/screenrecord.sh rerender_wtf.mp4
+mpv ./rerender_wtf.mp4
+ls -ltra
+ls | sort-by modified
+mv screenrecord.mp4 rerender_wtf.mp4
+mpv rerender_wtf.mp4
+ssh icesus
+.6 * 183
+.7 * 183
+.8 * 183
+.9 * 183
+z torrent/Videos
+rtorrent magnet:?xt=urn:btih:0E9F7B68AF2FF3EA84CD8498081CC886BF711BF3&dn=Deadpool+And+Wolverine+2024+%5B1080p+NO+ADS+x264+HDTS+%5BEnglish+AAC%5D+xDark+%5BMoviesUp%5D&tr=https%3A%2F%2Ftracker.madtia.cc%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=https%3A%2F%2Ftracker.bt4g.com%2Fannounce&tr=https%3A%2F%2Ftracker.yemekyedim.com%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonoid.ch%3A6969%2Fannounce&tr=udp%3A%2F%2Fbubu.mapfactor.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dump.cl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+andcli
+ls
+ls | sort-by modified
+rm *meta
+andcli
+mpv 'Deadpool And Wolverine 2024 [1080p x264 HDTS [English AAC] xDark [MoviesUp].mp4'
+rm 'Deadpool And Wolverine 2024 [1080p x264 HDTS [English AAC] xDark [MoviesUp].mp4'
+ssh icesus
+z egyeb/repacolor
+z egyeb/repacolor
+go run . display "rgb(192 255 0 / .7)"
+go build
+ls | sort-by modified
+jj st
+vim .gitignore
+./repacolor display red green
+./repacolor display red
+go run . display "rgb(192 255 0 / .7)"
+go run . display "rgb(192 255 0 / .7)" --nofallback
+go run . display "cica" --nofallback
+go run . display "rgb(192 255 0 / .7)" --nofallback
+go run . display "rgb(192 255 0 / .7)" red --nofallback
+go run . display "rgb(192 255 0 / .7)" red cica --nofallback
+go run . display "rgb(192 255 0 / .7)" red "hsl(270 255 255)"
+go run . display "rgb(192 255 0 / .7)" red "hsl(270 255 128)"
+go run . display "rgb(192 255 0 / .7)" red "hsl(270 100 100)"
+go run . display "rgb(192 255 0 / .7)" red "hsl(270 100 50%)"
+go run . display "rgb(192 255 0 / .7)" red "hsl(250 100 50%)"
+go run . display "rgb(192 255 0 / .7)" red "hsl(235 100 50%)"
+go run . display "rgb(192 255 0 / .7)" red "hsl(230 100 50%)"
+go run . display "rgb(192 255 0 / .7)" red "hsl(220 100 50%)"
+go run . display
+echo red | go run . display
+vim cmd/display.go
+jj st
+jj describe -m "multi color input, stdin input"
+jj branch set main
+jj git push
+mv denever.jpg www/images/
+z dragon
+rtorrent magnet:?xt=urn:btih:5B0E99E1B3494243D9E6FD3C1695C571CADA3970&dn=House.of.the.Dragon.S02E07.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+andcli
+ls
+mv 2x5 2x6
+rm *meta
+mpv 'House.of.the.Dragon.S02E07.WEB.x264-TORRENTGALAXY[TGx]/House.of.the.Dragon.S02E07.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf Hou*
+mv 2x6 2x7
+naptar
+vim config/TOOLS.md
+ssh icesus
+ssh icesus
+go install github.com/ZeppelinMC/Zeppelin
+go install github.com/ZeppelinMC/Zeppelin@latest
+go install github.com/zeppelinmc/zeppelin@latest
+zeppelin
+cd .minecraft/
+ls
+find world
+fd world
+zepelin
+zeppelin
+minecraft-launcher 
+minecraft-launcher
+ls
+ls -ltra
+ls | sort-by modified
+cd versions
+ls
+rm -rf 1.1*
+ls
+cd 1.21
+ls
+cd ..
+ls
+cd ..
+ls
+ls assets/
+cd ..
+ls | sort-by modified
+ls -al | sort-by modified
+cd .minecraft/
+du -hs *
+^du -hs *
+cd assets
+ls
+cd objects/
+ls
+cd ..
+ls
+cd indexes/
+ls
+cd ..
+ls
+cd ..
+ls
+cd saves
+ls
+cd Proba
+ls
+zeppelin
+zeppelin -h
+ls -ltra
+^ls -ltra
+mv config.toml ..
+c d..
+cd ..
+^ls -ltra
+rm config.toml
+vim config.toml
+ln -s Proba/ world
+zeppelin
+go-repamotd 
+1200 / 40
+2200 / 40
+andcli
+sudo vim /etc/hosts
+ssh icesus
+vim .weechat/irc.conf
+andcli
+z egyeb/repacolor
+z egyeb/repacolor
+go run . display "rgb(192 255 0 / .7)" red "hsl(220 100 50%)"
+cat | go run . display
+ls
+ls cmd
+cobra-cli add pick
+ls
+vim cmd/pick.go cmd/display.go
+mkdir display
+vim display/ansiimage.go
+go run . display "rgb(192 255 0 / .7)" red "hsl(220 100 50%)"
+vim cmd/display.go
+go run . display "rgb(192 255 0 / .7)" red "hsl(220 100 50%)"
+go run . pick
+ssh icesus
+go run . display -h
+go run . pick -h
+go run . pick
+go run . pick red
+vim cmd/display.go
+mkdir picker
+go run . pick red
+go mod tidy
+go run . pick red
+vim cmd/pick.go picker/app.go
+weechat
+cd www
+ls
+mkdir garmin
+cd garmin
+z garmin/maps
+ls
+ls | sort-by modified
+cp gmapsupp_repa.img ~/www/garmin
+evince alma/nav_20240802.pdf
+rm alma/nav_20240802.pdf
+andcli
+ssh icesus
+andcli
+z dragon
+rtorrent magnet:?xt=urn:btih:705D795160B2CC89F99CF76954A207D6FC58C5BD&dn=House.of.the.Dragon.S02E08.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+andcli
+getent hosts fdtest.freshdirect.com.edgekey.net
+getent hosts fdtest.freshdirect.com.edgekey-staging.net
+getent hosts fdtest.freshdirect.com
+sudo vim /etc/hosts
+sudo vim /etc/hosts
+ssh icesus
+sudo vim /etc/hosts
+sudo vim /etc/hosts
+mpv 'House.of.the.Dragon.S02E08.WEB.x264-TORRENTGALAXY[TGx]/House.of.the.Dragon.S02E08.WEB.x264-TORRENTGALAXY.mkv'
+ssh icesus
+ls
+mv 2x7 2x8
+rm -rf *meta 'House.of.the.Dragon.S02E08.WEB.x264-TORRENTGALAXY[TGx]/'
+ssh icesus
+7 * 2.6
+12 * 2.6
+18 + 31
+25 - 18.2
+6.8 / 2.6
+15 / 2.6
+rm alma/theboys_dearbecky_issue7.epub
+ssh icesus
+rm data.db
+ssh icesus
+cat .ssh/id_rsa
+cat .ssh/id_rsa | wl-copi
+cat .ssh/id_rsa | wl-copy
+cat .ssh/id_rsa.pub | wl-copy
+rm export_20240806155611.tar.gz.enc
+ssh icesus
+ssh icesus
+andcli
+ssh icesus
+cd .config/nvim/
+ls
+vim lua/core/lazy.lua
+vim
+cd
+ssh icesus
+alacritty migrate
+alacritty 
+ls
+alacritty
+126/42
+126 / 42
+126 / 42.0
+126.0 / 42.0
+z egyeb/repacolor
+z egyeb/repacolor
+go run . pick red
+ls
+go run . pick red
+rg colorful
+go run . pick red
+go run . pick
+vim picker/app.go
+jj st
+jj add .
+jj describe -m "interactive color picker - initial version"
+jj branch set main
+jj git push
+ssh icesus
+jj git push
+andcli
+sudo vim /etc/hosts
+ssh icesus
+z torrent/Videos
+rtorrent magnet:?xt=urn:btih:535BE4AC2DF8C2FAAF88C329BEDA116FAA23B4A4&dn=Borderlands+2024+%5B1080p+HDTS+x264+%5BAAC+ENGLISH%5D+xDark+%7E+COLL+%5BMoviesUp%5D&tr=https%3A%2F%2Ftracker.madtia.cc%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=https%3A%2F%2Ftracker.bt4g.com%2Fannounce&tr=https%3A%2F%2Ftracker.yemekyedim.com%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonoid.ch%3A6969%2Fannounce&tr=udp%3A%2F%2Fbubu.mapfactor.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.dump.cl%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.bittor.pw%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+ls | sort-by modified
+mpv 'Borderlands 2024 [1080p HDTS x264 [AAC ENGLISH] xDark [MoviesUp].mp4'
+rm 'Borderlands 2024 [1080p HDTS x264 [AAC ENGLISH] xDark [MoviesUp].mp4'
+ssh icesus
+cd egyeb
+ls
+cd xonsh/
+ls
+cd xontrib-langenv/
+git pull
+ls
+cat pyproject.toml
+poetry build
+yay -Ss poetry
+yay -S python-poetry
+poetry build
+ls
+vim pyproject.toml
+poetry build
+poetry publish
+z langenv
+git st
+rm -rf xontrib/__pycache__/
+git st
+git add .
+git ci -m "version => 1.2.2"
+git push
+ssh icesus
+andcli
+cat .ssh/id_rsa.pub | wl-copy
+365 * .9
+365 * .1
+365 * .01
+z egyeb/repacolor
+z egyeb/repacolor
+go run . pick
+ls
+vim TODO.md
+ping office.codeandsoda.hu
+getent hosts mail.google.com
+nslookup mail.google.com
+dig
+dog mail.google.com
+bin/screenrecord.sh masq_modify_order.mp4
+jj st
+rm ~/screenrecord.mp4
+go run . pick
+go run . pick -a
+go run . pick "#ffffffaa"
+ssh icesus
+jj st
+go run . pick "#ffffffaa"
+jj st
+go run . pick "#ffffffaa"
+vim picker/app.go
+andcli
+http get https://dyuri.horak.hu/.well-known/acme-challange/
+http get https://dyuri.horak.hu/.well-known/acme-challange/a
+http get http://dyuri.horak.hu/.well-known/acme-challange/a
+http get http://dyuri.horak.hu/.well-known/acme-challange/a.txt
+http get http://photos.horak.hu/.well-known/acme-challange/a.txt
+http get http://photos.horak.hu/.well-known/acme-challenge/a.txt
+http get https://photos.horak.hu/.well-known/acme-challenge/a.txt
+ssh nas
+ssh icesus
+ssh icesus
+sudo vim /etc/hosts
+sudo pacman -Syu
+yay -Syu
+z egyeb/repacolor
+z egyeb/repacolor
+6 * 2.5
+18 * 2.5
+go run . pick "#ffffffaa"
+ps -ef | grep steam
+^ps -ef | grep steam
+go run . pick "#ffffffaa"
+go run . pick "#ffffffaa" -a
+go run . pick "teal"
+go run . pick "teal" | cat
+go run . pick "teal" 
+go run . pick "teal"
+jj st
+cat TODO.md
+jj describe -m "picker upgrades"
+jj branch set main
+jj git push
+vim picker/app.go
+ssh icesus
+jj git push
+ls /boot
+bootctl -h
+bootctl status
+sudo bootctl status
+cat /proc/partitions
+mount | grep nvme
+sudo fdisk /dev/nvme0n1
+ls /efi
+ls /efi/EFI
+ls /efi/EFI/BOOT
+bootctl --esp-path=/efi
+bootctl --esp-path=/efi/EFI
+ls /boot
+rm alma/shortest-track.gpx
+ls ~/alma | sort-by modified
+rm alma/shortest-route.gpx
+z egyeb/repacolor 
+z egyeb/repacolor
+go run . pick "teal"
+go run . pick yellow
+z egyeb/repacolor
+go run . pick yellow
+go run . pick rebeccapurple
+go run . pick rebeccapurple -a
+go run . pick rebeccapurple
+vim picker/app.go
+jj st
+jj describe -m "mouse handling"
+jj branch set main
+jj git push
+ssh icesus
+jj git push
+z repamapoverlay
+ls
+cat TODO.md
+code .
+jj st
+jj new main
+jj st
+jj log
+jj log -l 10
+git co clone 2
+jj edit clone 2
+jj edit clone2
+jj edit yvrrummm
+jj st
+jj describe -m "speed / average speed"
+jj branch set main
+jj git push
+ssh icesus
+jj git push
+jj edit clone2
+jj rebase -d main
+jj st
+jj git push
+z egyeb/repacolor
+z repamapoverlay
+ls
+vim source/Gauge.mc
+ls
+jj st
+ls cmd
+cp cmd/pick.go cmd/serve.go
+go run . serve
+go mod tidy
+go run . serve
+ssh localhost -p 10022
+ssh localhost -p 10022 green
+ssh localhost -p 10022
+ssh localhost -p 10022 green
+ssh localhost -p 10022
+go run . serve
+ssh localhost -p 10022
+ssh localhost -p 10022 -l cica
+ssh localhost -p 10022 -l "rgb(10 10 10)"
+ssh localhost -p 10022 green
+ssh localhost -p 10022 -t green
+ssh localhost -p 10022 -t cica
+go run . serve
+ssh localhost -p 10022 -t "rgb(100 255 50)"
+ssh localhost -p 10022 -t "rgb(100,255,50)"
+vim cmd/serve.go
+vhs
+killall vhs
+ps
+kill 74583
+vhs -h
+ls -ltra
+ls | sort-by modified
+rm a.tape
+rm rerender_wtf.mp4
+ls
+ls bin
+ssh localhost -p 10022 -t "rgb(100,255,50)"
+bin/recordterm
+ls | sort-by modified
+ls -ltra
+^ls -ltra
+ls
+jj st
+vim .gitignore
+jj st
+jj untrack .ssh
+jj st
+mv ~/term.svg ssh_demo.svg
+go run . display "rgb(192 255 0 / .7)" red "hsl(220 100 50%)"
+go run .
+go run . serve --port 1234
+go run . serve 1234
+go run . serve
+vim README.md
+jj st
+jj describe -m "ssh server"
+jj branch set main
+jj git push
+ls | sort-by modified
+vhs record
+z torrent/Videos
+mv '~/alma/[nCore][xvid_hun]Labyrinth.1986.RETAiL.BDRiP.x264.Hun-Daw086.torrent' .
+^mv '~/alma/[nCore][xvid_hun]Labyrinth.1986.RETAiL.BDRiP.x264.Hun-Daw086.torrent' .
+bash
+rtorrent labirintus.torrent
+yay -Ss uv
+yay -S uv
+yay -Sy uv
+uv -h
+uv version
+uv tool
+uv toolchain
+uv toolchain list
+z egyeb/repacolor
+go build
+ls
+scp repacolor nas:
+ls
+ls -ltra
+ls -la
+ip addr
+pwd
+ssh icesus
+ssh nas -p 10022
+ssh nas -p 10022 rebeccapurple
+ssh nas -p 10022 -t rebeccapurple
+zellij
+whois 78.131.11.19
+whois 85.255.9.105
+ssh nas
+ssh nas -p 10022 -t rebeccapurple
+z torrent/Videos
+rtorrent labirintus.torrent
+mv '~/alma/[nCore][xvid_hun]Torbe.ejtve.Az.uveghagyma.2022.WEBRIP.x264.HUN-nubira.torrent' ./uveghagyma.torrent
+bash
+1797 / 20
+20762 / 500
+ssh nas -p 10022 -t rebeccapurple
+z egyeb/repacolor
+go run . display "rgb(192 255 0 / .7)"
+z egyeb/repacolor
+vim color/color.go
+ssh -X icesus
+z torrent/Videos
+go install github.com/dhth/omm@latest
+omm
+omm -h
+omm guide
+omm -h
+omm
+omm tasks
+omm updates
+ls /home/dyuri/.config/omm/omm.toml
+ls /home/dyuri/.local/share/omm/omm.db
+sqlite3 /home/dyuri/.local/share/omm/omm.db
+omm "proba: this is a task"
+omm tasks
+omm
+sqlite3 /home/dyuri/.local/share/omm/omm.db
+omm "test: ez meg egy test"
+omm "proba: masodik proba task"
+omm tastks
+omm tasks
+omm
+sqlite3 /home/dyuri/.local/share/omm/omm.db
+omm
+sqlite3 /home/dyuri/.local/share/omm/omm.db
+omm
+vim config/TOOLS.md
+vim
+and
+andcli 
+z torrent/Videos
+cat TODO.md
+cat config/TODO.md
+cat config/TOOLS.md
+ssh icesus
+ssh icesus
+go-repamotd
+mount
+dust
+duf
+getent hosts fdtest.freshdirect.com.edgekey.net
+getent hosts fdtest.freshdirect.com.edgekey-staging.net
+sudo vim /etc/hosts
+getent hosts fdtest.freshdirect.com
+http get https://fdtest.freshdirect.com
+sudo vim /etc/hosts
+ssh icesus
+ssh icesus
+dotenv
+which dotenv
+vim .config/nushell/env.nu
+vim .config/nushell/direnv.nu
+echo ${FOO-nope}
+echo $(FOO-nope)
+ssh icesus
+z torrent/Videos
+getent hosts vntg.com
+dog
+dog vntg.com
+whois 84.22.109.14
+ssh icesus
+vim .weechat/irc.conf
+omm
+getent hosts freshdirect.slgnt.us
+sudo vim /etc/nsswitch.conf
+ip add
+ping 2606:4700::6811:780a
+ping6 2606:4700::6811:780a
+ping -h
+ping -6 2606:4700::6811:780a
+/bin/ping 2606:4700::6811:780a
+getent hosts irc.horak.hu
+getent hosts chat.horak.hu
+vim
+vim .weechat/irc.conf
+ssh nas
+omm
+ssh nas
+andcli
+z torrent/Videos
+z egyeb/repacolor
+z egyeb/repacolor
+jj git fetch --branch main
+jj st
+jj new main
+go run . compare red green
+cat TODO.md
+cat .ssh/config | grep nas -C 3
+ssh icesus
+getent hosts nas
+go run . compare red green
+go mod tidy
+go run . compare red green
+go run . compare red yellow
+go run . compare red green
+go run . compare blue green
+go run . compare red green
+go run . compare red orange
+go run . compare blue orange
+go run . compare blue red
+vim display/ansiimage.go
+vim TODO.md
+jj st
+jj describe -m "gradients"
+jj branch set main
+jj git push
+ssh nas
+telnet nas 6667
+vim repa.motd
+rm repa.motd
+ssh nas
+ssh icesus
+ssh nas
+weechat
+ls
+vim .weechat/irc.conf
+weechat
+vim .weechat/irc.conf
+weechat
+ssh nas
+weechat -v
+cd .weechat/
+ls -ltra
+ls
+cd logs
+ls | sort-by modified
+vim core.weechat.weechatlog
+ls
+cd ..
+ls
+weechat -h
+vim irc.conf
+ls -ltar
+^ls -ltra
+vim weechat.log
+weechat
+vim matrix.conf
+rg autoconnect
+ssh icesus
+z torrent/Videos
+ls
+cd lotr
+ls
+rtorrent magnet:?xt=urn:btih:B294DA6B7545D544AAC64559B10919B59A6BCB28&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E01.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce magnet:?xt=urn:btih:D173A0AD2D4833FDE44C10A805CB801B1577E6C6&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce magnet:?xt=urn:btih:19408CEE21AEE8E581D90E999A39682599EC4A8E&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E03.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+cd ..
+mkdir terminator
+cd terminator
+andcli
+rtorrent magnet:?xt=urn:btih:4D7CCC74DC2873761E364ECB1342C6E0BD31BBCA&dn=Terminator.Zero.S01.COMPLETE.DUBBED.1080p.NF.WEB-DL.DDP5.1.H.264-VARYG%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+rm *meta
+cd ..
+ls
+z lotr
+ls
+ls ~/alma | sort-by modified
+mv alma/IMG_9598.JPG alma/szorfos_martinak.jpg
+mpv 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E01.WEB.x264-TORRENTGALAXY[TGx]/The.Lord.of.the.Rings.The.Rings.of.Power.S02E01.WEB.x264-TORRENTGALAXY.mkv'
+ls
+mv 1x8 2x1
+rm -rf 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E01.WEB.x264-TORRENTGALAXY[TGx]/'
+mpv 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.WEB.x264-TORRENTGALAXY[TGx]/The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.WEB.x264-TORRENTGALAXY.mkv'
+ls -l 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.WEB.x264-TORRENTGALAXY[TGx]/'
+du -hs *
+du *
+rm -rf 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.WEB.x264-TORRENTGALAXY[TGx]/'
+rtorrent magnet:?xt=urn:btih:84CA6E2BF6A0292F3B2E9CA8B0FA67B0C365786A&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.720p.WEB.x265-MiNX%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+rtorrent *torrent
+rtorrent magnet:?xt=urn:btih:84CA6E2BF6A0292F3B2E9CA8B0FA67B0C365786A&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.720p.WEB.x265-MiNX%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+mpv 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.720p.WEB.x265-MiNX[TGx]/The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.720p.WEB.x265-MiNX.mkv'
+ls
+mpv 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E03.WEB.x264-TORRENTGALAXY[TGx]/The.Lord.of.the.Rings.The.Rings.of.Power.S02E03.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf The*
+ls
+rtorrent *torrent
+rtorrent magnet:?xt=urn:btih:291056ACEBFEAFF6313205BD9C5A6326CE13D96B&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.REPACK.480p.x264-RUBiK&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonoid.ch%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.files.fm%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce magnet:?xt=urn:btih:4F2E503DDC156237B6882F589BBCC7AF4C6175CC&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E03.REPACK.480p.x264-RUBiK&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonoid.ch%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.files.fm%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+ls -ltra
+ls | sort-by modified
+ls ~alma | sort-by modified
+ls ~/alma | sort-by modified
+rm alma/IMG_7662.JPG
+mpv The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.REPACK.480p.x264-RUBiK/The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.REPACK.480p.x264-RUBiK.mkv
+ls
+mv 2x1 2x2
+rm -rf The.Lord.of.the.Rings.The.Rings.of.Power.S02E02.REPACK.480p.x264-RUBiK/
+cat /etc/hosts
+getent hosts fdtest.freshdirect.com.edgekey.net
+getent hosts fdtest.freshdirect.com.edgekey-staging.net
+sudo vim /etc/hosts
+cat /etc/hosts | grep fdtest
+getent hosts fdtest.freshdirect.com.edgekey-staging.net
+sudo vim /etc/hosts
+getent hosts fdtest.freshdirect.com
+getent hosts fdtest.freshdirect.com.edgekey-staging.net
+nslookup fdtest.freshdirect.com.edgekey-staging.net
+dog fdtest.freshdirect.com.edgekey-staging.net
+dog fdtest.freshdirect.com.edgekey-staging.net 1.1.1.1
+dog fdtest.freshdirect.com 1.1.1.1
+dog fdtest.freshdirect.com @1.1.1.1
+dog fdtest.freshdirect.com @8.8.8.8
+sudo vim /etc/hosts
+ssh icesus
+mpv The.Lord.of.the.Rings.The.Rings.of.Power.S02E03.REPACK.480p.x264-RUBiK/The.Lord.of.the.Rings.The.Rings.of.Power.S02E03.REPACK.480p.x264-RUBiK.mkv
+ls
+rm -rf The.Lord.of.the.Rings.The.Rings.of.Power.S02E03.REPACK.480p.x264-RUBiK/
+mv 2x2 2x3
+cd alma
+ls -ltra
+ls ~/alma | sort-by modified
+rm `1724702792LB 30.gpx` `1599418784LB 30.gpx`
+rm *gpx
+google-chrome --enable-features=Vulkan
+vim bin/google-chrome
+andcli
+z brows
+ls
+./BrowserStackLocal --key SpqfiUJ2zEdXXTAGnxzM
+cargo install jj-cli
+jj st
+jj
+ssh icesus
+andcli
+go-repamotd
+ping icesus
+ssh nas
+ping office.codeandsoda.hu
+ping icesus
+cd .weechat/
+ls
+cat alias.conf
+ls
+vim irc.conf
+cp irc.conf irc.conf.bak
+weechat
+vim irc.conf
+mv irc.conf.bak irc.conf
+cd ..
+cd .weechat/
+ls
+cd ..
+ls -l .weechat
+ls -la 
+ls -la | grep wee
+cd config
+mv weechat/ weechat.bak
+mkdir weechat
+rm -rf weechat/
+mv weechat.bak weechat
+which weechat
+cat bin/weechat
+rm -rf bin/weechat
+ls
+weechat
+ls weechat
+lsz
+ls
+cd weechat/
+ls
+vim irc.conf
+ls .weechat
+cat .weechat/irc.conf
+ls -la | grep wee
+ls
+cd ..
+ls
+cat weechat/irc.conf
+cd weechat/
+cat weechat/irc.conf
+ls
+cat irc.conf
+git st
+git diff irc.conf
+ls
+vim irc.conf
+cat irc.conf
+weechat
+cd
+ls
+ls .config/weechat/
+cat .config/weechat/irc.conf
+cd .config/
+rm -rf weechat/
+rm ~/.weechat/
+rm ~/.weechat
+ln -s ~/config/weechat .
+ls
+cd
+ssh icesus
+andcli
+850 / 130
+ssh icesus
+sudo vim /etc/hosts
+z egyeb/repacolor
+jj git fetch --branch main
+z egyeb/repacolor
+go run . compare blue red
+jj new main
+go run . compare blue red
+cd ..
+ls
+cd go/
+ls
+git clone git@github.com:dyuri/go-colorful.git
+cd go-colorful/
+jj init -R .
+jj git init --colocate
+jj branch track master@origin
+jj st
+sudo vim /etc/hosts
+ping office.codeandsoda.hu
+ssh icesus
+ls
+jj branch create ok_blend
+go run . compare blue green
+vim cmd/compare.go
+go run . compare blue green
+go run . compare blue cyan
+go run . compare blue darkblue
+go run . compare black white
+go run . compare black "#aaff00"
+go run . compare black "#aaff44"
+go run . compare black "#bbff00"
+go run . compare black "#b0ff00"
+z lotr
+ls
+rtorrent magnet:?xt=urn:btih:071D140C295927454CEE4C237E580574BDB53F3D&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E04.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+sudo vim /etc/hosts
+ls
+rm *meta
+andcli
+sudo vim /etc/hosts
+mpv 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E04.WEB.x264-TORRENTGALAXY[TGx]/The.Lord.of.the.Rings.The.Rings.of.Power.S02E04.WEB.x264-TORRENTGALAXY.mkv'
+ls
+mv 2x3 2x4
+rm -rf 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E04.WEB.x264-TORRENTGALAXY[TGx]/'
+ssh icesus
+minecraft-launcher
+mine
+minecraft-launcher
+andcli
+minecraft-launcher
+z go-colorful
+ls
+jj st
+ls
+z go-colorful
+go test .
+vim colors.go
+jj st
+jj describe -m "BlendOkLab + BlendOkLch"
+jj st
+jj diff
+jj git push
+z repacolor
+ls
+z repacolor
+go run .
+go run . compare black "#b0ff00"
+vim go.mod
+go get -u github.com/dyuri/go-colorful@ok_blend
+vim go.mod
+go get -u github.com/dyuri/go-colorful@ok_blend
+go get -u github.com/lucasb-eyer/go-colorful@master
+z go-colorful
+pwd
+vim go.mod
+go mod tidy
+go run . compare black "#b0ff00"
+vim go.mod
+go run . compare black "#b0ff00"
+go run . compare red "#b0ff00"
+vim cmd/compare.go
+jj st
+jj describe -m "BlendOkLab + BlendOkLch"
+jj branch set main
+jj git push
+vim colors.go
+ssh icesus
+cd .minecraft/
+ls
+ls magic
+yay -Ss forge
+yay -Ss forge | grep mine
+ls ../minecraft/
+ls
+mkdir mods
+ls ~/alma | sort-by modified
+mv ~/alma/XaerosWorldMap_1.39.0_Fabric_1.21.jar .
+ls
+minecraft-launcher
+java -jar ~/alma/forge-1.21.1-52.0.10-installer.jar
+cd .minecraft/
+ls -ltra
+ls -la
+ls mods
+mv XaerosWorldMap_1.39.0_Fabric_1.21.jar mods
+minecraft-launcher
+cd mods
+ls
+rm XaerosWorldMap_1.39.0_Fabric_1.21.jar
+mv ~/alma/XaerosWorldMap_1.39.0_Forge_1.21.jar .
+ls
+andcli
+z repacolor
+z repacolor
+jj st
+go run . compare red "#b0ff00"
+ls
+ls cmd
+cp cmd/pick.go cmd/guess.go
+vim cmd/guess.go
+mkdir guess
+ls
+cp picker/app.go guess/
+go run . guess
+vim guess/app.go
+ls
+ls cmd
+vim cmd/serve.go
+jj st
+jj describe -m "very simple guess game"
+go run . display "hwb(100 100 100)" -f hsl
+go run . display "lab(100 50 50)"
+go run . display "lab(.8 .5 .5)"
+vim TODO.md
+jj st
+jj branch set main
+jj git push
+ssh icesus
+minecraft-launcher
+andcli
+minecraft-launcher
+ssh icesus
+minecraft-launcher
+z lotr
+ls
+rtorrent magnet:?xt=urn:btih:4C48522DE111AB2DA3D895E4555EAE78131E298A&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E05.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+ssh icesus
+minecraft-launcher
+omm
+z garmin
+ls
+ls in
+ls bin
+z garmin
+ls
+cd RepaGrunge/
+jj st
+git st
+code .
+cd ..
+bin/sdkmanager
+vim .envrc
+cd ..
+cd garmin
+$env.PATH
+cd RepaGrunge/
+code .
+z RepaMap
+ls
+vim source/RepaMapOverlayApp.mc
+cd ..
+simulator
+ls
+$env.PATH
+/home/dyuri/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-7.3.0-2024-08-27-36488f6f5/bin/simulator
+bash /home/dyuri/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-7.3.0-2024-08-27-36488f6f5//bin
+bash /home/dyuri/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-7.3.0-2024-08-27-36488f6f5/bin/simulator
+ls -l /home/dyuri/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-7.3.0-2024-08-27-36488f6f5/bin
+ls -l /home/dyuri/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-7.3.0-2024-08-27-36488f6f5/bin/simulator
+chmod +x /home/dyuri/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-7.3.0-2024-08-27-36488f6f5/bin/simulator
+ls -l /home/dyuri/.Garmin/ConnectIQ/Sdks/connectiq-sdk-lin-7.3.0-2024-08-27-36488f6f5/bin/simulator
+simulator
+ps -ef | grep simu
+vim /mnt/media/garmin/ConnectIQ/Sdks/connectiq-sdk-lin-7.3.0-2024-08-27-36488f6f5/bin/simulator
+bash
+coredumpctl 
+cd
+cd -
+simulator
+strace simulator
+code .
+simulator
+cd ..
+bin/sdkmanager
+cd ..
+cd garmin
+mc
+cd RepaGrunge/
+code .
+cd ..
+cd RepaMapOverlay/
+code .
+jj st
+jj diff
+jj undo
+jj st
+jj diff
+jj new main
+code .
+jj st
+jj diff
+jj describe -m "fenix 8 support"
+jj branch set main
+jj git push
+ssh icesus
+jj git push
+jj new clone2
+jj rebase -d main
+jj st
+jj diff
+jj git push
+cd ..
+cd RepaGrunge/
+code .
+cd ../RepaField/
+code .
+z RepaGru
+git st
+git diff
+git add .
+git ci -m "fenix 8 support"
+git push
+jj diff
+git diff
+git st
+git add .
+git diff
+git st
+git diff
+git diff manifest.xml
+git add .
+git diff --staged
+git ci -m "fenix 8 support"
+git push
+py
+andcli
+z lotr
+ls
+ssh icesus
+j st
+mpv 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E05.WEB.x264-TORRENTGALAXY[TGx]/The.Lord.of.the.Rings.The.Rings.of.Power.S02E05.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E05.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 2x4 2x5
+ssh icesus
+ssh icesus
+ssh icesus
+omm
+sudo vim /etc/hosts
+ssh icesus
+smm
+omm
+rm raf_footer.html raf_header.html
+forge
+cd .minecraft/
+ls
+cd mods
+ls
+mv ~/alma/ComplementaryUnbound_r5.2.2.zip .
+ls
+unzip ComplementaryUnbound_r5.2.2.zip
+rm ComplementaryUnbound_r5.2.2.zip
+ls
+vim `HOW TO INSTALL.txt`
+ls
+rm `HOW TO INSTALL.txt` License.txt shader* -rf
+ls
+cd
+cd alma
+ls -ltra
+ls | sort-by modified
+java -jar Complementary-Installer-1.1.3.jar
+ls
+ls | sort-by modified
+mv forge-1.21.1-52.0.10-installer.jar Complementary-Installer-1.1.3.jar ~/.minecraft/
+cd ..
+ls ~/alma | sort-by modified
+cd .minecraft/mods
+ls
+mv ~/alma/OptiFine_1.20.4_HD_U_I7.jar .
+cd .minecraft/mods
+ls
+rm OptiFine_1.20.4_HD_U_I7.jar
+cd
+cd alma
+ls -ltra
+ls ~/alma | sort-by modified
+java -jar Iris-Installer-3.2.1.jar
+ls
+rm Iris-Installer-3.2.1.jar
+cd ..
+ls
+ls -ltra
+ls | sort-by modified
+ls shaderpacks/
+rm Complementary-Installer-1.1.3.jar
+ls launcher/
+ls versions
+mc
+ssh icesus
+ssh icesus
+cd .minecraft/mods
+ls
+cd alma
+ls -ltra
+ls | sort-by modified
+java -jar fabric-installer-1.0.1.jar
+mv ~/alma/fabric-api-0.104.0+1.21.1.jar .
+ls
+mv ~/alma/Xaeros_Minimap_24.4.0_Fabric_1.21.jar .
+ls | sort-by modified
+mv ~/alma/XaerosWorldMap_1.39.0_Fabric_1.21.jar .
+rm fabric-installer-1.0.1.jar
+mv ~/alma/wthit-fabric-12.4.2.jar .
+ls | sort-by modified
+cd ..
+ls shaderpacks/
+cd mods
+mv ~/alma/badpackets-fabric-0.8.1.jar .
+andcli
+ssh icesus
+ssh icesus
+z torrent/Videos
+mkdir agatha
+cd agatha
+rtorrent magnet:?xt=urn:btih:8658C364071A737FB7BBA998153CE8AB1F270022&dn=Agatha.All.Along.S01E01.720p.x265-TiPEX&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonoid.ch%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.files.fm%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce magnet:?xt=urn:btih:7D8287ACBD90E51A94742C2E3824F96BE9134021&dn=Agatha.All.Along.S01E02.720p.x265-TiPEX&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonoid.ch%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.files.fm%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+mpv Agatha.All.Along.S01E01.720p.x265-TiPEX/Agatha.All.Along.S01E01.720p.x265-TiPEX.mkv
+ls
+touch 1x1
+rm -rf Agatha.All.Along.S01E01.720p.x265-TiPEX/
+ssh icesus
+z agatha
+ls
+cd ..
+cd lotr
+rtorrent magnet:?xt=urn:btih:B9DE2415C64B4A1195E6C13477360EF138BEA115&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E06.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+cd ..
+mkdir penguin
+cd penguin/
+rtorrent magnet:?xt=urn:btih:819C59CA84AE631AA3D20A7BF71ECE5FC11F4489&dn=The.Penguin.S01E01.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+cat config/hypr/hyprland.conf
+dunst
+cat config/hypr/hyprland.conf
+copyq
+copyq -h
+copyq show
+ls
+rtorrent magnet:?xt=urn:btih:819C59CA84AE631AA3D20A7BF71ECE5FC11F4489&dn=The.Penguin.S01E01.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+rm *meta
+cd ..
+cd lotr
+ls
+rm *meta
+cd ../agatha/
+ls
+chrt 
+chrt -h
+htop
+mpv Agatha.All.Along.S01E01.720p.x265-TiPEX/Agatha.All.Along.S01E01.720p.x265-TiPEX.mkv
+ls
+mpv Agatha.All.Along.S01E02.720p.x265-TiPEX/Agatha.All.Along.S01E02.720p.x265-TiPEX.mkv
+ls
+rm Agatha.All.Along.S01E02.720p.x265-TiPEX/ -rf
+mv 1x1 1x2
+cd ..
+1600 / 8
+42 * 8
+62 * 8
+176 / 8
+andcli
+z torrent/Videos
+ls | sort-by modified
+cd lotr/
+ls
+mpv 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E06.WEB.x264-TORRENTGALAXY[TGx]/The.Lord.of.the.Rings.The.Rings.of.Power.S02E06.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E06.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 2x5 2x6
+ssh icesus
+andcli
+ssh ices
+ssh icesus/
+ssh icesus
+z torrent/Videos
+cd penguin/
+ls
+ssh icesus
+mpv 'The.Penguin.S01E01.WEB.x264-TORRENTGALAXY[TGx]/The.Penguin.S01E01.WEB.x264-TORRENTGALAXY.mkv'
+cd alma
+ls | sort-by modified
+rm IMG20240926*
+z agatha
+rtorrent magnet:?xt=urn:btih:5572C5B6AF6BB12CFEE5B4FBE0A087BB01F4DC9A&dn=Agatha.All.Along.S01E03.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+rm *meta
+z lotr
+rtorrent magnet:?xt=urn:btih:80B12349A3C4A2CAB8C77CB7E7EF53207E18A399&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E07.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+andcli
+ssh icesus
+z agatha
+lz
+ls
+mpv 'Agatha.All.Along.S01E03.WEB.x264-TORRENTGALAXY[TGx]/Agatha.All.Along.S01E03.WEB.x264-TORRENTGALAXY.mkv'
+ls
+mv 1x2 1x3
+rm -rf 'Agatha.All.Along.S01E03.WEB.x264-TORRENTGALAXY[TGx]/'
+cd ..
+ls
+cd lotr
+ls
+rm *meta
+ls
+mpv 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E07.WEB.x264-TORRENTGALAXY[TGx]/The.Lord.of.the.Rings.The.Rings.of.Power.S02E07.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E07.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 2x6 2x7
+80 * 40
+4000 * 400
+cd alma
+ls | sort-by modified
+rm IMG_20240928_09351*
+systemctl status cups-browsed
+ssh na
+ssh nas
+nslookup horak.hu @nas
+dig
+dog
+dog horak.hu @nas
+dog horak.hu @nas -t ANY
+dog ads.google.com @nas -t ANY
+getent hosts nas
+sudo vim /etc/resolv.conf
+go install github.com/dlvhdr/diffnav@latest
+vim .config/nushell/direnv.nu
+vim .config/nushell/env.nu
+ssh icesus
+andcli
+z penguion
+z penguin
+rtorrent magnet:?xt=urn:btih:609D5CE369A354D77EE414143C5A15BAAB7B77B6&dn=The.Penguin.S01E02.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+mpv 'The.Penguin.S01E01.WEB.x264-TORRENTGALAXY[TGx]/The.Penguin.S01E01.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'The.Penguin.S01E01.WEB.x264-TORRENTGALAXY[TGx]/'
+echo dyuri@horak.hu | md5sum
+mpv 'The.Penguin.S01E02.WEB.x264-TORRENTGALAXY[TGx]/The.Penguin.S01E02.WEB.x264-TORRENTGALAXY.mkv'
+ls
+touch 1x2
+rm -rf 'The.Penguin.S01E02.WEB.x264-TORRENTGALAXY[TGx]/'
+ssh icesus
+cd egyeb
+mkdir switchit-leak
+cd switchit-leak/
+git clone git@github.com:Haxiboy/switch-erp.git
+ls
+cd switch-erp/
+ls
+fd appl
+cd database/seeds/data/applicants/
+ls
+cd alma
+evince consultation.pdf
+rm consultation.pdf
+cd egyeb/switchit-leak/switch-erp/
+rg applicants
+fd applicants
+cd resources/views/applicants/
+ls
+cd -
+cd database/seeds/data/applicants/
+ls
+rg Hork
+rg Hor
+rg Horá
+z applic
+ls
+rg Orbán
+vim 23_java_01.csv
+rg Bíró
+z applic
+rg Sebestyén
+rg Némedy
+rg Noémi
+z agatha
+z torrent/Videos
+ls | sort-by modified
+rm -rf labirintus.torrent Labyrinth.1986.RETAiL.BDRiP.x264.Hun-Daw086 uveghagyma.torrent Torbe.ejtve.Az.uveghagyma.2022.WEBRIP.x264.HUN-nubira
+ls dragon
+ls boys
+rtorrent magnet:?xt=urn:btih:C425410F5C4C56B37FB6166BB58FCC8FA1B83959&dn=Agatha.All.Along.S01E04.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ssh icesus
+andcli
+ssh icesus
+dog -h
+dog
+podman images
+podman images -h
+podman image -h
+podman image pull adguard/adguardhome:latest
+podman docker run --rm --name adguardhome -d adguard/adguardhome
+podman docker run -rm --name adguardhome -d adguard/adguardhome
+podman run -rm --name adguardhome -d adguard/adguardhome
+podman run --rm --name adguardhome -d adguard/adguardhome
+podman container ls
+podman container -h
+podman container inspect adguardhome
+podman container inspect adguardhome | grep 172
+podman container inspect adguardhome | grep -i address
+podman network inspect adguardhome
+podman container stop adguardhome
+podman container rm adguardhome
+podman run --rm --name adguardhome -p 53:53/udp -d adguard/adguardhome
+sudo podman run --rm --name adguardhome -p 53:53/udp -d adguard/adguardhome
+podman image rm adguard/adguardhome
+sudo su -
+nslookup horak.hu
+dog horak.hu @nas
+dog horak.hu
+getent hosts horak.hu
+ls
+dog horak.hu
+dog horak.hu @nas
+ssh nas
+ip addr
+ssh icesus
+mpv 'Agatha.All.Along.S01E04.WEB.x264-TORRENTGALAXY[TGx]/Agatha.All.Along.S01E04.WEB.x264-TORRENTGALAXY.mkv'
+uname -a
+uname
+z agatha
+z lotr
+yay -Ss google-chrome
+yay -S google-chrome
+rtorrent magnet:?xt=urn:btih:6BD1E31E986C642AD883BB08FE49130768C3A5FF&dn=The.Lord.of.the.Rings.The.Rings.of.Power.S02E08.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+mpv 'Agatha.All.Along.S01E04.WEB.x264-TORRENTGALAXY[TGx]/Agatha.All.Along.S01E04.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'Agatha.All.Along.S01E04.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 1x3 1x4
+rm *meta
+ls
+rm *meta
+ssh icesus
+ls
+cd txt
+ls
+ls **
+ls **/
+z repafield
+ls
+code .
+mpv 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E08.WEB.x264-TORRENTGALAXY[TGx]/The.Lord.of.the.Rings.The.Rings.of.Power.S02E08.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'The.Lord.of.the.Rings.The.Rings.of.Power.S02E08.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 2x7 2x8
+9 * 2.1 * 2
+5 * 2.1 * 2
+1.3 * 2.5 * 2
+38 + 21 + 6
+5 + 9
+61 + 15
+76 / 4
+61 * 0.2
+53 / 14
+53 / 14 * .2
+15 * 4.5
+z penguin
+rtorrent magnet:?xt=urn:btih:88FC6828743100D1498B6A320439F5A143323077&dn=The.Penguin.S01E03.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+andcli
+yay -S google-chrome
+ssh icesus
+ls alma | sort-by modified
+rm alma/Salabasina_Csabival_számitógép_hálózatok_szakkör.fit
+ls alma | sort-by modified
+rm alma/17134174989.zip
+ls alma | sort-by modified
+rm alma/activity_17134174989.tcx
+rm 'alma/202409 [21] Salabasina.gpx'
+z repamapoverlay
+jj st
+jj log -l 10
+jj edit main
+jj new main
+jj log
+z repafield
+jj zt
+jj st
+git log
+ls
+rm *meta
+mpv 'The.Penguin.S01E03.WEB.x264-TORRENTGALAXY[TGx]/The.Penguin.S01E03.WEB.x264-TORRENTGALAXY.mkv'
+ls
+mv 1x2 1x3
+mv -rf 'The.Penguin.S01E03.WEB.x264-TORRENTGALAXY[TGx]/'
+rm -rf 'The.Penguin.S01E03.WEB.x264-TORRENTGALAXY[TGx]/'
+rm 'alma/[nCore][xvidser]A_kaprazatos_Mrs._Maisel__S04.torrent'
+rm 'alma/[nCore][xvidser_hun]The.Marvelous.Mrs.Maisel.S03.2017.READ.NFO.AMZN.WEBRip.AAC2.0.x264.HuN.EnG-B9R.torrent'
+ssh icesus
+cd alma
+ls | sort-by modified
+rm BYD-DOLPHIN-Pricelist-310724.pdf
+ssh icesus
+cd tmp/fd
+ls
+vim product_tile.md
+yay -S google-chrome
+yay -Sy google-chrome
+z agatha
+ssh icesus
+bin/screenrecord.sh banners_adblock.mp4
+ls -l
+ls | sort-by modified
+mpv screenrecord.mp4
+rm screenrecord.mp4
+vim bin/screenrecord.sh
+bin/screenrecord.sh banners_adblock.mp4
+wl-screenrec -h
+bin/screenrecord.sh -f banners_adblock.mp4
+mpv banners_adblock.mp4
+bin/screenrecord.sh -f banners_cls.mp4
+rm banners_cls.mp4
+bin/screenrecord.sh -f banners_cls.mp4
+mpv banners_cls.mp4
+mpv banners_editor.mp4
+bin/screenrecord.sh -f banners_editor.mp4
+andcli
+ls
+rm banners_*mp4
+ls | sort-by modified
+rtorrent magnet:?xt=urn:btih:B67FF3917573E2A1803F642AB83E5BE9A7836D70&dn=Agatha.All.Along.S01E05.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+glances --browser
+glances -s
+ls
+rm *meta
+ssh icesus
+mpv 'Agatha.All.Along.S01E05.WEB.x264-TORRENTGALAXY[TGx]/'
+ls
+rm -rf 'Agatha.All.Along.S01E05.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 1x4 1x5
+vim
+ssh icesus
+ssh icesus
+yay -Sy google-chrome
+13 + 8
+21 + 13
+34 + 21
+z torrent/Videos
+ls | sort-by modified
+ls dragon
+ls boys
+ls terminator/
+cd alma
+ls | sort-by modified
+rm `Tájékoztató levél.pdf`
+bin/screenrecord.sh -f banners_html.mp4
+mpv banners_html.mp4
+ls
+rm banners_html.mp4
+sudo vim /etc/hosts
+ssh icesus
+yay -Sy google-chrome
+ls
+cd alma
+ls | sort-by modified
+z penguin
+rtorrent magnet:?xt=urn:btih:8E86CE08981A1B3A65AE542D46B646F17581FD46&dn=The.Penguin.S01E04.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+ssh icesus
+andcli
+mpv 'The.Penguin.S01E04.WEB.x264-TORRENTGALAXY[TGx]/The.Penguin.S01E04.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'The.Penguin.S01E04.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 1x3 1x4
+asdf
+yay -Ss asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+cd ~/.asdf
+ls
+cd ..
+rm -rf .asdf/
+vim config/TOOLS.md
+yay -S asdf-vm
+asdf
+ls ~/.asdf
+which asdf
+pacman -Ql asdf-vm
+vim ~/.config/nushell/config.nu
+cat /opt/asdf-vm/asdf.nu
+vim ~/.config/nushell/config.nu
+asdf
+asdfd
+asdf
+vim ~/.config/nushell/config.nu
+asdf help
+asdf help ?
+asdf help list
+asdf --help
+asdf plugin add hctl https://github.com/xx4h/asdf-hctl.git
+ls ~/.config | sort-by modified
+ls | sort-by modified
+ls -la
+ls -la | sort-by modified
+ls .asdf
+ls .asdf/plugins
+ls .asdf/plugins/hctl/
+asdf global hctl latest
+hctl
+asdf install hctl
+asdf global -h
+asdf global hctl latest
+asdf install hctl -h
+asdf install hctl latest
+asdf global hctl latest
+hctl
+cat .tool-versions
+vim config/TOOLS.md
+hctl init
+hctl -h
+hctl list
+ssh icesus
+z torrent/Videos
+mv '~/alma/[nCore][xvidser_hun]Sztarbox.S04E06.HUN.WEB-DL.H264-LEGION.torrent' .
+mv '~/alma/[nCore][xvidser_hun]Sztarbox.S04E06.HUN.WEB-DL.H264-LEGION.torrent' ./box.torrent
+mv "~/alma/[nCore][xvidser_hun]Sztarbox.S04E06.HUN.WEB-DL.H264-LEGION.torrent" ./box.torrent
+mv ~/alma/[nCore][xvidser_hun]Sztarbox.S04E06.HUN.WEB-DL.H264-LEGION.torrent ./box.torrent
+bash
+ls | sort-by modified
+yay -S google-chrome
+z torrent/Videos
+ls
+ls | sort-by modified
+andcli
+rtorrent box.torrent
+rtorrent magnet:?xt=urn:btih:FB8B92B7FDB9359C088AF8E2E70A1558814DF415&dn=Alien+-+Romulus+%282024%29+Eng+720p+WEBRip+x264+DD+5.1++ESub&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.tracker.cl%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.auctor.tv%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.tamersunion.org%3A443%2Fannounce&tr=https%3A%2F%2Ftracker.gbitt.info%3A443%2Fannounce&tr=http%3A%2F%2Ftracker.gbitt.info%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker-udp.gbitt.info%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+ls | sort-by modified
+rm FB8B92B7FDB9359C088AF8E2E70A1558814DF415.meta
+z torrent/Videos
+yay -S google-chrome
+xonsh
+ssh icesus
+mpv `Alien - Romulus (2024) 720p WEBRip x264 DD 5.1  ESub.mkv`
+ls | sort-by modified
+rm -rf `Alien - Romulus (2024) 720p WEBRip x264 DD 5.1  ESub.mkv`
+ls *meta
+ping 192.168.0.61
+ping 192.168.0.60
+ping 192.168.0.40
+ping 192.168.0.41
+yay -S google-chrome
+ssh icesus
+z torrent/Videos
+ls
+mpv Sztarbox.S04E06.HUN.WEB-DL.H264-LEGION/Sztarbox.S04E06.HUN.WEB-DL.H264-LEGION.mkv
+bash
+rtorrent box.torrent
+jj st
+ls | sort-by modified
+mpv Sztarbox.S04E07.HUN.WEB-DL.H264-LEGION/Sztarbox.S04E07.HUN.WEB-DL.H264-LEGION.mkv
+^ps -ef | grep office
+cd alma
+ls -ltra
+^ls -ltra
+rm `.~lock.sensira-tulajdonsagok.docx#`
+cat sensira-tulajdonsagok.docx
+rm sensira-tulajdonsagok.docx
+z agatha
+ls
+rtorrent magnet:?xt=urn:btih:08BEB2173625EA60CF23EA2B3F576F4748536EE1&dn=Agatha.All.Along.S01E06.720p.WEB.x265-MiNX%5BTGx%5D&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+andcli
+z torrent/Videos
+yay -S google-chrome
+ls
+rm *meta
+ssh icesus
+vim bin/google-chrome
+mpv 'Agatha.All.Along.S01E06.720p.WEB.x265-MiNX[TGx]/Agatha.All.Along.S01E06.720p.WEB.x265-MiNX.mkv'
+rtorrent *torrent
+sudo pacman -Syu
+vim /home/dyuri/ssd/.config/nushell/config.nu
+grid -i
+vim /home/dyuri/ssd/.config/nushell/config.nu
+ls
+cd alma
+ls | sort-by modified
+evince 1_8417043047_4214954711_ERTESITES.pdf
+ls | sort-by modified
+evince 8417043047_4214954711.pdf
+rm 1_8417043047_4214954711_ERTESITES.pdf
+rm 8417043047_4214954711.pdf
+z golang
+ls
+cd ..
+cd
+cd egyeb
+cd prog/go/
+ls
+cd ..
+cd golang/
+ls
+cat combinations.go
+cd ..
+git@github.com:andydotxyz/sshterm.git
+git clone git@github.com:andydotxyz/sshterm.git
+ls
+cd sshterm
+ls
+go run .
+htop
+go build .
+ls -ltra
+ls | sort-by modified
+git st
+ls -la | sort-by modified
+go run .
+cd ..
+rm -rf sshterm/
+cd egyeb
+mkdir go-repassh
+cd go-repassh
+vim main.go
+go run .
+go mod init github.com/dyuri/go-repacolor
+go mod tidy
+go run .
+cat ~/.ssh/known_hosts
+z go-repassh
+go run .
+ls /home/dyuri/.ssh/known_hosts
+go run .
+ssh localhost -p 22
+cat ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa | wl-copy
+go run .
+vim main.go
+go run .
+vim main.go
+go run. 
+go run .
+ls
+cd alma
+ls
+rm dokumentum.pdf
+ping 192.168.0.41
+ping 192.168.0.42
+ping 192.168.0.40
+ping 192.168.0.51
+ping 192.168.0.53
+ping 192.168.0.52
+z torrent/Videos
+z go-repassh
+ls
+rm *
+z go-repassh
+ls
+go init mod
+go mod init github.com/dyuri/go-repassh
+go mod tidy
+go run .
+ls
+go run .
+nvim
+go run .
+ssh localhost
+go run .
+cat /proc/cpuinfo
+lsusb
+lspci
+rm alma/38K.zip
+$env.USER
+go run .
+"209feca677af3a83c42dd89c8b94c352f03e568af4d403f823b527cfa4b71a88" | size
+"209feca677af3a83c42dd89c8b94c352f03e568af4d403f823b527cfa4b71a88" | length
+py
+go run .
+ssh chaos
+go run .
+go mod tidy
+go rut .
+go run .
+ls
+echo cica
+ls | head -10
+ls
+go run .
+ls
+echo cica
+go run .
+ls
+z go-repassh
+ls
+echo hmm
+go run .
+ls
+vim
+ls
+go run .
+ls
+echo cica
+go run .
+vim main.go
+jj st
+jj init -h
+jj init -R .
+git init
+jj st
+rm -rf .git
+jj init -R .
+jj st
+jj init -h
+jj init
+jj git init
+jj st
+jj git -h
+jj git remote -h
+jj git remote add git@github.com:dyuri/go-repassh.git
+jj git remote add origin git@github.com:dyuri/go-repassh.git
+jj git fetch --branch main
+jj st
+jj track
+jj branch -h
+jj branch track main@origin
+jj st
+jj describe -m "basic ssh client"
+jj new main @
+jj st
+ls
+jj describe -m "basic ssh client"
+jj branch set main
+jj git push
+jj st
+go run .
+z torrent/Videos
+ls
+rtorrent *torrent
+cd penguin/
+ls
+z torrent/Videos
+rtorrent magnet:?xt=urn:btih:F0357C361185FA9D2C1131E1AEEE5868AA8D5EA8&dn=The.Penguin.S01E05.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+andcli
+sudo vim /etc/hosts
+ls
+rm *meta
+cd ../agatha/
+mpv 'Agatha.All.Along.S01E06.720p.WEB.x265-MiNX[TGx]/Agatha.All.Along.S01E06.720p.WEB.x265-MiNX.mkv'
+ls
+mv 1x5 1x6
+rm -rf 'Agatha.All.Along.S01E06.720p.WEB.x265-MiNX[TGx]/'
+nslookup blfk.hu
+dog blfk.hu
+ls
+cd ../penguin/
+lz
+ls
+z hu-go
+ls
+z hu-go
+ls
+hugo server -D
+hugo -h
+hugo -D server
+rg IsMulti
+vim themes/dyuri/layouts/partials/menu.html
+hugo -D server
+vim themes/dyuri/layouts/partials/menu.html
+hugo -D server
+vim themes/dyuri/layouts/partials/menu.html
+jj git pull
+jj st
+jj git fetch --branch main
+jj new main @
+ls
+mkdir content/posts/fs
+ls content/posts/
+cp content/posts/jj/index.md content/posts/fs/
+dog blkf.hu
+ssh icesus
+getent hosts blkf.hu
+whois 34.255.62.32
+getent hosts blkf.hu
+getent hosts parker.hu
+file bible.sqlite
+file -h
+file --mime-type bible.sqlite
+mpv 'The.Penguin.S01E05.WEB.x264-TORRENTGALAXY[TGx]/The.Penguin.S01E05.WEB.x264-TORRENTGALAXY.mkv'
+ls
+mv 1x4 1x5
+rm -rf 'The.Penguin.S01E05.WEB.x264-TORRENTGALAXY[TGx]/'
+cd tmp
+touch cica.txt
+ls -l cica.txt
+echo a > cica.txt
+echo a | save -f cica.txt
+ls -l cica.txt
+^ls -l cica.txt
+^ls -ls cica.txt
+echo alma beka cica doboz | save -f cica.txt
+ls -l cica.txt
+ls
+man ls
+^ls -ls cica.txt
+^ls -ls *pdf
+256 * 1024
+ssh icesus
+ps -ef | grep way
+^ps -ef | grep way
+man ln
+vim content/posts/fs/index.md
+jj git push
+jj st
+jj describe -m "fs post #1"
+jj branch set main
+jj git push
+jj describe -m "fs post #0" -r npmwouzu
+jj git push
+z torrent/Videos
+ping 192.168.0.60
+ssh icesus
+ssh icesus
+z hu-go
+z hu-go
+ls
+vim themes/dyuri/layouts/_default/single.html
+z hu-go
+find min.js
+ls
+ls resources/
+ls static/js/
+fd
+fd | grep min.js
+cd themes/dyuri/static/assets/
+ls
+mv ~/alma/purify.min.js .
+ls
+cd ..
+cd ../..
+ls
+vim content/posts/running/index.hu.md
+curl \<\n>  -X POST \<\n>  -H 'Content-Type:application/json' \<\n>  -d '{<\n>        "client_name": "blog",<\n>        "redirect_uris": "urn:ietf:wg:oauth:2.0:oob",<\n>        "scopes": "read"<\n>      }' \<\n>  'https://social.horak.hu/api/v1/apps'
+bash
+hugo -D server
+vim content/posts/running/index.hu.md
+ls
+cd themes/dyuri/
+ls
+cd layouts/
+ls
+vim 404.html
+ls
+cd ..
+ls
+cd ..
+ls
+vim hugo.toml
+rg languages
+vim hugo.toml
+rg languages.en
+rg menu.main
+vim themes/dyuri/layouts/partials/menu.html
+vim hugo.toml
+rg Menus
+hugo server
+vim hugo.toml
+mkdir i18n
+cd i18n
+touch en.toml
+touch hu.toml
+hugo server -D
+vim en.toml
+vim hu.toml
+cd ..
+hugo server -D
+vim themes/dyuri/layouts/partials/comments.html
+jj st
+jj describe -m "comments + comments enabled for running"
+jj branch set main
+jj git push
+vim hugo.toml
+hugo
+ls
+cd public/
+ls
+scp -r . horak.hu:public_html/
+z torrent/Videos
+z go-repassh
+z go-repassh
+ls
+cd ..
+ls
+cd prog
+ls
+cd golang
+ls
+mkdir pty
+cd pty
+ls
+vim main.go
+go mod init github.com/dyuri/pty-test
+vim main.go
+go mod tidy
+ls
+go run .
+ps
+bash
+ls
+andcli
+cd alma
+evince referal_result.pdf
+rm referal_result.pdf
+z torrent/Videos
+ls | sort-by modified
+rm -rf box.torrent box2.torrent Sztarbox.S04E0*
+cd agatha/
+ls
+rtorrent magnet:?xt=urn:btih:B7B06DCB8418D3BA67F219D8F1A25D696C06FDE0&dn=Agatha.All.Along.S01E07.720p.x265-TiPEX&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fodd-hd.fr%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.files.fm%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls -ltra
+ls | sort-by modified
+rtorrent magnet:?xt=urn:btih:B7B06DCB8418D3BA67F219D8F1A25D696C06FDE0&dn=Agatha.All.Along.S01E07.720p.x265-TiPEX&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fodd-hd.fr%3A6969%2Fannounce&tr=http%3A%2F%2Ftracker.files.fm%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+ls
+rm *meta
+mpv Agatha.All.Along.S01E07.720p.x265-TiPEX/Agatha.All.Along.S01E07.720p.x265-TiPEX.mkv
+ls
+rm -rf Agatha.All.Along.S01E07.720p.x265-TiPEX/
+mv 1x6 1x7
+ssh icesus
+wget https://adguardteam.github.io/HostlistsRegistry/assets/filter_1.txt
+vim filter_1.txt
+wget https://adguardteam.github.io/HostlistsRegistry/assets/filter_2.txt
+vim filter_2.txt
+rm filter_*
+cd alma
+ls | sort-by modified
+evince 273477880.pdf
+rm 273477880.pdf
+z hu-go
+z hu-go
+ls
+vim content/posts/fs/index.md
+jj st
+jj describe -m "fs post #1"
+jj branch set main
+jj git push
+hugo server -D
+hugo
+cd public/
+scp -r . horak.hu:public_html/
+ls *jpg
+file avatar.jgp
+file avatar.jpg
+echo "cica" | save cica.jpg
+ls *jpg
+file cica.jpg
+file cica.jpg --mime-type
+file avatar.jpg --mime-type
+rm cica.txt
+rm cica.jpg
+z hu-go
+ls
+vim content/posts/fs/index.md
+fd og.png
+cd public/
+ls
+fd og.png
+ssh icesus
+z hu-go
+rg og.png
+icat 
+wezterm imgcat posts/fs/og.png
+rg "Jujutsu VCS"
+cd ..
+z hu-go
+hugo server -D
+vim content/posts/jj/index.md
+fd og.png
+cd public/
+fd og.png
+rm posts/fs/og.png
+hugo
+vim themes/dyuri/layouts/partials/head.html
+wezterm imgcat posts/fs/og.png
+rsync -h
+rsync -avh . horak.hu:public_html/
+rsync -avh . horak.hu:public_html
+ssh horak.hu
+gh
+vim .config/nvim/lua/core/lazy.lua
+nvim
+gh auth refresh -s read:project
+vim
+gh auth refresh -s read:project
+vim
+gh auth refresh -s read:project
+gh -h
+gh -version
+gh --version
+vim
+z hu-go
+vim
+git st
+vim
+vim .config/nvim/lua/core/lazy.lua
+vim
+ssh icesus
+cd alma
+ls | sort-by modified
+rm AdAway-6.1.3-20240706.apk
+ls -ltra
+^ls -ltra
+omm tasks
+omm
+ls .local/share/omm/omm.db
+sqlite3 /home/dyuri/.local/share/omm/omm.db
+z zoxide
+git pull
+ls
+poetry publish
+poetry build
+poetry publish
+z torrent/Videos
+mkdir koko
+cd koko
+mv '~/alma/[nCore][xvidser_hun]KOKO.S01.HUN.WEB-DL.H264-LEGION.torrent' .
+bash
+cd koko
+ls
+cd KOKO.S01.HUN.WEB-DL.H264-LEGION/
+ls
+mpv KOKO.S01E03.HUN.WEB-DL.H264-LEGION/KOKO.S01E03.HUN.WEB-DL.H264-LEGION.mkv
+andcli
+z penguin
+rtorrent magnet:?xt=urn:btih:8E1F3D18CC1D985101E2E01193B75E400C8F65A4&dn=The.Penguin.S01E06.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+cd Pictures/Screenshots/
+ls | sort-by modified
+mv satty-20241028-08:23:50.png dpd.png
+z koko
+ls
+sqlite3 tmp/cica.sqlite
+cd alma
+ls | sort-by modified
+evince 57963439_4441884258.pdf
+rm 57963439_4441884258.pdf
+rm '20241018 [22] Spartacus - Aptátkúti-p..gpx'
+rm budai_mozgasfejleszto.jpg
+ls
+rm *meta
+cd alma
+ls | sort-by modified
+evince 273555692.pdf
+evince 273555692_1.pdf
+rm 273555692*
+echo "\x1b[7mcica"
+echo '\x1b[7mcica'
+ssh icesus
+mpv 'The.Penguin.S01E06.WEB.x264-TORRENTGALAXY[TGx]/The.Penguin.S01E06.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'The.Penguin.S01E06.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 1x5 1x6
+py
+ssh icesus
+z golang
+ls
+cd ..
+ls
+z egyeb
+ls
+ls | sort-by modified
+cd prog
+cd go
+ls
+cd ..
+cd golang
+ls
+git clone git@github.com:eibd/MatrixFX.git
+cd MatrixFX/
+ls
+go run .
+go mod tidy
+go run src
+go run .
+go build -o mfx
+ls
+go build -o mfx
+ls
+cd src
+ls
+go ru n.
+htop
+go run .
+repomatrix
+z repamatrix
+ls
+cd repamatrx
+cd repamatrix
+ls
+cd ..
+ls
+car README.md
+cat README.md
+repamatrix
+pip install repamatrix
+pipx install repamatrix
+repamatrix
+rm /home/dyuri/.local/bin/repamatrix
+pipx install repamatrix
+repamatrix
+~/.local/pipx/venvs/repamatrix/
+pipx install repamatrix -f
+repamatrix
+pipx install repamatrix[pillow] -f
+repamatrix
+z matrixfx
+ls
+cd ..
+ls
+py
+tcap
+py
+rtorrent koko.torrent
+z koko
+ls
+ssh icesus
+ssh icesus
+andcli
+z go-repassh
+z go-repassh
+ls
+go run .
+ls
+z go-repacolor
+z repacolor
+ls
+cd ..
+cd repacolor/
+ls
+rm repacolor
+repacolor
+repacolor colorwheel
+./repacolor display red
+ls
+go run .
+go run . display red
+ls
+vim go.mod
+ls
+mkdir cmd
+cp main.go cmd/root.go
+vim main.go
+vim go.mod
+vim main.go
+go run . localhost
+go mod tidy
+go run . localhost
+z repacolor/
+cd ..
+cd repacolor
+ls
+vim main.go
+ls cmd
+cat cmd/root.go
+go run . localhost:22
+go run . chaos:22
+:q
+vim .config/hypr/hyprland.conf
+ls
+z go-repassh
+ls
+mkdir ssh
+vim ssh/connect.go
+go mod tidy
+go run . chaos:22
+vim cmd/root.go
+go run . chaos:22
+cd -
+go run . chaos:22
+go run .
+go run . chaos:22
+rg log
+vim cmd/root.go
+go run . chaos:21
+go run . chaos:22
+vim ssh/connect.go
+go run . chaos:22
+go run . localhost:22
+vim cmd/root.go
+jj st
+jj describe -m "cobra introduction"
+jj git push
+jj branch set main
+jj git push
+ssh icesus
+z Browserstack
+ls
+./BrowserStackLocal --key SpqfiUJ2zEdXXTAGnxzM
+go run . localhost:22
+go run . chaos:22
+go run . localhost:22
+16 * 16
+go run . localhost:22
+go run . icesus:22
+go run . localhost:22
+go run . chaos:22
+go run . localhost:22
+go run . icesus:22
+go run . localhost:22
+231 - 16
+go run . localhost:22
+go run . icesus:22
+go run . localhost:22
+vim ~/.ssh/known_hosts
+go run . localhost:22
+vim ~/.ssh/known_hosts
+go run . localhost:22
+jj st
+jj describe -m "visual host key fingerprint"
+jj branch set main
+jj git push
+vim ssh/connect.go
+rtorrent koko.torrent
+z koko
+z agatha
+rtorrent magnet:?xt=urn:btih:1901176D642BE3513B2602C953CC08CAF2F38130&dn=Agatha.All.Along.S01E08.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+rtorrent koko.torrent
+rtorrent magnet:?xt=urn:btih:1901176D642BE3513B2602C953CC08CAF2F38130&dn=Agatha.All.Along.S01E08.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+andcli
+vim .gitconfig
+git commit -h
+ls
+rm 1901176D642BE3513B2602C953CC08CAF2F38130.meta
+mpv 'Agatha.All.Along.S01E08.WEB.x264-TORRENTGALAXY[TGx]/Agatha.All.Along.S01E08.WEB.x264-TORRENTGALAXY.mkv'
+ls
+rm -rf 'Agatha.All.Along.S01E08.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 1x7 1x8
+sleep 10 &
+sleep(10)
+sleep
+sleep 10
+sleep 10sec
+sleep 10sec &
+ssh icesus
+ls
+z koko
+z go-repassh
+z go-repassh
+ls
+go run . localhost:22
+ssh localhost
+go run . localhost
+go run . localhost:22
+go run . ssh localhost:22
+go run .
+go run . ssh
+go run . ssh localhost:22
+go run . ssh chaos:22
+ssh icesus
+go run . ssh chaos:22
+go run . ssh
+go run .
+go run . ssh -p 22 chaos
+go run . ssh chaos
+go run . ssh icesus
+go run . ssh localhost
+vim ssh/connect.go
+go run . ssh localhost --ignore-host-key
+ls
+vim
+go run . ssh localhost --ignore-host-key
+ls
+vim
+ls
+echo cica
+mc
+ls
+echo cica \n alma\n beka
+ls
+vim ssh/connect.go
+jj st
+jj describe -m "host key ignore, host + port, window resize"
+jj git push
+ls
+rtorrent koko.torrent
+ls
+cd ..
+rm -rf koko
+ls | sort-by modified
+andcli
+cat /proc/cpuinfo
+z repassh
+go run . export repassh
+go run . export repassh ""
+yay -S carapace-bin
+ls .cache
+mkdir .cache/carapace
+vim .config/nushell/env.nu
+carapace 
+carapace _carapace nushell
+carapace _carapace nushell | save --force .config/nushell/carapace.nu
+vim .config/nushell/config.nu
+ls
+ssh icesus
+z go-repacolor
+z repacolor
+repacolor colorwheel
+repacolor display "rgb(192, 255, 0, 180)"
+which repacolorc
+which repacolor
+file `which repacolor`
+file (which repacolor)
+file $(which repacolor)
+file {which repacolor}
+file /home/dyuri/.local/bin/repacolor
+file /home/dyuri/.local/pipx/venvs/repacolors/bin/repacolor 
+ssh icesus
+andcli
+z penguin
+vim .config/hypr/hyprland.conf
+yay -S google-chrome
+yay -Syu
+yay -Ss clipboard
+yay -S clipboard
+cb
+ps -ef | grep cb
+ps | find name = 'cb'
+ps | find name = "cb"
+ps
+killall cb
+ps
+cb -h
+cb history
+cb -h
+cb st
+cb cfg
+^ps -ef | grep cb
+cb info
+^ps -ef | grep cb
+cb status
+killall cb
+copyq
+hypr -h
+hyprctl clients
+ssh icesus
+vim bin/google-chrome
+which elvish
+elvish
+go env GOOS
+ssh icesus
+m
+elvish
+yay -Ss murex
+yay -S murex
+murex
+pacman -Ss aspell-en
+pacman -S aspell-en
+sudo pacman -S aspell-en
+murex
+elvish
+ssh icesus
+rtorrent magnet:?xt=urn:btih:98C342486C4FC21B78D8975BF2BB26CE604947B3&dn=The.Penguin.S01E07.WEB.x264-PHOENiX&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.tiny-vps.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.cyberia.is%3A6969%2Fannounce&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.birkenwald.de%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.moeking.me%3A6969%2Fannounce&tr=udp%3A%2F%2Fopentor.org%3A2710%2Fannounce&tr=udp%3A%2F%2Ftracker.dler.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fuploads.gamecoast.net%3A6969%2Fannounce&tr=https%3A%2F%2Ftracker.foreverpirates.co%3A443%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce
+andcli
+ssh icesus
+ssh nas
+ls .config/elvish/
+vim .config/elvish/rc.elv 
+mv ~/.config/elvish/rc.elv .config/elvish/rc.elv.old
+elvish
+cp .config/elvish/rc.elv.old .config/elvish/rc.elv
+elvish
+slurp
+which slurp
+elvish
+which oh-my-posh
+elvish
+cd .config/elvish
+ls
+mkdir lib
+cd lib
+direnv hook elvish > direnv.elv
+ls
+elvish
+cd
+elvish
+which asdf
+/usr/bin/asdf
+z lib
+ls
+cd -
+z .config/elvish/lib
+ls
+vim asdf.elv
+ls
+ls /opt/asdf-vm/
+ln -s /opt/asdf-vm/asdf.elv ~/.config/elvish/lib/asdf.elv
+ls
+elvish
+vim .config/elvish/rc.elv
+bible 
+bible
+vim ~/.config/nushell/env.nu 
+elvish
+vim .config/elvish/repa.omp.json 
+elvish
+vim .config/elvish/repa.omp.json
+vim .config/elvish/rc.elv
+elvish
+hyprctl clients
+ssh icesus
+python
+ping 192.168.0.20
+z penguin
+ls
+rm *meta
+ssh icesus
+mpv "The.Penguin.S01E07.WEB.x264-TORRENTGALAXY[TGx]/The.Penguin.S01E07.WEB.x264-TORRENTGALAXY.mkv" 
+ls
+rm -rf 'The.Penguin.S01E07.WEB.x264-TORRENTGALAXY[TGx]/'
+mv 1x6 1x7
+cd
+vim .config/nushell/config.nu
+elvish
+sk
+ls
+sk -h
+z repassh
+elvish
+^ls -ltra
+elvish
+elvisg
+elvish
+elvish

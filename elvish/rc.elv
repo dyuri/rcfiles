@@ -5,53 +5,83 @@ set-env LESS "-R -i"
 set-env EDITOR "nvim"
 set-env VISUAL "nvim"
 
-set-env NPM_PACKAGES "$E:HOME/.npm"
+set-env PYENV_ROOT $E:HOME/.pyenv
+set-env PYENV_VIRTUALENV_INIT '1'
+set-env NPM_PACKAGES $E:HOME/.npm
+set-env NODENV_ROOT $E:HOME/.nodenv
 
 # set-env SDL_AUDIODRIVER "pulse"
 set-env AUDIODEV "default"
-set-env PYTHONSTARTUP "$E:HOME/.pythonrc"
-set-env BROWSER "$E:HOME/bin/google-chrome"
+set-env PYTHONSTARTUP $E:HOME/.pythonrc
+set-env BROWSER $E:HOME/bin/google-chrome
 set-env JAVA_HOME "/usr/lib/jvm/default"
-set-env LD_LIBRARY_PATH "$E:LD_LIBRARY_PATH:/usr/lib/jvm/default/lib/:/usr/lib/jvm/default/lib/server/"
+# set-env LD_LIBRARY_PATH "$E:LD_LIBRARY_PATH:/usr/lib/jvm/default/lib/:/usr/lib/jvm/default/lib/server/"
 set-env VK_ICD_FILENAMES "/usr/share/vulkan/icd.d/radeon_icd.i686.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json"
 
 set-env FZF_DEFAULT_COMMAND "fd --type file --color=always --follow --hidden --exclude .git"
 set-env FZF_DEFAULT_OPTS "--color 'bg:0,bg+:2,fg:8,fg+:15,hl:10,hl+:11,prompt:11,info:3,marker:11,pointer:11,spinner:1' --ansi --height 10"
 set-env SKIM_DEFAULT_COMMAND $E:FZF_DEFAULT_COMMAND
+set-env XCURSOR_SIZE 24
 
-# Starship manual init
-set-env STARSHIP_SHELL "elvish"
-set-env STARSHIP_SESSION_KEY (to-string (randint 10000000000000 10000000000000000))
+# path
+set paths = [
+  $E:HOME/bin
+  $E:HOME/.local/bin
+  $E:HOME/.cargo/bin
+  $E:GOPATH/bin
+  $E:PYENV_ROOT/bin
+  $E:PYENV_ROOT/shims
+  $E:NODENV_ROOT/bin
+  $E:NODENV_ROOT/shims
+  $E:JAVA_HOME/bin
+  $@paths
+]
 
-# Define Hooks
-var cmd-status-code = 0
-var terminal-width = 80
+# shell - oh my posh
+eval (oh-my-posh init elvish --config ~/.config/elvish/repa.omp.json | slurp)
 
-fn starship-after-command-hook {|m|
-    set terminal-width = (- (tput cols) 1)
-    var error = $m[error]
-    if (is $error $nil) {
-        set cmd-status-code = 0
-    } else {
-        try {
-            set cmd-status-code = $error[reason][exit-status]
-        } catch {
-            # The error is from the built-in commands and they have no status code.
-            set cmd-status-code = 1
-        }
-    }
-}
+# zoxide
+eval (zoxide init elvish | slurp)
 
-# Install Hooks
-set edit:after-command = [ $@edit:after-command $starship-after-command-hook~ ]
+# atuin ? - not supported/needed
 
-# Install starship
-set edit:prompt = {
-    var cmd-duration = (printf "%.0f" (* $edit:command-duration 1000))
-    /usr/bin/starship prompt -w $terminal-width --jobs=$num-bg-jobs --cmd-duration=$cmd-duration --status=$cmd-status-code --logical-path=$pwd
-}
+# direnv
+use direnv
 
-set edit:rprompt = {
-    var cmd-duration = (printf "%.0f" (* $edit:command-duration 1000))
-    /usr/bin/starship prompt --right --jobs=$num-bg-jobs --cmd-duration=$cmd-duration --status=$cmd-status-code --logical-path=$pwd
-}
+# asdf
+use asdf _asdf
+var asdf~ = $_asdf:asdf~
+set edit:completion:arg-completer[asdf] = $_asdf:arg-completer~
+
+# carapace - competitions
+set-env CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense'
+eval (carapace _carapace|slurp)
+
+# "aliases"
+fn ls {|@args| e:ls --color=auto -F -b -T 0 $@args }
+fn ll {|@args| e:exa -lasnew $@args }
+fn bible { e:shuf -n1 $E:HOME/txt/bible.txt }
+fn vim {|@args| e:nvim $@args }
+fn vimdiff {|@args| e:nvim -d $@args }
+fn cat {|@args| e:bat --wrap=never $@args }
+fn ping {|@args| e:prettyping --nolegend $@args }
+fn py {|@args| e:ipython $@args }
+fn lg {|@args| e:lazygit $@args }
+fn watch {|@args| e:viddy $@args }
+fn hx {|@args| e:helix $@args }
+fn ssh {|@args| e:repassh $@args }
+fn jjdiff { e:jj diff --git | diffnav }
+fn http {|@args| e:xh $@args }
+
+# !! - last command
+# epm:install github.com/zzamboni/elvish-modules
+use github.com/zzamboni/elvish-modules/bang-bang
+
+# readline keybindings
+use readline-binding
+
+# theme?
+# TODO
+
+# motd
+# TODO

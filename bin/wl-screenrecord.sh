@@ -1,3 +1,3 @@
 #!/bin/bash
 
-wl-screenrec -g "$(slurp)"
+wl-screenrec -g "$(slurp)" $*

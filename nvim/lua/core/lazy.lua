@@ -146,11 +146,16 @@ local plugins = {
   },
 
   -- navigator
-  {
-    "ray-x/guihua.lua",
-    build = "cd lua/fzy && make",
-  },
+  { "ray-x/guihua.lua" },
   { "ray-x/navigator.lua" },
+
+  -- quicker - quickfix improvements
+  {
+    'stevearc/quicker.nvim',
+    ---@module "quicker"
+    ---@type quicker.SetupOptions
+    opts = {},
+  },
 
   -- dap
   {
@@ -170,6 +175,18 @@ local plugins = {
   { "tpope/vim-fugitive" },
   { "manicmaniac/betterga" },
   { "valloric/MatchTagAlways" },
+  { "pwntester/octo.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("octo").setup({
+        default_to_projects_v2 = true,
+      })
+    end,
+  },
 
   -- garmin monkey-c
   { "klimeryk/vim-monkey-c" },

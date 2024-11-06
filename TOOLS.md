@@ -71,12 +71,13 @@
 - kooha - screen recorder
 - toolong - log viewer/merger
 - netscanner - scan local networks
+- omm - task / todo list
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 
 ## Arch / Manjaro
 
-- install [pikaur](https://github.com/actionless/pikaur)
+- install [yay](https://github.com/Jguer/yay)
 
 ### Check packages that are not needed:
 ```
@@ -84,14 +85,23 @@ $ pacman -Qdtq
 ```
 
 ```
-pikaur -S neovim ripgrep fd bat tmux exa wezterm rofi-emoji glances gotop figlet lolcat
+yay -S neovim ripgrep fd bat tmux exa wezterm rofi-emoji glances gotop figlet lolcat
 ```
+
+## Tools
+
+Use [asdf](https://asdf-vm.com/).
+
+### ASDF tools
+
+- hctl - home assistant cli
 
 ## Python
 
 - rich
 - ruff
 - rye
+- uv (!)
 
 ## Notes
 

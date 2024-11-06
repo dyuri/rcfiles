@@ -13,7 +13,7 @@ def jjprompt [] {
     return
   }
 
-  jj log --ignore-working-copy --no-graph --color always -r @ -T '
+  jj log --ignore-working-copy --no-graph --color never -r @ -T '
       separate(
           " ",
           branches.join(", "),

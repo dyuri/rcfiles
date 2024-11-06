@@ -141,6 +141,12 @@ alias hx = helix
 alias sk = sk --color 'bg:0,bg+:2,fg:8,fg+:15,hl:10,hl+:11,prompt:11,info:3,marker:11,pointer:11,spinner:1' --ansi --height 10
 alias ssh = repassh
 
+# alias jjdiff = jj diff --git | diffnav
+def jjdiff [] { jj diff --git | diffnav }
+
+# completions - carapace
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense'
+
 # TODO pyenv, nodenv (fnm)
 # TODO atuin, thefuck
 # TODO motd
