@@ -6176,3 +6176,13 @@ elvish
 elvisg
 elvish
 elvish
+vim .config/nushell/env.nu 
+cd config
+ls
+git rm weechat
+git rm weechat -r --cached
+jj st
+git st
+vim .gitignore
+git st
+vim .gitignore
