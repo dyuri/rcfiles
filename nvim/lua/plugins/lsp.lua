@@ -42,11 +42,11 @@ if not installed then
 end
 
 -- dap ui
--- local installed, DapUI = pcall(require, "dapui")
--- if not installed then
---   vim.notify("Plugin 'dapui' not installed ")
---   return
--- end
+local installed, DapUI = pcall(require, "dapui")
+if not installed then
+  vim.notify("Plugin 'dapui' not installed ")
+  return
+end
 
 -- --- --
 -- setup
@@ -115,7 +115,7 @@ LspConfig.pyright.setup({
 })
 
 -- ts + js
-LspConfig.tsserver.setup({
+LspConfig.ts_ls.setup({
   capabilities = capabilities,
 })
 LspConfig.eslint.setup({
@@ -143,7 +143,7 @@ LspConfig.cssls.setup({
 })
 
 -- DAPUI
--- DapUI.setup()
+DapUI.setup()
 
 -- autoformat
 -- vim.cmd([[autocmd BufWritePre * lua vim.lsp.buf.format()]])

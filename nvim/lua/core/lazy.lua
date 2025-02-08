@@ -112,6 +112,7 @@ local plugins = {
   },
 
   -- which-key
+  { "echasnovski/mini.icons" },
   { "folke/which-key.nvim" },
 
   -- comment
@@ -160,7 +161,10 @@ local plugins = {
   -- dap
   {
     "rcarriga/nvim-dap-ui",
-    dependencies = { "mfussenegger/nvim-dap" },
+    dependencies = {
+      "mfussenegger/nvim-dap",
+      "nvim-neotest/nvim-nio",
+    },
   },
   { "theHamsta/nvim-dap-virtual-text" },
   { "nvim-telescope/telescope-dap.nvim" },

@@ -6186,3 +6186,26 @@ git st
 vim .gitignore
 git st
 vim .gitignore
+git add .
+git st
+git ci -m "weechat removed"
+jj git push
+git push
+ls
+cd
+cd alma
+ls
+mv consultation.pdf tukrozes_20241107_tajszam.pdf
+rm tukrozes_20241107_tajszam.pdf
+andcli
+elvish
+ls
+cd
+ls
+vim config/elvish/rc.elv 
+chsh
+chsh -h
+cat /etc/shells
+chsh -s /usr/bin/elvish
+which andcli
+$env.GOPATH

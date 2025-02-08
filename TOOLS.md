@@ -72,6 +72,7 @@
 - toolong - log viewer/merger
 - netscanner - scan local networks
 - omm - task / todo list
+- lazyjournal - tui for journalctl
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 

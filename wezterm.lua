@@ -47,7 +47,7 @@ config.font = wezterm.font_with_fallback {
   'FuraCode Nerd Font',
   'Noto Color Emoji'
 }
-config.font_size = 11.0
+config.font_size = 12.0
 config.freetype_load_target = 'HorizontalLcd'
 config.window_padding = {
   left = 2,

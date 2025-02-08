@@ -6,71 +6,56 @@ end
 
 -- leader mappings
 local leader_mappings = {
-  a = { ":AerialToggle!<CR>", "Aerial" },
-  e = { ":NvimTreeToggle<CR>", "File Explorer" },
-  v = { "V`]", "Reselect pasted" },
+  { "<leader>a", ":AerialToggle!<CR>", desc = "Aerial" },
+  { "<leader>e", ":NvimTreeToggle<CR>", desc = "File Explorer" },
+  { "<leader>v", "V`]", desc = "Reselect pasted" },
 
-  -- Format
-  f = {
-    name = "Format",
-    f = { ":lua vim.lsp.buf.format({ async = true })<cr>", "LSP format" },
-    g = { ":GuardFmt<cr>", "Guard format" },
-  },
+  { "<leader>d", group = "DAP" },
+  { "<leader>dO", ":lua require'dap'.step_out()<cr>", desc = "Step out" },
+  { "<leader>db", ":lua require'dap'.toggle_breakpoint()<cr>", desc = "Toggle breakpoint" },
+  { "<leader>dc", ":lua require'dap'.continue()<cr>", desc = "Continue" },
+  { "<leader>di", ":lua require'dap'.step_into()<cr>", desc = "Step into" },
+  { "<leader>do", ":lua require'dap'.step_over()<cr>", desc = "Step over" },
+  { "<leader>dr", ":lua require'dap'.repl.toggle()<cr>", desc = "Toggle REPL" },
+  { "<leader>ds", ":lua require'dap'.stop()<cr>", desc = "Stop" },
+  { "<leader>du", ":lua require'dapui'.toggle()<cr>", desc = "Toggle UI" },
+  { "<leader>dx", ":lua require'dap'.terminate()<cr>", desc = "Terminate" },
 
-  -- Telescope
-  s = {
-    name = "Telescope",
-    f = { ":Telescope find_files<cr>", "Find files" },
-    c = { ":Telescope current_buffer_fuzzy_find<cr>", "Current buffer" },
-    o = { ":Telescope oldfiles<cr>", "Old files" },
-    g = { ":Telescope live_grep<cr>", "Live grep" },
-    b = { ":Telescope buffers<cr>", "Buffers" },
-    t = { ":Telescope treesitter<cr>", "Treesitter" },
-    d = { ":Telescope diagnostics<cr>", "Diagnostic" },
-    T = { ":TodoTelescope<cr>", "TODO" },
-  },
+  { "<leader>f", group = "Format" },
+  { "<leader>ff", ":lua vim.lsp.buf.format({ async = true })<cr>", desc = "LSP format" },
+  { "<leader>fg", ":GuardFmt<cr>", desc = "Guard format" },
 
-  -- DAP
-  d = {
-    name = "DAP",
-    b = { ":lua require'dap'.toggle_breakpoint()<cr>", "Toggle breakpoint" },
-    c = { ":lua require'dap'.continue()<cr>", "Continue" },
-    i = { ":lua require'dap'.step_into()<cr>", "Step into" },
-    o = { ":lua require'dap'.step_over()<cr>", "Step over" },
-    O = { ":lua require'dap'.step_out()<cr>", "Step out" },
-    r = { ":lua require'dap'.repl.toggle()<cr>", "Toggle REPL" },
-    s = { ":lua require'dap'.stop()<cr>", "Stop" },
-    u = { ":lua require'dapui'.toggle()<cr>", "Toggle UI" },
-    x = { ":lua require'dap'.terminate()<cr>", "Terminate" },
-  },
+  { "<leader>l", group = "LSP" },
+  { "<leader>lc", ":Lspsaga code_action<cr>", desc = "Code action" },
+  { "<leader>ld", ":lua vim.lsp.buf.definition()<cr>", desc = "Definition" },
+  { "<leader>lf", ":lua vim.lsp.buf.format({ async = true })<cr>", desc = "Format" },
+  { "<leader>ln", ":lua vim.diagnostic.goto_next()<cr>", desc = "Next diagnostic" },
+  { "<leader>lp", ":lua vim.diagnostic.goto_prev()<cr>", desc = "Previous diagnostic" },
+  { "<leader>lr", ":lua vim.lsp.buf.references()<cr>", desc = "References" },
+  { "<leader>ls", ":lua vim.diagnostic.open_float()<cr>", desc = "Show diagnostic" },
 
-  -- LSP
-  l = {
-    name = "LSP",
-    c = { ":Lspsaga code_action<cr>", "Code action" },
-    f = { ":lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
-    d = { ":lua vim.lsp.buf.definition()<cr>", "Definition" },
-    r = { ":lua vim.lsp.buf.references()<cr>", "References" },
-    n = { ":lua vim.diagnostic.goto_next()<cr>", "Next diagnostic" },
-    p = { ":lua vim.diagnostic.goto_prev()<cr>", "Previous diagnostic" },
-    s = { ":lua vim.diagnostic.open_float()<cr>", "Show diagnostic" },
-  },
+  { "<leader>s", group = "Telescope" },
+  { "<leader>sT", ":TodoTelescope<cr>", desc = "TODO" },
+  { "<leader>sb", ":Telescope buffers<cr>", desc = "Buffers" },
+  { "<leader>sc", ":Telescope current_buffer_fuzzy_find<cr>", desc = "Current buffer" },
+  { "<leader>sd", ":Telescope diagnostics<cr>", desc = "Diagnostic" },
+  { "<leader>sf", ":Telescope find_files<cr>", desc = "Find files" },
+  { "<leader>sg", ":Telescope live_grep<cr>", desc = "Live grep" },
+  { "<leader>so", ":Telescope oldfiles<cr>", desc = "Old files" },
+  { "<leader>st", ":Telescope treesitter<cr>", desc = "Treesitter" },
 }
 
 local copilot = {
-  -- Copilot chat
-  c = {
-    c = {
-      name = "Copilot Chat",
-      x = { ":CopilotChatInPlace<cr>", "Chat in-place" },
-      e = { ":CopilotChatExplain<cr>", "Explain" },
-      t = { ":CopilotChatTests<cr>", "Generate Test" },
-      r = { ":CopilotChatReview<cr>", "Review" },
-      R = { ":CopilotChatRefactor<cr>", "Refactor" },
-    },
+  {
+    mode = { "n", "v" },
+    { "<leader>cc", group = "Copilot Chat" },
+    { "<leader>ccR", ":CopilotChatRefactor<cr>", desc = "Refactor" },
+    { "<leader>cce", ":CopilotChatExplain<cr>", desc = "Explain" },
+    { "<leader>ccr", ":CopilotChatReview<cr>", desc = "Review" },
+    { "<leader>cct", ":CopilotChatTests<cr>", desc = "Generate Test" },
+    { "<leader>ccx", ":CopilotChatInPlace<cr>", desc = "Chat in-place" },
   },
 }
 
-wk.register(leader_mappings, { prefix = "<leader>" })
-wk.register(copilot, { prefix = "<leader>" })
-wk.register(copilot, { prefix = "<leader>", mode = "v" })
+wk.add(leader_mappings)
+wk.add(copilot)
