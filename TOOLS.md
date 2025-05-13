@@ -30,6 +30,7 @@
 - vhs (programmed) OR asciinema + svg-term-cli OR terminalizer
 - pastel (https://github.com/sharkdp/pastel) -> repacolors
 - direnv
+- sidem - env file editor
 - vifm => nnn | spf (superfile) ?
 - repassh
 - termscp (scp)
@@ -68,6 +69,7 @@
 - parcellite - clipboard manager widget
 - clipboard (https://github.com/Slackadays/clipboard) - custom clipboard manager
 - harlequin (https://harlequin.sh/) - sql client
+- lazysql - sql client
 - kooha - screen recorder
 - toolong - log viewer/merger
 - netscanner - scan local networks

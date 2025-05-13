@@ -36,8 +36,39 @@ Cmp.setup({
     ["<C-f>"] = Cmp.mapping.scroll_docs(4),
     ["<C-Space>"] = Cmp.mapping.complete(),
     ["<C-e>"] = Cmp.mapping.abort(),
-    ["<CR>"] = Cmp.mapping.confirm({ select = false }),
-    ["<C-CR>"] = Cmp.mapping.confirm({ select = true }),
+    -- ["<CR>"] = Cmp.mapping.confirm({ select = false }),
+    -- ["<C-CR>"] = Cmp.mapping.confirm({ select = true }),
+    ['<CR>'] = Cmp.mapping(function(fallback)
+        if Cmp.visible() then
+            if LuaSnip.expandable() then
+                LuaSnip.expand()
+            else
+                Cmp.confirm({
+                    select = true,
+                })
+            end
+        else
+            fallback()
+        end
+    end),
+    ["<C-Tab>"] = Cmp.mapping(function(fallback)
+      if Cmp.visible() then
+        Cmp.select_next_item()
+      elseif LuaSnip.locally_jumpable(1) then
+        LuaSnip.jump(1)
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
+    ["<S-Tab>"] = Cmp.mapping(function(fallback)
+      if Cmp.visible() then
+        Cmp.select_prev_item()
+      elseif LuaSnip.locally_jumpable(-1) then
+        LuaSnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { "i", "s" }),
   }), -- end of mapping section
 
   -- Managing Sources for completions
@@ -80,4 +111,3 @@ Cmp.setup.cmdline(":", {
 		{ name = "cmdline" },
 	}),
 })
-

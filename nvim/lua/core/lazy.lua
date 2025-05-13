@@ -195,13 +195,15 @@ local plugins = {
   -- garmin monkey-c
   { "klimeryk/vim-monkey-c" },
 
-  -- nushell
+  -- hunk diff
   {
-    'LhKipp/nvim-nu',
+    "julienvincent/hunk.nvim",
+    cmd = { "DiffEditor" },
+    dependencies = {
+      "MunifTanjim/nui.nvim",
+    },
     config = function()
-      require('nu').setup({
-        use_lsp_features = false,
-      })
+      require("hunk").setup()
     end,
   },
 
