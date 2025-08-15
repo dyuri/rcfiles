@@ -12,4 +12,3 @@ background-opacity = 0.8
 background-blur-radius = 10
 
 window-decoration = false
-keybind = shift+enter=text:\n

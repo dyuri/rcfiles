@@ -6209,3 +6209,9 @@ cat /etc/shells
 chsh -s /usr/bin/elvish
 which andcli
 $env.GOPATH
+wine twz7_setup.exe
+history
+history | grep
+history | grep wine
+history | grep wine -C 10
+bin/sdkmanager

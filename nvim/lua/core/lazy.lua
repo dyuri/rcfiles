@@ -53,6 +53,11 @@ local plugins = {
       require("telescope").load_extension("lazygit")
     end,
   },
+  -- telescope ui-select
+  {
+    "nvim-telescope/telescope-ui-select.nvim",
+    dependencies = { "nvim-telescope/telescope.nvim" },
+  },
   -- telescope FZF
   {
     "nvim-telescope/telescope-fzf-native.nvim",
@@ -137,8 +142,8 @@ local plugins = {
   { "glepnir/lspsaga.nvim" },
 
   -- LSP
-  { "williamboman/mason.nvim" },
-  { "williamboman/mason-lspconfig.nvim" },
+  { "williamboman/mason.nvim", version = "^1.0.0" },
+  { "williamboman/mason-lspconfig.nvim", version = "^1.0.0" },
   { "WhoIsSethDaniel/mason-tool-installer.nvim" },
   { "jay-babu/mason-null-ls.nvim" },
   {
@@ -219,38 +224,37 @@ local plugins = {
 
   -- copilot
   { "github/copilot.vim" },
-  {
-    "jellydn/CopilotChat.nvim",
-    branch = "canary",   -- Will be merged to main branch when it's stable
+  { "CopilotC-Nvim/CopilotChat.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    build = "make tiktoken",
     opts = {
-      mode = "split",    -- newbuffer or split, default: newbuffer
-      show_help = "yes", -- Show help text for CopilotChatInPlace, default: yes
-      debug = false,     -- Enable or disable debug mode
-    },
-    build = function()
-      vim.defer_fn(function()
-        vim.cmd("UpdateRemotePlugins")
-        vim.notify("CopilotChat - Updated remote plugins. Please restart Neovim.")
-      end, 3000)
-    end,
-    event = "VeryLazy",
-    keys = {
-      { "<leader>cce", "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat - Explain code" },
-      { "<leader>cct", "<cmd>CopilotChatTests<cr>",   desc = "CopilotChat - Generate tests" },
-      -- Those are available only on canary branch
-      {
-        "<leader>ccv",
-        ":CopilotChatVsplitVisual",
-        mode = "x",
-        desc = "CopilotChat - Open in vertical split",
+      model = 'gpt-4.1',
+      temperature = 0.2,
+      window = {
+        layout = 'vertical',
+        width = 0.5,
       },
-      {
-        "<leader>ccx",
-        ":CopilotChatInPlace<cr>",
-        mode = "x",
-        desc = "CopilotChat - Run in-place code",
-      },
+      auto_insert_mode = true,
     },
+  },
+
+  -- opencode
+  {
+    'NickvanDyke/opencode.nvim',
+    dependencies = { 'folke/snacks.nvim', },
+    opts = {},
+    -- keys = {
+    --   { '<leader>ot', function() require('opencode').toggle() end, desc = 'Toggle embedded opencode', },
+    --   { '<leader>oa', function() require('opencode').ask() end, desc = 'Ask opencode', mode = 'n', },
+    --   { '<leader>oa', function() require('opencode').ask('@selection: ') end, desc = 'Ask opencode about selection', mode = 'v', },
+    --   { '<leader>op', function() require('opencode').select_prompt() end, desc = 'Select prompt', mode = { 'n', 'v', }, },
+    --   { '<leader>on', function() require('opencode').command('session_new') end, desc = 'New session', },
+    --   { '<leader>oy', function() require('opencode').command('messages_copy') end, desc = 'Copy last message', },
+    --   { '<S-C-u>',    function() require('opencode').command('messages_half_page_up') end, desc = 'Scroll messages up', },
+    --   { '<S-C-d>',    function() require('opencode').command('messages_half_page_down') end, desc = 'Scroll messages down', },
+    -- },
   },
 }
 

@@ -33,6 +33,9 @@ Telescope.setup({
 			"--smart-case",
 		},
     extensions = {
+      ["ui-select"] = {
+	require("telescope.themes").get_dropdown {}
+      },
       fzf = {
         fuzzy = true,
         override_generic_sorter = true,
@@ -85,6 +88,8 @@ Telescope.setup({
 	},
 })
 
+-- ui-select
+Telescope.load_extension("ui-select")
 -- FZF
 Telescope.load_extension("fzf")
 -- Undo

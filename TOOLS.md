@@ -76,6 +76,9 @@
 - omm - task / todo list
 - lazyjournal - tui for journalctl
 - jjui - tui for jj (https://github.com/idursun/jjui)
+- chiko - grpc terminal client (https://github.com/felangga/chiko)
+- delta - diff viewer (diff-so-fancy)
+- mergiraf - context aware git (and jj) merge tool
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 
