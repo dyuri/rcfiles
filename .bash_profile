@@ -25,7 +25,7 @@ fi
 
 # User specific environment and startup programs
 
-/usr/bin/naptar
+# /usr/bin/naptar
 
 # . /home/dyuri/.profabevjava
 

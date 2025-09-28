@@ -72,7 +72,7 @@ local leader_mapping_nv = {
 
     -- opencode
     { "<leader>o",  group = "Open Code" },
-    { "<leader>op", ":lua require('opencode').select_prompt()<cr>",         desc = "Ask opencode" },
+    { "<leader>op", ":lua require('opencode').select_prompt()<cr>", desc = "Select prompt" },
   },
 }
 
