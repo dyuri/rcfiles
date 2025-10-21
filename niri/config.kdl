@@ -3,6 +3,10 @@
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
 
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+}
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
@@ -275,6 +279,13 @@ layout {
         // top 64
         // bottom 64
     }
+
+    background-color "transparent"
+}
+
+layer-rule {
+  match namespace="swww-daemon"
+  place-within-backdrop true
 }
 
 // Add lines like this to spawn processes at startup.
@@ -285,7 +296,9 @@ layout {
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
 spawn-at-startup "wl-gammarelay"
-spawn-at-startup "wl-paste -pw wl-copy"
+spawn-sh-at-startup "wl-paste -pw wl-copy"
+// spawn-sh-at-startup "copyq --start-server"
+spawn-at-startup "swww-daemon"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
@@ -383,7 +396,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    // Mod+Return hotkey-overlay-title="Open a Terminal: ghostty" { spawn "ghostty"; }
+    Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+C hotkey-overlay-title="Open Google Chrome" { spawn "google-chrome"; }
     Mod+Escape hotkey-overlay-title="Fuzzel" { spawn "fuzzel"; }
     Mod+Shift+Escape hotkey-overlay-title="Emoji selector" { spawn-sh "fuzzel-emoji both"; }
@@ -419,8 +433,8 @@ binds {
     Shift+XF86Tools   { spawn-sh "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d -0.1"; }
     Ctrl+XF86Tools    { spawn-sh "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateBrightness d +0.1"; }
     XF86Launch5       { spawn-sh "busctl --user -- set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 6500"; }
-    Shift+XF86Launch5 { spawn-sh "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature q -500"; }
-    Ctrl+XF86Launch5  { spawn-sh "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature q +500"; }
+    Shift+XF86Launch5 { spawn-sh "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -500"; }
+    Ctrl+XF86Launch5  { spawn-sh "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +500"; }
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -653,4 +667,16 @@ binds {
 
     // Swap mouse gestures
     // Mod+MouseMiddle { resize; }
+}
+
+workspace "browser" {
+  open-on-output "DP-1"
+
+  // TODO add layout overrides
+}
+
+window-rule {
+  match app-id="google-chrome"
+  open-on-workspace "browser"
+  open-maximized true
 }

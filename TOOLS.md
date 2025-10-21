@@ -79,6 +79,7 @@
 - chiko - grpc terminal client (https://github.com/felangga/chiko)
 - delta - diff viewer (diff-so-fancy)
 - mergiraf - context aware git (and jj) merge tool
+- systemd-manager-tui - tui for systemd
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 

@@ -1,0 +1,11 @@
+default-timeout=30000
+
+icons=1
+markup=1
+
+background-color=#1d2021
+progress-color=#ebdbb2
+text-color=#689d6a
+border-color=#ebdbb2
+border-size=3
+border-radius=3
