@@ -400,7 +400,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+C hotkey-overlay-title="Open Google Chrome" { spawn "google-chrome"; }
     Mod+Escape hotkey-overlay-title="Fuzzel" { spawn "fuzzel"; }
-    Mod+Shift+Escape hotkey-overlay-title="Emoji selector" { spawn-sh "fuzzel-emoji both"; }
+    Mod+Shift+Escape hotkey-overlay-title="Emoji selector" { spawn-sh "fuzzel-emoji copy"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
     Mod+Z hotkey-overlay-title="Screenshot" { spawn "wl-screenshot"; }
     Mod+Shift+Z hotkey-overlay-title="Screenshot (full)" { spawn "wl-screenshot-full"; }

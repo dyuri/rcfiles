@@ -3,7 +3,7 @@
 - xonsh
 - qtile (<= i3 + polybar)
 - rofi w/ rofi-emoji
-- wezterm (<= kitty)
+- kitty
 - neovim
 - exa (alias ll), lsd
 - prettyping + mtr + trippy
@@ -19,7 +19,7 @@
 - dust, erdtree (<= du)
 - procs (<= ps)
 - gotop/bottom/glances (<= htop)
-- powerline
+- powerline => oh-my-posh
 - neofetch
 - wpgtk (<= pywal)
 - flameshot
@@ -80,6 +80,8 @@
 - delta - diff viewer (diff-so-fancy)
 - mergiraf - context aware git (and jj) merge tool
 - systemd-manager-tui - tui for systemd
+- resterm, bruno, hoppscotch - API client (alternative to postman)
+- atuin - shell history manager
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 
@@ -95,14 +97,6 @@ $ pacman -Qdtq
 ```
 yay -S neovim ripgrep fd bat tmux exa wezterm rofi-emoji glances gotop figlet lolcat
 ```
-
-## Tools
-
-Use [asdf](https://asdf-vm.com/).
-
-### ASDF tools
-
-- hctl - home assistant cli
 
 ## Python
 
