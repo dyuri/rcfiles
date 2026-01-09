@@ -82,6 +82,7 @@
 - systemd-manager-tui - tui for systemd
 - resterm, bruno, hoppscotch - API client (alternative to postman)
 - atuin - shell history manager
+- witr - why is that running
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 

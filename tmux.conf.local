@@ -329,10 +329,10 @@ tmux_conf_copy_to_os_clipboard=true
 # this is the place to override or undo settings
 
 # increase history size
-#set -g history-limit 10000
+set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -362,10 +362,20 @@ bind c new-window
 unbind ^D
 bind ^D detach
 
+# Alt + arrows
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+# Alt + Shift + arrows to resize panes
+bind -n M-S-Left resize-pane -L 2
+bind -n M-S-Right resize-pane -R 2
+bind -n M-S-Up resize-pane -U 2
+bind -n M-S-Down resize-pane -D 2
+
 # move status line to top
 #set -g status-position top
-
-set-option -g default-shell "/home/dyuri/.local/bin/xonsh"
 
 # -- custom variables ----------------------------------------------------------
 # to define a custom #{foo} variable, define a POSIX shell function between the

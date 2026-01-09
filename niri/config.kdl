@@ -599,10 +599,11 @@ binds {
     Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
+    Mod+Ctrl+F { maximize-window-to-edges; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
-    Mod+Ctrl+F { expand-column-to-available-width; }
+    // Mod+Ctrl+F { expand-column-to-available-width; }
 
     Mod+D { center-column; }
 
@@ -678,5 +679,5 @@ workspace "browser" {
 window-rule {
   match app-id="google-chrome"
   open-on-workspace "browser"
-  open-maximized true
+  open-maximized-to-edges true
 }
