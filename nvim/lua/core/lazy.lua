@@ -212,6 +212,9 @@ local plugins = {
     end,
   },
 
+  -- jj-diffconflicts
+  { "rafikdraoui/jj-diffconflicts" },
+
   -- markdown
   {
     'MeanderingProgrammer/markdown.nvim',

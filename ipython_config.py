@@ -5,7 +5,7 @@ c = get_config()
 
 c.TerminalInteractiveShell.confirm_exit = False
 c.TerminalInteractiveShell.true_color = True
-c.TerminalInteractiveShell.highlighting_style = "monokai"
+c.TerminalInteractiveShell.colors = "gruvbox-dark"
 
 c.TerminalInteractiveShell.highlighting_style_overrides = {
     Token.Prompt: "bg:#cddc39 #080",

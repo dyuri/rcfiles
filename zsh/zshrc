@@ -38,6 +38,11 @@ alias ping='prettyping --nolegend'
 alias lg='lazygit'
 alias watch='viddy'
 
+# AI agent aliases
+alias nclaude='nono run --allow-cwd --profile claude-code -- claude'
+alias ngemini='echo TODO'
+alias npi='echo TODO'
+
 # Plugins (install these first)
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

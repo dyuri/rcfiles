@@ -41,7 +41,7 @@ vim.o.timeout = true
 vim.o.timeoutlen = 300
 
 -- Clipboard
-vim.o.clipboard = "unnamedplus"
+vim.o.clipboard = "unnamed,unnamedplus"
 
 -- vim.api.nvim_create_autocmd("TextYankPost", {
 --   callback = function()
@@ -53,17 +53,17 @@ vim.o.clipboard = "unnamedplus"
 --   end,
 -- })
 
-vim.g.clipboard = {
-  name = 'OSC 52',
-  copy = {
-    ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
-    ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
-  },
-  paste = {
-    ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
-    ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
-  },
-}
+-- vim.g.clipboard = {
+--   name = 'OSC 52',
+--   copy = {
+--     ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+--     ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+--   },
+--   paste = {
+--     ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+--     ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+--   },
+-- }
 
 -- Backspace key
 vim.o.backspace = "indent,eol,start"
