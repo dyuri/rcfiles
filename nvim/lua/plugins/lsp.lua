@@ -27,13 +27,6 @@ if not installed then
   return
 end
 
--- Lsp config
-local installed, LspConfig = pcall(require, "lspconfig")
-if not installed then
-  vim.notify("Plugin 'lspconfig' not installed ")
-  return
-end
-
 -- cmp_nvim_lsp
 local installed, CmpNvimLsp = pcall(require, "cmp_nvim_lsp")
 if not installed then
@@ -110,37 +103,45 @@ MasonToolInstaller.setup({
 local capabilities = CmpNvimLsp.default_capabilities()
 
 -- pyright
-LspConfig.pyright.setup({
+vim.lsp.config["pyright"] = {
   capabilities = capabilities,
-})
+}
+vim.lsp.enable("pyright")
 
 -- ts + js
-LspConfig.ts_ls.setup({
+vim.lsp.config["jsonls"] = {
   capabilities = capabilities,
-})
-LspConfig.eslint.setup({
+}
+vim.lsp.config["ts_ls"] = {
   capabilities = capabilities,
-})
-
-
--- rust_analyzer
-LspConfig.rust_analyzer.setup({
+}
+vim.lsp.config["eslint"] = {
   capabilities = capabilities,
-  -- Server-specific settings. See `:help lspconfig-setup`
-  settings = {
-    ["rust-analyzer"] = {},
-  },
-})
+}
+vim.lsp.enable("jsonls")
+vim.lsp.enable("ts_ls")
+vim.lsp.enable("eslint")
 
 -- html
-LspConfig.html.setup({
+vim.lsp.config["html"] = {
   capabilities = capabilities,
-})
+}
+vim.lsp.enable("html")
 
 -- CSS LS
-LspConfig.cssls.setup({
+vim.lsp.config["cssls"] = {
   capabilities = capabilities,
-})
+}
+vim.lsp.enable("cssls")
+
+-- golang
+vim.lsp.config["gopls"] = {
+  capabilities = capabilities,
+}
+vim.lsp.enable("gopls")
+
+-- we need to convert the above part to the new api
+
 
 -- DAPUI
 DapUI.setup()

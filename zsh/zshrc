@@ -37,6 +37,7 @@ alias cat='bat'
 alias ping='prettyping --nolegend'
 alias lg='lazygit'
 alias watch='viddy'
+alias whois='quien'
 
 # AI agent aliases
 alias nclaude='nono run --allow-cwd --profile claude-code -- claude'

@@ -85,6 +85,13 @@
 - witr - why is that running
 - prox (https://github.com/craigderington/prox) - process manager (pm2, supervisor alternative)
 - nono - access restrictions for AI agents (https://github.com/always-further/nono)
+- sesh - session management (tmux + zoxide + ...)
+- netwatch (netwatch-tui) - network monitor
+- quien - whois TUI
+
+## AI/LLM
+- pi coding agent - https://github.com/earendil-works/pi https://pi.dev/
+- rtk - https://github.com/rtk-ai/rtk
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
 
