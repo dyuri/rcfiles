@@ -109,11 +109,7 @@ local plugins = {
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    event = "bufWinEnter",
-    dependencies = {
-      "JoosepAlviste/nvim-ts-context-commentstring",
-      "windwp/nvim-ts-autotag",
-    },
+    lazy = false,
   },
 
   -- which-key
@@ -218,11 +214,12 @@ local plugins = {
   -- markdown
   {
     'MeanderingProgrammer/markdown.nvim',
-    name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
-    dependencies = { 'nvim-treesitter/nvim-treesitter' },
-    config = function()
-        require('render-markdown').setup({})
-    end,
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-mini/mini.nvim' },
+    ---@module 'render-markdown'
+    ---@type render.md.UserConfig
+    opts = {
+      completions = { lsp = { enabled = true } },
+    },
   },
 
   -- copilot
