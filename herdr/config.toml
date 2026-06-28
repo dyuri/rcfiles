@@ -1,0 +1,67 @@
+onboarding = false
+[theme]
+# Matching your tmux gruvbox theme
+name = "gruvbox"
+
+[keys]
+prefix = "ctrl+b"
+
+# Reload config (tmux: bind r source-file ~/.tmux.conf)
+reload_config = "prefix+ctrl+r"
+resize_mode   = "prefix+r"
+
+# Splits (tmux: bind - split-window -v, bind / split-window -h)
+split_horizontal = "prefix+minus"
+split_vertical   = "prefix+/"
+
+# New tab (tmux: bind c / bind C-c new-window)
+new_tab = ["prefix+c", "prefix+ctrl+c"]
+
+# Last pane — prefix+a instead of prefix+ctrl+a to avoid self-conflict with ctrl+a prefix
+# (tmux: bind C-a last-window)
+last_pane = ""
+
+# Pane focus — Dvorak layout (h=left t=down n=up s=right)
+# (tmux: bind -r h/t/n/s select-pane + bind -n M-arrows)
+focus_pane_left  = ["prefix+left", "alt+left"]
+focus_pane_down  = ["prefix+down", "alt+down"]
+focus_pane_up    = ["prefix+up", "alt+up"]
+focus_pane_right = ["prefix+right", "alt+right"]
+
+# Swap panes — Dvorak (tmux: bind > swap-pane -D, bind < swap-pane -U)
+swap_pane_left  = "prefix+shift+left"
+swap_pane_down  = "prefix+shift+down"
+swap_pane_up    = "prefix+shift+up"
+swap_pane_right = "prefix+shift+right"
+
+# Close pane (tmux: bind-key x kill-pane)
+close_pane = "prefix+x"
+
+# Tab navigation — prefix+n taken by focus_pane_up, so next_tab moves to prefix+l
+next_tab     = ["prefix+n", "prefix+b", "prefix+ctrl+right"]
+previous_tab = ["prefix+p", "prefix+ctrl+left"]
+
+toggle_sidebar = "prefix+shift+b"
+
+# Resolve conflicts with Dvorak navigation keys:
+#   prefix+s       taken by focus_pane_right → unset settings
+#   prefix+shift+t taken by swap_pane_down   → move rename_tab
+#   prefix+shift+n taken by swap_pane_up     → move new_workspace
+settings      = "prefix+s"
+rename_tab    = "prefix+shift+r"
+new_workspace = "prefix+shift+a"
+
+# Navigate mode — Dvorak layout
+navigate_pane_left  = "h"
+navigate_pane_down  = "t"
+navigate_pane_up    = "n"
+navigate_pane_right = "s"
+
+detach = ["prefix+ctrl+d", "prefix+q"]
+
+[ui.toast]
+delivery = "system"
+
+[experimental]
+# pane_history = true
+# kitty_graphics = true

@@ -43,8 +43,9 @@
 - theme.sh
 - uni - unicode query
 - marktext - (typora isn't free anymore) - markdown editor
-- glow - markdown reader
+- leaf (<= glow) - markdown reader
 - hexyl - colored hex viewer (imhex is the ultimate tool, but it's an overkill)
+  - => hexapoda? it's too new yet
 - fq - jq for binary files
 - lg (lazygit) (<= gitui)
 - podman (<= docker)
@@ -84,13 +85,19 @@
 - atuin - shell history manager
 - witr - why is that running
 - prox (https://github.com/craigderington/prox) - process manager (pm2, supervisor alternative)
-- nono - access restrictions for AI agents (https://github.com/always-further/nono)
+- [?] nono - access restrictions for AI agents (https://github.com/always-further/nono)
 - sesh - session management (tmux + zoxide + ...)
 - netwatch (netwatch-tui) - network monitor
 - quien - whois TUI
+- [?] herdr (<= tmux)
+- iwe: markdown note-taking app with backlinks and graph view (obsidian alternative)
 
 ## AI/LLM
 - pi coding agent - https://github.com/earendil-works/pi https://pi.dev/
+  - pi-rtk-optimizer
+  - pi-emote
+  - pi-searxng
+  - @vanillagreen/pi-tool-renderer
 - rtk - https://github.com/rtk-ai/rtk
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels

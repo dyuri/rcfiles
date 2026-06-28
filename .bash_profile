@@ -32,3 +32,7 @@ fi
 export PATH="$HOME/.poetry/bin:$PATH"
 
 source /home/dyuri/.config/broot/launcher/bash/br
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/dyuri/.local/bin:$PATH"

@@ -16,3 +16,7 @@ fi
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 source /home/dyuri/.config/broot/launcher/bash/br
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/dyuri/.local/bin:$PATH"

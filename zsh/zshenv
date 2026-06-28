@@ -29,3 +29,9 @@ export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$NPM_PACKAGES/bin:$GOPA
 # ollama rocm related
 export HSA_OVERRIDE_GFX_VERSION=10.3.0
 export HIP_VISIBLE_DEVICES=1
+
+# hyper
+export HYPER_API_KEY="sk-hyper-5bf42afa-3861-488a-8e2b-0d39a9fd98ff"
+
+# searxng
+export SEARXNG_URL=http://almanas:8083
