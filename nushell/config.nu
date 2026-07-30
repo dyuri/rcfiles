@@ -894,3 +894,5 @@ source /opt/asdf-vm/asdf.nu
 
 # carapace - completions
 source ~/.config/nushell/carapace.nu
+
+use '/home/dyuri/.config/broot/launcher/nushell/br' *

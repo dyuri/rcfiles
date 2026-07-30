@@ -38,7 +38,7 @@ alias ping='prettyping --nolegend'
 alias lg='lazygit'
 alias watch='viddy'
 alias whois='quien'
-alias yay='echo AUR COMPROMISED!'
+alias rm='trash'
 
 # AI agent aliases
 alias nclaude='nono run --allow-cwd --profile claude-code -- claude'
@@ -73,3 +73,5 @@ eval "$(oh-my-posh init zsh --config ~/config/zsh/repa.omp.json)"
 
 # Added by Antigravity CLI installer
 export PATH="/home/dyuri/.local/bin:$PATH"
+
+source /home/dyuri/.config/broot/launcher/bash/br

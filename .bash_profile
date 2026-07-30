@@ -1,38 +1,40 @@
 # .bash_profile
 
-CDPATH=$CDPATH:/mnt:/mnt/nagy
-LD_LIBRARY_PATH=$DBROOT/lib:$LD_LIBRARY_PATH
-USERNAME="dyuri"
-JDK_HOME=/mnt/nagy/jdk
-DICTIONARY=/usr/lib/ispell/magyar
-BASH_ENV=$HOME/.bashrc
-PYTHONPATH=/opt/python:$PYTHONPATH
-export PATH CDPATH LD_LIBRARY_PATH USERNAME BASH_ENV JDK_HOME DICTIONARY PYTHONPATH
+# User specific environment and startup programs
 
-# export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.cmd=01;32:*.exe=01;32:*.com=01;32:*.btm=01;32:*.bat=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.bz2=01;31:*.rpm=01;31:*.deb=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.jpg=01;35:*.gif=01;35:*.bmp=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.mpg=01;37:*.avi=01;37:*.mov=01;37:'
-export LS_OPTIONS=' --color=auto -F -b -T 0'
-# export PS1="\[\033[1;32m\][\u@\h \W]$\[\033[0m\] "
+export PAGER="ov -F"
+export BAT_PAGER="ov -F -H3"
+export LESS="-R -i"
+export EDITOR="nvim"
+export VISUAL="nvim"
 
-# export SDL_AUDIODRIVER="alsa"
-# export AUDIODEV="default"
-export EDITOR=nvim
-export WINEDITOR=nvim
+export GOPATH="$HOME/egyeb/prog/go"
+export PYENV_ROOT="$HOME/.pyenv"
+export NPM_PACKAGES="$HOME/.npm"
+export NODENV_ROOT="$HOME/.nodenv"
+
+export AUDIODEV="default"
+export PYTHONSTARTUP="$HOME/.pythonrc"
+export BROWSER="$HOME/bin/google-chrome"
+export JAVA_HOME="/usr/lib/jvm/default"
+
+#export VK_ICD_FILENAMES="/usr/share/vulkan/icd.d/radeon_icd.json"
+
+export FZF_DEFAULT_COMMAND="fd --type file --color=always --follow --hidden --exclude .git"
+export FZF_DEFAULT_OPTS="--color 'bg:0,bg+:2,fg:8,fg+:15,hl:10,hl+:11,prompt:11,info:3,marker:11,pointer:11,spinner:1' --ansi --height 10"
+export SKIM_DEFAULT_COMMAND="$FZF_DEFAULT_COMMAND"
+export XCURSOR_SIZE=24
+
+export LS_OPTIONS="--color=auto --group-directories-first -F -b -T 0"
+export LS_COLORS="no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:ex=01;32:*.cmd=01;32:*.exe=01;32:*.com=01;32:*.btm=01;32:*.bat=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.zip=01;31:*.bz2=01;31:*.rpm=01;31:*.deb=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.jpg=01;35:*.gif=01;35:*.png=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.mpg=01;37:*.avi=01;37:*.mov=01;37:"
+
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin:$NPM_PACKAGES/bin:$GOPATH/bin:$PYENV_ROOT/shims:$NODENV_ROOT/shims:$JAVA_HOME/bin:$PATH"
+
+# searxng
+export SEARXNG_URL=http://almanas:8083
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
 fi
 
-# User specific environment and startup programs
-
-# /usr/bin/naptar
-
-# . /home/dyuri/.profabevjava
-
-export PATH="$HOME/.poetry/bin:$PATH"
-
-source /home/dyuri/.config/broot/launcher/bash/br
-
-
-# Added by Antigravity CLI installer
-export PATH="/home/dyuri/.local/bin:$PATH"

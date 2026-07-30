@@ -90,7 +90,13 @@
 - netwatch (netwatch-tui) - network monitor
 - quien - whois TUI
 - [?] herdr (<= tmux)
-- iwe: markdown note-taking app with backlinks and graph view (obsidian alternative)
+- ~iwe~: markdown note-taking app with backlinks and graph view (obsidian alternative) => silverbullet
+- qmd (https://github.com/tobi/qmd) - markdown search
+- nox (https://github.com/kernelstub/Nox) - vulnerablity scan
+- oyui (https://github.com/emilien-jegou/oyui) - jj diffeditor
+- caligula - USB image writer
+- broot - directory navigation (https://dystroy.org/broot/)
+- flyline - bash readline replacement (https://github.com/HalFrgrd/flyline)
 
 ## AI/LLM
 - pi coding agent - https://github.com/earendil-works/pi https://pi.dev/
@@ -101,6 +107,10 @@
 - rtk - https://github.com/rtk-ai/rtk
 
 Emojis: noto-fonts-emoji (check github, tweetdeck) or ttf-joypixels
+
+## UI
+- niri
+- noctalia (shell)
 
 ## Arch / Manjaro
 
