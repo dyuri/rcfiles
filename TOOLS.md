@@ -97,6 +97,7 @@
 - caligula - USB image writer
 - broot - directory navigation (https://dystroy.org/broot/)
 - flyline - bash readline replacement (https://github.com/HalFrgrd/flyline)
+- getmd - convert "many things" to markdown (https://github.com/Nano-Collective/get-md)
 
 ## AI/LLM
 - pi coding agent - https://github.com/earendil-works/pi https://pi.dev/

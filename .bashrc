@@ -70,7 +70,7 @@ source /home/dyuri/.config/broot/launcher/bash/br
 
 # prompt setup
 # oh-my-posh
-eval "$(oh-my-posh init bash --config ~/config/zsh/repa.omp.json)"
+# eval "$(oh-my-posh init bash --config ~/config/zsh/repa.omp.json)"
 export PS1_FINAL='\e[48;2;60;56;54m\e[92m \A \e[00m\e[38;2;60;56;54m\e[00m '
 export RPS1='\e[38;2;60;56;54m\e[00m\e[48;2;60;56;54m\e[93m \A \e[00m'
 export RPS1_FINAL=''
