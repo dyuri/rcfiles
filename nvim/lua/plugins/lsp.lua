@@ -140,6 +140,12 @@ vim.lsp.config["gopls"] = {
 }
 vim.lsp.enable("gopls")
 
+-- marksman
+vim.lsp.config["marksman"] = {
+  capabilities = capabilities,
+}
+vim.lsp.enable("marksman")
+
 -- we need to convert the above part to the new api
 
 

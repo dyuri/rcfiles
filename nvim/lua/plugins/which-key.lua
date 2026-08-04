@@ -28,6 +28,7 @@ local leader_mappings = {
   { "<leader>l",  group = "LSP" },
   { "<leader>lc", ":Lspsaga code_action<cr>",                      desc = "Code action" },
   { "<leader>ld", ":lua vim.lsp.buf.definition()<cr>",             desc = "Definition" },
+  { "gd",         ":lua vim.lsp.buf.definition()<cr>",             desc = "Definition" },
   { "<leader>lf", ":lua vim.lsp.buf.format({ async = true })<cr>", desc = "Format" },
   { "<leader>ln", ":lua vim.diagnostic.goto_next()<cr>",           desc = "Next diagnostic" },
   { "<leader>lp", ":lua vim.diagnostic.goto_prev()<cr>",           desc = "Previous diagnostic" },
