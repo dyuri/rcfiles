@@ -25,6 +25,8 @@ YELLOW='250 189 47'
 WHITE='235 219 178'
 JJ_BG='255 235 59'
 JJ_FG='25 53 73'
+GIT_BG='131 165 152'
+GIT_FG='29 31 33'
 
 out=''
 prev_bg=''      # RGB triple of the previously emitted segment's background
@@ -65,18 +67,46 @@ prev_bg=$GRAY2
 
 # --- jujutsu segment (only inside a jj repo) ---
 if command -v jj >/dev/null 2>&1 && jj root >/dev/null 2>&1; then
-    IFS='|' read -r change_id bookmarks is_dirty is_conflict < <(
+    IFS='|' read -r change_id is_dirty is_conflict < <(
         jj log -r @ --no-graph --ignore-working-copy -T \
-            'change_id.shortest(8) ++ "|" ++ bookmarks.join(",") ++ "|" ++ if(empty, "0", "1") ++ "|" ++ if(conflict, "1", "0")' \
+            'change_id.shortest(8) ++ "|" ++ if(empty, "0", "1") ++ "|" ++ if(conflict, "1", "0")' \
             2>/dev/null
     )
     if [[ -n "$change_id" ]]; then
-        label="${bookmarks:-$change_id}"
+        # Nearest ancestor (or @ itself) that carries a bookmark, preferred
+        # over the raw change id since bookmarks are used like git branches.
+        IFS='|' read -r bm_change_id bookmarks < <(
+            jj log -r 'heads(::@ & bookmarks())' --no-graph --ignore-working-copy -T \
+                'change_id.shortest(8) ++ "|" ++ bookmarks.join(",") ++ "\n"' \
+                2>/dev/null | head -1
+        )
+        if [[ -n "$bookmarks" ]]; then
+            label="$bookmarks"
+            if [[ "$bm_change_id" != "$change_id" ]]; then
+                ahead=$(jj log -r "${bm_change_id}..@" --no-graph --ignore-working-copy -T '"x"' 2>/dev/null | wc -c)
+                label+="+${ahead}"
+            fi
+        else
+            label="$change_id"
+        fi
         [[ "$is_dirty" == 1 ]] && label+=' *'
         [[ "$is_conflict" == 1 ]] && label+=' !'
         emit_sep "$prev_bg" "$JJ_BG"
         out+="$(bg $JJ_BG)$(fg $JJ_FG) 󰀱 ${label} ${RESET}"
         prev_bg=$JJ_BG
+    fi
+
+# --- git segment (only inside a git repo that isn't also a jj repo) ---
+elif command -v git >/dev/null 2>&1 && git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    branch=$(git symbolic-ref --quiet --short HEAD 2>/dev/null)
+    [[ -z "$branch" ]] && branch=$(git rev-parse --short HEAD 2>/dev/null)
+    if [[ -n "$branch" ]]; then
+        label="$branch"
+        [[ -n "$(git status --porcelain 2>/dev/null)" ]] && label+=' *'
+        [[ -n "$(git ls-files -u 2>/dev/null)" ]] && label+=' !'
+        emit_sep "$prev_bg" "$GIT_BG"
+        out+="$(bg $GIT_BG)$(fg $GIT_FG) ${label} ${RESET}"
+        prev_bg=$GIT_BG
     fi
 fi
 
