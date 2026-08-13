@@ -51,7 +51,7 @@ flyline --send-shell-integration-codes full
 flyline set-agent-mode \
     --system-prompt "Be concise. Answer with a raw JSON array of at most 3 items with objects containing: command and description. Command will be a Bash command. " \
     --trigger-prefix ': ' \
-    --command 'pi --model ollama-barack/qwen2.5-coder:3b -p'
+    --command 'pi --model ollama-local/gemma4:e2b-it-qat -p'
 
 # Atuin - history - replaced by flyline
 # eval "$(atuin init bash)"
@@ -68,9 +68,35 @@ eval "$(direnv hook bash)"
 # broot
 source /home/dyuri/.config/broot/launcher/bash/br
 
+# onefetch
+_onefetch_on_cd() {
+    if [ "$PWD" != "$_LAST_PWD" ]; then
+        _LAST_PWD="$PWD"
+        if [ -d .git ] || [ -f .git ]; then
+            onefetch
+        fi
+    fi
+}
+PROMPT_COMMAND="_onefetch_on_cd${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
+
 # prompt setup
 # oh-my-posh
 # eval "$(oh-my-posh init bash --config ~/config/zsh/repa.omp.json)"
+# oh-my-posh disabled: its bash integration races with flyline's agent-mode
+# subprocess handling, causing "AI task failed: No child processes". The
+# left-prompt widgets below are a native replacement for repa.omp.json.
+
+# Capture $? before anything else (zoxide/direnv/etc.) touches it, so the
+# status widget below can read it via $FLYLINE_LAST_EXIT.
+flyline_capture_exit() { export FLYLINE_LAST_EXIT=$?; }
+PROMPT_COMMAND="flyline_capture_exit${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
+
+flyline create-prompt-widget custom --name FLYLINE_LEFT_BLOCK1 \
+    --command "$HOME/.config/flyline/prompt_block1.sh" --block 200 --placeholder prev
+flyline create-prompt-widget custom --name FLYLINE_STATUS_BLOCK \
+    --command "$HOME/.config/flyline/prompt_status.sh" --block 100 --placeholder prev
+
+export PS1='FLYLINE_LEFT_BLOCK1\n\e[48;2;60;56;54m\e[93m \A \e[00m\e[38;2;60;56;54m\e[00m '
 export PS1_FINAL='\e[48;2;60;56;54m\e[92m \A \e[00m\e[38;2;60;56;54m\e[00m '
-export RPS1='\e[38;2;60;56;54m\e[00m\e[48;2;60;56;54m\e[93m \A \e[00m'
+export RPS1='FLYLINE_STATUS_BLOCK'
 export RPS1_FINAL=''
