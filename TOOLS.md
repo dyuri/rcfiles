@@ -35,7 +35,7 @@
 - repassh
 - termscp (scp)
 - croc - file transfer
-- dog <= drill (<= nslookup, dig)
+- doggo <= dog <= drill (<= nslookup, dig)
 - fx (<= jq) - json query
 - gron - json grep
 - jc - json convert
@@ -84,6 +84,7 @@
 - resterm, bruno, hoppscotch - API client (alternative to postman)
 - atuin - shell history manager
 - witr - why is that running
+- lsoff - open ports (https://github.com/yutat23/lsoff)
 - prox (https://github.com/craigderington/prox) - process manager (pm2, supervisor alternative)
 - [?] nono - access restrictions for AI agents (https://github.com/always-further/nono)
 - sesh - session management (tmux + zoxide + ...)
@@ -98,6 +99,7 @@
 - broot - directory navigation (https://dystroy.org/broot/)
 - flyline - bash readline replacement (https://github.com/HalFrgrd/flyline)
 - getmd - convert "many things" to markdown (https://github.com/Nano-Collective/get-md)
+- linecast - terminal based weather/map/weather radar (https://github.com/ashuttl/linecast)
 
 ## AI/LLM
 - pi coding agent - https://github.com/earendil-works/pi https://pi.dev/
