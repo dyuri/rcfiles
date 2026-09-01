@@ -81,7 +81,7 @@
 - delta, difftastic - diff viewer (diff-so-fancy)
 - mergiraf - context aware git (and jj) merge tool
 - systemd-manager-tui - tui for systemd
-- resterm, bruno, hoppscotch - API client (alternative to postman)
+- [noodle](https://noodlerest.dev/), resterm, bruno, hoppscotch - API client (alternative to postman)
 - atuin - shell history manager
 - witr - why is that running
 - lsoff - open ports (https://github.com/yutat23/lsoff)
@@ -100,6 +100,7 @@
 - flyline - bash readline replacement (https://github.com/HalFrgrd/flyline)
 - getmd - convert "many things" to markdown (https://github.com/Nano-Collective/get-md)
 - linecast - terminal based weather/map/weather radar (https://github.com/ashuttl/linecast)
+- veet (https://github.com/swadhinbiswas/veet) - remove "veet" (unused packages, logs, cache files, etc) from your system
 
 ## AI/LLM
 - pi coding agent - https://github.com/earendil-works/pi https://pi.dev/
