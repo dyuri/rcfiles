@@ -1,0 +1,140 @@
+# .bashrc
+
+# alias whois='whois -h whois.ripe.net'
+alias ls='ls --color=auto --group-directories-first -F -b -T 0'
+
+# check if eza is installed, if so, use it instead of ls
+if command -v eza &> /dev/null; then
+  alias ls='eza --icons --git'
+  alias ll='eza -la --icons --git'
+  alias tree='eza --tree'
+fi
+if command -v bat &> /dev/null; then
+  alias cat='bat'
+fi
+if command -v nvim &> /dev/null; then
+  export EDITOR='nvim'
+  export VISUAL='nvim'
+  alias vim='nvim'
+elif command -v vim &> /dev/null; then
+  export EDITOR='vim'
+  export VISUAL='vim'
+  alias vim='vim'
+else
+  export EDITOR='vi'
+  export VISUAL='vi'
+  alias vim='vi'
+fi
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+[ -f ~/.bash.secrets ] && source ~/.bash.secrets
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# completion
+[[ $PS1 &&
+  ! ${BASH_COMPLETION_VERSINFO:-} &&
+  -f /usr/share/bash-completion/bash_completion ]] &&
+    . /usr/share/bash-completion/bash_completion
+
+# Zoxide
+if command -v zoxide &> /dev/null; then
+    eval "$(zoxide init bash)"
+fi
+
+# Direnv
+if command -v direnv &> /dev/null; then
+    eval "$(direnv hook bash)"
+fi
+
+# Prompt setup.  This is deliberately self-contained so it works on hosts
+# without external prompt tools.
+_compact_prompt_fg() { printf '\\[\e[38;2;%s;%s;%sm\\]' "$1" "$2" "$3"; }
+_compact_prompt_bg() { printf '\\[\e[48;2;%s;%s;%sm\\]' "$1" "$2" "$3"; }
+_compact_prompt_reset='\[\e[0m\]'
+_compact_prompt_sep=''
+
+_compact_prompt_build() {
+    local black='29 31 33' green='184 187 38' gray2='80 73 69'
+    local yellow='250 189 47' white='235 219 178'
+    local jj_bg='255 235 59' jj_fg='25 53 73'
+    local git_bg='131 165 152' git_fg='29 31 33'
+    local out='' prev_bg='' ssh_icon='' path short p n
+    local change_id is_dirty is_conflict bm_change_id bookmarks label ahead branch
+    local -a parts clean
+
+    _compact_prompt_emit_sep() {
+        [[ -n "$1" ]] && out+="$(_compact_prompt_fg $1)$(_compact_prompt_bg $2)${_compact_prompt_sep}${_compact_prompt_reset}"
+    }
+
+    [[ -n "$SSH_CONNECTION$SSH_TTY" ]] && ssh_icon=' '
+    out+="$(_compact_prompt_bg $green)$(_compact_prompt_fg $black) ${ssh_icon}$(hostname) ${_compact_prompt_reset}"
+    prev_bg=$green
+
+    path=$PWD
+    if [[ "$path" == "$HOME" ]]; then
+        path='~'
+    elif [[ "$path" == "$HOME"/* ]]; then
+        path="~${path#"$HOME"}"
+    fi
+    IFS='/' read -r -a parts <<< "$path"
+    clean=()
+    for p in "${parts[@]}"; do [[ -n "$p" ]] && clean+=("$p"); done
+    n=${#clean[@]}
+    if (( n > 2 )); then short="…/${clean[n-2]}/${clean[n-1]}"; else short=$path; fi
+    _compact_prompt_emit_sep "$prev_bg" "$gray2"
+    out+="$(_compact_prompt_bg $gray2)$(_compact_prompt_fg $green) ${short} ${_compact_prompt_reset}"
+    prev_bg=$gray2
+
+    if command -v jj >/dev/null 2>&1 && jj root >/dev/null 2>&1; then
+        IFS='|' read -r change_id is_dirty is_conflict < <(jj log -r @ --no-graph --ignore-working-copy -T 'change_id.shortest(8) ++ "|" ++ if(empty, "0", "1") ++ "|" ++ if(conflict, "1", "0")' 2>/dev/null)
+        if [[ -n "$change_id" ]]; then
+            IFS='|' read -r bm_change_id bookmarks < <(jj log -r 'heads(::@ & bookmarks())' --no-graph --ignore-working-copy -T 'change_id.shortest(8) ++ "|" ++ bookmarks.join(",") ++ "\n"' 2>/dev/null | head -1)
+            if [[ -n "$bookmarks" ]]; then
+                label=$bookmarks
+                if [[ "$bm_change_id" != "$change_id" ]]; then
+                    ahead=$(jj log -r "${bm_change_id}..@" --no-graph --ignore-working-copy -T '"x"' 2>/dev/null | wc -c)
+                    label+="+${ahead}"
+                fi
+            else
+                label=$change_id
+            fi
+            [[ "$is_dirty" == 1 ]] && label+=' *'
+            [[ "$is_conflict" == 1 ]] && label+=' !'
+            _compact_prompt_emit_sep "$prev_bg" "$jj_bg"
+            out+="$(_compact_prompt_bg $jj_bg)$(_compact_prompt_fg $jj_fg) 󰀱 ${label} ${_compact_prompt_reset}"
+            prev_bg=$jj_bg
+        fi
+    elif command -v git >/dev/null 2>&1 && git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+        branch=$(git symbolic-ref --quiet --short HEAD 2>/dev/null)
+        [[ -z "$branch" ]] && branch=$(git rev-parse --short HEAD 2>/dev/null)
+        if [[ -n "$branch" ]]; then
+            label=$branch
+            [[ -n "$(git status --porcelain 2>/dev/null)" ]] && label+=' *'
+            [[ -n "$(git ls-files -u 2>/dev/null)" ]] && label+=' !'
+            _compact_prompt_emit_sep "$prev_bg" "$git_bg"
+            out+="$(_compact_prompt_bg $git_bg)$(_compact_prompt_fg $git_fg) ${label} ${_compact_prompt_reset}"
+            prev_bg=$git_bg
+        fi
+    fi
+
+    if [[ "$EUID" == 0 ]]; then
+        _compact_prompt_emit_sep "$prev_bg" "$yellow"
+        out+="$(_compact_prompt_bg $yellow)$(_compact_prompt_fg $white)  ${_compact_prompt_reset}"
+        prev_bg=$yellow
+    fi
+    out+="$(_compact_prompt_fg $prev_bg)${_compact_prompt_sep}${_compact_prompt_reset}"
+    printf '%s' "$out"
+    unset -f _compact_prompt_emit_sep
+}
+
+_compact_prompt_command() {
+    local exit_code=$?
+    local status_color status_icon
+    if (( exit_code == 0 )); then status_color=92; status_icon=''; else status_color=91; status_icon=''; fi
+    PS1="$(_compact_prompt_build)\\n$(_compact_prompt_bg 60 56 54)\\[\e[${status_color}m\\] ${status_icon}\\[\e[93m\\] \\A \\[\e[0m\\]$(_compact_prompt_fg 60 56 54)${_compact_prompt_sep}\\[\e[0m\\] "
+}
+PROMPT_COMMAND="_compact_prompt_command${PROMPT_COMMAND:+; $PROMPT_COMMAND}"

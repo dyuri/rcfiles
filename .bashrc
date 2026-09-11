@@ -25,8 +25,7 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-source $HOME/.bash.secrets
-
+[ -f ~/.bash-secrets ] && source ~/.bash.secrets
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Added by Antigravity CLI installer
@@ -67,6 +66,15 @@ eval "$(direnv hook bash)"
 
 # broot
 source /home/dyuri/.config/broot/launcher/bash/br
+
+# yazi
+function y() {
+	local tmp cwd; tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd" || builtin true
+	command rm -f -- "$tmp"
+}
 
 # onefetch
 _onefetch_on_cd() {
