@@ -28,7 +28,7 @@
 - wuzz
 - hyperfine - time
 - vhs (programmed) OR asciinema + svg-term-cli OR terminalizer
-- pastel (https://github.com/sharkdp/pastel) -> repacolors
+- [pastel](https://github.com/sharkdp/pastel) -> repacolors
 - direnv
 - sidem - env file editor
 - vifm => nnn | spf (superfile) ?
@@ -38,6 +38,7 @@
 - doggo <= dog <= drill (<= nslookup, dig)
 - fx (<= jq) - json query
 - gron - json grep
+- [jid](https://github.com/simeji/jid) - interactive json query
 - jc - json convert
 - bitwise - bitwise calculator
 - theme.sh
@@ -101,6 +102,7 @@
 - getmd - convert "many things" to markdown (https://github.com/Nano-Collective/get-md)
 - linecast - terminal based weather/map/weather radar (https://github.com/ashuttl/linecast)
 - veet (https://github.com/swadhinbiswas/veet) - remove "veet" (unused packages, logs, cache files, etc) from your system
+- [xdgctl](https://github.com/mitjafelicijan/xdgctl) - manage xdg-open applications from the terminal
 
 ## AI/LLM
 - pi coding agent - https://github.com/earendil-works/pi https://pi.dev/

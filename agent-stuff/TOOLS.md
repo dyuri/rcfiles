@@ -1,2 +1,2 @@
 - dora - https://github.com/butttons/dora - codebase indexer and search tool
-- iwe - https://github.com/iwe-org/iwe - markdown "memory"
+- pi-mcp-adapter - https://github.com/nicobailon/pi-mcp-adapter (add it per project if needed)
