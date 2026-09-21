@@ -1,2 +1,4 @@
-- dora - https://github.com/butttons/dora - codebase indexer and search tool
-- pi-mcp-adapter - https://github.com/nicobailon/pi-mcp-adapter (add it per project if needed)
+- [dora](https://github.com/butttons/dora) - codebase indexer and search tool
+- [pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter) (add it per project if needed)
+- [pi-web-access](https://github.com/nicobailon/pi-web-access) (while I have searxng, this can use the OpenAI API to search if an openai model is active)
+- [pi-atelier](https://github.com/michaelmjhhhh/pi-atelier) - status + sidebar for pi

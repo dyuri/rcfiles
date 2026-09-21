@@ -66,11 +66,11 @@ _compact_prompt_reset='\[\e[0m\]'
 _compact_prompt_sep=''
 
 _compact_prompt_build() {
-    local black='29 31 33' green='184 187 38' gray2='80 73 69'
+    local black='29 31 33' green='184 187 38' red='251 73 52' gray2='80 73 69'
     local yellow='250 189 47' white='235 219 178'
     local jj_bg='255 235 59' jj_fg='25 53 73'
     local git_bg='131 165 152' git_fg='29 31 33'
-    local out='' prev_bg='' ssh_icon='' path short p n
+    local out='' prev_bg='' ssh_icon='' hostname_bg path short p n
     local change_id is_dirty is_conflict bm_change_id bookmarks label ahead branch
     local -a parts clean
 
@@ -79,8 +79,10 @@ _compact_prompt_build() {
     }
 
     [[ -n "$SSH_CONNECTION$SSH_TTY" ]] && ssh_icon=' '
-    out+="$(_compact_prompt_bg $green)$(_compact_prompt_fg $black) ${ssh_icon}$(hostname) ${_compact_prompt_reset}"
-    prev_bg=$green
+    hostname_bg=$green
+    [[ "$EUID" == 0 ]] && hostname_bg=$red
+    out+="$(_compact_prompt_bg $hostname_bg)$(_compact_prompt_fg $black) ${ssh_icon}$(hostname) ${_compact_prompt_reset}"
+    prev_bg=$hostname_bg
 
     path=$PWD
     if [[ "$path" == "$HOME" ]]; then
