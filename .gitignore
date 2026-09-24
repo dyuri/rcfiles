@@ -4,3 +4,4 @@ tmux/resurrect/tmux_resurrect_*
 .mypy_cache
 weechat/*
 node_modules
+claude/skills/synced

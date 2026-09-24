@@ -66,7 +66,7 @@ _compact_prompt_reset='\[\e[0m\]'
 _compact_prompt_sep=''
 
 _compact_prompt_build() {
-    local black='29 31 33' green='184 187 38' red='251 73 52' gray2='80 73 69'
+    local black='29 31 33' green='184 187 38' red='204 36 29' gray2='80 73 69'
     local yellow='250 189 47' white='235 219 178'
     local jj_bg='255 235 59' jj_fg='25 53 73'
     local git_bg='131 165 152' git_fg='29 31 33'
@@ -80,7 +80,6 @@ _compact_prompt_build() {
 
     [[ -n "$SSH_CONNECTION$SSH_TTY" ]] && ssh_icon=' '
     hostname_bg=$green
-    [[ "$EUID" == 0 ]] && hostname_bg=$red
     out+="$(_compact_prompt_bg $hostname_bg)$(_compact_prompt_fg $black) ${ssh_icon}$(hostname) ${_compact_prompt_reset}"
     prev_bg=$hostname_bg
 
@@ -131,11 +130,6 @@ _compact_prompt_build() {
         fi
     fi
 
-    if [[ "$EUID" == 0 ]]; then
-        _compact_prompt_emit_sep "$prev_bg" "$yellow"
-        out+="$(_compact_prompt_bg $yellow)$(_compact_prompt_fg $white)  ${_compact_prompt_reset}"
-        prev_bg=$yellow
-    fi
     out+="$(_compact_prompt_fg $prev_bg)${_compact_prompt_sep}${_compact_prompt_reset}"
     printf '%s' "$out"
     unset -f _compact_prompt_emit_sep
@@ -143,8 +137,18 @@ _compact_prompt_build() {
 
 _compact_prompt_command() {
     local exit_code=$?
-    local status_color status_icon
+    local status_color status_icon prompt_prefix='' prefix_bg=''
     if (( exit_code == 0 )); then status_color=92; status_icon=''; else status_color=91; status_icon=''; fi
-    PS1="$(_compact_prompt_build)\\n$(_compact_prompt_bg 60 56 54)\\[\e[${status_color}m\\] ${status_icon}\\[\e[93m\\] \\A \\[\e[0m\\]$(_compact_prompt_fg 60 56 54)${_compact_prompt_sep}\\[\e[0m\\] "
+    if [[ -n "$SSH_CONNECTION$SSH_TTY" && "$EUID" != 0 ]]; then
+        prompt_prefix="$(_compact_prompt_bg 250 189 47)$(_compact_prompt_fg 29 31 33) ${USER} ${_compact_prompt_reset}"
+        prefix_bg='250 189 47'
+    fi
+    if [[ "$EUID" == 0 ]]; then
+        [[ -n "$prefix_bg" ]] && prompt_prefix+="$(_compact_prompt_fg $prefix_bg)$(_compact_prompt_bg 204 36 29)${_compact_prompt_sep}${_compact_prompt_reset}"
+        prompt_prefix+="$(_compact_prompt_bg 204 36 29)$(_compact_prompt_fg 235 219 178) root ${_compact_prompt_reset}"
+        prefix_bg='204 36 29'
+    fi
+    [[ -n "$prefix_bg" ]] && prompt_prefix+="$(_compact_prompt_fg $prefix_bg)$(_compact_prompt_bg 60 56 54)${_compact_prompt_sep}${_compact_prompt_reset}"
+    PS1="$(_compact_prompt_build)\\n${prompt_prefix}$(_compact_prompt_bg 60 56 54)\\[\e[93m\\] \\A \\[\e[${status_color}m\\] ${status_icon}\\[\e[0m\\]$(_compact_prompt_fg 60 56 54)${_compact_prompt_sep}\\[\e[0m\\] "
 }
 PROMPT_COMMAND="_compact_prompt_command${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
