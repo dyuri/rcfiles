@@ -103,6 +103,7 @@
 - linecast - terminal based weather/map/weather radar (https://github.com/ashuttl/linecast)
 - veet (https://github.com/swadhinbiswas/veet) - remove "veet" (unused packages, logs, cache files, etc) from your system
 - [xdgctl](https://github.com/mitjafelicijan/xdgctl) - manage xdg-open applications from the terminal
+- [ttl](https://github.com/lance0/ttl) - traceroute replacement (better than mtr)
 
 ## AI/LLM
 - pi coding agent - https://github.com/earendil-works/pi https://pi.dev/
