@@ -10,7 +10,7 @@ ft = require("guard.filetype")
 
 -- ft('typescript,javascript,typescriptreact'):fmt('prettier'):lint('eslint')
 ft('typescript,javascript,typescriptreact'):fmt('prettier')
-ft('python'):fmt('black'):lint('flake8')
+ft('python'):fmt('ruff'):lint('ruff')
 ft('go'):fmt('gofmt')
 
 vim.g.guard_config = {

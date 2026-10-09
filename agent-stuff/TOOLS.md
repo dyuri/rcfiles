@@ -1,4 +1,7 @@
-- [dora](https://github.com/butttons/dora) - codebase indexer and search tool
-- [pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter) (add it per project if needed)
+- maybe not needed anymore, due to `codemode` - [pi-mcp-adapter](https://github.com/nicobailon/pi-mcp-adapter) (add it per project if needed)
 - [pi-web-access](https://github.com/nicobailon/pi-web-access) (while I have searxng, this can use the OpenAI API to search if an openai model is active)
-- [pi-atelier](https://github.com/michaelmjhhhh/pi-atelier) - status + sidebar for pi
+- [rtk](https://github.com/rtk-ai/rtk) - token optimizer for CLI tools
+  - [pi-rtk-optimizer](https://github.com/MasuRii/pi-rtk-optimizer)
+- forked, using customized version - [pi-atelier](https://github.com/michaelmjhhhh/pi-atelier) - status + sidebar for pi
+- [zg](https://github.com/zvec-ai/zvec-grep) - zvec grep 
+  - [pi-zvec-grep](https://github.com/MikkelKappelPersson/pi-zvec-grep)

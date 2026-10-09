@@ -81,8 +81,7 @@ MasonToolInstaller.setup({
     { "html-lsp" },
     { "css-lsp" },
     { "pyright" },
-    { "black" },
-    { "autopep8" },
+    { "ruff" },
     { "json-lsp" },
     { "prettier" },
     { "typescript-language-server" },
@@ -107,6 +106,12 @@ vim.lsp.config["pyright"] = {
   capabilities = capabilities,
 }
 vim.lsp.enable("pyright")
+
+-- ruff
+vim.lsp.config["ruff"] = {
+  capabilities = capabilities,
+}
+vim.lsp.enable("ruff")
 
 -- ts + js
 vim.lsp.config["jsonls"] = {
