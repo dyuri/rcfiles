@@ -303,7 +303,7 @@ layer-rule {
 // spawn-at-startup "awww-daemon" // => noctalia
 spawn-at-startup "noctalia"
 spawn-at-startup "wl-gammarelay-rs"
-spawn-sh-at-startup "wl-paste -pw wl-copy"
+// HM? spawn-sh-at-startup "wl-paste -pw wl-copy"
 // spawn-sh-at-startup "copyq --start-server"
 spawn-at-startup "niri-zoomd"
 

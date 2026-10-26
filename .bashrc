@@ -4,8 +4,10 @@
 
 # PATH=/mnt/nagy/jdk/bin:$PATH:$HOME/bin:$HOME/.local/bin/:/usr/sbin:/sbin:/mnt/nagy/eclipse:/usr/games:.
 
+# Some env vars
 # Agent model
-PI_MODEL_FOR_BASH='ollama-barack/qwen2.5-coder:3b'
+export PI_MODEL_FOR_BASH='ollama-barack/qwen2.5-coder:3b'
+export PI_CACHE_RETENTION='long'
 
 # alias whois='whois -h whois.ripe.net'
 alias ls='ls --color=auto --group-directories-first -F -b -T 0'
