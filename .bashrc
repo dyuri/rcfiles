@@ -27,7 +27,7 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-[ -f ~/.bash-secrets ] && source ~/.bash.secrets
+[ -f ~/.bash.secrets ] && source ~/.bash.secrets
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # Added by Antigravity CLI installer

@@ -72,6 +72,7 @@
 - clipboard (https://github.com/Slackadays/clipboard) - custom clipboard manager
 - harlequin (https://harlequin.sh/) - sql client
 - lazysql - sql client
+- [sqlmux](https://github.com/kackerx/sqlmux/) - sql/redis tui client
 - kooha - screen recorder
 - toolong - log viewer/merger
 - netscanner - scan local networks
@@ -105,6 +106,7 @@
 - [xdgctl](https://github.com/mitjafelicijan/xdgctl) - manage xdg-open applications from the terminal
 - [ttl](https://github.com/lance0/ttl) - traceroute replacement (better than mtr)
 - [termix](https://github.com/Termix-SSH/Termix) - server management tool
+- [tui-tools](https://tui.tools/) - various tui tools
 
 ## AI/LLM
 - pi coding agent - https://github.com/earendil-works/pi https://pi.dev/
